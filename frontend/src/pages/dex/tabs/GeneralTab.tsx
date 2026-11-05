@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router'
 import { dexLang, genderRatio, titleCase, versionName, type SpeciesDetail } from '../../../lib/dex'
 import { Badge } from '../../../components/ui'
 import { DamageTakenGrid } from '../DamageTakenGrid'
@@ -48,7 +49,9 @@ export function GeneralTab({ detail }: { detail: SpeciesDetail }) {
           {detail.abilities.map((a) => (
             <div key={a.id} className="space-y-0.5">
               <div className="flex flex-wrap items-center gap-1.5">
-                <span className="font-semibold">{a.name}</span>
+                <Link to={`/pokedex/habilidade/${a.id}`} className="font-semibold hover:text-accent hover:underline">
+                  {a.name}
+                </Link>
                 {a.isHidden && <Badge tone="violet">{t('dex.general.hidden')}</Badge>}
               </div>
               {a.effect && <p className="text-sm text-muted">{a.effect}</p>}

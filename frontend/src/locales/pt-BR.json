@@ -1875,6 +1875,61 @@
       "found_other": "Aparece {{count}} vezes nos seus saves.",
       "none": "Nenhum dos seus saves tem este Pokémon.",
       "error": "Não deu para procurar nos seus saves."
+    },
+    "sprite": {
+      "forms": "Formas",
+      "shiny": "Shiny",
+      "normal": "Normal",
+      "shinyToggle": "Ver a versão shiny"
+    },
+    "chartLink": "Tabela de tipos",
+    "move": {
+      "notFound": "Esse golpe não está na Pokédex.",
+      "error": "Não deu para carregar o golpe.",
+      "notInGame": "Este golpe não existe em {{game}} ou ninguém o aprende lá.",
+      "type": "Tipo",
+      "class": "Categoria",
+      "power": "Força",
+      "accuracy": "Precisão",
+      "pp": "PP",
+      "priority": "Prioridade",
+      "effectChance": "Chance do efeito",
+      "generation": "Desde a",
+      "machine": "Máquina",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês.",
+      "learners": "Quem aprende neste jogo",
+      "noLearners": "Ninguém aprende este golpe neste jogo.",
+      "otherMethod": "Outros jeitos",
+      "level": "Nv. {{level}}"
+    },
+    "ability": {
+      "notFound": "Essa habilidade não está na Pokédex.",
+      "error": "Não deu para carregar a habilidade.",
+      "generation": "Desde a",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês.",
+      "holders": "Pokémon com esta habilidade",
+      "hidden": "oculta",
+      "noHolders": "Nenhum Pokémon tem esta habilidade."
+    },
+    "item": {
+      "notFound": "Esse item não está na Pokédex.",
+      "error": "Não deu para carregar o item.",
+      "category": "Categoria",
+      "cost": "Preço",
+      "fling": "Força do Fling",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês."
+    },
+    "typeChart": {
+      "title": "Tabela de tipos",
+      "sub": "Quanto dano cada tipo de golpe causa em cada tipo de Pokémon.",
+      "generation": "Regras da geração",
+      "attack": "Golpe",
+      "defense": "Pokémon",
+      "help": "Linha = tipo do golpe; coluna = tipo do Pokémon que recebe. ×2 é super efetivo, ×½ pouco efetivo e ×0 não faz efeito. Vazio é dano normal (×1).",
+      "error": "Não deu para carregar a tabela de tipos."
     }
   },
   "guides": {

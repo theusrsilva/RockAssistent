@@ -5,7 +5,7 @@ import { api, spriteUrl } from '../../lib/api'
 import { TYPES, saveDexGame, type SpeciesSummary } from '../../lib/dex'
 import { GAME_VERSIONS } from '../../lib/gameVersions'
 import { useDebouncedEffect } from '../../lib/useDebouncedEffect'
-import { Button, Callout, Field, PageTitle, inputClass, selectClass } from '../../components/ui'
+import { Button, Callout, Field, Icon, PageTitle, inputClass, selectClass } from '../../components/ui'
 import { TypeList, useTypeName } from './TypeBadge'
 
 const pageSize = 60
@@ -71,7 +71,16 @@ export default function DexPage() {
   return (
     <div className="flex flex-col gap-5">
       <div>
-        <PageTitle>{t('dex.title')}</PageTitle>
+        <PageTitle
+          actions={
+            <Link to="/pokedex/tipos" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              <Icon name="grid_view" className="text-[18px]" />
+              {t('dex.chartLink')}
+            </Link>
+          }
+        >
+          {t('dex.title')}
+        </PageTitle>
         <p className="mt-1 text-sm text-muted">{t('dex.sub')}</p>
       </div>
 

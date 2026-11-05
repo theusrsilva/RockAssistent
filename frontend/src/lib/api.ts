@@ -68,4 +68,14 @@ export const api = {
   delete: <T>(path: string) => request<T>('DELETE', path),
 }
 
-export const spriteUrl = (species: number) => `/api/sprites/${species}`
+/**
+ * Sprite embutido. <form> é o id do pokemon no PokeAPI (Mega, regionais...); o id da própria espécie é a forma padrão.
+ * O backend cai no sprite da espécie quando falta o arquivo da forma ou o shiny.
+ */
+export function spriteUrl(species: number, opts: { shiny?: boolean; form?: number } = {}) {
+  const q = new URLSearchParams()
+  if (opts.shiny) q.set('shiny', '1')
+  if (opts.form && opts.form !== species) q.set('form', String(opts.form))
+  const query = q.toString()
+  return `/api/sprites/${species}${query ? `?${query}` : ''}`
+}

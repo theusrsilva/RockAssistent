@@ -1875,6 +1875,61 @@
       "found_other": "Shows up {{count}} times in your saves.",
       "none": "None of your saves has this Pokémon.",
       "error": "Couldn't search your saves."
+    },
+    "sprite": {
+      "forms": "Forms",
+      "shiny": "Shiny",
+      "normal": "Normal",
+      "shinyToggle": "Show the shiny version"
+    },
+    "chartLink": "Type chart",
+    "move": {
+      "notFound": "This move is not in the Pokédex.",
+      "error": "Couldn't load the move.",
+      "notInGame": "This move doesn't exist in {{game}} or nobody learns it there.",
+      "type": "Type",
+      "class": "Category",
+      "power": "Power",
+      "accuracy": "Accuracy",
+      "pp": "PP",
+      "priority": "Priority",
+      "effectChance": "Effect chance",
+      "generation": "Since",
+      "machine": "Machine",
+      "effect": "What it does",
+      "effectInEnglish": "The effect text is in English for now.",
+      "learners": "Who learns it in this game",
+      "noLearners": "Nobody learns this move in this game.",
+      "otherMethod": "Other ways",
+      "level": "Lv. {{level}}"
+    },
+    "ability": {
+      "notFound": "This ability is not in the Pokédex.",
+      "error": "Couldn't load the ability.",
+      "generation": "Since",
+      "effect": "What it does",
+      "effectInEnglish": "The effect text is in English for now.",
+      "holders": "Pokémon with this ability",
+      "hidden": "hidden",
+      "noHolders": "No Pokémon has this ability."
+    },
+    "item": {
+      "notFound": "This item is not in the Pokédex.",
+      "error": "Couldn't load the item.",
+      "category": "Category",
+      "cost": "Price",
+      "fling": "Fling power",
+      "effect": "What it does",
+      "effectInEnglish": "The effect text is in English for now."
+    },
+    "typeChart": {
+      "title": "Type chart",
+      "sub": "How much damage each move type deals to each Pokémon type.",
+      "generation": "Rules of generation",
+      "attack": "Move",
+      "defense": "Pokémon",
+      "help": "Row = move type; column = type of the Pokémon taking the hit. ×2 is super effective, ×½ not very effective and ×0 has no effect. Empty means normal damage (×1).",
+      "error": "Couldn't load the type chart."
     }
   },
   "guides": {

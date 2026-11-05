@@ -6,6 +6,10 @@ import HomePage from './pages/HomePage'
 import BoxesPage from './pages/boxes/BoxesPage'
 import DexPage from './pages/dex/DexPage'
 import SpeciesPage from './pages/dex/SpeciesPage'
+import MovePage from './pages/dex/MovePage'
+import AbilityPage from './pages/dex/AbilityPage'
+import ItemPage from './pages/dex/ItemPage'
+import TypeChartPage from './pages/dex/TypeChartPage'
 import GiftsPage from './pages/gifts/GiftsPage'
 import GuidesPage from './pages/guides/GuidesPage'
 import HuntPage from './pages/hunt/HuntPage'
@@ -32,6 +36,10 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/pokedex" element={<DexPage />} />
                 <Route path="/pokedex/:id" element={<SpeciesPage />} />
+                <Route path="/pokedex/golpe/:id" element={<MovePage />} />
+                <Route path="/pokedex/habilidade/:id" element={<AbilityPage />} />
+                <Route path="/pokedex/item/:id" element={<ItemPage />} />
+                <Route path="/pokedex/tipos" element={<TypeChartPage />} />
                 <Route path="/guias/*" element={<GuidesPage />} />
                 <Route path="/boxes" element={<BoxesPage />} />
                 <Route path="/trocas" element={<TradesHubPage />} />

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useParams, useSearchParams } from 'react-router'
+import { useParams, useSearchParams } from 'react-router'
 import { ApiError, spriteUrl } from '../../lib/api'
 import { dexLang, loadDexGame, saveDexGame, useAvailability, useSpecies } from '../../lib/dex'
 import { GAME_VERSIONS, gameVersionByKey } from '../../lib/gameVersions'
@@ -13,6 +13,7 @@ import { MovesTab } from './tabs/MovesTab'
 import { StatsTab } from './tabs/StatsTab'
 import { EggTab } from './tabs/EggTab'
 import { SavesTab } from './tabs/SavesTab'
+import { BackLink } from './tabs/parts'
 
 const tabs = ['general', 'locations', 'moves', 'stats', 'egg', 'saves'] as const
 type Tab = (typeof tabs)[number]
@@ -31,6 +32,10 @@ export default function SpeciesPage() {
   const valid = Number.isInteger(id) && id > 0
   const species = useSpecies(valid ? id : 0, game, lang)
   const availability = useAvailability(valid ? id : 0)
+  // Forma escolhida (id do pokemon no PokeAPI), a mesma no cabeçalho e na aba Status. Um id de outra espécie
+  // (depois de navegar) não está em detail.forms e cai na forma padrão.
+  const [formId, setFormId] = useState<number | null>(null)
+  const [shiny, setShiny] = useState(false)
 
   const chooseGame = (key: string) => {
     setGame(key)
@@ -47,12 +52,7 @@ export default function SpeciesPage() {
       { replace: true },
     )
 
-  const back = (
-    <Link to="/pokedex" className="inline-flex items-center gap-1 text-sm font-semibold text-muted hover:text-ink">
-      <Icon name="arrow_back" className="text-[18px]" />
-      {t('dex.back')}
-    </Link>
-  )
+  const back = <BackLink>{t('dex.back')}</BackLink>
 
   if (!valid || (species.error instanceof ApiError && species.error.status === 404))
     return (
@@ -66,13 +66,34 @@ export default function SpeciesPage() {
 
   const detail = species.data
   const kind = availability.data?.find((a) => a.gameKey === game)?.kind
+  const defaultForm = detail?.forms.find((f) => f.isDefault) ?? detail?.forms[0]
+  const form = detail?.forms.find((f) => f.id === formId) ?? defaultForm
+  const types = form?.types ?? detail?.types
 
   return (
     <div className="flex flex-col gap-4">
       {back}
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <img src={spriteUrl(id)} alt="" className="h-24 w-24 shrink-0 self-center [image-rendering:pixelated] sm:self-auto" />
+        <div className="flex shrink-0 flex-col items-center gap-1.5 self-center sm:w-44 sm:self-start">
+          <img
+            src={spriteUrl(id, { shiny, form: form && !form.isDefault ? form.id : undefined })}
+            alt=""
+            className="h-24 w-24 [image-rendering:pixelated]"
+          />
+          <button
+            type="button"
+            aria-pressed={shiny}
+            title={t('dex.sprite.shinyToggle')}
+            onClick={() => setShiny((s) => !s)}
+            className={`inline-flex cursor-pointer items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold ${
+              shiny ? 'bg-accent text-white' : 'bg-surface2 text-muted hover:text-ink'
+            }`}
+          >
+            <Icon name="auto_awesome" className="text-[14px]" filled={shiny} />
+            {t('dex.sprite.shiny')}
+          </button>
+        </div>
         <div className="min-w-0 flex-1 space-y-1 text-center sm:text-left">
           <div className="flex flex-wrap items-baseline justify-center gap-x-2 sm:justify-start">
             <h1 className="font-display text-[23px] leading-tight font-bold md:text-[28px]">{detail?.name ?? '…'}</h1>
@@ -80,12 +101,37 @@ export default function SpeciesPage() {
           </div>
           {detail?.genus && <p className="text-sm text-muted">{detail.genus}</p>}
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-start">
-            {detail && <TypeList types={detail.types} />}
+            {types && <TypeList types={types} />}
             {kind && <Badge tone={kind === 'none' ? 'slate' : 'emerald'}>{t(`dex.availability.${kind}`)}</Badge>}
           </div>
         </div>
         <GameSelector value={game} onChange={chooseGame} availability={availability.data} />
       </div>
+
+      {detail && detail.forms.length > 1 && (
+        <div className="-mt-1 flex gap-1 overflow-x-auto pb-1" role="tablist" aria-label={t('dex.sprite.forms')}>
+          {detail.forms.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              role="tab"
+              aria-selected={form?.id === f.id}
+              onClick={() => setFormId(f.id)}
+              className={`flex shrink-0 cursor-pointer items-center gap-1 rounded-lg border px-1.5 py-1 text-xs font-semibold whitespace-nowrap ${
+                form?.id === f.id ? 'border-accent bg-surface text-ink' : 'border-line bg-surface2 text-muted hover:text-ink'
+              }`}
+            >
+              <img
+                src={spriteUrl(id, { shiny, form: f.isDefault ? undefined : f.id })}
+                alt=""
+                loading="lazy"
+                className="h-8 w-8 [image-rendering:pixelated]"
+              />
+              {f.isDefault ? t('dex.sprite.normal') : f.name}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="-mx-1 flex gap-1 overflow-x-auto border-b border-line px-1" role="tablist">
         {tabs.map((tb) => (
@@ -120,7 +166,7 @@ export default function SpeciesPage() {
       {detail && tab === 'general' && <GeneralTab detail={detail} />}
       {detail && tab === 'locations' && <LocationsTab detail={detail} />}
       {detail && tab === 'moves' && <MovesTab detail={detail} />}
-      {detail && tab === 'stats' && <StatsTab detail={detail} />}
+      {detail && tab === 'stats' && <StatsTab detail={detail} form={form} onFormChange={setFormId} />}
       {detail && tab === 'egg' && <EggTab detail={detail} />}
       {tab === 'saves' && <SavesTab species={id} />}
     </div>

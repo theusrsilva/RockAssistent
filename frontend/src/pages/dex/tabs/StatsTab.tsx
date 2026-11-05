@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import type { BaseStats, SpeciesDetail } from '../../../lib/dex'
+import type { BaseStats, SpeciesDetail, SpeciesForm } from '../../../lib/dex'
 import { Badge, Field, selectClass } from '../../../components/ui'
 import { TypeList } from '../TypeBadge'
 import { Section } from './parts'
@@ -14,12 +13,20 @@ const rows: [keyof BaseStats, string][] = [
   ['speed', 'speed'],
 ]
 
-/** Status base com barras (de 0 a 255), total e EVs; com mais de uma forma, dá para trocar. */
-export function StatsTab({ detail }: { detail: SpeciesDetail }) {
+/**
+ * Status base com barras (de 0 a 255), total e EVs; com mais de uma forma, dá para trocar. A forma escolhida é a
+ * mesma do cabeçalho da página (sub-abas do sprite).
+ */
+export function StatsTab({
+  detail,
+  form,
+  onFormChange,
+}: {
+  detail: SpeciesDetail
+  form: SpeciesForm | undefined
+  onFormChange: (id: number) => void
+}) {
   const { t } = useTranslation()
-  const defaultForm = detail.forms.find((f) => f.isDefault) ?? detail.forms[0]
-  const [formId, setFormId] = useState(defaultForm?.id)
-  const form = detail.forms.find((f) => f.id === formId) ?? defaultForm
   const stats = form?.stats ?? detail.stats
   const evs = Object.entries(stats.evs).filter(([, v]) => v > 0)
 
@@ -29,7 +36,7 @@ export function StatsTab({ detail }: { detail: SpeciesDetail }) {
         <div className="flex flex-wrap items-end gap-3">
           <div className="w-full sm:w-72">
             <Field label={t('dex.stats.form')}>
-              <select className={selectClass} value={form?.id} onChange={(e) => setFormId(Number(e.target.value))}>
+              <select className={selectClass} value={form?.id} onChange={(e) => onFormChange(Number(e.target.value))}>
                 {detail.forms.map((f) => (
                   <option key={f.id} value={f.id}>
                     {f.name}

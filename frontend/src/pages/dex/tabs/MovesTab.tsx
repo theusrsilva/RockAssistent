@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router'
 import { sortMoves, type LearnedMove, type MoveSortKey, type SortDir, type SpeciesDetail, type SpeciesMoves } from '../../../lib/dex'
 import { Callout, Icon, Segmented, useIsMobile } from '../../../components/ui'
 import { TypeBadge } from '../TypeBadge'
@@ -58,7 +59,9 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
             <li key={`${m.id}-${i}`} className="flex items-center gap-2 px-3 py-2 text-sm">
               {lead && <span className="w-10 shrink-0 font-mono text-xs text-muted">{leadCell(m)}</span>}
               <div className="min-w-0 flex-1">
-                <div className="truncate font-semibold">{m.name}</div>
+                <Link to={`/pokedex/golpe/${m.id}`} className="block truncate font-semibold hover:text-accent">
+                  {m.name}
+                </Link>
                 <div className="text-xs text-muted">
                   {className(m)} · {m.power ?? '—'} / {m.accuracy ?? '—'}% · {m.pp ?? '—'} PP
                 </div>
@@ -87,7 +90,11 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
               {moves.map((m, i) => (
                 <tr key={`${m.id}-${i}`}>
                   {lead && <td className="px-2 py-1.5 font-mono text-xs text-muted">{leadCell(m)}</td>}
-                  <td className="px-2 py-1.5 font-semibold">{m.name}</td>
+                  <td className="px-2 py-1.5 font-semibold">
+                    <Link to={`/pokedex/golpe/${m.id}`} className="hover:text-accent hover:underline">
+                      {m.name}
+                    </Link>
+                  </td>
                   <td className="px-2 py-1.5">
                     <TypeBadge type={m.type} small />
                   </td>

@@ -117,6 +117,69 @@ export interface SpeciesDetail {
   existsInGame: boolean
 }
 
+export interface MoveLearner {
+  speciesId: number
+  name: string
+  /** Identificador do PokeAPI: level-up, machine, tutor, egg e outros raros. */
+  method: string
+  level: number | null
+}
+
+export interface MoveDetail {
+  id: number
+  identifier: string
+  name: string
+  type: string
+  class: string | null
+  power: number | null
+  accuracy: number | null
+  pp: number | null
+  priority: number
+  effectChance: number | null
+  /** Em inglês. */
+  effect: string | null
+  generation: number
+  existsInGame: boolean
+  machineNumber: number | null
+  machine: string | null
+  learners: MoveLearner[]
+}
+
+export interface AbilityHolder {
+  speciesId: number
+  /** Id do pokemon no PokeAPI (forma); igual ao da espécie na forma padrão. */
+  pokemonId: number
+  name: string
+  isHidden: boolean
+}
+
+export interface AbilityDetail {
+  id: number
+  identifier: string
+  name: string
+  shortEffect: string | null
+  effect: string | null
+  generation: number
+  pokemon: AbilityHolder[]
+}
+
+export interface ItemDetail {
+  id: number
+  identifier: string
+  name: string
+  category: string | null
+  cost: number | null
+  effect: string | null
+  flingPower: number | null
+}
+
+export interface TypeChart {
+  generation: number
+  types: string[]
+  /** factors[ataque][defesa]: 0, 0.5, 1 ou 2. */
+  factors: Record<string, Record<string, number>>
+}
+
 export type AvailabilityKind = 'none' | 'encounter' | 'evolution' | 'egg' | 'gift'
 
 export interface GameAvailability {
@@ -182,6 +245,15 @@ export function useApiGet<T>(path: string | null): Loaded<T> {
 
 export const useSpecies = (id: number, game: string, lang: DexLang) =>
   useApiGet<SpeciesDetail>(`/api/dex/species/${id}?game=${encodeURIComponent(game)}&lang=${encodeURIComponent(lang)}`)
+
+export const useMove = (id: number, game: string) =>
+  useApiGet<MoveDetail>(id > 0 ? `/api/dex/moves/${id}?game=${encodeURIComponent(game)}` : null)
+
+export const useAbility = (id: number) => useApiGet<AbilityDetail>(id > 0 ? `/api/dex/abilities/${id}` : null)
+
+export const useItem = (id: number) => useApiGet<ItemDetail>(id > 0 ? `/api/dex/items/${id}` : null)
+
+export const useTypeChart = (generation: number) => useApiGet<TypeChart>(`/api/dex/types?generation=${generation}`)
 
 export const useAvailability = (id: number) => useApiGet<GameAvailability[]>(`/api/dex/species/${id}/availability`)
 
@@ -273,6 +345,17 @@ export function sortMoves(moves: LearnedMove[], key: MoveSortKey, dir: SortDir):
     }
     return a.name.localeCompare(b.name)
   })
+}
+
+/** Quem aprende um golpe, separado pelo jeito de aprender (na ordem: nível, TM, tutor, ovo, outros). */
+export function groupLearners(learners: MoveLearner[]): { method: string; learners: MoveLearner[] }[] {
+  const order = ['level-up', 'machine', 'tutor', 'egg']
+  const groups = new Map<string, MoveLearner[]>()
+  for (const l of learners) {
+    const key = order.includes(l.method) ? l.method : 'other'
+    groups.set(key, [...(groups.get(key) ?? []), l])
+  }
+  return [...order, 'other'].filter((m) => groups.has(m)).map((method) => ({ method, learners: groups.get(method)! }))
 }
 
 /** Porcentagem de fêmeas e machos; nulo para quem não tem gênero. */

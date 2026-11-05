@@ -3,6 +3,7 @@ import {
   formatEvolutionCondition,
   formatMultiplier,
   genderRatio,
+  groupLearners,
   multiplierClass,
   sortMoves,
   versionName,
@@ -124,5 +125,15 @@ describe('nome da versão', () => {
     expect(versionName('scarlet')).toBe('Scarlet')
     expect(versionName('legends-za')).toBe('Legends: Z-A')
     expect(versionName('colosseum')).toBe('Colosseum')
+  })
+})
+
+describe('quem aprende o golpe', () => {
+  it('agrupa por jeito de aprender, na ordem fixa, e junta os raros em "outros"', () => {
+    const l = (speciesId: number, method: string, level: number | null = null) => ({ speciesId, name: `#${speciesId}`, method, level })
+    const groups = groupLearners([l(1, 'machine'), l(2, 'level-up', 5), l(3, 'light-ball-egg'), l(4, 'egg'), l(5, 'level-up', 1)])
+    expect(groups.map((g) => g.method)).toEqual(['level-up', 'machine', 'egg', 'other'])
+    expect(groups[0].learners.map((x) => x.speciesId)).toEqual([2, 5])
+    expect(groups[3].learners[0].method).toBe('light-ball-egg')
   })
 })
