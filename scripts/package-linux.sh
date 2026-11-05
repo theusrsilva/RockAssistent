@@ -43,6 +43,9 @@ APP_ID=io.github.traderock.TradeRock
 rm -rf "$BUILD"
 mkdir -p "$BUILD" "$DIST" "$CACHE"
 
+echo "==> Pokédex offline (dex.sqlite, embutida no app)"
+python3 -I scripts/build-dex.py
+
 echo "==> app $VERSION (self-contained, linux-x64)"
 dotnet publish app/TradeRock.App -c Release -r linux-x64 --self-contained \
   -p:BuildFrontend=true -p:Version="$VERSION" -p:DebugType=none -p:DebugSymbols=false \

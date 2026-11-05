@@ -26,3 +26,5 @@ __pycache__/
 dist/
 .superpowers/
 .worktrees/
+# Pokédex offline gerada por scripts/build-dex.py
+assets/data/dex.sqlite

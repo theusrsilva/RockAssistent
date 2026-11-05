@@ -3,6 +3,11 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
+echo "::group::Pokédex offline (scripts/build-dex.py)"
+python3 -m unittest discover -s scripts/tests -t scripts
+python3 -I scripts/build-dex.py
+echo "::endgroup::"
+
 echo "::group::Frontend"
 (cd frontend && npm ci && npm run typecheck && npm test && npm run build)
 echo "::endgroup::"

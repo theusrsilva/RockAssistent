@@ -22,8 +22,18 @@ jobs:
       - name: Imagem de build
         run: docker build -t traderock-dev --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) .devcontainer
 
+      # CSVs do PokeAPI para a Pokédex offline (scripts/build-dex.py; a imagem já traz o python3).
+      - name: Cache do PokeAPI
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/traderock/pokeapi
+          key: pokeapi-${{ hashFiles('scripts/build-dex.py') }}
+
       - name: Build e testes
-        run: docker run --rm -v "$PWD:/workspace" -w /workspace traderock-dev scripts/ci.sh
+        run: |
+          mkdir -p ~/.cache/traderock/pokeapi
+          docker run --rm -v "$PWD:/workspace" -v "$HOME/.cache/traderock/pokeapi:/home/dev/.cache/traderock/pokeapi" \
+            -w /workspace traderock-dev scripts/ci.sh
 
   # .deb e AppImage (scripts/package-linux.sh). Na tag, também o código-fonte completo e o das
   # ferramentas de rede embutidas, que vão no Release.
@@ -51,7 +61,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/traderock
-          key: traderock-${{ hashFiles('scripts/build-worker.sh', 'scripts/build-nettools.sh', 'scripts/package-linux.sh', 'worker/requirements.lock') }}
+          key: traderock-${{ hashFiles('scripts/build-worker.sh', 'scripts/build-nettools.sh', 'scripts/package-linux.sh', 'scripts/build-dex.py', 'worker/requirements.lock') }}
 
       - name: Imagem de build
         run: docker build -t traderock-dev --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) .devcontainer
@@ -136,7 +146,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/traderock
-          key: traderock-win-${{ hashFiles('scripts/package-windows.sh', 'worker/requirements.lock', 'worker/requirements-esp32-windows.lock') }}
+          key: traderock-win-${{ hashFiles('scripts/package-windows.sh', 'scripts/build-dex.py', 'worker/requirements.lock', 'worker/requirements-esp32-windows.lock') }}
 
       - name: Imagem de build
         run: docker build -t traderock-dev --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) .devcontainer
