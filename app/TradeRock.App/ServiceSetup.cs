@@ -46,6 +46,8 @@ public static class ServiceSetup
         services.AddSingleton<TradeQueue>();
         services.AddSingleton<TradeRock.Core.Activities.ActivityService>();
         services.AddSingleton<WindowBridge>();
+        services.AddSingleton(new TradeRock.Core.Dex.DexDatabase(paths));
+        services.AddSingleton<TradeRock.Core.Dex.DexService>();
 
         // Worker privilegiado (placa Wi-Fi, só Linux). Em desenvolvimento, a instalação dev
         // (scripts/install-worker.sh dev) vem antes da release.
