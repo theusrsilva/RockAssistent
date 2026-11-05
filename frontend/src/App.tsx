@@ -5,6 +5,7 @@ import HistoryPage from './pages/HistoryPage'
 import HomePage from './pages/HomePage'
 import BoxesPage from './pages/boxes/BoxesPage'
 import DexPage from './pages/dex/DexPage'
+import SpeciesPage from './pages/dex/SpeciesPage'
 import GiftsPage from './pages/gifts/GiftsPage'
 import GuidesPage from './pages/guides/GuidesPage'
 import HuntPage from './pages/hunt/HuntPage'
@@ -30,7 +31,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/pokedex" element={<DexPage />} />
-                <Route path="/pokedex/:species" element={<DexPage />} />
+                <Route path="/pokedex/:id" element={<SpeciesPage />} />
                 <Route path="/guias/*" element={<GuidesPage />} />
                 <Route path="/boxes" element={<BoxesPage />} />
                 <Route path="/trocas" element={<TradesHubPage />} />
