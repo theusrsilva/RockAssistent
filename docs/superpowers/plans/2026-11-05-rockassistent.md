@@ -200,7 +200,7 @@ public sealed record BossBattle(string Id, string Kind /* gym|rival|evil|elite|c
 public sealed record BossPokemon(int Species, int Form, int Level, IReadOnlyList<string> Moves /* identifiers PokeAPI */, string? Ability, string? Item, string? TeraType);
 public sealed record TrainerBattle(string Id, string Area /* id de áreas */, string Class, string Name, IReadOnlyList<BossPokemon> Party, bool Verified);
 public sealed record GameArea(string Id, string Name, string Kind /* route|city|dungeon|building|sea */, int Order, string? MapNode, int? PokeApiLocationId, IReadOnlyList<string> BossesBefore /* ids de chefes enfrentados ao chegar aqui */);
-public sealed record OwnEncounter(string Area, int Species, int Form, string Method, int MinLevel, int MaxLevel, string? Chance /* "common|uncommon|rare|fixed" */, string? Conditions, IReadOnlyList<string> Versions, bool Verified);
+public sealed record OwnEncounter(string Area, int Species, int Form, string Method, int MinLevel, int MaxLevel, string? Chance /* "common|uncommon|rare|fixed" */, string? Conditions, IReadOnlyList<string> Versions, bool Alpha, bool Verified);
 public sealed record MapGraph(string Region, IReadOnlyList<MapNode> Nodes, IReadOnlyList<MapEdge> Edges);
 public sealed record MapNode(string Id, string Name, string Kind, double X, double Y, IReadOnlyList<string>? Games /* null = todos os jogos da região */);
 public sealed record MapEdge(string From, string To);
@@ -226,7 +226,7 @@ Igual à Task 9 (fontes: pret `pokediamond`, `pokeplatinum`, `pokeheartgold`, Bu
 
 ### Task 11: Chefes dos jogos Gen 6–9 (`xy, oras, sm, usum, lgpe, swsh, bdsp, pla, sv, za`)
 
-Igual à Task 9; Alola usa `kind=gym` para os Trials/Kahunas com `title` ("Captain"/"Kahuna"); PLA usa `kind=other` para Nobles e Wardens; SV tem três rotas (`title` "Victory Road"/"Path of Legends"/"Starfall Street") com `Order` seguindo o nível recomendado. Commit `data: chefes da Gen 6 à 9`.
+Igual à Task 9. Para o Z-A, a fonte principal é `docs/superpowers/sources/za-pokemythology-notes.md` (times e níveis de todos os chefes; golpes ficam `verified: false`). Alola usa `kind=gym` para os Trials/Kahunas com `title` ("Captain"/"Kahuna"); PLA usa `kind=other` para Nobles e Wardens; SV tem três rotas (`title` "Victory Road"/"Path of Legends"/"Starfall Street") com `Order` seguindo o nível recomendado. Commit `data: chefes da Gen 6 à 9`.
 
 ### Task 12: Áreas e mapas, parte 1 (Kanto, Johto, Hoenn, Sinnoh)
 
@@ -242,7 +242,7 @@ Igual à Task 9; Alola usa `kind=gym` para os Trials/Kahunas com `title` ("Capta
 
 **Files:** Create `assets/data/areas/{bw,b2w2,xy,oras,sm,usum,swsh,pla,sv,za}.json`, `assets/data/maps/{unova,kalos,alola,galar,hisui,paldea,lumiose}.json`, `assets/data/encounters/{bdsp,pla,sv,za}.json` (os jogos sem encontros na PokeAPI; SwSh tem).
 
-- Encontros: por área, espécie, método (`walk|surf|fish|tree|outbreak|raid|fixed|gift|trade`), faixa de nível, chance qualitativa, `Versions` (`scarlet`/`violet` etc.). Pesquisar na web; marcar `verified`.
+- Encontros: por área, espécie, método (`walk|surf|fish|tree|outbreak|raid|fixed|gift|trade|city`), faixa de nível, chance qualitativa, `Versions` (`scarlet`/`violet` etc.), `Conditions` (`day`/`night`), `Alpha` (bool). Pesquisar na web; marcar `verified`. Para o Z-A, as 20 Wild Zones, esgotos, Lysandre Labs, raros por setor e lendários estão em `docs/superpowers/sources/za-pokemythology-notes.md`.
 - Test: igual à Task 12 mais: `Encounters("sv")` não vazio, toda área citada existe, toda espécie existe.
 
 - [ ] Commit `data: áreas e mapas das outras regiões; encontros de BDSP, PLA, SV e Z-A`.
@@ -418,7 +418,7 @@ public sealed record RunView(NuzlockeRun Run, GameArea CurrentArea, BossBattle? 
 
 **Files:** `content/{pt-BR,en}/guides/games/{rb,y,gs,c,rs,e,frlg}/{overview,walkthrough,bosses,tms,exclusives,trades,events,postgame,legendaries}.md` + entradas em `index.json`.
 
-- Texto próprio, simples, em pt-BR e en. `bosses.md` usa `:::bosses <jogo>` + comentários de estratégia por chefe. `walkthrough.md`: um `##` por trecho na ordem das áreas (`areas/<jogo>.json`), com `:::encounters <jogo> <area>` onde faz sentido, o que fazer, itens-chave e o chefe do trecho. `tms.md` usa `:::tms <jogo>` + onde achar cada um (pesquisar). Mais detalhado por serem jogos com decompilação.
+- **Estilo (pedido do autor em 05/11/2026): rápido de ler, na pegada do allgenwiki, só fatos importantes.** Nada de narrativa ou parágrafos longos. `walkthrough.md`: um `##` por trecho na ordem das áreas (`areas/<jogo>.json`), e dentro dele **listas curtas**: "Faça" (3 a 6 itens), "Itens" (lista), "Encontros" (`:::encounters <jogo> <area>`), "Chefe" (`:::boss <jogo> <id>` + 1 linha de dica). `bosses.md` usa `:::bosses <jogo>` + uma linha de dica por chefe. `tms.md` usa `:::tms <jogo>` + onde achar cada um (pesquisar). Textos em pt-BR e en. Fontes de fatos: dados embutidos, pesquisa na web e, quando houver, as notas em `docs/superpowers/sources/*.md` (fatos extraídos de detonados que o autor enviou; nunca copiar prosa).
 - Test: `check-guides.py` passa para esses jogos.
 
 - [ ] Commit `content: guias dos jogos da Gen 1 à 3`.
@@ -429,7 +429,7 @@ Igual à Task 26. Commit `content: guias dos jogos da Gen 4 à 6`.
 
 ### Task 28: Guias dos jogos, Gen 7–9 (`sm, usum, lgpe, swsh, bdsp, pla, sv, za`)
 
-Igual à Task 26 (walkthrough mais curto onde não há decompilação). Commit `content: guias dos jogos da Gen 7 à 9`.
+Igual à Task 26. Para o Z-A, usar `docs/superpowers/sources/za-pokemythology-notes.md` (chefes, Wild Zones, trocas, Mega Stones, TMs). Commit `content: guias dos jogos da Gen 7 à 9`.
 
 ### Task 29: Mecânicas e Mitologia
 

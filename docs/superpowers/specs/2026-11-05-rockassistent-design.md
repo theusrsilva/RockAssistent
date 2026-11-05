@@ -140,6 +140,10 @@ Quatro sub-seções, cada uma com um índice claro (nada de página única com �
 Fontes: as partes estruturadas (times de chefes, encontros, TMs, trocas in-game) vêm dos dados embutidos; o texto
 corrido é markdown nosso em `content/{pt-BR,en}/guides/**`, como os textos de hoje. Nada copiado de site.
 
+**Estilo (05/11/2026):** rápido de ler, como o allgenwiki, só fatos importantes: listas curtas e tabelas por
+trecho, sem narrativa. O autor pode enviar detonados em PDF; os fatos deles vão para notas em
+`docs/superpowers/sources/*.md` (nunca a prosa) e servem de fonte para os dados e os guias.
+
 ### 4.4 Boxes
 
 Duas abas:
