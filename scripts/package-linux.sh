@@ -110,10 +110,10 @@ Depends: libc6 (>= 2.31), libstdc++6, libgtk-3-0t64 | libgtk-3-0, libwebkit2gtk-
 Section: games
 Priority: optional
 Homepage: https://github.com/theusrsilva/TradeRock
-Description: Trade Pokémon with FireRed and LeafGreen on Nintendo Switch
- RockAssistent (formerly TradeRock) trades Pokémon with the Switch release of Pokémon FireRed and
- LeafGreen over the game's local wireless (LDN). The PC's Wi-Fi card (or an
- ESP32 over USB) acts as a second Switch in the Direct Corner trade room.
+Description: Trade Pokémon with every Nintendo Switch game that has local trading
+ RockAssistent (formerly TradeRock) trades Pokémon with every Nintendo Switch
+ game that has local trading, over the game's local wireless (LDN). The PC's
+ Wi-Fi card (or an ESP32 over USB) acts as a second Switch in the trade room.
  .
  It also builds legal Pokémon (PKHeX + AutoMod) and keeps them in a vault.
  The Wi-Fi component runs as root through pkexec and polkit; the app itself

@@ -58,6 +58,27 @@ public class AppVersionTests
     }
 
     [Fact]
+    public void Release_da_transicao_tem_os_dois_nomes()
+    {
+        // O que scripts/release-legacy-names.sh deixa no Release: cada arquivo com o nome novo e o antigo, os dois no
+        // SHA256SUMS. A versão nova escolhe o novo; a antiga (que só conhece TradeRock-*) acha o seu e o hash dele.
+        static ReleaseAsset A(string name) => new(name, UpdateFixture.Download("v1.2.3", name), 3);
+        string[] names = ["SHA256SUMS", "traderock_1.2.3_amd64.deb", "RockAssistent-Setup-1.2.3.exe", "RockAssistent-1.2.3-x86_64.AppImage",
+            "TradeRock-Setup-1.2.3.exe", "TradeRock-1.2.3-x86_64.AppImage"];
+        var assets = names.Select(A).ToList();
+        var exe = new string('c', 64);
+        var app = new string('d', 64);
+        var sums = $"{new string('e', 64)}  traderock_1.2.3_amd64.deb\n{app}  RockAssistent-1.2.3-x86_64.AppImage\n"
+            + $"{exe}  RockAssistent-Setup-1.2.3.exe\n{exe}  TradeRock-Setup-1.2.3.exe\n{app}  TradeRock-1.2.3-x86_64.AppImage\n";
+
+        Assert.Equal("RockAssistent-Setup-1.2.3.exe", AppVersions.PickAsset(InstallKind.WindowsInstaller, "1.2.3", assets)?.Name);
+        Assert.Equal("RockAssistent-1.2.3-x86_64.AppImage", AppVersions.PickAsset(InstallKind.AppImage, "1.2.3", assets)?.Name);
+        Assert.Equal(exe, AppVersions.HashOf(sums, "TradeRock-Setup-1.2.3.exe"));
+        Assert.Equal(app, AppVersions.HashOf(sums, "TradeRock-1.2.3-x86_64.AppImage"));
+        Assert.Equal(exe, AppVersions.HashOf(sums, "RockAssistent-Setup-1.2.3.exe"));
+    }
+
+    [Fact]
     public void Release_so_com_arquivos_do_proprio_repositorio()
     {
         var json = UpdateFixture.ReleaseJson("v01.00.01", ("SHA256SUMS", null), ("TradeRock-Setup-01.00.01.exe", null),

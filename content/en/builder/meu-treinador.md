@@ -1,4 +1,4 @@
-The data of **your** Switch save. TradeRock uses it as the original trainer of the Pokémon you create
+The data of **your** Switch save. RockAssistent uses it as the original trainer of the Pokémon you create
 and to warn about obedience and the National Pokédex.
 
 - **Name** and **ID (TID)** are on the in-game trainer card.

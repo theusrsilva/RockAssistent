@@ -1,4 +1,4 @@
-Os dados do **seu** save no Switch. O TradeRock usa como treinador original dos Pokémon que você
+Os dados do **seu** save no Switch. O RockAssistent usa como treinador original dos Pokémon que você
 cria e para avisar sobre obediência e a Pokédex Nacional.
 
 - **Nome** e **ID (TID)** aparecem no cartão de treinador do jogo.

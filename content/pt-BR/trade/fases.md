@@ -7,7 +7,7 @@ Variáveis: {trainer} = nome do treinador simulado, {n} = número da troca, {tot
 Procurando a sala do seu Switch. Deixe o Direct Corner aberto como **Leader**.
 
 ## tentando_de_novo
-A conexão não deu certo desta vez. O TradeRock vai **tentar de novo** sozinho. Mantenha a sala aberta no Switch.
+A conexão não deu certo desta vez. O RockAssistent vai **tentar de novo** sozinho. Mantenha a sala aberta no Switch.
 
 ## aprovar
 No Switch, apareceu um pedido para entrar na sala. **Aprove o pedido de {trainer}.**
@@ -36,7 +36,7 @@ A troca foi cancelada no Switch. **Saia da sala** no Switch.
 ## fim
 Pronto! A conexão foi encerrada.
 
-<!-- O TradeRock é o anfitrião (pokeldn: jogos novos e o FRLG pelo ESP32). {code} = código de troca. -->
+<!-- O RockAssistent é o anfitrião (pokeldn: jogos novos e o FRLG pelo ESP32). {code} = código de troca. -->
 
 ## sala_abrindo
 Abrindo a sala de troca. Aguarde um instante.
@@ -51,7 +51,7 @@ O Switch entrou na sala! Lá, **escolha o Pokémon** que você quer mandar para 
 Troca {n} de {total} concluída! O Pokémon já está no cofre. No Switch, escolha o Pokémon da **próxima troca**.
 
 ## sala_sair
-Trocas concluídas! O TradeRock fecha a sala sozinho; no Switch, **encerre a troca** quando o jogo deixar.
+Trocas concluídas! O RockAssistent fecha a sala sozinho; no Switch, **encerre a troca** quando o jogo deixar.
 
 ## sala_saiu
 O Switch saiu da sala antes de terminar. O que já foi trocado está no cofre.

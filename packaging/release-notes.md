@@ -1,5 +1,7 @@
 ## Qual arquivo baixar
 
+O RockAssistent (antes chamado TradeRock) troca Pokémon com todos os jogos do Nintendo Switch que têm troca local.
+
 | Seu computador | Arquivo | Como instalar |
 | --- | --- | --- |
 | **Windows 10 ou 11** (64 bits) | `RockAssistent-Setup-{{VERSION}}.exe` | Abra e siga os passos. Veja o aviso abaixo. |
@@ -10,6 +12,8 @@
   protegeu o computador". Clique em **Mais informações → Executar assim mesmo**. No Windows, o rádio é
   sempre um **ESP32** ligado no USB.
 - **Linux:** o rádio pode ser a placa Wi-Fi do próprio PC ou um ESP32.
+- **Arquivos `TradeRock-*`:** são cópias idênticas dos `RockAssistent-*`, com o nome antigo, para as versões
+  instaladas antes da troca de nome se atualizarem sozinhas. Para instalar, baixe o `RockAssistent-*`.
 - **Para atualizar,** use a tela **Sobre** do app (ele também avisa no Início quando há versão nova), ou baixe a versão nova e instale por cima. Seus Pokémon, contas e chaves continuam.
 - **Conferir o download (opcional):** compare com o `SHA256SUMS`. No Linux, rode
   `sha256sum -c SHA256SUMS --ignore-missing`. No Windows, rode

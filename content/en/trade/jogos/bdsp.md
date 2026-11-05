@@ -3,7 +3,7 @@
 
 1. Go to the **second floor of a Pokémon Center** and talk to the attendant on the **left** (Union Room).
 2. Answer **Yes**. If you set a code here, enter with the password (the same eight digits); otherwise, enter the plain room.
-3. Inside the room, press **Y** → **Communicate** → **Trade Pokémon** and accept TradeRock's greeting.
+3. Inside the room, press **Y** → **Communicate** → **Trade Pokémon** and accept RockAssistent's greeting.
 4. Choose the Pokémon you are sending and confirm.
 
 <details><summary>Learn more</summary>

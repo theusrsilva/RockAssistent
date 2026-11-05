@@ -3,7 +3,7 @@
 
 1. Click **Start the raid** here.
 2. Press **Y** to open **Y-Comm** in local wireless mode and pick **POKELDN**'s raid from the list.
-3. Press **Ready**: the console runs the battle and TradeRock's Pokémon fights at your side.
+3. Press **Ready**: the console runs the battle and RockAssistent's Pokémon fights at your side.
 4. Win the raid to get the rewards. When the battle ends, click **Done** here.
 
 <details><summary>Learn more</summary>

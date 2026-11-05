@@ -3,7 +3,7 @@
 
 1. Press **X**, open the **Poké Portal**, choose **Union Circle** and start a **local** group with a 4-digit code.
 2. Enter the same code here, choose the task and click **Join the circle**.
-3. Once **POKELDN** is in the group, start the circle on the console. As its start demo ends, the quests go in (one a second) and then TradeRock leaves.
+3. Once **POKELDN** is in the group, start the circle on the console. As its start demo ends, the quests go in (one a second) and then RockAssistent leaves.
 
 <details><summary>Learn more</summary>
 

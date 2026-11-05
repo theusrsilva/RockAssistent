@@ -2,11 +2,11 @@
 **No Sword/Shield (Crown Tundra):**
 
 1. Na **Max Lair**, fale com a recepcionista, sem código, e escolha **Invite Others**.
-2. Clique em **Começar a raid** aqui: o TradeRock entra na sala.
+2. Clique em **Começar a raid** aqui: o RockAssistent entra na sala.
 3. Aperte **Ready** e escolha o seu Pokémon alugado primeiro.
-4. O TradeRock luta ao seu lado com um alugado.
+4. O RockAssistent luta ao seu lado com um alugado.
 
-**Mini IA:** o TradeRock pega, entre os alugados que sobraram, o que tem os melhores golpes contra o lendário do fim
+**Mini IA:** o RockAssistent pega, entre os alugados que sobraram, o que tem os melhores golpes contra o lendário do fim
 e contra os Pokémon da aventura. Em cada batalha ele escolhe um golpe, antes de começar: nas três primeiras, o que vai
 melhor contra os Pokémon da aventura; contra o lendário, o mais efetivo contra ele.
 

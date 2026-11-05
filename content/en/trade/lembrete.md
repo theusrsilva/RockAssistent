@@ -10,7 +10,7 @@ Once the Switch is waiting, click **Start trade**.
 <details><summary>Learn more</summary>
 
 The Direct Corner unlocks after about 20 to 40 minutes of play. The Switch creates a local
-wireless network and TradeRock joins it as if it were a second Switch. The connection may take
-a few attempts: TradeRock retries on its own.
+wireless network and RockAssistent joins it as if it were a second Switch. The connection may take
+a few attempts: RockAssistent retries on its own.
 
 </details>

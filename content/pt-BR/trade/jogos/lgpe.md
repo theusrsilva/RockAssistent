@@ -3,7 +3,7 @@
 
 1. Aperte **X** e abra **Communicate** → **Local Communication** → **Trade**.
 2. Escolha os **mesmos três Pokémon** do código que você montou aqui, na mesma ordem.
-3. Procure a troca e espere o TradeRock aparecer.
+3. Procure a troca e espere o RockAssistent aparecer.
 4. Escolha o Pokémon que você vai mandar e confirme.
 
 <details><summary>Saiba mais</summary>

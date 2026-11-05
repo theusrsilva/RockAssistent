@@ -4,7 +4,7 @@
 1. Press **Y** to open **Y-Comm**.
 2. Choose **Link Trade** and confirm **local communication**.
 3. Use the **same code** you set here (or none, if you left it blank).
-4. Press **A** on both messages and wait in the overworld: TradeRock shows up on its own.
+4. Press **A** on both messages and wait in the overworld: RockAssistent shows up on its own.
 5. Choose the Pokémon you are sending and confirm.
 
 <details><summary>Learn more</summary>

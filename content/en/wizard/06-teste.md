@@ -1,4 +1,4 @@
-With the room open as the **Leader** on the Switch, TradeRock looks for the room and tries to
+With the room open as the **Leader** on the Switch, RockAssistent looks for the room and tries to
 **decrypt** it, without joining. It listens for up to 30 seconds and stops as soon as it finds the
 room. The result tells you what is working:
 

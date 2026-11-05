@@ -4,7 +4,7 @@
 1. Clique em **Começar a raid** aqui.
 2. Na **Max Lair**, fale com a recepcionista. Se você escolheu um código, aperte **+** e use o mesmo. Depois escolha **Invite Others**.
 3. Quando o **POKELDN** estiver na sala, aperte **Ready**.
-4. Quando a aventura começa, o TradeRock sai e um parceiro do jogo continua no lugar dele.
+4. Quando a aventura começa, o RockAssistent sai e um parceiro do jogo continua no lugar dele.
 
 <details><summary>Saiba mais</summary>
 

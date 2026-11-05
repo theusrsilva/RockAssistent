@@ -4,7 +4,7 @@
 1. Aperte **Y** para abrir o **Y-Comm**.
 2. Escolha **Link Trade** e confirme a **comunicação local** (local communication).
 3. Use o **mesmo código** que você pôs aqui (ou nenhum, se deixou em branco).
-4. Aperte **A** nas duas mensagens e espere no mapa: o TradeRock aparece sozinho.
+4. Aperte **A** nas duas mensagens e espere no mapa: o RockAssistent aparece sozinho.
 5. Escolha o Pokémon que você vai mandar e confirme.
 
 <details><summary>Saiba mais</summary>
