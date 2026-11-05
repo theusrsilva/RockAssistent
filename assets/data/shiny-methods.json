@@ -1,0 +1,1122 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Masuda_method",
+    "https://bulbapedia.bulbagarden.net/wiki/Shiny_Charm",
+    "https://pokestats.gg/shiny-hunting-hub/methods/arceus-massive-outbreak",
+    "https://pokestats.gg/shiny-hunting-hub/methods/arceus-outbreak",
+    "https://pokestats.gg/shiny-hunting-hub/methods/catch-combo",
+    "https://pokestats.gg/shiny-hunting-hub/methods/chain-fishing",
+    "https://pokestats.gg/shiny-hunting-hub/methods/dexnav",
+    "https://pokestats.gg/shiny-hunting-hub/methods/dynamax-adventures",
+    "https://pokestats.gg/shiny-hunting-hub/methods/friend-safari",
+    "https://pokestats.gg/shiny-hunting-hub/methods/full-odds",
+    "https://pokestats.gg/shiny-hunting-hub/methods/grand-underground",
+    "https://pokestats.gg/shiny-hunting-hub/methods/horde",
+    "https://pokestats.gg/shiny-hunting-hub/methods/ko-method",
+    "https://pokestats.gg/shiny-hunting-hub/methods/mass-outbreak",
+    "https://pokestats.gg/shiny-hunting-hub/methods/masuda",
+    "https://pokestats.gg/shiny-hunting-hub/methods/max-raid",
+    "https://pokestats.gg/shiny-hunting-hub/methods/odd-egg",
+    "https://pokestats.gg/shiny-hunting-hub/methods/poke-radar",
+    "https://pokestats.gg/shiny-hunting-hub/methods/shiny-parent-breeding",
+    "https://pokestats.gg/shiny-hunting-hub/methods/sos-chain",
+    "https://pokestats.gg/shiny-hunting-hub/methods/sv-sparkling-power",
+    "https://pokestats.gg/shiny-hunting-hub/methods/tera-raid",
+    "https://pokestats.gg/shiny-hunting-hub/methods/ultra-wormhole",
+    "https://pokestats.gg/shiny-hunting-hub/methods/za-bench-reset",
+    "https://pokestats.gg/shiny-hunting-hub/methods/za-dlc-sparkling-power",
+    "https://rotomlabs.net/brilliant-diamond-shining-pearl/shiny-rates",
+    "https://www.serebii.net/games/shiny.shtml",
+    "https://www.serebii.net/legendsz-a/shinypokemon.shtml"
+  ],
+  "items": [
+    {
+      "id": "full_odds_gen2_5",
+      "name": "Encontro ou reset (Gen 2–5)",
+      "description": "Encontro selvagem, reset de lendário ou presente, sem bônus.",
+      "base_odds": 8192,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 2731.0
+        }
+      ],
+      "games": [
+        "gs",
+        "c",
+        "rs",
+        "e",
+        "frlg",
+        "dp",
+        "pt",
+        "hgss",
+        "bw",
+        "b2w2"
+      ],
+      "notes": "O Amuleto Brilhante só existe no Black 2 / White 2 (+2 rolagens).",
+      "verified": true
+    },
+    {
+      "id": "full_odds",
+      "name": "Encontro ou reset",
+      "description": "Encontro selvagem, reset de lendário ou presente, sem bônus.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1365.67
+        }
+      ],
+      "games": [
+        "xy",
+        "oras",
+        "sm",
+        "usum",
+        "swsh",
+        "sv"
+      ],
+      "notes": "O Amuleto soma 2 rolagens.",
+      "verified": true
+    },
+    {
+      "id": "full_odds_bdsp",
+      "name": "Encontro ou reset (BDSP)",
+      "description": "Encontro selvagem ou reset no BDSP.",
+      "base_odds": 4096,
+      "modifiers": [],
+      "games": [
+        "bdsp"
+      ],
+      "notes": "No BDSP o Amuleto Brilhante não afeta encontros selvagens nem fixos; só ovos.",
+      "verified": true
+    },
+    {
+      "id": "breeding_shiny_parent_gen2",
+      "name": "Ovo com pai shiny (Gen 2)",
+      "description": "Cruzar um shiny (de preferência um Ditto shiny) com outro Pokémon.",
+      "base_odds": 64,
+      "modifiers": [],
+      "games": [
+        "gs",
+        "c"
+      ],
+      "notes": "Dois shiny não cruzam entre si. Um pai não shiny com Defesa 10 e Especial 2 ou 10 passa a mesma chance.",
+      "verified": true
+    },
+    {
+      "id": "odd_egg",
+      "name": "Ovo Estranho (Crystal)",
+      "description": "O ovo dado pelo homem da Creche.",
+      "base_odds": 7.14,
+      "modifiers": [],
+      "games": [
+        "c"
+      ],
+      "notes": "14% fora do Japão; 50% na versão japonesa (que precisava do Mobile System GB).",
+      "verified": true
+    },
+    {
+      "id": "masuda_gen4",
+      "name": "Método Masuda (Gen 4)",
+      "description": "Ovo de pais de idiomas diferentes.",
+      "base_odds": 1638.8,
+      "modifiers": [],
+      "games": [
+        "dp",
+        "pt",
+        "hgss"
+      ],
+      "notes": "5 rolagens (4 a mais). A Serebii diz 1/2048; Bulbapedia e Pokestats dizem 5/8192.",
+      "verified": true
+    },
+    {
+      "id": "masuda_gen5",
+      "name": "Método Masuda (Gen 5)",
+      "description": "Ovo de pais de idiomas diferentes.",
+      "base_odds": 1365.75,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1024.44
+        }
+      ],
+      "games": [
+        "bw",
+        "b2w2"
+      ],
+      "notes": "6 rolagens. O Amuleto (só no B2W2) soma 2.",
+      "verified": true
+    },
+    {
+      "id": "masuda",
+      "name": "Método Masuda",
+      "description": "Ovo de pais de idiomas diferentes.",
+      "base_odds": 683.08,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 512.44
+        }
+      ],
+      "games": [
+        "xy",
+        "oras",
+        "sm",
+        "usum",
+        "swsh",
+        "sv"
+      ],
+      "notes": "6 rolagens; com o Amuleto, 8.",
+      "verified": true
+    },
+    {
+      "id": "masuda_bdsp",
+      "name": "Método Masuda (BDSP)",
+      "description": "Ovo de pais de idiomas diferentes no BDSP.",
+      "base_odds": 683.08,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 512.44
+        }
+      ],
+      "games": [
+        "bdsp"
+      ],
+      "notes": "Mesmas odds de tabela da Gen 6+. A Bulbapedia descreve um bug no BDSP: com rolagens extras, a primeira rolagem é pulada.",
+      "verified": false
+    },
+    {
+      "id": "poke_radar_dppt",
+      "name": "Poké Radar (DPPt)",
+      "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
+      "base_odds": 199.39,
+      "modifiers": [],
+      "games": [
+        "dp",
+        "pt"
+      ],
+      "notes": "Odds na corrente 40+, pela fórmula da Serebii (14747 - 40·corrente) / (2621440·(41 - corrente)). A Pokestats dá 1/195,07. Abaixo de 40 a chance é menor.",
+      "verified": false
+    },
+    {
+      "id": "poke_radar_xy",
+      "name": "Poké Radar (XY)",
+      "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
+      "base_odds": 100,
+      "modifiers": [],
+      "games": [
+        "xy"
+      ],
+      "notes": "Odds na corrente 40+. O Amuleto Brilhante não muda o Radar.",
+      "verified": true
+    },
+    {
+      "id": "poke_radar_bdsp",
+      "name": "Poké Radar (BDSP)",
+      "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
+      "base_odds": 99,
+      "modifiers": [],
+      "games": [
+        "bdsp"
+      ],
+      "notes": "Odds na corrente 40+, por moita. O Amuleto Brilhante não muda o Radar.",
+      "verified": true
+    },
+    {
+      "id": "chain_fishing",
+      "name": "Pesca em sequência",
+      "description": "Pescar seguido no mesmo lugar sem sair dali.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "chain",
+          "name": "Sequência",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "0",
+              "min": 0,
+              "max": 0,
+              "odds": 4096
+            },
+            {
+              "label": "1–4",
+              "min": 1,
+              "max": 4,
+              "odds": 1365.67
+            },
+            {
+              "label": "5–9",
+              "min": 5,
+              "max": 9,
+              "odds": 372.82
+            },
+            {
+              "label": "10–14",
+              "min": 10,
+              "max": 14,
+              "odds": 195.52
+            },
+            {
+              "label": "15–19",
+              "min": 15,
+              "max": 19,
+              "odds": 132.61
+            },
+            {
+              "label": "20+",
+              "min": 20,
+              "max": null,
+              "odds": 100.39
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1365.67
+        }
+      ],
+      "games": [
+        "xy",
+        "oras"
+      ],
+      "notes": "Cada fisgada soma 2 rolagens até a 20 (41 no total). Degraus com a odd do início de cada faixa. Com o Amuleto na 20+: 1/95,75.",
+      "verified": true
+    },
+    {
+      "id": "friend_safari",
+      "name": "Safári dos Amigos",
+      "description": "Encontros no Friend Safari.",
+      "base_odds": 819.6,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 585.57
+        }
+      ],
+      "games": [
+        "xy"
+      ],
+      "notes": "4 rolagens a mais.",
+      "verified": true
+    },
+    {
+      "id": "horde",
+      "name": "Horda",
+      "description": "Encontro em horda de 5; odd de pelo menos um shiny na horda.",
+      "base_odds": 819.6,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 273.53
+        }
+      ],
+      "games": [
+        "xy",
+        "oras"
+      ],
+      "notes": "Cada Pokémon da horda rola sozinho (1/4096, ou 1/1365,67 com o Amuleto).",
+      "verified": true
+    },
+    {
+      "id": "dexnav",
+      "name": "DexNav",
+      "description": "Busca com o DexNav; a chance sobe com o nível de busca da espécie.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "search_level",
+          "name": "Nível de busca",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "100–199",
+              "min": 100,
+              "max": 199,
+              "odds": 1064.03
+            },
+            {
+              "label": "200–998",
+              "min": 200,
+              "max": 998,
+              "odds": 853.49
+            },
+            {
+              "label": "999",
+              "min": 999,
+              "max": 999,
+              "odds": 476.49
+            }
+          ],
+          "odds": null
+        }
+      ],
+      "games": [
+        "oras"
+      ],
+      "notes": "Com o Amuleto: 1/380,88 (100), 1/307,12 (200), 1/173,16 (999). Corrente também ajuda (nível 999: 1/121,70 a cada 5ª; 1/62,01 na 50ª; 1/41,72 na 100ª). Abaixo do nível 100 a fonte não dá número.",
+      "verified": false
+    },
+    {
+      "id": "sos_chain",
+      "name": "Corrente SOS",
+      "description": "Pokémon chamados por ajuda na batalha.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "chain",
+          "name": "Corrente",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "0–10",
+              "min": 0,
+              "max": 10,
+              "odds": 4096
+            },
+            {
+              "label": "11–20",
+              "min": 11,
+              "max": 20,
+              "odds": 819.6
+            },
+            {
+              "label": "21–30",
+              "min": 21,
+              "max": 30,
+              "odds": 455.56
+            },
+            {
+              "label": "31+",
+              "min": 31,
+              "max": null,
+              "odds": 315.54
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1365.67
+        }
+      ],
+      "games": [
+        "sm",
+        "usum"
+      ],
+      "notes": "O Amuleto soma 2 rolagens em qualquer faixa (31+ com Amuleto: 1/273,53).",
+      "verified": true
+    },
+    {
+      "id": "ultra_wormhole_type2",
+      "name": "Ultra Wormhole tipo 2",
+      "description": "Pokémon do outro lado do Ultra Wormhole (anéis de tipo 2).",
+      "base_odds": 50,
+      "modifiers": [
+        {
+          "id": "distance",
+          "name": "Distância (anos-luz)",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "1000",
+              "min": 1000,
+              "max": 1499,
+              "odds": 50.0
+            },
+            {
+              "label": "1500",
+              "min": 1500,
+              "max": 1999,
+              "odds": 33.33
+            },
+            {
+              "label": "2000",
+              "min": 2000,
+              "max": 2499,
+              "odds": 25.0
+            },
+            {
+              "label": "2500",
+              "min": 2500,
+              "max": 2999,
+              "odds": 20.0
+            },
+            {
+              "label": "3000",
+              "min": 3000,
+              "max": 3499,
+              "odds": 16.67
+            },
+            {
+              "label": "3500",
+              "min": 3500,
+              "max": 3999,
+              "odds": 14.29
+            },
+            {
+              "label": "4000",
+              "min": 4000,
+              "max": 4499,
+              "odds": 12.5
+            },
+            {
+              "label": "4500",
+              "min": 4500,
+              "max": 4999,
+              "odds": 11.11
+            },
+            {
+              "label": "5000",
+              "min": 5000,
+              "max": null,
+              "odds": 10.0
+            }
+          ],
+          "odds": null
+        }
+      ],
+      "games": [
+        "usum"
+      ],
+      "notes": "Por viagem. 2% a 1000 anos-luz, +1% a cada 500, até 10% em 5000+. Efeito do Amuleto desconhecido.",
+      "verified": true
+    },
+    {
+      "id": "ultra_wormhole_type3",
+      "name": "Ultra Wormhole tipo 3",
+      "description": "Pokémon do outro lado do Ultra Wormhole (anéis de tipo 3).",
+      "base_odds": 33.33,
+      "modifiers": [
+        {
+          "id": "distance",
+          "name": "Distância (anos-luz)",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "1000",
+              "min": 1000,
+              "max": 1499,
+              "odds": 33.33
+            },
+            {
+              "label": "1500",
+              "min": 1500,
+              "max": 1999,
+              "odds": 20.0
+            },
+            {
+              "label": "2000",
+              "min": 2000,
+              "max": 2499,
+              "odds": 14.29
+            },
+            {
+              "label": "2500",
+              "min": 2500,
+              "max": 2999,
+              "odds": 11.11
+            },
+            {
+              "label": "3000",
+              "min": 3000,
+              "max": 3499,
+              "odds": 9.09
+            },
+            {
+              "label": "3500",
+              "min": 3500,
+              "max": 3999,
+              "odds": 7.69
+            },
+            {
+              "label": "4000",
+              "min": 4000,
+              "max": 4499,
+              "odds": 6.67
+            },
+            {
+              "label": "4500",
+              "min": 4500,
+              "max": 4999,
+              "odds": 5.88
+            },
+            {
+              "label": "5000",
+              "min": 5000,
+              "max": null,
+              "odds": 5.26
+            }
+          ],
+          "odds": null
+        }
+      ],
+      "games": [
+        "usum"
+      ],
+      "notes": "Por viagem. 3% a 1000 anos-luz, +2% a cada 500, até 19% em 5000+. Efeito do Amuleto desconhecido.",
+      "verified": true
+    },
+    {
+      "id": "ultra_wormhole_type4",
+      "name": "Ultra Wormhole tipo 4",
+      "description": "Pokémon do outro lado do Ultra Wormhole (anéis de tipo 4).",
+      "base_odds": 6.25,
+      "modifiers": [
+        {
+          "id": "distance",
+          "name": "Distância (anos-luz)",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "2500",
+              "min": 2500,
+              "max": 2999,
+              "odds": 6.25
+            },
+            {
+              "label": "3000",
+              "min": 3000,
+              "max": 3499,
+              "odds": 5.0
+            },
+            {
+              "label": "3500",
+              "min": 3500,
+              "max": 3999,
+              "odds": 4.17
+            },
+            {
+              "label": "4000",
+              "min": 4000,
+              "max": 4499,
+              "odds": 3.57
+            },
+            {
+              "label": "4500",
+              "min": 4500,
+              "max": 4999,
+              "odds": 3.12
+            },
+            {
+              "label": "5000",
+              "min": 5000,
+              "max": null,
+              "odds": 2.78
+            }
+          ],
+          "odds": null
+        }
+      ],
+      "games": [
+        "usum"
+      ],
+      "notes": "Por viagem. 16% a 2500 anos-luz, +4% a cada 500, até 36% em 5000+. Sem anéis (tipo 1): 1%. Efeito do Amuleto desconhecido.",
+      "verified": true
+    },
+    {
+      "id": "catch_combo",
+      "name": "Combo de captura",
+      "description": "Capturar a mesma espécie seguidas vezes.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "combo",
+          "name": "Combo",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "0–10",
+              "min": 0,
+              "max": 10,
+              "odds": 4096
+            },
+            {
+              "label": "11–20",
+              "min": 11,
+              "max": 20,
+              "odds": 1024.38
+            },
+            {
+              "label": "21–30",
+              "min": 21,
+              "max": 30,
+              "odds": 512.44
+            },
+            {
+              "label": "31+",
+              "min": 31,
+              "max": null,
+              "odds": 341.79
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "lure",
+          "name": "Lure",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 2048.25
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1365.67
+        }
+      ],
+      "games": [
+        "lgpe"
+      ],
+      "notes": "A Lure soma 1 rolagem e o Amuleto 2. Tudo junto no 31+: 1/273,53.",
+      "verified": true
+    },
+    {
+      "id": "brilliant",
+      "name": "Pokémon com brilho (número de batalhas)",
+      "description": "Pokémon com aura brilhante; a chance sobe com o número de batalhas da espécie.",
+      "base_odds": 2048.25,
+      "modifiers": [
+        {
+          "id": "battled",
+          "name": "Batalhas contra a espécie",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "1–49",
+              "min": 1,
+              "max": 49,
+              "odds": 2048.25
+            },
+            {
+              "label": "50–99",
+              "min": 50,
+              "max": 99,
+              "odds": 1365.67
+            },
+            {
+              "label": "100–199",
+              "min": 100,
+              "max": 199,
+              "odds": 1024.38
+            },
+            {
+              "label": "200–299",
+              "min": 200,
+              "max": 299,
+              "odds": 819.6
+            },
+            {
+              "label": "300–499",
+              "min": 300,
+              "max": 499,
+              "odds": 683.08
+            },
+            {
+              "label": "500+",
+              "min": 500,
+              "max": null,
+              "odds": 585.57
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1024.38
+        }
+      ],
+      "games": [
+        "swsh"
+      ],
+      "notes": "O bônus do número de batalhas só vale para o Pokémon com brilho. O Amuleto soma 2 rolagens (500+ com Amuleto: 1/455,56).",
+      "verified": true
+    },
+    {
+      "id": "max_raid",
+      "name": "Max Raid",
+      "description": "Pokémon de uma toca de Max Raid.",
+      "base_odds": 4096,
+      "modifiers": [],
+      "games": [
+        "swsh"
+      ],
+      "notes": "O Amuleto não afeta. Eventos podem ter shiny garantido.",
+      "verified": true
+    },
+    {
+      "id": "dynamax_adventure",
+      "name": "Dynamax Adventure",
+      "description": "Pokémon capturados na Dynamax Adventure.",
+      "base_odds": 300,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 100
+        }
+      ],
+      "games": [
+        "swsh"
+      ],
+      "notes": "Por Pokémon capturado. Não é por rolagens.",
+      "verified": true
+    },
+    {
+      "id": "grand_underground",
+      "name": "Grande Subterrâneo",
+      "description": "Pokémon dos esconderijos do Grande Subterrâneo.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "diglett_bonus",
+          "name": "Bônus do Diglett",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 2048.25
+        }
+      ],
+      "games": [
+        "bdsp"
+      ],
+      "notes": "O bônus liga com 40 pontos de Diglett/Dugtrio e dura 4 minutos. O Amuleto não afeta.",
+      "verified": true
+    },
+    {
+      "id": "pla_wild",
+      "name": "Encontro (Arceus)",
+      "description": "Pokémon no mapa do Legends: Arceus.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "research",
+          "name": "Pesquisa da espécie",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "abaixo de 10",
+              "min": 0,
+              "max": 0,
+              "odds": 4096
+            },
+            {
+              "label": "nível 10",
+              "min": 1,
+              "max": 1,
+              "odds": 2048.25
+            },
+            {
+              "label": "perfeita",
+              "min": 2,
+              "max": 2,
+              "odds": 1024.38
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1024.38
+        }
+      ],
+      "games": [
+        "pla"
+      ],
+      "notes": "Pesquisa 10 soma 1 rolagem, perfeita soma 3; o Amuleto soma 3 (e exige a Pokédex toda no nível 10). Degraus: 0 = abaixo de 10, 1 = nível 10, 2 = perfeita.",
+      "verified": true
+    },
+    {
+      "id": "pla_outbreak",
+      "name": "Surto (Arceus)",
+      "description": "Pokémon de um surto (mass outbreak).",
+      "base_odds": 158.02,
+      "modifiers": [
+        {
+          "id": "research",
+          "name": "Pesquisa da espécie",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "abaixo de 10",
+              "min": 0,
+              "max": 0,
+              "odds": 158.02
+            },
+            {
+              "label": "nível 10",
+              "min": 1,
+              "max": 1,
+              "odds": 152.19
+            },
+            {
+              "label": "perfeita",
+              "min": 2,
+              "max": 2,
+              "odds": 141.72
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 141.72
+        }
+      ],
+      "games": [
+        "pla"
+      ],
+      "notes": "O surto soma 25 rolagens.",
+      "verified": true
+    },
+    {
+      "id": "pla_massive_outbreak",
+      "name": "Surto massivo (Arceus)",
+      "description": "Pokémon de um surto massivo (massive mass outbreak).",
+      "base_odds": 315.54,
+      "modifiers": [
+        {
+          "id": "research",
+          "name": "Pesquisa da espécie",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "abaixo de 10",
+              "min": 0,
+              "max": 0,
+              "odds": 315.54
+            },
+            {
+              "label": "nível 10",
+              "min": 1,
+              "max": 1,
+              "odds": 293.04
+            },
+            {
+              "label": "perfeita",
+              "min": 2,
+              "max": 2,
+              "odds": 256.47
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 256.47
+        }
+      ],
+      "games": [
+        "pla"
+      ],
+      "notes": "O surto massivo soma 12 rolagens.",
+      "verified": true
+    },
+    {
+      "id": "sv_wild",
+      "name": "Encontro (Scarlet / Violet)",
+      "description": "Pokémon no mapa, com sanduíche e surto.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "sparkling_power",
+          "name": "Poder Brilhante (sanduíche)",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "nenhum",
+              "min": 0,
+              "max": 0,
+              "odds": 4096
+            },
+            {
+              "label": "nível 1",
+              "min": 1,
+              "max": 1,
+              "odds": 2048.25
+            },
+            {
+              "label": "nível 2",
+              "min": 2,
+              "max": 2,
+              "odds": 1365.67
+            },
+            {
+              "label": "nível 3",
+              "min": 3,
+              "max": 3,
+              "odds": 1024.38
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "outbreak",
+          "name": "Surto: Pokémon derrotados",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "0–29",
+              "min": 0,
+              "max": 29,
+              "odds": 4096
+            },
+            {
+              "label": "30–59",
+              "min": 30,
+              "max": 59,
+              "odds": 2048.25
+            },
+            {
+              "label": "60+",
+              "min": 60,
+              "max": null,
+              "odds": 1365.67
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1365.67
+        }
+      ],
+      "games": [
+        "sv"
+      ],
+      "notes": "O Poder Brilhante só vale para o tipo do sanduíche. O surto soma 1 rolagem com 30 e outra com 60. Tudo junto: 1/512,44.",
+      "verified": true
+    },
+    {
+      "id": "tera_raid",
+      "name": "Tera Raid",
+      "description": "Pokémon de uma Tera Raid.",
+      "base_odds": 4103.05,
+      "modifiers": [],
+      "games": [
+        "sv"
+      ],
+      "notes": "Nem o Amuleto nem o sanduíche afetam. Raids de evento podem ter shiny fixo.",
+      "verified": true
+    },
+    {
+      "id": "za_wild",
+      "name": "Encontro (Z-A)",
+      "description": "Pokémon em Lumiose.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1024.38
+        }
+      ],
+      "games": [
+        "za"
+      ],
+      "notes": "O Amuleto vem da pesquisa da Mable (nível 50) e soma 3 rolagens. Presentes e Pokémon da história não podem ser shiny.",
+      "verified": true
+    },
+    {
+      "id": "za_hyperspace",
+      "name": "Lumiose do Hiperespaço (Mega Dimension)",
+      "description": "Pokémon das zonas do Hiperespaço com Poder Brilhante de um donut.",
+      "base_odds": 4096,
+      "modifiers": [
+        {
+          "id": "sparkling_power",
+          "name": "Poder Brilhante (donut)",
+          "kind": "steps",
+          "steps": [
+            {
+              "label": "nenhum",
+              "min": 0,
+              "max": 0,
+              "odds": 4096
+            },
+            {
+              "label": "nível 1",
+              "min": 1,
+              "max": 1,
+              "odds": 2048.25
+            },
+            {
+              "label": "nível 2",
+              "min": 2,
+              "max": 2,
+              "odds": 1365.67
+            },
+            {
+              "label": "nível 3",
+              "min": 3,
+              "max": 3,
+              "odds": 1024.38
+            }
+          ],
+          "odds": null
+        },
+        {
+          "id": "shiny_charm",
+          "name": "Amuleto Brilhante",
+          "kind": "toggle",
+          "steps": null,
+          "odds": 1024.38
+        }
+      ],
+      "games": [
+        "za"
+      ],
+      "notes": "Só vale para o tipo do Poder Brilhante (DLC Mega Dimension). No nível 3, o primeiro Pokémon do tipo em cada portal é shiny garantido.",
+      "verified": true
+    }
+  ]
+}

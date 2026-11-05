@@ -114,6 +114,7 @@ public static class TradeRockServer
         api.MapWorker();
         api.MapServer();
         api.MapDex();
+        api.MapGameData();
     }
 
     /// <summary>Endereço real após o start (a porta 0 vira uma porta livre).</summary>

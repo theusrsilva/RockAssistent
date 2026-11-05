@@ -40,6 +40,8 @@
   <!-- Pokédex offline (PokeAPI, BSD-3), gerada por scripts/build-dex.py; fora do git. -->
   <ItemGroup>
     <EmbeddedResource Include="..\..\assets\data\dex.sqlite" LogicalName="data/dex.sqlite" />
+    <!-- Dados dos jogos (métodos de shiny, chefes, treinadores, áreas, encontros, mapas), validados no GameDataStore. -->
+    <EmbeddedResource Include="..\..\assets\data\**\*.json" LogicalName="data/%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <Target Name="CheckDexDatabase" BeforeTargets="PrepareForBuild">
     <Error Condition="!Exists('$(MSBuildThisFileDirectory)..\..\assets\data\dex.sqlite')"

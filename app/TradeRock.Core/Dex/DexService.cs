@@ -57,6 +57,20 @@ public sealed class DexService(DexDatabase db)
 
     private Catalog Data => _catalog.Value;
 
+    private readonly Lazy<IReadOnlySet<string>> _moveIdentifiers = new(() =>
+    {
+        using var c = db.Open();
+        using var cmd = Command(c, "SELECT identifier FROM moves");
+        using var r = cmd.ExecuteReader();
+        var ids = new HashSet<string>(StringComparer.Ordinal);
+        while (r.Read())
+            ids.Add(r.GetString(0));
+        return ids;
+    }, LazyThreadSafetyMode.ExecutionAndPublication);
+
+    /// <summary>Identificadores de todos os golpes (como o PokeAPI escreve: <c>thunder-punch</c>).</summary>
+    public IReadOnlySet<string> MoveIdentifiers() => _moveIdentifiers.Value;
+
     public Task<IReadOnlyList<SpeciesSummary>> ListAsync(DexQuery q, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
