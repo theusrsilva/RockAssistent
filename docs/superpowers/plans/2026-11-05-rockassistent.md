@@ -182,6 +182,24 @@
 
 ## Entrega C: dados nossos (JSON) e verificação
 
+**Detonados do autor (05/11/2026):** há 22 PDFs da Pokémon Mythology em `/home/rocha/projetos/detonados/`, um por
+grupo de jogos (rb, y, gs, c, rs, e, frlg, dp, pt, hgss, bw, b2w2, xy, oras, sm, usum, lgpe, swsh, bdsp, pla, sv, za).
+A Task 8a extrai de cada um as notas de fatos em `docs/superpowers/sources/<key>-pokemythology-notes.md` (modelo:
+`za-pokemythology-notes.md`). Elas são **uma** fonte, não a única: os agentes de dados e de guias usam as notas,
+os dados embutidos e a pesquisa na web, e nunca copiam prosa.
+
+### Task 8a: Notas de fatos dos 22 detonados
+
+**Files:** Create `docs/superpowers/sources/<key>-pokemythology-notes.md` para os 21 jogos que faltam (o `za` já existe).
+Texto dos PDFs em `/home/rocha/projetos/detonados/txt/<arquivo>.txt` (gerado por `pdftotext -layout`); as imagens
+ficam no PDF para consulta pontual com o Read (até 20 páginas por chamada).
+
+- Cada nota segue as seções do modelo do Z-A: chefes em ordem (id, kind, nome, local, time com níveis, cap), áreas em
+  ordem de progressão com liberação, encontros por área (método, dia/noite, raridade quando houver), presentes/trocas/
+  fósseis, TMs/HMs com local, itens-chave, mecânicas específicas do jogo, pós-jogo e lendários. Só fatos; prosa zero.
+- Pode rodar em paralelo (um agente por 2–3 jogos), fora da fila de tarefas de código, porque só cria arquivos novos.
+- Commit `docs: notas de fatos dos detonados (<jogos>)`.
+
 Todos os JSON desta entrega ficam em `assets/data/` e são embutidos no `TradeRock.Core` (`LogicalName data/<caminho>`). Cada arquivo tem `"source"` (lista de URLs/decompilações consultadas) e `"verified": true|false` por item. O **analista de dados (Fable 5.1)** revisa cada tarefa de dados com o prompt `docs/superpowers/plans/data-review-prompt.md` (Task 8 cria) e escreve as dúvidas em `docs/superpowers/data-doubts.md`.
 
 ### Task 8: Esquemas, validador, endpoints `/api/data` e `shiny-methods.json`
@@ -218,11 +236,11 @@ public sealed record MapEdge(string From, string To);
 
 **Files:** Create os 7 arquivos. Test: `GameDataTests` ganha um caso por jogo: `Bosses(key)` tem 8 líderes (`kind=gym`, `badge` preenchido), 4 `elite`, 1 `champion`, rivais em ordem, e `LevelCap` crescente por `Order` entre os ginásios.
 
-- [ ] **Step 1: Teste** → FAIL. **Step 2: Pesquisar** (decompilações pret `pokered`, `pokecrystal`, `pokeruby`, `pokeemerald`, `pokefirered`: `data/trainers/parties.asm` ou `src/data/trainer_parties.h`; comparar com uma segunda fonte) e **escrever** os JSON com todos os chefes, inclusive rematches do pós-jogo quando existirem (`Order` maior). Golpes dos times "default moves" derivados do learnset no nível (anotar `notes: "golpes padrão do nível"`). **Step 3: Rodar** → PASS. **Step 4: Commit** `data: chefes da Gen 1 à 3`.
+- [ ] **Step 1: Teste** → FAIL. **Step 2: Pesquisar** (notas em `docs/superpowers/sources/<key>-pokemythology-notes.md` quando existirem; decompilações pret `pokered`, `pokecrystal`, `pokeruby`, `pokeemerald`, `pokefirered`: `data/trainers/parties.asm` ou `src/data/trainer_parties.h`; comparar com uma segunda fonte) e **escrever** os JSON com todos os chefes, inclusive rematches do pós-jogo quando existirem (`Order` maior). Golpes dos times "default moves" derivados do learnset no nível (anotar `notes: "golpes padrão do nível"`). **Step 3: Rodar** → PASS. **Step 4: Commit** `data: chefes da Gen 1 à 3`.
 
 ### Task 10: Chefes dos jogos Gen 4–5 (`dp, pt, hgss, bw, b2w2`)
 
-Igual à Task 9 (fontes: pret `pokediamond`, `pokeplatinum`, `pokeheartgold`, Bulbapedia/Serebii para conferir). Commit `data: chefes da Gen 4 e 5`.
+Igual à Task 9 (fontes: notas em `docs/superpowers/sources/`, pret `pokediamond`, `pokeplatinum`, `pokeheartgold`, Bulbapedia/Serebii para conferir). Commit `data: chefes da Gen 4 e 5`.
 
 ### Task 11: Chefes dos jogos Gen 6–9 (`xy, oras, sm, usum, lgpe, swsh, bdsp, pla, sv, za`)
 
