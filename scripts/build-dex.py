@@ -124,7 +124,6 @@ CREATE INDEX ix_machines ON machines(version_group_id, move_id);
 CREATE INDEX ix_evolution ON evolution(evolved_species_id);
 CREATE INDEX ix_flavor_text ON flavor_text(species_id);
 CREATE INDEX ix_pokemon_types_past ON pokemon_types_past(pokemon_id);
-CREATE INDEX ix_pokemon_moves_move ON pokemon_moves(move_id, version_group_id);
 CREATE INDEX ix_pokemon_egg_groups ON pokemon_egg_groups(species_id);
 CREATE INDEX ix_dex_numbers ON pokemon_dex_numbers(species_id);
 CREATE INDEX ix_encounters ON encounters(pokemon_id, version_id);

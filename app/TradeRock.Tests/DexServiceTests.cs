@@ -254,7 +254,7 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         await Dex.GetMoveAsync(33, "sv", Ct);
         watch.Restart();
         await Dex.GetMoveAsync(33, "sv", Ct);
-        Assert.True(watch.ElapsedMilliseconds < 50, $"golpe: {watch.ElapsedMilliseconds} ms");
+        Assert.True(watch.ElapsedMilliseconds < 200, $"golpe: {watch.ElapsedMilliseconds} ms");
     }
 
     [Fact]

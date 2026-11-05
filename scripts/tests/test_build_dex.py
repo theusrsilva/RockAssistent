@@ -159,8 +159,7 @@ class BuildDexTest(unittest.TestCase):
         plan = self.one("explain query plan select move_id from pokemon_moves where pokemon_id = 1 "
                         "and version_group_id = 2")
         self.assertIn("PRIMARY KEY", plan[0][3])
-        for expected in [("pokemon_moves", "move_id,version_group_id"),
-                         ("encounters", "pokemon_id,version_id"), ("flavor_text", "species_id"),
+        for expected in [("encounters", "pokemon_id,version_id"), ("flavor_text", "species_id"),
                          ("pokemon_types_past", "pokemon_id")]:
             self.assertIn(expected, columns)
 
