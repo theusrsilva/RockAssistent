@@ -17,7 +17,8 @@ FIXTURES = {
     "generations": ("id,main_region_id,identifier", ["1,1,generation-i"]),
     "regions": ("id,identifier", ["1,kanto"]),
     "pokemon_colors": ("id,identifier", ["7,purple"]),
-    "growth_rates": ("id,identifier,formula", ["4,medium-slow,x"]),
+    "growth_rates": ("id,identifier,formula", ["2,medium,x", "4,medium-slow,x"]),
+    "experience": ("growth_rate_id,level,experience", ["4,1,0", "4,2,9", "2,1,0"]),
     "pokemon_species": (
         "id,identifier,generation_id,evolves_from_species_id,evolution_chain_id,color_id,shape_id,habitat_id,"
         "gender_rate,capture_rate,base_happiness,is_baby,hatch_counter,has_gender_differences,growth_rate_id,"
@@ -105,6 +106,12 @@ class BuildDexTest(unittest.TestCase):
         row = self.one("select identifier, color, growth_rate, genus_en, genus_ptbr, evolves_from_species_id "
                        "from species where id = 94")[0]
         self.assertEqual(row, ("gengar", "purple", "medium-slow", "Shadow Pokémon", None, 93))
+
+    def test_growth_rates_link_species_to_experience(self):
+        self.assertEqual(self.one("select id from growth_rates where identifier = 'medium-slow'"), [(4,)])
+        self.assertEqual(self.one("select e.level, e.experience from experience e join growth_rates g "
+                                  "on g.id = e.growth_rate_id join species s on s.growth_rate = g.identifier "
+                                  "where s.id = 94 order by e.level"), [(1, 0), (2, 9)])
 
     def test_gengar_evolves_by_trade(self):
         self.assertEqual(self.one("select evolution_trigger from evolution where evolved_species_id = 94"),

@@ -102,6 +102,7 @@ CREATE TABLE encounters(id INTEGER PRIMARY KEY, version_id INTEGER, location_are
 CREATE TABLE natures(id INTEGER PRIMARY KEY, identifier TEXT, name_en TEXT, decreased_stat_id INTEGER,
   increased_stat_id INTEGER);
 CREATE TABLE stats(id INTEGER PRIMARY KEY, identifier TEXT, name_en TEXT);
+CREATE TABLE growth_rates(id INTEGER PRIMARY KEY, identifier TEXT);
 CREATE TABLE experience(growth_rate_id INTEGER, level INTEGER, experience INTEGER);
 """
 
@@ -136,8 +137,11 @@ def download(commit, cache_dir):
         if target.exists() and target.stat().st_size > 0:
             return
         part = target.with_suffix(".part")
-        with urllib.request.urlopen(BASE_URL.format(commit=commit, name=name), timeout=120) as response:
-            part.write_bytes(response.read())
+        try:
+            with urllib.request.urlopen(BASE_URL.format(commit=commit, name=name), timeout=120) as response:
+                part.write_bytes(response.read())
+        except OSError as error:  # URLError e HTTPError são OSError
+            sys.exit(f"falha ao baixar {name}.csv: {error}")
         os.replace(part, target)
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
@@ -168,7 +172,7 @@ def clean_prose(text, effect_chance=None):
 
 def clean_flavor(text):
     """Os textos da Pokédex trazem quebras do jogo (\\n, \\f, hífen suave): viram espaços simples."""
-    return " ".join(text.replace("­", "").replace("\f", " ").split())
+    return " ".join(text.replace("\u00ad", "").replace("\f", " ").split())
 
 
 def build(csv_dir, out, commit):
@@ -229,6 +233,7 @@ def build(csv_dir, out, commit):
                            if languages.get(n(r["language_id"])) in FLAVOR_LANGUAGES))
 
     # Pokémon, formas, tipos e status
+    # form_order = coluna "order" do pokemon.csv (ordem de exibição das formas).
     insert("pokemon", ((n(r["id"]), n(r["species_id"]), r["identifier"], n(r["height"]), n(r["weight"]),
                         n(r["base_experience"]), n(r["is_default"]), n(r["order"])) for r in rows("pokemon")))
     form_names = english("pokemon_form_names", "pokemon_form_id", "form_name")
@@ -243,6 +248,7 @@ def build(csv_dir, out, commit):
                              for r in rows("pokemon_stats")))
     stat_names = english("stat_names", "stat_id")
     insert("stats", ((n(r["id"]), r["identifier"], stat_names.get(n(r["id"]))) for r in rows("stats")))
+    insert("growth_rates", growth.items())
     insert("experience", ((n(r["growth_rate_id"]), n(r["level"]), n(r["experience"])) for r in rows("experience")))
 
     # Habilidades
