@@ -5,13 +5,16 @@
   },
   "nav": {
     "home": "Início",
-    "trade": "Trocar",
-    "pokemon": "Cofre",
+    "dex": "Pokédex",
+    "guides": "Guias",
+    "boxes": "Boxes",
+    "trades": "Trocas",
+    "gifts": "Mystery Gift",
+    "nuzlocke": "Nuzlocke",
+    "hunt": "Contador Hunt",
     "history": "Histórico",
     "settings": "Configurações",
-    "builder": "Criar Pokémon",
-    "setup": "Configurar",
-    "activities": "Atividades"
+    "builder": "Criar Pokémon"
   },
   "common": {
     "loading": "Carregando…",
@@ -1109,9 +1112,9 @@
     },
     "mobileNav": {
       "home": "Início",
-      "swap_horiz": "Trocar",
-      "inventory_2": "Cofre",
-      "add_circle": "Criar",
+      "menu_book": "Pokédex",
+      "map": "Guias",
+      "inventory_2": "Boxes",
       "more": "Mais"
     },
     "logoutAs": "Sair da conta {{name}}",
@@ -1430,11 +1433,10 @@
       "license": "Licença, código-fonte e marcas",
       "projects_one": "{{count}} projeto",
       "projects_other": "{{count}} projetos"
-    }
+    },
+    "building": "Esta área ainda está em construção. Logo ela aparece aqui."
   },
   "activities": {
-    "title": "Outras atividades",
-    "sub": "Mystery Gift, raids e Union Circle, pelo mesmo rádio da troca.",
     "engineUnsupported": "A conexão escolhida não faz outras atividades. Use o ESP32, a placa Wi-Fi ou o modo demonstração em Configurações → Conexão.",
     "whichGame": "Para qual jogo?",
     "whichGameSub": "Mystery Gift no FireRed/LeafGreen e no Sword/Shield; raids no Sword/Shield e no Scarlet/Violet; Union Circle no Scarlet/Violet.",
@@ -1669,5 +1671,41 @@
       "busy": "Termine a troca ou a atividade em andamento antes de atualizar.",
       "update_failed": "A atualização falhou. Veja a aba Logs nas Configurações."
     }
+  },
+  "dex": {
+    "title": "Pokédex"
+  },
+  "guides": {
+    "title": "Guias"
+  },
+  "boxes": {
+    "title": "Boxes",
+    "building": "Em breve, os saves das suas pastas aparecem aqui ao lado do cofre. Por enquanto, o cofre do app continua logo abaixo."
+  },
+  "trades": {
+    "title": "Trocas",
+    "sub": "Troque Pokémon com o Switch ou entre em raids e no Union Circle pelo mesmo rádio.",
+    "trade": {
+      "title": "Trocar",
+      "sub": "Mande e receba Pokémon com o seu console."
+    },
+    "raid": {
+      "title": "Raids",
+      "sub": "Max Raid e Dynamax Adventure (Sword/Shield) e Tera Raid (Scarlet/Violet)."
+    },
+    "circle": {
+      "title": "Union Circle",
+      "sub": "Missões e encontros no Scarlet/Violet."
+    }
+  },
+  "gifts": {
+    "title": "Mystery Gift",
+    "sub": "Mande presentes de evento para o FireRed/LeafGreen e o Sword/Shield pelo mesmo rádio da troca."
+  },
+  "nuzlocke": {
+    "title": "Nuzlocke"
+  },
+  "hunt": {
+    "title": "Contador Hunt"
   }
 }

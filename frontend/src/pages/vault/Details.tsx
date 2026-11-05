@@ -212,7 +212,7 @@ export function Details({
 
   function useInTrade() {
     requestTrade([pokemon.id])
-    navigate('/trocar')
+    navigate('/trocas/trocar')
   }
 
   const statLabel = (i: number) => t(`ui.stats.${STAT_KEYS[i]}`)

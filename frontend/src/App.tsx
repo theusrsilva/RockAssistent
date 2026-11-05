@@ -1,10 +1,15 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import { Layout } from './components/Layout'
 import BuilderPage from './pages/builder/BuilderPage'
-import ActivitiesPage from './pages/ActivitiesPage'
 import HistoryPage from './pages/HistoryPage'
 import HomePage from './pages/HomePage'
-import VaultPage from './pages/vault/VaultPage'
+import BoxesPage from './pages/boxes/BoxesPage'
+import DexPage from './pages/dex/DexPage'
+import GiftsPage from './pages/gifts/GiftsPage'
+import GuidesPage from './pages/guides/GuidesPage'
+import HuntPage from './pages/hunt/HuntPage'
+import NuzlockePage from './pages/nuzlocke/NuzlockePage'
+import TradesHubPage from './pages/trades/TradesHubPage'
 import SettingsPage from './pages/SettingsPage'
 import TradePage from './pages/trade/TradePage'
 import { useTheme } from './theme'
@@ -24,12 +29,23 @@ export default function App() {
             <Layout>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/trocar" element={<TradePage />} />
-                <Route path="/pokemon" element={<VaultPage />} />
+                <Route path="/pokedex" element={<DexPage />} />
+                <Route path="/pokedex/:species" element={<DexPage />} />
+                <Route path="/guias/*" element={<GuidesPage />} />
+                <Route path="/boxes" element={<BoxesPage />} />
+                <Route path="/trocas" element={<TradesHubPage />} />
+                <Route path="/trocas/trocar" element={<TradePage />} />
+                <Route path="/mystery-gift" element={<GiftsPage />} />
+                <Route path="/nuzlocke" element={<NuzlockePage />} />
+                <Route path="/hunt" element={<HuntPage />} />
+                <Route path="/historico" element={<HistoryPage />} />
+                {/* O Boxes abre o construtor em "Editar" e "+ Novo". */}
                 <Route path="/criar" element={<BuilderPage />} />
                 <Route path="/criar/:id" element={<BuilderPage />} />
-                <Route path="/historico" element={<HistoryPage />} />
-                <Route path="/atividades" element={<ActivitiesPage />} />
+                {/* Rotas antigas do TradeRock. */}
+                <Route path="/trocar" element={<Navigate to="/trocas/trocar" replace />} />
+                <Route path="/pokemon" element={<Navigate to="/boxes" replace />} />
+                <Route path="/atividades" element={<Navigate to="/trocas" replace />} />
                 <Route path="/configuracoes" element={<SettingsPage />} />
                 {/* O antigo assistente de 7 etapas virou a lista de Configurações → Conexão. */}
                 <Route path="/configurar" element={<Navigate to="/configuracoes?aba=conexao" replace />} />

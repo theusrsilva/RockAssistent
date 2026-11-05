@@ -17,15 +17,23 @@ declare global {
   }
 }
 
-const mainLinks = [
+/** Menu principal do RockAssistent, na ordem das áreas. Configurações e Sobre ficam no rodapé (no celular, em "Mais"). */
+export const mainLinks: { to: string; key: string; icon: string; end?: boolean; localOnly?: boolean }[] = [
   { to: '/', key: 'nav.home', icon: 'home', end: true },
-  { to: '/trocar', key: 'nav.trade', icon: 'swap_horiz' },
-  { to: '/pokemon', key: 'nav.pokemon', icon: 'inventory_2' },
-  { to: '/criar', key: 'nav.builder', icon: 'add_circle' },
+  { to: '/pokedex', key: 'nav.dex', icon: 'menu_book' },
+  { to: '/guias', key: 'nav.guides', icon: 'map' },
+  { to: '/boxes', key: 'nav.boxes', icon: 'inventory_2' },
+  { to: '/trocas', key: 'nav.trades', icon: 'swap_horiz' },
+  // Mystery Gift (D26): só na janela do PC, como a configuração do rádio.
+  { to: '/mystery-gift', key: 'nav.gifts', icon: 'redeem', localOnly: true },
+  { to: '/nuzlocke', key: 'nav.nuzlocke', icon: 'skull' },
+  { to: '/hunt', key: 'nav.hunt', icon: 'auto_awesome' },
   { to: '/historico', key: 'nav.history', icon: 'history' },
-  // Outras atividades (D26): só na janela do PC, como a configuração do rádio.
-  { to: '/atividades', key: 'nav.activities', icon: 'redeem', localOnly: true },
 ]
+
+/** No celular, os quatro primeiros viram abas e o resto fica em "Mais". */
+const tabLinks = mainLinks.slice(0, 4)
+const moreLinks = mainLinks.slice(4)
 
 /** Resumo da conexão para o menu e o Início. */
 export function useConnectionSummary() {
@@ -204,7 +212,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
         {mobile && (
           <nav className="sticky bottom-0 z-30 mt-auto flex h-16 shrink-0 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)]">
-            {mainLinks.slice(0, 4).map((l) => (
+            {tabLinks.map((l) => (
               <NavLink key={l.to} to={l.to} end={l.end} className="flex-1">
                 {({ isActive }) => <MobileTab icon={l.icon} label={t(`ui.mobileNav.${l.icon}`)} active={isActive} />}
               </NavLink>
@@ -213,7 +221,7 @@ export function Layout({ children }: { children: ReactNode }) {
               <MobileTab
                 icon="menu"
                 label={t('ui.mobileNav.more')}
-                active={moreOpen || ['/atividades', '/historico', '/configuracoes', '/sobre'].includes(location.pathname)}
+                active={moreOpen || [...moreLinks.map((l) => l.to), '/configuracoes', '/sobre'].some((to) => location.pathname.startsWith(to))}
               />
               {status.missing > 0 && <span className="absolute top-1.5 right-[calc(50%-24px)] h-[9px] w-[9px] rounded-full bg-bad" />}
             </button>
@@ -228,8 +236,9 @@ export function Layout({ children }: { children: ReactNode }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mt-0.5 mb-2.5 h-1 w-10 rounded-sm bg-line" />
-            {!remote && <MoreItem to="/atividades" icon="redeem" label={t('nav.activities')} />}
-            <MoreItem to="/historico" icon="history" label={t('nav.history')} />
+            {moreLinks.filter((l) => !(remote && l.localOnly)).map((l) => (
+              <MoreItem key={l.to} to={l.to} icon={l.icon} label={t(l.key)} />
+            ))}
             <MoreItem to="/configuracoes" icon="settings" label={t('nav.settings')} badge={status.missing || undefined} />
             <MoreItem to="/sobre" icon="info" label={t('about.link')} />
             {remote && (

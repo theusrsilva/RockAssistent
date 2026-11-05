@@ -285,7 +285,7 @@ export default function BuilderPage() {
             <Button size="lg" icon="inventory_2" className="h-12 w-full" disabled={!canSave} onClick={() => void save()}>
               {t('builder.save')}
             </Button>
-            <Link to="/pokemon" className="text-[13px] font-semibold text-accent">
+            <Link to="/boxes" className="text-[13px] font-semibold text-accent">
               {t('ui.home.vault')}
             </Link>
           </div>

@@ -1,16 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ContentFile } from '../components/Markdown'
-import { Badge, Button, Callout, Icon, inputClass, PageTitle, Segmented } from '../components/ui'
-import { api, ApiError } from '../lib/api'
-import { GAMES, gameOf, versionName } from '../lib/games'
-import { giftText, whenText } from '../lib/gifts'
-import type { ActivitiesCatalog, ActivitySnapshot, GiftEntry, Pokemon, TradeGame } from '../lib/types'
-import { CircleForm, circleReady, newCircle, type CircleState } from './activities/CircleForm'
-import { newRaid, RAID_KINDS, RaidForm, raidReady, type RaidState } from './activities/RaidForm'
-import { GameStep } from './trade/GameStep'
+import { ContentFile } from '../../components/Markdown'
+import { Badge, Button, Callout, Icon, inputClass, PageTitle, Segmented } from '../../components/ui'
+import { api, ApiError } from '../../lib/api'
+import { GAMES, gameOf, versionName } from '../../lib/games'
+import { giftText, whenText } from '../../lib/gifts'
+import type { ActivitiesCatalog, ActivitySnapshot, GiftEntry, Pokemon, TradeGame } from '../../lib/types'
+import { CircleForm, circleReady, newCircle, type CircleState } from './CircleForm'
+import { newRaid, RAID_KINDS, RaidForm, raidReady, type RaidState } from './RaidForm'
+import { GameStep } from '../trade/GameStep'
 
-type Activity = 'gift' | 'raid' | 'circle'
+export type Activity = 'gift' | 'raid' | 'circle'
 
 type Mode = 'preset' | 'event' | 'file'
 
@@ -25,19 +25,21 @@ interface GiftFile {
  * Union Circle (Scarlet/Violet),
  * pelo rádio configurado (ESP32 ou placa Wi-Fi; as raids do Sword/Shield também pela rede de casa) ou simuladas no
  * modo demonstração.
+ *
+ * Mostra só as atividades de `only`: o Mystery Gift tem a própria tela e as raids e o Union Circle ficam em Trocas.
  */
-export default function ActivitiesPage() {
+export function ActivityPanel({ only, title, sub }: { only: Activity[]; title?: string; sub?: string }) {
   const { t } = useTranslation()
   const [catalog, setCatalog] = useState<ActivitiesCatalog | null>(null)
   const [current, setCurrent] = useState<ActivitySnapshot | null>(null)
-  const [game, setGame] = useState<TradeGame>('fire_red')
+  const [game, setGame] = useState<TradeGame>(firstGame(only))
   const [mode, setMode] = useState<Mode>('preset')
   const [key, setKey] = useState<string | null>(null)
   const [file, setFile] = useState<GiftFile | null>(null)
   const [search, setSearch] = useState('')
   const [errors, setErrors] = useState<string[]>([])
   const [busy, setBusy] = useState(false)
-  const [activity, setActivity] = useState<Activity>('gift')
+  const [activity, setActivity] = useState<Activity>(only[0])
   const [raid, setRaid] = useState<RaidState>(newRaid('max-raid-host'))
   const [vault, setVault] = useState<Pokemon[]>([])
   const [circle, setCircle] = useState<CircleState>(newCircle())
@@ -60,10 +62,10 @@ export default function ActivitiesPage() {
 
   const family = gameOf(game).family
   const gifts = catalog?.gifts[family]
-  const games = GAMES.filter((g) => catalog?.games.some((a) => a.game === g.family))
+  const games = GAMES.filter((g) => catalog?.games.some((a) => a.game === g.family && a.activities.some((k) => only.includes(k))))
   const gameActivities = catalog?.games.find((g) => g.game === family)
   const extensions = gameActivities?.giftExtensions ?? []
-  const offered = (gameActivities?.activities ?? []) as Activity[]
+  const offered = ((gameActivities?.activities ?? []) as Activity[]).filter((a) => only.includes(a))
   const supported = (gameActivities?.supported ?? []) as Activity[]
 
   const chooseGame = (g: TradeGame) => {
@@ -74,8 +76,8 @@ export default function ActivitiesPage() {
       setFile(null)
       setMode('preset')
       setSearch('')
-      const kinds = catalog?.games.find((x) => x.game === next)?.activities ?? []
-      setActivity(kinds.includes('gift') ? 'gift' : 'raid')
+      const kinds = (catalog?.games.find((x) => x.game === next)?.activities ?? []).filter((k) => only.includes(k))
+      setActivity(kinds[0] ?? only[0])
       if (next === 'swsh' || next === 'sv') setRaid(newRaid(RAID_KINDS[next][0]))
     }
   }
@@ -137,14 +139,14 @@ export default function ActivitiesPage() {
     await api.post('/api/activities/current/cancel').catch(() => {})
   }
 
-  if (current && showing(current)) {
-    return <Progress snapshot={current} onStop={stop} onAgain={() => setCurrent(null)} />
+  if (current && only.includes(current.kind) && showing(current)) {
+    return <Progress snapshot={current} title={title} onStop={stop} onAgain={() => setCurrent(null)} />
   }
 
   return (
     <div className="flex flex-col gap-5">
-      <PageTitle>{t('activities.title')}</PageTitle>
-      <p className="-mt-2 text-sm text-muted">{t('activities.sub')}</p>
+      {title && <PageTitle>{title}</PageTitle>}
+      {sub && <p className="-mt-2 text-sm text-muted">{sub}</p>}
 
       {catalog && (!catalog.engineSupports || (gameActivities && !supported.includes(activity))) && (
         <Callout tone="amber" icon="info">
@@ -302,12 +304,17 @@ export default function ActivitiesPage() {
   )
 }
 
+/** Primeiro jogo que tem a atividade: Mystery Gift no FireRed, raids no Sword e Union Circle só no Scarlet/Violet. */
+function firstGame(only: Activity[]): TradeGame {
+  return only.includes('gift') ? 'fire_red' : only.includes('raid') ? 'sword' : 'scarlet'
+}
+
 /** Mostra a atividade atual (rodando) ou a que acabou de terminar nesta visita. */
 function showing(s: ActivitySnapshot) {
   return s.status === 'running' || (s.finishedAt !== null && Date.now() - new Date(s.finishedAt).getTime() < 10 * 60_000)
 }
 
-function Progress({ snapshot, onStop, onAgain }: { snapshot: ActivitySnapshot; onStop: () => void; onAgain: () => void }) {
+function Progress({ snapshot, title, onStop, onAgain }: { snapshot: ActivitySnapshot; title?: string; onStop: () => void; onAgain: () => void }) {
   const { t } = useTranslation()
   const game = gameOf(snapshot.game)
   const kinds = new Set(snapshot.events.map((e) => e.kind))
@@ -338,7 +345,7 @@ function Progress({ snapshot, onStop, onAgain }: { snapshot: ActivitySnapshot; o
 
   return (
     <div className="flex flex-col gap-5">
-      <PageTitle>{t('activities.title')}</PageTitle>
+      {title && <PageTitle>{title}</PageTitle>}
       <div className="flex flex-col gap-4 rounded-xl border border-line bg-surface p-[22px]">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-lg font-bold">

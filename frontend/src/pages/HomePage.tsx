@@ -56,8 +56,8 @@ export default function HomePage() {
   const name = (p?: Pokemon) => (p ? (p.nickname || p.speciesName).toUpperCase() : '?')
 
   const tiles = [
-    { icon: 'swap_horiz', to: '/trocar', title: t('home.startTrade'), sub: t('ui.home.tradeSub') },
-    { icon: 'inventory_2', to: '/pokemon', title: t('ui.home.vault'), sub: t('ui.home.vaultSub') },
+    { icon: 'swap_horiz', to: '/trocas/trocar', title: t('home.startTrade'), sub: t('ui.home.tradeSub') },
+    { icon: 'inventory_2', to: '/boxes', title: t('ui.home.vault'), sub: t('ui.home.vaultSub') },
     { icon: 'add_circle', to: '/criar', title: t('nav.builder'), sub: t('ui.home.createSub') },
   ]
 
@@ -75,7 +75,7 @@ export default function HomePage() {
       {session?.status === 'running' && (
         <Callout tone="sky" icon="sync">
           {t('home.running')}{' '}
-          <Link to="/trocar" className="font-bold underline">
+          <Link to="/trocas/trocar" className="font-bold underline">
             {t('home.follow')}
           </Link>
         </Callout>
@@ -126,7 +126,7 @@ export default function HomePage() {
                 {t('ui.home.fixNow')}
               </Button>
             )}
-            <Button size="lg" variant="secondary" onClick={() => navigate('/trocar')}>
+            <Button size="lg" variant="secondary" onClick={() => navigate('/trocas/trocar')}>
               {status.ready ? t('home.startTrade') : t('ui.home.tryDemo')}
             </Button>
           </div>

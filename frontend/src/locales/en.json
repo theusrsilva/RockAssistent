@@ -5,13 +5,16 @@
   },
   "nav": {
     "home": "Home",
-    "trade": "Trade",
-    "pokemon": "Vault",
+    "dex": "Pokédex",
+    "guides": "Guides",
+    "boxes": "Boxes",
+    "trades": "Trades",
+    "gifts": "Mystery Gift",
+    "nuzlocke": "Nuzlocke",
+    "hunt": "Hunt Counter",
     "history": "History",
     "settings": "Settings",
-    "builder": "Create Pokémon",
-    "setup": "Setup",
-    "activities": "Activities"
+    "builder": "Create Pokémon"
   },
   "common": {
     "loading": "Loading…",
@@ -1109,9 +1112,9 @@
     },
     "mobileNav": {
       "home": "Home",
-      "swap_horiz": "Trade",
-      "inventory_2": "Vault",
-      "add_circle": "Create",
+      "menu_book": "Pokédex",
+      "map": "Guides",
+      "inventory_2": "Boxes",
       "more": "More"
     },
     "logoutAs": "Sign out of {{name}}",
@@ -1430,11 +1433,10 @@
       "license": "License, source code and trademarks",
       "projects_one": "{{count}} project",
       "projects_other": "{{count}} projects"
-    }
+    },
+    "building": "This area is still under construction. It will show up here soon."
   },
   "activities": {
-    "title": "Other activities",
-    "sub": "Mystery Gift, raids and Union Circle, through the same radio as trading.",
     "engineUnsupported": "The chosen connection doesn't do other activities. Use the ESP32, the Wi-Fi card or demo mode in Settings → Connection.",
     "whichGame": "Which game?",
     "whichGameSub": "Mystery Gift on FireRed/LeafGreen and Sword/Shield; raids on Sword/Shield and Scarlet/Violet; Union Circle on Scarlet/Violet.",
@@ -1669,5 +1671,41 @@
       "busy": "Finish the trade or activity in progress before updating.",
       "update_failed": "The update failed. See the Logs tab in Settings."
     }
+  },
+  "dex": {
+    "title": "Pokédex"
+  },
+  "guides": {
+    "title": "Guides"
+  },
+  "boxes": {
+    "title": "Boxes",
+    "building": "Soon the saves from your folders will show up here next to the vault. For now, the app vault is right below."
+  },
+  "trades": {
+    "title": "Trades",
+    "sub": "Trade Pokémon with the Switch or join raids and the Union Circle through the same radio.",
+    "trade": {
+      "title": "Trade",
+      "sub": "Send and receive Pokémon with your console."
+    },
+    "raid": {
+      "title": "Raids",
+      "sub": "Max Raid and Dynamax Adventure (Sword/Shield) and Tera Raid (Scarlet/Violet)."
+    },
+    "circle": {
+      "title": "Union Circle",
+      "sub": "Missions and encounters in Scarlet/Violet."
+    }
+  },
+  "gifts": {
+    "title": "Mystery Gift",
+    "sub": "Send event gifts to FireRed/LeafGreen and Sword/Shield through the same radio as trading."
+  },
+  "nuzlocke": {
+    "title": "Nuzlocke"
+  },
+  "hunt": {
+    "title": "Hunt Counter"
   }
 }

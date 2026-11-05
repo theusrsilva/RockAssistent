@@ -533,7 +533,7 @@ export default function VaultPage() {
                     title={selected.size > 6 ? t('trade.party.full') : undefined}
                     onClick={() => {
                       requestTrade([...selected])
-                      navigate('/trocar')
+                      navigate('/trocas/trocar')
                     }}
                   >
                     {t('ui.vault.useInTrade')}
