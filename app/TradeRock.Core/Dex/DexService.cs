@@ -12,9 +12,11 @@ namespace TradeRock.Core.Dex;
 /// <list type="bullet">
 /// <item>"Existe no jogo": a espécie é de uma geração até a do jogo e tem golpes no grupo de versões, ou número numa
 /// Pokédex regional do jogo, ou um encontro numa versão do jogo (DLCs incluídas).</item>
-/// <item>Fraquezas: a tabela de tipos de hoje, só com os tipos que existem na geração (Aço e Noturno a partir da Gen 2,
-/// Fada a partir da Gen 6). O banco não tem as tabelas antigas (Gen 1, Aço resistindo a Fantasma/Noturno até a Gen 5)
-/// nem os tipos antigos de cada Pokémon (Clefairy era Normal até a Gen 5).</item>
+/// <item>Fraquezas: a tabela de tipos da geração, só com os tipos que existem nela (Aço e Noturno a partir da Gen 2,
+/// Fada a partir da Gen 6). Por par de tipos vale a linha de <c>type_efficacy_past</c> com a menor geração >= a do jogo
+/// (Gen 1, Aço resistindo a Fantasma/Noturno até a Gen 5), senão a de hoje.</item>
+/// <item>Tipos: os da geração (<c>pokemon_types_past</c>, a menor geração >= a do jogo; Clefairy era Normal até a
+/// Gen 5), senão os de hoje. A lista sem jogo mostra os de hoje.</item>
 /// <item>Golpes: tipo, força, precisão e PP da geração do jogo, pelo <c>move_changelog</c>.</item>
 /// <item>Habilidades: as da geração (<c>pokemon_abilities_past</c>), nenhuma antes da Gen 3, ocultas só da Gen 5.</item>
 /// </list>
@@ -59,7 +61,9 @@ public sealed class DexService(DexDatabase db)
     {
         ct.ThrowIfCancellationRequested();
         var data = Data;
-        HashSet<int>? inGame = q.GameKey is null ? null : data.Game(q.GameKey).Exists;
+        var game = q.GameKey is null ? null : data.Game(q.GameKey);
+        HashSet<int>? inGame = game?.Exists;
+        string[] Types(SpeciesRow s) => game is null ? s.Types : data.SpeciesTypes(s, game.Generation);
         var text = string.IsNullOrWhiteSpace(q.Text) ? null : Normalize(q.Text.Trim());
         int? number = text is not null && int.TryParse(text, NumberStyles.None, CultureInfo.InvariantCulture, out var n) ? n : null;
 
@@ -69,14 +73,14 @@ public sealed class DexService(DexDatabase db)
         if (q.Generation is { } gen)
             rows = rows.Where(s => s.Generation == gen);
         if (!string.IsNullOrWhiteSpace(q.Type))
-            rows = rows.Where(s => s.Types.Contains(q.Type, StringComparer.OrdinalIgnoreCase));
+            rows = rows.Where(s => Types(s).Contains(q.Type, StringComparer.OrdinalIgnoreCase));
         if (text is not null)
             rows = rows.Where(s => s.Id == number || s.Search.Any(k => k.Contains(text, StringComparison.Ordinal)));
 
         IReadOnlyList<SpeciesSummary> result = rows
             .Skip(Math.Max(0, q.Offset))
             .Take(Math.Clamp(q.Limit, 1, 2000))
-            .Select(s => new SpeciesSummary(s.Id, s.Name, s.Generation, s.Types, s.National))
+            .Select(s => new SpeciesSummary(s.Id, s.Name, s.Generation, Types(s), s.National))
             .ToList();
         return Task.FromResult(result);
     }
@@ -251,7 +255,7 @@ public sealed class DexService(DexDatabase db)
         var data = Data;
         var types = data.TypesIn(generation);
         var factors = types.ToDictionary(a => a.Name, a => (IReadOnlyDictionary<string, double>)types.ToDictionary(
-            d => d.Name, d => data.Efficacy.GetValueOrDefault((a.Id, d.Id), 100) / 100.0));
+            d => d.Name, d => data.Factor(a.Id, d.Id, generation) / 100.0));
         return Task.FromResult(new TypeChart(generation, types.Select(t => t.Name).ToList(), factors));
     }
 
@@ -325,7 +329,8 @@ public sealed class DexService(DexDatabase db)
             // Formas que só chegaram depois do jogo (a Mega do Gengar no FRLG) ficam de fora; a padrão sempre fica.
             if (!p.IsDefault && info.Introduced is { } vg && data.GroupOrder(vg) > game.Order)
                 continue;
-            forms.Add(new SpeciesForm(p.Id, p.Identifier, info.Name ?? row.Name, [.. types.GetValueOrDefault(p.Id) ?? []],
+            forms.Add(new SpeciesForm(p.Id, p.Identifier, info.Name ?? row.Name,
+                data.PokemonTypes(p.Id, [.. types.GetValueOrDefault(p.Id) ?? []], game.Generation),
                 Stats(stats.GetValueOrDefault(p.Id)), info.Mega, p.IsDefault));
         }
         return forms;
@@ -487,7 +492,7 @@ public sealed class DexService(DexDatabase db)
     {
         var defenderIds = defender.Select(data.TypeId).OfType<int>().ToList();
         return data.TypesIn(generation).ToDictionary(t => t.Name,
-            t => defenderIds.Aggregate(1.0, (acc, d) => acc * data.Efficacy.GetValueOrDefault((t.Id, d), 100) / 100.0));
+            t => defenderIds.Aggregate(1.0, (acc, d) => acc * data.Factor(t.Id, d, generation) / 100.0));
     }
 
     private static List<FlavorText> Flavor(SqliteConnection c, int speciesId, GameInfo game, string language)
@@ -640,6 +645,11 @@ public sealed class DexService(DexDatabase db)
         public required SortedDictionary<int, SpeciesRow> Species { get; init; }
         public required Dictionary<int, (string Name, int Generation)> Types { get; init; }
         public required Dictionary<(int Attack, int Defense), int> Efficacy { get; init; }
+        /// <summary>Linhas antigas por par de tipos, em ordem crescente de geração.</summary>
+        private Dictionary<(int Attack, int Defense), List<(int Generation, int Factor)>> EfficacyPast { get; init; } = [];
+        /// <summary>Tipos antigos por Pokémon e pela forma padrão de cada espécie, em ordem crescente de geração.</summary>
+        private Dictionary<int, List<(int Generation, string[] Types)>> PokemonTypesPast { get; init; } = [];
+        private Dictionary<int, List<(int Generation, string[] Types)>> SpeciesTypesPast { get; init; } = [];
         public required Dictionary<string, GameInfo> Games { get; init; }
         public required HashSet<int> Breedable { get; init; }
         public required HashSet<string> Languages { get; init; }
@@ -655,6 +665,22 @@ public sealed class DexService(DexDatabase db)
         public int? TypeId(string name) => TypeIds.TryGetValue(name, out var id) ? id : null;
 
         public int GroupOrder(int versionGroupId) => GroupOrders.GetValueOrDefault(versionGroupId);
+
+        /// <summary>Dano (100 = ×1) do tipo de ataque no de defesa na geração: a menor linha antiga >= ela, senão a de hoje.</summary>
+        public int Factor(int attack, int defense, int generation) =>
+            EfficacyPast.TryGetValue((attack, defense), out var past) && past.FirstOrDefault(p => p.Generation >= generation) is { Generation: > 0 } p
+                ? p.Factor
+                : Efficacy.GetValueOrDefault((attack, defense), 100);
+
+        public string[] PokemonTypes(int pokemonId, string[] current, int generation) =>
+            Past(PokemonTypesPast, pokemonId, generation) ?? current;
+
+        public string[] SpeciesTypes(SpeciesRow row, int generation) => Past(SpeciesTypesPast, row.Id, generation) ?? row.Types;
+
+        private static string[]? Past(Dictionary<int, List<(int Generation, string[] Types)>> map, int key, int generation) =>
+            map.TryGetValue(key, out var past) && past.FirstOrDefault(p => p.Generation >= generation) is { Generation: > 0 } p
+                ? p.Types
+                : null;
 
         public List<(int Id, string Name)> TypesIn(int generation) =>
             [.. Types.Where(t => t.Value.Generation <= generation).OrderBy(t => t.Key).Select(t => (t.Key, t.Value.Name))];
@@ -719,6 +745,33 @@ public sealed class DexService(DexDatabase db)
             using (var r = cmd.ExecuteReader())
                 while (r.Read())
                     efficacy[(r.GetInt32(0), r.GetInt32(1))] = r.GetInt32(2);
+
+            var efficacyPast = new Dictionary<(int, int), List<(int, int)>>();
+            using (var cmd = Command(c, "SELECT damage_type_id, target_type_id, generation_id, damage_factor FROM type_efficacy_past ORDER BY generation_id"))
+            using (var r = cmd.ExecuteReader())
+                while (r.Read())
+                    efficacyPast.GetOrAdd((r.GetInt32(0), r.GetInt32(1))).Add((r.GetInt32(2), r.GetInt32(3)));
+
+            Dictionary<int, List<(int, string[])>> TypesPast(string sql)
+            {
+                var past = new Dictionary<int, SortedDictionary<int, List<string>>>();
+                using var cmd = Command(c, sql);
+                using var r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    if (!past.TryGetValue(r.GetInt32(0), out var byGeneration))
+                        past[r.GetInt32(0)] = byGeneration = [];
+                    if (!byGeneration.TryGetValue(r.GetInt32(1), out var list))
+                        byGeneration[r.GetInt32(1)] = list = [];
+                    list.Add(types.TryGetValue(r.GetInt32(2), out var t) ? t.Item1 : "unknown");
+                }
+                return past.ToDictionary(p => p.Key, p => p.Value.Select(g => (g.Key, g.Value.ToArray())).ToList());
+            }
+            var pokemonTypesPast = TypesPast("SELECT pokemon_id, generation_id, type_id FROM pokemon_types_past ORDER BY pokemon_id, generation_id, slot");
+            var speciesTypesPast = TypesPast("""
+                SELECT p.species_id, tp.generation_id, tp.type_id FROM pokemon_types_past tp JOIN pokemon p ON p.id = tp.pokemon_id
+                WHERE p.is_default = 1 ORDER BY p.species_id, tp.generation_id, tp.slot
+                """);
 
             var groups = new Dictionary<string, (int Id, int Order)>();
             var groupOrders = new Dictionary<int, int>();
@@ -837,6 +890,9 @@ public sealed class DexService(DexDatabase db)
                 Species = species,
                 Types = types,
                 Efficacy = efficacy,
+                EfficacyPast = efficacyPast,
+                PokemonTypesPast = pokemonTypesPast,
+                SpeciesTypesPast = speciesTypesPast,
                 Games = games,
                 Breedable = breedable,
                 Languages = languages,

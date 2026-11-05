@@ -186,6 +186,78 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public async Task Tabela_antiga_da_Gen_1()
+    {
+        var gen1 = (await Dex.GetTypeChartAsync(1, Ct)).Factors;
+        Assert.Equal(0, gen1["ghost"]["psychic"]); // o bug da Gen 1
+        Assert.Equal(2, gen1["bug"]["poison"]);
+        Assert.Equal(2, gen1["poison"]["bug"]);
+        Assert.Equal(1, gen1["ice"]["fire"]);
+        var gen2 = (await Dex.GetTypeChartAsync(2, Ct)).Factors;
+        Assert.Equal(2, gen2["ghost"]["psychic"]);
+        Assert.Equal(0.5, gen2["bug"]["poison"]);
+        Assert.Equal(0.5, gen2["ice"]["fire"]);
+    }
+
+    [Theory]
+    [InlineData(2)]
+    [InlineData(3)]
+    [InlineData(5)]
+    public async Task Aco_resiste_a_Fantasma_e_Noturno_ate_a_Gen_5(int generation)
+    {
+        var chart = (await Dex.GetTypeChartAsync(generation, Ct)).Factors;
+        Assert.Equal(0.5, chart["ghost"]["steel"]);
+        Assert.Equal(0.5, chart["dark"]["steel"]);
+        var gen6 = (await Dex.GetTypeChartAsync(6, Ct)).Factors;
+        Assert.Equal(1, gen6["ghost"]["steel"]);
+        Assert.Equal(1, gen6["dark"]["steel"]);
+    }
+
+    [Theory]
+    [InlineData("gs", 0.5)]
+    [InlineData("frlg", 0.5)]
+    [InlineData("bw", 0.5)]
+    [InlineData("sv", 1)]
+    public async Task Steelix_contra_Fantasma(string game, double factor)
+    {
+        var steelix = await Dex.GetAsync(208, game, "en", Ct);
+        Assert.Equal(factor, steelix!.DamageTaken["ghost"]);
+        Assert.Equal(factor, steelix.DamageTaken["dark"]);
+    }
+
+    [Fact]
+    public async Task Tipos_antigos_dos_Pokemon()
+    {
+        var clefairy = await Dex.GetAsync(35, "frlg", "en", Ct);
+        Assert.Equal(["normal"], clefairy!.Types);
+        Assert.Equal(["normal"], clefairy.Forms.Single(f => f.IsDefault).Types);
+        Assert.Equal(2, clefairy.DamageTaken["fighting"]);
+        Assert.Equal(0, clefairy.DamageTaken["ghost"]);
+        Assert.Equal(["fairy"], (await Dex.GetAsync(35, "sv", "en", Ct))!.Types);
+
+        Assert.Equal(["electric"], (await Dex.GetAsync(81, "rb", "en", Ct))!.Types);
+        Assert.Equal(["electric", "steel"], (await Dex.GetAsync(81, "gs", "en", Ct))!.Types);
+
+        var frlg = await Dex.ListAsync(new("clefairy", null, null, "frlg"), Ct);
+        Assert.Equal(["normal"], Assert.Single(frlg).Types);
+        Assert.Contains(await Dex.ListAsync(new(null, "normal", 1, "frlg", 0, 2000), Ct), s => s.Id == 35);
+        Assert.Equal(["fairy"], Assert.Single(await Dex.ListAsync(new("clefairy", null, null, null), Ct)).Types);
+    }
+
+    [Fact]
+    public async Task Pagina_da_especie_e_golpe_sao_rapidos()
+    {
+        await Dex.GetAsync(94, "sv", "en", Ct); // aquece os caches
+        var watch = Stopwatch.StartNew();
+        await Dex.GetAsync(94, "sv", "en", Ct);
+        Assert.True(watch.ElapsedMilliseconds < 50, $"espécie: {watch.ElapsedMilliseconds} ms");
+        await Dex.GetMoveAsync(33, "sv", Ct);
+        watch.Restart();
+        await Dex.GetMoveAsync(33, "sv", Ct);
+        Assert.True(watch.ElapsedMilliseconds < 50, $"golpe: {watch.ElapsedMilliseconds} ms");
+    }
+
+    [Fact]
     public async Task Habilidade_e_item()
     {
         var levitate = await Dex.GetAbilityAsync(26, Ct);

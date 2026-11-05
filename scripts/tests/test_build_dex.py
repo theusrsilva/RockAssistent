@@ -66,6 +66,9 @@ FIXTURES = {
     "encounter_condition_value_map": ("encounter_id,encounter_condition_value_id", ["900,9", "900,3"]),
     "pokemon_species_flavor_text": ("species_id,version_id,language_id,flavor_text", [
         '94,10,9,"Hides in\nshadows.\fIt is said..."', "94,10,5,Se cache."]),
+    "type_efficacy_past": ("damage_type_id,target_type_id,damage_factor,generation_id",
+                           ["8,14,0,1", "8,9,50,5"]),
+    "pokemon_types_past": ("pokemon_id,generation_id,type_id,slot", ["35,5,1,1", "81,1,13,1"]),
 }
 
 
@@ -139,6 +142,27 @@ class BuildDexTest(unittest.TestCase):
         self.assertEqual(meta["pokeapi_commit"], build_dex.COMMIT)
         self.assertIn("built_at", meta)
         self.assertEqual(build_dex.COMMIT, "6ea97b5641faa12e090866e8144ae8f57764fc64")
+
+    def test_type_efficacy_past(self):
+        self.assertEqual(self.one("select generation_id, damage_type_id, target_type_id, damage_factor "
+                                  "from type_efficacy_past order by generation_id"), [(1, 8, 14, 0), (5, 8, 9, 50)])
+
+    def test_pokemon_types_past(self):
+        self.assertEqual(self.one("select pokemon_id, generation_id, slot, type_id from pokemon_types_past "
+                                  "order by pokemon_id"), [(35, 5, 1, 1), (81, 1, 1, 13)])
+
+    def test_query_indexes(self):
+        indexes = {(r[0], r[1]) for r in self.one("select tbl_name, sql from sqlite_master where type = 'index' "
+                                                  "and sql is not null")}
+        columns = {(t, sql[sql.index("(") + 1:sql.rindex(")")].replace(" ", "")) for t, sql in indexes}
+        # pokemon_moves(pokemon_id, version_group_id) já é o começo da chave primária (WITHOUT ROWID).
+        plan = self.one("explain query plan select move_id from pokemon_moves where pokemon_id = 1 "
+                        "and version_group_id = 2")
+        self.assertIn("PRIMARY KEY", plan[0][3])
+        for expected in [("pokemon_moves", "move_id,version_group_id"),
+                         ("encounters", "pokemon_id,version_id"), ("flavor_text", "species_id"),
+                         ("pokemon_types_past", "pokemon_id")]:
+            self.assertIn(expected, columns)
 
 
 class MarkupTest(unittest.TestCase):

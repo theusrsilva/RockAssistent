@@ -36,6 +36,7 @@ CSV_FILES = (
     "languages", "generations", "regions", "pokemon_colors", "growth_rates", "experience",
     "pokemon_species", "pokemon_species_names", "pokemon_species_flavor_text",
     "pokemon", "pokemon_forms", "pokemon_form_names", "pokemon_types", "types", "type_efficacy",
+    "type_efficacy_past", "pokemon_types_past",
     "pokemon_stats", "stats", "stat_names",
     "abilities", "ability_names", "ability_prose", "pokemon_abilities", "pokemon_abilities_past",
     "moves", "move_names", "move_effect_prose", "move_damage_classes", "move_changelog",
@@ -65,6 +66,9 @@ CREATE TABLE pokemon_forms(id INTEGER PRIMARY KEY, pokemon_id INTEGER, identifie
 CREATE TABLE pokemon_types(pokemon_id INTEGER, slot INTEGER, type_id INTEGER);
 CREATE TABLE types(id INTEGER PRIMARY KEY, identifier TEXT, generation_id INTEGER);
 CREATE TABLE type_efficacy(damage_type_id INTEGER, target_type_id INTEGER, damage_factor INTEGER);
+CREATE TABLE type_efficacy_past(generation_id INTEGER, damage_type_id INTEGER, target_type_id INTEGER,
+  damage_factor INTEGER);
+CREATE TABLE pokemon_types_past(pokemon_id INTEGER, generation_id INTEGER, slot INTEGER, type_id INTEGER);
 CREATE TABLE pokemon_stats(pokemon_id INTEGER, stat_id INTEGER, base_stat INTEGER, effort INTEGER);
 CREATE TABLE abilities(id INTEGER PRIMARY KEY, identifier TEXT, name_en TEXT, effect_en TEXT,
   short_effect_en TEXT, generation_id INTEGER);
@@ -119,9 +123,11 @@ CREATE INDEX ix_move_changelog ON move_changelog(move_id);
 CREATE INDEX ix_machines ON machines(version_group_id, move_id);
 CREATE INDEX ix_evolution ON evolution(evolved_species_id);
 CREATE INDEX ix_flavor_text ON flavor_text(species_id);
+CREATE INDEX ix_pokemon_types_past ON pokemon_types_past(pokemon_id);
+CREATE INDEX ix_pokemon_moves_move ON pokemon_moves(move_id, version_group_id);
 CREATE INDEX ix_pokemon_egg_groups ON pokemon_egg_groups(species_id);
 CREATE INDEX ix_dex_numbers ON pokemon_dex_numbers(species_id);
-CREATE INDEX ix_encounters ON encounters(pokemon_id);
+CREATE INDEX ix_encounters ON encounters(pokemon_id, version_id);
 """
 
 MARKUP = re.compile(r"\[([^\]]*)\]\{[^}:]*:([^}]*)\}")
@@ -244,6 +250,11 @@ def build(csv_dir, out, commit):
     insert("types", ((n(r["id"]), r["identifier"], n(r["generation_id"])) for r in rows("types")))
     insert("type_efficacy", ((n(r["damage_type_id"]), n(r["target_type_id"]), n(r["damage_factor"]))
                              for r in rows("type_efficacy")))
+    # Tabelas antigas: a linha de geração G vale para os jogos até a G (Gen 1, Aço até a Gen 5, Clefairy Normal...).
+    insert("type_efficacy_past", ((n(r["generation_id"]), n(r["damage_type_id"]), n(r["target_type_id"]),
+                                   n(r["damage_factor"])) for r in rows("type_efficacy_past")))
+    insert("pokemon_types_past", ((n(r["pokemon_id"]), n(r["generation_id"]), n(r["slot"]), n(r["type_id"]))
+                                  for r in rows("pokemon_types_past")))
     insert("pokemon_stats", ((n(r["pokemon_id"]), n(r["stat_id"]), n(r["base_stat"]), n(r["effort"]))
                              for r in rows("pokemon_stats")))
     stat_names = english("stat_names", "stat_id")
