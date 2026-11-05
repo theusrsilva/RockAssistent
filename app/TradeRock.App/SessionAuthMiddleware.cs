@@ -163,7 +163,7 @@ public sealed class SessionAuthMiddleware(RequestDelegate next, SessionToken tok
 
         context.Response.ContentType = "text/html; charset=utf-8";
         return context.Response.WriteAsync(
-            "<!doctype html><meta charset=utf-8><title>TradeRock</title>" +
-            "<p>Abra o TradeRock pela janela do aplicativo.</p>");
+            "<!doctype html><meta charset=utf-8><title>RockAssistent</title>" +
+            "<p>Abra o RockAssistent pela janela do aplicativo.</p>");
     }
 }

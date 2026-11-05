@@ -88,7 +88,7 @@ public sealed class SessionAuthTests : IAsyncLifetime
 
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         var body = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
-        Assert.Contains("\"app\":\"TradeRock\"", body);
+        Assert.Contains("\"app\":\"RockAssistent\"", body);
     }
 
     [Fact]

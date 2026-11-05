@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "TradeRock",
+    "name": "RockAssistent",
     "tagline": "Pokémon trading with FireRed and LeafGreen on Switch"
   },
   "nav": {
@@ -32,7 +32,7 @@
   },
   "demo": {
     "badge": "Demo mode",
-    "explain": "Nothing is really traded: TradeRock simulates the Switch so you can learn the steps."
+    "explain": "Nothing is really traded: RockAssistent simulates the Switch so you can learn the steps."
   },
   "status": {
     "title": "App status",
@@ -44,8 +44,8 @@
     "environment": "Environment"
   },
   "home": {
-    "title": "Welcome to TradeRock",
-    "intro": "TradeRock pretends to be a second Switch in the FireRed and LeafGreen trade room. That way you send Pokémon from your PC to your game and keep the ones you receive.",
+    "title": "Welcome to RockAssistent",
+    "intro": "RockAssistent pretends to be a second Switch in the FireRed and LeafGreen trade room. That way you send Pokémon from your PC to your game and keep the ones you receive.",
     "startTrade": "Make a trade",
     "seePokemon": "See my Pokémon",
     "running": "A trade is in progress.",
@@ -162,7 +162,7 @@
       "attempt": "Attempt {{attempt}} of {{max}}",
       "nowWhat": "What to do now",
       "cancel": "Cancel trade",
-      "cancelConfirm": "Cancel the trade now? TradeRock closes the connection safely.",
+      "cancelConfirm": "Cancel the trade now? RockAssistent closes the connection safely.",
       "cancelYes": "Yes, cancel",
       "cancelNo": "Keep going",
       "cancelling": "Cancelling…",
@@ -220,7 +220,7 @@
     "trainer_id_invalid": "this trainer number does not exist in this game",
     "format_ambiguous": "the file's game cannot be told apart: use the right extension (.pb7, .pk8, .pb8, .pk9 or .pa9)",
     "game_mismatch": "the file is from another game",
-    "game_unsupported": "the Pokémon is from a game TradeRock does not trade with",
+    "game_unsupported": "the Pokémon is from a game RockAssistent does not trade with",
     "save_game_unsupported": "only FireRed/LeafGreen Pokémon can go into the save"
   },
   "failures": {
@@ -236,11 +236,11 @@
     "connection_lost": "The connection dropped during the trade.",
     "engine_crashed": "The trade engine stopped with an error.",
     "cancelled": "You cancelled the trade.",
-    "internal_error": "TradeRock internal error.",
+    "internal_error": "RockAssistent internal error.",
     "unknown": "Unknown failure.",
     "join_not_approved": "The Switch saw the join request, but it wasn't approved in time. Approve the request on the Switch screen.",
     "radio_rx_failed": "The join authenticated, but the card stopped receiving the Switch's advertisements. Set up NetworkManager in Settings → Connection and try again.",
-    "engine_broken": "The trade engine is incomplete in this install. Reinstall TradeRock.",
+    "engine_broken": "The trade engine is incomplete in this install. Reinstall RockAssistent.",
     "trade_incomplete": "Only some of the trades were completed.",
     "engine_error": "The Switch games engine stopped with an error. Details are in the log.",
     "invalid_request": "The trade request has data the engine doesn't accept.",
@@ -248,14 +248,14 @@
     "phy_not_found": "The chosen Wi-Fi card is no longer in the PC. Was it unplugged?",
     "not_root": "The network component is not running as administrator.",
     "worker_missing": "The network component is not installed.",
-    "worker_unsafe": "The network component install is not safe. Reinstall TradeRock.",
+    "worker_unsafe": "The network component install is not safe. Reinstall RockAssistent.",
     "worker_policy_missing": "The network component permission (polkit) is not installed.",
     "pkexec_missing": "pkexec is missing, so the administrator password can't be asked.",
     "auth_cancelled": "The password window was closed. The network component needs the administrator password to use the card.",
     "not_authorized": "The system didn't authorize the network component. Check the administrator password.",
     "worker_exited": "The network component stopped.",
     "worker_timeout": "The network component didn't answer in time.",
-    "worker_version": "The installed network component belongs to another TradeRock version. Reinstall it.",
+    "worker_version": "The installed network component belongs to another RockAssistent version. Reinstall it.",
     "worker_start_failed": "Couldn't start the network component.",
     "wifi_not_configured": "Pick the Wi-Fi card in Settings → Connection.",
     "keys_missing": "prod.keys hasn't been uploaded.",
@@ -263,9 +263,9 @@
     "busy": "The network component is still finishing the previous operation. Try again in a few seconds.",
     "beacon_test_crashed": "The Switch test stopped with an error. Try again; if it keeps happening, export the report in the summary.",
     "worker_install_failed": "Installing the network component failed. Try again; if it keeps happening, export the report in the summary.",
-    "worker_not_bundled": "This TradeRock version does not ship the network component to install.",
+    "worker_not_bundled": "This RockAssistent version does not ship the network component to install.",
     "esp32_not_configured": "Set up the ESP32 in Settings → Connection (board and port).",
-    "esp32_firmware_missing": "No TradeRock firmware answered on the ESP32. Flash the firmware in Settings → Connection.",
+    "esp32_firmware_missing": "No RockAssistent firmware answered on the ESP32. Flash the firmware in Settings → Connection.",
     "esp32_firmware_incompatible": "The ESP32 firmware is old or different. Flash the firmware in Settings → Connection.",
     "esp32_no_response": "The ESP32 stopped answering.",
     "esp32_error": "Error talking to the ESP32.",
@@ -275,7 +275,7 @@
     "serial_not_chosen": "Pick the ESP32 port.",
     "room_changed": "The Switch room changed mid-connection. Open the room again and retry.",
     "esp32_busy": "The ESP32 is busy with another operation. Wait for it to finish.",
-    "esp32_chip_unsupported": "This chip has no TradeRock firmware.",
+    "esp32_chip_unsupported": "This chip has no RockAssistent firmware.",
     "esp32_flash_too_small": "This board's flash is too small for the firmware.",
     "verify_mismatch": "Flashing finished, but the check didn't match. Flash again.",
     "esptool_missing": "The firmware flasher (esptool) wasn't found in this install.",
@@ -317,7 +317,7 @@
     },
     "tradeTitle": "Trade",
     "maxAttempts": "Connection attempts",
-    "maxAttemptsHelp": "How many times TradeRock tries to connect before giving up. Connecting to the Switch sometimes takes a few attempts.",
+    "maxAttemptsHelp": "How many times RockAssistent tries to connect before giving up. Connecting to the Switch sometimes takes a few attempts.",
     "retryDelaySeconds": "Wait between attempts (seconds)",
     "approvalTimeoutSeconds": "Time to approve the join (seconds)",
     "phaseTimeoutSeconds": "Maximum idle time inside the room (seconds)",
@@ -330,7 +330,7 @@
     "choosePokemon": "Pick a Pokémon you caught on the Switch",
     "illegalTitle": "Illegal Pokémon",
     "allowIllegal": "Allow trading illegal Pokémon (advanced mode)",
-    "allowIllegalHelp": "Off: TradeRock won't send the Switch a Pokémon PKHeX considers illegal. On: each trade with an illegal one still asks for confirmation.",
+    "allowIllegalHelp": "Off: RockAssistent won't send the Switch a Pokémon PKHeX considers illegal. On: each trade with an illegal one still asks for confirmation.",
     "engineReasons": {
       "not_linux": "Linux only",
       "worker_missing": "network component not installed",
@@ -344,7 +344,7 @@
   },
   "close": {
     "title": "Close during a trade?",
-    "body": "A trade is in progress. If you close now, TradeRock cancels it safely before quitting. Pokémon already received stay stored.",
+    "body": "A trade is in progress. If you close now, RockAssistent cancels it safely before quitting. Pokémon already received stay stored.",
     "confirm": "Cancel trade and close",
     "keep": "Keep trading"
   },
@@ -602,7 +602,7 @@
   },
   "inject": {
     "title": "Inject into a GBA save",
-    "intro": "Puts vault Pokémon into the boxes of a FireRed, LeafGreen, Ruby, Sapphire or Emerald save. Before writing, TradeRock keeps a copy of the original save.",
+    "intro": "Puts vault Pokémon into the boxes of a FireRed, LeafGreen, Ruby, Sapphire or Emerald save. Before writing, RockAssistent keeps a copy of the original save.",
     "chooseFile": "Choose the save",
     "reading": "Reading the save…",
     "header": "{{file}} · {{game}} · {{trainer}}",
@@ -631,7 +631,7 @@
     }
   },
   "wizard": {
-    "title": "Set up TradeRock",
+    "title": "Set up RockAssistent",
     "stepOf": "Step {{n}} of {{total}}",
     "steps": [
       "Welcome",
@@ -688,7 +688,7 @@
     "yourCard": "Your card",
     "usbAdapterTitle": "Alternative: a compatible USB Wi-Fi adapter",
     "usbAdapterPros": "Pros: same path as the Wi-Fi card and keeps your internet free. Cons: costs more than an ESP32 and only works on Linux.",
-    "esp32Pros": "ESP32: cheaper, works on Linux and Windows, doesn't touch your network. Cons: needs firmware flashed (TradeRock does it).",
+    "esp32Pros": "ESP32: cheaper, works on Linux and Windows, doesn't touch your network. Cons: needs firmware flashed (RockAssistent does it).",
     "catalogWifi": "Known Wi-Fi cards",
     "catalogEsp32": "Known ESP32 boards",
     "catalogDate": "Data checked on {{date}}.",
@@ -723,7 +723,7 @@
     "editStep": "Go to step",
     "simulation": "Simulation (development)",
     "simulationNone": "Real system",
-    "banner": "Set up TradeRock to trade with your Switch.",
+    "banner": "Set up RockAssistent to trade with your Switch.",
     "bannerAction": "Open the assistant",
     "checkStatus": {
       "ok": "OK",
@@ -782,10 +782,10 @@
       "udev_rule_optional": "Optional: udev rule so the port is always named {{path}}.",
       "switch_test_ok": "Switch test passed: the room was found on channel {{channel}} and decrypted. Radio and prod.keys confirmed.",
       "switch_test_pending": "Switch test (room found and decrypted).",
-      "worker_missing": "Network component not installed. It ships with the TradeRock package (.deb); with the AppImage, Settings → Connection offers to install it. If you built the app yourself, run scripts/dev-host.sh.",
+      "worker_missing": "Network component not installed. It ships with the RockAssistent package (.deb); with the AppImage, Settings → Connection offers to install it. If you built the app yourself, run scripts/dev-host.sh.",
       "pkexec_missing": "pkexec is missing (the system uses it to ask for the administrator password).",
-      "worker_unsafe": "The network component install ({{path}}) can be changed without administrator rights. For safety, TradeRock won't use it. Reinstall it.",
-      "worker_policy_missing": "The network component permission (polkit policy) is not installed. Reinstall TradeRock.",
+      "worker_unsafe": "The network component install ({{path}}) can be changed without administrator rights. For safety, RockAssistent won't use it. Reinstall it.",
+      "worker_policy_missing": "The network component permission (polkit policy) is not installed. Reinstall RockAssistent.",
       "worker_installed": "Network component installed. The administrator password is asked once, when it's first used.",
       "tools_missing": "Programs the engine uses to control the card are missing: {{tools}}.",
       "card_test_not_run": "Test the {{model}} card ({{phy}}) below: this test tells whether it works.",
@@ -802,23 +802,23 @@
       "switch_test_not_run": "Recommended: run the Switch test below to confirm the radio and the prod.keys before the first trade. Trading is already unlocked without it.",
       "switch_test_failed": "The Switch test did not pass. Trading stays unlocked, but see the result below: the problem may show up during the trade.",
       "worker_appimage_missing": "The network component has not been installed from the AppImage yet. Use the button below.",
-      "worker_appimage_outdated": "The installed network component is from another TradeRock version. Use the button below to update it.",
+      "worker_appimage_outdated": "The installed network component is from another RockAssistent version. Use the button below to update it.",
       "esp32_firmware_needs_port": "Pick the ESP32 port to check the firmware.",
       "esp32_firmware_not_checked": "Check the ESP32 firmware (\"Check the firmware\" button).",
-      "esp32_firmware_ok": "The TradeRock firmware answered on the port ({{target}}): communication OK.",
+      "esp32_firmware_ok": "The RockAssistent firmware answered on the port ({{target}}): communication OK.",
       "esp32_firmware_other_chip": "This board's firmware is for another chip ({{target}}), but you picked {{model}}. Check which ESP32 you have.",
-      "esp32_firmware_verified": "The flashed firmware is exactly the one TradeRock ships.",
-      "esp32_firmware_other_version": "The firmware answers, but it isn't exactly the one TradeRock ships. If trading fails, flash the firmware again.",
+      "esp32_firmware_verified": "The flashed firmware is exactly the one RockAssistent ships.",
+      "esp32_firmware_other_version": "The firmware answers, but it isn't exactly the one RockAssistent ships. If trading fails, flash the firmware again.",
       "esp32_probe_hello_ok": "The firmware answered.",
-      "esp32_probe_esp32_firmware_missing": "No TradeRock firmware answered on this port. Flash the firmware (\"Flash the firmware\" button).",
-      "esp32_probe_esp32_firmware_incompatible": "This board's firmware is old or different. Flash the TradeRock firmware (\"Flash the firmware\" button).",
+      "esp32_probe_esp32_firmware_missing": "No RockAssistent firmware answered on this port. Flash the firmware (\"Flash the firmware\" button).",
+      "esp32_probe_esp32_firmware_incompatible": "This board's firmware is old or different. Flash the RockAssistent firmware (\"Flash the firmware\" button).",
       "esp32_probe_esp32_no_response": "The ESP32 stopped answering. Unplug it, plug it back and check again.",
       "esp32_probe_serial_permission": "No permission to use the serial port (see the group item above).",
       "esp32_probe_serial_busy": "The serial port is in use by another program (serial monitor, Arduino IDE…). Close it and check again.",
       "esp32_probe_serial_port_missing": "The port is gone. Was the ESP32 unplugged?",
       "esp32_probe_esp32_error": "Error talking to the ESP32. Check again; if it keeps happening, export the report.",
       "esp32_chip_ok": "Chip identified: {{chip}}, {{flash}} flash.",
-      "esp32_chip_unsupported": "The {{chip}} chip has no TradeRock firmware.",
+      "esp32_chip_unsupported": "The {{chip}} chip has no RockAssistent firmware.",
       "esp32_board_mismatch": "You picked {{model}}, but the chip is {{chip}}. Fix the board in the list above.",
       "esp32_flash_too_small": "This board's flash is {{size}}; the firmware needs {{needed}}.",
       "esp32_old_revision": "{{chip}} chip: old revision, typical of the ESP32-WROOM-32 module. Some of these boards can't hear the Switch; the Switch test shows whether yours works."
@@ -830,7 +830,7 @@
     "cardTest": {
       "title": "Card test ({{phy}})",
       "help": "The test puts the card in monitor mode and transmits the frames the Switch's room uses. It takes about 10 seconds and needs neither the Switch nor prod.keys.",
-      "password": "The first time, the system asks for the administrator password (the system asks, not TradeRock). It then stays valid until you close the app.",
+      "password": "The first time, the system asks for the administrator password (the system asks, not RockAssistent). It then stays valid until you close the app.",
       "offline": "During the test, this card's normal Wi-Fi is turned off. It comes back by itself at the end.",
       "offlineInternet": "Heads up: this card is the PC's internet. During the test (and during trades) the internet drops and comes back by itself at the end.",
       "needsWorker": "First sort out the network component (see the list below).",
@@ -864,7 +864,7 @@
       "title": "NetworkManager",
       "help": "For each trade, the engine creates a temporary wireless connection (named starting with \"ldn\"). If NetworkManager tries to manage it, the trade authenticates but never completes. This setting tells it to ignore those connections; your internet is unchanged.",
       "configure": "Set up NetworkManager",
-      "confirmText": "TradeRock will create these two files (as administrator) and reload the NetworkManager configuration, without dropping your current connection:",
+      "confirmText": "RockAssistent will create these two files (as administrator) and reload the NetworkManager configuration, without dropping your current connection:",
       "confirm": "Confirm and set up"
     },
     "switchTest": {
@@ -873,7 +873,7 @@
       "stepOpen": "open FireRed or LeafGreen and go to the Direct Corner (2nd floor of the Pokémon Center);",
       "stepLeader": "choose to be the Leader and stay on the room's waiting screen;",
       "stepNear": "keep the Switch close to the PC (within about 2 meters).",
-      "noJoin": "TradeRock only listens: it does not join the room, and the Switch gets no join request.",
+      "noJoin": "RockAssistent only listens: it does not join the room, and the Switch gets no join request.",
       "offline": "During the test (up to {{seconds}} seconds), this card's normal Wi-Fi is turned off. It comes back on its own at the end.",
       "needsCard": "First pass the card test (Network component item).",
       "needsKeys": "First upload the prod.keys (Keys item).",
@@ -928,14 +928,14 @@
     },
     "esp32fw": {
       "title": "ESP32 firmware",
-      "help": "The ESP32 needs the pokeldn firmware to talk to the Switch (every game uses the same one). TradeRock ships the right firmware for each chip and flashes it by itself, over USB.",
+      "help": "The ESP32 needs the pokeldn firmware to talk to the Switch (every game uses the same one). RockAssistent ships the right firmware for each chip and flashes it by itself, over USB.",
       "probe": "Check the firmware",
       "identify": "Identify the board",
       "verify": "Check the version",
       "flash": "Flash the firmware",
       "working": "Please wait…",
       "identifyHelp": "Identifying and checking restart the board for a moment; it goes back to normal by itself.",
-      "flashConfirmTitle": "Flash the TradeRock firmware?",
+      "flashConfirmTitle": "Flash the RockAssistent firmware?",
       "flashConfirmText": "Everything on the ESP32 will be replaced. It takes 30 seconds to 2 minutes. Don't unplug the board until it's done.",
       "flashConfirm": "Flash now",
       "stages": {
@@ -959,9 +959,9 @@
   "workerInstall": {
     "title": "Install the network component",
     "outdatedTitle": "Update the network component",
-    "why": "The network component is the part of TradeRock that uses the Wi-Fi card as administrator. It ships inside the AppImage, but the system only lets it run as administrator after it is copied to a system folder.",
+    "why": "The network component is the part of RockAssistent that uses the Wi-Fi card as administrator. It ships inside the AppImage, but the system only lets it run as administrator after it is copied to a system folder.",
     "where": "It goes to",
-    "password": "The system asks for the administrator password to copy it (the system asks, not TradeRock).",
+    "password": "The system asks for the administrator password to copy it (the system asks, not RockAssistent).",
     "remove": "You can remove it at any time in Settings.",
     "install": "Install the network component",
     "update": "Update the network component",
@@ -969,7 +969,7 @@
     "settingsTitle": "Network component (AppImage)",
     "state": {
       "missing": "Not installed. It is needed to trade with the Wi-Fi card.",
-      "outdated": "Installed, but from another TradeRock version. Update it to use the Wi-Fi card.",
+      "outdated": "Installed, but from another RockAssistent version. Update it to use the Wi-Fi card.",
       "ok": "Installed in /usr/local/lib/traderock."
     },
     "removeButton": "Remove the network component",
@@ -977,23 +977,23 @@
     "removeHelp": "Deletes /usr/local/lib/traderock and the polkit policy. The system asks for the administrator password. Your Pokémon and settings are not deleted."
   },
   "about": {
-    "title": "About TradeRock",
+    "title": "About RockAssistent",
     "version": "Version {{version}}",
     "releases": "Packages and source code of every version:",
     "credits": "Credits and licenses",
-    "creditsHelp": "TradeRock uses these projects. The licenses were checked in each one's source code.",
+    "creditsHelp": "RockAssistent uses these projects. The licenses were checked in each one's source code.",
     "project": "Project",
-    "use": "Use in TradeRock",
+    "use": "Use in RockAssistent",
     "license": "License",
     "link": "About"
   },
   "login": {
-    "title": "Sign in to TradeRock",
-    "intro": "This TradeRock is open on the home network. Sign in with your account to see your vault and trade.",
+    "title": "Sign in to RockAssistent",
+    "intro": "This RockAssistent is open on the home network. Sign in with your account to see your vault and trade.",
     "username": "Username",
     "password": "Password",
     "submit": "Sign in",
-    "noAccount": "No account? Ask whoever runs TradeRock on the PC to create one for you.",
+    "noAccount": "No account? Ask whoever runs RockAssistent on the PC to create one for you.",
     "as": "Signed in as {{name}}",
     "logout": "Sign out",
     "errors": {
@@ -1008,12 +1008,12 @@
     "off": "Off",
     "onBadge": "Server mode",
     "onHint": "Other people on the home network can sign in. See Settings.",
-    "intro": "While the app is open, other people on the same network (your home Wi-Fi or cable) open TradeRock in their phone or PC browser, sign in with an account and use their own vault. Since there is only one radio, trades wait in a queue, one at a time.",
+    "intro": "While the app is open, other people on the same network (your home Wi-Fi or cable) open RockAssistent in their phone or PC browser, sign in with an account and use their own vault. Since there is only one radio, trades wait in a queue, one at a time.",
     "warningTitle": "Home network only",
-    "warningInternet": "Never open this port on your router or put TradeRock on the internet. Anyone outside could try to get in.",
+    "warningInternet": "Never open this port on your router or put RockAssistent on the internet. Anyone outside could try to get in.",
     "warningHttp": "The connection is not encrypted (http): someone on the same network could see passwords. Use it only on trusted networks, with passwords you don't use anywhere else.",
     "interface": "Network interface",
-    "interfaceHelp": "How this PC connects to the home network. TradeRock listens only there.",
+    "interfaceHelp": "How this PC connects to the home network. RockAssistent listens only there.",
     "wired": "cable",
     "wireless": "Wi-Fi",
     "blocked": "trading card",
@@ -1026,7 +1026,7 @@
     "turnOff": "Turn off",
     "offOnStart": "Server mode always starts off when the app opens.",
     "openOnPhone": "On the phone (same network), point the camera at the code or type the address:",
-    "qrAlt": "QR code with TradeRock's network address",
+    "qrAlt": "QR code with RockAssistent's network address",
     "interfaceUsed": "Interface {{name}}",
     "sessions_one": "{{count}} person signed in",
     "sessions_other": "{{count}} people signed in",
@@ -1036,9 +1036,9 @@
       "interface_is_radio": "That is the Wi-Fi card that does the trades. Pick another interface.",
       "bind_failed": "Couldn't use that port (another program may be using it). Try another port."
     },
-    "localOnly": "This screen only opens in the TradeRock window on the PC itself.",
+    "localOnly": "This screen only opens in the RockAssistent window on the PC itself.",
     "virtual": "virtual (not the home network)",
-    "windowsFirewall": "On Windows, the installer already allowed TradeRock through the Firewall, on \"Private\" networks only. If the phone can't open it, check in Windows Settings → Network & internet that the home network is set to \"Private network\"."
+    "windowsFirewall": "On Windows, the installer already allowed RockAssistent through the Firewall, on \"Private\" networks only. If the phone can't open it, check in Windows Settings → Network & internet that the home network is set to \"Private network\"."
   },
   "accounts": {
     "title": "Accounts",
@@ -1169,13 +1169,13 @@
         "switch": "Switch test (recommended)"
       },
       "what": {
-        "system": "With the Wi-Fi card, TradeRock controls the card directly, which only works with Linux installed on the PC (not a virtual machine or WSL). With an ESP32, any system works.",
+        "system": "With the Wi-Fi card, RockAssistent controls the card directly, which only works with Linux installed on the PC (not a virtual machine or WSL). With an ESP32, any system works.",
         "keys": "Switches talk in encrypted form. The prod.keys file has the keys to understand that conversation. It is unique to your console and comes from it.",
         "radio": "It is what talks “over the air” with the Switch: your PC's Wi-Fi card or a small ESP32 board on USB. One of the two is enough.",
         "driver": "A small program that lets the Wi-Fi card speak the Switch's “language”. Installed once; it asks for the administrator password when used.",
         "usb": "The ESP32 needs the right firmware and the PC needs permission to talk to it over the USB port.",
-        "game": "In FireRed/LeafGreen, wireless trading happens at the Direct Corner (2nd floor of the Pokémon Center). You create the room as Leader and TradeRock joins as if it were another Switch.",
-        "switch": "A quick test that trades nothing: TradeRock looks for your Switch's room and checks that it can understand the conversation."
+        "game": "In FireRed/LeafGreen, wireless trading happens at the Direct Corner (2nd floor of the Pokémon Center). You create the room as Leader and RockAssistent joins as if it were another Switch.",
+        "switch": "A quick test that trades nothing: RockAssistent looks for your Switch's room and checks that it can understand the conversation."
       },
       "desc": {
         "systemOk": "Linux installed for real",
@@ -1217,7 +1217,7 @@
       "activate": "Use for real trades",
       "activateHelp": "Everything tested. Just turn the radio on for trades.",
       "activated": "Real trades turned on",
-      "keysNote": "Only use the keys from your own console. Do not download them or share them. TradeRock keeps the file just for you and never sends it over the network.",
+      "keysNote": "Only use the keys from your own console. Do not download them or share them. RockAssistent keeps the file just for you and never sends it over the network.",
       "remote": "The connection is set up on the owner's PC. Here you only follow the status.",
       "fullText": "Full explanation",
       "keysSteps": [
@@ -1230,7 +1230,7 @@
         "inUse": "In use",
         "sub": "Sword/Shield can also trade over your home network, with no ESP32, Wi-Fi card or prod.keys. The Switch and this computer must be on the same network.",
         "step1": "In the game, open Options and press L + R + the left stick together: a message says LAN mode is on.",
-        "step2": "The link code is not used: any Switch in LAN mode on the same network finds TradeRock.",
+        "step2": "The link code is not used: any Switch in LAN mode on the same network finds RockAssistent.",
         "use": "Use the home network",
         "backRadio": "Back to the radio",
         "backDemo": "Back to demo mode"
@@ -1296,7 +1296,7 @@
       },
       "demoBanner": "Everything works, but trades are simulated until the connection is ready.",
       "setupConnection": "Set up connection",
-      "teamTip": "TradeRock pretends to be another Switch with this team. Mark who goes to your game. The team needs 2 or more Pokémon because the game does not let you trade the last one. All of them are stored in the vault before starting.",
+      "teamTip": "RockAssistent pretends to be another Switch with this team. Mark who goes to your game. The team needs 2 or more Pokémon because the game does not let you trade the last one. All of them are stored in the vault before starting.",
       "empty": "Empty",
       "send": "Send",
       "stays": "Stays",
@@ -1331,7 +1331,7 @@
         }
       ],
       "learnMore": "Learn more",
-      "prepMore": "The Direct Corner unlocks after about 20 to 40 minutes of play. The Switch creates a local wireless network and TradeRock joins it as if it were a second Switch. The connection sometimes needs a few attempts: TradeRock retries on its own.",
+      "prepMore": "The Direct Corner unlocks after about 20 to 40 minutes of play. The Switch creates a local wireless network and RockAssistent joins it as if it were a second Switch. The connection sometimes needs a few attempts: RockAssistent retries on its own.",
       "queueNote": "You are on the network: the trade goes into the PC's queue.",
       "sending": "Sending {{names}}",
       "nothingToSend": "Nothing to send",
@@ -1350,7 +1350,7 @@
       "tradeNumber": "Trade {{n}}",
       "otherGame": "It is from {{game}}: you can move it to another game in the vault",
       "tradeBack": "Trade back to evolve",
-      "tradeBackTip": "For a Switch Pokémon that evolves by trade: after each trade, TradeRock sends the Pokémon it received straight back (it evolves on the Switch) and gets back the one it sent. In the end, the vault is unchanged."
+      "tradeBackTip": "For a Switch Pokémon that evolves by trade: after each trade, RockAssistent sends the Pokémon it received straight back (it evolves on the Switch) and gets back the one it sent. In the end, the vault is unchanged."
     },
     "live": {
       "running": "Trade in progress",
@@ -1395,7 +1395,7 @@
       "useInTrade": "Use in a trade",
       "exportPk3": "Export .pk3",
       "natureTip": "In the 3rd generation the nature comes from an internal number (PID). Changing the nature generates the Pokémon again, like in Create.",
-      "natureRegenerates": "With another nature, TradeRock generates the Pokémon again (like in Create) so it stays possible in the game. IVs may change.",
+      "natureRegenerates": "With another nature, RockAssistent generates the Pokémon again (like in Create) so it stays possible in the game. IVs may change.",
       "moveN": "Move {{n}}",
       "saveChanges": "Save changes",
       "saved": "Changes saved",
@@ -1410,7 +1410,7 @@
       "movesHint": "Leave empty to use the moves it would know at this level.",
       "moreOptions": "More options (item, IVs, EVs, origin, trainer)",
       "lessOptions": "Fewer options",
-      "ivTip": "IVs are the Pokémon's “genes” (0 to 31). EVs are training (up to 255 per stat and 510 in total). With “any”, TradeRock picks possible values.",
+      "ivTip": "IVs are the Pokémon's “genes” (0 to 31). EVs are training (up to 255 per stat and 510 in total). With “any”, RockAssistent picks possible values.",
       "advancedBanner": "Raw data, like in PKHeX. Nothing is fixed automatically: the panel on the side shows what is wrong.",
       "howItWorks": "How it works",
       "legalAttention": "Legal, with notes",
@@ -1450,7 +1450,7 @@
       },
       "search": "Search…",
       "nothing": "No gift found.",
-      "fileHelp": "Open a gift file ({{types}}). TradeRock doesn't download gifts: use files you already have."
+      "fileHelp": "Open a gift file ({{types}}). RockAssistent doesn't download gifts: use files you already have."
     },
     "howTo": "On {{game}}",
     "send": "Send",
@@ -1483,7 +1483,7 @@
       "gift_file_other_game": "This gift is for another game.",
       "gift_not_received": "The console didn't receive the gift. Check that it was on the Mystery Gift search screen and try again.",
       "activity_engine_unsupported": "The chosen connection doesn't do other activities.",
-      "activity_game_unsupported": "This game has no other activities in TradeRock yet.",
+      "activity_game_unsupported": "This game has no other activities in RockAssistent yet.",
       "load_failed": "Couldn't load the gift list.",
       "raid_invalid": "This raid isn't for this game, or a field is missing.",
       "raid_pokemon_missing": "Choose the raid's Pokémon.",
@@ -1505,29 +1505,29 @@
     },
     "raid": {
       "title": "Which raid?",
-      "sub": "You choose who opens the room: TradeRock or your console.",
+      "sub": "You choose who opens the room: RockAssistent or your console.",
       "start": "Start the raid",
       "kinds": {
         "max-raid-host": "Max Raid: the console joins",
-        "max-raid-join": "Max Raid: TradeRock joins",
+        "max-raid-join": "Max Raid: RockAssistent joins",
         "lair-host": "Dynamax Adventure: the console joins",
-        "lair-join": "Dynamax Adventure: TradeRock joins",
+        "lair-join": "Dynamax Adventure: RockAssistent joins",
         "tera-raid-host": "Tera Raid: the console joins",
-        "tera-raid-join": "Tera Raid: TradeRock joins"
+        "tera-raid-join": "Tera Raid: RockAssistent joins"
       },
       "about": {
-        "max-raid-host": "TradeRock opens a Max Raid with the boss you choose and fights with your Pokémon. The console joins through Y-Comm.",
-        "max-raid-join": "The console opens the raid at a den (Invite Others) and TradeRock joins to fight at your side.",
-        "lair-host": "TradeRock opens a Dynamax Adventure with the chosen legendary. Once the adventure starts, it leaves and a game partner takes over.",
-        "lair-join": "The console opens the Dynamax Adventure at the Max Lair (Invite Others) and TradeRock joins to help.",
-        "tera-raid-host": "TradeRock opens a Tera Raid with the boss you choose. The console searches through the Poké Portal with code 4970.",
-        "tera-raid-join": "The console opens the Tera Raid at a crystal (Challenge as a group) and TradeRock joins with your Pokémon."
+        "max-raid-host": "RockAssistent opens a Max Raid with the boss you choose and fights with your Pokémon. The console joins through Y-Comm.",
+        "max-raid-join": "The console opens the raid at a den (Invite Others) and RockAssistent joins to fight at your side.",
+        "lair-host": "RockAssistent opens a Dynamax Adventure with the chosen legendary. Once the adventure starts, it leaves and a game partner takes over.",
+        "lair-join": "The console opens the Dynamax Adventure at the Max Lair (Invite Others) and RockAssistent joins to help.",
+        "tera-raid-host": "RockAssistent opens a Tera Raid with the boss you choose. The console searches through the Poké Portal with code 4970.",
+        "tera-raid-join": "The console opens the Tera Raid at a crystal (Challenge as a group) and RockAssistent joins with your Pokémon."
       },
       "noPokemon": "You have no Pokémon for this game in the vault. Make one in the builder or import a file.",
       "choosePokemon": "Choose a Pokémon from the vault",
       "anyPokemon": "None (pokeldn picks)",
       "level": "level {{level}}",
-      "offer": "Pokémon TradeRock brings",
+      "offer": "Pokémon RockAssistent brings",
       "offerHelp": "It fights at your side in the raid.",
       "boss": "Boss",
       "bossVault": "Boss from the vault",
@@ -1535,7 +1535,7 @@
       "chooseBoss": "Choose the boss",
       "gigantamax": "Gigantamax (only if the species has it)",
       "event": "Event",
-      "move": "Move TradeRock uses",
+      "move": "Move RockAssistent uses",
       "moveN": "Move {{n}}",
       "legendary": "Legendary",
       "code": "Code (optional)",
@@ -1566,24 +1566,24 @@
       "black": "6-star raid (black crystal)",
       "seed": "Seed",
       "seedHelp": "8 hexadecimal digits. The same seed gives the same raid.",
-      "svOffer": "Pokémon TradeRock brings",
+      "svOffer": "Pokémon RockAssistent brings",
       "moveAuto": "Automatic (the AI picks)",
-      "moveAutoHelp": "Before starting, TradeRock picks the move that works best against the boss (type, power and same-type bonus). It uses that move for the whole battle.",
+      "moveAutoHelp": "Before starting, RockAssistent picks the move that works best against the boss (type, power and same-type bonus). It uses that move for the whole battle.",
       "target": "Raid boss (optional)",
-      "targetHelp": "The Pokémon your console opened. Without it, TradeRock uses its strongest move.",
+      "targetHelp": "The Pokémon your console opened. Without it, RockAssistent uses its strongest move.",
       "targetUnknown": "Don't know / any"
     },
     "circle": {
       "title": "Union Circle",
-      "sub": "The console opens the circle and TradeRock joins.",
+      "sub": "The console opens the circle and RockAssistent joins.",
       "start": "Join the circle",
       "kinds": {
         "quests": "Blueberry Quests",
         "encounters": "Encounters"
       },
       "about": {
-        "quests": "TradeRock clears Blueberry Quests for your console: every Snacksworth legendary, or the BP you choose. Then it leaves the circle.",
-        "encounters": "TradeRock makes the wild Pokémon you choose appear around your player, to battle and catch."
+        "quests": "RockAssistent clears Blueberry Quests for your console: every Snacksworth legendary, or the BP you choose. Then it leaves the circle.",
+        "encounters": "RockAssistent makes the wild Pokémon you choose appear around your player, to battle and catch."
       },
       "code": "Circle code",
       "codeHelp": "The 4 digits you used on the console.",
@@ -1612,7 +1612,7 @@
   "logs": {
     "tab": "Logs",
     "title": "Logs",
-    "sub": "What TradeRock, pokeldn and the ESP32 flasher recorded in the last {{days}} days. Newest first.",
+    "sub": "What RockAssistent, pokeldn and the ESP32 flasher recorded in the last {{days}} days. Newest first.",
     "problemsOnly": "Only errors and warnings",
     "refresh": "Refresh",
     "copy": "Copy",
@@ -1637,7 +1637,7 @@
     "check": "Check now",
     "checking": "Checking…",
     "auto": "Check for a new version when the app opens (at most once a day)",
-    "privacy": "The check only reads TradeRock's releases page on GitHub. Nothing from your PC is sent, and the prod.keys never leaves it.",
+    "privacy": "The check only reads RockAssistent's releases page on GitHub. Nothing from your PC is sent, and the prod.keys never leaves it.",
     "upToDate": "You have the newest version ({{version}}).",
     "available": "Version {{version}} is available (you have {{current}}).",
     "notes": "What's new",
@@ -1645,19 +1645,19 @@
     "install": "Update now",
     "manual": "This copy does not update itself. Download the new version from the Release page:",
     "openRelease": "open the Release",
-    "notice": "TradeRock {{version}} is available.",
+    "notice": "RockAssistent {{version}} is available.",
     "see": "See and update",
     "confirm": {
-      "windows_installer": "TradeRock downloads the installer, checks the file and runs the setup. Windows asks for administrator permission, as in the first install. The app closes and opens again on its own at the end.",
-      "app_image": "TradeRock downloads the new AppImage, checks the file, replaces the current one and opens again.",
-      "deb": "TradeRock downloads the package, checks the file and installs it. The system asks for your administrator password. The app closes and opens again on its own at the end.",
+      "windows_installer": "RockAssistent downloads the installer, checks the file and runs the setup. Windows asks for administrator permission, as in the first install. The app closes and opens again on its own at the end.",
+      "app_image": "RockAssistent downloads the new AppImage, checks the file, replaces the current one and opens again.",
+      "deb": "RockAssistent downloads the package, checks the file and installs it. The system asks for your administrator password. The app closes and opens again on its own at the end.",
       "none": ""
     },
     "stages": {
       "downloading": "Downloading…",
       "verifying": "Checking the file…",
       "installing": "Installing…",
-      "restarting": "Done. TradeRock will close and open again."
+      "restarting": "Done. RockAssistent will close and open again."
     },
     "errors": {
       "update_check_failed": "Could not reach GitHub. Check the internet and try again.",

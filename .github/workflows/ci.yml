@@ -182,7 +182,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Fumaça
-        run: pwsh scripts/smoke-windows.ps1 "dist\TradeRock-Setup-${{ needs.package-windows.outputs.version }}.exe" "${{ needs.package-windows.outputs.version }}"
+        run: pwsh scripts/smoke-windows.ps1 "dist\RockAssistent-Setup-${{ needs.package-windows.outputs.version }}.exe" "${{ needs.package-windows.outputs.version }}"
 
       - uses: actions/upload-artifact@v4
         with:
@@ -210,7 +210,7 @@ jobs:
       - name: Checksums com o instalador do Windows
         run: |
           cd dist && sha256sum -c SHA256SUMS
-          sha256sum -- TradeRock-Setup-*.exe >> SHA256SUMS
+          sha256sum -- RockAssistent-Setup-*.exe >> SHA256SUMS
       # Texto do Release: as novidades (mensagem da tag anotada), o "qual arquivo baixar"
       # (packaging/release-notes.md) e, no fim, a lista automática de mudanças do GitHub.
       - name: Notas
@@ -245,4 +245,4 @@ jobs:
           fi
           (cd dist && sha256sum -c SHA256SUMS)
           gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" \
-            --title "TradeRock $version" --notes-file release-notes.md --generate-notes $prerelease
+            --title "RockAssistent $version" --notes-file release-notes.md --generate-notes $prerelease

@@ -14,7 +14,7 @@ public static class AppEndpoints
         // Pela rede, "window" é false: os diálogos nativos abririam no PC, não no celular.
         api.MapGet("/health", (HttpContext context, IHostEnvironment env, WindowBridge window) => Results.Ok(new
         {
-            app = "TradeRock",
+            app = "RockAssistent",
             version,
             os = OperatingSystem.IsWindows() ? "windows" : OperatingSystem.IsLinux() ? "linux" : "other",
             environment = env.EnvironmentName,

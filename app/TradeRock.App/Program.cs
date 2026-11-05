@@ -14,7 +14,7 @@ internal static class Program
         // Antes de tudo: não cria pasta de dados nem banco (usado pelos pacotes e pelo CI).
         if (args is ["--version"])
         {
-            Console.WriteLine($"TradeRock {AppVersion.Current}");
+            Console.WriteLine($"RockAssistent {AppVersion.Current}");
             return 0;
         }
 
@@ -27,7 +27,7 @@ internal static class Program
         if (options.NoWindow)
         {
             // Saída padrão, não o log: a URL contém o token de sessão.
-            Console.WriteLine($"TradeRock rodando sem janela. Abra: {TradeRockServer.GetLaunchUri(app)}");
+            Console.WriteLine($"RockAssistent rodando sem janela. Abra: {TradeRockServer.GetLaunchUri(app)}");
             app.WaitForShutdownAsync().GetAwaiter().GetResult();
             app.DisposeAsync().AsTask().GetAwaiter().GetResult();
             return 0;
@@ -47,7 +47,7 @@ internal static class Program
         if (OperatingSystem.IsWindows() && WindowPrerequisites.WebView2Version() is null)
         {
             logger.LogWarning("WebView2 ausente: abrindo no navegador.");
-            WindowPrerequisites.ShowMessage(WindowPrerequisites.WebView2Message, "TradeRock");
+            WindowPrerequisites.ShowMessage(WindowPrerequisites.WebView2Message, "RockAssistent");
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(TradeRockServer.GetLaunchUri(app).ToString()) { UseShellExecute = true });
             app.WaitForShutdownAsync().GetAwaiter().GetResult();
             app.DisposeAsync().AsTask().GetAwaiter().GetResult();
@@ -66,7 +66,7 @@ internal static class Program
     {
         // LogVerbosity = 0 antes de qualquer chamada: o Photino imprime a URL (com o token) no stdout.
         var window = new PhotinoWindow { LogVerbosity = 0 }
-            .SetTitle("TradeRock")
+            .SetTitle("RockAssistent")
             .SetUseOsDefaultSize(false)
             .SetSize(1280, 800)
             .SetMinSize(900, 600)

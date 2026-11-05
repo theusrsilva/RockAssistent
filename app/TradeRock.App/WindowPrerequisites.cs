@@ -27,7 +27,7 @@ public static class WindowPrerequisites
     public static string HelpMessage(IReadOnlyList<string> missing)
     {
         var packages = LinuxLibraries.Where(l => missing.Contains(l.Library)).Select(l => l.DebianPackage);
-        return "Não foi possível abrir a janela do TradeRock: faltam bibliotecas do sistema ("
+        return "Não foi possível abrir a janela do RockAssistent: faltam bibliotecas do sistema ("
             + string.Join(", ", missing) + ").\n"
             + "Debian/Ubuntu: sudo apt install " + string.Join(' ', packages) + "\n"
             + "Fedora: sudo dnf install webkit2gtk4.1 libnotify\n"
@@ -59,8 +59,8 @@ public static class WindowPrerequisites
     }
 
     public const string WebView2Message =
-        "Falta o Microsoft Edge WebView2, que o TradeRock usa para mostrar a janela.\n\n" +
-        "O TradeRock vai abrir no seu navegador por enquanto. Para ter a janela, instale o " +
+        "Falta o Microsoft Edge WebView2, que o RockAssistent usa para mostrar a janela.\n\n" +
+        "O RockAssistent vai abrir no seu navegador por enquanto. Para ter a janela, instale o " +
         "\"WebView2 Runtime\" (Evergreen) pela página oficial da Microsoft:\n" + WebView2DownloadPage;
 
     /// <summary>Caixa de mensagem nativa do Windows (sem depender do WebView2).</summary>

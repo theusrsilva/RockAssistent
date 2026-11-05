@@ -149,7 +149,7 @@ public sealed class WorkerHost(IWorkerLauncher launcher, WorkerOptions options, 
             if (hello["protocol"]?.GetValue<int>() != WorkerClient.Protocol)
             {
                 await client.DisposeAsync();
-                throw new WorkerException("worker_version", "O componente de rede instalado é de outra versão do TradeRock.");
+                throw new WorkerException("worker_version", "O componente de rede instalado é de outra versão do RockAssistent.");
             }
             if (hello["root"]?.GetValue<bool>() != true)
             {
