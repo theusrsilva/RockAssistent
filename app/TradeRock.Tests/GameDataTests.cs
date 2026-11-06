@@ -221,8 +221,12 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     // Treinadores comuns (não chefes) das Gen 1 a 5: cobertura mínima, área do arquivo de áreas, espécie e versão válidas,
-    // nenhum time igual ao de um chefe (os chefes ficam em bosses/).
+    // nenhum treinador com o nome e o time de um chefe (os chefes ficam em bosses/).
     [Theory]
+    [InlineData("rb")]
+    [InlineData("y")]
+    [InlineData("gs")]
+    [InlineData("c")]
     [InlineData("rs")]
     [InlineData("e")]
     [InlineData("frlg")]
@@ -231,7 +235,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     [InlineData("hgss")]
     [InlineData("bw")]
     [InlineData("b2w2")]
-    public void Treinadores_comuns_dos_jogos_de_GBA_e_DS(string game)
+    public void Treinadores_comuns_das_geracoes_1_a_5(string game)
     {
         var store = FromFiles(GameDataStore.EmbeddedFiles());
         var trainers = store.Trainers(game);
@@ -239,8 +243,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Contains(game, store.GamesWithTrainers);
         var areas = store.Areas(game).Select(a => a.Id).ToHashSet();
         var versions = GameVersions.ByKey(game).PokeApiVersions;
-        static string Team(IEnumerable<BossPokemon> party) => string.Join(",", party.Select(p => $"{p.Species}:{p.Level}"));
-        var bossTeams = store.Bosses(game).Select(b => Team(b.Party)).ToHashSet();
+        static string Team(string name, IEnumerable<BossPokemon> party) =>
+            name.ToLowerInvariant() + "|" + string.Join(",", party.Select(p => $"{p.Species}:{p.Level}"));
+        var bossTeams = store.Bosses(game).Select(b => Team(b.Name, b.Party)).ToHashSet();
         Assert.All(trainers, t =>
         {
             Assert.Contains(t.Area, areas);
@@ -249,7 +254,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
             Assert.NotEmpty(t.Party);
             Assert.All(t.Party, p => Assert.InRange(p.Species, 1, GameDataValidator.MaxSpecies));
             Assert.All(t.Versions ?? [], v => Assert.Contains(v, versions));
-            Assert.DoesNotContain(Team(t.Party), bossTeams);
+            Assert.DoesNotContain(Team(t.Name, t.Party), bossTeams);
         });
         // Espalhados pelo jogo, não concentrados em poucas áreas.
         Assert.True(trainers.Select(t => t.Area).Distinct().Count() >= 30, $"{game}: poucas áreas com treinador");
