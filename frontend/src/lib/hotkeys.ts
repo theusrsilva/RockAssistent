@@ -38,6 +38,18 @@ export interface HotkeySettings {
   reason?: string | null
 }
 
+/** Teclas que escrevem ou apagam texto (o atalho global as tira também dos campos de texto do app). */
+const TEXT_CODES = /^(Space|Backspace|Delete|Equal|Minus|Key[A-Z]|Digit\d|Numpad\w+)$/
+
+/**
+ * O combo é uma tecla de texto sem Ctrl, Alt ou Meta (Shift+letra também escreve). Com o atalho global, ela some de
+ * todos os programas e dos campos do próprio app: melhor F1–F12 ou um combo com Ctrl/Alt.
+ */
+export function isTextKey(text: string): boolean {
+  const combo = parseCombo(text)
+  return !!combo && !combo.ctrl && !combo.alt && !combo.meta && TEXT_CODES.test(combo.code)
+}
+
 /** O atalho global está valendo (ligado, o sistema deixa e o registro deu certo). */
 export function globalActive(keys: HotkeySettings): boolean {
   return !!keys.global && !!keys.supported && !keys.reason

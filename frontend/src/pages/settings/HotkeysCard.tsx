@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Callout, Toggle, useToast } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
-import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, type HotkeySettings } from '../../lib/hotkeys'
+import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, isTextKey, type HotkeySettings } from '../../lib/hotkeys'
 
 type Which = 'increment' | 'decrement'
 
@@ -133,6 +133,11 @@ export function HotkeysCard() {
                 label={t('hunt.hotkeys.global.label')}
               />
               <p className="text-[12.5px] text-muted">{t('hunt.hotkeys.global.help')}</p>
+              {keys.global && (isTextKey(keys.increment) || isTextKey(keys.decrement)) && (
+                <Callout tone="amber" icon="warning" className="text-[13px]">
+                  {t('hunt.hotkeys.global.textKeyWarning')}
+                </Callout>
+              )}
             </>
           ) : (
             <Toggle on={false} disabled onChange={() => undefined} label={t('hunt.hotkeys.global.label')} />

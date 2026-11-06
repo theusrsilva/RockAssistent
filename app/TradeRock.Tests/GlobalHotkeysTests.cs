@@ -88,6 +88,40 @@ public sealed class GlobalHotkeysTests
     }
 
     [Fact]
+    public void Erro_na_thread_do_loop_chega_como_GlobalHotkeyException()
+    {
+        var failed = Task.Run(() => throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "em uso"));
+        Assert.Equal(GlobalHotkeyException.InUse,
+            Assert.Throws<GlobalHotkeyException>(() => HotkeyThreadCall.Wait(failed, TimeSpan.FromSeconds(5))).Code);
+        var stuck = new TaskCompletionSource().Task;
+        Assert.Equal(GlobalHotkeyException.InUse,
+            Assert.Throws<GlobalHotkeyException>(() => HotkeyThreadCall.Wait(stuck, TimeSpan.FromMilliseconds(50))).Code);
+    }
+
+    [Fact]
+    public void Apply_com_erro_na_thread_solta_tudo_e_guarda_o_motivo()
+    {
+        var hotkeys = new ThreadedFakeHotkeys { Taken = "F9", NoKey = "Semicolon" };
+        var service = new GlobalHotkeyService(hotkeys, null!, NullLogger<GlobalHotkeyService>.Instance);
+        var previous = new TradeRock.App.Api.SettingsEndpoints.HotkeySettings("F7", "F8", true);
+        service.Apply(previous);
+        Assert.Equal("F7", hotkeys.Registered["increment"]);
+
+        // O increment registra e o decrement falha: nada fica pego e o motivo vira in_use.
+        var ex = Assert.Throws<GlobalHotkeyException>(() => service.Apply(new("F6", "F9", true)));
+        Assert.Equal(GlobalHotkeyException.InUse, ex.Code);
+        Assert.Empty(hotkeys.Registered);
+        Assert.Equal("in_use", service.Reason);
+
+        Assert.Equal(GlobalHotkeyException.Unsupported, Assert.Throws<GlobalHotkeyException>(() => service.Apply(new("Semicolon", "F8", true))).Code);
+        Assert.Empty(hotkeys.Registered);
+
+        service.Apply(previous); // o PUT volta o anterior
+        Assert.Equal("F8", hotkeys.Registered["decrement"]);
+        Assert.Null(service.Reason);
+    }
+
+    [Fact]
     public void NoHotkeys_avisa_o_motivo()
     {
         using var none = new NoHotkeys("unsupported_os");
@@ -95,6 +129,53 @@ public sealed class GlobalHotkeysTests
         Assert.Equal("unsupported_os", none.Reason);
         Assert.Equal(GlobalHotkeyException.GlobalUnsupported, Assert.Throws<GlobalHotkeyException>(() => none.Register("increment", "Space")).Code);
         none.Unregister("increment");
+    }
+}
+
+/// <summary>
+/// Atalho falso que, como os de verdade, faz o trabalho numa thread própria e espera com <see cref="HotkeyThreadCall"/>:
+/// o erro nasce na thread do loop.
+/// </summary>
+internal sealed class ThreadedFakeHotkeys : IGlobalHotkeys
+{
+    public string? Taken { get; set; }
+    public string? NoKey { get; set; }
+    public Dictionary<string, string> Registered { get; } = [];
+    public bool Supported => true;
+    public string? Reason => null;
+#pragma warning disable CS0067
+    public event Action<string>? Pressed;
+#pragma warning restore CS0067
+
+    private void OnThread(Action action)
+    {
+        var done = new TaskCompletionSource(TaskCreationOptions.RunContinuationsAsynchronously);
+        new Thread(() =>
+        {
+            try { action(); done.SetResult(); }
+            catch (Exception ex) { done.SetException(ex); }
+        }).Start();
+        HotkeyThreadCall.Wait(done.Task, TimeSpan.FromSeconds(5));
+    }
+
+    public void Register(string id, string combo) => OnThread(() =>
+    {
+        if (combo == Taken)
+            throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "em uso");
+        if (combo == NoKey)
+            throw new GlobalHotkeyException(GlobalHotkeyException.Unsupported, "sem tecla");
+        lock (Registered)
+            Registered[id] = combo;
+    });
+
+    public void Unregister(string id) => OnThread(() =>
+    {
+        lock (Registered)
+            Registered.Remove(id);
+    });
+
+    public void Dispose()
+    {
     }
 }
 

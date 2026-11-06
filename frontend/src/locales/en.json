@@ -2181,7 +2181,8 @@
       "reset": "Back to default",
       "global": {
         "label": "Global shortcut (works with the app in the background)",
-        "help": "For emulator players: the keys count even with another window in front. Other programs stop receiving them while RockAssistent is open.",
+        "help": "For emulator players: the keys count even with another window in front. While RockAssistent is open, other programs stop receiving them, and so do the app's own text fields.",
+        "textKeyWarning": "This key types or deletes text: with the global shortcut on, it disappears from every program (you can't type a space or delete, not even here). Prefer F1–F12 or a combo with Ctrl or Alt.",
         "reasons": {
           "wayland": "Wayland doesn't allow global shortcuts; use the window shortcut.",
           "no_x11": "Couldn't talk to X11 (no X display); use the window shortcut.",

@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { comboFromEvent, formatCombo, globalActive, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
+import { comboFromEvent, formatCombo, globalActive, isTextKey, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
 
 const key = (code: string, extra: Partial<KeyLike> = {}): KeyLike => ({
   code,
@@ -91,6 +91,11 @@ describe('botão focado', () => {
 })
 
 describe('atalho global', () => {
+  it('reconhece teclas de texto sem Ctrl/Alt/Meta', () => {
+    for (const k of ['Space', 'Backspace', 'KeyA', 'Shift+KeyA', 'Digit5', 'Equal', 'Minus', 'Numpad5', 'NumpadAdd']) expect(isTextKey(k)).toBe(true)
+    for (const k of ['F7', 'Ctrl+Space', 'Alt+KeyA', 'Meta+Digit1', 'ArrowUp', 'PageDown', 'Ctrl+Shift+F7']) expect(isTextKey(k)).toBe(false)
+  })
+
   it('vale só ligado, com suporte e sem motivo', () => {
     expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: true, reason: null })).toBe(true)
     expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: false, supported: true })).toBe(false)

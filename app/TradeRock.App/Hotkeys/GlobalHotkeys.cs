@@ -147,6 +147,26 @@ public static class HotkeyKeys
         new(GlobalHotkeyException.Unsupported, $"Tecla sem atalho global: {code}");
 }
 
+/// <summary>Espera o pedido que roda na thread dos atalhos.</summary>
+internal static class HotkeyThreadCall
+{
+    /// <summary>
+    /// Espera <paramref name="task"/> e devolve a exceção original (o <c>Task.Wait</c> embrulharia numa
+    /// <see cref="AggregateException"/>). Sem resposta no prazo → <c>hotkey_in_use</c>.
+    /// </summary>
+    public static void Wait(Task task, TimeSpan timeout)
+    {
+        try
+        {
+            task.WaitAsync(timeout).GetAwaiter().GetResult();
+        }
+        catch (TimeoutException) when (!task.IsCompleted)
+        {
+            throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "A thread dos atalhos não respondeu.");
+        }
+    }
+}
+
 public static class GlobalHotkeys
 {
     /// <summary>A implementação do sistema atual.</summary>

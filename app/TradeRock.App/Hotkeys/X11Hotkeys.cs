@@ -85,10 +85,13 @@ public sealed class X11Hotkeys : IGlobalHotkeys
             if (keycode == 0)
                 throw new GlobalHotkeyException(GlobalHotkeyException.Unsupported, $"O teclado não tem a tecla {parsed.Code}.");
             var mask = parsed.X11Mask;
-            if (!Grab(keycode, mask))
+            var error = Grab(keycode, mask);
+            if (error != 0)
             {
                 Ungrab(keycode, mask);
-                throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "Outro programa já usa essa tecla.");
+                throw error == BadAccess
+                    ? new GlobalHotkeyException(GlobalHotkeyException.InUse, "Outro programa já usa essa tecla.")
+                    : new GlobalHotkeyException(GlobalHotkeyException.Unsupported, $"O X recusou a tecla (erro {error}).");
             }
             _grabs[id] = (keycode, mask);
         });
@@ -110,8 +113,8 @@ public sealed class X11Hotkeys : IGlobalHotkeys
             Ungrab(grab.Keycode, grab.Mask);
     }
 
-    /// <summary>Pega a tecla (com as variações de NumLock/CapsLock). Falso se o X respondeu BadAccess.</summary>
-    private bool Grab(int keycode, uint mask)
+    /// <summary>Pega a tecla (com as variações de NumLock/CapsLock). Devolve o código de erro do X (0 = deu certo).</summary>
+    private byte Grab(int keycode, uint mask)
     {
         lock (ErrorLock)
         {
@@ -129,7 +132,7 @@ public sealed class X11Hotkeys : IGlobalHotkeys
                 XSetErrorHandler(previous);
                 s_display = IntPtr.Zero;
             }
-            return s_lastError != BadAccess;
+            return s_lastError;
         }
     }
 
@@ -179,9 +182,7 @@ public sealed class X11Hotkeys : IGlobalHotkeys
             }
         });
         _wake.Set();
-        if (!done.Task.Wait(TimeSpan.FromSeconds(5)))
-            throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "A thread dos atalhos não respondeu.");
-        done.Task.GetAwaiter().GetResult();
+        HotkeyThreadCall.Wait(done.Task, TimeSpan.FromSeconds(5));
     }
 
     /// <summary>Abre a conexão com o X na thread dos atalhos. Sem conexão, <see cref="Reason"/> vira <c>no_x11</c>.</summary>
@@ -300,8 +301,9 @@ public sealed class X11Hotkeys : IGlobalHotkeys
         }
         _stop = true;
         _wake.Set();
-        thread?.Join(TimeSpan.FromSeconds(2));
-        _wake.Dispose();
+        // Com a thread ainda viva (presa no X), o evento fica: ela ainda pode usá-lo.
+        if (thread is null || thread.Join(TimeSpan.FromSeconds(2)))
+            _wake.Dispose();
     }
 
     // ---- Erros do X (o handler é global no Xlib: só fica instalado durante o grab e repassa os de outras conexões) ----

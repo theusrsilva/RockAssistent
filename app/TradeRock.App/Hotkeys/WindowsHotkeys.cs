@@ -94,9 +94,7 @@ public sealed class WindowsHotkeys(ILogger<WindowsHotkeys> logger) : IGlobalHotk
             }
         });
         PostThreadMessage(threadId, WmApp, UIntPtr.Zero, IntPtr.Zero);
-        if (!done.Task.Wait(TimeSpan.FromSeconds(5)))
-            throw new GlobalHotkeyException(GlobalHotkeyException.InUse, "A thread dos atalhos não respondeu.");
-        done.Task.GetAwaiter().GetResult();
+        HotkeyThreadCall.Wait(done.Task, TimeSpan.FromSeconds(5));
     }
 
     private void EnsureThread()
@@ -134,6 +132,9 @@ public sealed class WindowsHotkeys(ILogger<WindowsHotkeys> logger) : IGlobalHotk
             _ids.Clear();
             while (_commands.TryDequeue(out var command))
                 command(); // quem esperava recebe a resposta (sem atalhos)
+            // GetMessage com erro (-1) também chega aqui: o próximo pedido cria outra thread.
+            lock (_gate)
+                _thread = null;
         }
     }
 

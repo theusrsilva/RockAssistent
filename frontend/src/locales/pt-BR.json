@@ -2181,7 +2181,8 @@
       "reset": "Voltar ao padrão",
       "global": {
         "label": "Atalho global (funciona com o app em segundo plano)",
-        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Elas deixam de funcionar nos outros programas enquanto o RockAssistent estiver aberto.",
+        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Enquanto o RockAssistent estiver aberto, elas deixam de funcionar nos outros programas e também nos campos de texto do próprio app.",
+        "textKeyWarning": "Esta tecla escreve ou apaga texto: com o atalho global ligado, ela some de todos os programas (não dá para digitar espaço nem apagar, nem aqui). Prefira F1–F12 ou um combo com Ctrl ou Alt.",
         "reasons": {
           "wayland": "No Wayland o sistema não permite atalho global; use o atalho da janela.",
           "no_x11": "Não foi possível falar com o X11 (sem tela gráfica X); use o atalho da janela.",
