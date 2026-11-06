@@ -114,17 +114,91 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         {
             ["shiny-methods.json"] = $$"""
                 { {{Source}}, "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096,
-                  "modifiers": [], "games": ["zz"], "notes": null, "verified": false } ] }
+                  "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["zz"], "notes": null, "verified": false } ] }
                 """,
         };
         var ex = Assert.Throws<InvalidDataException>(() => FromFiles(files));
         Assert.Contains("zz", ex.Message);
     }
 
+    private static double Combine(ShinyMethod m, params int[] extra) =>
+        ShinyOdds.FromRolls(m.RollOdds!.Value, m.BaseRolls!.Value + extra.Sum());
+
+    private static int Rolls(ShinyMethod m, string modifier, string? step = null)
+    {
+        var mod = m.Modifiers.Single(x => x.Id == modifier);
+        return step is null ? mod.Rolls!.Value : mod.Steps!.Single(s => s.Label == step).Rolls!.Value;
+    }
+
+    [Fact]
+    public void Regra_das_rolagens_reproduz_as_odds_das_fontes()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        ShinyMethod M(string id) => store.ShinyMethods.Single(m => m.Id == id);
+
+        var sos = M("sos_chain");
+        Assert.Equal(273.53, Combine(sos, Rolls(sos, "chain", "31+"), Rolls(sos, "shiny_charm")), 0.01);
+        var brilliant = M("brilliant");
+        Assert.Equal(455.56, Combine(brilliant, Rolls(brilliant, "battled", "500+"), Rolls(brilliant, "shiny_charm")), 0.01);
+        var outbreak = M("pla_outbreak");
+        Assert.Equal(137.02, Combine(outbreak, Rolls(outbreak, "shiny_charm"), Rolls(outbreak, "research_10")), 0.01);
+        var sv = M("sv_wild");
+        Assert.Equal(512.44, Combine(sv, Rolls(sv, "sparkling_power", "nível 3"), Rolls(sv, "outbreak", "60+"), Rolls(sv, "shiny_charm")), 0.01);
+
+        // Sem rolagens: não combina.
+        Assert.Null(M("dynamax_adventure").BaseRolls);
+        Assert.All(M("dynamax_adventure").Modifiers, x => Assert.Null(x.Rolls));
+        // Amuleto só no B2W2 nos métodos da Gen 5.
+        Assert.Equal(["b2w2"], M("masuda_gen5").Modifiers.Single(x => x.Id == "shiny_charm").Games);
+        Assert.All(store.ShinyMethods, m => Assert.True(m.Modifiers.Count(x => x.Counter) <= 1));
+        Assert.True(M("sos_chain").Modifiers.Single(x => x.Id == "chain").Counter);
+    }
+
+    private static Dictionary<string, string> Shiny(string method) => new()
+    {
+        ["shiny-methods.json"] = $$"""{ "source": [], "items": [ {{method}} ] }""",
+    };
+
+    public static TheoryData<string, string> MetodosInvalidos { get; } = new()
+    {
+        {
+            """
+            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 1000, "rolls": 2, "counter": false, "games": null } ] }
+            """,
+            "não batem"
+        },
+        {
+            """
+            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "x", "name": "X", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null }, { "id": "y", "name": "Y", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null } ] }
+            """,
+            "counter"
+        },
+        {
+            """
+            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": ["swsh"] } ] }
+            """,
+            "swsh"
+        },
+        {
+            """
+            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": null } ] }
+            """,
+            "rolls"
+        },
+    };
+
     [Theory]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "modifiers": [], "games": ["sv"], "notes": null } ] }""")]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "modifiers": [], "games": ["sv"], "notes": null, "verified": true, "extra": 1 } ] }""")]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": null, "description": "d", "base_odds": 4096, "modifiers": [], "games": ["sv"], "notes": null, "verified": true } ] }""")]
+    [MemberData(nameof(MetodosInvalidos))]
+    public void Validador_confere_rolagens_contador_e_jogos_dos_modificadores(string method, string expected)
+    {
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(Shiny(method)));
+        Assert.Contains(expected, ex.Message);
+    }
+
+    [Theory]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null } ] }""")]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true, "extra": 1 } ] }""")]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": null, "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true } ] }""")]
     [InlineData("""{ "items": [] }""")]
     public void Arquivo_fora_do_esquema_falha(string json)
     {

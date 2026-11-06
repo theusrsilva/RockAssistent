@@ -35,6 +35,17 @@ Você é o analista de dados do TradeRock. Revise os arquivos abaixo, item por i
 - Não mude o esquema (os campos estão em `app/TradeRock.Core/GameData/GameDataModels.cs`). Depois de mudar um
   JSON, rode `dotnet test --project app/TradeRock.Tests -- --filter-class "TradeRock.Tests.GameDataTests"`.
 
+## Avisos práticos
+
+- A **Bulbapedia bloqueia acesso automático** (Cloudflare: WebFetch e curl recebem 403 ou "Just a moment..."). Use a
+  busca na web para achar o fato e confirme em outra fonte que abra (Serebii, Pokestats, Rotom Labs, Smogon,
+  PokémonDB, decompilações).
+- Quando o JSON não segue o esquema, o erro do System.Text.Json ("missing required properties", "could not be
+  mapped") diz o campo e a posição no texto, mas **não o índice do item**. Procure o campo perto da linha/posição
+  indicada.
+- Métodos de shiny: num método com `base_rolls`, toda `odds` de modificador e degrau tem de bater (0,5%) com
+  `1 / (1 - (1 - 1/roll_odds)^(base_rolls + rolls))`; o validador acusa a diferença.
+
 ## Formato da resposta
 
 ```

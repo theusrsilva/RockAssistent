@@ -5,24 +5,53 @@ namespace TradeRock.Core.GameData;
 
 /// <summary>Um método de caça de shiny. As odds são o denominador: 4096 quer dizer 1/4096.</summary>
 /// <remarks>
-/// <see cref="ShinyModifier.Odds"/> e <see cref="ShinyStep.Odds"/> são as odds do método com só aquele modificador
-/// (ou só aquele degrau). Para juntar vários, converta cada odd em "rolagens" de 1/base e some os acréscimos.
+/// <para><c>Odds</c> de um modificador ou degrau é a odd do método só com ele (o valor para mostrar sozinho).</para>
+/// <para>Para combinar modificadores, use as rolagens: com <see cref="BaseRolls"/> e <see cref="RollOdds"/>
+/// preenchidos, a odd final é <c>1 / (1 - (1 - 1/RollOdds)^(BaseRolls + Σ Rolls))</c>, com a soma das
+/// <c>Rolls</c> dos toggles ligados e do degrau escolhido de cada <c>steps</c> (<see cref="ShinyOdds.FromRolls"/>).</para>
+/// <para>Método com <see cref="BaseRolls"/> nulo não segue rolagens (Ovo Estranho, Dynamax Adventure, Ultra
+/// Wormhole, Tera Raid, Poké Radar, DexNav...): mostre a <c>Odds</c> do modificador ou degrau como está e
+/// <b>nunca combine</b>. Num método com rolagens, todo modificador e degrau tem <c>Rolls</c>.</para>
 /// </remarks>
 public sealed record ShinyMethod(
     string Id,
     string Name,
     string Description,
     double BaseOdds,
+    int? BaseRolls,
+    double? RollOdds,
     IReadOnlyList<ShinyModifier> Modifiers,
     IReadOnlyList<string> Games,
     string? Notes,
     bool Verified);
 
-/// <summary>Modificador: <c>toggle</c> (liga/desliga, com <see cref="Odds"/>) ou <c>steps</c> (degraus).</summary>
-public sealed record ShinyModifier(string Id, string Name, string Kind, IReadOnlyList<ShinyStep>? Steps, double? Odds);
+/// <summary>
+/// Modificador: <c>toggle</c> (liga/desliga, com <see cref="Odds"/>) ou <c>steps</c> (degraus).
+/// <see cref="Rolls"/>: rolagens a mais sobre a base (só toggle). <see cref="Counter"/>: o <c>steps</c> que segue o
+/// contador da hunt (no máximo um por método). <see cref="Games"/>: jogos em que vale (nulo = todos os do método).
+/// </summary>
+public sealed record ShinyModifier(
+    string Id,
+    string Name,
+    string Kind,
+    IReadOnlyList<ShinyStep>? Steps,
+    double? Odds,
+    int? Rolls,
+    bool Counter,
+    IReadOnlyList<string>? Games);
 
-/// <summary>Um degrau de um modificador (contagem de <see cref="Min"/> até <see cref="Max"/>; sem máximo = em diante).</summary>
-public sealed record ShinyStep(string Label, int Min, int? Max, double Odds);
+/// <summary>
+/// Um degrau de um modificador (contagem de <see cref="Min"/> até <see cref="Max"/>; sem máximo = em diante).
+/// <see cref="Rolls"/>: rolagens a mais sobre a base.
+/// </summary>
+public sealed record ShinyStep(string Label, int Min, int? Max, double Odds, int? Rolls);
+
+/// <summary>Regra de combinação das odds por rolagens.</summary>
+public static class ShinyOdds
+{
+    /// <summary>Denominador da chance de pelo menos uma de <paramref name="rolls"/> rolagens de 1/<paramref name="rollOdds"/>.</summary>
+    public static double FromRolls(double rollOdds, int rolls) => 1 / (1 - Math.Pow(1 - 1 / rollOdds, rolls));
+}
 
 /// <summary>Batalha importante (líder, rival, equipe do mal, Elite 4, campeão).</summary>
 public sealed record BossBattle(

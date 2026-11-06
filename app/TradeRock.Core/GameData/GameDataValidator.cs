@@ -47,20 +47,54 @@ public static class GameDataValidator
                 errors.Add($"{at}: jogo desconhecido {g}");
             foreach (var dup in Duplicates(m.Modifiers.Select(x => x.Id)))
                 errors.Add($"{at}: modificador repetido {dup}");
+            var rolls = m.BaseRolls is not null;
+            if (rolls != m.RollOdds is not null)
+                errors.Add($"{at}: base_rolls e roll_odds vêm juntos (ou os dois null)");
+            else if (rolls && (m.BaseRolls < 1 || m.RollOdds < 1))
+                errors.Add($"{at}: base_rolls e roll_odds precisam ser >= 1");
+            else if (rolls)
+                SameOdds(at, m.BaseOdds, m, 0, errors);
+            if (m.Modifiers.Count(x => x.Counter) > 1)
+                errors.Add($"{at}: mais de um modificador com counter");
             foreach (var mod in m.Modifiers)
             {
                 var mat = $"{at}/{mod.Id}";
                 if (!ModifierKinds.Contains(mod.Kind))
                     errors.Add($"{mat}: kind {mod.Kind} (toggle ou steps)");
-                else if (mod.Kind == "toggle" && (mod.Odds is not >= 1 || mod.Steps is not null))
-                    errors.Add($"{mat}: toggle precisa de odds >= 1 e steps null");
-                else if (mod.Kind == "steps" && (mod.Steps is not { Count: > 0 } || mod.Odds is not null))
-                    errors.Add($"{mat}: steps precisa de degraus e odds null");
-                foreach (var s in mod.Steps ?? [])
-                    if (s.Odds < 1 || s.Min < 0 || s.Max < s.Min)
-                        errors.Add($"{mat}: degrau {s.Label} inválido");
+                else if (mod.Kind == "toggle" && (mod.Odds is not >= 1 || mod.Steps is not null || mod.Counter))
+                    errors.Add($"{mat}: toggle precisa de odds >= 1, steps null e counter false");
+                else if (mod.Kind == "steps" && (mod.Steps is not { Count: > 0 } || mod.Odds is not null || mod.Rolls is not null))
+                    errors.Add($"{mat}: steps precisa de degraus, odds null e rolls null (as rolagens ficam nos degraus)");
+                foreach (var g in (mod.Games ?? []).Where(g => !m.Games.Contains(g)))
+                    errors.Add($"{mat}: jogo {g} não é do método");
+                if (mod.Kind == "toggle" && rolls != mod.Rolls is not null)
+                    errors.Add($"{mat}: rolls {(rolls ? "obrigatório (método por rolagens)" : "tem de ser null (método sem rolagens)")}");
+                else if (mod.Kind == "toggle" && mod.Rolls is { } r && mod.Odds is { } o)
+                    SameOdds(mat, o, m, r, errors);
+                foreach (var st in mod.Steps ?? [])
+                {
+                    if (st.Odds < 1 || st.Min < 0 || st.Max < st.Min)
+                        errors.Add($"{mat}: degrau {st.Label} inválido");
+                    if (rolls != st.Rolls is not null)
+                        errors.Add($"{mat}: degrau {st.Label}: rolls {(rolls ? "obrigatório" : "tem de ser null")}");
+                    else if (st.Rolls is { } sr)
+                        SameOdds($"{mat}/{st.Label}", st.Odds, m, sr, errors);
+                }
             }
         }
+    }
+
+    /// <summary>A odd escrita tem de bater (0,5%) com a conta das rolagens.</summary>
+    private static void SameOdds(string at, double odds, ShinyMethod m, int extra, List<string> errors)
+    {
+        if (extra < 0)
+        {
+            errors.Add($"{at}: rolls negativo");
+            return;
+        }
+        var expected = ShinyOdds.FromRolls(m.RollOdds!.Value, m.BaseRolls!.Value + extra);
+        if (Math.Abs(odds - expected) / expected > 0.005)
+            errors.Add($"{at}: odds {odds} não batem com as rolagens ({m.BaseRolls} + {extra} de 1/{m.RollOdds} = 1/{expected:0.##})");
     }
 
     private static void Map(MapGraph map, List<string> errors)
