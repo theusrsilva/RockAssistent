@@ -6,7 +6,7 @@
   ],
   "items": [
     {
-      "id": "rival-oaks-lab",
+      "id": "rival-1",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -26,10 +26,11 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5; pode perder: a história continua"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5; pode perder: a história continua",
+      "versions": null
     },
     {
-      "id": "rival-route-22-early",
+      "id": "rival-2",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -64,7 +65,8 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 9; com Bulbasaur: Pidgey 9, Charmander 9; luta opcional"
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 9; com Bulbasaur: Pidgey 9, Charmander 9; luta opcional",
+      "versions": null
     },
     {
       "id": "brock",
@@ -103,10 +105,11 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
-      "id": "rival-cerulean",
+      "id": "rival-3",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -169,7 +172,8 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeotto 17, Abra 16, Rattata 15, Bulbasaur 18; com Bulbasaur: Pidgeotto 17, Abra 16, Rattata 15, Charmander 18"
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeotto 17, Abra 16, Rattata 15, Bulbasaur 18; com Bulbasaur: Pidgeotto 17, Abra 16, Rattata 15, Charmander 18",
+      "versions": null
     },
     {
       "id": "misty",
@@ -211,10 +215,11 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
-      "id": "rival-ss-anne",
+      "id": "rival-4",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -261,7 +266,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20",
+      "versions": null
     },
     {
       "id": "lt-surge",
@@ -317,7 +323,8 @@
       ],
       "level_cap": 24,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "erika",
@@ -373,7 +380,8 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "giovanni-hideout",
@@ -414,10 +422,11 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
-      "id": "rival-pokemon-tower",
+      "id": "rival-5",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -473,10 +482,11 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25",
+      "versions": null
     },
     {
-      "id": "rival-silph",
+      "id": "rival-6",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -532,7 +542,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40",
+      "versions": null
     },
     {
       "id": "giovanni-silph",
@@ -582,7 +593,8 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "koga",
@@ -652,7 +664,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "sabrina",
@@ -722,7 +735,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "blaine",
@@ -792,7 +806,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "giovanni-gym",
@@ -876,10 +891,11 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
-      "id": "rival-route-22-late",
+      "id": "rival-7",
       "kind": "rival",
       "name": "Blue",
       "title": "Rival",
@@ -974,7 +990,8 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 45, Alakazam 47, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 45, Alakazam 47, Charizard 53"
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 45, Alakazam 47, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 45, Alakazam 47, Charizard 53",
+      "versions": null
     },
     {
       "id": "lorelei",
@@ -1058,7 +1075,8 @@
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "bruno",
@@ -1142,7 +1160,8 @@
       ],
       "level_cap": 56,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "agatha",
@@ -1226,7 +1245,8 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "lance",
@@ -1310,10 +1330,11 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
-      "id": "champion",
+      "id": "blue-champion",
       "kind": "champion",
       "name": "Blue",
       "title": "Champion",
@@ -1408,7 +1429,8 @@
       ],
       "level_cap": 63,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 59, Alakazam 57, Rhydon 59, Gyarados 59, Arcanine 61, Venusaur 63; com Bulbasaur: Pidgeot 59, Alakazam 57, Rhydon 59, Exeggutor 59, Gyarados 61, Charizard 63"
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 59, Alakazam 57, Rhydon 59, Gyarados 59, Arcanine 61, Venusaur 63; com Bulbasaur: Pidgeot 59, Alakazam 57, Rhydon 59, Exeggutor 59, Gyarados 61, Charizard 63",
+      "versions": null
     },
     {
       "id": "rocket-admin-warehouse-1",
@@ -1464,7 +1486,8 @@
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rocket-admin-warehouse-2",
@@ -1520,7 +1543,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "lorelei-rematch",
@@ -1604,7 +1628,8 @@
       ],
       "level_cap": 66,
       "verified": true,
-      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null
     },
     {
       "id": "bruno-rematch",
@@ -1688,7 +1713,8 @@
       ],
       "level_cap": 68,
       "verified": true,
-      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null
     },
     {
       "id": "agatha-rematch",
@@ -1772,7 +1798,8 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null
     },
     {
       "id": "lance-rematch",
@@ -1856,10 +1883,11 @@
       ],
       "level_cap": 72,
       "verified": true,
-      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null
     },
     {
-      "id": "champion-rematch",
+      "id": "blue-champion-rematch",
       "kind": "champion",
       "name": "Blue",
       "title": "Champion",
@@ -1954,7 +1982,8 @@
       ],
       "level_cap": 75,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Heracross 72, Alakazam 73, Tyranitar 72, Gyarados 73, Arcanine 73, Venusaur 75; com Bulbasaur: Heracross 72, Alakazam 73, Tyranitar 72, Exeggutor 73, Gyarados 73, Charizard 75; revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+      "notes": "time para quem escolheu Charmander; com Squirtle: Heracross 72, Alakazam 73, Tyranitar 72, Gyarados 73, Arcanine 73, Venusaur 75; com Bulbasaur: Heracross 72, Alakazam 73, Tyranitar 72, Exeggutor 73, Gyarados 73, Charizard 75; revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null
     }
   ]
 }

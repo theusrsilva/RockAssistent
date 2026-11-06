@@ -54,6 +54,7 @@ public static class ShinyOdds
 }
 
 /// <summary>Batalha importante (líder, rival, equipe do mal, Elite 4, campeão).</summary>
+/// <remarks><see cref="Versions"/>: versões do PokeAPI em que a batalha existe (ex.: <c>["ruby"]</c>); nulo = todas as do jogo.</remarks>
 public sealed record BossBattle(
     string Id,
     string Kind,
@@ -65,7 +66,8 @@ public sealed record BossBattle(
     IReadOnlyList<BossPokemon> Party,
     int LevelCap,
     bool Verified,
-    string? Notes);
+    string? Notes,
+    IReadOnlyList<string>? Versions);
 
 /// <summary>Pokémon de um time. Golpes com os identificadores do PokeAPI.</summary>
 public sealed record BossPokemon(

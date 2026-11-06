@@ -3,6 +3,8 @@
     "https://github.com/pret/pokeruby/blob/master/src/data/trainer_parties.h",
     "https://github.com/pret/pokeruby/blob/master/src/data/trainers_en.h",
     "https://github.com/pret/pokeruby/blob/master/constants/version.inc",
+    "https://github.com/pret/pokeruby/blob/master/src/battle_setup.c",
+    "https://www.serebii.net/rubysapphire/gyms.shtml",
     "https://github.com/pret/pokeruby/blob/master/data/maps/Route103/scripts.inc",
     "https://github.com/pret/pokeruby/blob/master/data/maps/LilycoveCity/scripts.inc",
     "https://www.pokemythology.net/detonados/detonado-ruby-sapphire/"
@@ -29,7 +31,8 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Treecko 5; com Treecko: Torchic 5; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Treecko 5; com Treecko: Torchic 5; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "roxanne",
@@ -71,7 +74,8 @@
       ],
       "level_cap": 15,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "brawly",
@@ -113,7 +117,8 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-route-110",
@@ -154,7 +159,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wailmer 18, Numel 18, Grovyle 20; com Treecko: Wailmer 18, Shroomish 18, Combusken 20; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wailmer 18, Numel 18, Grovyle 20; com Treecko: Wailmer 18, Shroomish 18, Combusken 20; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "wally-mauville",
@@ -177,7 +183,8 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "wattson",
@@ -233,7 +240,8 @@
       ],
       "level_cap": 23,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "tabitha-mt-chimney",
@@ -274,7 +282,10 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "maxie-mt-chimney",
@@ -315,7 +326,10 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "matt-mt-chimney",
@@ -356,7 +370,10 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "archie-mt-chimney",
@@ -397,7 +414,10 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "flannery",
@@ -453,7 +473,8 @@
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "norman",
@@ -509,7 +530,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "courtney-weather-institute",
@@ -541,7 +563,10 @@
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "shelly-weather-institute",
@@ -573,7 +598,10 @@
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "rival-route-119",
@@ -614,7 +642,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Numel 29, Wailmer 29, Grovyle 31; com Treecko: Wailmer 29, Shroomish 29, Combusken 31; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Numel 29, Wailmer 29, Grovyle 31; com Treecko: Wailmer 29, Shroomish 29, Combusken 31; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "winona",
@@ -684,7 +713,8 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-lilycove",
@@ -734,7 +764,8 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Swellow 31, Numel 32, Wailmer 32, Grovyle 34; com Treecko: Swellow 31, Wailmer 32, Shroomish 32, Combusken 34; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Swellow 31, Numel 32, Wailmer 32, Grovyle 34; com Treecko: Swellow 31, Wailmer 32, Shroomish 32, Combusken 34; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "tabitha-hideout",
@@ -775,7 +806,10 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "matt-hideout",
@@ -816,7 +850,10 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "tate-liza",
@@ -858,7 +895,8 @@
       ],
       "level_cap": 42,
       "verified": true,
-      "notes": "batalha dupla"
+      "notes": "batalha dupla",
+      "versions": null
     },
     {
       "id": "courtney-seafloor",
@@ -890,7 +928,10 @@
       ],
       "level_cap": 38,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "maxie-seafloor",
@@ -931,7 +972,10 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Ruby"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "ruby"
+      ]
     },
     {
       "id": "shelly-seafloor",
@@ -963,7 +1007,10 @@
       ],
       "level_cap": 38,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "archie-seafloor",
@@ -1004,7 +1051,10 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "golpes padrão do nível; só no Sapphire"
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "sapphire"
+      ]
     },
     {
       "id": "wallace",
@@ -1088,7 +1138,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "wally-victory-road",
@@ -1172,7 +1223,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "sidney",
@@ -1256,7 +1308,8 @@
       ],
       "level_cap": 49,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "phoebe",
@@ -1340,7 +1393,8 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "glacia",
@@ -1424,7 +1478,8 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "drake",
@@ -1508,7 +1563,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "steven",
@@ -1606,10 +1662,11 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
-      "id": "wally-rematch",
+      "id": "wally-rematch-1",
       "kind": "other",
       "name": "Wally",
       "title": "Pokémon Trainer",
@@ -1690,7 +1747,263 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": "revanche depois da Liga"
+      "notes": "1ª revanche, depois da Liga",
+      "versions": null
+    },
+    {
+      "id": "wally-rematch-2",
+      "kind": "other",
+      "name": "Wally",
+      "title": "Pokémon Trainer",
+      "location": "Victory Road",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "aerial-ace",
+            "safeguard",
+            "dragon-breath",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "sing",
+            "assist",
+            "charm",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 315,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "magical-leaf",
+            "leech-seed",
+            "giga-drain",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "supersonic",
+            "thunderbolt",
+            "tri-attack",
+            "screech"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "double-team",
+            "calm-mind",
+            "psychic",
+            "future-sight"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "2ª revanche, depois da Liga",
+      "versions": null
+    },
+    {
+      "id": "wally-rematch-3",
+      "kind": "other",
+      "name": "Wally",
+      "title": "Pokémon Trainer",
+      "location": "Victory Road",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "aerial-ace",
+            "safeguard",
+            "dragon-breath",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "sing",
+            "assist",
+            "charm",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 315,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "magical-leaf",
+            "leech-seed",
+            "giga-drain",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "supersonic",
+            "thunderbolt",
+            "tri-attack",
+            "screech"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "double-team",
+            "calm-mind",
+            "psychic",
+            "future-sight"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "3ª revanche, depois da Liga",
+      "versions": null
+    },
+    {
+      "id": "wally-rematch-4",
+      "kind": "other",
+      "name": "Wally",
+      "title": "Pokémon Trainer",
+      "location": "Victory Road",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "aerial-ace",
+            "safeguard",
+            "dragon-breath",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "sing",
+            "assist",
+            "charm",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 315,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "magical-leaf",
+            "leech-seed",
+            "giga-drain",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "supersonic",
+            "thunderbolt",
+            "tri-attack",
+            "screech"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "double-team",
+            "calm-mind",
+            "psychic",
+            "future-sight"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "4ª revanche, depois da Liga",
+      "versions": null
     }
   ]
 }

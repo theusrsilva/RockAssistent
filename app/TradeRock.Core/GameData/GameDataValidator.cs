@@ -135,6 +135,8 @@ public static class GameDataValidator
                 errors.Add($"{at}: time vazio");
             else if (b.LevelCap != b.Party.Max(p => p.Level))
                 errors.Add($"{at}: level_cap {b.LevelCap} diferente do maior nível do time ({b.Party.Max(p => p.Level)})");
+            foreach (var v in (b.Versions ?? []).Where(v => !game.PokeApiVersions.Contains(v)))
+                errors.Add($"{at}: versão {v} não é do {key}");
             Party(at, b.Party, moveExists, errors);
         }
 

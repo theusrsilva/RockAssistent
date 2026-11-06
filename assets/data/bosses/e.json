@@ -27,7 +27,8 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Treecko 5; com Treecko: Torchic 5; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Treecko 5; com Treecko: Torchic 5; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "roxanne",
@@ -83,7 +84,8 @@
       ],
       "level_cap": 15,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-rustboro",
@@ -115,7 +117,8 @@
       ],
       "level_cap": 15,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wingull 13, Treecko 15; com Treecko: Lotad 13, Torchic 15; se você joga com a May, o rival é o Brendan: Slugma 13, Mudkip 15"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wingull 13, Treecko 15; com Treecko: Lotad 13, Torchic 15; se você joga com a May, o rival é o Brendan: Slugma 13, Mudkip 15",
+      "versions": null
     },
     {
       "id": "brawly",
@@ -171,7 +174,8 @@
       ],
       "level_cap": 19,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-route-110",
@@ -212,7 +216,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wingull 18, Slugma 18, Grovyle 20; com Treecko: Wingull 18, Lombre 18, Combusken 20; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wingull 18, Slugma 18, Grovyle 20; com Treecko: Wingull 18, Lombre 18, Combusken 20; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "wally-mauville",
@@ -235,7 +240,8 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "wattson",
@@ -305,7 +311,8 @@
       ],
       "level_cap": 24,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "tabitha-mt-chimney",
@@ -355,7 +362,8 @@
       ],
       "level_cap": 22,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "maxie-mt-chimney",
@@ -396,7 +404,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "flannery",
@@ -466,7 +475,8 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "norman",
@@ -536,7 +546,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "shelly-weather-institute",
@@ -568,7 +579,8 @@
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-route-119",
@@ -609,7 +621,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Slugma 29, Lombre 29, Grovyle 31; com Treecko: Pelipper 29, Lombre 29, Combusken 31; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Slugma 29, Lombre 29, Grovyle 31; com Treecko: Pelipper 29, Lombre 29, Combusken 31; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "winona",
@@ -693,7 +706,8 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-lilycove",
@@ -743,7 +757,8 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Tropius 31, Slugma 32, Pelipper 32, Grovyle 34; com Treecko: Tropius 31, Pelipper 32, Ludicolo 32, Combusken 34; se você joga com a May, o rival é o Brendan, com o mesmo time"
+      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Tropius 31, Slugma 32, Pelipper 32, Grovyle 34; com Treecko: Tropius 31, Pelipper 32, Ludicolo 32, Combusken 34; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null
     },
     {
       "id": "tabitha-magma-hideout",
@@ -793,7 +808,8 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "maxie-magma-hideout",
@@ -834,7 +850,8 @@
       ],
       "level_cap": 39,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "matt-aqua-hideout",
@@ -866,7 +883,8 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "tate-liza",
@@ -936,7 +954,8 @@
       ],
       "level_cap": 42,
       "verified": true,
-      "notes": "batalha dupla"
+      "notes": "batalha dupla",
+      "versions": null
     },
     {
       "id": "maxie-space-center",
@@ -977,7 +996,8 @@
       ],
       "level_cap": 44,
       "verified": true,
-      "notes": "golpes padrão do nível; batalha dupla com o Steven contra Maxie e Tabitha"
+      "notes": "golpes padrão do nível; batalha dupla com o Steven contra Maxie e Tabitha",
+      "versions": null
     },
     {
       "id": "tabitha-space-center",
@@ -1018,7 +1038,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; batalha dupla com o Steven contra Maxie e Tabitha"
+      "notes": "golpes padrão do nível; batalha dupla com o Steven contra Maxie e Tabitha",
+      "versions": null
     },
     {
       "id": "shelly-seafloor",
@@ -1050,7 +1071,8 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "archie-seafloor",
@@ -1091,7 +1113,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "juan",
@@ -1175,7 +1198,8 @@
       ],
       "level_cap": 46,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "wally-victory-road",
@@ -1259,7 +1283,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "sidney",
@@ -1343,7 +1368,8 @@
       ],
       "level_cap": 49,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "phoebe",
@@ -1427,7 +1453,8 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "glacia",
@@ -1511,7 +1538,8 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "drake",
@@ -1595,7 +1623,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "wallace",
@@ -1693,7 +1722,8 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "steven",
@@ -1791,7 +1821,8 @@
       ],
       "level_cap": 78,
       "verified": true,
-      "notes": "pós-jogo; precisa de Surf e Waterfall"
+      "notes": "pós-jogo; precisa de Surf e Waterfall",
+      "versions": null
     },
     {
       "id": "roxanne-rematch-1",
@@ -1861,7 +1892,8 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "brawly-rematch-1",
@@ -1931,7 +1963,8 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "wattson-rematch-1",
@@ -2001,7 +2034,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "flannery-rematch-1",
@@ -2071,7 +2105,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "norman-rematch-1",
@@ -2141,7 +2176,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "winona-rematch-1",
@@ -2225,7 +2261,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "tate-liza-rematch-1",
@@ -2309,7 +2346,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "juan-rematch-1",
@@ -2393,7 +2431,8 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "1ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "roxanne-rematch-2",
@@ -2477,7 +2516,8 @@
       ],
       "level_cap": 42,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "brawly-rematch-2",
@@ -2547,7 +2587,8 @@
       ],
       "level_cap": 42,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "wattson-rematch-2",
@@ -2631,7 +2672,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "flannery-rematch-2",
@@ -2715,7 +2757,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "norman-rematch-2",
@@ -2799,7 +2842,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "winona-rematch-2",
@@ -2897,7 +2941,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "tate-liza-rematch-2",
@@ -2995,7 +3040,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "juan-rematch-2",
@@ -3079,7 +3125,8 @@
       ],
       "level_cap": 56,
       "verified": true,
-      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "2ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "roxanne-rematch-3",
@@ -3163,7 +3210,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "brawly-rematch-3",
@@ -3247,7 +3295,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "wattson-rematch-3",
@@ -3331,7 +3380,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "flannery-rematch-3",
@@ -3429,7 +3479,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "norman-rematch-3",
@@ -3513,7 +3564,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "winona-rematch-3",
@@ -3611,7 +3663,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "tate-liza-rematch-3",
@@ -3709,7 +3762,8 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "juan-rematch-3",
@@ -3807,7 +3861,8 @@
       ],
       "level_cap": 61,
       "verified": true,
-      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "3ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "roxanne-rematch-4",
@@ -3905,7 +3960,8 @@
       ],
       "level_cap": 52,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "brawly-rematch-4",
@@ -4003,7 +4059,8 @@
       ],
       "level_cap": 52,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "wattson-rematch-4",
@@ -4101,7 +4158,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "flannery-rematch-4",
@@ -4199,7 +4257,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "norman-rematch-4",
@@ -4297,7 +4356,8 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "winona-rematch-4",
@@ -4395,7 +4455,8 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "tate-liza-rematch-4",
@@ -4493,7 +4554,8 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "juan-rematch-4",
@@ -4591,7 +4653,8 @@
       ],
       "level_cap": 66,
       "verified": true,
-      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla"
+      "notes": "4ª revanche pelo Match Call, depois da Liga; batalha dupla",
+      "versions": null
     },
     {
       "id": "wally-rematch-1",
@@ -4675,7 +4738,8 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": "1ª revanche, depois da Liga"
+      "notes": "1ª revanche, depois da Liga",
+      "versions": null
     },
     {
       "id": "wally-rematch-2",
@@ -4759,7 +4823,8 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": "2ª revanche, depois da Liga"
+      "notes": "2ª revanche, depois da Liga",
+      "versions": null
     },
     {
       "id": "wally-rematch-3",
@@ -4843,7 +4908,8 @@
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": "3ª revanche, depois da Liga"
+      "notes": "3ª revanche, depois da Liga",
+      "versions": null
     },
     {
       "id": "wally-rematch-4",
@@ -4927,7 +4993,8 @@
       ],
       "level_cap": 57,
       "verified": true,
-      "notes": "4ª revanche, depois da Liga"
+      "notes": "4ª revanche, depois da Liga",
+      "versions": null
     },
     {
       "id": "anabel-silver",
@@ -4983,7 +5050,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Ability Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Ability Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "anabel-gold",
@@ -5039,7 +5107,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Ability Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Ability Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "tucker-silver",
@@ -5095,7 +5164,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Tactics Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Tactics Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "tucker-gold",
@@ -5151,7 +5221,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Tactics Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Tactics Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "spenser-silver",
@@ -5207,7 +5278,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Spirits Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Spirits Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "spenser-gold",
@@ -5263,7 +5335,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Spirits Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Spirits Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "greta-silver",
@@ -5319,7 +5392,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Guts Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Guts Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "greta-gold",
@@ -5375,7 +5449,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Guts Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Guts Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "lucy-silver",
@@ -5431,7 +5506,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Luck Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Luck Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "lucy-gold",
@@ -5487,7 +5563,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Luck Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Luck Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "brandon-silver",
@@ -5543,7 +5620,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de prata (Brave Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de prata (Brave Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     },
     {
       "id": "brandon-gold",
@@ -5599,7 +5677,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "Frontier Brain, símbolo de ouro (Brave Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)"
+      "notes": "Frontier Brain, símbolo de ouro (Brave Symbol); nível 50 na categoria Lv. 50, no Open Level acompanha o seu Pokémon mais forte (mínimo 60)",
+      "versions": null
     }
   ]
 }

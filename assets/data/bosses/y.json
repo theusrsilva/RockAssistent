@@ -4,7 +4,8 @@
     "https://github.com/pret/pokeyellow/blob/master/data/trainers/special_moves.asm",
     "https://github.com/pret/pokeyellow/blob/master/scripts/OaksLab.asm",
     "https://github.com/pret/pokeyellow/blob/master/scripts/Route22.asm",
-    "https://www.pokemythology.net/detonados/detonado-pokemon-yellow/"
+    "https://www.pokemythology.net/detonados/detonado-pokemon-yellow/",
+    "https://www.serebii.net/yellow/elitefour.shtml"
   ],
   "items": [
     {
@@ -28,7 +29,8 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-2",
@@ -60,7 +62,8 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "golpes padrão do nível; luta opcional"
+      "notes": "golpes padrão do nível; luta opcional",
+      "versions": null
     },
     {
       "id": "brock",
@@ -92,7 +95,8 @@
       ],
       "level_cap": 12,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Onix 12: Bind (3º), Bide (4º)"
+      "notes": "golpes padrão do nível, com estes fixos: Onix 12: Bind (3º), Bide (4º)",
+      "versions": null
     },
     {
       "id": "jessie-james-1",
@@ -133,7 +137,8 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-3",
@@ -183,7 +188,8 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "misty",
@@ -215,7 +221,8 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Starmie 21: Bubble Beam (4º)"
+      "notes": "golpes padrão do nível, com estes fixos: Starmie 21: Bubble Beam (4º)",
+      "versions": null
     },
     {
       "id": "rival-4",
@@ -265,7 +272,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "lt-surge",
@@ -288,7 +296,8 @@
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Raichu 28: Thunderbolt (1º), Mega Punch (2º), Mega Kick (3º), Growl (4º)"
+      "notes": "golpes padrão do nível, com estes fixos: Raichu 28: Thunderbolt (1º), Mega Punch (2º), Mega Kick (3º), Growl (4º)",
+      "versions": null
     },
     {
       "id": "erika",
@@ -329,7 +338,8 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Tangela 30: Mega Drain (3º); Weepinbell 32: Razor Leaf (1º); Gloom 32: Petal Dance (1º)"
+      "notes": "golpes padrão do nível, com estes fixos: Tangela 30: Mega Drain (3º); Weepinbell 32: Razor Leaf (1º); Gloom 32: Petal Dance (1º)",
+      "versions": null
     },
     {
       "id": "jessie-james-2",
@@ -370,7 +380,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "giovanni-hideout",
@@ -411,7 +422,8 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-5",
@@ -470,7 +482,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Fearow 25, Magnemite 23, Shellder 22, Sandshrew 20, Eevee 25; perdeu no lab (Vaporeon): Fearow 25, Vulpix 23, Magnemite 22, Sandshrew 20, Eevee 25"
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Fearow 25, Magnemite 23, Shellder 22, Sandshrew 20, Eevee 25; perdeu no lab (Vaporeon): Fearow 25, Vulpix 23, Magnemite 22, Sandshrew 20, Eevee 25",
+      "versions": null
     },
     {
       "id": "jessie-james-3",
@@ -511,7 +524,8 @@
       ],
       "level_cap": 27,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-6",
@@ -570,7 +584,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 38, Cloyster 35, Magneton 37, Kadabra 35, Flareon 40; perdeu no lab (Vaporeon): Sandslash 38, Magneton 35, Ninetales 37, Kadabra 35, Vaporeon 40"
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 38, Cloyster 35, Magneton 37, Kadabra 35, Flareon 40; perdeu no lab (Vaporeon): Sandslash 38, Magneton 35, Ninetales 37, Kadabra 35, Vaporeon 40",
+      "versions": null
     },
     {
       "id": "jessie-james-4",
@@ -611,7 +626,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "giovanni-silph",
@@ -661,7 +677,8 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "koga",
@@ -711,7 +728,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Venonat 44: Toxic (1º), Tackle (2º); Venonat 46: Toxic (1º), Supersonic (3º); Venonat 48: Toxic (1º), Double-Edge (2º); Venomoth 50: Leech Life (1º), Double Team (2º), Psychic (3º), Toxic (4º)"
+      "notes": "golpes padrão do nível, com estes fixos: Venonat 44: Toxic (1º), Tackle (2º); Venonat 46: Toxic (1º), Supersonic (3º); Venonat 48: Toxic (1º), Double-Edge (2º); Venomoth 50: Leech Life (1º), Double Team (2º), Psychic (3º), Toxic (4º)",
+      "versions": null
     },
     {
       "id": "sabrina",
@@ -752,7 +770,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Abra 50: Flash (1º); Kadabra 50: Kinesis (1º), Psywave (4º); Alakazam 50: Psywave (1º)"
+      "notes": "golpes padrão do nível, com estes fixos: Abra 50: Flash (1º); Kadabra 50: Kinesis (1º), Psywave (4º); Alakazam 50: Psywave (1º)",
+      "versions": null
     },
     {
       "id": "blaine",
@@ -793,7 +812,8 @@
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Ninetales 48: Flamethrower (1º), Confuse Ray (4º); Arcanine 54: Flamethrower (1º), Fire Blast (2º), Reflect (3º)"
+      "notes": "golpes padrão do nível, com estes fixos: Ninetales 48: Flamethrower (1º), Confuse Ray (4º); Arcanine 54: Flamethrower (1º), Fire Blast (2º), Reflect (3º)",
+      "versions": null
     },
     {
       "id": "giovanni-gym",
@@ -852,7 +872,8 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Dugtrio 50: Fissure (3º); Persian 53: Double Team (2º); Nidoqueen 53: Earthquake (1º), Thunder (3º); Nidoking 55: Earthquake (1º), Leer (2º), Thunder (3º); Rhydon 55: Rock Slide (1º), Earthquake (4º)"
+      "notes": "golpes padrão do nível, com estes fixos: Dugtrio 50: Fissure (3º); Persian 53: Double Team (2º); Nidoqueen 53: Earthquake (1º), Thunder (3º); Nidoking 55: Earthquake (1º), Leer (2º), Thunder (3º); Rhydon 55: Rock Slide (1º), Earthquake (4º)",
+      "versions": null
     },
     {
       "id": "rival-7",
@@ -920,7 +941,8 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 47, Exeggcute 45, Cloyster 45, Magneton 47, Kadabra 50, Flareon 53; perdeu no lab (Vaporeon): Sandslash 47, Exeggcute 45, Magneton 45, Ninetales 47, Kadabra 50, Vaporeon 53"
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 47, Exeggcute 45, Cloyster 45, Magneton 47, Kadabra 50, Flareon 53; perdeu no lab (Vaporeon): Sandslash 47, Exeggcute 45, Magneton 45, Ninetales 47, Kadabra 50, Vaporeon 53",
+      "versions": null
     },
     {
       "id": "lorelei",
@@ -979,7 +1001,8 @@
       ],
       "level_cap": 56,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Dewgong 54: Bubble Beam (1º); Cloyster 53: Ice Beam (3º); Slowbro 54: Psychic (1º), Surf (2º); Jynx 56: Lovely Kiss (3º); Lapras 56: Blizzard (3º)"
+      "notes": "golpes padrão do nível, com estes fixos: Dewgong 54: Bubble Beam (1º); Cloyster 53: Ice Beam (3º); Slowbro 54: Psychic (1º), Surf (2º); Jynx 56: Lovely Kiss (3º); Lapras 56: Blizzard (3º)",
+      "versions": null
     },
     {
       "id": "bruno",
@@ -1038,7 +1061,8 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Onix 53: Rock Slide (1º), Screech (2º), Dig (4º); Hitmonchan 55: Fire Punch (3º), Double Team (4º); Hitmonlee 55: Double Kick (1º), Mega Kick (2º), Double Team (4º); Onix 56: Rock Slide (1º), Screech (2º), Earthquake (4º); Machamp 58: Karate Chop (2º), Strength (3º)"
+      "notes": "golpes padrão do nível, com estes fixos: Onix 53: Rock Slide (1º), Screech (2º), Dig (4º); Hitmonchan 55: Fire Punch (3º), Double Team (4º); Hitmonlee 55: Double Kick (1º), Mega Kick (2º), Double Team (4º); Onix 56: Rock Slide (1º), Screech (2º), Earthquake (4º); Machamp 58: Karate Chop (2º), Strength (3º)",
+      "versions": null
     },
     {
       "id": "agatha",
@@ -1097,7 +1121,8 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Gengar 56: Substitute (2º), Lick (3º), Mega Drain (4º); Golbat 56: Toxic (2º), Leech Life (4º); Haunter 55: Lick (2º); Arbok 58: Wrap (1º); Gengar 60: Psychic (2º)"
+      "notes": "golpes padrão do nível, com estes fixos: Gengar 56: Substitute (2º), Lick (3º), Mega Drain (4º); Golbat 56: Toxic (2º), Leech Life (4º); Haunter 55: Lick (2º); Arbok 58: Wrap (1º); Gengar 60: Psychic (2º)",
+      "versions": null
     },
     {
       "id": "lance",
@@ -1156,10 +1181,11 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Gyarados 58: Dragon Rage (1º); Dragonair 56: Thunder Wave (1º), Thunderbolt (3º); Dragonair 56: Bubble Beam (1º), Wrap (2º), Ice Beam (3º); Aerodactyl 60: Wing Attack (1º), Swift (2º), Fly (3º); Dragonite 62: Blizzard (1º), Fire Blast (2º), Thunder (3º)"
+      "notes": "golpes padrão do nível, com estes fixos: Gyarados 58: Dragon Rage (1º); Dragonair 56: Thunder Wave (1º), Thunderbolt (3º); Dragonair 56: Bubble Beam (1º), Wrap (2º), Ice Beam (3º); Aerodactyl 60: Wing Attack (1º), Swift (2º), Fly (3º); Dragonite 62: Blizzard (1º), Fire Blast (2º), Thunder (3º)",
+      "versions": null
     },
     {
-      "id": "champion",
+      "id": "blue-champion",
       "kind": "champion",
       "name": "Blue",
       "title": "Champion",
@@ -1224,7 +1250,8 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "golpes padrão do nível, com estes fixos: Sandslash 61: Earthquake (3º); Alakazam 59: Kinesis (4º); Exeggutor 61: Leech Seed (4º); Cloyster 61: Ice Beam (1º); Ninetales 63: Confuse Ray (1º), Fire Spin (4º); Jolteon 65: Quick Attack (3º); time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 61, Alakazam 59, Exeggutor 61, Magneton 61, Cloyster 63, Flareon 65; perdeu no lab (Vaporeon): Sandslash 61, Alakazam 59, Exeggutor 61, Ninetales 61, Magneton 63, Vaporeon 65"
+      "notes": "golpes padrão do nível, com estes fixos: Sandslash 61: Earthquake (3º); Alakazam 59: Kinesis (4º); Exeggutor 61: Leech Seed (4º); Cloyster 61: Ice Beam (1º); Ninetales 63: Confuse Ray (1º), Fire Spin (4º); Jolteon 65: Quick Attack (3º); time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 61, Alakazam 59, Exeggutor 61, Magneton 61, Cloyster 63, Flareon 65; perdeu no lab (Vaporeon): Sandslash 61, Alakazam 59, Exeggutor 61, Ninetales 61, Magneton 63, Vaporeon 65",
+      "versions": null
     }
   ]
 }

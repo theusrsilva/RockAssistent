@@ -27,7 +27,8 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5",
+      "versions": null
     },
     {
       "id": "rival-2",
@@ -59,7 +60,8 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 8; com Bulbasaur: Pidgey 9, Charmander 8; luta opcional"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 8; com Bulbasaur: Pidgey 9, Charmander 8; luta opcional",
+      "versions": null
     },
     {
       "id": "brock",
@@ -91,7 +93,8 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Onix tem Bide no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Onix tem Bide no 3º golpe",
+      "versions": null
     },
     {
       "id": "rival-3",
@@ -141,7 +144,8 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 18, Abra 15, Rattata 15, Bulbasaur 17; com Bulbasaur: Pidgeotto 18, Abra 15, Rattata 15, Charmander 17"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 18, Abra 15, Rattata 15, Bulbasaur 17; com Bulbasaur: Pidgeotto 18, Abra 15, Rattata 15, Charmander 17",
+      "versions": null
     },
     {
       "id": "misty",
@@ -173,7 +177,8 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Starmie tem Bubble Beam no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Starmie tem Bubble Beam no 3º golpe",
+      "versions": null
     },
     {
       "id": "rival-4",
@@ -223,7 +228,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20",
+      "versions": null
     },
     {
       "id": "lt-surge",
@@ -264,7 +270,8 @@
       ],
       "level_cap": 24,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Raichu tem Thunderbolt no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Raichu tem Thunderbolt no 3º golpe",
+      "versions": null
     },
     {
       "id": "erika",
@@ -305,7 +312,8 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Vileplume tem Mega Drain no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Vileplume tem Mega Drain no 3º golpe",
+      "versions": null
     },
     {
       "id": "giovanni-hideout",
@@ -346,7 +354,8 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "rival-5",
@@ -405,7 +414,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25",
+      "versions": null
     },
     {
       "id": "rival-6",
@@ -464,7 +474,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40",
+      "versions": null
     },
     {
       "id": "giovanni-silph",
@@ -514,7 +525,8 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "koga",
@@ -564,7 +576,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Weezing tem Toxic no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Weezing tem Toxic no 3º golpe",
+      "versions": null
     },
     {
       "id": "sabrina",
@@ -614,7 +627,8 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Alakazam tem Psywave no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Alakazam tem Psywave no 3º golpe",
+      "versions": null
     },
     {
       "id": "blaine",
@@ -664,7 +678,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Arcanine tem Fire Blast no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Arcanine tem Fire Blast no 3º golpe",
+      "versions": null
     },
     {
       "id": "giovanni-gym",
@@ -723,7 +738,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Rhydon tem Fissure no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Rhydon tem Fissure no 3º golpe",
+      "versions": null
     },
     {
       "id": "rival-7",
@@ -791,7 +807,8 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 47, Alakazam 50, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 47, Alakazam 50, Charizard 53"
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 47, Alakazam 50, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 47, Alakazam 50, Charizard 53",
+      "versions": null
     },
     {
       "id": "lorelei",
@@ -850,7 +867,8 @@
       ],
       "level_cap": 56,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Lapras tem Blizzard no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Lapras tem Blizzard no 3º golpe",
+      "versions": null
     },
     {
       "id": "bruno",
@@ -909,7 +927,8 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Machamp tem Fissure no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Machamp tem Fissure no 3º golpe",
+      "versions": null
     },
     {
       "id": "agatha",
@@ -968,7 +987,8 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Gengar tem Toxic no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Gengar tem Toxic no 3º golpe",
+      "versions": null
     },
     {
       "id": "lance",
@@ -1027,10 +1047,11 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Dragonite tem Barrier no 3º golpe"
+      "notes": "golpes padrão do nível, mas o Dragonite tem Barrier no 3º golpe",
+      "versions": null
     },
     {
-      "id": "champion",
+      "id": "blue-champion",
       "kind": "champion",
       "name": "Blue",
       "title": "Champion",
@@ -1095,7 +1116,8 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Pidgeot tem Sky Attack e o inicial tem um golpe forte no 3º golpe (Blastoise: Blizzard; Venusaur: Mega Drain; Charizard: Fire Blast); time para quem escolheu Charmander; com Squirtle: Pidgeot 61, Alakazam 59, Rhydon 61, Gyarados 61, Arcanine 63, Venusaur 65; com Bulbasaur: Pidgeot 61, Alakazam 59, Rhydon 61, Exeggutor 61, Gyarados 63, Charizard 65"
+      "notes": "golpes padrão do nível, mas o Pidgeot tem Sky Attack e o inicial tem um golpe forte no 3º golpe (Blastoise: Blizzard; Venusaur: Mega Drain; Charizard: Fire Blast); time para quem escolheu Charmander; com Squirtle: Pidgeot 61, Alakazam 59, Rhydon 61, Gyarados 61, Arcanine 63, Venusaur 65; com Bulbasaur: Pidgeot 61, Alakazam 59, Rhydon 61, Exeggutor 61, Gyarados 63, Charizard 65",
+      "versions": null
     }
   ]
 }

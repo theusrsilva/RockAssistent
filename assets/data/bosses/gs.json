@@ -28,7 +28,8 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Cyndaquil 5; com Totodile: Chikorita 5; pode perder: a história continua"
+      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Cyndaquil 5; com Totodile: Chikorita 5; pode perder: a história continua",
+      "versions": null
     },
     {
       "id": "sage-li",
@@ -69,7 +70,8 @@
       ],
       "level_cap": 10,
       "verified": true,
-      "notes": "golpes padrão do nível"
+      "notes": "golpes padrão do nível",
+      "versions": null
     },
     {
       "id": "falkner",
@@ -108,7 +110,8 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "bugsy",
@@ -161,7 +164,8 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-azalea",
@@ -202,7 +206,8 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Gastly 12, Zubat 14, Quilava 16; com Totodile: Gastly 12, Zubat 14, Bayleef 16"
+      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Gastly 12, Zubat 14, Quilava 16; com Totodile: Gastly 12, Zubat 14, Bayleef 16",
+      "versions": null
     },
     {
       "id": "whitney",
@@ -244,7 +249,8 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-burned-tower",
@@ -314,7 +320,8 @@
       ],
       "level_cap": 22,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Haunter 20, Magnemite 18, Zubat 20, Quilava 22; com Totodile: Haunter 20, Magnemite 18, Zubat 20, Bayleef 22"
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Haunter 20, Magnemite 18, Zubat 20, Quilava 22; com Totodile: Haunter 20, Magnemite 18, Zubat 20, Bayleef 22",
+      "versions": null
     },
     {
       "id": "morty",
@@ -384,7 +391,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "chuck",
@@ -426,7 +434,8 @@
       ],
       "level_cap": 30,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "jasmine",
@@ -482,7 +491,8 @@
       ],
       "level_cap": 35,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "karate-king-kiyo",
@@ -514,7 +524,8 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "golpes padrão do nível; luta opcional"
+      "notes": "golpes padrão do nível; luta opcional",
+      "versions": null
     },
     {
       "id": "executive-hideout-b3f",
@@ -555,7 +566,8 @@
       ],
       "level_cap": 24,
       "verified": true,
-      "notes": "golpes padrão do nível; em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Petrel"
+      "notes": "golpes padrão do nível; em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Petrel",
+      "versions": null
     },
     {
       "id": "executive-hideout-b2f",
@@ -610,7 +622,8 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Ariana; batalha ao lado do Lance"
+      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Ariana; batalha ao lado do Lance",
+      "versions": null
     },
     {
       "id": "pryce",
@@ -666,7 +679,8 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "executive-radio-tower-4f",
@@ -694,7 +708,8 @@
       ],
       "level_cap": 36,
       "verified": true,
-      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Proton"
+      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Proton",
+      "versions": null
     },
     {
       "id": "executive-radio-tower-5f",
@@ -792,7 +807,8 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Petrel"
+      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Petrel",
+      "versions": null
     },
     {
       "id": "rival-underground",
@@ -876,7 +892,8 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Quilava 32; com Totodile: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Meganium 32"
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Quilava 32; com Totodile: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Meganium 32",
+      "versions": null
     },
     {
       "id": "executive-radio-tower-5f-f",
@@ -932,7 +949,8 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Ariana"
+      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Ariana",
+      "versions": null
     },
     {
       "id": "executive-radio-tower-director",
@@ -988,7 +1006,8 @@
       ],
       "level_cap": 35,
       "verified": true,
-      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Archer"
+      "notes": "em Gold/Silver/Crystal o nome é só \"Executive\"; no HeartGold/SoulSilver é Archer",
+      "versions": null
     },
     {
       "id": "clair",
@@ -1058,7 +1077,8 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-victory-road",
@@ -1156,7 +1176,8 @@
       ],
       "level_cap": 38,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Typhlosion 38; com Totodile: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Meganium 38"
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Typhlosion 38; com Totodile: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Meganium 38",
+      "versions": null
     },
     {
       "id": "will",
@@ -1240,7 +1261,8 @@
       ],
       "level_cap": 42,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "koga",
@@ -1324,7 +1346,8 @@
       ],
       "level_cap": 44,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "bruno",
@@ -1408,7 +1431,8 @@
       ],
       "level_cap": 46,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "karen",
@@ -1492,7 +1516,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "lance",
@@ -1590,7 +1615,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "lt-surge",
@@ -1674,7 +1700,8 @@
       ],
       "level_cap": 46,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "sabrina",
@@ -1730,7 +1757,8 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "erika",
@@ -1800,7 +1828,8 @@
       ],
       "level_cap": 46,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "janine",
@@ -1884,7 +1913,8 @@
       ],
       "level_cap": 39,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "misty",
@@ -1954,7 +1984,8 @@
       ],
       "level_cap": 47,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "brock",
@@ -2038,7 +2069,8 @@
       ],
       "level_cap": 44,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-mt-moon",
@@ -2136,7 +2168,8 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Typhlosion 45; com Totodile: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Meganium 45"
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Typhlosion 45; com Totodile: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Meganium 45",
+      "versions": null
     },
     {
       "id": "blaine",
@@ -2192,7 +2225,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "blue",
@@ -2290,7 +2324,8 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": null
+      "notes": null,
+      "versions": null
     },
     {
       "id": "rival-indigo-plateau",
@@ -2388,7 +2423,8 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Typhlosion 50; com Totodile: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Meganium 50; revanche: só às segundas e quartas, uma vez por dia, depois da luta no Mt. Moon"
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Typhlosion 50; com Totodile: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Meganium 50; revanche: só às segundas e quartas, uma vez por dia, depois da luta no Mt. Moon",
+      "versions": null
     },
     {
       "id": "red",
@@ -2486,7 +2522,8 @@
       ],
       "level_cap": 81,
       "verified": true,
-      "notes": "luta final do jogo, com as 16 insígnias"
+      "notes": "luta final do jogo, com as 16 insígnias",
+      "versions": null
     }
   ]
 }

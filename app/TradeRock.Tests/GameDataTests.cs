@@ -76,7 +76,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
                 { {{Source}}, "items": [ { "id": "brock", "kind": "gym", "name": "Brock", "title": null, "location": null,
                   "order": 1, "badge": "boulder", "party": [ { "species": 74, "form": 0, "level": 12,
                   "moves": ["tackle", "not-a-move"], "ability": null, "item": null, "tera_type": null } ],
-                  "level_cap": 14, "verified": true, "notes": null } ] }
+                  "level_cap": 14, "verified": true, "notes": null, "versions": ["leafgreen", "ruby"] } ] }
                 """,
             ["areas/frlg.json"] = $$"""
                 { {{Source}}, "items": [ { "id": "pewter", "name": "Pewter", "kind": "city", "order": 1,
@@ -100,6 +100,8 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Contains("pewter", ex.Message);     // nó que não existe no mapa de Kanto
         Assert.Contains("nowhere", ex.Message);    // área que não existe
         Assert.Contains("teleport", ex.Message);   // método fora da lista
+        Assert.Contains("versão ruby", ex.Message); // versão de outro jogo no chefe
+        Assert.DoesNotContain("versão leafgreen", ex.Message);
         Assert.DoesNotContain("t1", ex.Message);   // o treinador está certo
 
         // Sem o dex (moveExists nulo), os golpes não são conferidos.
@@ -110,6 +112,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     // Gen 1–3: os chefes da história (até o campeão) têm 8 líderes com insígnia, 4 da Elite 4 e 1 campeão; o resto
     // (Kanto no GSC, revanches, Frontier Brains) vem depois, com Order maior. "drops" lista as quedas de nível
     // entre ginásios seguidos que o jogo tem de verdade (no GSC, a Jasmine vem antes do Pryce e tem time mais forte).
+    // drops: "idA>idB" separados por vírgula, na ordem de Order; vazio = o cap nunca cai.
     [Theory]
     [InlineData("rb", "")]
     [InlineData("y", "")]
