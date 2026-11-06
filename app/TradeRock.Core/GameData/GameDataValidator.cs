@@ -1,4 +1,5 @@
 using TradeRock.Core.Games;
+using TradeRock.Core.Hunts;
 
 namespace TradeRock.Core.GameData;
 

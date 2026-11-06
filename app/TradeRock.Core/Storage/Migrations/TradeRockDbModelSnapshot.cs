@@ -84,6 +84,58 @@ namespace TradeRock.Core.Storage.Migrations
                     b.ToTable("Settings");
                 });
 
+            modelBuilder.Entity("TradeRock.Core.Storage.ShinyHunt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("ElapsedSeconds")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long?>("EndedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Form")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Found")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("GameKey")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MethodId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ModifiersJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Species")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("StartedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "StartedAt");
+
+                    b.ToTable("Hunts");
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.StoredPokemon", b =>
                 {
                     b.Property<Guid>("Id")

@@ -168,6 +168,34 @@ public sealed class SaveAttachment : IOwned
     public DateTimeOffset AttachedAt { get; set; }
 }
 
+/// <summary>Hunt de shiny (Contador Hunt): espécie, jogo, método, modificadores, contador e cronômetro.</summary>
+public sealed class ShinyHunt : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public int Species { get; set; }
+    public int Form { get; set; }
+
+    /// <summary>Chave do jogo (<c>GameVersions</c>: sv, bdsp, frlg...).</summary>
+    public required string GameKey { get; set; }
+
+    /// <summary>Id do método em <c>shiny-methods.json</c>.</summary>
+    public required string MethodId { get; set; }
+
+    /// <summary>Modificadores em JSON: id → "true"/"false" (toggle) ou o número em texto (steps).</summary>
+    public required string ModifiersJson { get; set; }
+
+    public int Count { get; set; }
+    public long ElapsedSeconds { get; set; }
+    public DateTimeOffset StartedAt { get; set; }
+
+    /// <summary>Quando terminou (achou ou desistiu); null = em andamento.</summary>
+    public DateTimeOffset? EndedAt { get; set; }
+
+    public bool Found { get; set; }
+    public string? Notes { get; set; }
+}
+
 /// <summary>Configuração chave → JSON.</summary>
 public sealed class SettingEntry
 {

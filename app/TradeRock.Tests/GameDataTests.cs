@@ -11,6 +11,7 @@ using TradeRock.Core;
 using TradeRock.Core.Dex;
 using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
+using TradeRock.Core.Hunts;
 
 namespace TradeRock.Tests;
 

@@ -51,6 +51,7 @@ public static class ServiceSetup
         services.AddSingleton(new TradeRock.Core.Dex.DexDatabase(paths));
         services.AddSingleton<TradeRock.Core.Dex.DexService>();
         services.AddSingleton<TradeRock.Core.GameData.GameDataStore>();
+        services.AddSingleton<TradeRock.Core.Hunts.HuntStore>();
 
         // Worker privilegiado (placa Wi-Fi, só Linux). Em desenvolvimento, a instalação dev
         // (scripts/install-worker.sh dev) vem antes da release.

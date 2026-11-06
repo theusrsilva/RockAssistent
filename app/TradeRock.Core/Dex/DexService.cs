@@ -302,6 +302,24 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult(result);
     }
 
+    /// <summary>
+    /// A espécie sai de ovo no jogo (direto ou chocando a forma base e evoluindo)? Melhor esforço, como o Egg de
+    /// <see cref="AvailabilityAsync"/>: o jogo tem criação, a espécie existe nele e alguém da família (a partir da
+    /// forma base, incluindo ela) existe no jogo e não é do grupo "no-eggs". Lendários sem família ficam de fora.
+    /// </summary>
+    public bool CanHatchIn(int speciesId, string gameKey)
+    {
+        var data = Data;
+        var group = GameVersions.ByKey(gameKey);
+        var game = data.Game(gameKey);
+        if (group.Generation < 2 || NoBreeding.Contains(gameKey) || !data.Species.TryGetValue(speciesId, out var row)
+            || !game.Exists.Contains(speciesId))
+            return false;
+        while (row.EvolvesFrom is { } from && data.Species.TryGetValue(from, out var parent))
+            row = parent;
+        return data.Descendants(row.Id).Prepend(row.Id).Any(d => game.Exists.Contains(d) && data.Breedable.Contains(d));
+    }
+
     // ---- partes da ficha ----
 
     private static List<SpeciesForm> Forms(SqliteConnection c, Catalog data, SpeciesRow row, GameInfo game)

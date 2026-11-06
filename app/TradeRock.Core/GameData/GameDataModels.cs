@@ -8,7 +8,7 @@ namespace TradeRock.Core.GameData;
 /// <para><c>Odds</c> de um modificador ou degrau é a odd do método só com ele (o valor para mostrar sozinho).</para>
 /// <para>Para combinar modificadores, use as rolagens: com <see cref="BaseRolls"/> e <see cref="RollOdds"/>
 /// preenchidos, a odd final é <c>1 / (1 - (1 - 1/RollOdds)^(BaseRolls + Σ Rolls))</c>, com a soma das
-/// <c>Rolls</c> dos toggles ligados e do degrau escolhido de cada <c>steps</c> (<see cref="ShinyOdds.FromRolls"/>).</para>
+/// <c>Rolls</c> dos toggles ligados e do degrau escolhido de cada <c>steps</c> (<see cref="Hunts.ShinyOdds.FromRolls"/>).</para>
 /// <para>Método com <see cref="BaseRolls"/> nulo não segue rolagens (Ovo Estranho, Dynamax Adventure, Ultra
 /// Wormhole, Tera Raid, Poké Radar, DexNav...): mostre a <c>Odds</c> do modificador ou degrau como está e
 /// <b>nunca combine</b>. Num método com rolagens, todo modificador e degrau tem <c>Rolls</c>.</para>
@@ -45,13 +45,6 @@ public sealed record ShinyModifier(
 /// <see cref="Rolls"/>: rolagens a mais sobre a base.
 /// </summary>
 public sealed record ShinyStep(string Label, int Min, int? Max, double Odds, int? Rolls);
-
-/// <summary>Regra de combinação das odds por rolagens.</summary>
-public static class ShinyOdds
-{
-    /// <summary>Denominador da chance de pelo menos uma de <paramref name="rolls"/> rolagens de 1/<paramref name="rollOdds"/>.</summary>
-    public static double FromRolls(double rollOdds, int rolls) => 1 / (1 - Math.Pow(1 - 1 / rollOdds, rolls));
-}
 
 /// <summary>Batalha importante (líder, rival, equipe do mal, Elite 4, campeão).</summary>
 /// <remarks><see cref="Versions"/>: versões do PokeAPI em que a batalha existe (ex.: <c>["ruby"]</c>); nulo = todas as do jogo.</remarks>

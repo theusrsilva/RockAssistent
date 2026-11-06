@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TradeRock.Core.Storage;
 
 /// <summary>
-/// Banco do app. Pokémon, caixas, tags, histórico e treinadores salvos são de um dono
+/// Banco do app. Pokémon, caixas, tags, histórico, treinadores salvos, anexos e hunts são de um dono
 /// (<see cref="OwnerScope"/>): as consultas só enxergam os do dono atual e o que é criado vai para ele.
 /// </summary>
 public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbContext(options)
@@ -23,6 +23,7 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<PokemonTag> PokemonTags => Set<PokemonTag>();
     public DbSet<UserAccount> Users => Set<UserAccount>();
     public DbSet<SaveAttachment> SaveAttachments => Set<SaveAttachment>();
+    public DbSet<ShinyHunt> Hunts => Set<ShinyHunt>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -120,6 +121,12 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
             e.HasIndex(a => new { a.OwnerId, a.SavePath });
             // Apagar o Pokémon do cofre de vez desfaz o anexo.
             e.HasOne<StoredPokemon>().WithMany().HasForeignKey(a => a.PokemonId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<ShinyHunt>(e =>
+        {
+            e.HasQueryFilter(h => h.OwnerId == Owner);
+            e.HasIndex(h => new { h.OwnerId, h.StartedAt });
         });
 
         model.Entity<SettingEntry>(e => e.HasKey(s => s.Key));
