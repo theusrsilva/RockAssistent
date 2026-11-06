@@ -79,7 +79,8 @@ public sealed class DexService(DexDatabase db)
 
     /// <summary>
     /// Encontros de um local do PokeAPI (<c>locations.id</c>, todas as sub-áreas) nas versões do jogo, juntados por
-    /// versão, espécie, forma e método (níveis de/até, chance somada). Local sem encontros = lista vazia.
+    /// versão, espécie, forma e método (níveis de/até; chance = a maior entre as sub-áreas, somada dentro de cada uma e
+    /// limitada a 100). Local sem encontros = lista vazia.
     /// </summary>
     public Task<IReadOnlyList<LocationEncounter>> LocationEncountersAsync(int locationId, string gameKey, CancellationToken ct)
     {
@@ -89,15 +90,22 @@ public sealed class DexService(DexDatabase db)
         using var cmd = Command(c, $"""
             WITH forms AS (
                 SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
-                FROM pokemon)
-            SELECT f.species_id, f.form, v.identifier, e.method, min(e.min_level), max(e.max_level), sum(coalesce(e.rarity, 0))
-            FROM encounters e
-            JOIN forms f ON f.id = e.pokemon_id
-            JOIN versions v ON v.id = e.version_id
-            JOIN location_areas a ON a.id = e.location_area_id
-            WHERE a.location_id = $l AND e.version_id IN ({game.VersionIdList})
-            GROUP BY e.version_id, f.species_id, f.form, e.method
-            ORDER BY f.species_id, f.form, e.version_id, e.method
+                FROM pokemon),
+            -- A raridade do PokeAPI é por sub-área: soma dentro de cada uma e fica com a maior (somar entre sub-áreas passa de 100%).
+            -- Linhas com condições diferentes (Moltres estático: 2 × 100) também passam de 100 na soma: limita em 100.
+            per_area AS (
+                SELECT f.species_id, f.form, e.version_id, e.method, e.location_area_id,
+                       min(e.min_level) AS min_level, max(e.max_level) AS max_level, min(sum(coalesce(e.rarity, 0)), 100) AS chance
+                FROM encounters e
+                JOIN forms f ON f.id = e.pokemon_id
+                JOIN location_areas a ON a.id = e.location_area_id
+                WHERE a.location_id = $l AND e.version_id IN ({game.VersionIdList})
+                GROUP BY f.species_id, f.form, e.version_id, e.method, e.location_area_id)
+            SELECT p.species_id, p.form, v.identifier, p.method, min(p.min_level), max(p.max_level), max(p.chance)
+            FROM per_area p
+            JOIN versions v ON v.id = p.version_id
+            GROUP BY p.version_id, p.species_id, p.form, p.method
+            ORDER BY p.species_id, p.form, p.version_id, p.method
             """, ("$l", locationId));
         using var r = cmd.ExecuteReader();
         var result = new List<LocationEncounter>();
@@ -107,29 +115,36 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult<IReadOnlyList<LocationEncounter>>(result);
     }
 
-    /// <summary>TMs, HMs e TRs do jogo em ordem de número. Jogo sem máquinas no PokeAPI (Arceus, Z-A) = lista vazia.</summary>
+    /// <summary>
+    /// TMs, HMs e TRs do jogo em ordem de número, com os das DLCs (<see cref="ExtraGroups"/>): número que só existe no grupo
+    /// da DLC sai com <c>Dlc = true</c> (Z-A: TM108–TM160 do Mega Dimension); o mesmo número no jogo base vale mais.
+    /// Jogo sem máquinas no PokeAPI (Arceus) = lista vazia; o BDSP está incompleto no PokeAPI (17 linhas).
+    /// </summary>
     public Task<IReadOnlyList<MachineInfo>> MachinesAsync(string gameKey, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
         var data = Data;
         var game = data.Game(gameKey);
         using var c = db.Open();
-        using var cmd = Command(c, """
-            SELECT mc.machine_number, coalesce(i.name_en, i.identifier), m.id, m.identifier, coalesce(m.name_en, m.identifier),
-                   m.type_id, m.power, m.pp, m.accuracy, m.damage_class
-            FROM machines mc JOIN items i ON i.id = mc.item_id JOIN moves m ON m.id = mc.move_id
-            WHERE mc.version_group_id = $vg ORDER BY mc.machine_number
-            """, ("$vg", game.MainGroupId));
-        using var r = cmd.ExecuteReader();
-        var result = new List<MachineInfo>();
-        while (r.Read())
+        var result = new SortedDictionary<int, MachineInfo>();
+        foreach (var group in game.GroupIds)
         {
-            var moveId = r.GetInt32(2);
-            var stats = data.MoveAt(moveId, game.Order, Int(r, 5) ?? 0, Int(r, 6), Int(r, 7), Int(r, 8));
-            result.Add(new MachineInfo(Int(r, 0) ?? 0, r.GetString(1), moveId, r.GetString(3), r.GetString(4), data.TypeName(stats.Type),
-                Str(r, 9), stats.Power, stats.Accuracy, stats.Pp));
+            using var cmd = Command(c, """
+                SELECT mc.machine_number, coalesce(i.name_en, i.identifier), m.id, m.identifier, coalesce(m.name_en, m.identifier),
+                       m.type_id, m.power, m.pp, m.accuracy, m.damage_class
+                FROM machines mc JOIN items i ON i.id = mc.item_id JOIN moves m ON m.id = mc.move_id
+                WHERE mc.version_group_id = $vg ORDER BY mc.machine_number
+                """, ("$vg", group));
+            using var r = cmd.ExecuteReader();
+            while (r.Read())
+            {
+                var moveId = r.GetInt32(2);
+                var stats = data.MoveAt(moveId, game.Order, Int(r, 5) ?? 0, Int(r, 6), Int(r, 7), Int(r, 8));
+                result.TryAdd(Int(r, 0) ?? 0, new MachineInfo(Int(r, 0) ?? 0, r.GetString(1), moveId, r.GetString(3), r.GetString(4),
+                    data.TypeName(stats.Type), Str(r, 9), stats.Power, stats.Accuracy, stats.Pp, group != game.MainGroupId));
+            }
         }
-        return Task.FromResult<IReadOnlyList<MachineInfo>>(result);
+        return Task.FromResult<IReadOnlyList<MachineInfo>>([.. result.Values]);
     }
 
     public Task<IReadOnlyList<SpeciesSummary>> ListAsync(DexQuery q, CancellationToken ct)
@@ -727,7 +742,7 @@ public sealed class DexService(DexDatabase db)
         int? National, string[] Search);
 
     private sealed record GameInfo(string Key, int Generation, int MainGroupId, int Order,
-        IReadOnlyList<(int Id, string Identifier)> Versions, HashSet<int> Exists, HashSet<int> Encounters)
+        IReadOnlyList<(int Id, string Identifier)> Versions, HashSet<int> Exists, HashSet<int> Encounters, IReadOnlyList<int> GroupIds)
     {
         public string VersionIdList { get; } = string.Join(",", Versions.Select(v => v.Id));
     }
@@ -959,7 +974,7 @@ public sealed class DexService(DexDatabase db)
                     .ToHashSet();
                 encounters.IntersectWith(exists);
                 games[g.Key] = new GameInfo(g.Key, g.Generation, groupIds[0], groups[g.PokeApiVersionGroup].Order, gameVersions,
-                    exists, encounters);
+                    exists, encounters, groupIds);
             }
 
             var breedable = new HashSet<int>();

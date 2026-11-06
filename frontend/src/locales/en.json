@@ -1969,7 +1969,8 @@
       "allVersions": "All",
       "level": "Lv. {{level}}",
       "levels": "Lv. {{min}}–{{max}}",
-      "alpha": "Alpha"
+      "alpha": "Alpha",
+      "dlc": "DLC"
     },
     "col": {
       "boss": "Boss",

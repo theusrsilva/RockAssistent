@@ -18,14 +18,22 @@ REQUIRED_GAME_SECTIONS = ("overview", "walkthrough", "bosses", "tms", "exclusive
 DIRECTIVE = re.compile(r"^[ \t]*:::([A-Za-z0-9_][\w-]*)(?:[ \t]+(.*?))?[ \t]*$")
 FENCE = re.compile(r"^[ \t]*(```|~~~)")
 COMMENT = re.compile(r"<!--.*?-->", re.S)
+# GameVersions tem 22 jogos: menos que isso quer dizer que a leitura de gameVersions.ts quebrou (arquivo reformatado).
+MIN_GAMES = 22
+# Jogos com TMs faltando no PokeAPI: :::tms sai vazio (pla) ou incompleto (bdsp, 17 de 100). Aviso, não erro.
+TMS_INCOMPLETE = {"bdsp": "o PokeAPI só tem 17 das máquinas do BDSP: escreva a lista em markdown",
+                  "pla": "o Legends: Arceus não tem TMs: a tabela sai vazia"}
 
 
 class Data:
     """Jogos (gameVersions.ts), ids dos chefes e das áreas (assets/data)."""
 
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, min_games: int):
         source = (root / "frontend/src/lib/gameVersions.ts").read_text(encoding="utf-8")
         self.games = re.findall(r"^\s*g\('([a-z0-9]+)'", source, re.M)
+        if len(self.games) < min_games:
+            raise ValueError(f"gameVersions.ts: li {len(self.games)} jogos, esperava pelo menos {min_games}; "
+                             "o formato mudou? Ajuste a expressão em check-guides.py")
         self.root = root
 
     def ids(self, kind: str, game: str) -> set[str] | None:
@@ -124,9 +132,14 @@ def shape(index) -> dict:
                 for g in index[s] if isinstance(g, dict)] for s in SECTIONS}
 
 
-def check(root: Path, strict: bool = False) -> list[str]:
+def check(root: Path, strict: bool = False, min_games: int = MIN_GAMES, warnings: list[str] | None = None) -> list[str]:
+    """Erros encontrados; os avisos (que não reprovam) vão para <warnings>."""
     errors: list[str] = []
-    data = Data(root)
+    warnings = [] if warnings is None else warnings
+    try:
+        data = Data(root, min_games)
+    except ValueError as e:
+        return [str(e)]
     specs = directive_specs(data)
     indexes = {}
     for lang in LANGS:
@@ -163,6 +176,8 @@ def check(root: Path, strict: bool = False) -> list[str]:
                     errors.append(f"{where}: espera de {low} a {high} argumentos, veio {len(args)}")
                 elif (err := validate(args)) is not None:
                     errors.append(f"{where}: {err}")
+                elif name == "tms" and args[0] in TMS_INCOMPLETE:
+                    warnings.append(f"{where}: {TMS_INCOMPLETE[args[0]]}")
     if len(indexes) == len(LANGS) and shape(indexes["pt-BR"]) != shape(indexes["en"]):
         errors.append("index.json: guias, seções ou arquivos diferentes entre pt-BR e en")
     if strict:
@@ -187,10 +202,13 @@ def main(argv=None) -> int:
     parser.add_argument("--strict", action="store_true", help="exige todos os jogos com as 9 seções")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent)
     args = parser.parse_args(argv)
-    errors = check(args.root, args.strict)
+    warnings: list[str] = []
+    errors = check(args.root, args.strict, warnings=warnings)
+    for w in warnings:
+        print(f"aviso: {w}", file=sys.stderr)
     for e in errors:
         print(e, file=sys.stderr)
-    print(f"check-guides: {len(errors)} erro(s)" + (" (--strict)" if args.strict else ""))
+    print(f"check-guides: {len(errors)} erro(s), {len(warnings)} aviso(s)" + (" (--strict)" if args.strict else ""))
     return 1 if errors else 0
 
 

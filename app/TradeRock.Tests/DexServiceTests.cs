@@ -59,6 +59,31 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         var swsh = await Dex.MachinesAsync("swsh", Ct);
         Assert.Contains(swsh, m => m.Machine == "TR99" && m.MoveName == "Body Press");
         Assert.Empty(await Dex.MachinesAsync("pla", Ct));
+
+        // Z-A: 107 do jogo base + 53 do Mega Dimension (DLC), sem números repetidos.
+        var za = await Dex.MachinesAsync("za", Ct);
+        Assert.Equal(160, za.Count);
+        Assert.Contains(za, m => m.Machine == "TM01" && m.MoveIdentifier == "headbutt" && !m.Dlc);
+        Assert.Contains(za, m => m.Machine == "TM108" && m.Dlc);
+        Assert.Equal(53, za.Count(m => m.Dlc));
+        // SV: as das DLCs já estão no grupo principal.
+        Assert.DoesNotContain(await Dex.MachinesAsync("sv", Ct), m => m.Dlc);
+    }
+
+    [Fact]
+    public async Task Chance_do_local_nao_soma_entre_sub_areas()
+    {
+        // Mt. Ember (500), Pokémon Tower (160) e Safari Zone (162) têm várias sub-áreas no PokeAPI.
+        foreach (var location in new[] { 500, 160, 162 })
+        {
+            var rows = await Dex.LocationEncountersAsync(location, "frlg", Ct);
+            Assert.NotEmpty(rows);
+            Assert.All(rows, e => Assert.InRange(e.Chance, 0, 100));
+        }
+        var ember = await Dex.LocationEncountersAsync(500, "frlg", Ct);
+        Assert.Contains(ember, e => e.Species == 74 && e.Method == "rock-smash" && e.Chance <= 100);
+        var tower = await Dex.LocationEncountersAsync(160, "frlg", Ct);
+        Assert.Contains(tower, e => e.Species == 92 && e.Chance is > 0 and <= 100);
     }
 
     [Fact]

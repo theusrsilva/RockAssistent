@@ -1,8 +1,9 @@
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
+import { Link, Navigate, useLocation, useParams } from 'react-router'
 import { Icon, PageTitle } from '../../components/ui'
 import { GAME_VERSIONS } from '../../lib/gameVersions'
-import { GUIDE_SECTIONS, guideIndex, type GuideEntry, type GuideSection } from '../../lib/guides'
+import { GUIDE_SECTIONS, guideIndex, isGuideSection, type GuideEntry, type GuideSection } from '../../lib/guides'
 
 const icons: Record<GuideSection, string> = { games: 'sports_esports', mechanics: 'settings_suggest', vgc: 'trophy', mythology: 'auto_stories' }
 
@@ -29,10 +30,20 @@ function GuideCard({ section, guide }: { section: GuideSection; guide: GuideEntr
   )
 }
 
+/** /guias/<seção> sem guia: volta ao índice, na seção (ou no topo, se a seção não existe). */
+export function GuideSectionRedirect() {
+  const { section } = useParams()
+  return <Navigate to={isGuideSection(section) ? `/guias#${section}` : '/guias'} replace />
+}
+
 /** Índice dos guias: Jogos, Mecânicas, VGC e Mitologia, cada um com os seus cartões. */
 export default function GuidesPage() {
   const { t, i18n } = useTranslation()
   const index = guideIndex(i18n.language)
+  const { hash } = useLocation()
+  useEffect(() => {
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView?.()
+  }, [hash])
   return (
     <div className="flex flex-col gap-6">
       <div>

@@ -13,8 +13,10 @@ spec.loader.exec_module(check_guides)
 GAME_VERSIONS = """export const GAME_VERSIONS = [
   g('rb', 'Red / Blue', 1, 'kanto', 'red-blue', ['red', 'blue'], null, false, false),
   g('frlg', 'FireRed / LeafGreen', 3, 'kanto', 'firered-leafgreen', ['firered', 'leafgreen'], 'frlg', false, false),
+  g('bdsp', 'Brilliant Diamond / Shining Pearl', 8, 'sinnoh', 'brilliant-diamond-shining-pearl', ['brilliant-diamond', 'shining-pearl'], 'bdsp', true, true),
 ]
 """
+GAMES = ("rb", "frlg", "bdsp")
 
 
 def guide(key, *pages):
@@ -42,8 +44,8 @@ class CheckGuidesTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding="utf-8")
 
-    def errors(self, strict=False):
-        return check_guides.check(self.root, strict)
+    def errors(self, strict=False, warnings=None):
+        return check_guides.check(self.root, strict, min_games=len(GAMES), warnings=warnings)
 
     def test_indice_valido(self):
         self.assertEqual(self.errors(), [])
@@ -90,7 +92,7 @@ class CheckGuidesTests(unittest.TestCase):
 
     def test_strict_completo_passa(self):
         index = {
-            "games": [guide(g, *check_guides.REQUIRED_GAME_SECTIONS) for g in ("rb", "frlg")],
+            "games": [guide(g, *check_guides.REQUIRED_GAME_SECTIONS) for g in GAMES],
             **{s: [{"key": "x", "title": "X", "sections": [{"id": "x", "title": "X", "file": f"{s}/x.md"}]}]
                for s in ("mechanics", "vgc", "mythology")},
         }
@@ -102,6 +104,22 @@ class CheckGuidesTests(unittest.TestCase):
             for s in ("mechanics", "vgc", "mythology"):
                 self.write(f"content/{lang}/guides/{s}/x.md", "- fato")
         self.assertEqual(self.errors(strict=True), [])
+
+    def test_tms_incompleto_e_aviso(self):
+        for lang in check_guides.LANGS:
+            self.write(f"content/{lang}/guides/games/frlg/overview.md", ":::tms bdsp\n:::tms frlg\n")
+        warnings = []
+        self.assertEqual(self.errors(warnings=warnings), [])
+        self.assertEqual(len(warnings), 2)  # um por idioma, só o bdsp
+        self.assertTrue(all(":::tms" in w and "17" in w for w in warnings), warnings)
+
+    def test_game_versions_ilegivel_e_erro(self):
+        # Menos jogos que o mínimo: erro explícito (o --strict não passa à toa).
+        self.assertIn("li 3 jogos", check_guides.check(self.root, strict=True, min_games=22)[0])
+        self.write("frontend/src/lib/gameVersions.ts", "export const GAME_VERSIONS = [g(\n  'rb')]\n")
+        errors = self.errors(strict=True)
+        self.assertEqual(len(errors), 1)
+        self.assertIn("li 0 jogos", errors[0])
 
     def test_conteudo_do_repositorio_passa(self):
         repo = Path(__file__).resolve().parent.parent.parent

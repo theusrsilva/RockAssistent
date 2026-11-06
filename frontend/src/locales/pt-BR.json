@@ -1969,7 +1969,8 @@
       "allVersions": "Todas",
       "level": "Nv. {{level}}",
       "levels": "Nv. {{min}}–{{max}}",
-      "alpha": "Alfa"
+      "alpha": "Alfa",
+      "dlc": "DLC"
     },
     "col": {
       "boss": "Chefe",

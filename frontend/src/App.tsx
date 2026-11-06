@@ -12,7 +12,7 @@ import AbilityPage from './pages/dex/AbilityPage'
 import ItemPage from './pages/dex/ItemPage'
 import TypeChartPage from './pages/dex/TypeChartPage'
 import GiftsPage from './pages/gifts/GiftsPage'
-import GuidesPage from './pages/guides/GuidesPage'
+import GuidesPage, { GuideSectionRedirect } from './pages/guides/GuidesPage'
 import HuntPage from './pages/hunt/HuntPage'
 import HuntCounter from './pages/hunt/HuntCounter'
 import NewHuntWizard from './pages/hunt/NewHuntWizard'
@@ -48,6 +48,7 @@ export default function App() {
                 <Route path="/pokedex/item/:id" element={<ItemPage />} />
                 <Route path="/pokedex/tipos" element={<TypeChartPage />} />
                 <Route path="/guias" element={<GuidesPage />} />
+                <Route path="/guias/:section" element={<GuideSectionRedirect />} />
                 <Route
                   path="/guias/:section/:slug/:page?"
                   element={
