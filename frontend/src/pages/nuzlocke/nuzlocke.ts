@@ -204,7 +204,7 @@ export function formatRules(t: TFunction, rules: NuzlockeRules): string[] {
 export type AreaState = 'none' | 'visited' | 'caught' | 'dead' | 'missed'
 
 /** Peso de cada estado: numa área com mais de um registro, vale o maior. */
-const statePriority: Record<AreaState, number> = { none: 0, visited: 1, missed: 2, caught: 3, dead: 4 }
+export const statePriority: Record<AreaState, number> = { none: 0, visited: 1, missed: 2, caught: 3, dead: 4 }
 
 /**
  * Estado de cada área para o mapa (Tarefa 24): visitada, capturado (equipe ou caixa), morto (cemitério) ou perdido

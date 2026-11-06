@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { AreaState, GameArea } from './nuzlocke'
-import { MAP_STATES, SCALE, graphForGame, nodeAreas, shortLabel, stateClass, viewBoxFor, type MapGraph, type MapNode } from './regionMap'
+import { MAP_STATES, SCALE, currentNodeId, graphForGame, nodeAreas, nodeState, shortLabel, stateClass, viewBoxFor, type MapGraph, type MapNode } from './regionMap'
 
 /**
  * Mapa esquemático da região: cidades (quadrado), rotas (círculo), dungeons (losango), construções (quadrado pequeno)
@@ -29,6 +29,7 @@ export default function RegionMap({
   const g = useMemo(() => graphForGame(graph, game), [graph, game])
   const byNode = useMemo(() => nodeAreas(areas), [areas])
   const pos = useMemo(() => new Map(g.nodes.map((n) => [n.id, n])), [g])
+  const currentNode = currentNodeId(areas, current)
   const vb = viewBoxFor(g.nodes)
 
   return (
@@ -36,8 +37,7 @@ export default function RegionMap({
       <div className="overflow-x-auto rounded-lg border border-line bg-bg">
         <svg
           viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
-          className="block h-auto w-full min-w-[560px]"
-          style={{ maxHeight: 460 }}
+          className="block h-auto max-h-[680px] w-full min-w-[560px]"
           role="group"
           aria-label={t('nuzlocke.map.title')}
         >
@@ -49,14 +49,15 @@ export default function RegionMap({
             })}
           </g>
           {g.nodes.map((n) => {
-            const areaId = byNode.get(n.id)
+            const nodeAreaIds = byNode.get(n.id)
+            const first = nodeAreaIds?.[0]
             return (
               <Node
                 key={n.id}
                 node={n}
-                state={areaId ? (states[areaId] ?? 'none') : 'none'}
-                current={!!areaId && areaId === current}
-                onSelect={areaId && onSelect ? () => onSelect(areaId) : undefined}
+                state={nodeState(nodeAreaIds, states)}
+                current={n.id === currentNode}
+                onSelect={first && onSelect ? () => onSelect(first) : undefined}
               />
             )
           })}
@@ -85,15 +86,15 @@ export default function RegionMap({
 function Shape({ kind, cx, cy, className }: { kind: MapNode['kind']; cx: number; cy: number; className: string }) {
   switch (kind) {
     case 'city':
-      return <rect x={cx - 13} y={cy - 13} width={26} height={26} rx={4} className={className} />
+      return <rect x={cx - 17} y={cy - 17} width={34} height={34} rx={5} className={className} />
     case 'building':
-      return <rect x={cx - 8} y={cy - 8} width={16} height={16} rx={2} className={className} />
+      return <rect x={cx - 10} y={cy - 10} width={20} height={20} rx={3} className={className} />
     case 'dungeon':
-      return <polygon points={`${cx},${cy - 15} ${cx + 15},${cy} ${cx},${cy + 15} ${cx - 15},${cy}`} className={className} />
+      return <polygon points={`${cx},${cy - 20} ${cx + 20},${cy} ${cx},${cy + 20} ${cx - 20},${cy}`} className={className} />
     case 'sea':
-      return <circle cx={cx} cy={cy} r={11} strokeDasharray="4 3" className={className} />
+      return <circle cx={cx} cy={cy} r={14} strokeDasharray="5 4" className={className} />
     default:
-      return <circle cx={cx} cy={cy} r={10} className={className} />
+      return <circle cx={cx} cy={cy} r={13} className={className} />
   }
 }
 
@@ -119,11 +120,11 @@ function Node({ node, state, current, onSelect }: { node: MapNode; state: AreaSt
     >
       <title>{node.name}</title>
       {/* Área de toque maior que o desenho. */}
-      <circle cx={cx} cy={cy} r={24} className="fill-transparent" />
-      <circle cx={cx} cy={cy} r={21} strokeWidth={4} className={`ring fill-none ${current ? 'stroke-accent' : 'stroke-transparent'}`} />
+      <circle cx={cx} cy={cy} r={30} className="fill-transparent" />
+      <circle cx={cx} cy={cy} r={27} strokeWidth={5} className={`ring fill-none ${current ? 'stroke-accent' : 'stroke-transparent'}`} />
       <Shape kind={node.kind} cx={cx} cy={cy} className={`${stateClass(state)}`} />
       {node.kind === 'city' && (
-        <text x={cx} y={cy + 34} textAnchor="middle" className="fill-ink text-[19px] font-bold" style={{ paintOrder: 'stroke', stroke: 'var(--color-bg)', strokeWidth: 5 }}>
+        <text x={cx} y={cy + 46} textAnchor="middle" className="fill-ink text-[26px] font-bold" style={{ paintOrder: 'stroke', stroke: 'var(--color-bg)', strokeWidth: 6 }}>
           {shortLabel(node.name)}
         </text>
       )}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { areaNodeId, graphForGame, nodeAreas, shortLabel, stateClass, viewBoxFor, type MapGraph } from './regionMap'
+import { areaNodeId, currentNodeId, graphForGame, nodeAreas, nodeState, shortLabel, stateClass, viewBoxFor, type MapGraph } from './regionMap'
 import type { GameArea } from './nuzlocke'
 
 const graph: MapGraph = {
@@ -49,10 +49,21 @@ describe('área ↔ nó', () => {
     expect(areaNodeId(area('route-1'))).toBe('route-1')
     expect(areaNodeId(area('mt-moon-1f', 'mt-moon'))).toBe('mt-moon')
   })
-  it('a primeira área de cada nó fica com ele', () => {
+  it('junta as áreas de cada nó, na ordem', () => {
     const m = nodeAreas([area('mt-moon-1f', 'mt-moon'), area('mt-moon-b1f', 'mt-moon'), area('route-1')])
-    expect(m.get('mt-moon')).toBe('mt-moon-1f')
-    expect(m.get('route-1')).toBe('route-1')
+    expect(m.get('mt-moon')).toEqual(['mt-moon-1f', 'mt-moon-b1f'])
+    expect(m.get('route-1')).toEqual(['route-1'])
+  })
+  it('nó de várias áreas: estado mais forte e anel na área de dentro', () => {
+    const areas = [area('lavender-town'), area('pokemon-tower', 'lavender-town'), area('route-8')]
+    const ids = nodeAreas(areas).get('lavender-town')
+    expect(nodeState(ids, { 'lavender-town': 'visited', 'pokemon-tower': 'caught' })).toBe('caught')
+    expect(nodeState(ids, { 'lavender-town': 'dead', 'pokemon-tower': 'caught' })).toBe('dead')
+    expect(nodeState(ids, {})).toBe('none')
+    expect(nodeState(undefined, { x: 'dead' })).toBe('none')
+    expect(currentNodeId(areas, 'pokemon-tower')).toBe('lavender-town')
+    expect(currentNodeId(areas, 'route-8')).toBe('route-8')
+    expect(currentNodeId(areas, null)).toBeNull()
   })
 })
 
@@ -60,7 +71,9 @@ describe('desenho', () => {
   it('rótulo curto das cidades', () => {
     expect(shortLabel('Pallet Town')).toBe('Pallet')
     expect(shortLabel('Viridian City')).toBe('Viridian')
-    expect(shortLabel('One Island')).toBe('One Island')
+    expect(shortLabel('One Island')).toBe('One')
+    expect(shortLabel('Seven Island')).toBe('Seven')
+    expect(shortLabel('Cinnabar Island')).toBe('Cinnabar Island')
   })
   it('viewBox cobre os nós com margem', () => {
     const vb = viewBoxFor(graphForGame(graph, 'frlg').nodes)

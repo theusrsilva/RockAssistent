@@ -160,7 +160,13 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
                 areas={areas}
                 states={states}
                 current={view.currentArea?.id ?? null}
-                onSelect={readOnly ? undefined : (areaId) => areaId !== view.currentArea?.id && void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}/area`, { areaId }))}
+                onSelect={
+                  readOnly
+                    ? undefined
+                    : (areaId) => {
+                        if (areaId !== view.currentArea?.id) void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}/area`, { areaId }))
+                      }
+                }
               />
             </Card>
           )}
