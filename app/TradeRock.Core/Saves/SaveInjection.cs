@@ -39,7 +39,7 @@ public static class SaveInjection
     {
         if (file.Length > SaveImport.MaxSaveBytes)
             throw new SaveInjectionException("sav_size", "Arquivo grande demais para um save de GBA.");
-        var sav = SaveUtil.GetSaveFile(file.ToArray()) ?? throw new SaveInjectionException("sav_unknown", "Não é um save reconhecido.");
+        var sav = SaveFileAccess.Open(file);
         if (sav is not SAV3)
             throw new SaveInjectionException("sav_not_gen3", "O save não é da terceira geração (GBA).");
         return sav;
