@@ -1244,8 +1244,8 @@
         }
       ],
       "level_cap": 49,
-      "verified": false,
-      "notes": "níveis da decompilação (ver dúvidas)",
+      "verified": true,
+      "notes": null,
       "versions": null
     },
     {
@@ -1513,8 +1513,8 @@
         }
       ],
       "level_cap": 59,
-      "verified": false,
-      "notes": "níveis da decompilação (ver dúvidas)",
+      "verified": true,
+      "notes": null,
       "versions": null
     },
     {
@@ -1787,11 +1787,11 @@
       "versions": null
     },
     {
-      "id": "rival-survival-area",
+      "id": "rival-fight-area",
       "kind": "rival",
       "name": "Barry",
       "title": "Rival",
-      "location": "Survival Area",
+      "location": "Fight Area",
       "order": 28,
       "badge": null,
       "party": [
@@ -1881,8 +1881,8 @@
         }
       ],
       "level_cap": 64,
-      "verified": false,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 58, Floatzel 59, Heracross 60, Rapidash 59, Snorlax 60, Torterra 64; com Turtwig: Staraptor 58, Floatzel 59, Heracross 60, Roserade 59, Snorlax 60, Infernape 64; revanche no pós-jogo (ver dúvidas)",
+      "verified": true,
+      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 58, Floatzel 59, Heracross 60, Rapidash 59, Snorlax 60, Torterra 64; com Turtwig: Staraptor 58, Floatzel 59, Heracross 60, Roserade 59, Snorlax 60, Infernape 64; revanche no pós-jogo, nos fins de semana, depois de devolver a Magma Stone em Stark Mountain; há um segundo time mais forte (níveis 68 a 74) que não entrou",
       "versions": null
     }
   ]

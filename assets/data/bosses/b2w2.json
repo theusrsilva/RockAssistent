@@ -1730,7 +1730,7 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "golpes padrão do nível",
+      "notes": "golpes padrão do nível; no B2W2 o N não é mais do Team Plasma (kind other); no Black/White ele era vilão",
       "versions": [
         "black-2"
       ]
@@ -1756,7 +1756,7 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "golpes padrão do nível",
+      "notes": "golpes padrão do nível; no B2W2 o N não é mais do Team Plasma (kind other); no Black/White ele era vilão",
       "versions": [
         "white-2"
       ]
@@ -2401,7 +2401,7 @@
       "versions": null
     },
     {
-      "id": "hugh-rematch",
+      "id": "hugh-undella-2",
       "kind": "rival",
       "name": "Hugh",
       "title": "Rival",
@@ -2793,7 +2793,7 @@
       ],
       "level_cap": 77,
       "verified": true,
-      "notes": "pós-jogo, uma vez por estação; time da primavera",
+      "notes": "pós-jogo, uma vez por estação; time da primavera; no B2W2 o N não é mais do Team Plasma (kind other)",
       "versions": null
     },
     {
@@ -2892,7 +2892,7 @@
       ],
       "level_cap": 77,
       "verified": true,
-      "notes": "pós-jogo, uma vez por estação; time da verão",
+      "notes": "pós-jogo, uma vez por estação; time da verão; no B2W2 o N não é mais do Team Plasma (kind other)",
       "versions": null
     },
     {
@@ -2991,7 +2991,7 @@
       ],
       "level_cap": 77,
       "verified": true,
-      "notes": "pós-jogo, uma vez por estação; time da outono",
+      "notes": "pós-jogo, uma vez por estação; time da outono; no B2W2 o N não é mais do Team Plasma (kind other)",
       "versions": null
     },
     {
@@ -3090,7 +3090,7 @@
       ],
       "level_cap": 77,
       "verified": true,
-      "notes": "pós-jogo, uma vez por estação; time da inverno",
+      "notes": "pós-jogo, uma vez por estação; time da inverno; no B2W2 o N não é mais do Team Plasma (kind other)",
       "versions": null
     },
     {

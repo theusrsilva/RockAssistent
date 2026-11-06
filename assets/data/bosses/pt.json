@@ -2302,7 +2302,7 @@
         }
       ],
       "level_cap": 85,
-      "verified": false,
+      "verified": true,
       "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 81, Floatzel 79, Heracross 81, Rapidash 79, Snorlax 83, Torterra 85; com Turtwig: Staraptor 81, Floatzel 79, Heracross 81, Roserade 79, Snorlax 83, Infernape 85; revanche no pós-jogo; segundo as notas, depois de vencer a Liga 20 vezes (ver dúvidas)",
       "versions": null
     },
@@ -2996,8 +2996,8 @@
         }
       ],
       "level_cap": 65,
-      "verified": false,
-      "notes": "revanche no Battleground (Survival Area), pós-jogo, depois de completar o Pokédex Nacional; níveis da decompilação (ver dúvidas)",
+      "verified": true,
+      "notes": "revanche no Battleground (Survival Area), pós-jogo, depois de completar o Pokédex Nacional",
       "versions": null
     },
     {
