@@ -79,13 +79,16 @@ public sealed record BossPokemon(
     string? Item,
     string? TeraType);
 
+/// <summary>Treinador comum (não chefe) de uma área.</summary>
+/// <remarks><see cref="Versions"/>: versões do PokeAPI em que o treinador existe (ex.: Team Magma só no Ruby); nulo = todas.</remarks>
 public sealed record TrainerBattle(
     string Id,
     string Area,
     string Class,
     string Name,
     IReadOnlyList<BossPokemon> Party,
-    bool Verified);
+    bool Verified,
+    IReadOnlyList<string>? Versions);
 
 /// <summary>Uma área do jogo, em ordem de progressão.</summary>
 public sealed record GameArea(

@@ -90,7 +90,10 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
             ["trainers/frlg.json"] = $$"""
                 { {{Source}}, "items": [ { "id": "t1", "area": "pewter", "class": "Bug Catcher", "name": "Rick",
                   "party": [ { "species": 10, "form": 0, "level": 6, "moves": [], "ability": null, "item": null,
-                  "tera_type": null } ], "verified": true } ] }
+                  "tera_type": null } ], "verified": true, "versions": ["firered"] },
+                  { "id": "t2", "area": "pewter", "class": "Lass", "name": "Ana",
+                  "party": [ { "species": 16, "form": 0, "level": 6, "moves": [], "ability": null, "item": null,
+                  "tera_type": null } ], "verified": true, "versions": ["sapphire"] } ] }
                 """,
         };
         var ex = Assert.Throws<InvalidDataException>(() => FromFiles(files, m => m == "tackle"));
@@ -103,6 +106,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Contains("versão ruby", ex.Message); // versão de outro jogo no chefe
         Assert.DoesNotContain("versão leafgreen", ex.Message);
         Assert.DoesNotContain("t1", ex.Message);   // o treinador está certo
+        Assert.Contains("t2: versão sapphire", ex.Message); // versão de outro jogo no treinador
 
         // Sem o dex (moveExists nulo), os golpes não são conferidos.
         var noDex = Assert.Throws<InvalidDataException>(() => FromFiles(files));
@@ -214,6 +218,52 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.True(rivals.Count >= 3, "rivais");
         foreach (var r in rivals.GroupBy(b => b.Name))
             Assert.All(r.Zip(r.Skip(1)), p => Assert.True(p.Second.LevelCap >= p.First.LevelCap, $"{p.First.Id} -> {p.Second.Id}"));
+    }
+
+    // Treinadores comuns (não chefes) das Gen 1 a 5: cobertura mínima, área do arquivo de áreas, espécie e versão válidas,
+    // nenhum time igual ao de um chefe (os chefes ficam em bosses/).
+    [Theory]
+    [InlineData("rs")]
+    [InlineData("e")]
+    [InlineData("frlg")]
+    [InlineData("dp")]
+    [InlineData("pt")]
+    [InlineData("hgss")]
+    [InlineData("bw")]
+    [InlineData("b2w2")]
+    public void Treinadores_comuns_dos_jogos_de_GBA_e_DS(string game)
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        var trainers = store.Trainers(game);
+        Assert.True(trainers.Count >= 150, $"{game}: só {trainers.Count} treinadores");
+        Assert.Contains(game, store.GamesWithTrainers);
+        var areas = store.Areas(game).Select(a => a.Id).ToHashSet();
+        var versions = GameVersions.ByKey(game).PokeApiVersions;
+        static string Team(IEnumerable<BossPokemon> party) => string.Join(",", party.Select(p => $"{p.Species}:{p.Level}"));
+        var bossTeams = store.Bosses(game).Select(b => Team(b.Party)).ToHashSet();
+        Assert.All(trainers, t =>
+        {
+            Assert.Contains(t.Area, areas);
+            Assert.False(string.IsNullOrWhiteSpace(t.Class), t.Id);
+            Assert.False(string.IsNullOrWhiteSpace(t.Name), t.Id);
+            Assert.NotEmpty(t.Party);
+            Assert.All(t.Party, p => Assert.InRange(p.Species, 1, GameDataValidator.MaxSpecies));
+            Assert.All(t.Versions ?? [], v => Assert.Contains(v, versions));
+            Assert.DoesNotContain(Team(t.Party), bossTeams);
+        });
+        // Espalhados pelo jogo, não concentrados em poucas áreas.
+        Assert.True(trainers.Select(t => t.Area).Distinct().Count() >= 30, $"{game}: poucas áreas com treinador");
+    }
+
+    [Fact]
+    public void Jogos_com_treinadores_sao_os_que_tem_arquivo()
+    {
+        var files = GameDataStore.EmbeddedFiles();
+        var store = FromFiles(files);
+        var expected = files.Keys.Where(k => k.StartsWith("trainers/", StringComparison.Ordinal))
+            .Select(k => k["trainers/".Length..^".json".Length]).Order(StringComparer.Ordinal).ToList();
+        Assert.NotEmpty(expected);
+        Assert.Equal(expected, store.GamesWithTrainers.Order(StringComparer.Ordinal));
     }
 
     [Fact]

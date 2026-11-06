@@ -150,6 +150,8 @@ public static class GameDataValidator
                 errors.Add($"{at}: área {t.Area} não existe em areas/{key}");
             if (t.Party.Count == 0)
                 errors.Add($"{at}: time vazio");
+            foreach (var v in (t.Versions ?? []).Where(v => !game.PokeApiVersions.Contains(v)))
+                errors.Add($"{at}: versão {v} não é do {key}");
             Party(at, t.Party, moveExists, errors);
         }
 
