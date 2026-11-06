@@ -11,7 +11,7 @@ public static class HuntEndpoints
     public sealed record CreateDto(int Species, int Form, string GameKey, string MethodId, IReadOnlyDictionary<string, string>? Modifiers);
     public sealed record UpdateDto(int? Count, IReadOnlyDictionary<string, string>? Modifiers, string? Notes, long? ElapsedSeconds);
     public sealed record IncrementDto(int Delta);
-    public sealed record FinishDto(bool Found);
+    public sealed record FinishDto(bool Found, long? ElapsedSeconds);
 
     public static void MapHunts(this IEndpointRouteBuilder api)
     {
@@ -28,7 +28,7 @@ public static class HuntEndpoints
         hunts.MapPost("/{id:guid}/increment", (Guid id, IncrementDto body, HuntStore store, CancellationToken ct) =>
             Run(() => store.IncrementAsync(id, body.Delta, ct)));
         hunts.MapPost("/{id:guid}/finish", (Guid id, FinishDto body, HuntStore store, CancellationToken ct) =>
-            Run(() => store.FinishAsync(id, body.Found, ct)));
+            Run(() => store.FinishAsync(id, body.Found, body.ElapsedSeconds, ct)));
         hunts.MapDelete("/{id:guid}", async (Guid id, HuntStore store, CancellationToken ct) =>
         {
             try

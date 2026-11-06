@@ -67,11 +67,41 @@ public sealed class HuntStoreTests(DexFixture fx) : IClassFixture<DexFixture>, I
     }
 
     [Fact]
+    public async Task Incrementos_em_paralelo_nao_se_perdem()
+    {
+        var hunt = await NewMasuda();
+        await Task.WhenAll(Enumerable.Range(0, 20).Select(_ => Task.Run(() => _store.IncrementAsync(hunt.Id, 1, Ct), Ct)));
+        Assert.Equal(20, (await _store.GetAsync(hunt.Id, Ct)).Count);
+    }
+
+    [Fact]
+    public async Task Amuleto_no_Arceus_implica_pesquisa_nivel_10()
+    {
+        var charm = new Dictionary<string, string> { ["shiny_charm"] = "true" };
+        var hunt = await _store.CreateAsync(new NewHunt(399, 0, "pla", "pla_wild", charm), Ct);
+        Assert.Equal("true", hunt.Modifiers["research_10"]);
+        Assert.Equal(819.60, hunt.Odds, 0.01);
+
+        // Com a pesquisa perfeita ligada, o nível 10 não é forçado (ela já o inclui).
+        var perfect = await _store.UpdateAsync(hunt.Id, new HuntChanges(null,
+            new Dictionary<string, string> { ["shiny_charm"] = "true", ["research_perfect"] = "true" }, null, null), Ct);
+        Assert.False(perfect.Modifiers.ContainsKey("research_10"));
+    }
+
+    [Fact]
+    public async Task Especie_invalida_na_lista_de_jogos()
+    {
+        foreach (var species in new[] { 0, 1026 })
+            Assert.Equal("invalid_species", (await Assert.ThrowsAsync<HuntException>(() => _store.GamesForSpeciesAsync(species, Ct))).Code);
+    }
+
+    [Fact]
     public async Task Finish_grava_EndedAt_e_trava_o_contador()
     {
         var hunt = await NewMasuda();
-        var done = await _store.FinishAsync(hunt.Id, found: true, Ct);
+        var done = await _store.FinishAsync(hunt.Id, found: true, 3600, Ct);
         Assert.NotNull(done.EndedAt);
+        Assert.Equal(3600, done.ElapsedSeconds);
         Assert.True(done.Found);
 
         var ex = await Assert.ThrowsAsync<HuntException>(() => _store.IncrementAsync(hunt.Id, 1, Ct));
@@ -237,8 +267,9 @@ public sealed class HuntApiTests : IAsyncLifetime
         Assert.Equal(5, put.GetProperty("count").GetInt32());
 
         Assert.Equal(1, (await Ok(await _client.GetAsync("/api/hunts", Ct))).GetArrayLength());
-        var done = await Ok(await _client.PostAsJsonAsync($"/api/hunts/{id}/finish", new { found = true }, Ct));
+        var done = await Ok(await _client.PostAsJsonAsync($"/api/hunts/{id}/finish", new { found = true, elapsedSeconds = 120 }, Ct));
         Assert.Equal(JsonValueKind.String, done.GetProperty("endedAt").ValueKind);
+        Assert.Equal(120, done.GetProperty("elapsedSeconds").GetInt64());
         Assert.Equal(HttpStatusCode.Conflict, (await _client.PostAsJsonAsync($"/api/hunts/{id}/increment", new { delta = 1 }, Ct)).StatusCode);
         Assert.Equal(0, (await Ok(await _client.GetAsync("/api/hunts", Ct))).GetArrayLength());
         Assert.Equal(1, (await Ok(await _client.GetAsync("/api/hunts?all=1", Ct))).GetArrayLength());
@@ -256,6 +287,7 @@ public sealed class HuntApiTests : IAsyncLifetime
     [Fact]
     public async Task Jogos_da_especie_pela_api()
     {
+        Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/hunts/species/0/games", Ct)).StatusCode);
         var games = await Ok(await _client.GetAsync("/api/hunts/species/906/games", Ct));
         var sv = Assert.Single(games.EnumerateArray());
         Assert.Equal("sv", sv.GetProperty("gameKey").GetString());

@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using TradeRock.App;
 using TradeRock.App.Server;
 using TradeRock.Core;
 using TradeRock.Core.Engines;
 using TradeRock.Core.Games;
+using TradeRock.Core.Storage;
 
 namespace TradeRock.Tests;
 
@@ -252,7 +254,29 @@ public sealed class ServerModeTests : IAsyncLifetime
         var accounts = await _local.GetFromJsonAsync<JsonElement>("/api/accounts", Ct);
         var id = accounts.EnumerateArray().Single(a => a.GetProperty("username").GetString() == "edu").GetProperty("id").GetString();
 
+        // Hunt e anexo de save da conta também vão embora.
+        Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync("/api/hunts",
+            new { species = 906, form = 0, gameKey = "sv", methodId = "masuda" })).StatusCode);
+        var owner = Guid.Parse(id!);
+        var dbFactory = _app.Services.GetRequiredService<IDbContextFactory<TradeRockDb>>();
+        using (OwnerScope.Use(owner))
+        {
+            await using var db = await dbFactory.CreateDbContextAsync(Ct);
+            var mon = await db.Pokemon.FirstAsync(Ct);
+            db.SaveAttachments.Add(new SaveAttachment
+            {
+                Id = Guid.NewGuid(), PokemonId = mon.Id, SavePath = "/tmp/x.sav", SaveSha256 = "ab", Box = 0, Slot = 0,
+                AttachedAt = DateTimeOffset.UtcNow,
+            });
+            await db.SaveChangesAsync(Ct);
+        }
+
         Assert.Equal(HttpStatusCode.NoContent, (await _local.DeleteAsync($"/api/accounts/{id}", Ct)).StatusCode);
+        await using (var db = await dbFactory.CreateDbContextAsync(Ct))
+        {
+            Assert.Equal(0, await db.Hunts.IgnoreQueryFilters().CountAsync(h => h.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.SaveAttachments.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
+        }
         Assert.Equal(HttpStatusCode.Unauthorized, (await edu.GetAsync("/api/pokemon")).StatusCode);
         // Os arquivos dos Pokémon de demonstração continuam: o cofre do dono também os usa.
         var local = await _local.GetFromJsonAsync<JsonElement>("/api/pokemon", Ct);

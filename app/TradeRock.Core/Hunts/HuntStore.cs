@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using TradeRock.Core.Dex;
@@ -132,28 +133,36 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
         return View(hunt);
     }
 
-    /// <summary>Soma <paramref name="delta"/> (±1 a ±100) ao contador, sem passar de 0 para baixo.</summary>
+    /// <summary>
+    /// Soma <paramref name="delta"/> (±1 a ±100) ao contador, sem passar de 0 para baixo. A conta é feita no banco
+    /// (um UPDATE só), para dois toques seguidos (tecla segurada, atalho global) não se perderem.
+    /// </summary>
     public async Task<HuntView> IncrementAsync(Guid id, int delta, CancellationToken ct)
     {
         if (delta == 0 || Math.Abs(delta) > MaxDelta)
             throw new HuntException("invalid_delta");
         await using var db = await dbFactory.CreateDbContextAsync(ct);
+        var changed = await db.Hunts.Where(h => h.Id == id && h.EndedAt == null)
+            .ExecuteUpdateAsync(s => s.SetProperty(h => h.Count, h => h.Count + delta < 0 ? 0 : h.Count + delta), ct);
         var hunt = await Find(db, id, ct);
-        if (hunt.EndedAt is not null)
+        if (changed == 0)
             throw new HuntException("hunt_finished", 409);
-        hunt.Count = (int)Math.Clamp((long)hunt.Count + delta, 0, int.MaxValue);
-        await db.SaveChangesAsync(ct);
         return View(hunt);
     }
 
-    public async Task<HuntView> FinishAsync(Guid id, bool found, CancellationToken ct)
+    /// <summary>Termina a hunt; <paramref name="elapsedSeconds"/>, se vier, grava o cronômetro na mesma chamada.</summary>
+    public async Task<HuntView> FinishAsync(Guid id, bool found, long? elapsedSeconds, CancellationToken ct)
     {
+        if (elapsedSeconds is < 0)
+            throw new HuntException("invalid_elapsed");
         await using var db = await dbFactory.CreateDbContextAsync(ct);
         var hunt = await Find(db, id, ct);
         if (hunt.EndedAt is not null)
             throw new HuntException("hunt_finished", 409);
         hunt.EndedAt = time.GetUtcNow();
         hunt.Found = found;
+        if (elapsedSeconds is { } elapsed)
+            hunt.ElapsedSeconds = elapsed;
         await db.SaveChangesAsync(ct);
         return View(hunt);
     }
@@ -172,6 +181,8 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
     /// </summary>
     public async Task<IReadOnlyList<HuntGame>> GamesForSpeciesAsync(int species, CancellationToken ct)
     {
+        if (species is < 1 or > MaxSpecies)
+            throw new HuntException("invalid_species");
         var availability = await dex.AvailabilityAsync(species, ct);
         var result = new List<HuntGame>();
         foreach (var game in GameVersions.All)
@@ -245,9 +256,14 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
             else if (mod.Counter)
                 continue;
             else
-                result[id] = int.TryParse(value, out var n) && n >= 0 ? n.ToString(System.Globalization.CultureInfo.InvariantCulture)
+                result[id] = int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out var n) && n >= 0
+                    ? n.ToString(CultureInfo.InvariantCulture)
                     : throw new HuntException("invalid_modifier");
         }
+        // Arceus: o Amuleto Brilhante só vem com a Pokédex completa, então toda espécie já tem a pesquisa nível 10.
+        if (method.Games.Contains("pla") && method.Modifiers.Any(m => m.Id == ShinyOdds.Research10)
+            && ShinyOdds.IsOn(result, "shiny_charm") && !ShinyOdds.IsOn(result, ShinyOdds.ResearchPerfect))
+            result[ShinyOdds.Research10] = "true";
         return result;
     }
 
