@@ -2091,7 +2091,216 @@
     "sub": "Mande presentes de evento para o FireRed/LeafGreen e o Sword/Shield pelo mesmo rádio da troca."
   },
   "nuzlocke": {
-    "title": "Nuzlocke"
+    "title": "Nuzlocke",
+    "sub": "Acompanhe suas runs: o próximo chefe, a área em que você está, a equipe e quem ficou pelo caminho.",
+    "new": "Nova run",
+    "active": "Em andamento",
+    "finished": "Terminadas",
+    "emptyActive": "Nenhuma run em andamento. Comece uma em \"Nova run\".",
+    "emptyFinished": "Nenhuma run terminada ainda.",
+    "loadError": "Não deu para carregar as runs.",
+    "back": "Runs",
+    "noTeam": "Equipe vazia",
+    "deaths": "Mortes: {{count}}",
+    "bossesDefeated": "Chefes vencidos: {{count}}",
+    "status": {
+      "active": "Em andamento",
+      "paused": "Pausada",
+      "champion": "Campeão",
+      "wipe": "Wipe"
+    },
+    "rules": {
+      "title": "Regras",
+      "none": "Sem regras",
+      "custom": "Regras próprias",
+      "customHelp": "Escreva outras regras que você quer seguir (só para lembrar; o app não confere).",
+      "customPlaceholder": "Ex.: sem itens em batalha, Pokémon Center limitado",
+      "firstEncounterOnly": {
+        "name": "Primeiro encontro",
+        "help": "Só o primeiro Pokémon de cada área conta."
+      },
+      "nicknameRequired": {
+        "name": "Apelido obrigatório",
+        "help": "Todo Pokémon capturado ganha um apelido."
+      },
+      "faintIsDeath": {
+        "name": "Desmaiou, morreu",
+        "help": "Pokémon que desmaia vai para o cemitério."
+      },
+      "speciesClause": {
+        "name": "Cláusula de espécie",
+        "help": "Espécie que você já pegou não conta: dá para tentar de novo na área."
+      },
+      "shinyClause": {
+        "name": "Cláusula de shiny",
+        "help": "Shiny sempre pode ser capturado, mesmo com a área usada."
+      },
+      "dupesClause": {
+        "name": "Cláusula de duplicata",
+        "help": "Vale para a linha evolutiva inteira: um Pidgeotto conta como Pidgey."
+      },
+      "levelCapRequired": {
+        "name": "Level cap obrigatório",
+        "help": "Ninguém da equipe passa do nível do próximo chefe."
+      }
+    },
+    "newRun": {
+      "title": "Nova run",
+      "name": "Nome",
+      "namePlaceholder": "Ex.: Kanto sem Pokémon Center",
+      "game": "Jogo",
+      "generation": "Geração {{generation}}",
+      "version": "Versão",
+      "versionHelp": "Os chefes e os encontros mudam de uma versão para a outra.",
+      "start": "Começar a run"
+    },
+    "run": {
+      "pause": "Pausar",
+      "resume": "Continuar",
+      "champion": "Virei campeão!",
+      "wipe": "Wipe",
+      "delete": "Apagar run",
+      "confirmDelete": "Apagar esta run?",
+      "confirmDeleteText": "A run, a equipe e o cemitério somem de vez.",
+      "confirmChampion": "Terminar como campeão?",
+      "confirmChampionText": "Parabéns! A run fica guardada nas terminadas e não muda mais.",
+      "confirmWipe": "Terminar com wipe?",
+      "confirmWipeText": "A equipe toda caiu. A run fica guardada nas terminadas e não muda mais.",
+      "finishedOn": "Terminou em {{date}}",
+      "pausedNote": "Run pausada. Dá para registrar tudo normalmente; continue quando quiser.",
+      "notFound": "Não achamos esta run.",
+      "tabs": {
+        "run": "Run",
+        "graveyard": "Cemitério",
+        "stats": "Estatísticas"
+      }
+    },
+    "boss": {
+      "title": "Próximo chefe",
+      "cap": "Level cap",
+      "defeat": "Venci!",
+      "allDefeated": "Todos os chefes vencidos. Agora é só terminar a run!",
+      "defeatedList": "Vencidos ({{count}})",
+      "ability": "Habilidade",
+      "item": "Item",
+      "tera": "Tera",
+      "notVerified": "não conferido",
+      "level": "Nv. {{level}}"
+    },
+    "area": {
+      "title": "Área atual",
+      "change": "Mudar de área",
+      "search": "Procure a área",
+      "noAreas": "Ainda não temos as áreas deste jogo.",
+      "encounters": "Encontros",
+      "noEncounters": "Sem encontros conhecidos nesta área. Use \"Registrar outro\" para anotar o que apareceu.",
+      "used": "Área já usada",
+      "caught": "Capturei",
+      "other": "Registrar outro",
+      "noEncounter": "Sem encontro",
+      "noEncounterDone": "Área marcada sem encontro.",
+      "saved": "Registrado!",
+      "form": {
+        "title": "Registrar encontro",
+        "species": "Pokémon",
+        "searchSpecies": "Procure pelo nome ou número",
+        "nickname": "Apelido",
+        "level": "Nível",
+        "shiny": "É shiny",
+        "status": "O que aconteceu",
+        "statuses": {
+          "party": "Equipe",
+          "box": "Caixa",
+          "failed": "Fugiu/desmaiou",
+          "missed": "Não conta"
+        },
+        "statusHelp": {
+          "party": "Capturou e foi para a equipe.",
+          "box": "Capturou e foi para a caixa.",
+          "failed": "Fugiu ou desmaiou: a área fica usada.",
+          "missed": "Encontro que não conta (ex.: repetido pela cláusula): a área continua livre."
+        },
+        "save": "Registrar"
+      }
+    },
+    "team": {
+      "title": "Equipe",
+      "empty": "Ninguém na equipe ainda. Registre uma captura na área atual.",
+      "overCap": "Acima do level cap ({{cap}})",
+      "boxTitle": "Caixa",
+      "boxEmpty": "Caixa vazia.",
+      "toBox": "Mandar para a caixa",
+      "toParty": "Para a equipe",
+      "died": "Morreu",
+      "edit": "Editar",
+      "levelUp": "Subir um nível",
+      "levelDown": "Descer um nível",
+      "moves": "Golpes",
+      "probableMoves": "Golpes prováveis (pelo nível)",
+      "noMoves": "Sem golpes conhecidos.",
+      "upcoming": "Próximos golpes",
+      "noUpcoming": "Nada novo por nível.",
+      "evolution": "Evolui para {{name}}",
+      "onEvolve": "Ao evoluir",
+      "showMoves": "Ver golpes",
+      "hideMoves": "Esconder golpes",
+      "death": {
+        "title": "{{name}} morreu",
+        "cause": "Causa",
+        "causePlaceholder": "Ex.: crítico do Onix do Brock",
+        "confirm": "Mandar para o cemitério"
+      },
+      "editDialog": {
+        "title": "Editar {{name}}",
+        "species": "Espécie (para registrar a evolução)",
+        "moves": "Golpes atuais",
+        "movesHelp": "Escolha até 4 entre os golpes que ele já aprendeu por nível.",
+        "save": "Salvar"
+      }
+    },
+    "trainers": {
+      "title": "Treinadores da área",
+      "unavailable": "Treinadores comuns não estão disponíveis neste jogo. Os chefes aparecem no cartão do próximo chefe.",
+      "empty": "Nenhum treinador nesta área."
+    },
+    "graveyard": {
+      "empty": "Ninguém morreu ainda. Que continue assim!",
+      "noCause": "Sem causa anotada",
+      "died": "Morreu em {{date}}",
+      "area": "Capturado em {{area}}"
+    },
+    "stats": {
+      "caught": "Capturas",
+      "deaths": "Mortes",
+      "bosses": "Chefes vencidos",
+      "areas": "Áreas visitadas",
+      "shinies": "Shinies",
+      "lost": "Encontros perdidos"
+    },
+    "errors": {
+      "unknown_game": "Jogo desconhecido.",
+      "unknown_version": "Esta versão não é deste jogo.",
+      "version_required": "Escolha a versão do jogo.",
+      "unknown_area": "Área desconhecida neste jogo.",
+      "unknown_boss": "Este chefe não é desta versão.",
+      "invalid_name": "Nome inválido (até 80 letras).",
+      "invalid_status": "Situação inválida.",
+      "invalid_species": "Escolha um Pokémon válido.",
+      "invalid_form": "Forma inválida.",
+      "invalid_level": "O nível vai de 1 a 100.",
+      "nickname_required": "As regras pedem um apelido.",
+      "nickname_too_long": "O apelido tem no máximo 12 letras.",
+      "death_cause_too_long": "A causa tem no máximo 200 letras.",
+      "custom_too_long": "As regras próprias têm no máximo 2000 letras.",
+      "invalid_move": "Golpe desconhecido.",
+      "too_many_moves": "No máximo 4 golpes.",
+      "area_already_used": "Você já usou esta área: pela regra do primeiro encontro, só o primeiro conta.",
+      "dupe": "Repetido: você já pegou esta espécie (ou a linha dela). Registre como \"Não conta\" e tente de novo.",
+      "party_full": "A equipe já tem 6. Mande para a caixa.",
+      "run_not_found": "Não achamos esta run.",
+      "mon_not_found": "Não achamos este Pokémon na run.",
+      "run_finished": "Esta run já terminou e não muda mais."
+    }
   },
   "hunt": {
     "title": "Contador Hunt",

@@ -2091,7 +2091,216 @@
     "sub": "Send event gifts to FireRed/LeafGreen and Sword/Shield through the same radio as trading."
   },
   "nuzlocke": {
-    "title": "Nuzlocke"
+    "title": "Nuzlocke",
+    "sub": "Track your runs: the next boss, the area you are in, your team and who fell along the way.",
+    "new": "New run",
+    "active": "In progress",
+    "finished": "Finished",
+    "emptyActive": "No run in progress. Start one with \"New run\".",
+    "emptyFinished": "No finished runs yet.",
+    "loadError": "Couldn't load the runs.",
+    "back": "Runs",
+    "noTeam": "Empty team",
+    "deaths": "Deaths: {{count}}",
+    "bossesDefeated": "Bosses defeated: {{count}}",
+    "status": {
+      "active": "In progress",
+      "paused": "Paused",
+      "champion": "Champion",
+      "wipe": "Wipe"
+    },
+    "rules": {
+      "title": "Rules",
+      "none": "No rules",
+      "custom": "Your own rules",
+      "customHelp": "Write any other rules you want to follow (just a reminder; the app doesn't check them).",
+      "customPlaceholder": "E.g.: no items in battle, limited Pokémon Center",
+      "firstEncounterOnly": {
+        "name": "First encounter",
+        "help": "Only the first Pokémon in each area counts."
+      },
+      "nicknameRequired": {
+        "name": "Nickname required",
+        "help": "Every Pokémon you catch gets a nickname."
+      },
+      "faintIsDeath": {
+        "name": "Fainted means dead",
+        "help": "A Pokémon that faints goes to the graveyard."
+      },
+      "speciesClause": {
+        "name": "Species clause",
+        "help": "A species you already caught doesn't count: you can try again in the area."
+      },
+      "shinyClause": {
+        "name": "Shiny clause",
+        "help": "A shiny can always be caught, even in a used area."
+      },
+      "dupesClause": {
+        "name": "Dupes clause",
+        "help": "Covers the whole evolution line: a Pidgeotto counts as a Pidgey."
+      },
+      "levelCapRequired": {
+        "name": "Level cap required",
+        "help": "No one on the team goes above the next boss's level."
+      }
+    },
+    "newRun": {
+      "title": "New run",
+      "name": "Name",
+      "namePlaceholder": "E.g.: Kanto without Pokémon Center",
+      "game": "Game",
+      "generation": "Generation {{generation}}",
+      "version": "Version",
+      "versionHelp": "Bosses and encounters change from one version to the other.",
+      "start": "Start the run"
+    },
+    "run": {
+      "pause": "Pause",
+      "resume": "Resume",
+      "champion": "I'm the champion!",
+      "wipe": "Wipe",
+      "delete": "Delete run",
+      "confirmDelete": "Delete this run?",
+      "confirmDeleteText": "The run, the team and the graveyard are gone for good.",
+      "confirmChampion": "Finish as champion?",
+      "confirmChampionText": "Congratulations! The run is kept with the finished ones and won't change anymore.",
+      "confirmWipe": "Finish with a wipe?",
+      "confirmWipeText": "The whole team fell. The run is kept with the finished ones and won't change anymore.",
+      "finishedOn": "Finished on {{date}}",
+      "pausedNote": "Paused run. You can still record everything; resume whenever you want.",
+      "notFound": "We couldn't find this run.",
+      "tabs": {
+        "run": "Run",
+        "graveyard": "Graveyard",
+        "stats": "Statistics"
+      }
+    },
+    "boss": {
+      "title": "Next boss",
+      "cap": "Level cap",
+      "defeat": "I won!",
+      "allDefeated": "Every boss defeated. Now just finish the run!",
+      "defeatedList": "Defeated ({{count}})",
+      "ability": "Ability",
+      "item": "Item",
+      "tera": "Tera",
+      "notVerified": "not verified",
+      "level": "Lv. {{level}}"
+    },
+    "area": {
+      "title": "Current area",
+      "change": "Change area",
+      "search": "Search the area",
+      "noAreas": "We don't have the areas of this game yet.",
+      "encounters": "Encounters",
+      "noEncounters": "No known encounters in this area. Use \"Record another\" to write down what showed up.",
+      "used": "Area already used",
+      "caught": "Caught it",
+      "other": "Record another",
+      "noEncounter": "No encounter",
+      "noEncounterDone": "Area marked with no encounter.",
+      "saved": "Recorded!",
+      "form": {
+        "title": "Record encounter",
+        "species": "Pokémon",
+        "searchSpecies": "Search by name or number",
+        "nickname": "Nickname",
+        "level": "Level",
+        "shiny": "It's shiny",
+        "status": "What happened",
+        "statuses": {
+          "party": "Team",
+          "box": "Box",
+          "failed": "Fled/fainted",
+          "missed": "Doesn't count"
+        },
+        "statusHelp": {
+          "party": "Caught and sent to the team.",
+          "box": "Caught and sent to the box.",
+          "failed": "Fled or fainted: the area is used.",
+          "missed": "Encounter that doesn't count (e.g. a dupe under a clause): the area stays free."
+        },
+        "save": "Record"
+      }
+    },
+    "team": {
+      "title": "Team",
+      "empty": "No one on the team yet. Record a catch in the current area.",
+      "overCap": "Above the level cap ({{cap}})",
+      "boxTitle": "Box",
+      "boxEmpty": "Empty box.",
+      "toBox": "Send to the box",
+      "toParty": "To the team",
+      "died": "Died",
+      "edit": "Edit",
+      "levelUp": "Level up",
+      "levelDown": "Level down",
+      "moves": "Moves",
+      "probableMoves": "Likely moves (by level)",
+      "noMoves": "No known moves.",
+      "upcoming": "Next moves",
+      "noUpcoming": "Nothing new by level.",
+      "evolution": "Evolves into {{name}}",
+      "onEvolve": "On evolution",
+      "showMoves": "Show moves",
+      "hideMoves": "Hide moves",
+      "death": {
+        "title": "{{name}} died",
+        "cause": "Cause",
+        "causePlaceholder": "E.g.: a crit from Brock's Onix",
+        "confirm": "Send to the graveyard"
+      },
+      "editDialog": {
+        "title": "Edit {{name}}",
+        "species": "Species (to record an evolution)",
+        "moves": "Current moves",
+        "movesHelp": "Pick up to 4 among the moves it already learned by level.",
+        "save": "Save"
+      }
+    },
+    "trainers": {
+      "title": "Trainers in the area",
+      "unavailable": "Regular trainers aren't available for this game. The bosses show up in the next boss card.",
+      "empty": "No trainers in this area."
+    },
+    "graveyard": {
+      "empty": "No one has died yet. Keep it that way!",
+      "noCause": "No cause written",
+      "died": "Died on {{date}}",
+      "area": "Caught at {{area}}"
+    },
+    "stats": {
+      "caught": "Catches",
+      "deaths": "Deaths",
+      "bosses": "Bosses defeated",
+      "areas": "Areas visited",
+      "shinies": "Shinies",
+      "lost": "Lost encounters"
+    },
+    "errors": {
+      "unknown_game": "Unknown game.",
+      "unknown_version": "This version isn't from this game.",
+      "version_required": "Choose the game version.",
+      "unknown_area": "Unknown area in this game.",
+      "unknown_boss": "This boss isn't from this version.",
+      "invalid_name": "Invalid name (up to 80 letters).",
+      "invalid_status": "Invalid status.",
+      "invalid_species": "Choose a valid Pokémon.",
+      "invalid_form": "Invalid form.",
+      "invalid_level": "The level goes from 1 to 100.",
+      "nickname_required": "The rules ask for a nickname.",
+      "nickname_too_long": "The nickname has at most 12 letters.",
+      "death_cause_too_long": "The cause has at most 200 letters.",
+      "custom_too_long": "Your own rules have at most 2000 letters.",
+      "invalid_move": "Unknown move.",
+      "too_many_moves": "At most 4 moves.",
+      "area_already_used": "You already used this area: under the first encounter rule, only the first one counts.",
+      "dupe": "Dupe: you already caught this species (or its line). Record it as \"Doesn't count\" and try again.",
+      "party_full": "The team already has 6. Send it to the box.",
+      "run_not_found": "We couldn't find this run.",
+      "mon_not_found": "We couldn't find this Pokémon in the run.",
+      "run_finished": "This run is over and won't change anymore."
+    }
   },
   "hunt": {
     "title": "Hunt Counter",

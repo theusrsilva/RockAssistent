@@ -16,6 +16,7 @@ import HuntPage from './pages/hunt/HuntPage'
 import HuntCounter from './pages/hunt/HuntCounter'
 import NewHuntWizard from './pages/hunt/NewHuntWizard'
 import NuzlockePage from './pages/nuzlocke/NuzlockePage'
+import RunPage from './pages/nuzlocke/RunPage'
 import TradesHubPage from './pages/trades/TradesHubPage'
 import SettingsPage from './pages/SettingsPage'
 import TradePage from './pages/trade/TradePage'
@@ -48,6 +49,7 @@ export default function App() {
                 <Route path="/trocas/trocar" element={<TradePage />} />
                 <Route path="/mystery-gift" element={<GiftsPage />} />
                 <Route path="/nuzlocke" element={<NuzlockePage />} />
+                <Route path="/nuzlocke/:id" element={<RunPage />} />
                 <Route path="/hunt" element={<HuntPage />} />
                 <Route path="/hunt/nova" element={<NewHuntWizard />} />
                 <Route path="/hunt/:id" element={<HuntCounter />} />
