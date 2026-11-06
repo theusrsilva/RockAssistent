@@ -27,7 +27,7 @@ public static class AccessPolicy
     /// <summary>
     /// Só pela janela local: assistente (prod.keys, placa, firmware), worker, modo servidor, fechar o app,
     /// diálogos nativos (abririam no PC, não no celular), motor e configurações de troca, outras atividades (D26), logs (D28), atualização (D29),
-    /// saves das pastas do PC (tela Boxes) e as pastas configuradas.
+    /// saves das pastas do PC (tela Boxes), as pastas configuradas e as teclas do atalho global do Contador Hunt.
     /// </summary>
     public static bool IsLocalOnly(HttpRequest request)
     {
@@ -37,7 +37,7 @@ public static class AccessPolicy
             // "/api/saves/open" não cobre "/api/saves/open-folder" (segmento diferente): precisa estar aqui.
             || path.StartsWithSegments("/api/saves/open-folder")
             || path.StartsWithSegments("/api/vault/export/native") || path.StartsWithSegments("/api/activities")
-            || path.StartsWithSegments("/api/logs")
+            || path.StartsWithSegments("/api/logs") || path.StartsWithSegments("/api/hunts/events")
             || path.StartsWithSegments("/api/update")
             || path.StartsWithSegments("/api/boxes") || path.StartsWithSegments("/api/settings/save-folders"))
             return true;

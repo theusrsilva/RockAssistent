@@ -52,6 +52,10 @@ public static class ServiceSetup
         services.AddSingleton<TradeRock.Core.Dex.DexService>();
         services.AddSingleton<TradeRock.Core.GameData.GameDataStore>();
         services.AddSingleton<TradeRock.Core.Hunts.HuntStore>();
+        // Atalho global do Contador Hunt (Windows e X11; só a janela local liga).
+        services.AddSingleton(sp => Hotkeys.GlobalHotkeys.Create(sp.GetRequiredService<ILoggerFactory>()));
+        services.AddSingleton<Hotkeys.GlobalHotkeyService>();
+        services.AddHostedService(sp => sp.GetRequiredService<Hotkeys.GlobalHotkeyService>());
 
         // Worker privilegiado (placa Wi-Fi, só Linux). Em desenvolvimento, a instalação dev
         // (scripts/install-worker.sh dev) vem antes da release.

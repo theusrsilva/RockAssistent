@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { comboFromEvent, formatCombo, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
+import { comboFromEvent, formatCombo, globalActive, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
 
 const key = (code: string, extra: Partial<KeyLike> = {}): KeyLike => ({
   code,
@@ -75,7 +75,38 @@ describe('handleHotkey', () => {
   })
 })
 
+describe('botão focado', () => {
+  it('Espaço com um botão focado tira o foco antes de contar (o botão não clica de novo)', () => {
+    const blur = vi.fn()
+    const handler = vi.fn(() => expect(blur).toHaveBeenCalledOnce())
+    expect(handleHotkey(parseCombo('Space'), key('Space', { target: { tagName: 'BUTTON', blur } as unknown as EventTarget }), handler)).toBe(true)
+    expect(handler).toHaveBeenCalledOnce()
+  })
+
+  it('outras teclas não mexem no foco', () => {
+    const blur = vi.fn()
+    handleHotkey(parseCombo('Backspace'), key('Backspace', { target: { tagName: 'BUTTON', blur } as unknown as EventTarget }), vi.fn())
+    expect(blur).not.toHaveBeenCalled()
+  })
+})
+
+describe('atalho global', () => {
+  it('vale só ligado, com suporte e sem motivo', () => {
+    expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: true, reason: null })).toBe(true)
+    expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: false, supported: true })).toBe(false)
+    expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: false, reason: 'wayland' })).toBe(false)
+    expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: true, reason: 'in_use' })).toBe(false)
+  })
+})
+
 describe('comboFromEvent e formatCombo', () => {
+  it('recusa Tab, Enter e Esc como atalho', () => {
+    expect(comboFromEvent(key('Tab'))).toBeNull()
+    expect(comboFromEvent(key('Tab', { shiftKey: true }))).toBeNull()
+    expect(comboFromEvent(key('Enter'))).toBeNull()
+    expect(comboFromEvent(key('Escape', { ctrlKey: true }))).toBeNull()
+  })
+
   it('grava o combo da tecla apertada', () => {
     expect(comboFromEvent(key('Space'))).toBe('Space')
     expect(comboFromEvent(key('ArrowUp', { ctrlKey: true, shiftKey: true }))).toBe('Ctrl+Shift+ArrowUp')

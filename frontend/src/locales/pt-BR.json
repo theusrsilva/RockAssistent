@@ -2145,6 +2145,7 @@
       "step": "{{name}} {{value}}: 1 em {{odds}}",
       "stepNone": "{{name}} {{value}}: ainda sem bônus",
       "hotkeysHint": "Atalhos: {{inc}} soma e {{dec}} diminui. Dá para trocar em Configurações → Preferências.",
+      "hotkeysHintGlobal": "Atalho global ligado: {{inc}} soma e {{dec}} diminui mesmo com o app atrás de outra janela.",
       "finishedFound": "Você achou o shiny em {{date}}!",
       "finishedGaveUp": "Hunt encerrada em {{date}}.",
       "foundToast": "Parabéns pelo shiny!",
@@ -2178,9 +2179,24 @@
       "record": "Gravar",
       "recording": "Aperte a tecla... (Esc cancela)",
       "reset": "Voltar ao padrão",
+      "global": {
+        "label": "Atalho global (funciona com o app em segundo plano)",
+        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Elas deixam de funcionar nos outros programas enquanto o RockAssistent estiver aberto.",
+        "reasons": {
+          "wayland": "No Wayland o sistema não permite atalho global; use o atalho da janela.",
+          "no_x11": "Não foi possível falar com o X11 (sem tela gráfica X); use o atalho da janela.",
+          "in_use": "Outro programa já usa uma dessas teclas. Escolha outra e ligue de novo.",
+          "unsupported_os": "Este sistema não tem atalho global; use o atalho da janela.",
+          "remote": "O atalho global só pode ser ligado na janela do PC."
+        }
+      },
       "errors": {
         "hotkeys_same": "Os dois atalhos não podem ser iguais.",
-        "hotkey_invalid": "Essa tecla não serve de atalho."
+        "hotkey_invalid": "Essa tecla não serve de atalho.",
+        "hotkey_unsupported": "Essa tecla não serve de atalho global. Escolha letras, números, F1–F12, setas ou o teclado numérico.",
+        "hotkey_in_use": "Outro programa já usa essa tecla. Escolha outra.",
+        "hotkey_global_unsupported": "O atalho global não funciona neste sistema.",
+        "local_only": "O atalho global só pode ser ligado na janela do PC."
       },
       "keyNames": {
         "Space": "Espaço",

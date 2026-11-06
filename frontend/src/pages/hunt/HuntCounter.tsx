@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router'
 import { Badge, Button, Callout, Card, Icon, Modal, useIsMobile, useToast } from '../../components/ui'
 import { ApiError, api, spriteUrl } from '../../lib/api'
 import { useApiGet } from '../../lib/dex'
-import { formatCombo, useHotkey, useHotkeySettings } from '../../lib/hotkeys'
+import { formatCombo, globalActive, modalOpen, useHotkey, useHotkeySettings } from '../../lib/hotkeys'
 import {
   cumulative,
   formatElapsed,
@@ -13,6 +13,7 @@ import {
   huntErrorMessage,
   saveElapsedOnExit,
   stepFor,
+  useGlobalHotkeyEvents,
   useHuntIncrements,
   useSpeciesOptions,
   type Hunt,
@@ -136,8 +137,13 @@ export default function HuntCounter() {
   const { increment, idle, pending } = useHuntIncrements(hunt && !hunt.endedAt ? id : null, setHunt, onIncrementError)
 
   const active = !!hunt && !hunt.endedAt
-  useHotkey(active && !mobile && !confirm ? hotkeys.increment : null, () => increment(1))
-  useHotkey(active && !mobile && !confirm ? hotkeys.decrement : null, () => increment(-1))
+  // Com o atalho global ligado, a tecla chega pelo servidor (também com a janela na frente): o atalho da janela sai
+  // para não contar duas vezes.
+  const globalKeys = globalActive(hotkeys)
+  const windowKeys = active && !mobile && !confirm && !globalKeys
+  useHotkey(windowKeys ? hotkeys.increment : null, () => increment(1))
+  useHotkey(windowKeys ? hotkeys.decrement : null, () => increment(-1))
+  useGlobalHotkeyEvents(globalKeys && active, increment, () => !confirm && !modalOpen())
 
   const method = useMemo(
     () => games.data?.find((g) => g.gameKey === hunt?.gameKey)?.methods.find((m) => m.id === hunt?.methodId) ?? null,
@@ -347,7 +353,7 @@ export default function HuntCounter() {
             </div>
             {!mobile && (
               <p className="text-[12.5px] text-muted">
-                {t('hunt.counter.hotkeysHint', { inc: formatCombo(hotkeys.increment, keyNames), dec: formatCombo(hotkeys.decrement, keyNames) })}
+                {t(globalKeys ? 'hunt.counter.hotkeysHintGlobal' : 'hunt.counter.hotkeysHint', { inc: formatCombo(hotkeys.increment, keyNames), dec: formatCombo(hotkeys.decrement, keyNames) })}
               </p>
             )}
           </>

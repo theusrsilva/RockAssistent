@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createIncrementQueue, cumulative, formatElapsed, stepFor, type ShinyModifier } from './hunts'
+import { createIncrementQueue, cumulative, formatElapsed, stepFor, subscribeHotkeyEvents, type HotkeyEventSource, type ShinyModifier } from './hunts'
 
 /** Servidor falso: cada pedido fica parado até o teste resolver. */
 function fakeServer() {
@@ -89,5 +89,43 @@ describe('contas', () => {
   it('cronômetro', () => {
     expect(formatElapsed(65)).toBe('1:05')
     expect(formatElapsed(3725)).toBe('1:02:05')
+  })
+})
+
+describe('atalho global (SSE)', () => {
+  function fakeSource() {
+    const source: HotkeyEventSource & { closed: boolean } = {
+      onmessage: null,
+      closed: false,
+      close: () => {
+        source.closed = true
+      },
+    }
+    return source
+  }
+  const send = (s: HotkeyEventSource, data: unknown) =>
+    s.onmessage?.({ data: typeof data === 'string' ? data : JSON.stringify(data) } as MessageEvent)
+
+  it('evento hotkey chama o increment da fila', () => {
+    const source = fakeSource()
+    const deltas: number[] = []
+    let allowed = true
+    const stop = subscribeHotkeyEvents(source, (d) => deltas.push(d), () => allowed)
+    send(source, { type: 'hotkey', id: 'increment' })
+    send(source, { type: 'hotkey', id: 'increment' })
+    send(source, { type: 'hotkey', id: 'decrement' })
+    expect(deltas).toEqual([1, 1, -1])
+
+    // Com modal aberto (ou a hunt terminada) não conta; lixo é ignorado.
+    allowed = false
+    send(source, { type: 'hotkey', id: 'increment' })
+    allowed = true
+    send(source, 'não é json')
+    send(source, { type: 'outro', id: 'increment' })
+    send(source, { type: 'hotkey', id: 'reset' })
+    expect(deltas).toEqual([1, 1, -1])
+
+    stop()
+    expect(source.closed).toBe(true)
   })
 })

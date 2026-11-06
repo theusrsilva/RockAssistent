@@ -256,6 +256,12 @@ public sealed class ServerModeTests : IAsyncLifetime
         var initial = await rafa.GetJsonAsync("/api/settings/hotkeys");
         Assert.Equal("Space", initial.GetProperty("increment").GetString());
         Assert.Equal("Backspace", initial.GetProperty("decrement").GetString());
+        // Atalho global só na janela do PC: pela rede não liga e as teclas do PC não chegam.
+        Assert.False(initial.GetProperty("supported").GetBoolean());
+        Assert.Equal("remote", initial.GetProperty("reason").GetString());
+        Assert.Equal(HttpStatusCode.Forbidden, (await rafa.PutAsync("/api/settings/hotkeys",
+            new { increment = "Space", decrement = "Backspace", global = true })).StatusCode);
+        Assert.Equal(HttpStatusCode.Forbidden, (await rafa.GetAsync("/api/hunts/events")).StatusCode);
 
         Assert.Equal(HttpStatusCode.OK, (await rafa.PutAsync("/api/settings/hotkeys", new { increment = "Ctrl+ArrowUp", decrement = "Ctrl+ArrowDown" })).StatusCode);
         Assert.Equal("Ctrl+ArrowUp", (await rafa.GetJsonAsync("/api/settings/hotkeys")).GetProperty("increment").GetString());

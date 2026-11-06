@@ -187,6 +187,56 @@ export function useHuntIncrements(huntId: string | null, onHunt: (hunt: Hunt) =>
   }
 }
 
+// ---- Atalho global (GET /api/hunts/events, só na janela do PC) ----
+
+/** O pedaço do EventSource que o atalho global usa (dá para testar sem navegador). */
+export interface HotkeyEventSource {
+  onmessage: ((e: MessageEvent) => void) | null
+  close: () => void
+}
+
+/**
+ * Liga as teclas do atalho global ao contador: {type:"hotkey", id:"increment"|"decrement"} → increment(+1/−1), só
+ * quando <allowed>() (hunt em andamento e sem janela modal). Devolve a função que desliga.
+ */
+export function subscribeHotkeyEvents(
+  source: HotkeyEventSource,
+  increment: (delta: number) => void,
+  allowed: () => boolean,
+): () => void {
+  source.onmessage = (e) => {
+    let event: { type?: string; id?: string }
+    try {
+      event = JSON.parse(e.data) as { type?: string; id?: string }
+    } catch {
+      return
+    }
+    if (event.type !== 'hotkey' || !allowed()) return
+    if (event.id === 'increment') increment(1)
+    else if (event.id === 'decrement') increment(-1)
+  }
+  return () => source.close()
+}
+
+/**
+ * Escuta o atalho global enquanto <enabled>. <increment> e <allowed> podem mudar a cada render (vale o mais recente).
+ * O EventSource reconecta sozinho se a conexão cair.
+ */
+export function useGlobalHotkeyEvents(enabled: boolean, increment: (delta: number) => void, allowed: () => boolean) {
+  const latest = useRef({ increment, allowed })
+  useEffect(() => {
+    latest.current = { increment, allowed }
+  })
+  useEffect(() => {
+    if (!enabled || typeof EventSource === 'undefined') return
+    return subscribeHotkeyEvents(
+      new EventSource('/api/hunts/events'),
+      (delta) => latest.current.increment(delta),
+      () => latest.current.allowed(),
+    )
+  }, [enabled])
+}
+
 // ---- Contas e textos ----
 
 /** 1 - (1 - 1/N)^count, como ShinyOdds.Cumulative do backend. */

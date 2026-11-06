@@ -1,3 +1,5 @@
+using System.Text.Json;
+using TradeRock.App.Hotkeys;
 using TradeRock.Core.Hunts;
 
 namespace TradeRock.App.Api;
@@ -41,8 +43,54 @@ public static class HuntEndpoints
                 return Error(ex);
             }
         });
+        // Atalho global apertado (só a janela local: AccessPolicy). O contador aberto soma ou diminui.
+        hunts.MapGet("/events", StreamHotkeysAsync);
         hunts.MapGet("/species/{id:int}/games", (int id, HuntStore store, CancellationToken ct) =>
             Run(() => store.GamesForSpeciesAsync(id, ct)));
+    }
+
+    /// <summary>
+    /// Server-Sent Events com as teclas do atalho global: <c>data: {"type":"hotkey","id":"increment"}</c>. Sem
+    /// histórico: quem conecta recebe só as teclas apertadas dali em diante.
+    /// </summary>
+    private static async Task StreamHotkeysAsync(HttpContext context, GlobalHotkeyService hotkeys)
+    {
+        context.Response.Headers.ContentType = "text/event-stream";
+        context.Response.Headers.CacheControl = "no-cache";
+        context.Response.Headers["X-Accel-Buffering"] = "no";
+        using var subscription = hotkeys.Subscribe();
+        var ct = context.RequestAborted;
+        try
+        {
+            await context.Response.WriteAsync(": ok\n\n", ct);
+            await context.Response.Body.FlushAsync(ct);
+            while (!ct.IsCancellationRequested)
+            {
+                using var heartbeat = CancellationTokenSource.CreateLinkedTokenSource(ct);
+                heartbeat.CancelAfter(TimeSpan.FromSeconds(15));
+                try
+                {
+                    if (!await subscription.Reader.WaitToReadAsync(heartbeat.Token))
+                        break;
+                }
+                catch (OperationCanceledException) when (!ct.IsCancellationRequested)
+                {
+                    await context.Response.WriteAsync(": keep-alive\n\n", ct);
+                    await context.Response.Body.FlushAsync(ct);
+                    continue;
+                }
+                while (subscription.Reader.TryRead(out var id))
+                {
+                    var data = JsonSerializer.Serialize(new { type = "hotkey", id });
+                    await context.Response.WriteAsync($"data: {data}\n\n", ct);
+                }
+                await context.Response.Body.FlushAsync(ct);
+            }
+        }
+        catch (OperationCanceledException) when (ct.IsCancellationRequested)
+        {
+            // cliente desconectou
+        }
     }
 
     private static async Task<IResult> Run<T>(Func<Task<T>> action)

@@ -30,6 +30,17 @@ export const DEFAULT_HOTKEYS = { increment: 'Space', decrement: 'Backspace' }
 export interface HotkeySettings {
   increment: string
   decrement: string
+  /** Atalho global: vale com o app em segundo plano (só na janela do PC, Windows e X11). */
+  global?: boolean
+  /** O sistema deixa ter atalho global (vem do GET; não vai no PUT). */
+  supported?: boolean
+  /** Por que não: wayland, no_x11, in_use, unsupported_os, remote. */
+  reason?: string | null
+}
+
+/** O atalho global está valendo (ligado, o sistema deixa e o registro deu certo). */
+export function globalActive(keys: HotkeySettings): boolean {
+  return !!keys.global && !!keys.supported && !keys.reason
 }
 
 const MODIFIERS: Record<string, keyof Omit<Combo, 'code'>> = {
@@ -42,6 +53,9 @@ const MODIFIERS: Record<string, keyof Omit<Combo, 'code'>> = {
 
 /** Teclas que sozinhas são só modificadores (não viram atalho ao gravar). */
 const MODIFIER_CODES = /^(Shift|Control|Alt|Meta|OS)(Left|Right)?$|^(AltGraph|CapsLock|Fn|FnLock)$/
+
+/** Teclas que não viram atalho: Tab e Enter navegam e clicam, Esc fecha e cancela (o servidor recusa igual). */
+const RESERVED_CODES = new Set(['Tab', 'Enter', 'Escape'])
 
 /** "Ctrl+ArrowUp" → { ctrl: true, code: 'ArrowUp' }. Nulo quando não há tecla ou o modificador é desconhecido. */
 export function parseCombo(text: string): Combo | null {
@@ -91,13 +105,19 @@ export function handleHotkey(combo: Combo | null, e: KeyLike, handler: () => voi
   if (!combo || !matchesCombo(combo, e) || shouldIgnore(e, modal)) return false
   // Espaço rola a página e Backspace pode voltar: o atalho fica com a tecla.
   e.preventDefault()
+  // Espaço e Enter num botão ou link focado também "clicariam" nele: tira o foco para não contar duas vezes.
+  if (combo.code === 'Space' || combo.code === 'Enter') {
+    const target = e.target as { tagName?: string; blur?: () => void } | null
+    const tag = (target?.tagName ?? '').toUpperCase()
+    if ((tag === 'BUTTON' || tag === 'A') && typeof target?.blur === 'function') target.blur()
+  }
   handler()
   return true
 }
 
-/** Combo da tecla apertada (para gravar o atalho). Nulo se só um modificador foi apertado. */
+/** Combo da tecla apertada (para gravar o atalho). Nulo se só um modificador foi apertado ou a tecla é Tab, Enter ou Esc. */
 export function comboFromEvent(e: KeyLike): string | null {
-  if (!e.code || MODIFIER_CODES.test(e.code)) return null
+  if (!e.code || MODIFIER_CODES.test(e.code) || RESERVED_CODES.has(e.code)) return null
   const mods = [e.ctrlKey && 'Ctrl', e.altKey && 'Alt', e.shiftKey && 'Shift', e.metaKey && 'Meta'].filter(Boolean)
   return [...mods, e.code].join('+')
 }

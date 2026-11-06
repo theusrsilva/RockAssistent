@@ -1,14 +1,21 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Callout, useToast } from '../../components/ui'
+import { Button, Callout, Toggle, useToast } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
 import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, type HotkeySettings } from '../../lib/hotkeys'
 
-type Which = keyof HotkeySettings
+type Which = 'increment' | 'decrement'
+
+/** Erros do PUT com texto próprio (hunt.hotkeys.errors.*). */
+const KNOWN_ERRORS = ['hotkeys_same', 'hotkey_invalid', 'hotkey_unsupported', 'hotkey_in_use', 'hotkey_global_unsupported', 'local_only']
+
+/** Motivos do atalho global com texto (hunt.hotkeys.global.reasons.*). */
+const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'remote']
 
 /**
  * Atalhos do Contador Hunt (Configurações → Preferências). "Gravar" pega a próxima tecla apertada; Esc cancela.
- * Vale na janela local e, no modo servidor, por conta (GET/PUT /api/settings/hotkeys).
+ * Vale na janela local e, no modo servidor, por conta (GET/PUT /api/settings/hotkeys). O atalho global (com o app em
+ * segundo plano) só aparece na janela do PC; sem suporte do sistema, o motivo fica no lugar do botão.
  */
 export function HotkeysCard() {
   const { t } = useTranslation()
@@ -31,11 +38,14 @@ export function HotkeysCard() {
     }
     setBusy(true)
     try {
-      setKeys(await api.put<HotkeySettings>('/api/settings/hotkeys', next))
+      const body = { increment: next.increment, decrement: next.decrement, global: !!next.global }
+      setKeys(await api.put<HotkeySettings>('/api/settings/hotkeys', body))
       toast(t('common.saved'))
     } catch (e) {
       const code = e instanceof ApiError ? e.code : null
-      setError(code === 'hotkeys_same' || code === 'hotkey_invalid' ? t(`hunt.hotkeys.errors.${code}`) : t('common.error'))
+      setError(code && KNOWN_ERRORS.includes(code) ? t(`hunt.hotkeys.errors.${code}`) : t('common.error'))
+      // O servidor voltou ao que valia: mostra o estado real.
+      api.get<HotkeySettings>('/api/settings/hotkeys').then(setKeys).catch(() => undefined)
     } finally {
       setBusy(false)
     }
@@ -73,7 +83,7 @@ export function HotkeysCard() {
           size="sm"
           icon="restart_alt"
           disabled={busy || !keys || (keys.increment === DEFAULT_HOTKEYS.increment && keys.decrement === DEFAULT_HOTKEYS.decrement)}
-          onClick={() => void save(DEFAULT_HOTKEYS)}
+          onClick={() => keys && void save({ ...DEFAULT_HOTKEYS, global: keys.global })}
         >
           {t('hunt.hotkeys.reset')}
         </Button>
@@ -110,6 +120,29 @@ export function HotkeysCard() {
             </li>
           ))}
         </ul>
+      )}
+
+      {keys !== null && keys.reason !== 'remote' && (
+        <div className="flex flex-col gap-1.5 rounded-lg bg-surface2 px-3 py-2.5">
+          {keys.supported ? (
+            <>
+              <Toggle
+                on={!!keys.global}
+                disabled={busy || recording !== null}
+                onChange={(on) => void save({ ...keys, global: on })}
+                label={t('hunt.hotkeys.global.label')}
+              />
+              <p className="text-[12.5px] text-muted">{t('hunt.hotkeys.global.help')}</p>
+            </>
+          ) : (
+            <Toggle on={false} disabled onChange={() => undefined} label={t('hunt.hotkeys.global.label')} />
+          )}
+          {keys.reason && (keys.global || !keys.supported) && (
+            <p className={`text-[12.5px] ${keys.supported ? 'text-bad' : 'text-muted'}`}>
+              {KNOWN_REASONS.includes(keys.reason) ? t(`hunt.hotkeys.global.reasons.${keys.reason}`) : keys.reason}
+            </p>
+          )}
+        </div>
       )}
 
       {error && (

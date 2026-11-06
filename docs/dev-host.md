@@ -141,3 +141,20 @@ Não precisa de root nem do worker instalado: o ESP32 conversa com o app pela se
 7. Se algo falhar, mande:
    - o relatório (Resumo → Exportar relatório);
    - o `native.log` da sessão, em `~/.local/share/traderock/logs/esp32/<sessão>/`, que não tem chaves.
+
+## Roteiro de teste do atalho global do Contador Hunt
+
+Os testes automáticos cobrem o combo, a tabela de teclas, a API e o SSE com um atalho falso. No WSLg (XWayland) o
+`XGrabKey` e o `BadAccess` de outra conexão foram verificados; a tecla apertada de verdade, não. Para conferir à mão:
+
+1. **Linux com X11** (sessão "Xorg"/X11, não Wayland): abra o app, Configurações → Preferências → ligue "Atalho global".
+   Crie uma hunt, abra o contador e ponha outra janela na frente (um editor de texto, o emulador). Aperte o atalho de
+   somar (padrão Espaço): o contador sobe uma vez por aperto (segurar a tecla não repete). Com a janela do app na frente,
+   conta uma vez só. Com NumLock e CapsLock ligados, continua funcionando.
+2. **Tecla em uso:** com outro programa que pegue a mesma tecla global (ex.: `xbindkeys` com `F8`), escolha F8 → o app
+   mostra "Outro programa já usa essa tecla" e o atalho anterior continua.
+3. **Wayland** (sessão GNOME/KDE padrão): o interruptor fica desligado com o aviso "No Wayland o sistema não permite".
+4. **Windows** (janela com WebView2 e também o modo "só navegador", sem WebView2): ligue o atalho, deixe o Bloco de
+   Notas na frente e aperte a tecla: o contador sobe e o Bloco de Notas não recebe a tecla. Fechar o app solta a tecla
+   (ela volta a funcionar no Bloco de Notas).
+5. **Modo servidor:** pelo celular/navegador da rede, o interruptor não aparece; o PUT com `global=true` dá 403.

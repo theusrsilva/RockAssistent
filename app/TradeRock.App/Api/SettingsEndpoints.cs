@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TradeRock.App.Hotkeys;
 using TradeRock.App.Server;
 using TradeRock.Core.Games;
 using TradeRock.Core.Engines;
@@ -17,12 +18,19 @@ public static class SettingsEndpoints
 
     /// <summary>
     /// Atalhos de teclado do Contador Hunt. O combo usa o <c>KeyboardEvent.code</c> do navegador com modificadores
-    /// na frente: <c>Space</c>, <c>Backspace</c>, <c>Ctrl+ArrowUp</c>, <c>Shift+Equal</c>.
+    /// na frente: <c>Space</c>, <c>Backspace</c>, <c>Ctrl+ArrowUp</c>, <c>Shift+Equal</c>. <c>Global</c>: valem também
+    /// com o app em segundo plano (só na janela local, Windows e X11).
     /// </summary>
-    public sealed record HotkeySettings(string Increment, string Decrement)
+    public sealed record HotkeySettings(string Increment, string Decrement, bool Global = false)
     {
         public static readonly HotkeySettings Default = new("Space", "Backspace");
     }
+
+    /// <summary>O que o GET devolve: os atalhos e se o atalho global funciona aqui (<c>reason</c> quando não).</summary>
+    public sealed record HotkeySettingsDto(string Increment, string Decrement, bool Global, bool Supported, string? Reason);
+
+    /// <summary>Teclas que não viram atalho: Tab e Enter navegam e clicam, Esc fecha e cancela.</summary>
+    private static readonly HashSet<string> ReservedKeys = new(StringComparer.OrdinalIgnoreCase) { "Tab", "Enter", "Escape" };
 
     private static readonly System.Text.RegularExpressions.Regex ComboPattern =
         new(@"^((Ctrl|Alt|Shift|Meta)\+){0,4}[A-Za-z][A-Za-z0-9]{0,24}$", System.Text.RegularExpressions.RegexOptions.CultureInvariant);
@@ -33,7 +41,7 @@ public static class SettingsEndpoints
         if (string.IsNullOrEmpty(combo) || combo.Length > 60 || !ComboPattern.IsMatch(combo))
             return false;
         var key = combo[(combo.LastIndexOf('+') + 1)..];
-        return key is not ("Ctrl" or "Alt" or "Shift" or "Meta" or "Control");
+        return key is not ("Ctrl" or "Alt" or "Shift" or "Meta" or "Control") && !ReservedKeys.Contains(key);
     }
 
     /// <summary>Motor e os jogos que ele troca (chaves do catálogo: frlg, sv...).</summary>
@@ -65,19 +73,52 @@ public static class SettingsEndpoints
             return normalized;
         });
 
-        // Atalhos do Contador Hunt: na janela local e, no modo servidor, por conta.
-        api.MapGet("/settings/hotkeys", async (SettingsStore settings, CancellationToken ct) =>
-            await settings.GetAsync(UserSettings.Key(HotkeysKey), HotkeySettings.Default, ct));
+        // Atalhos do Contador Hunt: na janela local e, no modo servidor, por conta. O atalho global só na janela local.
+        api.MapGet("/settings/hotkeys", async (HttpContext context, SettingsStore settings, GlobalHotkeyService global,
+            CancellationToken ct) =>
+        {
+            var saved = await settings.GetAsync(UserSettings.Key(HotkeysKey), HotkeySettings.Default, ct);
+            return Caller.Of(context).IsLocal
+                ? new HotkeySettingsDto(saved.Increment, saved.Decrement, saved.Global, global.Supported, global.Reason)
+                : new HotkeySettingsDto(saved.Increment, saved.Decrement, false, false, "remote");
+        });
 
-        api.MapPut("/settings/hotkeys", async (HotkeySettings body, SettingsStore settings, CancellationToken ct) =>
+        api.MapPut("/settings/hotkeys", async (HotkeySettings body, HttpContext context, SettingsStore settings,
+            GlobalHotkeyService global, CancellationToken ct) =>
         {
             if (!IsValidCombo(body.Increment) || !IsValidCombo(body.Decrement))
                 return Results.BadRequest(new { error = "hotkey_invalid" });
             if (string.Equals(body.Increment, body.Decrement, StringComparison.OrdinalIgnoreCase))
                 return Results.BadRequest(new { error = "hotkeys_same" });
-            var saved = new HotkeySettings(body.Increment, body.Decrement);
+            var local = Caller.Of(context).IsLocal;
+            if (body.Global && !local)
+                return Results.Json(new { error = "local_only" }, statusCode: StatusCodes.Status403Forbidden);
+
+            var saved = new HotkeySettings(body.Increment, body.Decrement, body.Global);
+            if (local)
+            {
+                var previous = await settings.GetAsync(UserSettings.Key(HotkeysKey), HotkeySettings.Default, ct);
+                if (saved.Global && !global.Supported)
+                    return Results.Conflict(new { error = GlobalHotkeyException.GlobalUnsupported, reason = global.Reason });
+                if (saved.Global || previous.Global)
+                {
+                    try
+                    {
+                        global.Apply(saved);
+                    }
+                    catch (GlobalHotkeyException ex)
+                    {
+                        // Nada salvo: volta o atalho que valia.
+                        try { global.Apply(previous); } catch (GlobalHotkeyException) { }
+                        return Results.Json(new { error = ex.Code },
+                            statusCode: ex.Code == GlobalHotkeyException.Unsupported ? StatusCodes.Status400BadRequest : StatusCodes.Status409Conflict);
+                    }
+                }
+            }
             await settings.SetAsync(UserSettings.Key(HotkeysKey), saved, ct);
-            return Results.Ok(saved);
+            return Results.Ok(local
+                ? new HotkeySettingsDto(saved.Increment, saved.Decrement, saved.Global, global.Supported, global.Reason)
+                : new HotkeySettingsDto(saved.Increment, saved.Decrement, false, false, "remote"));
         });
 
         // Pastas de saves da tela Boxes (só na janela local: são caminhos do PC).

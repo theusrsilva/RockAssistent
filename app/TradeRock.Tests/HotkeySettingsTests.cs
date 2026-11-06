@@ -84,5 +84,9 @@ public sealed class HotkeySettingsTests : IAsyncLifetime
     [InlineData("Shift", false)]
     [InlineData("Ctrl+", false)]
     [InlineData("Foo+KeyA", false)]
+    [InlineData("Tab", false)]
+    [InlineData("Shift+Tab", false)]
+    [InlineData("Enter", false)]
+    [InlineData("Ctrl+Escape", false)]
     public void Valida_o_combo(string combo, bool valid) => Assert.Equal(valid, SettingsEndpoints.IsValidCombo(combo));
 }

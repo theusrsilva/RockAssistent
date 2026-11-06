@@ -2145,6 +2145,7 @@
       "step": "{{name}} {{value}}: 1 in {{odds}}",
       "stepNone": "{{name}} {{value}}: no bonus yet",
       "hotkeysHint": "Shortcuts: {{inc}} adds and {{dec}} removes. Change them in Settings → Preferences.",
+      "hotkeysHintGlobal": "Global shortcut on: {{inc}} adds and {{dec}} removes even with the app behind another window.",
       "finishedFound": "You found the shiny on {{date}}!",
       "finishedGaveUp": "Hunt ended on {{date}}.",
       "foundToast": "Congrats on the shiny!",
@@ -2178,9 +2179,24 @@
       "record": "Record",
       "recording": "Press the key... (Esc cancels)",
       "reset": "Back to default",
+      "global": {
+        "label": "Global shortcut (works with the app in the background)",
+        "help": "For emulator players: the keys count even with another window in front. Other programs stop receiving them while RockAssistent is open.",
+        "reasons": {
+          "wayland": "Wayland doesn't allow global shortcuts; use the window shortcut.",
+          "no_x11": "Couldn't talk to X11 (no X display); use the window shortcut.",
+          "in_use": "Another program already uses one of these keys. Pick another and turn it on again.",
+          "unsupported_os": "This system has no global shortcuts; use the window shortcut.",
+          "remote": "The global shortcut can only be turned on in the PC window."
+        }
+      },
       "errors": {
         "hotkeys_same": "The two shortcuts can't be the same.",
-        "hotkey_invalid": "That key can't be a shortcut."
+        "hotkey_invalid": "That key can't be a shortcut.",
+        "hotkey_unsupported": "That key can't be a global shortcut. Use letters, digits, F1–F12, arrows or the numeric keypad.",
+        "hotkey_in_use": "Another program already uses that key. Pick another.",
+        "hotkey_global_unsupported": "The global shortcut doesn't work on this system.",
+        "local_only": "The global shortcut can only be turned on in the PC window."
       },
       "keyNames": {
         "Space": "Space",
