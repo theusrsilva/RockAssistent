@@ -1,0 +1,1008 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Sinnoh",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo. Battle Zone no canto de cima à direita."
+  ],
+  "region": "sinnoh",
+  "nodes": [
+    {
+      "id": "twinleaf-town",
+      "name": "Twinleaf Town",
+      "kind": "city",
+      "x": 0.22,
+      "y": 0.84,
+      "games": null
+    },
+    {
+      "id": "route-201",
+      "name": "Route 201",
+      "kind": "route",
+      "x": 0.27,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "lake-verity",
+      "name": "Lake Verity",
+      "kind": "route",
+      "x": 0.2,
+      "y": 0.77,
+      "games": null
+    },
+    {
+      "id": "sandgem-town",
+      "name": "Sandgem Town",
+      "kind": "city",
+      "x": 0.32,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-202",
+      "name": "Route 202",
+      "kind": "route",
+      "x": 0.32,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "jubilife-city",
+      "name": "Jubilife City",
+      "kind": "city",
+      "x": 0.32,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "route-203",
+      "name": "Route 203",
+      "kind": "route",
+      "x": 0.4,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "oreburgh-gate",
+      "name": "Oreburgh Gate",
+      "kind": "dungeon",
+      "x": 0.46,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "oreburgh-city",
+      "name": "Oreburgh City",
+      "kind": "city",
+      "x": 0.52,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "oreburgh-mine",
+      "name": "Oreburgh Mine",
+      "kind": "dungeon",
+      "x": 0.52,
+      "y": 0.71,
+      "games": null
+    },
+    {
+      "id": "route-218",
+      "name": "Route 218",
+      "kind": "route",
+      "x": 0.22,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "canalave-city",
+      "name": "Canalave City",
+      "kind": "city",
+      "x": 0.14,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "iron-island",
+      "name": "Iron Island",
+      "kind": "dungeon",
+      "x": 0.06,
+      "y": 0.58,
+      "games": null
+    },
+    {
+      "id": "fullmoon-island",
+      "name": "Fullmoon Island",
+      "kind": "route",
+      "x": 0.12,
+      "y": 0.5,
+      "games": null
+    },
+    {
+      "id": "newmoon-island",
+      "name": "Newmoon Island",
+      "kind": "route",
+      "x": 0.06,
+      "y": 0.48,
+      "games": null
+    },
+    {
+      "id": "route-204",
+      "name": "Route 204",
+      "kind": "route",
+      "x": 0.32,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "ravaged-path",
+      "name": "Ravaged Path",
+      "kind": "dungeon",
+      "x": 0.35,
+      "y": 0.51,
+      "games": null
+    },
+    {
+      "id": "floaroma-town",
+      "name": "Floaroma Town",
+      "kind": "city",
+      "x": 0.32,
+      "y": 0.44,
+      "games": null
+    },
+    {
+      "id": "floaroma-meadow",
+      "name": "Floaroma Meadow",
+      "kind": "route",
+      "x": 0.27,
+      "y": 0.44,
+      "games": null
+    },
+    {
+      "id": "route-205",
+      "name": "Route 205",
+      "kind": "route",
+      "x": 0.38,
+      "y": 0.4,
+      "games": null
+    },
+    {
+      "id": "valley-windworks",
+      "name": "Valley Windworks",
+      "kind": "building",
+      "x": 0.4,
+      "y": 0.46,
+      "games": null
+    },
+    {
+      "id": "fuego-ironworks",
+      "name": "Fuego Ironworks",
+      "kind": "building",
+      "x": 0.45,
+      "y": 0.44,
+      "games": null
+    },
+    {
+      "id": "eterna-forest",
+      "name": "Eterna Forest",
+      "kind": "dungeon",
+      "x": 0.42,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "old-chateau",
+      "name": "Old Chateau",
+      "kind": "building",
+      "x": 0.4,
+      "y": 0.26,
+      "games": null
+    },
+    {
+      "id": "eterna-city",
+      "name": "Eterna City",
+      "kind": "city",
+      "x": 0.48,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "route-211-west",
+      "name": "Route 211 (west)",
+      "kind": "route",
+      "x": 0.53,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "mt-coronet",
+      "name": "Mt. Coronet",
+      "kind": "dungeon",
+      "x": 0.58,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "spear-pillar",
+      "name": "Spear Pillar",
+      "kind": "dungeon",
+      "x": 0.6,
+      "y": 0.31,
+      "games": null
+    },
+    {
+      "id": "route-211-east",
+      "name": "Route 211 (east)",
+      "kind": "route",
+      "x": 0.63,
+      "y": 0.28,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "celestic-town",
+      "name": "Celestic Town",
+      "kind": "city",
+      "x": 0.68,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "route-206",
+      "name": "Route 206 (Cycling Road)",
+      "kind": "route",
+      "x": 0.48,
+      "y": 0.4,
+      "games": null
+    },
+    {
+      "id": "wayward-cave",
+      "name": "Wayward Cave",
+      "kind": "dungeon",
+      "x": 0.51,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "route-207",
+      "name": "Route 207",
+      "kind": "route",
+      "x": 0.52,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "route-208",
+      "name": "Route 208",
+      "kind": "route",
+      "x": 0.62,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "hearthome-city",
+      "name": "Hearthome City",
+      "kind": "city",
+      "x": 0.7,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "route-209",
+      "name": "Route 209",
+      "kind": "route",
+      "x": 0.76,
+      "y": 0.46,
+      "games": null
+    },
+    {
+      "id": "lost-tower",
+      "name": "Lost Tower",
+      "kind": "building",
+      "x": 0.73,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "solaceon-town",
+      "name": "Solaceon Town",
+      "kind": "city",
+      "x": 0.78,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "solaceon-ruins",
+      "name": "Solaceon Ruins",
+      "kind": "dungeon",
+      "x": 0.82,
+      "y": 0.36,
+      "games": null
+    },
+    {
+      "id": "route-210-south",
+      "name": "Route 210 (south)",
+      "kind": "route",
+      "x": 0.78,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "route-210-north",
+      "name": "Route 210 (north)",
+      "kind": "route",
+      "x": 0.74,
+      "y": 0.24,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "route-215",
+      "name": "Route 215",
+      "kind": "route",
+      "x": 0.84,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "veilstone-city",
+      "name": "Veilstone City",
+      "kind": "city",
+      "x": 0.9,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "route-214",
+      "name": "Route 214",
+      "kind": "route",
+      "x": 0.9,
+      "y": 0.4,
+      "games": null
+    },
+    {
+      "id": "ruin-maniac-cave",
+      "name": "Ruin Maniac Cave",
+      "kind": "dungeon",
+      "x": 0.94,
+      "y": 0.44,
+      "games": null
+    },
+    {
+      "id": "spring-path",
+      "name": "Spring Path",
+      "kind": "route",
+      "x": 0.86,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "sendoff-spring",
+      "name": "Sendoff Spring",
+      "kind": "route",
+      "x": 0.83,
+      "y": 0.47,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "turnback-cave",
+      "name": "Turnback Cave",
+      "kind": "dungeon",
+      "x": 0.8,
+      "y": 0.49,
+      "games": null
+    },
+    {
+      "id": "valor-lakefront",
+      "name": "Valor Lakefront",
+      "kind": "route",
+      "x": 0.88,
+      "y": 0.54,
+      "games": null
+    },
+    {
+      "id": "lake-valor",
+      "name": "Lake Valor",
+      "kind": "route",
+      "x": 0.84,
+      "y": 0.57,
+      "games": null
+    },
+    {
+      "id": "route-213",
+      "name": "Route 213",
+      "kind": "route",
+      "x": 0.88,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "pastoria-city",
+      "name": "Pastoria City",
+      "kind": "city",
+      "x": 0.78,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "great-marsh",
+      "name": "Great Marsh",
+      "kind": "route",
+      "x": 0.78,
+      "y": 0.71,
+      "games": null
+    },
+    {
+      "id": "route-212",
+      "name": "Route 212",
+      "kind": "route",
+      "x": 0.7,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "route-219",
+      "name": "Route 219",
+      "kind": "sea",
+      "x": 0.32,
+      "y": 0.88,
+      "games": null
+    },
+    {
+      "id": "route-220",
+      "name": "Route 220",
+      "kind": "sea",
+      "x": 0.38,
+      "y": 0.92,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "route-221",
+      "name": "Route 221",
+      "kind": "route",
+      "x": 0.46,
+      "y": 0.92,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "pal-park",
+      "name": "Pal Park",
+      "kind": "building",
+      "x": 0.51,
+      "y": 0.94,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "route-216",
+      "name": "Route 216",
+      "kind": "route",
+      "x": 0.58,
+      "y": 0.2,
+      "games": null
+    },
+    {
+      "id": "route-217",
+      "name": "Route 217",
+      "kind": "route",
+      "x": 0.58,
+      "y": 0.12,
+      "games": null
+    },
+    {
+      "id": "acuity-lakefront",
+      "name": "Acuity Lakefront",
+      "kind": "route",
+      "x": 0.58,
+      "y": 0.04,
+      "games": null
+    },
+    {
+      "id": "snowpoint-city",
+      "name": "Snowpoint City",
+      "kind": "city",
+      "x": 0.5,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "snowpoint-temple",
+      "name": "Snowpoint Temple",
+      "kind": "dungeon",
+      "x": 0.45,
+      "y": 0.03,
+      "games": null
+    },
+    {
+      "id": "route-222",
+      "name": "Route 222",
+      "kind": "route",
+      "x": 0.92,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "sunyshore-city",
+      "name": "Sunyshore City",
+      "kind": "city",
+      "x": 0.97,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-223",
+      "name": "Route 223",
+      "kind": "sea",
+      "x": 0.97,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "x": 0.97,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "x": 0.97,
+      "y": 0.47,
+      "games": null
+    },
+    {
+      "id": "route-224",
+      "name": "Route 224",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "flower-paradise",
+      "name": "Flower Paradise",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.31,
+      "games": null
+    },
+    {
+      "id": "fight-area",
+      "name": "Fight Area",
+      "kind": "city",
+      "x": 0.76,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "route-225",
+      "name": "Route 225",
+      "kind": "route",
+      "x": 0.78,
+      "y": 0.03,
+      "games": null
+    },
+    {
+      "id": "survival-area",
+      "name": "Survival Area",
+      "kind": "city",
+      "x": 0.86,
+      "y": 0.02,
+      "games": null
+    },
+    {
+      "id": "route-226",
+      "name": "Route 226",
+      "kind": "sea",
+      "x": 0.92,
+      "y": 0.03,
+      "games": [
+        "dp",
+        "pt"
+      ]
+    },
+    {
+      "id": "route-227",
+      "name": "Route 227",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.09,
+      "games": null
+    },
+    {
+      "id": "stark-mountain",
+      "name": "Stark Mountain",
+      "kind": "dungeon",
+      "x": 0.97,
+      "y": 0.16,
+      "games": null
+    },
+    {
+      "id": "route-228",
+      "name": "Route 228",
+      "kind": "route",
+      "x": 0.9,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "route-229",
+      "name": "Route 229",
+      "kind": "route",
+      "x": 0.86,
+      "y": 0.15,
+      "games": null
+    },
+    {
+      "id": "resort-area",
+      "name": "Resort Area",
+      "kind": "city",
+      "x": 0.82,
+      "y": 0.18,
+      "games": null
+    },
+    {
+      "id": "route-230",
+      "name": "Route 230",
+      "kind": "sea",
+      "x": 0.79,
+      "y": 0.14,
+      "games": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "twinleaf-town",
+      "to": "route-201"
+    },
+    {
+      "from": "route-201",
+      "to": "lake-verity"
+    },
+    {
+      "from": "route-201",
+      "to": "sandgem-town"
+    },
+    {
+      "from": "sandgem-town",
+      "to": "route-202"
+    },
+    {
+      "from": "sandgem-town",
+      "to": "route-219"
+    },
+    {
+      "from": "route-202",
+      "to": "jubilife-city"
+    },
+    {
+      "from": "jubilife-city",
+      "to": "route-203"
+    },
+    {
+      "from": "route-203",
+      "to": "oreburgh-gate"
+    },
+    {
+      "from": "oreburgh-gate",
+      "to": "oreburgh-city"
+    },
+    {
+      "from": "oreburgh-city",
+      "to": "oreburgh-mine"
+    },
+    {
+      "from": "oreburgh-city",
+      "to": "route-207"
+    },
+    {
+      "from": "jubilife-city",
+      "to": "route-204"
+    },
+    {
+      "from": "route-204",
+      "to": "ravaged-path"
+    },
+    {
+      "from": "route-204",
+      "to": "floaroma-town"
+    },
+    {
+      "from": "floaroma-town",
+      "to": "floaroma-meadow"
+    },
+    {
+      "from": "floaroma-town",
+      "to": "route-205"
+    },
+    {
+      "from": "route-205",
+      "to": "valley-windworks"
+    },
+    {
+      "from": "route-205",
+      "to": "eterna-forest"
+    },
+    {
+      "from": "route-205",
+      "to": "fuego-ironworks"
+    },
+    {
+      "from": "eterna-forest",
+      "to": "old-chateau"
+    },
+    {
+      "from": "eterna-forest",
+      "to": "eterna-city"
+    },
+    {
+      "from": "eterna-city",
+      "to": "route-211-west"
+    },
+    {
+      "from": "route-211-west",
+      "to": "mt-coronet"
+    },
+    {
+      "from": "mt-coronet",
+      "to": "route-211-east"
+    },
+    {
+      "from": "route-211-east",
+      "to": "celestic-town"
+    },
+    {
+      "from": "eterna-city",
+      "to": "route-206"
+    },
+    {
+      "from": "route-206",
+      "to": "wayward-cave"
+    },
+    {
+      "from": "route-206",
+      "to": "route-207"
+    },
+    {
+      "from": "route-207",
+      "to": "mt-coronet"
+    },
+    {
+      "from": "mt-coronet",
+      "to": "route-208"
+    },
+    {
+      "from": "mt-coronet",
+      "to": "spear-pillar"
+    },
+    {
+      "from": "mt-coronet",
+      "to": "route-216"
+    },
+    {
+      "from": "route-208",
+      "to": "hearthome-city"
+    },
+    {
+      "from": "hearthome-city",
+      "to": "route-209"
+    },
+    {
+      "from": "route-209",
+      "to": "lost-tower"
+    },
+    {
+      "from": "route-209",
+      "to": "solaceon-town"
+    },
+    {
+      "from": "solaceon-town",
+      "to": "solaceon-ruins"
+    },
+    {
+      "from": "solaceon-town",
+      "to": "route-210-south"
+    },
+    {
+      "from": "route-210-south",
+      "to": "route-215"
+    },
+    {
+      "from": "route-215",
+      "to": "veilstone-city"
+    },
+    {
+      "from": "route-210-south",
+      "to": "route-210-north"
+    },
+    {
+      "from": "route-210-north",
+      "to": "celestic-town"
+    },
+    {
+      "from": "veilstone-city",
+      "to": "route-214"
+    },
+    {
+      "from": "route-214",
+      "to": "ruin-maniac-cave"
+    },
+    {
+      "from": "route-214",
+      "to": "spring-path"
+    },
+    {
+      "from": "spring-path",
+      "to": "sendoff-spring"
+    },
+    {
+      "from": "sendoff-spring",
+      "to": "turnback-cave"
+    },
+    {
+      "from": "route-214",
+      "to": "valor-lakefront"
+    },
+    {
+      "from": "valor-lakefront",
+      "to": "lake-valor"
+    },
+    {
+      "from": "valor-lakefront",
+      "to": "route-213"
+    },
+    {
+      "from": "route-213",
+      "to": "pastoria-city"
+    },
+    {
+      "from": "pastoria-city",
+      "to": "great-marsh"
+    },
+    {
+      "from": "pastoria-city",
+      "to": "route-212"
+    },
+    {
+      "from": "route-212",
+      "to": "hearthome-city"
+    },
+    {
+      "from": "valor-lakefront",
+      "to": "route-222"
+    },
+    {
+      "from": "route-222",
+      "to": "sunyshore-city"
+    },
+    {
+      "from": "sunyshore-city",
+      "to": "route-223"
+    },
+    {
+      "from": "route-223",
+      "to": "victory-road"
+    },
+    {
+      "from": "victory-road",
+      "to": "pokemon-league"
+    },
+    {
+      "from": "pokemon-league",
+      "to": "route-224"
+    },
+    {
+      "from": "route-224",
+      "to": "flower-paradise"
+    },
+    {
+      "from": "route-219",
+      "to": "route-220"
+    },
+    {
+      "from": "route-220",
+      "to": "route-221"
+    },
+    {
+      "from": "route-221",
+      "to": "pal-park"
+    },
+    {
+      "from": "jubilife-city",
+      "to": "route-218"
+    },
+    {
+      "from": "route-218",
+      "to": "canalave-city"
+    },
+    {
+      "from": "canalave-city",
+      "to": "iron-island"
+    },
+    {
+      "from": "canalave-city",
+      "to": "fullmoon-island"
+    },
+    {
+      "from": "canalave-city",
+      "to": "newmoon-island"
+    },
+    {
+      "from": "route-216",
+      "to": "route-217"
+    },
+    {
+      "from": "route-217",
+      "to": "acuity-lakefront"
+    },
+    {
+      "from": "acuity-lakefront",
+      "to": "snowpoint-city"
+    },
+    {
+      "from": "snowpoint-city",
+      "to": "snowpoint-temple"
+    },
+    {
+      "from": "snowpoint-city",
+      "to": "fight-area"
+    },
+    {
+      "from": "fight-area",
+      "to": "route-225"
+    },
+    {
+      "from": "route-225",
+      "to": "survival-area"
+    },
+    {
+      "from": "survival-area",
+      "to": "route-226"
+    },
+    {
+      "from": "route-226",
+      "to": "route-227"
+    },
+    {
+      "from": "route-227",
+      "to": "stark-mountain"
+    },
+    {
+      "from": "route-226",
+      "to": "route-228"
+    },
+    {
+      "from": "route-228",
+      "to": "route-229"
+    },
+    {
+      "from": "route-229",
+      "to": "resort-area"
+    },
+    {
+      "from": "resort-area",
+      "to": "route-230"
+    },
+    {
+      "from": "route-230",
+      "to": "fight-area"
+    }
+  ]
+}

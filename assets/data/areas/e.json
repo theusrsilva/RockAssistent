@@ -1,0 +1,940 @@
+{
+  "source": [
+    "https://www.pokemythology.net/detonados/detonado-emerald/",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/e-pokemythology-notes.md. bosses_before: chefes vencidos desde a área anterior da lista (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "littleroot-town",
+      "name": "Littleroot Town",
+      "kind": "city",
+      "order": 1,
+      "map_node": "littleroot-town",
+      "poke_api_location_id": 567,
+      "bosses_before": []
+    },
+    {
+      "id": "route-101",
+      "name": "Route 101",
+      "kind": "route",
+      "order": 2,
+      "map_node": "route-101",
+      "poke_api_location_id": 449,
+      "bosses_before": []
+    },
+    {
+      "id": "oldale-town",
+      "name": "Oldale Town",
+      "kind": "city",
+      "order": 3,
+      "map_node": "oldale-town",
+      "poke_api_location_id": 568,
+      "bosses_before": []
+    },
+    {
+      "id": "route-103",
+      "name": "Route 103",
+      "kind": "route",
+      "order": 4,
+      "map_node": "route-103",
+      "poke_api_location_id": 451,
+      "bosses_before": []
+    },
+    {
+      "id": "route-102",
+      "name": "Route 102",
+      "kind": "route",
+      "order": 5,
+      "map_node": "route-102",
+      "poke_api_location_id": 450,
+      "bosses_before": [
+        "rival-route-103"
+      ]
+    },
+    {
+      "id": "petalburg-city",
+      "name": "Petalburg City",
+      "kind": "city",
+      "order": 6,
+      "map_node": "petalburg-city",
+      "poke_api_location_id": 429,
+      "bosses_before": []
+    },
+    {
+      "id": "route-104",
+      "name": "Route 104",
+      "kind": "route",
+      "order": 7,
+      "map_node": "route-104",
+      "poke_api_location_id": 452,
+      "bosses_before": []
+    },
+    {
+      "id": "petalburg-woods",
+      "name": "Petalburg Woods",
+      "kind": "route",
+      "order": 8,
+      "map_node": "petalburg-woods",
+      "poke_api_location_id": 438,
+      "bosses_before": []
+    },
+    {
+      "id": "rustboro-city",
+      "name": "Rustboro City",
+      "kind": "city",
+      "order": 9,
+      "map_node": "rustboro-city",
+      "poke_api_location_id": 573,
+      "bosses_before": []
+    },
+    {
+      "id": "devon-corporation",
+      "name": "Devon Corporation",
+      "kind": "building",
+      "order": 10,
+      "map_node": "rustboro-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-116",
+      "name": "Route 116",
+      "kind": "route",
+      "order": 11,
+      "map_node": "route-116",
+      "poke_api_location_id": 464,
+      "bosses_before": [
+        "roxanne"
+      ]
+    },
+    {
+      "id": "rusturf-tunnel",
+      "name": "Rusturf Tunnel",
+      "kind": "dungeon",
+      "order": 12,
+      "map_node": "rusturf-tunnel",
+      "poke_api_location_id": 436,
+      "bosses_before": []
+    },
+    {
+      "id": "dewford-town",
+      "name": "Dewford Town",
+      "kind": "city",
+      "order": 13,
+      "map_node": "dewford-town",
+      "poke_api_location_id": 484,
+      "bosses_before": [
+        "rival-rustboro"
+      ]
+    },
+    {
+      "id": "granite-cave",
+      "name": "Granite Cave",
+      "kind": "dungeon",
+      "order": 14,
+      "map_node": "granite-cave",
+      "poke_api_location_id": 437,
+      "bosses_before": []
+    },
+    {
+      "id": "route-106",
+      "name": "Route 106",
+      "kind": "sea",
+      "order": 15,
+      "map_node": "route-106",
+      "poke_api_location_id": 454,
+      "bosses_before": []
+    },
+    {
+      "id": "route-107",
+      "name": "Route 107",
+      "kind": "sea",
+      "order": 16,
+      "map_node": "route-107",
+      "poke_api_location_id": 455,
+      "bosses_before": []
+    },
+    {
+      "id": "route-108",
+      "name": "Route 108",
+      "kind": "sea",
+      "order": 17,
+      "map_node": "route-108",
+      "poke_api_location_id": 456,
+      "bosses_before": []
+    },
+    {
+      "id": "abandoned-ship",
+      "name": "Abandoned Ship",
+      "kind": "building",
+      "order": 18,
+      "map_node": "abandoned-ship",
+      "poke_api_location_id": 447,
+      "bosses_before": []
+    },
+    {
+      "id": "route-109",
+      "name": "Route 109",
+      "kind": "sea",
+      "order": 19,
+      "map_node": "route-109",
+      "poke_api_location_id": 457,
+      "bosses_before": [
+        "brawly"
+      ]
+    },
+    {
+      "id": "slateport-city",
+      "name": "Slateport City",
+      "kind": "city",
+      "order": 20,
+      "map_node": "slateport-city",
+      "poke_api_location_id": 430,
+      "bosses_before": []
+    },
+    {
+      "id": "oceanic-museum",
+      "name": "Oceanic Museum",
+      "kind": "building",
+      "order": 21,
+      "map_node": "slateport-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "slateport-battle-tent",
+      "name": "Slateport Battle Tent",
+      "kind": "building",
+      "order": 22,
+      "map_node": "slateport-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-110",
+      "name": "Route 110",
+      "kind": "route",
+      "order": 23,
+      "map_node": "route-110",
+      "poke_api_location_id": 458,
+      "bosses_before": []
+    },
+    {
+      "id": "trick-house",
+      "name": "Trick House",
+      "kind": "building",
+      "order": 24,
+      "map_node": "route-110",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "cycling-road",
+      "name": "Cycling Road",
+      "kind": "route",
+      "order": 25,
+      "map_node": "route-110",
+      "poke_api_location_id": 458,
+      "bosses_before": []
+    },
+    {
+      "id": "mauville-city",
+      "name": "Mauville City",
+      "kind": "city",
+      "order": 26,
+      "map_node": "mauville-city",
+      "poke_api_location_id": 572,
+      "bosses_before": [
+        "rival-route-110"
+      ]
+    },
+    {
+      "id": "new-mauville",
+      "name": "New Mauville",
+      "kind": "dungeon",
+      "order": 27,
+      "map_node": "new-mauville",
+      "poke_api_location_id": 446,
+      "bosses_before": []
+    },
+    {
+      "id": "route-117",
+      "name": "Route 117",
+      "kind": "route",
+      "order": 28,
+      "map_node": "route-117",
+      "poke_api_location_id": 465,
+      "bosses_before": [
+        "wally-mauville",
+        "wattson"
+      ]
+    },
+    {
+      "id": "verdanturf-town",
+      "name": "Verdanturf Town",
+      "kind": "city",
+      "order": 29,
+      "map_node": "verdanturf-town",
+      "poke_api_location_id": 571,
+      "bosses_before": []
+    },
+    {
+      "id": "verdanturf-battle-tent",
+      "name": "Verdanturf Battle Tent",
+      "kind": "building",
+      "order": 30,
+      "map_node": "verdanturf-town",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-111",
+      "name": "Route 111",
+      "kind": "route",
+      "order": 31,
+      "map_node": "route-111",
+      "poke_api_location_id": 459,
+      "bosses_before": []
+    },
+    {
+      "id": "trainer-hill",
+      "name": "Trainer Hill",
+      "kind": "building",
+      "order": 32,
+      "map_node": "route-111",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "desert",
+      "name": "Route 111 Desert",
+      "kind": "route",
+      "order": 33,
+      "map_node": "desert",
+      "poke_api_location_id": 459,
+      "bosses_before": []
+    },
+    {
+      "id": "mirage-tower",
+      "name": "Mirage Tower",
+      "kind": "dungeon",
+      "order": 34,
+      "map_node": "mirage-tower",
+      "poke_api_location_id": 487,
+      "bosses_before": []
+    },
+    {
+      "id": "desert-ruins",
+      "name": "Desert Ruins",
+      "kind": "dungeon",
+      "order": 35,
+      "map_node": "desert-ruins",
+      "poke_api_location_id": 582,
+      "bosses_before": []
+    },
+    {
+      "id": "route-112",
+      "name": "Route 112",
+      "kind": "route",
+      "order": 36,
+      "map_node": "route-112",
+      "poke_api_location_id": 460,
+      "bosses_before": []
+    },
+    {
+      "id": "fiery-path",
+      "name": "Fiery Path",
+      "kind": "dungeon",
+      "order": 37,
+      "map_node": "fiery-path",
+      "poke_api_location_id": 440,
+      "bosses_before": []
+    },
+    {
+      "id": "route-113",
+      "name": "Route 113",
+      "kind": "route",
+      "order": 38,
+      "map_node": "route-113",
+      "poke_api_location_id": 461,
+      "bosses_before": []
+    },
+    {
+      "id": "fallarbor-town",
+      "name": "Fallarbor Town",
+      "kind": "city",
+      "order": 39,
+      "map_node": "fallarbor-town",
+      "poke_api_location_id": 570,
+      "bosses_before": []
+    },
+    {
+      "id": "fallarbor-battle-tent",
+      "name": "Fallarbor Battle Tent",
+      "kind": "building",
+      "order": 40,
+      "map_node": "fallarbor-town",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-114",
+      "name": "Route 114",
+      "kind": "route",
+      "order": 41,
+      "map_node": "route-114",
+      "poke_api_location_id": 462,
+      "bosses_before": []
+    },
+    {
+      "id": "meteor-falls",
+      "name": "Meteor Falls",
+      "kind": "dungeon",
+      "order": 42,
+      "map_node": "meteor-falls",
+      "poke_api_location_id": 435,
+      "bosses_before": []
+    },
+    {
+      "id": "route-115",
+      "name": "Route 115",
+      "kind": "route",
+      "order": 43,
+      "map_node": "route-115",
+      "poke_api_location_id": 463,
+      "bosses_before": []
+    },
+    {
+      "id": "mt-chimney",
+      "name": "Mt. Chimney",
+      "kind": "dungeon",
+      "order": 44,
+      "map_node": "mt-chimney",
+      "poke_api_location_id": 576,
+      "bosses_before": []
+    },
+    {
+      "id": "jagged-pass",
+      "name": "Jagged Pass",
+      "kind": "route",
+      "order": 45,
+      "map_node": "jagged-pass",
+      "poke_api_location_id": 439,
+      "bosses_before": [
+        "tabitha-mt-chimney",
+        "maxie-mt-chimney"
+      ]
+    },
+    {
+      "id": "magma-hideout",
+      "name": "Magma Hideout",
+      "kind": "dungeon",
+      "order": 46,
+      "map_node": "magma-hideout",
+      "poke_api_location_id": 486,
+      "bosses_before": []
+    },
+    {
+      "id": "lavaridge-town",
+      "name": "Lavaridge Town",
+      "kind": "city",
+      "order": 47,
+      "map_node": "lavaridge-town",
+      "poke_api_location_id": 569,
+      "bosses_before": []
+    },
+    {
+      "id": "route-105",
+      "name": "Route 105",
+      "kind": "sea",
+      "order": 48,
+      "map_node": "route-105",
+      "poke_api_location_id": 453,
+      "bosses_before": [
+        "flannery"
+      ]
+    },
+    {
+      "id": "altering-cave",
+      "name": "Altering Cave",
+      "kind": "dungeon",
+      "order": 49,
+      "map_node": "route-103",
+      "poke_api_location_id": 490,
+      "bosses_before": []
+    },
+    {
+      "id": "island-cave",
+      "name": "Island Cave",
+      "kind": "dungeon",
+      "order": 50,
+      "map_node": "island-cave",
+      "poke_api_location_id": 581,
+      "bosses_before": []
+    },
+    {
+      "id": "route-118",
+      "name": "Route 118",
+      "kind": "route",
+      "order": 51,
+      "map_node": "route-118",
+      "poke_api_location_id": 466,
+      "bosses_before": [
+        "norman"
+      ]
+    },
+    {
+      "id": "route-119",
+      "name": "Route 119",
+      "kind": "route",
+      "order": 52,
+      "map_node": "route-119",
+      "poke_api_location_id": 467,
+      "bosses_before": []
+    },
+    {
+      "id": "weather-institute",
+      "name": "Weather Institute",
+      "kind": "building",
+      "order": 53,
+      "map_node": "route-119",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-120",
+      "name": "Route 120",
+      "kind": "route",
+      "order": 54,
+      "map_node": "route-120",
+      "poke_api_location_id": 468,
+      "bosses_before": [
+        "shelly-weather-institute",
+        "rival-route-119"
+      ]
+    },
+    {
+      "id": "fortree-city",
+      "name": "Fortree City",
+      "kind": "city",
+      "order": 55,
+      "map_node": "fortree-city",
+      "poke_api_location_id": 574,
+      "bosses_before": []
+    },
+    {
+      "id": "ancient-tomb",
+      "name": "Ancient Tomb",
+      "kind": "dungeon",
+      "order": 56,
+      "map_node": "ancient-tomb",
+      "poke_api_location_id": 583,
+      "bosses_before": []
+    },
+    {
+      "id": "route-121",
+      "name": "Route 121",
+      "kind": "route",
+      "order": 57,
+      "map_node": "route-121",
+      "poke_api_location_id": 469,
+      "bosses_before": [
+        "winona"
+      ]
+    },
+    {
+      "id": "safari-zone",
+      "name": "Safari Zone",
+      "kind": "route",
+      "order": 58,
+      "map_node": "safari-zone",
+      "poke_api_location_id": 483,
+      "bosses_before": []
+    },
+    {
+      "id": "route-122",
+      "name": "Route 122",
+      "kind": "sea",
+      "order": 59,
+      "map_node": "route-122",
+      "poke_api_location_id": 470,
+      "bosses_before": []
+    },
+    {
+      "id": "mt-pyre",
+      "name": "Mt. Pyre",
+      "kind": "dungeon",
+      "order": 60,
+      "map_node": "mt-pyre",
+      "poke_api_location_id": 441,
+      "bosses_before": []
+    },
+    {
+      "id": "route-123",
+      "name": "Route 123",
+      "kind": "route",
+      "order": 61,
+      "map_node": "route-123",
+      "poke_api_location_id": 471,
+      "bosses_before": []
+    },
+    {
+      "id": "lilycove-city",
+      "name": "Lilycove City",
+      "kind": "city",
+      "order": 62,
+      "map_node": "lilycove-city",
+      "poke_api_location_id": 431,
+      "bosses_before": []
+    },
+    {
+      "id": "lilycove-dept-store",
+      "name": "Lilycove Department Store",
+      "kind": "building",
+      "order": 63,
+      "map_node": "lilycove-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "aqua-hideout",
+      "name": "Aqua Hideout",
+      "kind": "dungeon",
+      "order": 64,
+      "map_node": "aqua-hideout",
+      "poke_api_location_id": 692,
+      "bosses_before": [
+        "rival-lilycove"
+      ]
+    },
+    {
+      "id": "route-124",
+      "name": "Route 124",
+      "kind": "sea",
+      "order": 65,
+      "map_node": "route-124",
+      "poke_api_location_id": 472,
+      "bosses_before": [
+        "tabitha-magma-hideout",
+        "maxie-magma-hideout",
+        "matt-aqua-hideout"
+      ]
+    },
+    {
+      "id": "mossdeep-city",
+      "name": "Mossdeep City",
+      "kind": "city",
+      "order": 66,
+      "map_node": "mossdeep-city",
+      "poke_api_location_id": 432,
+      "bosses_before": []
+    },
+    {
+      "id": "mossdeep-space-center",
+      "name": "Mossdeep Space Center",
+      "kind": "building",
+      "order": 67,
+      "map_node": "mossdeep-city",
+      "poke_api_location_id": 1055,
+      "bosses_before": [
+        "tate-liza"
+      ]
+    },
+    {
+      "id": "route-125",
+      "name": "Route 125",
+      "kind": "sea",
+      "order": 68,
+      "map_node": "route-125",
+      "poke_api_location_id": 473,
+      "bosses_before": [
+        "maxie-space-center",
+        "tabitha-space-center"
+      ]
+    },
+    {
+      "id": "shoal-cave",
+      "name": "Shoal Cave",
+      "kind": "dungeon",
+      "order": 69,
+      "map_node": "shoal-cave",
+      "poke_api_location_id": 445,
+      "bosses_before": []
+    },
+    {
+      "id": "route-127",
+      "name": "Route 127",
+      "kind": "sea",
+      "order": 70,
+      "map_node": "route-127",
+      "poke_api_location_id": 475,
+      "bosses_before": []
+    },
+    {
+      "id": "route-126",
+      "name": "Route 126",
+      "kind": "sea",
+      "order": 71,
+      "map_node": "route-126",
+      "poke_api_location_id": 474,
+      "bosses_before": []
+    },
+    {
+      "id": "sootopolis-city",
+      "name": "Sootopolis City",
+      "kind": "city",
+      "order": 72,
+      "map_node": "sootopolis-city",
+      "poke_api_location_id": 433,
+      "bosses_before": []
+    },
+    {
+      "id": "route-128",
+      "name": "Route 128",
+      "kind": "sea",
+      "order": 73,
+      "map_node": "route-128",
+      "poke_api_location_id": 476,
+      "bosses_before": []
+    },
+    {
+      "id": "seafloor-cavern",
+      "name": "Seafloor Cavern",
+      "kind": "dungeon",
+      "order": 74,
+      "map_node": "seafloor-cavern",
+      "poke_api_location_id": 442,
+      "bosses_before": []
+    },
+    {
+      "id": "cave-of-origin",
+      "name": "Cave of Origin",
+      "kind": "dungeon",
+      "order": 75,
+      "map_node": "cave-of-origin",
+      "poke_api_location_id": 443,
+      "bosses_before": [
+        "shelly-seafloor",
+        "archie-seafloor"
+      ]
+    },
+    {
+      "id": "route-129",
+      "name": "Route 129",
+      "kind": "sea",
+      "order": 76,
+      "map_node": "route-129",
+      "poke_api_location_id": 477,
+      "bosses_before": []
+    },
+    {
+      "id": "route-130",
+      "name": "Route 130",
+      "kind": "sea",
+      "order": 77,
+      "map_node": "route-130",
+      "poke_api_location_id": 478,
+      "bosses_before": []
+    },
+    {
+      "id": "route-131",
+      "name": "Route 131",
+      "kind": "sea",
+      "order": 78,
+      "map_node": "route-131",
+      "poke_api_location_id": 479,
+      "bosses_before": []
+    },
+    {
+      "id": "pacifidlog-town",
+      "name": "Pacifidlog Town",
+      "kind": "city",
+      "order": 79,
+      "map_node": "pacifidlog-town",
+      "poke_api_location_id": 485,
+      "bosses_before": []
+    },
+    {
+      "id": "sky-pillar",
+      "name": "Sky Pillar",
+      "kind": "dungeon",
+      "order": 80,
+      "map_node": "sky-pillar",
+      "poke_api_location_id": 448,
+      "bosses_before": []
+    },
+    {
+      "id": "route-132",
+      "name": "Route 132",
+      "kind": "sea",
+      "order": 81,
+      "map_node": "route-132",
+      "poke_api_location_id": 480,
+      "bosses_before": []
+    },
+    {
+      "id": "route-133",
+      "name": "Route 133",
+      "kind": "sea",
+      "order": 82,
+      "map_node": "route-133",
+      "poke_api_location_id": 481,
+      "bosses_before": []
+    },
+    {
+      "id": "route-134",
+      "name": "Route 134",
+      "kind": "sea",
+      "order": 83,
+      "map_node": "route-134",
+      "poke_api_location_id": 482,
+      "bosses_before": []
+    },
+    {
+      "id": "sealed-chamber",
+      "name": "Sealed Chamber",
+      "kind": "dungeon",
+      "order": 84,
+      "map_node": "sealed-chamber",
+      "poke_api_location_id": 579,
+      "bosses_before": []
+    },
+    {
+      "id": "mirage-island",
+      "name": "Mirage Island",
+      "kind": "route",
+      "order": 85,
+      "map_node": "mirage-island",
+      "poke_api_location_id": 1094,
+      "bosses_before": []
+    },
+    {
+      "id": "ever-grande-city",
+      "name": "Ever Grande City",
+      "kind": "city",
+      "order": 86,
+      "map_node": "ever-grande-city",
+      "poke_api_location_id": 434,
+      "bosses_before": [
+        "juan"
+      ]
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "order": 87,
+      "map_node": "victory-road",
+      "poke_api_location_id": 444,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "order": 88,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 691,
+      "bosses_before": [
+        "wally-victory-road"
+      ]
+    },
+    {
+      "id": "desert-underpass",
+      "name": "Desert Underpass",
+      "kind": "dungeon",
+      "order": 89,
+      "map_node": "desert-underpass",
+      "poke_api_location_id": 488,
+      "bosses_before": [
+        "sidney",
+        "phoebe",
+        "glacia",
+        "drake",
+        "wallace"
+      ]
+    },
+    {
+      "id": "terra-cave",
+      "name": "Terra Cave",
+      "kind": "dungeon",
+      "order": 90,
+      "map_node": null,
+      "poke_api_location_id": 803,
+      "bosses_before": []
+    },
+    {
+      "id": "marine-cave",
+      "name": "Marine Cave",
+      "kind": "dungeon",
+      "order": 91,
+      "map_node": null,
+      "poke_api_location_id": 804,
+      "bosses_before": []
+    },
+    {
+      "id": "ss-tidal",
+      "name": "S.S. Tidal",
+      "kind": "building",
+      "order": 92,
+      "map_node": "slateport-city",
+      "poke_api_location_id": 696,
+      "bosses_before": []
+    },
+    {
+      "id": "battle-frontier",
+      "name": "Battle Frontier",
+      "kind": "city",
+      "order": 93,
+      "map_node": "battle-frontier",
+      "poke_api_location_id": 813,
+      "bosses_before": []
+    },
+    {
+      "id": "artisan-cave",
+      "name": "Artisan Cave",
+      "kind": "dungeon",
+      "order": 94,
+      "map_node": "artisan-cave",
+      "poke_api_location_id": 489,
+      "bosses_before": []
+    },
+    {
+      "id": "southern-island",
+      "name": "Southern Island",
+      "kind": "route",
+      "order": 95,
+      "map_node": "southern-island",
+      "poke_api_location_id": 578,
+      "bosses_before": []
+    },
+    {
+      "id": "navel-rock",
+      "name": "Navel Rock",
+      "kind": "dungeon",
+      "order": 96,
+      "map_node": null,
+      "poke_api_location_id": 811,
+      "bosses_before": []
+    },
+    {
+      "id": "birth-island",
+      "name": "Birth Island",
+      "kind": "route",
+      "order": 97,
+      "map_node": null,
+      "poke_api_location_id": 810,
+      "bosses_before": []
+    },
+    {
+      "id": "faraway-island",
+      "name": "Faraway Island",
+      "kind": "route",
+      "order": 98,
+      "map_node": null,
+      "poke_api_location_id": 812,
+      "bosses_before": []
+    }
+  ]
+}

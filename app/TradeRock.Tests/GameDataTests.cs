@@ -338,6 +338,58 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(2, kanto.Nodes.Count);
     }
 
+    [Theory]
+    [InlineData("rb", "pallet-town")]
+    [InlineData("y", "pallet-town")]
+    [InlineData("frlg", "pallet-town")]
+    [InlineData("lgpe", "pallet-town")]
+    [InlineData("gs", "new-bark-town")]
+    [InlineData("c", "new-bark-town")]
+    [InlineData("hgss", "new-bark-town")]
+    [InlineData("rs", "littleroot-town")]
+    [InlineData("e", "littleroot-town")]
+    [InlineData("dp", "twinleaf-town")]
+    [InlineData("pt", "twinleaf-town")]
+    [InlineData("bdsp", "twinleaf-town")]
+    public void Areas_em_ordem_com_mapa_locais_do_dex_e_chefes(string game, string start)
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
+        var store = new GameDataStore(fx.Service, NullLogger<GameDataStore>.Instance);
+        var areas = store.Areas(game);
+        Assert.NotEmpty(areas);
+        Assert.Equal(start, areas[0].Id);
+        Assert.Equal(Enumerable.Range(1, areas.Count), areas.Select(a => a.Order));
+
+        var locations = new HashSet<int>();
+        using (var c = fx.Db.Open())
+        using (var cmd = c.CreateCommand())
+        {
+            cmd.CommandText = "SELECT id FROM locations";
+            using var r = cmd.ExecuteReader();
+            while (r.Read())
+                locations.Add(r.GetInt32(0));
+        }
+        foreach (var a in areas.Where(a => a.PokeApiLocationId is not null))
+            Assert.True(locations.Contains(a.PokeApiLocationId!.Value), $"{game}/{a.Id}: location {a.PokeApiLocationId} não existe no dex");
+
+        var map = store.Map(GameVersions.ByKey(game).Region);
+        Assert.NotNull(map);
+        var nodes = map.Nodes.ToDictionary(n => n.Id);
+        foreach (var a in areas.Where(a => a.MapNode is not null))
+        {
+            Assert.True(nodes.TryGetValue(a.MapNode!, out var n), $"{game}/{a.Id}: nó {a.MapNode} não existe");
+            Assert.True(n.Games is null || n.Games.Contains(game), $"{game}/{a.Id}: nó {a.MapNode} não é deste jogo");
+        }
+
+        var bosses = store.Bosses(game);
+        var ids = bosses.Select(b => b.Id).ToHashSet();
+        var linked = areas.SelectMany(a => a.BossesBefore).ToList();
+        Assert.All(linked, id => Assert.Contains(id, ids));
+        Assert.Equal(linked.Count, linked.Distinct().Count());
+        foreach (var gym in bosses.Where(b => b.Kind == "gym" && !b.Id.Contains("rematch")))
+            Assert.True(linked.Contains(gym.Id), $"{game}: ginásio {gym.Id} não aparece em bosses_before");
+    }
+
     [Fact]
     public void Mapa_com_aresta_para_no_inexistente_falha()
     {
@@ -397,6 +449,6 @@ public sealed class GameDataApiTests : IAsyncLifetime
             Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync($"/api/data/zz/{kind}")).StatusCode);
         }
         Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/maps/atlantis")).StatusCode);
-        Assert.Equal(HttpStatusCode.NotFound, (await _client.GetAsync("/api/data/maps/johto")).StatusCode);
+        Assert.Equal(HttpStatusCode.NotFound, (await _client.GetAsync("/api/data/maps/unova")).StatusCode);
     }
 }
