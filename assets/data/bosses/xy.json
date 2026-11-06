@@ -1,0 +1,2383 @@
+{
+  "source": [
+    "https://www.serebii.net/xy/gyms.shtml",
+    "https://www.serebii.net/xy/elitefour.shtml",
+    "https://www.serebii.net/xy/teamflare.shtml",
+    "https://www.serebii.net/xy/az.shtml",
+    "https://www.serebii.net/xy/looker.shtml",
+    "https://www.pokewiki.de/Serena",
+    "https://www.pokewiki.de/Sannah",
+    "https://www.pokewiki.de/Tierno",
+    "https://www.pokewiki.de/Trovato",
+    "https://www.pokewiki.de/Flordelis",
+    "https://www.pokewiki.de/Professor_Platan",
+    "https://www.pokewiki.de/Connie",
+    "https://www.pokewiki.de/Aliana",
+    "https://www.pokewiki.de/Calluna",
+    "https://www.pokewiki.de/Begonia",
+    "https://www.pokewiki.de/Magnolia",
+    "https://www.pokewiki.de/Xeros",
+    "https://www.pokemythology.net/detonados/detonado-x-y/"
+  ],
+  "items": [
+    {
+      "id": "shauna-1",
+      "kind": "rival",
+      "name": "Shauna",
+      "title": "Rival",
+      "location": "Aquacorde Town",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 650,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "growl",
+            "vine-whip"
+          ],
+          "ability": "overgrow",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Froakie 5; com Froakie: Fennekin 5; o detonado confirma: o inicial fraco ao seu, nível 5",
+      "versions": null
+    },
+    {
+      "id": "viola",
+      "kind": "gym",
+      "name": "Viola",
+      "title": "Gym Leader",
+      "location": "Santalune Gym",
+      "order": 2,
+      "badge": "Bug Badge",
+      "party": [
+        {
+          "species": 283,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "bubble",
+            "water-sport",
+            "quick-attack"
+          ],
+          "ability": "swift-swim",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 666,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "harden",
+            "tackle",
+            "infestation"
+          ],
+          "ability": "shield-dust",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "sycamore-1",
+      "kind": "other",
+      "name": "Professor Sycamore",
+      "title": "Pokémon Professor",
+      "location": "Pokémon Lab, Lumiose City",
+      "order": 3,
+      "badge": null,
+      "party": [
+        {
+          "species": 1,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "leech-seed",
+            "vine-whip"
+          ],
+          "ability": "overgrow",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 4,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "scratch",
+            "growl",
+            "ember",
+            "smokescreen"
+          ],
+          "ability": "blaze",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 7,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "tail-whip",
+            "water-gun",
+            "withdraw"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 10,
+      "verified": true,
+      "notes": "você escolhe um dos três Pokémon dele depois",
+      "versions": null
+    },
+    {
+      "id": "tierno-1",
+      "kind": "rival",
+      "name": "Tierno",
+      "title": "Rival",
+      "location": "Route 5",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 341,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "swords-dance",
+            "vice-grip"
+          ],
+          "ability": "shell-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "tierno-trevor-1",
+      "kind": "rival",
+      "name": "Tierno & Trevor",
+      "title": "Rival",
+      "location": "Route 7",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 25,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "thunder-shock",
+            "quick-attack"
+          ],
+          "ability": "static",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 669,
+          "form": 2,
+          "level": 14,
+          "moves": [
+            "vine-whip",
+            "fairy-wind"
+          ],
+          "ability": "flower-veil",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 341,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "swords-dance",
+            "vice-grip"
+          ],
+          "ability": "shell-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 16,
+      "verified": false,
+      "notes": "dupla: Tierno e Trevor juntos, com a Serena/Calem do seu lado; o detonado dá Corphish 18 (ver dúvidas)",
+      "versions": null
+    },
+    {
+      "id": "grant",
+      "kind": "gym",
+      "name": "Grant",
+      "title": "Gym Leader",
+      "location": "Cyllage Gym",
+      "order": 6,
+      "badge": "Cliff Badge",
+      "party": [
+        {
+          "species": 696,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "bite",
+            "rock-tomb",
+            "stomp"
+          ],
+          "ability": "strong-jaw",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 698,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "thunder-wave",
+            "rock-tomb",
+            "aurora-beam",
+            "take-down"
+          ],
+          "ability": "refrigerate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "korrina-geosenge",
+      "kind": "other",
+      "name": "Korrina",
+      "title": "Gym Leader",
+      "location": "Geosenge Town",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 448,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "feint",
+            "metal-sound",
+            "swords-dance",
+            "power-up-punch"
+          ],
+          "ability": "steadfast",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "feint",
+            "metal-sound",
+            "swords-dance",
+            "power-up-punch"
+          ],
+          "ability": "steadfast",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": false,
+      "notes": "dupla: dois Lucario, com a Serena/Calem do seu lado",
+      "versions": null
+    },
+    {
+      "id": "serena-1",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Tower of Mastery, Shalour City",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 28,
+          "moves": [
+            "fake-out",
+            "psybeam",
+            "light-screen",
+            "disarming-voice"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "bite",
+            "quick-attack",
+            "slash"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 657,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "water-pulse",
+            "quick-attack"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 30,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 28, Absol 28, Braixen 30; com Froakie: Meowstic 28, Absol 28, Quilladin 30; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); disputa do Mega Ring",
+      "versions": null
+    },
+    {
+      "id": "korrina",
+      "kind": "gym",
+      "name": "Korrina",
+      "title": "Gym Leader",
+      "location": "Shalour Gym",
+      "order": 9,
+      "badge": "Rumble Badge",
+      "party": [
+        {
+          "species": 619,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "fake-out",
+            "double-slap",
+            "power-up-punch"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 701,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "hone-claws",
+            "flying-press",
+            "power-up-punch"
+          ],
+          "ability": "unburden",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 67,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "rock-tomb",
+            "power-up-punch",
+            "leer"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "korrina-lucario",
+      "kind": "other",
+      "name": "Korrina",
+      "title": "Gym Leader",
+      "location": "Tower of Mastery, Shalour City",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 448,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "swords-dance",
+            "metal-sound",
+            "power-up-punch",
+            "bone-rush"
+          ],
+          "ability": "steadfast",
+          "item": "lucarionite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": false,
+      "notes": "Lucario contra Lucario: você usa o Lucario que ela empresta; o dela megaevolui",
+      "versions": null
+    },
+    {
+      "id": "serena-2",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Coumarine City",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 31,
+          "moves": [
+            "psybeam",
+            "fake-out",
+            "disarming-voice",
+            "light-screen"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "slash",
+            "bite",
+            "quick-attack"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 657,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "water-pulse",
+            "quick-attack"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 31, Absol 31, Braixen 33; com Froakie: Meowstic 31, Absol 31, Quilladin 33; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null
+    },
+    {
+      "id": "ramos",
+      "kind": "gym",
+      "name": "Ramos",
+      "title": "Gym Leader",
+      "location": "Coumarine Gym",
+      "order": 12,
+      "badge": "Plant Badge",
+      "party": [
+        {
+          "species": 189,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "bullet-seed",
+            "acrobatics",
+            "leech-seed"
+          ],
+          "ability": "chlorophyll",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 673,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "bulldoze",
+            "grass-knot",
+            "take-down"
+          ],
+          "ability": "sap-sipper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 70,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "grass-knot",
+            "poison-powder",
+            "acid",
+            "gastro-acid"
+          ],
+          "ability": "chlorophyll",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "flare-admin-power-plant",
+      "kind": "evil",
+      "name": "Team Flare Admin",
+      "title": "Team Flare",
+      "location": "Kalos Power Plant",
+      "order": 13,
+      "badge": null,
+      "party": [
+        {
+          "species": 229,
+          "form": 0,
+          "level": 36,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 36,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "aliana-1",
+      "kind": "evil",
+      "name": "Aliana",
+      "title": "Team Flare",
+      "location": "Kalos Power Plant",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "roar",
+            "swagger",
+            "assurance",
+            "scary-face"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "clemont",
+      "kind": "gym",
+      "name": "Clemont",
+      "title": "Gym Leader",
+      "location": "Lumiose Gym (Prism Tower)",
+      "order": 15,
+      "badge": "Voltage Badge",
+      "party": [
+        {
+          "species": 587,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "volt-switch",
+            "quick-attack",
+            "aerial-ace"
+          ],
+          "ability": "static",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "thunderbolt",
+            "electric-terrain",
+            "mirror-shot"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 695,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "thunderbolt",
+            "quick-attack",
+            "grass-knot"
+          ],
+          "ability": "dry-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 37,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "serena-3",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Route 14",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 35,
+          "moves": [
+            "psychic",
+            "fake-out",
+            "disarming-voice",
+            "light-screen"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "slash",
+            "swords-dance",
+            "quick-attack",
+            "bite"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 658,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "water-shuriken",
+            "quick-attack"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 37,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 35, Absol 35, Delphox 37; com Froakie: Meowstic 35, Absol 35, Chesnaught 37; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null
+    },
+    {
+      "id": "valerie",
+      "kind": "gym",
+      "name": "Valerie",
+      "title": "Gym Leader",
+      "location": "Laverre Gym",
+      "order": 17,
+      "badge": "Fairy Badge",
+      "party": [
+        {
+          "species": 303,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "feint-attack",
+            "crunch",
+            "iron-defense"
+          ],
+          "ability": "hyper-cutter",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "light-screen",
+            "reflect",
+            "psychic",
+            "dazzling-gleam"
+          ],
+          "ability": "soundproof",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 700,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "dazzling-gleam",
+            "quick-attack",
+            "swift",
+            "charm"
+          ],
+          "ability": "cute-charm",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "flare-admin-factory",
+      "kind": "evil",
+      "name": "Team Flare Admin",
+      "title": "Team Flare",
+      "location": "Poké Ball Factory",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 559,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "celosia-1",
+      "kind": "evil",
+      "name": "Celosia",
+      "title": "Team Flare",
+      "location": "Poké Ball Factory",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 310,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "spark",
+            "thunder-fang",
+            "bite",
+            "odor-sleuth"
+          ],
+          "ability": "lightning-rod",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "dupla: Celosia e Bryony juntas, com a Serena/Calem do seu lado",
+      "versions": null
+    },
+    {
+      "id": "bryony-1",
+      "kind": "evil",
+      "name": "Bryony",
+      "title": "Team Flare",
+      "location": "Poké Ball Factory",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "hone-claws",
+            "assurance",
+            "slash",
+            "taunt"
+          ],
+          "ability": "unburden",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "dupla: Celosia e Bryony juntas, com a Serena/Calem do seu lado",
+      "versions": null
+    },
+    {
+      "id": "mable-1",
+      "kind": "evil",
+      "name": "Mable",
+      "title": "Team Flare",
+      "location": "Frost Cavern",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 229,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "fire-fang",
+            "feint-attack",
+            "embargo",
+            "foul-play"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "serena-4",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Anistar City",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 44,
+          "moves": [
+            "psychic",
+            "fake-out",
+            "disarming-voice",
+            "shadow-ball"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "lava-plume",
+            "bite",
+            "quick-attack"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 658,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "water-shuriken",
+            "dark-pulse"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "slash",
+            "swords-dance",
+            "quick-attack",
+            "night-slash"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 44, Jolteon 44, Delphox 46, Absol 44; com Froakie: Meowstic 44, Vaporeon 44, Chesnaught 46, Absol 44; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null
+    },
+    {
+      "id": "olympia",
+      "kind": "gym",
+      "name": "Olympia",
+      "title": "Gym Leader",
+      "location": "Anistar Gym",
+      "order": 23,
+      "badge": "Psychic Badge",
+      "party": [
+        {
+          "species": 561,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "psychic",
+            "air-slash",
+            "light-screen",
+            "reflect"
+          ],
+          "ability": "magic-guard",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 199,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "psychic",
+            "calm-mind",
+            "power-gem",
+            "yawn"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 678,
+          "form": 1,
+          "level": 48,
+          "moves": [
+            "psychic",
+            "calm-mind",
+            "fake-out",
+            "shadow-ball"
+          ],
+          "ability": "infiltrator",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lysandre-1",
+      "kind": "evil",
+      "name": "Lysandre",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 619,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "swords-dance",
+            "high-jump-kick",
+            "acrobatics"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 198,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "foul-play",
+            "aerial-ace",
+            "retaliate",
+            "steel-wing"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "hyper-voice",
+            "fire-blast",
+            "dark-pulse"
+          ],
+          "ability": "rivalry",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "aqua-tail",
+            "earthquake",
+            "iron-head",
+            "outrage"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 49,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "aliana-2",
+      "kind": "evil",
+      "name": "Aliana",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "taunt",
+            "sucker-punch",
+            "crunch",
+            "embargo"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "shadow-claw",
+            "surf"
+          ],
+          "ability": "sheer-force",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "celosia-2",
+      "kind": "evil",
+      "name": "Celosia",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 310,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "thunderbolt",
+            "quick-attack",
+            "flamethrower",
+            "thunder-wave"
+          ],
+          "ability": "static",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 452,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "poison-jab",
+            "acupressure"
+          ],
+          "ability": "battle-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bryony-2",
+      "kind": "evil",
+      "name": "Bryony",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "fake-out",
+            "sucker-punch",
+            "taunt",
+            "slash"
+          ],
+          "ability": "limber",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "iron-head",
+            "x-scissor",
+            "shadow-claw"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "mable-2",
+      "kind": "evil",
+      "name": "Mable",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 229,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "snarl",
+            "flamethrower",
+            "sludge-bomb",
+            "foul-play"
+          ],
+          "ability": "early-bird",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 461,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "quick-attack",
+            "ice-shard",
+            "low-sweep"
+          ],
+          "ability": "pressure",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "xerosic-1",
+      "kind": "evil",
+      "name": "Xerosic",
+      "title": "Team Flare",
+      "location": "Lysandre Labs",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 169,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "x-scissor",
+            "cross-poison",
+            "steel-wing",
+            "air-slash"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "superpower",
+            "payback",
+            "psycho-cut",
+            "retaliate"
+          ],
+          "ability": "contrary",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lysandre-2",
+      "kind": "evil",
+      "name": "Lysandre",
+      "title": "Team Flare",
+      "location": "Team Flare Secret HQ",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 620,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "swords-dance",
+            "high-jump-kick",
+            "acrobatics"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "night-slash",
+            "aerial-ace",
+            "retaliate",
+            "steel-wing"
+          ],
+          "ability": "insomnia",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "hyper-voice",
+            "fire-blast",
+            "dark-pulse"
+          ],
+          "ability": "unnerve",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "aqua-tail",
+            "earthquake",
+            "iron-head",
+            "outrage"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lysandre-3",
+      "kind": "evil",
+      "name": "Lysandre",
+      "title": "Team Flare",
+      "location": "Team Flare Secret HQ",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 620,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "swords-dance",
+            "high-jump-kick",
+            "acrobatics"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "hyper-voice",
+            "fire-blast",
+            "dark-pulse"
+          ],
+          "ability": "unnerve",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "night-slash",
+            "aerial-ace",
+            "retaliate",
+            "steel-wing"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "aqua-tail",
+            "earthquake",
+            "iron-head",
+            "outrage"
+          ],
+          "ability": "intimidate",
+          "item": "gyaradosite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "o Gyarados megaevolui; o detonado dá Gyarados 51",
+      "versions": null
+    },
+    {
+      "id": "sycamore-2",
+      "kind": "other",
+      "name": "Professor Sycamore",
+      "title": "Pokémon Professor",
+      "location": "Couriway Town",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 3,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "petal-dance",
+            "worry-seed",
+            "synthesis",
+            "petal-blizzard"
+          ],
+          "ability": "overgrow",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "water-pulse",
+            "aqua-tail",
+            "skull-bash",
+            "iron-defense"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "flame-burst",
+            "wing-attack",
+            "slash",
+            "flamethrower"
+          ],
+          "ability": "blaze",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "shauna-2",
+      "kind": "rival",
+      "name": "Shauna",
+      "title": "Rival",
+      "location": "Route 19",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 301,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "charm",
+            "play-rough",
+            "feint-attack",
+            "return"
+          ],
+          "ability": "cute-charm",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 706,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "dragon-pulse",
+            "sludge-wave",
+            "body-slam",
+            "earthquake"
+          ],
+          "ability": "sap-sipper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 652,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "brick-break",
+            "seed-bomb",
+            "spiky-shield"
+          ],
+          "ability": "overgrow",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Delcatty 49, Goodra 49, Greninja 51; com Froakie: Delcatty 49, Goodra 49, Delphox 51",
+      "versions": null
+    },
+    {
+      "id": "tierno-2",
+      "kind": "rival",
+      "name": "Tierno",
+      "title": "Rival",
+      "location": "Route 19",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 663,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "swords-dance",
+            "acrobatics",
+            "quick-attack"
+          ],
+          "ability": "flame-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "petal-dance"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 342,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "swords-dance",
+            "crabhammer",
+            "night-slash"
+          ],
+          "ability": "shell-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "trevor-2",
+      "kind": "rival",
+      "name": "Trevor",
+      "title": "Rival",
+      "location": "Route 19",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 26,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "thunderbolt",
+            "quick-attack",
+            "nuzzle",
+            "slam"
+          ],
+          "ability": "static",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "crunch",
+            "ancient-power",
+            "sky-drop",
+            "supersonic"
+          ],
+          "ability": "rock-head",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 671,
+          "form": 2,
+          "level": 51,
+          "moves": [
+            "moonblast",
+            "energy-ball",
+            "confide",
+            "misty-terrain"
+          ],
+          "ability": "flower-veil",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "wulfric",
+      "kind": "gym",
+      "name": "Wulfric",
+      "title": "Gym Leader",
+      "location": "Snowbelle Gym",
+      "order": 36,
+      "badge": "Iceberg Badge",
+      "party": [
+        {
+          "species": 460,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "ice-beam",
+            "ice-shard",
+            "energy-ball"
+          ],
+          "ability": "snow-warning",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 615,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "ice-beam",
+            "confuse-ray",
+            "flash-cannon",
+            "hail"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 713,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "avalanche",
+            "crunch",
+            "curse",
+            "gyro-ball"
+          ],
+          "ability": "ice-body",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "serena-5",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Victory Road",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 57,
+          "moves": [
+            "psychic",
+            "fake-out",
+            "disarming-voice",
+            "shadow-ball"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "slash",
+            "swords-dance",
+            "quick-attack",
+            "night-slash"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "dragon-pulse",
+            "dazzling-gleam",
+            "confide"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "lava-plume",
+            "bite",
+            "quick-attack"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 658,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "water-shuriken",
+            "dark-pulse",
+            "ice-beam"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 61,
+      "verified": false,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 57, Absol 59, Altaria 58, Jolteon 57, Delphox 61; com Froakie: Meowstic 57, Absol 59, Altaria 58, Vaporeon 57, Chesnaught 61; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null
+    },
+    {
+      "id": "malva",
+      "kind": "elite",
+      "name": "Malva",
+      "title": "Elite Four",
+      "location": "Pokémon League (Blazing Chamber)",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 668,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "hyper-voice",
+            "noble-roar",
+            "flamethrower",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 324,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "curse",
+            "flame-wheel",
+            "stone-edge",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "flamethrower",
+            "confuse-ray",
+            "confide",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 663,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "quick-attack",
+            "brave-bird",
+            "flare-blitz",
+            "flail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "a Elite Four pode ser enfrentada em qualquer ordem",
+      "versions": null
+    },
+    {
+      "id": "siebold",
+      "kind": "elite",
+      "name": "Siebold",
+      "title": "Elite Four",
+      "location": "Pokémon League (Flood Chamber)",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 693,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "dragon-pulse",
+            "water-pulse",
+            "aura-sphere",
+            "dark-pulse"
+          ],
+          "ability": "mega-launcher",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "psychic",
+            "light-screen",
+            "surf",
+            "dazzling-gleam"
+          ],
+          "ability": "illuminate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "waterfall",
+            "ice-fang",
+            "dragon-dance",
+            "earthquake"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 689,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stone-edge",
+            "razor-shell",
+            "cross-chop",
+            "x-scissor"
+          ],
+          "ability": "tough-claws",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "wikstrom",
+      "kind": "elite",
+      "name": "Wikstrom",
+      "title": "Elite Four",
+      "location": "Pokémon League (Ironworks Chamber)",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 707,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "spikes",
+            "torment",
+            "dazzling-gleam",
+            "flash-cannon"
+          ],
+          "ability": "prankster",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 476,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "power-gem",
+            "earth-power",
+            "flash-cannon",
+            "discharge"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "x-scissor",
+            "iron-head",
+            "bullet-punch",
+            "night-slash"
+          ],
+          "ability": "technician",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 681,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "sacred-sword",
+            "iron-head",
+            "kings-shield",
+            "shadow-claw"
+          ],
+          "ability": "stance-change",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "drasna",
+      "kind": "elite",
+      "name": "Drasna",
+      "title": "Elite Four",
+      "location": "Pokémon League (Dragonmark Chamber)",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 691,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "sludge-bomb",
+            "surf",
+            "thunderbolt",
+            "dragon-pulse"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "dragon-pulse",
+            "moonblast",
+            "sing",
+            "cotton-guard"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "dragon-tail",
+            "revenge",
+            "retaliate",
+            "chip-away"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 715,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "flamethrower",
+            "boomburst",
+            "air-slash",
+            "dragon-pulse"
+          ],
+          "ability": "frisk",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "diantha",
+      "kind": "champion",
+      "name": "Diantha",
+      "title": "Champion",
+      "location": "Pokémon League (Radiant Chamber)",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 701,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "poison-jab",
+            "flying-press",
+            "swords-dance",
+            "x-scissor"
+          ],
+          "ability": "limber",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 697,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "head-smash",
+            "dragon-claw",
+            "earthquake",
+            "crunch"
+          ],
+          "ability": "strong-jaw",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 699,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "thunder",
+            "blizzard",
+            "reflect",
+            "light-screen"
+          ],
+          "ability": "refrigerate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 711,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "trick-or-treat",
+            "phantom-force",
+            "seed-bomb",
+            "shadow-sneak"
+          ],
+          "ability": "pickup",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 706,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "focus-blast",
+            "dragon-pulse",
+            "fire-blast",
+            "muddy-water"
+          ],
+          "ability": "sap-sipper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "thunderbolt",
+            "moonblast",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": "trace",
+          "item": "gardevoirite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 68,
+      "verified": true,
+      "notes": "a Gardevoir megaevolui",
+      "versions": null
+    },
+    {
+      "id": "az",
+      "kind": "other",
+      "name": "AZ",
+      "title": "Pokémon Trainer",
+      "location": "Lumiose City",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 324,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "stone-edge",
+            "lava-plume",
+            "body-slam",
+            "return"
+          ],
+          "ability": "white-smoke",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 623,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "mega-punch",
+            "phantom-force",
+            "heavy-slam",
+            "return"
+          ],
+          "ability": "iron-fist",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "air-slash",
+            "cosmic-power",
+            "psychic",
+            "return"
+          ],
+          "ability": "magic-guard",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo: depois do desfile",
+      "versions": null
+    },
+    {
+      "id": "serena-kiloude",
+      "kind": "rival",
+      "name": "Serena",
+      "title": "Rival",
+      "location": "Kiloude City",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 1,
+          "level": 66,
+          "moves": [
+            "psychic",
+            "fake-out",
+            "disarming-voice",
+            "shadow-ball"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "fire-blast",
+            "bite",
+            "quick-attack"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 658,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "hydro-pump",
+            "dark-pulse",
+            "ice-beam"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "dragon-pulse",
+            "dazzling-gleam",
+            "confide"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "moonblast",
+            "meteor-mash",
+            "focus-blast",
+            "sing"
+          ],
+          "ability": "magic-guard",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "slash",
+            "swords-dance",
+            "quick-attack",
+            "night-slash"
+          ],
+          "ability": "super-luck",
+          "item": "absolite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": false,
+      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 66, Jolteon 66, Delphox 70, Altaria 67, Clefable 68, Absol 68; com Froakie: Meowstic 66, Vaporeon 66, Chesnaught 70, Altaria 67, Clefable 68, Absol 68; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); pós-jogo: depois de uma batalha na Battle Maison; depois, uma vez por dia; o Absol megaevolui",
+      "versions": null
+    },
+    {
+      "id": "essentia-final",
+      "kind": "other",
+      "name": "Essentia",
+      "title": "Looker Bureau",
+      "location": "Lysandre Labs",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 169,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "mean-look",
+            "poison-fang",
+            "haze",
+            "air-slash"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "psycho-cut",
+            "slash",
+            "night-slash",
+            "superpower"
+          ],
+          "ability": "contrary",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo, capítulo 5 das missões do Looker (Emma de Essentia, com os Pokémon do Xerosic)",
+      "versions": null
+    }
+  ]
+}

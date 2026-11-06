@@ -159,6 +159,63 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.True(rivals.Max(r => r.Order) < champion.Order || game is "gs" or "c" or "dp" or "pt" or "hgss" or "bw" or "b2w2");
     }
 
+    // Gen 6–9: cada jogo tem a sua estrutura, então o teste recebe o que esperar de cada um.
+    // gyms: lutas kind=gym da história em cada versão, com insígnias (ou cristais Z / ranks) distintas. Alola conta os
+    // trials (title "Captain"; a luta é o Totem) e os grand trials (title "Kahuna"); no Z-A são as partidas de promoção
+    // (Rank Z→Y ... B→A); o Legends: Arceus não tem ginásio.
+    // elite: lutas da Elite 4 antes do campeão (nomes distintos). O Sword/Shield não tem Elite 4 (a final da Champion
+    // Cup é "other").
+    // titles: "kind:Title=n" separados por vírgula, contados na história em cada versão.
+    // drops: quedas reais de nível entre ginásios seguidos ("idA>idB"), como no teste da Gen 1–5.
+    // O campeão da história é o primeiro kind=champion (no Legends: Arceus, o Palkia/Dialga Origem). O Z-A não tem
+    // campeão: a luta final (Floette Hyperrogue) não tem nível em nenhuma fonte e fica de fora; ali a história é o arquivo
+    // inteiro (as revanches do pós-jogo são "other"). Rivais: o level cap de cada rival (por nome) não cai.
+    [Theory]
+    [InlineData("xy", 8, 4, "", "")]
+    [InlineData("oras", 8, 4, "", "")]
+    [InlineData("sm", 11, 4, "gym:Captain=7,gym:Kahuna=4", "hapu-1>totem-kommo-o")]
+    [InlineData("usum", 12, 4, "gym:Captain=8,gym:Kahuna=4", "totem-ribombee>hapu-1")]
+    [InlineData("lgpe", 8, 4, "", "")]
+    [InlineData("swsh", 8, 0, "other:Champion Cup=3", "")]
+    [InlineData("bdsp", 8, 4, "", "")]
+    [InlineData("pla", 0, 0, "other:Noble=5", "")]
+    [InlineData("sv", 8, 4, "gym:Victory Road=8,other:Path of Legends=5,evil:Starfall Street=5", "")]
+    [InlineData("za", 10, 0, "", "")]
+    public void Chefes_da_historia_das_geracoes_6_a_9(string game, int gyms, int elite, string titles, string drops)
+    {
+        var bosses = FromFiles(GameDataStore.EmbeddedFiles()).Bosses(game).OrderBy(b => b.Order).ToList();
+        Assert.Equal(bosses.Count, bosses.Select(b => b.Order).Distinct().Count());
+        var champion = bosses.FirstOrDefault(b => b.Kind == "champion");
+        Assert.True(champion is not null || game == "za", "sem campeão");
+        var story = bosses.Where(b => champion is null || b.Order <= champion.Order).ToList();
+
+        Assert.All(bosses.Where(b => b.Kind == "gym"), g => Assert.False(string.IsNullOrWhiteSpace(g.Badge)));
+        foreach (var version in GameVersions.ByKey(game).PokeApiVersions)
+        {
+            var inVersion = story.Where(b => b.Versions is null || b.Versions.Contains(version)).ToList();
+            var g = inVersion.Where(b => b.Kind == "gym").ToList();
+            Assert.Equal(gyms, g.Count);
+            Assert.Equal(gyms, g.Select(x => x.Badge).Distinct().Count());
+            var found = g.Zip(g.Skip(1)).Where(p => p.Second.LevelCap < p.First.LevelCap).Select(p => $"{p.First.Id}>{p.Second.Id}");
+            Assert.Equal(drops, string.Join(",", found));
+            foreach (var t in titles.Split(',', StringSplitOptions.RemoveEmptyEntries))
+            {
+                var (kind, rest) = (t.Split(':')[0], t.Split(':')[1]);
+                var (title, count) = (rest.Split('=')[0], int.Parse(rest.Split('=')[1]));
+                Assert.True(count == inVersion.Count(b => b.Kind == kind && b.Title == title), $"{version}: {t}");
+            }
+        }
+        var e4 = story.Where(b => b.Kind == "elite").ToList();
+        Assert.Equal(elite, e4.Count);
+        Assert.Equal(elite, e4.Select(e => e.Name).Distinct().Count());
+        Assert.Equal(champion is null ? 0 : 1, story.Count(b => b.Kind == "champion"));
+
+        var rivals = bosses.Where(b => b.Kind == "rival").ToList();
+        Assert.NotEmpty(rivals);
+        foreach (var r in rivals.GroupBy(b => b.Name))
+            Assert.All(r.Zip(r.Skip(1)), p => Assert.True(p.Second.LevelCap >= p.First.LevelCap, $"{p.First.Id} -> {p.Second.Id}"));
+    }
+
     [Fact]
     public void Validador_rejeita_jogo_desconhecido_nos_metodos()
     {

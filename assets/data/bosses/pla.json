@@ -1,0 +1,2061 @@
+{
+  "source": [
+    "https://www.serebii.net/legendsarceus/noblepokemon.shtml",
+    "https://www.serebii.net/legendsarceus/volo.shtml",
+    "https://www.serebii.net/legendsarceus/warden.shtml",
+    "https://www.serebii.net/legendsarceus/ingobattles.shtml",
+    "https://www.pokewiki.de/Lumia",
+    "https://www.pokewiki.de/Perla",
+    "https://www.pokewiki.de/Diam",
+    "https://www.pokewiki.de/Denboku",
+    "https://www.pokewiki.de/Mubeshi",
+    "https://www.pokewiki.de/Tsubaki",
+    "https://www.pokewiki.de/Nessia",
+    "https://www.pokewiki.de/Efelia",
+    "https://www.pokemythology.net/detonados/detonado-legends-arceus/"
+  ],
+  "items": [
+    {
+      "id": "volo-1",
+      "kind": "other",
+      "name": "Volo",
+      "title": "Ginkgo Guild",
+      "location": "Jubilife Village",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 175,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "akari-1",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Training Grounds",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 25,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "quick-attack",
+            "thunder-wave",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 9,
+      "verified": true,
+      "notes": "time para quem escolheu ; com Rowlet: Clefairy 61, Mr. Mime 62, Staraptor 62, Empoleon 63, Pikachu 63; com Cyndaquil: Clefairy 61, Mr. Mime 62, Staraptor 62, Torterra 63, Pikachu 63; com Oshawott: Clefairy 61, Mr. Mime 62, Staraptor 62, Infernape 63, Pikachu 63; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "mai-1",
+      "kind": "other",
+      "name": "Mai",
+      "title": "Warden",
+      "location": "Deertrack Path",
+      "order": 3,
+      "badge": null,
+      "party": [
+        {
+          "species": 446,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "rollout"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 10,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "alpha-kricketune",
+      "kind": "other",
+      "name": "Alpha Kricketune",
+      "title": "Alpha",
+      "location": "Deertrack Heights",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 402,
+          "form": 0,
+          "level": 12,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": false,
+      "notes": "missão 5; só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "lian-1",
+      "kind": "other",
+      "name": "Lian",
+      "title": "Warden",
+      "location": "Grandtree Arena",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 704,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "bubble",
+            "acid-armor",
+            "acid-spray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 15,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "irida-1",
+      "kind": "other",
+      "name": "Irida",
+      "title": "Clan Leader",
+      "location": "Grandtree Arena",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "quick-attack",
+            "powder-snow",
+            "swift"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 17,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "noble-kleavor",
+      "kind": "other",
+      "name": "Noble Kleavor",
+      "title": "Noble",
+      "location": "Grandtree Arena",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 900,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "aerial-ace",
+            "double-hit",
+            "stealth-rock",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "Pokémon nobre em fúria: acalme jogando balms e vença a batalha; dá a Insect Plate",
+      "versions": null
+    },
+    {
+      "id": "akari-2",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Jubilife Village",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 439,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "zen-headbutt",
+            "iron-defense",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "quick-attack",
+            "thunder-wave",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "volo-2",
+      "kind": "other",
+      "name": "Volo",
+      "title": "Ginkgo Guild",
+      "location": "Solaceon Ruins",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 175,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "calm-mind",
+            "draining-kiss",
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 443,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "twister",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 22,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "coin-1",
+      "kind": "evil",
+      "name": "Coin",
+      "title": "Miss Fortune Sisters",
+      "location": "Crimson Mirelands",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 454,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "venoshock",
+            "rock-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "ursaluna-1",
+      "kind": "other",
+      "name": "Ursaluna",
+      "title": "Pokémon",
+      "location": "Sludge Mound",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 901,
+          "form": 0,
+          "level": 26,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": false,
+      "notes": "não capturável; dá a Earth Plate e a montaria; só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "noble-lilligant",
+      "kind": "other",
+      "name": "Noble Lilligant",
+      "title": "Noble",
+      "location": "Brava Arena",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 549,
+          "form": 1,
+          "level": 30,
+          "moves": [
+            "stun-spore",
+            "poison-powder",
+            "energy-ball",
+            "rock-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 30,
+      "verified": true,
+      "notes": "Pokémon nobre em fúria: acalme jogando balms e vença a batalha; dá a Meadow Plate",
+      "versions": null
+    },
+    {
+      "id": "irida-2",
+      "kind": "other",
+      "name": "Irida",
+      "title": "Clan Leader",
+      "location": "Beachside Camp, Cobalt Coastlands",
+      "order": 13,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 30,
+      "verified": true,
+      "notes": "os dois Pokémon dela de uma vez",
+      "versions": null
+    },
+    {
+      "id": "clover-1",
+      "kind": "evil",
+      "name": "Clover",
+      "title": "Miss Fortune Sisters",
+      "location": "Firespit Island",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 460,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "icicle-crash",
+            "energy-ball",
+            "ice-shard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "coin-2",
+      "kind": "evil",
+      "name": "Coin",
+      "title": "Miss Fortune Sisters",
+      "location": "Firespit Island",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 454,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "poison-jab",
+            "mud-bomb",
+            "rock-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "charm-1",
+      "kind": "evil",
+      "name": "Charm",
+      "title": "Miss Fortune Sisters",
+      "location": "Firespit Island",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 112,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "noble-arcanine",
+      "kind": "other",
+      "name": "Noble Arcanine",
+      "title": "Noble",
+      "location": "Molten Arena, Firespit Island",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 59,
+          "form": 1,
+          "level": 36,
+          "moves": [
+            "fire-fang",
+            "rock-slide",
+            "raging-fury",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 36,
+      "verified": true,
+      "notes": "Pokémon nobre em fúria: acalme jogando balms e vença a batalha; dá a Flame Plate",
+      "versions": null
+    },
+    {
+      "id": "adaman-1",
+      "kind": "other",
+      "name": "Adaman",
+      "title": "Clan Leader",
+      "location": "Jubilife Village",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 470,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "leaf-blade",
+            "quick-attack",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 36,
+      "verified": true,
+      "notes": "os dois Pokémon dele de uma vez",
+      "versions": null
+    },
+    {
+      "id": "melli-1",
+      "kind": "other",
+      "name": "Melli",
+      "title": "Warden",
+      "location": "Wayward Wood",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 435,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "poison-jab",
+            "night-slash",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "ingo-1",
+      "kind": "other",
+      "name": "Ingo",
+      "title": "Warden",
+      "location": "Coronet Highlands (Mountain Camp)",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 67,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "bullet-punch",
+            "bulk-up",
+            "double-edge",
+            "rock-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 114,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "stun-spore",
+            "energy-ball",
+            "ancient-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 472,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "quick-attack",
+            "aerial-ace",
+            "mud-bomb",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": "dá a Toxic Plate",
+      "versions": null
+    },
+    {
+      "id": "melli-2",
+      "kind": "other",
+      "name": "Melli",
+      "title": "Warden",
+      "location": "Moonview Arena",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 435,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "poison-jab",
+            "night-slash",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 41,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "hypnosis",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 451,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "venoshock",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 44,
+      "verified": true,
+      "notes": "os três Pokémon dele de uma vez",
+      "versions": null
+    },
+    {
+      "id": "noble-electrode",
+      "kind": "other",
+      "name": "Noble Electrode",
+      "title": "Noble",
+      "location": "Moonview Arena",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 101,
+          "form": 1,
+          "level": 46,
+          "moves": [
+            "thunder-wave",
+            "energy-ball",
+            "thunderbolt",
+            "thunder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": "Pokémon nobre em fúria: acalme jogando balms e vença a batalha; dá a Zap Plate",
+      "versions": null
+    },
+    {
+      "id": "akari-3",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Jubilife Village",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 122,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "psychic",
+            "calm-mind",
+            "iron-defense",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 397,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "quick-attack",
+            "brave-bird",
+            "roost"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "quick-attack",
+            "iron-tail",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": "rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "gaeric-1",
+      "kind": "other",
+      "name": "Gaeric",
+      "title": "Warden",
+      "location": "Avalugg's Legacy",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 362,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "ice-shard",
+            "crunch",
+            "icicle-crash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "powder-snow",
+            "hex"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "os dois Pokémon dele de uma vez",
+      "versions": null
+    },
+    {
+      "id": "sabi-1",
+      "kind": "other",
+      "name": "Sabi",
+      "title": "Warden",
+      "location": "Snowpoint Temple",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 464,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "rock-slide",
+            "high-horsepower",
+            "rock-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 467,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "poison-gas",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 466,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "thunder-wave",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "os três Pokémon dela de uma vez",
+      "versions": null
+    },
+    {
+      "id": "braviary-1",
+      "kind": "other",
+      "name": "Hisuian Braviary",
+      "title": "Pokémon",
+      "location": "Snowpoint Temple",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 628,
+          "form": 1,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": false,
+      "notes": "teste da montaria; dá a Sky Plate; só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "noble-avalugg",
+      "kind": "other",
+      "name": "Noble Avalugg",
+      "title": "Noble",
+      "location": "Icepeak Arena",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 713,
+          "form": 1,
+          "level": 56,
+          "moves": [
+            "earth-power",
+            "mountain-gale",
+            "blizzard",
+            "double-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "Pokémon nobre em fúria: acalme jogando balms e vença a batalha; dá a Icicle Plate",
+      "versions": null
+    },
+    {
+      "id": "alpha-goodra-verity",
+      "kind": "other",
+      "name": "Alpha Goodra",
+      "title": "Alpha",
+      "location": "Lake Verity (caverna)",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 706,
+          "form": 1,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "alpha-overqwil-valor",
+      "kind": "other",
+      "name": "Alpha Overqwil",
+      "title": "Alpha",
+      "location": "Lake Valor (caverna)",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 904,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "alpha-zoroark-acuity",
+      "kind": "other",
+      "name": "Alpha Zoroark",
+      "title": "Alpha",
+      "location": "Lake Acuity (caverna)",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 571,
+          "form": 1,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "beni-1",
+      "kind": "other",
+      "name": "Beni",
+      "title": "Galaxy Team",
+      "location": "Stone Portal, Mt. Coronet",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 429,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "shadow-ball",
+            "power-gem",
+            "extrasensory",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 903,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "dire-claw",
+            "close-combat",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "calm-mind",
+            "dazzling-gleam",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "swords-dance",
+            "drain-punch",
+            "psycho-cut"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": false,
+      "notes": "o detonado dá Gardevoir 60",
+      "versions": null
+    },
+    {
+      "id": "kamado-1",
+      "kind": "other",
+      "name": "Kamado",
+      "title": "Galaxy Team",
+      "location": "Temple of Sinnoh",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 628,
+          "form": 1,
+          "level": 61,
+          "moves": [
+            "esper-wing",
+            "air-slash",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 76,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "stealth-rock",
+            "rock-slide",
+            "double-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "draining-kiss",
+            "psychic",
+            "calm-mind",
+            "baby-doll-eyes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "zen-headbutt",
+            "high-horsepower",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "charm-2",
+      "kind": "evil",
+      "name": "Charm",
+      "title": "Miss Fortune Sisters",
+      "location": "Primeval Grotto",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 112,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": false,
+      "notes": "só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "origin-palkia",
+      "kind": "champion",
+      "name": "Origin Palkia",
+      "title": "Pokémon",
+      "location": "Temple of Sinnoh",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 484,
+          "form": 1,
+          "level": 65,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": false,
+      "notes": "a luta final da história: acalme com balms e capture com a Origin Ball; Palkia Origem se você ficou do lado do Adaman; do lado da Irida é o Dialga Origem 65; só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "kamado-2",
+      "kind": "other",
+      "name": "Kamado",
+      "title": "Galaxy Team",
+      "location": "Prelude Beach",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 76,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "iron-head",
+            "stone-edge",
+            "thunder-punch",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "draining-kiss",
+            "psychic",
+            "calm-mind",
+            "water-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 628,
+          "form": 1,
+          "level": 65,
+          "moves": [
+            "esper-wing",
+            "air-slash",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 214,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "close-combat",
+            "swords-dance",
+            "pin-missile",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "zen-headbutt",
+            "high-horsepower",
+            "giga-impact",
+            "fire-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 66,
+      "verified": true,
+      "notes": "pós-jogo (missão 25); dá a Fist Plate",
+      "versions": null
+    },
+    {
+      "id": "volo-3",
+      "kind": "evil",
+      "name": "Volo",
+      "title": "Pokémon Wielder",
+      "location": "Temple of Sinnoh",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 442,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "hypnosis",
+            "dark-pulse",
+            "extrasensory",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "poison-jab",
+            "petal-dance",
+            "spikes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "calm-mind",
+            "moonblast",
+            "extrasensory",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 1,
+          "level": 68,
+          "moves": [
+            "raging-fury",
+            "crunch",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "close-combat",
+            "crunch",
+            "bulk-up",
+            "bullet-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "dragon-claw",
+            "earth-power",
+            "slash",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 68,
+      "verified": true,
+      "notes": "pós-jogo: a revelação do Volo",
+      "versions": null
+    },
+    {
+      "id": "volo-giratina",
+      "kind": "evil",
+      "name": "Volo",
+      "title": "Pokémon Wielder",
+      "location": "Temple of Sinnoh",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 487,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "aura-sphere",
+            "dragon-claw",
+            "earth-power",
+            "shadow-force"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 487,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "aura-sphere",
+            "dragon-claw",
+            "earth-power",
+            "shadow-force"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "logo depois, sem curar: o Volo manda o Giratina (forma Alterada e depois Origem)",
+      "versions": null
+    },
+    {
+      "id": "adaman-3",
+      "kind": "other",
+      "name": "Adaman",
+      "title": "Clan Leader",
+      "location": "Diamond Settlement",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 470,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "leaf-blade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 197,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "dark-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 134,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "aqua-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "pós-jogo (pedido 89); dá o Adamant Crystal",
+      "versions": null
+    },
+    {
+      "id": "irida-3",
+      "kind": "other",
+      "name": "Irida",
+      "title": "Clan Leader",
+      "location": "Pearl Settlement",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 196,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "pós-jogo (pedido 90); dá o Lustrous Globe",
+      "versions": null
+    },
+    {
+      "id": "arceus",
+      "kind": "other",
+      "name": "Arceus",
+      "title": "Pokémon",
+      "location": "Temple of Sinnoh (céu)",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 493,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": false,
+      "notes": "pós-jogo (missão 27): acalme com balms; só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "akari-4",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Ginkgo Landing",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 35,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "psychic",
+            "moonblast",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "drain-punch",
+            "zen-headbutt",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 398,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "quick-attack",
+            "brave-bird",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 388,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "bulldoze",
+            "leaf-blade",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "quick-attack",
+            "iron-tail",
+            "volt-tackle",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 60, Mr. Mime 61, Staraptor 61, Prinplup 62, Pikachu 62; com Oshawott: Clefairy 60, Mr. Mime 61, Staraptor 61, Monferno 62, Pikachu 62; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo (pedido 98, Daybreak)",
+      "versions": null
+    },
+    {
+      "id": "ingo-2",
+      "kind": "other",
+      "name": "Ingo",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 65,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "dazzling-gleam",
+            "tri-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 465,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "sleep-powder",
+            "energy-ball",
+            "ancient-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 476,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "power-gem",
+            "earth-power",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "bullet-punch",
+            "ice-punch",
+            "fire-punch",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "thunder",
+            "tri-attack",
+            "flash-cannon",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 472,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "quick-attack",
+            "aerial-ace",
+            "stone-edge",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 68,
+      "verified": true,
+      "notes": "pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "ingo-3",
+      "kind": "other",
+      "name": "Ingo",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 65,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "dazzling-gleam",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 465,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "sleep-powder",
+            "energy-ball",
+            "ancient-power",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 476,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "power-gem",
+            "earth-power",
+            "flash-cannon",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "bullet-punch",
+            "ice-punch",
+            "fire-punch",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "thunder",
+            "tri-attack",
+            "flash-cannon",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 472,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "earth-power",
+            "aerial-ace",
+            "stone-edge",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo (\"but tougher\")",
+      "versions": null
+    },
+    {
+      "id": "akari-5",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Training Grounds",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 35,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "flamethrower",
+            "moonblast",
+            "shadow-ball",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "energy-ball",
+            "psychic",
+            "hypnosis",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 398,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "quick-attack",
+            "brave-bird",
+            "close-combat",
+            "roost"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 389,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "headlong-rush",
+            "leaf-blade",
+            "iron-head",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "quick-attack",
+            "iron-tail",
+            "volt-tackle",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 61, Mr. Mime 62, Staraptor 62, Empoleon 63, Pikachu 63; com Oshawott: Clefairy 61, Mr. Mime 62, Staraptor 62, Infernape 63, Pikachu 63; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo: batalha comum depois do Daybreak",
+      "versions": null
+    },
+    {
+      "id": "noble-kleavor-rematch",
+      "kind": "other",
+      "name": "Noble Kleavor",
+      "title": "Noble",
+      "location": "Grandtree Arena",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 900,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "stone-axe",
+            "air-slash",
+            "x-scissor",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: pós-jogo, depois de completar a Pokédex e do Arceus",
+      "versions": null
+    },
+    {
+      "id": "noble-lilligant-rematch",
+      "kind": "other",
+      "name": "Noble Lilligant",
+      "title": "Noble",
+      "location": "Brava Arena",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 549,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "victory-dance",
+            "petal-dance",
+            "drain-punch",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: pós-jogo, depois de completar a Pokédex e do Arceus",
+      "versions": null
+    },
+    {
+      "id": "noble-arcanine-rematch",
+      "kind": "other",
+      "name": "Noble Arcanine",
+      "title": "Noble",
+      "location": "Molten Arena",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 59,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "raging-fury",
+            "stone-edge",
+            "crunch",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: pós-jogo, depois de completar a Pokédex e do Arceus",
+      "versions": null
+    },
+    {
+      "id": "noble-electrode-rematch",
+      "kind": "other",
+      "name": "Noble Electrode",
+      "title": "Noble",
+      "location": "Moonview Arena",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 101,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "chloroblast",
+            "thunder",
+            "hyper-beam",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: pós-jogo, depois de completar a Pokédex e do Arceus",
+      "versions": null
+    },
+    {
+      "id": "noble-avalugg-rematch",
+      "kind": "other",
+      "name": "Noble Avalugg",
+      "title": "Noble",
+      "location": "Icepeak Arena",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 713,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "mountain-gale",
+            "high-horsepower",
+            "stone-edge",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: pós-jogo, depois de completar a Pokédex e do Arceus",
+      "versions": null
+    }
+  ]
+}
