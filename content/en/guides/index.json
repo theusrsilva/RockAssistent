@@ -4,6 +4,126 @@
       "key": "frlg",
       "title": "FireRed / LeafGreen",
       "sections": [{ "id": "overview", "title": "Overview", "file": "games/frlg/overview.md" }]
+    },
+    {
+      "key": "sm",
+      "title": "Sun / Moon",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/sm/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/sm/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/sm/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/sm/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/sm/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/sm/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/sm/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/sm/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/sm/legendaries.md" }
+      ]
+    },
+    {
+      "key": "usum",
+      "title": "Ultra Sun / Ultra Moon",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/usum/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/usum/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/usum/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/usum/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/usum/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/usum/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/usum/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/usum/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/usum/legendaries.md" }
+      ]
+    },
+    {
+      "key": "lgpe",
+      "title": "Let's Go, Pikachu! / Let's Go, Eevee!",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/lgpe/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/lgpe/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/lgpe/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/lgpe/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/lgpe/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/lgpe/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/lgpe/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/lgpe/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/lgpe/legendaries.md" }
+      ]
+    },
+    {
+      "key": "swsh",
+      "title": "Sword / Shield",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/swsh/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/swsh/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/swsh/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/swsh/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/swsh/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/swsh/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/swsh/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/swsh/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/swsh/legendaries.md" }
+      ]
+    },
+    {
+      "key": "bdsp",
+      "title": "Brilliant Diamond / Shining Pearl",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/bdsp/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/bdsp/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/bdsp/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/bdsp/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/bdsp/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/bdsp/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/bdsp/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/bdsp/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/bdsp/legendaries.md" }
+      ]
+    },
+    {
+      "key": "pla",
+      "title": "Legends: Arceus",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/pla/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/pla/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/pla/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/pla/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/pla/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/pla/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/pla/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/pla/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/pla/legendaries.md" }
+      ]
+    },
+    {
+      "key": "sv",
+      "title": "Scarlet / Violet",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/sv/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/sv/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/sv/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/sv/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/sv/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/sv/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/sv/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/sv/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/sv/legendaries.md" }
+      ]
+    },
+    {
+      "key": "za",
+      "title": "Legends: Z-A",
+      "sections": [
+        { "id": "overview", "title": "Overview", "file": "games/za/overview.md" },
+        { "id": "walkthrough", "title": "Walkthrough", "file": "games/za/walkthrough.md" },
+        { "id": "bosses", "title": "Bosses", "file": "games/za/bosses.md" },
+        { "id": "tms", "title": "TMs", "file": "games/za/tms.md" },
+        { "id": "exclusives", "title": "Exclusives", "file": "games/za/exclusives.md" },
+        { "id": "trades", "title": "Trades and gifts", "file": "games/za/trades.md" },
+        { "id": "events", "title": "Events", "file": "games/za/events.md" },
+        { "id": "postgame", "title": "Postgame", "file": "games/za/postgame.md" },
+        { "id": "legendaries", "title": "Legendaries", "file": "games/za/legendaries.md" }
+      ]
     }
   ],
   "mechanics": [
