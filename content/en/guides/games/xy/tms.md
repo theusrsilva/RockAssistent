@@ -1,0 +1,113 @@
+TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
+
+:::tms xy
+
+## Where to find
+
+- TM01 Hone Claws: Route 5.
+- TM02 Dragon Claw: Victory Road.
+- TM03 Psyshock: Victory Road.
+- TM04 Calm Mind: Olympia, Anistar Gym.
+- TM05 Roar: Battle Maison prize (BP, postgame).
+- TM06 Toxic: Route 14.
+- TM07 Hail: Shalour City Poké Mart.
+- TM08 Bulk Up: Snowbelle City.
+- TM09 Venoshock: Route 6.
+- TM10 Hidden Power: Anistar City.
+- TM11 Sunny Day: Lumiose City Poké Mart.
+- TM12 Taunt: Lysandre Labs.
+- TM13 Ice Beam: Wulfric, Snowbelle Gym.
+- TM14 Blizzard: Anistar City Poké Mart.
+- TM15 Hyper Beam: Anistar City Poké Mart.
+- TM16 Light Screen: Kiloude City Poké Mart.
+- TM17 Protect: Parfum Palace.
+- TM18 Rain Dance: Lumiose City Poké Mart.
+- TM19 Roost: Route 8.
+- TM20 Safeguard: Shalour City Poké Mart.
+- TM21 Frustration: Connecting Cave.
+- TM22 Solar Beam: Route 21.
+- TM23 Smack Down: Battle Maison prize (BP, postgame).
+- TM24 Thunderbolt: Clemont, Lumiose Gym.
+- TM25 Thunder: Anistar City Poké Mart.
+- TM26 Earthquake: Route 22.
+- TM27 Return: Route 4.
+- TM28 Dig: Shalour City Poké Mart.
+- TM29 Psychic: Pokémon Village.
+- TM30 Shadow Ball: Terminus Cave.
+- TM31 Brick Break: Terminus Cave.
+- TM32 Double Team: Anistar City Pokémon Center (morning).
+- TM33 Reflect: Kiloude City Poké Mart.
+- TM34 Sludge Wave: Battle Maison prize (BP, postgame).
+- TM35 Flamethrower: Anistar City Pokémon Center.
+- TM36 Sludge Bomb: Route 19.
+- TM37 Sandstorm: Shalour City Poké Mart.
+- TM38 Fire Blast: Anistar City Poké Mart.
+- TM39 Rock Tomb: Grant, Cyllage Gym.
+- TM40 Aerial Ace: Connecting Cave.
+- TM41 Torment: Laverre City.
+- TM42 Facade: Dendemille Town.
+- TM43 Flame Charge: Kalos Power Plant.
+- TM44 Rest: Cyllage City.
+- TM45 Attract: Route 12.
+- TM46 Thief: Camphrier Town.
+- TM47 Low Sweep: Tower of Mastery.
+- TM48 Round: Battle Maison prize (BP, postgame).
+- TM49 Echoed Voice: Hotel Richissime, Lumiose City.
+- TM50 Overheat: Kiloude City Poké Mart.
+- TM51 Steel Wing: Battle Maison prize (BP, postgame).
+- TM52 Focus Blast: Anistar City Poké Mart.
+- TM53 Energy Ball: Route 20.
+- TM54 False Swipe: Lumiose City.
+- TM55 Scald: Couriway Town.
+- TM56 Fling: Lost Hotel.
+- TM57 Charge Beam: Route 13.
+- TM58 Sky Drop: Kiloude City.
+- TM59 Incinerate: Battle Maison prize (BP, postgame).
+- TM60 Quash: Battle Maison prize (BP, postgame).
+- TM61 Will-O-Wisp: Route 14.
+- TM62 Acrobatics: Coumarine City.
+- TM63 Embargo: Coumarine City.
+- TM64 Explosion: Battle Maison prize (BP, postgame).
+- TM65 Shadow Claw: Glittering Cave.
+- TM66 Payback: Geosenge Town.
+- TM67 Retaliate: Battle Maison prize (BP, postgame).
+- TM68 Giga Impact: Kiloude City Poké Mart.
+- TM69 Rock Polish: Route 11.
+- TM70 Flash: Tierno, Reflection Cave.
+- TM71 Stone Edge: Frost Cavern.
+- TM72 Volt Switch: Battle Maison prize (BP, postgame).
+- TM73 Thunder Wave: Route 10.
+- TM74 Gyro Ball: Reflection Cave.
+- TM75 Swords Dance: Lumiose City Poké Mart.
+- TM76 Struggle Bug: Lumiose City Poké Mart.
+- TM77 Psych Up: Anistar City Poké Mart (evening).
+- TM78 Bulldoze: Lumiose City Poké Mart.
+- TM79 Frost Breath: Frost Cavern.
+- TM80 Rock Slide: Couriway Town.
+- TM81 X-Scissor: Azure Bay.
+- TM82 Dragon Tail: Lumiose Museum.
+- TM83 Infestation: Viola, Santalune Gym.
+- TM84 Poison Jab: Shalour City Poké Mart.
+- TM85 Dream Eater: Battle Maison prize (BP, postgame).
+- TM86 Grass Knot: Ramos, Coumarine Gym.
+- TM87 Swagger: Battle Maison prize (BP, postgame).
+- TM88 Sleep Talk: random guest in a Lumiose City hotel.
+- TM89 U-turn: Couriway Town.
+- TM90 Substitute: Anistar City Pokémon Center.
+- TM91 Flash Cannon: Kiloude City.
+- TM92 Trick Room: Coumarine City.
+- TM93 Wild Charge: Kiloude City Poké Mart.
+- TM94 Rock Smash: girl in Ambrette Town.
+- TM95 Snarl: Lost Hotel.
+- TM96 Nature Power: Ambrette Town hotel.
+- TM97 Dark Pulse: Route 16.
+- TM98 Power-Up Punch: Korrina, Shalour Gym.
+- TM99 Dazzling Gleam: Valerie, Laverre Gym.
+- TM100 Confide: Coumarine City.
+- HM01 Cut: Parfum Palace (garden maze).
+- HM02 Fly: Prof. Sycamore, Coumarine City.
+- HM03 Surf: Calem/Serena, Shalour City.
+- HM04 Strength: Grant, Cyllage City.
+- HM05 Waterfall: Shauna, Route 19.
+
+<!-- fontes: Serebii (TMs de X/Y), notas pokemythology (xy) -->

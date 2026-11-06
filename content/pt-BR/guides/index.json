@@ -3,7 +3,370 @@
     {
       "key": "frlg",
       "title": "FireRed / LeafGreen",
-      "sections": [{ "id": "overview", "title": "Visão geral", "file": "games/frlg/overview.md" }]
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/frlg/overview.md"
+        }
+      ]
+    },
+    {
+      "key": "dp",
+      "title": "Diamond / Pearl",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/dp/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/dp/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/dp/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/dp/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/dp/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/dp/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/dp/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/dp/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/dp/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "pt",
+      "title": "Platinum",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/pt/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/pt/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/pt/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/pt/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/pt/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/pt/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/pt/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/pt/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/pt/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "hgss",
+      "title": "HeartGold / SoulSilver",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/hgss/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/hgss/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/hgss/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/hgss/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/hgss/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/hgss/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/hgss/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/hgss/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/hgss/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "bw",
+      "title": "Black / White",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/bw/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/bw/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/bw/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/bw/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/bw/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/bw/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/bw/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/bw/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/bw/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "b2w2",
+      "title": "Black 2 / White 2",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/b2w2/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/b2w2/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/b2w2/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/b2w2/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/b2w2/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/b2w2/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/b2w2/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/b2w2/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/b2w2/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "xy",
+      "title": "X / Y",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/xy/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/xy/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/xy/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/xy/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/xy/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/xy/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/xy/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/xy/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/xy/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "oras",
+      "title": "Omega Ruby / Alpha Sapphire",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Visão geral",
+          "file": "games/oras/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Detonado",
+          "file": "games/oras/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Chefes",
+          "file": "games/oras/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs e HMs",
+          "file": "games/oras/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusivos",
+          "file": "games/oras/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trocas e presentes",
+          "file": "games/oras/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Eventos",
+          "file": "games/oras/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Pós-jogo",
+          "file": "games/oras/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Lendários",
+          "file": "games/oras/legendaries.md"
+        }
+      ]
     }
   ],
   "mechanics": [
@@ -11,7 +374,13 @@
       "key": "types",
       "title": "Tipos",
       "description": "Vantagens, fraquezas e imunidades.",
-      "sections": [{ "id": "types", "title": "Tipos", "file": "mechanics/types.md" }]
+      "sections": [
+        {
+          "id": "types",
+          "title": "Tipos",
+          "file": "mechanics/types.md"
+        }
+      ]
     }
   ],
   "vgc": [
@@ -19,7 +388,13 @@
       "key": "intro",
       "title": "O que é o VGC",
       "description": "O formato oficial de campeonatos.",
-      "sections": [{ "id": "intro", "title": "O que é o VGC", "file": "vgc/intro.md" }]
+      "sections": [
+        {
+          "id": "intro",
+          "title": "O que é o VGC",
+          "file": "vgc/intro.md"
+        }
+      ]
     }
   ],
   "mythology": [
@@ -27,7 +402,13 @@
       "key": "kanto",
       "title": "Kanto",
       "description": "Mew, Mewtwo e as aves lendárias.",
-      "sections": [{ "id": "kanto", "title": "Kanto", "file": "mythology/kanto.md" }]
+      "sections": [
+        {
+          "id": "kanto",
+          "title": "Kanto",
+          "file": "mythology/kanto.md"
+        }
+      ]
     }
   ]
 }
