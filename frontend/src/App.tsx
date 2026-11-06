@@ -13,6 +13,8 @@ import TypeChartPage from './pages/dex/TypeChartPage'
 import GiftsPage from './pages/gifts/GiftsPage'
 import GuidesPage from './pages/guides/GuidesPage'
 import HuntPage from './pages/hunt/HuntPage'
+import HuntCounter from './pages/hunt/HuntCounter'
+import NewHuntWizard from './pages/hunt/NewHuntWizard'
 import NuzlockePage from './pages/nuzlocke/NuzlockePage'
 import TradesHubPage from './pages/trades/TradesHubPage'
 import SettingsPage from './pages/SettingsPage'
@@ -47,6 +49,8 @@ export default function App() {
                 <Route path="/mystery-gift" element={<GiftsPage />} />
                 <Route path="/nuzlocke" element={<NuzlockePage />} />
                 <Route path="/hunt" element={<HuntPage />} />
+                <Route path="/hunt/nova" element={<NewHuntWizard />} />
+                <Route path="/hunt/:id" element={<HuntCounter />} />
                 <Route path="/historico" element={<HistoryPage />} />
                 {/* O Boxes abre o construtor em "Editar" e "+ Novo". */}
                 <Route path="/criar" element={<BuilderPage />} />

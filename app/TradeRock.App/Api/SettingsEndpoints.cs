@@ -12,6 +12,30 @@ public static class SettingsEndpoints
 {
     public const string TradeSettingsKey = "trade.settings";
 
+    /// <summary>Atalhos do Contador Hunt (por conta no modo servidor: <see cref="UserSettings.Key"/>).</summary>
+    public const string HotkeysKey = "hotkeys";
+
+    /// <summary>
+    /// Atalhos de teclado do Contador Hunt. O combo usa o <c>KeyboardEvent.code</c> do navegador com modificadores
+    /// na frente: <c>Space</c>, <c>Backspace</c>, <c>Ctrl+ArrowUp</c>, <c>Shift+Equal</c>.
+    /// </summary>
+    public sealed record HotkeySettings(string Increment, string Decrement)
+    {
+        public static readonly HotkeySettings Default = new("Space", "Backspace");
+    }
+
+    private static readonly System.Text.RegularExpressions.Regex ComboPattern =
+        new(@"^((Ctrl|Alt|Shift|Meta)\+){0,4}[A-Za-z][A-Za-z0-9]{0,24}$", System.Text.RegularExpressions.RegexOptions.CultureInvariant);
+
+    /// <summary>Combo válido: tecla (código do navegador) depois de no máximo quatro modificadores, sem modificador sozinho.</summary>
+    public static bool IsValidCombo(string? combo)
+    {
+        if (string.IsNullOrEmpty(combo) || combo.Length > 60 || !ComboPattern.IsMatch(combo))
+            return false;
+        var key = combo[(combo.LastIndexOf('+') + 1)..];
+        return key is not ("Ctrl" or "Alt" or "Shift" or "Meta" or "Control");
+    }
+
     /// <summary>Motor e os jogos que ele troca (chaves do catálogo: frlg, sv...).</summary>
     public sealed record EngineDto(string Id, bool IsSimulation, bool Available, string? ReasonCode, bool Selected, IReadOnlyList<string> Games,
         IReadOnlyList<string> PokeldnGames, bool NeedsSetup, bool IgnoresLinkCode);
@@ -39,6 +63,21 @@ public static class SettingsEndpoints
             var normalized = body.Normalized();
             await settings.SetAsync(TradeSettingsKey, normalized, ct);
             return normalized;
+        });
+
+        // Atalhos do Contador Hunt: na janela local e, no modo servidor, por conta.
+        api.MapGet("/settings/hotkeys", async (SettingsStore settings, CancellationToken ct) =>
+            await settings.GetAsync(UserSettings.Key(HotkeysKey), HotkeySettings.Default, ct));
+
+        api.MapPut("/settings/hotkeys", async (HotkeySettings body, SettingsStore settings, CancellationToken ct) =>
+        {
+            if (!IsValidCombo(body.Increment) || !IsValidCombo(body.Decrement))
+                return Results.BadRequest(new { error = "hotkey_invalid" });
+            if (string.Equals(body.Increment, body.Decrement, StringComparison.OrdinalIgnoreCase))
+                return Results.BadRequest(new { error = "hotkeys_same" });
+            var saved = new HotkeySettings(body.Increment, body.Decrement);
+            await settings.SetAsync(UserSettings.Key(HotkeysKey), saved, ct);
+            return Results.Ok(saved);
         });
 
         // Pastas de saves da tela Boxes (só na janela local: são caminhos do PC).

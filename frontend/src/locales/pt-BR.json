@@ -2094,6 +2094,101 @@
     "title": "Nuzlocke"
   },
   "hunt": {
-    "title": "Contador Hunt"
+    "title": "Contador Hunt",
+    "sub": "Conte os encontros até o shiny aparecer. Dá para ter várias hunts ao mesmo tempo.",
+    "new": "Nova hunt",
+    "active": "Em andamento",
+    "finished": "Terminadas",
+    "emptyActive": "Nenhuma hunt em andamento. Comece uma em \"Nova hunt\".",
+    "emptyFinished": "Nenhuma hunt terminada ainda.",
+    "found": "Achou",
+    "gaveUp": "Desistiu",
+    "encounters": "encontros",
+    "oneIn": "1 em {{odds}}",
+    "back": "Hunts",
+    "loadError": "Não deu para carregar as hunts.",
+    "wizard": {
+      "title": "Nova hunt",
+      "pokemon": "Pokémon",
+      "searchSpecies": "Procure pelo nome ou número",
+      "game": "Jogo",
+      "loadingGames": "Procurando os jogos...",
+      "noGames": "Não achamos jogo com um jeito de caçar este Pokémon nos nossos dados.",
+      "method": "Método",
+      "baseOdds": "Chance base: 1 em {{odds}}",
+      "modifiers": "Modificadores",
+      "noModifiers": "Este método não tem modificadores.",
+      "counterStep": "{{name}}: segue o contador sozinho.",
+      "start": "Começar a hunt",
+      "kinds": {
+        "encounter": "encontro",
+        "gift": "presente",
+        "egg": "ovo",
+        "evolution": "evolução"
+      }
+    },
+    "counter": {
+      "odds": "Chance atual",
+      "cumulative": "Chance acumulada",
+      "cumulativeHelp": "Com esse número de encontros, você já tinha {{percent}} de chance de ter achado.",
+      "time": "Tempo",
+      "pause": "Pausar",
+      "resume": "Continuar",
+      "plus": "Somar 1",
+      "minus": "Tirar 1",
+      "found": "Achei!",
+      "giveUp": "Desistir",
+      "giveUpTitle": "Desistir desta hunt?",
+      "giveUpText": "A hunt sai de \"Em andamento\" e fica nas terminadas como desistida.",
+      "notes": "Notas",
+      "notesPlaceholder": "Rota, horário, o que quiser lembrar...",
+      "step": "{{name}} {{value}}: 1 em {{odds}}",
+      "stepNone": "{{name}} {{value}}: ainda sem bônus",
+      "hotkeysHint": "Atalhos: {{inc}} soma e {{dec}} diminui. Dá para trocar em Configurações → Preferências.",
+      "finishedFound": "Você achou o shiny em {{date}}!",
+      "finishedGaveUp": "Hunt encerrada em {{date}}.",
+      "foundToast": "Parabéns pelo shiny!",
+      "gaveUpToast": "Hunt encerrada.",
+      "delete": "Excluir hunt",
+      "deleteTitle": "Excluir esta hunt?",
+      "deleteText": "O contador, o tempo e as notas somem de vez.",
+      "deleted": "Hunt excluída."
+    },
+    "errors": {
+      "unknown_game": "Jogo desconhecido.",
+      "unknown_method": "Método desconhecido.",
+      "method_not_in_game": "Este método não existe neste jogo.",
+      "invalid_species": "Pokémon inválido.",
+      "invalid_form": "Forma inválida.",
+      "unknown_modifier": "Modificador desconhecido.",
+      "invalid_modifier": "Valor de modificador inválido.",
+      "modifier_not_in_game": "Este modificador não vale neste jogo.",
+      "invalid_delta": "Só dá para somar ou tirar até 100 de uma vez.",
+      "invalid_count": "O contador não pode ser negativo.",
+      "invalid_elapsed": "O tempo não pode ser negativo.",
+      "notes_too_long": "As notas passam de 500 caracteres.",
+      "hunt_not_found": "Esta hunt não existe mais.",
+      "hunt_finished": "Esta hunt já terminou."
+    },
+    "hotkeys": {
+      "title": "Atalhos do Contador Hunt",
+      "sub": "Valem com a página do contador aberta e a janela na frente. Fora de campos de texto.",
+      "increment": "Somar 1",
+      "decrement": "Tirar 1",
+      "record": "Gravar",
+      "recording": "Aperte a tecla... (Esc cancela)",
+      "reset": "Voltar ao padrão",
+      "errors": {
+        "hotkeys_same": "Os dois atalhos não podem ser iguais.",
+        "hotkey_invalid": "Essa tecla não serve de atalho."
+      },
+      "keyNames": {
+        "Space": "Espaço",
+        "Backspace": "Backspace",
+        "Enter": "Enter",
+        "Tab": "Tab",
+        "Delete": "Delete"
+      }
+    }
   }
 }

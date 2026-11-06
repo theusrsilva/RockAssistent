@@ -2094,6 +2094,101 @@
     "title": "Nuzlocke"
   },
   "hunt": {
-    "title": "Hunt Counter"
+    "title": "Hunt Counter",
+    "sub": "Count encounters until the shiny shows up. You can keep several hunts going at once.",
+    "new": "New hunt",
+    "active": "In progress",
+    "finished": "Finished",
+    "emptyActive": "No hunt in progress. Start one with \"New hunt\".",
+    "emptyFinished": "No finished hunts yet.",
+    "found": "Found",
+    "gaveUp": "Gave up",
+    "encounters": "encounters",
+    "oneIn": "1 in {{odds}}",
+    "back": "Hunts",
+    "loadError": "Couldn't load the hunts.",
+    "wizard": {
+      "title": "New hunt",
+      "pokemon": "Pokémon",
+      "searchSpecies": "Search by name or number",
+      "game": "Game",
+      "loadingGames": "Looking for games...",
+      "noGames": "We found no game with a way to hunt this Pokémon in our data.",
+      "method": "Method",
+      "baseOdds": "Base odds: 1 in {{odds}}",
+      "modifiers": "Modifiers",
+      "noModifiers": "This method has no modifiers.",
+      "counterStep": "{{name}}: follows the counter on its own.",
+      "start": "Start the hunt",
+      "kinds": {
+        "encounter": "encounter",
+        "gift": "gift",
+        "egg": "egg",
+        "evolution": "evolution"
+      }
+    },
+    "counter": {
+      "odds": "Current odds",
+      "cumulative": "Cumulative chance",
+      "cumulativeHelp": "With this many encounters, you already had a {{percent}} chance of finding it.",
+      "time": "Time",
+      "pause": "Pause",
+      "resume": "Resume",
+      "plus": "Add 1",
+      "minus": "Remove 1",
+      "found": "Found it!",
+      "giveUp": "Give up",
+      "giveUpTitle": "Give up this hunt?",
+      "giveUpText": "The hunt leaves \"In progress\" and stays in the finished list as given up.",
+      "notes": "Notes",
+      "notesPlaceholder": "Route, time of day, anything you want to remember...",
+      "step": "{{name}} {{value}}: 1 in {{odds}}",
+      "stepNone": "{{name}} {{value}}: no bonus yet",
+      "hotkeysHint": "Shortcuts: {{inc}} adds and {{dec}} removes. Change them in Settings → Preferences.",
+      "finishedFound": "You found the shiny on {{date}}!",
+      "finishedGaveUp": "Hunt ended on {{date}}.",
+      "foundToast": "Congrats on the shiny!",
+      "gaveUpToast": "Hunt ended.",
+      "delete": "Delete hunt",
+      "deleteTitle": "Delete this hunt?",
+      "deleteText": "The counter, time and notes are gone for good.",
+      "deleted": "Hunt deleted."
+    },
+    "errors": {
+      "unknown_game": "Unknown game.",
+      "unknown_method": "Unknown method.",
+      "method_not_in_game": "This method doesn't exist in this game.",
+      "invalid_species": "Invalid Pokémon.",
+      "invalid_form": "Invalid form.",
+      "unknown_modifier": "Unknown modifier.",
+      "invalid_modifier": "Invalid modifier value.",
+      "modifier_not_in_game": "This modifier doesn't apply to this game.",
+      "invalid_delta": "You can only add or remove up to 100 at once.",
+      "invalid_count": "The counter can't be negative.",
+      "invalid_elapsed": "The time can't be negative.",
+      "notes_too_long": "Notes are over 500 characters.",
+      "hunt_not_found": "This hunt no longer exists.",
+      "hunt_finished": "This hunt has already ended."
+    },
+    "hotkeys": {
+      "title": "Hunt Counter shortcuts",
+      "sub": "They work with the counter page open and the window in front. Not inside text fields.",
+      "increment": "Add 1",
+      "decrement": "Remove 1",
+      "record": "Record",
+      "recording": "Press the key... (Esc cancels)",
+      "reset": "Back to default",
+      "errors": {
+        "hotkeys_same": "The two shortcuts can't be the same.",
+        "hotkey_invalid": "That key can't be a shortcut."
+      },
+      "keyNames": {
+        "Space": "Space",
+        "Backspace": "Backspace",
+        "Enter": "Enter",
+        "Tab": "Tab",
+        "Delete": "Delete"
+      }
+    }
   }
 }

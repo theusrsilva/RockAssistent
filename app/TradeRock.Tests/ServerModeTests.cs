@@ -246,6 +246,26 @@ public sealed class ServerModeTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Atalhos_do_contador_valem_pela_rede_e_sao_por_conta()
+    {
+        await EnableAsync();
+        await CreateAccountAsync("rafa");
+        var rafa = await LoginAsync("rafa");
+
+        // Pela rede o endpoint existe (não é só da janela local) e começa no padrão.
+        var initial = await rafa.GetJsonAsync("/api/settings/hotkeys");
+        Assert.Equal("Space", initial.GetProperty("increment").GetString());
+        Assert.Equal("Backspace", initial.GetProperty("decrement").GetString());
+
+        Assert.Equal(HttpStatusCode.OK, (await rafa.PutAsync("/api/settings/hotkeys", new { increment = "Ctrl+ArrowUp", decrement = "Ctrl+ArrowDown" })).StatusCode);
+        Assert.Equal("Ctrl+ArrowUp", (await rafa.GetJsonAsync("/api/settings/hotkeys")).GetProperty("increment").GetString());
+
+        // O dono do PC continua com os dele.
+        var local = await _local.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct);
+        Assert.Equal("Space", local.GetProperty("increment").GetString());
+    }
+
+    [Fact]
     public async Task Apagar_conta_apaga_o_cofre_dela_e_derruba_o_login()
     {
         await EnableAsync();

@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
-import { Badge, Button, Callout, Field, HelpTip, Icon, Segmented, Toggle, inputClass, selectClass, useToast } from '../components/ui'
+import { Badge, Button, Callout, Field, HelpTip, Icon, Segmented, Toggle, inputClass, selectClass, useIsMobile, useToast } from '../components/ui'
 import { ApiError, api } from '../lib/api'
 import { languages } from '../i18n'
 import { familyOf, GAMES, gameByFamily, idLimits } from '../lib/games'
@@ -13,6 +13,7 @@ import { AccountsCard, ServerModeCard } from './settings/ServerSettings'
 import { ConnectionChecklist } from './settings/ConnectionChecklist'
 import { LogsTab } from './settings/LogsTab'
 import { SaveFoldersCard } from './settings/SaveFoldersCard'
+import { HotkeysCard } from './settings/HotkeysCard'
 import { useAuth } from '../lib/auth'
 import { useConnection } from '../lib/connection'
 import { useConnectionSummary } from '../components/Layout'
@@ -36,6 +37,7 @@ export default function SettingsPage() {
   // Pela rede: status da conexão, "Meu treinador", preferências e (administradores) as contas.
   const local = caller?.local !== false
   const status = useConnectionSummary()
+  const mobile = useIsMobile()
   const [settings, setSettings] = useState<TradeSettings | null>(null)
 
   useEffect(() => {
@@ -92,6 +94,8 @@ export default function SettingsPage() {
           <PreferencesTab settings={settings} onSave={saveSettings} />
           {/* Pastas de saves da tela Boxes: caminhos do PC, só na janela local. */}
           {local && <SaveFoldersCard />}
+          {/* Atalhos do Contador Hunt: no celular não há teclado, então o cartão some. */}
+          {!mobile && <HotkeysCard />}
         </div>
       )}
       {tab === 'avancado' && local && <AdvancedTab settings={settings} onSave={saveSettings} />}
