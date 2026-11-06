@@ -84,7 +84,7 @@
       ],
       "level_cap": 7,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pichu 6, Popplio 7; com Popplio: Litten 5",
+      "notes": "time para quem escolheu Litten; com Rowlet: Pichu 6, Popplio 7; com Popplio: Pichu 6, Litten 7",
       "versions": null
     },
     {
@@ -257,7 +257,7 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 13, Popplio 14; com Popplio: Pichu 6, Litten 7",
+      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 13, Popplio 14; com Popplio: Pikachu 13, Litten 14",
       "versions": null
     },
     {
@@ -305,7 +305,7 @@
             "leer"
           ],
           "ability": null,
-          "item": "fightinium-z--bag",
+          "item": "fightinium-z--held",
           "tera_type": null
         }
       ],
@@ -333,7 +333,7 @@
             "leer"
           ],
           "ability": "stakeout",
-          "item": "normalium-z--bag",
+          "item": "normalium-z--held",
           "tera_type": null
         },
         {
@@ -468,13 +468,13 @@
             "tackle"
           ],
           "ability": null,
-          "item": "normalium-z--bag",
+          "item": "normalium-z--held",
           "tera_type": null
         }
       ],
       "level_cap": 17,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 16, Brionne 17; com Popplio: Pikachu 13, Litten 14",
+      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 16, Brionne 17; com Popplio: Pikachu 16, Torracat 17",
       "versions": null
     },
     {
@@ -601,7 +601,7 @@
             "tackle"
           ],
           "ability": null,
-          "item": "normalium-z--bag",
+          "item": "normalium-z--held",
           "tera_type": null
         },
         {
@@ -806,7 +806,7 @@
             "rock-throw"
           ],
           "ability": null,
-          "item": "rockium-z--bag",
+          "item": "rockium-z--held",
           "tera_type": null
         }
       ],
@@ -860,7 +860,7 @@
             "bite"
           ],
           "ability": null,
-          "item": "waterium-z--bag",
+          "item": "waterium-z--held",
           "tera_type": null
         }
       ],
@@ -1056,13 +1056,13 @@
             "pluck"
           ],
           "ability": null,
-          "item": "grassium-z--bag",
+          "item": "grassium-z--held",
           "tera_type": null
         }
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 28, Flareon 28, Brionne 29; com Popplio: Torracat 19",
+      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 28, Flareon 28, Brionne 29; com Popplio: Raichu 28, Leafeon 28, Torracat 29",
       "versions": null
     },
     {
@@ -1444,7 +1444,7 @@
             "dark-pulse"
           ],
           "ability": "fur-coat",
-          "item": "darkinium-z--bag",
+          "item": "darkinium-z--held",
           "tera_type": null
         }
       ],
@@ -1483,12 +1483,68 @@
       "versions": null
     },
     {
+      "id": "faba-1-multi",
+      "kind": "evil",
+      "name": "Faba",
+      "title": "Aether Foundation",
+      "location": "Aether Paradise",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 80,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "yawn",
+            "psychic",
+            "amnesia",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 779,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "aqua-jet",
+            "crunch",
+            "psychic-fangs"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 97,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "psychic",
+            "hypnosis",
+            "disable",
+            "nightmare"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "dupla: Faba e um funcionário da Aether (Ledian 38), com o Gladion do seu lado",
+      "versions": null
+    },
+    {
       "id": "guzma-3",
       "kind": "evil",
       "name": "Guzma",
       "title": "Team Skull",
       "location": "Aether Paradise",
-      "order": 33,
+      "order": 34,
       "badge": null,
       "party": [
         {
@@ -1554,7 +1610,7 @@
       "name": "Lusamine",
       "title": "Aether Foundation",
       "location": "Aether Paradise",
-      "order": 34,
+      "order": 35,
       "badge": null,
       "party": [
         {
@@ -1634,7 +1690,7 @@
       "name": "Hapu",
       "title": "Kahuna",
       "location": "Ancient Poni Path",
-      "order": 35,
+      "order": 36,
       "badge": "Groundium Z",
       "party": [
         {
@@ -1687,7 +1743,7 @@
             "counter"
           ],
           "ability": null,
-          "item": "groundium-z--bag",
+          "item": "groundium-z--held",
           "tera_type": null
         }
       ],
@@ -1700,9 +1756,9 @@
       "id": "totem-kommo-o",
       "kind": "gym",
       "name": "Totem Kommo-o",
-      "title": "Captain",
+      "title": "Totem",
       "location": "Vast Poni Canyon",
-      "order": 36,
+      "order": 37,
       "badge": "Dragonium Z",
       "party": [
         {
@@ -1759,7 +1815,7 @@
       "name": "Lusamine",
       "title": "Aether Foundation",
       "location": "Ultra Space",
-      "order": 37,
+      "order": 38,
       "badge": null,
       "party": [
         {
@@ -1844,7 +1900,7 @@
       "name": "Gladion",
       "title": "Rival",
       "location": "Mount Lanakila",
-      "order": 38,
+      "order": 39,
       "badge": null,
       "party": [
         {
@@ -1882,7 +1938,7 @@
             "quick-attack"
           ],
           "ability": "inner-focus",
-          "item": "steelium-z--bag",
+          "item": "steelium-z--held",
           "tera_type": null
         },
         {
@@ -1911,7 +1967,7 @@
       "name": "Hau",
       "title": "Rival",
       "location": "Mount Lanakila",
-      "order": 39,
+      "order": 40,
       "badge": null,
       "party": [
         {
@@ -1966,13 +2022,13 @@
             "smack-down"
           ],
           "ability": null,
-          "item": "grassium-z--bag",
+          "item": "grassium-z--held",
           "tera_type": null
         }
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 53, Flareon 53, Komala 53, Primarina 54; com Popplio: Raichu 38, Leafeon 38, Incineroar 39",
+      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 53, Flareon 53, Komala 53, Primarina 54; com Popplio: Raichu 53, Leafeon 53, Komala 53, Incineroar 54",
       "versions": null
     },
     {
@@ -1981,7 +2037,7 @@
       "name": "Hala",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 40,
+      "order": 41,
       "badge": null,
       "party": [
         {
@@ -2044,7 +2100,7 @@
             "close-combat"
           ],
           "ability": null,
-          "item": "fightinium-z--bag",
+          "item": "fightinium-z--held",
           "tera_type": null
         }
       ],
@@ -2059,7 +2115,7 @@
       "name": "Olivia",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 41,
+      "order": 42,
       "badge": null,
       "party": [
         {
@@ -2126,7 +2182,7 @@
             "rock-climb"
           ],
           "ability": null,
-          "item": "rockium-z--bag",
+          "item": "rockium-z--held",
           "tera_type": null
         }
       ],
@@ -2141,7 +2197,7 @@
       "name": "Acerola",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 42,
+      "order": 43,
       "badge": null,
       "party": [
         {
@@ -2211,7 +2267,7 @@
             "iron-defense"
           ],
           "ability": "water-compaction",
-          "item": "ghostium-z--bag",
+          "item": "ghostium-z--held",
           "tera_type": null
         }
       ],
@@ -2226,7 +2282,7 @@
       "name": "Kahili",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 43,
+      "order": 44,
       "badge": null,
       "party": [
         {
@@ -2296,7 +2352,7 @@
             "screech"
           ],
           "ability": null,
-          "item": "flyinium-z--bag",
+          "item": "flyinium-z--held",
           "tera_type": null
         }
       ],
@@ -2311,7 +2367,7 @@
       "name": "Professor Kukui",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 44,
+      "order": 45,
       "badge": null,
       "party": [
         {
@@ -2395,7 +2451,7 @@
             "hyper-voice"
           ],
           "ability": null,
-          "item": "waterium-z--bag",
+          "item": "waterium-z--held",
           "tera_type": null
         }
       ],
@@ -2410,7 +2466,7 @@
       "name": "Anabel",
       "title": "International Police",
       "location": "Akala Motel, Route 8",
-      "order": 45,
+      "order": 46,
       "badge": null,
       "party": [
         {
@@ -2495,7 +2551,7 @@
       "name": "Faba",
       "title": "Aether Foundation",
       "location": "Aether Paradise",
-      "order": 46,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -2580,7 +2636,7 @@
       "name": "Mina",
       "title": "Captain",
       "location": "Akala Motel, Route 8",
-      "order": 47,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -2665,7 +2721,7 @@
       "name": "Nanu",
       "title": "Kahuna",
       "location": "Seafolk Village",
-      "order": 48,
+      "order": 49,
       "badge": null,
       "party": [
         {
@@ -2735,7 +2791,7 @@
             "thunderbolt"
           ],
           "ability": "fur-coat",
-          "item": "darkinium-z--bag",
+          "item": "darkinium-z--held",
           "tera_type": null
         }
       ],
@@ -2750,7 +2806,7 @@
       "name": "Dexio",
       "title": "Pokémon Trainer",
       "location": "Ancient Poni Path",
-      "order": 49,
+      "order": 50,
       "badge": null,
       "party": [
         {
@@ -2835,7 +2891,7 @@
       "name": "Guzma",
       "title": "Pokémon Trainer",
       "location": "Hau'oli City Beachfront",
-      "order": 50,
+      "order": 51,
       "badge": null,
       "party": [
         {
@@ -2919,7 +2975,7 @@
       "name": "Morimoto",
       "title": "Game Freak",
       "location": "Game Freak building, Heahea City",
-      "order": 51,
+      "order": 52,
       "badge": null,
       "party": [
         {
@@ -3018,7 +3074,7 @@
       "name": "Mina",
       "title": "Captain",
       "location": "Poni Gauntlet",
-      "order": 52,
+      "order": 53,
       "badge": null,
       "party": [
         {
@@ -3088,7 +3144,7 @@
             "energy-ball"
           ],
           "ability": "shield-dust",
-          "item": "fairium-z--bag",
+          "item": "fairium-z--held",
           "tera_type": null
         }
       ],
@@ -3103,7 +3159,7 @@
       "name": "Hala",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 53,
+      "order": 54,
       "badge": null,
       "party": [
         {
@@ -3173,7 +3229,7 @@
             "earthquake"
           ],
           "ability": null,
-          "item": "fightinium-z--bag",
+          "item": "fightinium-z--held",
           "tera_type": null
         }
       ],
@@ -3188,7 +3244,7 @@
       "name": "Olivia",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 54,
+      "order": 55,
       "badge": null,
       "party": [
         {
@@ -3258,7 +3314,7 @@
             "rock-climb"
           ],
           "ability": null,
-          "item": "rockium-z--bag",
+          "item": "rockium-z--held",
           "tera_type": null
         }
       ],
@@ -3273,7 +3329,7 @@
       "name": "Acerola",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 55,
+      "order": 56,
       "badge": null,
       "party": [
         {
@@ -3343,7 +3399,7 @@
             "giga-drain"
           ],
           "ability": "water-compaction",
-          "item": "ghostium-z--bag",
+          "item": "ghostium-z--held",
           "tera_type": null
         }
       ],
@@ -3358,7 +3414,7 @@
       "name": "Kahili",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 56,
+      "order": 57,
       "badge": null,
       "party": [
         {
@@ -3428,7 +3484,7 @@
             "brick-break"
           ],
           "ability": null,
-          "item": "flyinium-z--bag",
+          "item": "flyinium-z--held",
           "tera_type": null
         }
       ],
@@ -3443,7 +3499,7 @@
       "name": "Hau",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 57,
+      "order": 58,
       "badge": null,
       "party": [
         {
@@ -3512,7 +3568,7 @@
             "smack-down"
           ],
           "ability": null,
-          "item": "grassium-z--bag",
+          "item": "grassium-z--held",
           "tera_type": null
         }
       ],
@@ -3527,7 +3583,7 @@
       "name": "Gladion",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 58,
+      "order": 59,
       "badge": null,
       "party": [
         {
@@ -3583,7 +3639,7 @@
             "psychic"
           ],
           "ability": "inner-focus",
-          "item": "steelium-z--bag",
+          "item": "steelium-z--held",
           "tera_type": null
         },
         {
@@ -3612,7 +3668,7 @@
       "name": "Faba",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 59,
+      "order": 60,
       "badge": null,
       "party": [
         {
@@ -3697,7 +3753,7 @@
       "name": "Plumeria",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 60,
+      "order": 61,
       "badge": null,
       "party": [
         {
@@ -3767,7 +3823,7 @@
             "protect"
           ],
           "ability": null,
-          "item": "poisonium-z--bag",
+          "item": "poisonium-z--held",
           "tera_type": null
         }
       ],
@@ -3782,7 +3838,7 @@
       "name": "Sophocles",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 61,
+      "order": 62,
       "badge": null,
       "party": [
         {
@@ -3867,7 +3923,7 @@
       "name": "Molayne",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 62,
+      "order": 63,
       "badge": null,
       "party": [
         {
@@ -3952,7 +4008,7 @@
       "name": "Hapu",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 63,
+      "order": 64,
       "badge": null,
       "party": [
         {
@@ -4022,7 +4078,7 @@
             "rock-slide"
           ],
           "ability": null,
-          "item": "groundium-z--bag",
+          "item": "groundium-z--held",
           "tera_type": null
         }
       ],
@@ -4037,7 +4093,7 @@
       "name": "Ryuki",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 64,
+      "order": 65,
       "badge": null,
       "party": [
         {
@@ -4122,7 +4178,7 @@
       "name": "Tristan",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 65,
+      "order": 66,
       "badge": null,
       "party": [
         {
@@ -4192,7 +4248,7 @@
             "pursuit"
           ],
           "ability": null,
-          "item": "normalium-z--bag",
+          "item": "normalium-z--held",
           "tera_type": null
         }
       ],
@@ -4207,7 +4263,7 @@
       "name": "Professor Kukui",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 66,
+      "order": 67,
       "badge": null,
       "party": [
         {
@@ -4291,7 +4347,7 @@
             "hyper-voice"
           ],
           "ability": null,
-          "item": "waterium-z--bag",
+          "item": "waterium-z--held",
           "tera_type": null
         }
       ],

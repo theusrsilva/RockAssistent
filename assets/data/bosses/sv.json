@@ -2125,8 +2125,13 @@
           "species": 988,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "lunge",
+            "leech-life",
+            "low-sweep",
+            "zen-headbutt"
+          ],
+          "ability": "protosynthesis",
           "item": null,
           "tera_type": null
         },
@@ -2134,8 +2139,13 @@
           "species": 985,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "play-rough",
+            "drain-punch",
+            "ice-punch",
+            "zen-headbutt"
+          ],
+          "ability": "protosynthesis",
           "item": null,
           "tera_type": null
         },
@@ -2143,8 +2153,13 @@
           "species": 986,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "earth-power",
+            "giga-drain",
+            "payback",
+            "sucker-punch"
+          ],
+          "ability": "protosynthesis",
           "item": null,
           "tera_type": null
         },
@@ -2152,8 +2167,13 @@
           "species": 987,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "power-gem",
+            "mystical-fire",
+            "shadow-ball",
+            "thunderbolt"
+          ],
+          "ability": "protosynthesis",
           "item": null,
           "tera_type": null
         },
@@ -2161,8 +2181,13 @@
           "species": 989,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "discharge",
+            "earth-power",
+            "flash-cannon",
+            "power-gem"
+          ],
+          "ability": "protosynthesis",
           "item": null,
           "tera_type": null
         },
@@ -2170,15 +2195,20 @@
           "species": 1005,
           "form": 0,
           "level": 67,
-          "moves": [],
-          "ability": null,
-          "item": null,
+          "moves": [
+            "dragon-claw",
+            "night-slash",
+            "stone-edge",
+            "earthquake"
+          ],
+          "ability": "protosynthesis",
+          "item": "booster-energy",
           "tera_type": null
         }
       ],
       "level_cap": 67,
-      "verified": false,
-      "notes": "Area Zero (The Way Home); só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Area Zero (The Way Home)",
       "versions": [
         "scarlet"
       ]
@@ -2196,8 +2226,13 @@
           "species": 994,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "sludge-wave",
+            "fiery-dance",
+            "discharge",
+            "air-slash"
+          ],
+          "ability": "quark-drive",
           "item": null,
           "tera_type": null
         },
@@ -2205,8 +2240,13 @@
           "species": 991,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "drill-peck",
+            "water-pulse",
+            "freeze-dry",
+            "snowscape"
+          ],
+          "ability": "quark-drive",
           "item": null,
           "tera_type": null
         },
@@ -2214,8 +2254,13 @@
           "species": 992,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "thunder-punch",
+            "drain-punch",
+            "iron-head",
+            "fake-out"
+          ],
+          "ability": "quark-drive",
           "item": null,
           "tera_type": null
         },
@@ -2223,8 +2268,13 @@
           "species": 993,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "air-slash",
+            "dark-pulse",
+            "flamethrower",
+            "flash-cannon"
+          ],
+          "ability": "quark-drive",
           "item": null,
           "tera_type": null
         },
@@ -2232,8 +2282,13 @@
           "species": 995,
           "form": 0,
           "level": 66,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "thunder-punch",
+            "brick-break",
+            "stone-edge",
+            "earthquake"
+          ],
+          "ability": "quark-drive",
           "item": null,
           "tera_type": null
         },
@@ -2241,15 +2296,20 @@
           "species": 1006,
           "form": 0,
           "level": 67,
-          "moves": [],
-          "ability": null,
-          "item": null,
+          "moves": [
+            "psycho-cut",
+            "brick-break",
+            "spirit-break",
+            "poison-jab"
+          ],
+          "ability": "quark-drive",
+          "item": "booster-energy",
           "tera_type": null
         }
       ],
       "level_cap": 67,
-      "verified": false,
-      "notes": "Area Zero (The Way Home); só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Area Zero (The Way Home)",
       "versions": [
         "violet"
       ]
@@ -2267,15 +2327,20 @@
           "species": 1007,
           "form": 0,
           "level": 72,
-          "moves": [],
-          "ability": null,
-          "item": null,
-          "tera_type": null
+          "moves": [
+            "giga-impact",
+            "bulk-up",
+            "taunt",
+            "flamethrower"
+          ],
+          "ability": "orichalcum-pulse",
+          "item": "heat-rock",
+          "tera_type": "fighting"
         }
       ],
       "level_cap": 72,
-      "verified": false,
-      "notes": "Paradise Protection Protocol: luta final, só com o seu lendário; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Paradise Protection Protocol: luta final, só com o seu lendário; Koraidon terastaliza",
       "versions": [
         "scarlet"
       ]
@@ -2293,15 +2358,20 @@
           "species": 1008,
           "form": 0,
           "level": 72,
-          "moves": [],
-          "ability": null,
-          "item": null,
-          "tera_type": null
+          "moves": [
+            "hyper-beam",
+            "charge",
+            "taunt",
+            "power-gem"
+          ],
+          "ability": "hadron-engine",
+          "item": "terrain-extender",
+          "tera_type": "electric"
         }
       ],
       "level_cap": 72,
-      "verified": false,
-      "notes": "Paradise Protection Protocol: luta final, só com o seu lendário; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Paradise Protection Protocol: luta final, só com o seu lendário; Miraidon terastaliza",
       "versions": [
         "violet"
       ]
@@ -2606,12 +2676,99 @@
       "versions": null
     },
     {
+      "id": "loyal-okidogi",
+      "kind": "other",
+      "name": "Okidogi",
+      "title": "Loyal Three",
+      "location": "Kitakami",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 1014,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "bite",
+            "poison-fang",
+            "low-kick",
+            "brutal-swing"
+          ],
+          "ability": "toxic-chain",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "versions": null
+    },
+    {
+      "id": "loyal-munkidori",
+      "kind": "other",
+      "name": "Munkidori",
+      "title": "Loyal Three",
+      "location": "Kitakami",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 1015,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "bite",
+            "clear-smog",
+            "psybeam",
+            "spite"
+          ],
+          "ability": "toxic-chain",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "versions": null
+    },
+    {
+      "id": "loyal-fezandipiti",
+      "kind": "other",
+      "name": "Fezandipiti",
+      "title": "Loyal Three",
+      "location": "Kitakami",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 1016,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "quick-attack",
+            "wing-attack",
+            "poison-jab",
+            "dazzling-gleam"
+          ],
+          "ability": "toxic-chain",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "versions": null
+    },
+    {
       "id": "kieran-4",
       "kind": "rival",
       "name": "Kieran",
       "title": "Rival",
       "location": "Loyalty Plaza",
-      "order": 44,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -2696,7 +2853,7 @@
       "name": "Kieran",
       "title": "Rival",
       "location": "Dreaded Den",
-      "order": 45,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -2795,15 +2952,20 @@
       "name": "Ogerpon",
       "title": "Pokémon",
       "location": "Dreaded Den",
-      "order": 46,
+      "order": 49,
       "badge": null,
       "party": [
         {
           "species": 1017,
           "form": 2,
           "level": 70,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "ivy-cudgel",
+            "low-kick",
+            "slam",
+            "grassy-terrain"
+          ],
+          "ability": "embody-aspect",
           "item": null,
           "tera_type": "fire"
         },
@@ -2811,8 +2973,13 @@
           "species": 1017,
           "form": 1,
           "level": 70,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "ivy-cudgel",
+            "low-kick",
+            "slam",
+            "grassy-terrain"
+          ],
+          "ability": "embody-aspect",
           "item": null,
           "tera_type": "water"
         },
@@ -2820,8 +2987,13 @@
           "species": 1017,
           "form": 3,
           "level": 70,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "ivy-cudgel",
+            "low-kick",
+            "slam",
+            "grassy-terrain"
+          ],
+          "ability": "embody-aspect",
           "item": null,
           "tera_type": "rock"
         },
@@ -2829,15 +3001,20 @@
           "species": 1017,
           "form": 0,
           "level": 70,
-          "moves": [],
-          "ability": null,
+          "moves": [
+            "ivy-cudgel",
+            "low-kick",
+            "slam",
+            "grassy-terrain"
+          ],
+          "ability": "embody-aspect",
           "item": null,
           "tera_type": "grass"
         }
       ],
       "level_cap": 70,
-      "verified": false,
-      "notes": "The Teal Mask; as quatro máscaras seguidas; só no detonado; cada Pokémon tem um Tera Type; só um terastaliza por batalha; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "The Teal Mask; as quatro máscaras seguidas: Hearthflame, Wellspring, Cornerstone e Teal; cada uma terastaliza no tipo da máscara",
       "versions": null
     },
     {
@@ -2846,7 +3023,7 @@
       "name": "Carmine",
       "title": "Rival",
       "location": "Loyalty Plaza",
-      "order": 47,
+      "order": 50,
       "badge": null,
       "party": [
         {
@@ -2931,7 +3108,7 @@
       "name": "Lacey",
       "title": "BB League",
       "location": "Blueberry Academy (entrada)",
-      "order": 48,
+      "order": 51,
       "badge": null,
       "party": [
         {
@@ -2986,7 +3163,7 @@
       "name": "Carmine",
       "title": "Rival",
       "location": "Terarium (Central Plaza)",
-      "order": 49,
+      "order": 52,
       "badge": null,
       "party": [
         {
@@ -3001,7 +3178,7 @@
           ],
           "ability": "intimidate",
           "item": null,
-          "tera_type": null
+          "tera_type": "dark"
         },
         {
           "species": 733,
@@ -3015,7 +3192,7 @@
           ],
           "ability": "sheer-force",
           "item": null,
-          "tera_type": null
+          "tera_type": "flying"
         },
         {
           "species": 560,
@@ -3029,7 +3206,7 @@
           ],
           "ability": "intimidate",
           "item": null,
-          "tera_type": null
+          "tera_type": "fighting"
         },
         {
           "species": 1013,
@@ -3048,7 +3225,7 @@
       ],
       "level_cap": 75,
       "verified": true,
-      "notes": "The Indigo Disk; dupla; Sinistcha terastaliza",
+      "notes": "The Indigo Disk; dupla; cada Pokémon tem um Tera Type; só um terastaliza por batalha",
       "versions": null
     },
     {
@@ -3057,7 +3234,7 @@
       "name": "Crispin",
       "title": "BB League",
       "location": "Terarium (Blueberry Academy)",
-      "order": 50,
+      "order": 53,
       "badge": null,
       "party": [
         {
@@ -3156,7 +3333,7 @@
       "name": "Amarys",
       "title": "BB League",
       "location": "Terarium (Blueberry Academy)",
-      "order": 51,
+      "order": 54,
       "badge": null,
       "party": [
         {
@@ -3255,7 +3432,7 @@
       "name": "Lacey",
       "title": "BB League",
       "location": "Terarium (Blueberry Academy)",
-      "order": 52,
+      "order": 55,
       "badge": null,
       "party": [
         {
@@ -3302,7 +3479,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 79,
           "moves": [
             "shell-side-arm",
@@ -3354,7 +3531,7 @@
       "name": "Drayton",
       "title": "BB League",
       "location": "Terarium (Blueberry Academy)",
-      "order": 53,
+      "order": 56,
       "badge": null,
       "party": [
         {
@@ -3453,7 +3630,7 @@
       "name": "Kieran",
       "title": "BB League Champion",
       "location": "Blueberry Academy (entrada)",
-      "order": 54,
+      "order": 57,
       "badge": null,
       "party": [
         {
@@ -3552,7 +3729,7 @@
       "name": "Kieran",
       "title": "Rival",
       "location": "Area Zero Underdepths",
-      "order": 55,
+      "order": 58,
       "badge": null,
       "party": [
         {
@@ -3575,12 +3752,212 @@
       "versions": null
     },
     {
+      "id": "mochi-yukito",
+      "kind": "other",
+      "name": "Yukito",
+      "title": "Grandpa",
+      "location": "Kitakami Hall (escadaria)",
+      "order": 59,
+      "badge": null,
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "gunk-shot",
+            "crunch",
+            "fire-fang",
+            "screech"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": "poison"
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "heat-wave",
+            "sludge-bomb",
+            "assurance",
+            "toxic"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": "poison"
+        }
+      ],
+      "level_cap": 80,
+      "verified": true,
+      "notes": "Mochi Mayhem (epílogo do DLC): dupla com o Kieran do seu lado; dupla: Yukito e Hideko juntos; cada Pokémon tem um Tera Type; só um terastaliza por batalha",
+      "versions": null
+    },
+    {
+      "id": "mochi-hideko",
+      "kind": "other",
+      "name": "Hideko",
+      "title": "Grandma",
+      "location": "Kitakami Hall (escadaria)",
+      "order": 60,
+      "badge": null,
+      "party": [
+        {
+          "species": 609,
+          "form": 0,
+          "level": 82,
+          "moves": [
+            "heat-wave",
+            "shadow-ball",
+            "energy-ball",
+            "protect"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": "poison"
+        },
+        {
+          "species": 473,
+          "form": 0,
+          "level": 82,
+          "moves": [
+            "ice-shard",
+            "earthquake",
+            "rock-slide",
+            "icicle-crash"
+          ],
+          "ability": "thick-fat",
+          "item": null,
+          "tera_type": "poison"
+        }
+      ],
+      "level_cap": 82,
+      "verified": true,
+      "notes": "Mochi Mayhem (epílogo do DLC): dupla com o Kieran do seu lado; dupla: Yukito e Hideko juntos; cada Pokémon tem um Tera Type; só um terastaliza por batalha",
+      "versions": null
+    },
+    {
+      "id": "mochi-arven",
+      "kind": "rival",
+      "name": "Arven",
+      "title": "Rival",
+      "location": "Mossui Town",
+      "order": 61,
+      "badge": null,
+      "party": [
+        {
+          "species": 820,
+          "form": 0,
+          "level": 82,
+          "moves": [
+            "bullet-seed",
+            "body-slam",
+            "psychic-fangs",
+            "high-horsepower"
+          ],
+          "ability": "cheek-pouch",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 82,
+          "moves": [
+            "rock-blast",
+            "icicle-spear",
+            "liquidation",
+            "light-screen"
+          ],
+          "ability": "skill-link",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 943,
+          "form": 0,
+          "level": 83,
+          "moves": [
+            "crunch",
+            "psychic-fangs",
+            "fire-fang",
+            "play-rough"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 83,
+      "verified": true,
+      "notes": "Mochi Mayhem (epílogo do DLC): dupla com o Kieran do seu lado; dupla: Arven e Penny juntos",
+      "versions": null
+    },
+    {
+      "id": "mochi-penny",
+      "kind": "other",
+      "name": "Penny",
+      "title": "Pokémon Trainer",
+      "location": "Mossui Town",
+      "order": 62,
+      "badge": null,
+      "party": [
+        {
+          "species": 197,
+          "form": 0,
+          "level": 84,
+          "moves": [
+            "dark-pulse",
+            "quick-attack",
+            "baby-doll-eyes",
+            "psychic"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 470,
+          "form": 0,
+          "level": 84,
+          "moves": [
+            "leaf-blade",
+            "quick-attack",
+            "baby-doll-eyes",
+            "x-scissor"
+          ],
+          "ability": "leaf-guard",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 700,
+          "form": 0,
+          "level": 85,
+          "moves": [
+            "moonblast",
+            "quick-attack",
+            "baby-doll-eyes",
+            "shadow-ball"
+          ],
+          "ability": "cute-charm",
+          "item": null,
+          "tera_type": "fairy"
+        }
+      ],
+      "level_cap": 85,
+      "verified": true,
+      "notes": "Mochi Mayhem (epílogo do DLC): dupla com o Kieran do seu lado; dupla: Arven e Penny juntos; Sylveon terastaliza",
+      "versions": null
+    },
+    {
       "id": "mochi-nemona",
       "kind": "rival",
       "name": "Nemona",
       "title": "Rival",
       "location": "Loyalty Plaza",
-      "order": 56,
+      "order": 63,
       "badge": null,
       "party": [
         {
@@ -3679,7 +4056,7 @@
       "name": "Katy",
       "title": "Gym Leader",
       "location": "Cortondo Gym",
-      "order": 57,
+      "order": 64,
       "badge": "Bug Badge",
       "party": [
         {
@@ -3764,7 +4141,7 @@
       "name": "Brassius",
       "title": "Gym Leader",
       "location": "Artazon Gym",
-      "order": 58,
+      "order": 65,
       "badge": "Grass Badge",
       "party": [
         {
@@ -3849,7 +4226,7 @@
       "name": "Iono",
       "title": "Gym Leader",
       "location": "Levincia Gym",
-      "order": 59,
+      "order": 66,
       "badge": "Electric Badge",
       "party": [
         {
@@ -3934,7 +4311,7 @@
       "name": "Kofu",
       "title": "Gym Leader",
       "location": "Cascarrafa Gym",
-      "order": 60,
+      "order": 67,
       "badge": "Water Badge",
       "party": [
         {
@@ -4019,7 +4396,7 @@
       "name": "Larry",
       "title": "Gym Leader",
       "location": "Medali Gym",
-      "order": 61,
+      "order": 68,
       "badge": "Normal Badge",
       "party": [
         {
@@ -4104,7 +4481,7 @@
       "name": "Ryme",
       "title": "Gym Leader",
       "location": "Montenevera Gym",
-      "order": 62,
+      "order": 69,
       "badge": "Ghost Badge",
       "party": [
         {
@@ -4189,7 +4566,7 @@
       "name": "Tulip",
       "title": "Gym Leader",
       "location": "Alfornada Gym",
-      "order": 63,
+      "order": 70,
       "badge": "Psychic Badge",
       "party": [
         {
@@ -4274,7 +4651,7 @@
       "name": "Grusha",
       "title": "Gym Leader",
       "location": "Glaseado Gym",
-      "order": 64,
+      "order": 71,
       "badge": "Ice Badge",
       "party": [
         {
@@ -4357,7 +4734,7 @@
       "name": "Giacomo",
       "title": "Team Star",
       "location": "Base da Team Star",
-      "order": 65,
+      "order": 72,
       "badge": null,
       "party": [
         {
@@ -4442,7 +4819,7 @@
       "name": "Mela",
       "title": "Team Star",
       "location": "Base da Team Star",
-      "order": 66,
+      "order": 73,
       "badge": null,
       "party": [
         {
@@ -4527,7 +4904,7 @@
       "name": "Atticus",
       "title": "Team Star",
       "location": "Base da Team Star",
-      "order": 67,
+      "order": 74,
       "badge": null,
       "party": [
         {
@@ -4612,7 +4989,7 @@
       "name": "Ortega",
       "title": "Team Star",
       "location": "Base da Team Star",
-      "order": 68,
+      "order": 75,
       "badge": null,
       "party": [
         {
@@ -4697,7 +5074,7 @@
       "name": "Eri",
       "title": "Team Star",
       "location": "Base da Team Star",
-      "order": 69,
+      "order": 76,
       "badge": null,
       "party": [
         {
@@ -4782,7 +5159,7 @@
       "name": "Arven",
       "title": "Academy Ace Tournament",
       "location": "Naranja/Uva Academy",
-      "order": 70,
+      "order": 77,
       "badge": null,
       "party": [
         {
@@ -4881,7 +5258,7 @@
       "name": "Jacq",
       "title": "Academy Ace Tournament",
       "location": "Naranja/Uva Academy",
-      "order": 71,
+      "order": 78,
       "badge": null,
       "party": [
         {
@@ -4970,7 +5347,7 @@
         }
       ],
       "level_cap": 66,
-      "verified": false,
+      "verified": true,
       "notes": "pós-jogo: o primeiro torneio (quatro lutas seguidas); Farigiraf terastaliza",
       "versions": null
     },
@@ -4980,7 +5357,7 @@
       "name": "Dendra",
       "title": "Academy Ace Tournament",
       "location": "Naranja/Uva Academy",
-      "order": 72,
+      "order": 79,
       "badge": null,
       "party": [
         {
@@ -5079,7 +5456,7 @@
       "name": "Geeta",
       "title": "Academy Ace Tournament",
       "location": "Naranja/Uva Academy",
-      "order": 73,
+      "order": 80,
       "badge": null,
       "party": [
         {
@@ -5178,7 +5555,7 @@
       "name": "Masamune",
       "title": "Ogre Clan",
       "location": "Mossfell Confluence",
-      "order": 74,
+      "order": 81,
       "badge": null,
       "party": [
         {
@@ -5249,7 +5626,7 @@
       "name": "Hasebe",
       "title": "Ogre Clan",
       "location": "Fellhorn Gorge",
-      "order": 75,
+      "order": 82,
       "badge": null,
       "party": [
         {
@@ -5320,7 +5697,7 @@
       "name": "Raikiri",
       "title": "Ogre Clan",
       "location": "Apple Hills",
-      "order": 76,
+      "order": 83,
       "badge": null,
       "party": [
         {
@@ -5391,7 +5768,7 @@
       "name": "Kunitsuna",
       "title": "Ogre Clan",
       "location": "Oni Mountain",
-      "order": 77,
+      "order": 84,
       "badge": null,
       "party": [
         {
@@ -5462,7 +5839,7 @@
       "name": "Kanemitsu",
       "title": "Ogre Clan",
       "location": "Paradise Barrens",
-      "order": 78,
+      "order": 85,
       "badge": null,
       "party": [
         {
@@ -5533,7 +5910,7 @@
       "name": "Munechika",
       "title": "Ogre Clan",
       "location": "Oni Mountain",
-      "order": 79,
+      "order": 86,
       "badge": null,
       "party": [
         {
@@ -5604,7 +5981,7 @@
       "name": "Kotetsu",
       "title": "Ogre Clan",
       "location": "Oni Mountain",
-      "order": 80,
+      "order": 87,
       "badge": null,
       "party": [
         {
@@ -5675,7 +6052,7 @@
       "name": "Muramasa",
       "title": "Ogre Clan",
       "location": "Reveler's Road",
-      "order": 81,
+      "order": 88,
       "badge": null,
       "party": [
         {

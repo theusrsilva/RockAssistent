@@ -241,7 +241,7 @@
         },
         {
           "species": 666,
-          "form": 13,
+          "form": 6,
           "level": 16,
           "moves": [
             "light-screen",
@@ -521,7 +521,7 @@
         }
       ],
       "level_cap": 34,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; você luta com um Lucario emprestado; golpes não listados nas fontes",
       "versions": null
     },
@@ -673,7 +673,7 @@
         }
       ],
       "level_cap": 34,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -697,7 +697,7 @@
         }
       ],
       "level_cap": 34,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -721,7 +721,7 @@
         }
       ],
       "level_cap": 34,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -987,7 +987,7 @@
         }
       ],
       "level_cap": 41,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1358,7 +1358,7 @@
         }
       ],
       "level_cap": 48,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1382,7 +1382,7 @@
         }
       ],
       "level_cap": 48,
-      "verified": false,
+      "verified": true,
       "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1469,16 +1469,16 @@
         {
           "species": 181,
           "form": 0,
-          "level": 41,
+          "level": 48,
           "moves": [],
           "ability": null,
           "item": null,
           "tera_type": null
         }
       ],
-      "level_cap": 41,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; o nível 41 é do detonado e parece errado (ver dúvidas); golpes não listados nas fontes",
+      "level_cap": 48,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; só no detonado; o detonado diz nível 41; o walkthrough da Bulbapedia e o da Deltia's Gaming dão 48, como o Mawile e o Barbaracle; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -3355,7 +3355,7 @@
         },
         {
           "species": 711,
-          "form": 1,
+          "form": 3,
           "level": 69,
           "moves": [
             "trick-or-treat",

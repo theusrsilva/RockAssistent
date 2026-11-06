@@ -103,7 +103,7 @@
       ],
       "level_cap": 8,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 6, Rookidee 5, Sobble 8; com Sobble: Wooloo 3, Scorbunny 5",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 6, Rookidee 5, Sobble 8; com Sobble: Wooloo 6, Rookidee 5, Scorbunny 8",
       "versions": null
     },
     {
@@ -156,7 +156,7 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 11, Rookidee 12, Sobble 14; com Sobble: Wooloo 6, Rookidee 5, Scorbunny 8",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 11, Rookidee 12, Sobble 14; com Sobble: Wooloo 11, Rookidee 12, Scorbunny 14",
       "versions": null
     },
     {
@@ -307,7 +307,7 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 18, Corvisquire 19, Drizzile 21; com Sobble: Wooloo 11, Rookidee 12, Scorbunny 14",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 18, Corvisquire 19, Drizzile 21; com Sobble: Wooloo 18, Corvisquire 19, Raboot 21",
       "versions": null
     },
     {
@@ -610,7 +610,7 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Cramorant 28, Toxel 29, Silicobra 30, Drizzile 33; com Sobble: Wooloo 18, Corvisquire 19, Raboot 21",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Cramorant 28, Toxel 29, Silicobra 30, Drizzile 33; com Sobble: Cramorant 29, Toxel 29, Silicobra 30, Raboot 33",
       "versions": null
     },
     {
@@ -972,7 +972,7 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Inteleon 37; com Sobble: Cramorant 29, Toxel 29, Silicobra 30, Raboot 33",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Inteleon 37; com Sobble: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Cinderace 37",
       "versions": null
     },
     {
@@ -1072,7 +1072,7 @@
         },
         {
           "species": 555,
-          "form": 1,
+          "form": 2,
           "level": 40,
           "moves": [
             "icicle-crash",
@@ -1200,7 +1200,7 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Inteleon 41; com Sobble: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Cinderace 37",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Inteleon 41; com Sobble: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Cinderace 41",
       "versions": null
     },
     {
@@ -3153,12 +3153,111 @@
       "versions": null
     },
     {
+      "id": "morimoto",
+      "kind": "other",
+      "name": "Morimoto",
+      "title": "Game Freak",
+      "location": "Hotel Ionia, Circhester",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 864,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "disable",
+            "strength-sap",
+            "shadow-ball",
+            "mirror-coat"
+          ],
+          "ability": "perish-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 853,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "octolock",
+            "detect",
+            "dig",
+            "body-slam"
+          ],
+          "ability": "limber",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 874,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stealth-rock",
+            "stone-edge",
+            "heavy-slam",
+            "rest"
+          ],
+          "ability": "power-spot",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 887,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "dragon-darts",
+            "thunder-wave",
+            "shadow-ball",
+            "protect"
+          ],
+          "ability": "clear-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 839,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "tar-shot",
+            "body-press",
+            "flare-blitz",
+            "stone-edge"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "high-horsepower",
+            "superpower",
+            "giga-impact",
+            "gunk-shot"
+          ],
+          "ability": "immunity",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia (dupla)",
+      "versions": null
+    },
+    {
       "id": "klara-1",
       "kind": "rival",
       "name": "Klara",
       "title": "Rival",
       "location": "Armor Station",
-      "order": 45,
+      "order": 46,
       "badge": null,
       "party": [
         {
@@ -3198,7 +3297,7 @@
       "name": "Avery",
       "title": "Rival",
       "location": "Armor Station",
-      "order": 46,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -3238,7 +3337,7 @@
       "name": "Mustard",
       "title": "Dojo Master",
       "location": "Master Dojo",
-      "order": 47,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -3278,7 +3377,7 @@
       "name": "Klara",
       "title": "Rival",
       "location": "Warm-Up Tunnel",
-      "order": 48,
+      "order": 49,
       "badge": null,
       "party": [
         {
@@ -3331,7 +3430,7 @@
       "name": "Avery",
       "title": "Rival",
       "location": "Warm-Up Tunnel",
-      "order": 49,
+      "order": 50,
       "badge": null,
       "party": [
         {
@@ -3384,7 +3483,7 @@
       "name": "Klara",
       "title": "Rival",
       "location": "Master Dojo",
-      "order": 50,
+      "order": 51,
       "badge": null,
       "party": [
         {
@@ -3425,7 +3524,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 67,
           "moves": [
             "water-pulse",
@@ -3450,7 +3549,7 @@
       "name": "Avery",
       "title": "Rival",
       "location": "Master Dojo",
-      "order": 51,
+      "order": 52,
       "badge": null,
       "party": [
         {
@@ -3491,7 +3590,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 67,
           "moves": [
             "water-pulse",
@@ -3516,7 +3615,7 @@
       "name": "Mustard",
       "title": "Dojo Master",
       "location": "Tower of Darkness / Tower of Waters",
-      "order": 52,
+      "order": 53,
       "badge": null,
       "party": [
         {
@@ -3544,7 +3643,7 @@
       "name": "Mustard",
       "title": "Dojo Master",
       "location": "Master Dojo",
-      "order": 53,
+      "order": 54,
       "badge": null,
       "party": [
         {
@@ -3643,7 +3742,7 @@
       "name": "Klara",
       "title": "Pokémon Trainer",
       "location": "Master Dojo",
-      "order": 54,
+      "order": 55,
       "badge": null,
       "party": [
         {
@@ -3690,7 +3789,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 67,
           "moves": [
             "scald",
@@ -3716,7 +3815,7 @@
       "name": "Avery",
       "title": "Pokémon Trainer",
       "location": "Master Dojo",
-      "order": 55,
+      "order": 56,
       "badge": null,
       "party": [
         {
@@ -3763,7 +3862,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 67,
           "moves": [
             "scald",
@@ -3784,12 +3883,150 @@
       ]
     },
     {
+      "id": "honey-1",
+      "kind": "other",
+      "name": "Honey",
+      "title": "Master Dojo",
+      "location": "Battle Court, Master Dojo",
+      "order": 57,
+      "badge": null,
+      "party": [
+        {
+          "species": 242,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 2,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 758,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": false,
+      "notes": "Isle of Armor: depois do 1.000.000 de watts; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "honey-rematch",
+      "kind": "other",
+      "name": "Honey",
+      "title": "Master Dojo",
+      "location": "Battle Court, Master Dojo",
+      "order": 58,
+      "badge": null,
+      "party": [
+        {
+          "species": 242,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 2,
+          "level": 73,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 74,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 758,
+          "form": 0,
+          "level": 73,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": false,
+      "notes": "Isle of Armor: revanche uma vez por dia; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); só no detonado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
       "id": "peony-1",
       "kind": "other",
       "name": "Peony",
       "title": "Pokémon Trainer",
       "location": "Crown Tundra Station",
-      "order": 56,
+      "order": 59,
       "badge": null,
       "party": [
         {
@@ -3832,7 +4069,7 @@
       "name": "Peony",
       "title": "Pokémon Trainer",
       "location": "Max Lair",
-      "order": 57,
+      "order": 60,
       "badge": null,
       "party": [
         {
@@ -3907,7 +4144,7 @@
         }
       ],
       "level_cap": 74,
-      "verified": false,
+      "verified": true,
       "notes": "Crown Tundra: uma vez por dia, depois das 3 Legendary Clues; o detonado dá Scizor 74 e Bronzong 74",
       "versions": null
     },
@@ -3917,7 +4154,7 @@
       "name": "Marnie",
       "title": "Gym Leader",
       "location": "Spikemuth",
-      "order": 58,
+      "order": 61,
       "badge": null,
       "party": [
         {
@@ -4002,7 +4239,7 @@
       "name": "Klara",
       "title": "Gym Leader",
       "location": "Master Dojo",
-      "order": 59,
+      "order": 62,
       "badge": null,
       "party": [
         {
@@ -4063,7 +4300,7 @@
         },
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 70,
           "moves": [
             "scald",
@@ -4089,12 +4326,12 @@
       "name": "Avery",
       "title": "Gym Leader",
       "location": "Master Dojo",
-      "order": 60,
+      "order": 63,
       "badge": null,
       "party": [
         {
           "species": 80,
-          "form": 1,
+          "form": 2,
           "level": 68,
           "moves": [
             "scald",

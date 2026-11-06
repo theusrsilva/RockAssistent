@@ -161,7 +161,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
 
     // Gen 6–9: cada jogo tem a sua estrutura, então o teste recebe o que esperar de cada um.
     // gyms: lutas kind=gym da história em cada versão, com insígnias (ou cristais Z / ranks) distintas. Alola conta os
-    // trials (title "Captain"; a luta é o Totem) e os grand trials (title "Kahuna"); no Z-A são as partidas de promoção
+    // trials (title "Captain"; a luta é o Totem; o do Kommo-o, sem capitão, tem title "Totem") e os grand trials (title "Kahuna"); no Z-A são as partidas de promoção
     // (Rank Z→Y ... B→A); o Legends: Arceus não tem ginásio.
     // elite: lutas da Elite 4 antes do campeão (nomes distintos). O Sword/Shield não tem Elite 4 (a final da Champion
     // Cup é "other").
@@ -173,8 +173,8 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     [Theory]
     [InlineData("xy", 8, 4, "", "")]
     [InlineData("oras", 8, 4, "", "")]
-    [InlineData("sm", 11, 4, "gym:Captain=7,gym:Kahuna=4", "hapu-1>totem-kommo-o")]
-    [InlineData("usum", 12, 4, "gym:Captain=8,gym:Kahuna=4", "totem-ribombee>hapu-1")]
+    [InlineData("sm", 11, 4, "gym:Captain=6,gym:Totem=1,gym:Kahuna=4", "hapu-1>totem-kommo-o")]
+    [InlineData("usum", 12, 4, "gym:Captain=7,gym:Totem=1,gym:Kahuna=4", "totem-ribombee>hapu-1")]
     [InlineData("lgpe", 8, 4, "", "")]
     [InlineData("swsh", 8, 0, "other:Champion Cup=3", "")]
     [InlineData("bdsp", 8, 4, "", "")]
@@ -211,7 +211,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(champion is null ? 0 : 1, story.Count(b => b.Kind == "champion"));
 
         var rivals = bosses.Where(b => b.Kind == "rival").ToList();
-        Assert.NotEmpty(rivals);
+        Assert.True(rivals.Count >= 3, "rivais");
         foreach (var r in rivals.GroupBy(b => b.Name))
             Assert.All(r.Zip(r.Skip(1)), p => Assert.True(p.Second.LevelCap >= p.First.LevelCap, $"{p.First.Id} -> {p.Second.Id}"));
     }

@@ -491,7 +491,7 @@
         }
       ],
       "level_cap": 35,
-      "verified": false,
+      "verified": true,
       "notes": "só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1166,7 +1166,7 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
+      "verified": true,
       "notes": "só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1190,7 +1190,7 @@
         }
       ],
       "level_cap": 65,
-      "verified": false,
+      "verified": true,
       "notes": "a luta final da história: acalme com balms e capture com a Origin Ball; Palkia Origem se você ficou do lado do Adaman; do lado da Irida é o Dialga Origem 65; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1546,7 +1546,7 @@
         }
       ],
       "level_cap": 75,
-      "verified": false,
+      "verified": true,
       "notes": "pós-jogo (missão 27): acalme com balms; só no detonado; golpes não listados nas fontes",
       "versions": null
     },
@@ -1632,12 +1632,54 @@
       "versions": null
     },
     {
+      "id": "ress-1",
+      "kind": "other",
+      "name": "Ress",
+      "title": "Security Corps",
+      "location": "Jubilife Village (saída)",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 399,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 403,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 396,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": false,
+      "notes": "pós-jogo (pedido 104): só Alphas; só no detonado; na Serebii, a revanche no Training Grounds tem os três no nível 63; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
       "id": "ingo-2",
       "kind": "other",
       "name": "Ingo",
       "title": "Warden",
       "location": "Training Grounds",
-      "order": 42,
+      "order": 43,
       "badge": null,
       "party": [
         {
@@ -1734,7 +1776,7 @@
       "name": "Ingo",
       "title": "Warden",
       "location": "Training Grounds",
-      "order": 43,
+      "order": 44,
       "badge": null,
       "party": [
         {
@@ -1833,7 +1875,7 @@
       "name": "Akari",
       "title": "Survey Corps",
       "location": "Training Grounds",
-      "order": 44,
+      "order": 45,
       "badge": null,
       "party": [
         {
@@ -1918,7 +1960,7 @@
       "name": "Noble Kleavor",
       "title": "Noble",
       "location": "Grandtree Arena",
-      "order": 45,
+      "order": 46,
       "badge": null,
       "party": [
         {
@@ -1947,7 +1989,7 @@
       "name": "Noble Lilligant",
       "title": "Noble",
       "location": "Brava Arena",
-      "order": 46,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -1976,7 +2018,7 @@
       "name": "Noble Arcanine",
       "title": "Noble",
       "location": "Molten Arena",
-      "order": 47,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -2005,7 +2047,7 @@
       "name": "Noble Electrode",
       "title": "Noble",
       "location": "Moonview Arena",
-      "order": 48,
+      "order": 49,
       "badge": null,
       "party": [
         {
@@ -2034,7 +2076,7 @@
       "name": "Noble Avalugg",
       "title": "Noble",
       "location": "Icepeak Arena",
-      "order": 49,
+      "order": 50,
       "badge": null,
       "party": [
         {
