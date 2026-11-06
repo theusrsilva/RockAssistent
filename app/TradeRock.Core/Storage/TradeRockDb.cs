@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TradeRock.Core.Storage;
 
 /// <summary>
-/// Banco do app. Pokémon, caixas, tags, histórico, treinadores salvos, anexos e hunts são de um dono
+/// Banco do app. Pokémon, caixas, tags, histórico, treinadores salvos, anexos, hunts e runs de Nuzlocke são de um dono
 /// (<see cref="OwnerScope"/>): as consultas só enxergam os do dono atual e o que é criado vai para ele.
 /// </summary>
 public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbContext(options)
@@ -24,6 +24,9 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<UserAccount> Users => Set<UserAccount>();
     public DbSet<SaveAttachment> SaveAttachments => Set<SaveAttachment>();
     public DbSet<ShinyHunt> Hunts => Set<ShinyHunt>();
+    public DbSet<NuzlockeRun> NuzlockeRuns => Set<NuzlockeRun>();
+    public DbSet<NuzlockeMon> NuzlockeMons => Set<NuzlockeMon>();
+    public DbSet<NuzlockeEvent> NuzlockeEvents => Set<NuzlockeEvent>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -127,6 +130,25 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
         {
             e.HasQueryFilter(h => h.OwnerId == Owner);
             e.HasIndex(h => new { h.OwnerId, h.StartedAt });
+        });
+
+        model.Entity<NuzlockeRun>(e =>
+        {
+            e.HasQueryFilter(r => r.OwnerId == Owner);
+            e.HasIndex(r => new { r.OwnerId, r.StartedAt });
+        });
+
+        // Os Pokémon e os eventos não têm dono próprio: só se chega a eles pela run (que tem o filtro).
+        model.Entity<NuzlockeMon>(e =>
+        {
+            e.HasIndex(m => m.RunId);
+            e.HasOne<NuzlockeRun>().WithMany().HasForeignKey(m => m.RunId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<NuzlockeEvent>(e =>
+        {
+            e.HasIndex(x => new { x.RunId, x.At });
+            e.HasOne<NuzlockeRun>().WithMany().HasForeignKey(x => x.RunId).OnDelete(DeleteBehavior.Cascade);
         });
 
         model.Entity<SettingEntry>(e => e.HasKey(s => s.Key));

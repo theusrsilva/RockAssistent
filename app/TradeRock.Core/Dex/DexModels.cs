@@ -47,6 +47,12 @@ public sealed record FlavorText(string Version, string Language, string Text);
 public sealed record EncounterInfo(string Version, string Location, string? Area, string Method, int MinLevel,
     int MaxLevel, int Chance, string[] Conditions);
 
+/// <summary>
+/// Encontro de um local do PokeAPI (todas as sub-áreas juntas) numa versão, por espécie, forma e método. <see cref="Form"/>
+/// é a posição da forma na ficha (0 = a padrão), como em <see cref="SpeciesDetail.Forms"/>.
+/// </summary>
+public sealed record LocationEncounter(int Species, int Form, string Version, string Method, int MinLevel, int MaxLevel, int Chance);
+
 public sealed record SpeciesMoves(IReadOnlyList<LearnedMove> LevelUp, IReadOnlyList<LearnedMove> Machine,
     IReadOnlyList<LearnedMove> Tutor, IReadOnlyList<LearnedMove> Egg)
 {

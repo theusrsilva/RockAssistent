@@ -196,6 +196,73 @@ public sealed class ShinyHunt : IOwned
     public string? Notes { get; set; }
 }
 
+/// <summary>
+/// Run de Nuzlocke: jogo (e versão, se a pessoa escolheu), regras, estado e a área em que está. Os Pokémon
+/// (<see cref="NuzlockeMon"/>) e os eventos (<see cref="NuzlockeEvent"/>) pertencem à run e só se chega a eles por ela.
+/// </summary>
+public sealed class NuzlockeRun : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public required string Name { get; set; }
+
+    /// <summary>Chave do jogo (<c>GameVersions</c>).</summary>
+    public required string GameKey { get; set; }
+
+    /// <summary>Versão do PokeAPI escolhida (<c>firered</c>, <c>scarlet</c>...); null = todas as do jogo.</summary>
+    public string? Version { get; set; }
+
+    /// <summary><c>NuzlockeRules</c> em JSON.</summary>
+    public required string RulesJson { get; set; }
+
+    /// <summary><c>active</c>, <c>paused</c>, <c>champion</c> ou <c>wipe</c>.</summary>
+    public required string Status { get; set; }
+
+    public DateTimeOffset StartedAt { get; set; }
+    public DateTimeOffset? EndedAt { get; set; }
+
+    /// <summary>Id da área em <c>assets/data/areas</c>; null = a primeira do jogo.</summary>
+    public string? CurrentAreaId { get; set; }
+}
+
+/// <summary>Pokémon de uma run (o encontro registrado e o que aconteceu com ele).</summary>
+public sealed class NuzlockeMon
+{
+    public Guid Id { get; set; }
+    public Guid RunId { get; set; }
+    public required string AreaId { get; set; }
+
+    /// <summary>Espécie; 0 = sem encontro (só com <c>missed</c> ou <c>failed</c>).</summary>
+    public int Species { get; set; }
+
+    public int Form { get; set; }
+    public string? Nickname { get; set; }
+    public int Level { get; set; }
+
+    /// <summary><c>party</c>, <c>box</c>, <c>dead</c>, <c>missed</c> ou <c>failed</c>.</summary>
+    public required string Status { get; set; }
+
+    public string? DeathCause { get; set; }
+    public DateTimeOffset CaughtAt { get; set; }
+    public DateTimeOffset? DiedAt { get; set; }
+
+    /// <summary>Golpes atuais em JSON: lista de identificadores do PokeAPI (<c>["thunder-shock"]</c>).</summary>
+    public required string MovesJson { get; set; }
+}
+
+/// <summary>Evento de uma run (para o histórico e as estatísticas): tipo e os dados em JSON.</summary>
+public sealed class NuzlockeEvent
+{
+    public Guid Id { get; set; }
+    public Guid RunId { get; set; }
+    public DateTimeOffset At { get; set; }
+
+    /// <summary><c>run_started</c>, <c>area_changed</c>, <c>encounter</c>, <c>mon_updated</c>, <c>boss_defeated</c> ou <c>run_finished</c>.</summary>
+    public required string Kind { get; set; }
+
+    public required string Json { get; set; }
+}
+
 /// <summary>Configuração chave → JSON.</summary>
 public sealed class SettingEntry
 {

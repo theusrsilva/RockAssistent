@@ -283,6 +283,11 @@ public sealed class ServerModeTests : IAsyncLifetime
         // Hunt e anexo de save da conta também vão embora.
         Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync("/api/hunts",
             new { species = 906, form = 0, gameKey = "sv", methodId = "masuda" })).StatusCode);
+        var runResponse = await edu.PostAsync("/api/nuzlocke", new { gameKey = "frlg" });
+        Assert.Equal(HttpStatusCode.OK, runResponse.StatusCode);
+        var runId = (await runResponse.Content.ReadFromJsonAsync<JsonElement>(Ct)).GetProperty("run").GetProperty("id").GetString();
+        Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync($"/api/nuzlocke/{runId}/encounter",
+            new { areaId = "route-1", species = 16, form = 0, nickname = "Pidge", level = 3, status = "party" })).StatusCode);
         var owner = Guid.Parse(id!);
         var dbFactory = _app.Services.GetRequiredService<IDbContextFactory<TradeRockDb>>();
         using (OwnerScope.Use(owner))
@@ -302,6 +307,9 @@ public sealed class ServerModeTests : IAsyncLifetime
         {
             Assert.Equal(0, await db.Hunts.IgnoreQueryFilters().CountAsync(h => h.OwnerId == owner, Ct));
             Assert.Equal(0, await db.SaveAttachments.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.NuzlockeRuns.IgnoreQueryFilters().CountAsync(r => r.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.NuzlockeMons.CountAsync(Ct));
+            Assert.Equal(0, await db.NuzlockeEvents.CountAsync(Ct));
         }
         Assert.Equal(HttpStatusCode.Unauthorized, (await edu.GetAsync("/api/pokemon")).StatusCode);
         // Os arquivos dos Pokémon de demonstração continuam: o cofre do dono também os usa.

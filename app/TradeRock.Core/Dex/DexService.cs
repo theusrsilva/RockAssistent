@@ -71,6 +71,56 @@ public sealed class DexService(DexDatabase db)
     /// <summary>Identificadores de todos os golpes (como o PokeAPI escreve: <c>thunder-punch</c>).</summary>
     public IReadOnlySet<string> MoveIdentifiers() => _moveIdentifiers.Value;
 
+    private readonly Lazy<IReadOnlyDictionary<int, string>> _moveIdentifiersById = new(() =>
+    {
+        using var c = db.Open();
+        using var cmd = Command(c, "SELECT id, identifier FROM moves");
+        using var r = cmd.ExecuteReader();
+        var ids = new Dictionary<int, string>();
+        while (r.Read())
+            ids[r.GetInt32(0)] = r.GetString(1);
+        return ids;
+    }, LazyThreadSafetyMode.ExecutionAndPublication);
+
+    /// <summary>Identificador do golpe (<c>thunder-punch</c>) pelo id do PokeAPI; null se não existe.</summary>
+    public string? MoveIdentifier(int moveId) => _moveIdentifiersById.Value.GetValueOrDefault(moveId);
+
+    /// <summary>Nome da espécie em inglês; null se não existe.</summary>
+    public string? SpeciesName(int speciesId) => Data.Species.TryGetValue(speciesId, out var s) ? s.Name : null;
+
+    /// <summary>Cadeia de evolução da espécie (mesma cadeia = mesma linha evolutiva); null se não existe.</summary>
+    public int? EvolutionChainId(int speciesId) => Data.Species.TryGetValue(speciesId, out var s) ? s.ChainId : null;
+
+    /// <summary>
+    /// Encontros de um local do PokeAPI (<c>locations.id</c>, todas as sub-áreas) nas versões do jogo, juntados por
+    /// versão, espécie, forma e método (níveis de/até, chance somada). Local sem encontros = lista vazia.
+    /// </summary>
+    public Task<IReadOnlyList<LocationEncounter>> LocationEncountersAsync(int locationId, string gameKey, CancellationToken ct)
+    {
+        ct.ThrowIfCancellationRequested();
+        var game = Data.Game(gameKey);
+        using var c = db.Open();
+        using var cmd = Command(c, $"""
+            WITH forms AS (
+                SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
+                FROM pokemon)
+            SELECT f.species_id, f.form, v.identifier, e.method, min(e.min_level), max(e.max_level), sum(coalesce(e.rarity, 0))
+            FROM encounters e
+            JOIN forms f ON f.id = e.pokemon_id
+            JOIN versions v ON v.id = e.version_id
+            JOIN location_areas a ON a.id = e.location_area_id
+            WHERE a.location_id = $l AND e.version_id IN ({game.VersionIdList})
+            GROUP BY e.version_id, f.species_id, f.form, e.method
+            ORDER BY f.species_id, f.form, e.version_id, e.method
+            """, ("$l", locationId));
+        using var r = cmd.ExecuteReader();
+        var result = new List<LocationEncounter>();
+        while (r.Read())
+            result.Add(new LocationEncounter(r.GetInt32(0), r.GetInt32(1), r.GetString(2), Str(r, 3) ?? "unknown",
+                Int(r, 4) ?? 0, Int(r, 5) ?? 0, Int(r, 6) ?? 0));
+        return Task.FromResult<IReadOnlyList<LocationEncounter>>(result);
+    }
+
     public Task<IReadOnlyList<SpeciesSummary>> ListAsync(DexQuery q, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
