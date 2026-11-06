@@ -53,6 +53,13 @@ public sealed record EncounterInfo(string Version, string Location, string? Area
 /// </summary>
 public sealed record LocationEncounter(int Species, int Form, string Version, string Method, int MinLevel, int MaxLevel, int Chance);
 
+/// <summary>
+/// TM/HM/TR do jogo (tabela <c>machines</c> do PokeAPI, grupo de versões principal). <see cref="Machine"/> é o nome do
+/// item ("TM30", "HM03", "TR12"); o tipo e os números do golpe são os do jogo.
+/// </summary>
+public sealed record MachineInfo(int Number, string Machine, int MoveId, string MoveIdentifier, string MoveName, string Type,
+    string? DamageClass, int? Power, int? Accuracy, int? Pp);
+
 public sealed record SpeciesMoves(IReadOnlyList<LearnedMove> LevelUp, IReadOnlyList<LearnedMove> Machine,
     IReadOnlyList<LearnedMove> Tutor, IReadOnlyList<LearnedMove> Egg)
 {

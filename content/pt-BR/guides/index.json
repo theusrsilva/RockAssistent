@@ -1,0 +1,33 @@
+{
+  "games": [
+    {
+      "key": "frlg",
+      "title": "FireRed / LeafGreen",
+      "sections": [{ "id": "overview", "title": "Visão geral", "file": "games/frlg/overview.md" }]
+    }
+  ],
+  "mechanics": [
+    {
+      "key": "types",
+      "title": "Tipos",
+      "description": "Vantagens, fraquezas e imunidades.",
+      "sections": [{ "id": "types", "title": "Tipos", "file": "mechanics/types.md" }]
+    }
+  ],
+  "vgc": [
+    {
+      "key": "intro",
+      "title": "O que é o VGC",
+      "description": "O formato oficial de campeonatos.",
+      "sections": [{ "id": "intro", "title": "O que é o VGC", "file": "vgc/intro.md" }]
+    }
+  ],
+  "mythology": [
+    {
+      "key": "kanto",
+      "title": "Kanto",
+      "description": "Mew, Mewtwo e as aves lendárias.",
+      "sections": [{ "id": "kanto", "title": "Kanto", "file": "mythology/kanto.md" }]
+    }
+  ]
+}

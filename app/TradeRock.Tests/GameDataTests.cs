@@ -562,4 +562,24 @@ public sealed class GameDataApiTests : IAsyncLifetime
         Assert.Equal("unova", unova.GetProperty("region").GetString());
         Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/maps/5")).StatusCode);
     }
+
+    [Fact]
+    public async Task Encontros_da_area_e_maquinas()
+    {
+        Assert.SkipUnless(TradeRock.Core.Dex.DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
+        // FRLG: os do PokeAPI pela área (Pidgey e Rattata na Route 1, nas duas versões).
+        var route1 = await _client.GetFromJsonAsync<JsonElement>("/api/data/frlg/areas/route-1/encounters");
+        Assert.Contains(route1.EnumerateArray(), e => e.GetProperty("species").GetInt32() == 16
+            && e.GetProperty("versions").GetArrayLength() == 2 && e.GetProperty("chance").GetString()!.EndsWith('%'));
+        // SV: os nossos (o Sprigatito é presente em Cabo Poco).
+        var poco = await _client.GetFromJsonAsync<JsonElement>("/api/data/sv/areas/cabo-poco/encounters");
+        Assert.Contains(poco.EnumerateArray(), e => e.GetProperty("species").GetInt32() == 906);
+        Assert.Equal(HttpStatusCode.NotFound, (await _client.GetAsync("/api/data/frlg/areas/atlantis/encounters")).StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/zz/areas/route-1/encounters")).StatusCode);
+
+        var tms = await _client.GetFromJsonAsync<JsonElement>("/api/dex/machines?game=frlg");
+        Assert.Contains(tms.EnumerateArray(), m => m.GetProperty("machine").GetString() == "TM30"
+            && m.GetProperty("moveName").GetString() == "Shadow Ball" && m.GetProperty("type").GetString() == "ghost");
+        Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/dex/machines?game=zz")).StatusCode);
+    }
 }

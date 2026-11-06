@@ -107,6 +107,31 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult<IReadOnlyList<LocationEncounter>>(result);
     }
 
+    /// <summary>TMs, HMs e TRs do jogo em ordem de número. Jogo sem máquinas no PokeAPI (Arceus, Z-A) = lista vazia.</summary>
+    public Task<IReadOnlyList<MachineInfo>> MachinesAsync(string gameKey, CancellationToken ct)
+    {
+        ct.ThrowIfCancellationRequested();
+        var data = Data;
+        var game = data.Game(gameKey);
+        using var c = db.Open();
+        using var cmd = Command(c, """
+            SELECT mc.machine_number, coalesce(i.name_en, i.identifier), m.id, m.identifier, coalesce(m.name_en, m.identifier),
+                   m.type_id, m.power, m.pp, m.accuracy, m.damage_class
+            FROM machines mc JOIN items i ON i.id = mc.item_id JOIN moves m ON m.id = mc.move_id
+            WHERE mc.version_group_id = $vg ORDER BY mc.machine_number
+            """, ("$vg", game.MainGroupId));
+        using var r = cmd.ExecuteReader();
+        var result = new List<MachineInfo>();
+        while (r.Read())
+        {
+            var moveId = r.GetInt32(2);
+            var stats = data.MoveAt(moveId, game.Order, Int(r, 5) ?? 0, Int(r, 6), Int(r, 7), Int(r, 8));
+            result.Add(new MachineInfo(Int(r, 0) ?? 0, r.GetString(1), moveId, r.GetString(3), r.GetString(4), data.TypeName(stats.Type),
+                Str(r, 9), stats.Power, stats.Accuracy, stats.Pp));
+        }
+        return Task.FromResult<IReadOnlyList<MachineInfo>>(result);
+    }
+
     public Task<IReadOnlyList<SpeciesSummary>> ListAsync(DexQuery q, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();

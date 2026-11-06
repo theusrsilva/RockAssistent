@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
 import { Layout } from './components/Layout'
 import BuilderPage from './pages/builder/BuilderPage'
@@ -27,6 +28,9 @@ import { AuthProvider } from './lib/auth'
 import { ConnectionProvider } from './lib/connection'
 import { ToastProvider } from './components/ui'
 
+// A página de um guia (markdown com tabelas e blocos de dados) fica num chunk separado.
+const GuidePage = lazy(() => import('./pages/guides/GuidePage'))
+
 export default function App() {
   useTheme() // aplica o tema salvo em qualquer página
   return (
@@ -43,7 +47,15 @@ export default function App() {
                 <Route path="/pokedex/habilidade/:id" element={<AbilityPage />} />
                 <Route path="/pokedex/item/:id" element={<ItemPage />} />
                 <Route path="/pokedex/tipos" element={<TypeChartPage />} />
-                <Route path="/guias/*" element={<GuidesPage />} />
+                <Route path="/guias" element={<GuidesPage />} />
+                <Route
+                  path="/guias/:section/:slug/:page?"
+                  element={
+                    <Suspense fallback={null}>
+                      <GuidePage />
+                    </Suspense>
+                  }
+                />
                 <Route path="/boxes" element={<BoxesPage />} />
                 <Route path="/trocas" element={<TradesHubPage />} />
                 <Route path="/trocas/trocar" element={<TradePage />} />

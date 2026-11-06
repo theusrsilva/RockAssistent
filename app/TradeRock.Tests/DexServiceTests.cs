@@ -46,6 +46,22 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     private static CancellationToken Ct => TestContext.Current.CancellationToken;
 
     [Fact]
+    public async Task Maquinas_do_FireRed_do_SwSh_e_do_Arceus()
+    {
+        var frlg = await Dex.MachinesAsync("frlg", Ct);
+        Assert.Equal(58, frlg.Count);
+        var tm30 = Assert.Single(frlg, m => m.Machine == "TM30");
+        Assert.Equal("Shadow Ball", tm30.MoveName);
+        Assert.Equal("ghost", tm30.Type);
+        Assert.Contains(frlg, m => m.Machine == "HM01" && m.MoveIdentifier == "cut");
+        Assert.Equal(frlg.Select(m => m.Number).Order(), frlg.Select(m => m.Number));
+
+        var swsh = await Dex.MachinesAsync("swsh", Ct);
+        Assert.Contains(swsh, m => m.Machine == "TR99" && m.MoveName == "Body Press");
+        Assert.Empty(await Dex.MachinesAsync("pla", Ct));
+    }
+
+    [Fact]
     public async Task Gengar_no_FireRed()
     {
         var g = await Dex.GetAsync(94, "frlg", "pt-BR", Ct);

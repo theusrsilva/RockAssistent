@@ -1,3 +1,4 @@
+using TradeRock.Core.Dex;
 using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
 
@@ -34,6 +35,14 @@ public static class GameDataEndpoints
             KnownGame(game) ? Results.Ok(store.Areas(game)) : UnknownGame());
         group.MapGet("/{game}/encounters", (string game, GameDataStore store) =>
             KnownGame(game) ? Results.Ok(store.Encounters(game)) : UnknownGame());
+        // Encontros de uma área (guias): os nossos ou os do PokeAPI, uma linha por método/níveis/chance.
+        group.MapGet("/{game}/areas/{area}/encounters", async (string game, string area, GameDataStore store, DexService dex,
+            CancellationToken ct) =>
+        {
+            if (!KnownGame(game))
+                return UnknownGame();
+            return await AreaEncounters.ListAsync(game, area, store, dex, ct) is { } rows ? Results.Ok(rows) : Results.NotFound();
+        });
     }
 
     private static bool KnownGame(string key) => GameVersions.All.Any(g => g.Key == key);

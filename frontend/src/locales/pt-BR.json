@@ -1934,7 +1934,64 @@
     }
   },
   "guides": {
-    "title": "Guias"
+    "title": "Guias",
+    "sub": "Fatos rápidos dos jogos, das mecânicas, do VGC e das lendas, sem enrolação.",
+    "sections": {
+      "games": "Jogos",
+      "mechanics": "Mecânicas",
+      "vgc": "VGC Champions",
+      "mythology": "Mitologia"
+    },
+    "sectionsSub": {
+      "games": "Detonado, chefes, TMs, exclusivos e lendários de cada jogo.",
+      "mechanics": "Como as regras do jogo funcionam.",
+      "vgc": "Batalhas oficiais em dupla.",
+      "mythology": "As lendas de cada região."
+    },
+    "generation": "Geração {{n}}",
+    "pages_one": "{{count}} página",
+    "pages_other": "{{count}} páginas",
+    "empty": "Nenhum guia aqui ainda.",
+    "contents": "Neste guia",
+    "previous": "Anterior",
+    "next": "Próxima",
+    "loading": "Carregando o guia…",
+    "notFound": "Esse guia não existe.",
+    "notFoundHint": "Talvez o endereço esteja errado ou o guia tenha mudado de lugar.",
+    "backToGuides": "Ver todos os guias",
+    "pageError": "Não deu para abrir esta página do guia.",
+    "block": {
+      "error": "Não deu para carregar estes dados.",
+      "empty": "Sem dados para mostrar aqui.",
+      "unknown": "Bloco desconhecido: {{name}}",
+      "unknownHint": "Confira o nome da diretiva no guia.",
+      "notVerified": "não conferido",
+      "allVersions": "Todas",
+      "level": "Nv. {{level}}",
+      "levels": "Nv. {{min}}–{{max}}",
+      "alpha": "Alfa"
+    },
+    "col": {
+      "boss": "Chefe",
+      "location": "Local",
+      "cap": "Cap",
+      "team": "Time",
+      "pokemon": "Pokémon",
+      "method": "Método",
+      "levels": "Níveis",
+      "chance": "Chance",
+      "versions": "Versões",
+      "number": "Nº",
+      "move": "Golpe",
+      "type": "Tipo",
+      "category": "Categoria",
+      "power": "Poder",
+      "accuracy": "Precisão",
+      "shinyMethod": "Método",
+      "baseOdds": "Chance base",
+      "modifiers": "Modificadores",
+      "games": "Jogos"
+    }
   },
   "boxes": {
     "title": "Boxes",

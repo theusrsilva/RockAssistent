@@ -39,6 +39,14 @@ public static class DexEndpoints
             return await dex.GetMoveAsync(id, game, ct) is { } move ? Results.Ok(move) : Results.NotFound();
         });
 
+        // TMs/HMs/TRs do jogo (bloco :::tms dos guias).
+        group.MapGet("/machines", async (string? game, DexService dex, CancellationToken ct) =>
+        {
+            if (game is null || !KnownGame(game))
+                return UnknownGame();
+            return Results.Ok(await dex.MachinesAsync(game, ct));
+        });
+
         group.MapGet("/abilities/{id:int}", async (int id, DexService dex, CancellationToken ct) =>
             await dex.GetAbilityAsync(id, ct) is { } ability ? Results.Ok(ability) : Results.NotFound());
 

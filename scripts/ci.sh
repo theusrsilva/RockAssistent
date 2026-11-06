@@ -8,6 +8,10 @@ python3 -m unittest discover -s scripts/tests -t scripts
 python3 -I scripts/build-dex.py
 echo "::endgroup::"
 
+echo "::group::Guias (scripts/check-guides.py)"
+python3 -I scripts/check-guides.py
+echo "::endgroup::"
+
 echo "::group::Frontend"
 (cd frontend && npm ci && npm run typecheck && npm test && npm run build)
 echo "::endgroup::"

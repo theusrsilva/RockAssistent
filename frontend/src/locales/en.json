@@ -1934,7 +1934,64 @@
     }
   },
   "guides": {
-    "title": "Guides"
+    "title": "Guides",
+    "sub": "Quick facts about the games, the mechanics, VGC and the legends, no fluff.",
+    "sections": {
+      "games": "Games",
+      "mechanics": "Mechanics",
+      "vgc": "VGC Champions",
+      "mythology": "Mythology"
+    },
+    "sectionsSub": {
+      "games": "Walkthrough, bosses, TMs, exclusives and legendaries for each game.",
+      "mechanics": "How the game rules work.",
+      "vgc": "Official double battles.",
+      "mythology": "The legends of each region."
+    },
+    "generation": "Generation {{n}}",
+    "pages_one": "{{count}} page",
+    "pages_other": "{{count}} pages",
+    "empty": "No guides here yet.",
+    "contents": "In this guide",
+    "previous": "Previous",
+    "next": "Next",
+    "loading": "Loading the guide…",
+    "notFound": "This guide doesn't exist.",
+    "notFoundHint": "The address may be wrong or the guide may have moved.",
+    "backToGuides": "See all guides",
+    "pageError": "Couldn't open this guide page.",
+    "block": {
+      "error": "Couldn't load this data.",
+      "empty": "No data to show here.",
+      "unknown": "Unknown block: {{name}}",
+      "unknownHint": "Check the directive name in the guide.",
+      "notVerified": "not verified",
+      "allVersions": "All",
+      "level": "Lv. {{level}}",
+      "levels": "Lv. {{min}}–{{max}}",
+      "alpha": "Alpha"
+    },
+    "col": {
+      "boss": "Boss",
+      "location": "Location",
+      "cap": "Cap",
+      "team": "Team",
+      "pokemon": "Pokémon",
+      "method": "Method",
+      "levels": "Levels",
+      "chance": "Chance",
+      "versions": "Versions",
+      "number": "No.",
+      "move": "Move",
+      "type": "Type",
+      "category": "Category",
+      "power": "Power",
+      "accuracy": "Accuracy",
+      "shinyMethod": "Method",
+      "baseOdds": "Base odds",
+      "modifiers": "Modifiers",
+      "games": "Games"
+    }
   },
   "boxes": {
     "title": "Boxes",
