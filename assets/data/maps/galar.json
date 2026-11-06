@@ -9,176 +9,176 @@
       "id": "postwick",
       "name": "Postwick",
       "kind": "city",
-      "x": 0.5,
-      "y": 0.98,
+      "x": 0.54,
+      "y": 0.72,
       "games": null
     },
     {
       "id": "slumbering-weald",
       "name": "Slumbering Weald",
       "kind": "dungeon",
-      "x": 0.46,
-      "y": 0.99,
+      "x": 0.5,
+      "y": 0.76,
       "games": null
     },
     {
       "id": "route-1",
       "name": "Route 1",
       "kind": "route",
-      "x": 0.46,
-      "y": 0.943,
+      "x": 0.58,
+      "y": 0.68,
       "games": null
     },
     {
       "id": "wedgehurst",
       "name": "Wedgehurst",
       "kind": "city",
-      "x": 0.5,
-      "y": 0.88,
+      "x": 0.54,
+      "y": 0.64,
       "games": null
     },
     {
       "id": "route-2",
       "name": "Route 2",
       "kind": "route",
-      "x": 0.46,
-      "y": 0.84,
+      "x": 0.5,
+      "y": 0.651,
       "games": null
     },
     {
       "id": "meetup-spot",
       "name": "Meetup Spot",
       "kind": "route",
-      "x": 0.54,
-      "y": 0.6,
+      "x": 0.56,
+      "y": 0.46,
       "games": null
     },
     {
       "id": "rolling-fields",
       "name": "Rolling Fields",
       "kind": "route",
-      "x": 0.595,
-      "y": 0.628,
+      "x": 0.596,
+      "y": 0.456,
       "games": null
     },
     {
       "id": "dappled-grove",
       "name": "Dappled Grove",
       "kind": "route",
-      "x": 0.621,
-      "y": 0.602,
+      "x": 0.665,
+      "y": 0.507,
       "games": null
     },
     {
       "id": "watchtower-ruins",
       "name": "Watchtower Ruins",
       "kind": "route",
-      "x": 0.685,
-      "y": 0.651,
+      "x": 0.691,
+      "y": 0.531,
       "games": null
     },
     {
       "id": "east-lake-axewell",
       "name": "East Lake Axewell",
       "kind": "route",
-      "x": 0.601,
-      "y": 0.705,
+      "x": 0.608,
+      "y": 0.532,
       "games": null
     },
     {
       "id": "west-lake-axewell",
       "name": "West Lake Axewell",
       "kind": "route",
-      "x": 0.638,
-      "y": 0.702,
+      "x": 0.618,
+      "y": 0.569,
       "games": null
     },
     {
       "id": "axews-eye",
       "name": "Axews Eye",
       "kind": "route",
-      "x": 0.519,
-      "y": 0.728,
+      "x": 0.527,
+      "y": 0.563,
       "games": null
     },
     {
       "id": "south-lake-miloch",
       "name": "South Lake Miloch",
       "kind": "route",
-      "x": 0.485,
-      "y": 0.739,
+      "x": 0.506,
+      "y": 0.592,
       "games": null
     },
     {
       "id": "giants-seat",
       "name": "Giants Seat",
       "kind": "route",
-      "x": 0.428,
-      "y": 0.666,
+      "x": 0.436,
+      "y": 0.604,
       "games": null
     },
     {
       "id": "north-lake-miloch",
       "name": "North Lake Miloch",
       "kind": "route",
-      "x": 0.413,
-      "y": 0.632,
+      "x": 0.405,
+      "y": 0.562,
       "games": null
     },
     {
       "id": "motostoke-riverbank",
       "name": "Motostoke Riverbank",
       "kind": "route",
-      "x": 0.478,
-      "y": 0.63,
+      "x": 0.445,
+      "y": 0.499,
       "games": null
     },
     {
       "id": "bridge-field",
       "name": "Bridge Field",
       "kind": "route",
-      "x": 0.414,
-      "y": 0.567,
+      "x": 0.41,
+      "y": 0.506,
       "games": null
     },
     {
       "id": "stony-wilderness",
       "name": "Stony Wilderness",
       "kind": "route",
-      "x": 0.41,
-      "y": 0.532,
+      "x": 0.436,
+      "y": 0.452,
       "games": null
     },
     {
       "id": "dusty-bowl",
       "name": "Dusty Bowl",
       "kind": "route",
-      "x": 0.442,
-      "y": 0.488,
+      "x": 0.406,
+      "y": 0.388,
       "games": null
     },
     {
       "id": "giants-mirror",
       "name": "Giants Mirror",
       "kind": "route",
-      "x": 0.48,
-      "y": 0.466,
+      "x": 0.464,
+      "y": 0.352,
       "games": null
     },
     {
       "id": "hammerlocke-hills",
       "name": "Hammerlocke Hills",
       "kind": "route",
-      "x": 0.485,
-      "y": 0.403,
+      "x": 0.461,
+      "y": 0.284,
       "games": null
     },
     {
       "id": "giants-cap",
       "name": "Giants Cap",
       "kind": "route",
-      "x": 0.39,
-      "y": 0.425,
+      "x": 0.381,
+      "y": 0.306,
       "games": null
     },
     {
@@ -186,7 +186,7 @@
       "name": "Lake Of Outrage",
       "kind": "route",
       "x": 0.34,
-      "y": 0.44,
+      "y": 0.34,
       "games": null
     },
     {
@@ -194,31 +194,31 @@
       "name": "Motostoke",
       "kind": "city",
       "x": 0.5,
-      "y": 0.66,
+      "y": 0.5,
       "games": null
     },
     {
       "id": "route-3",
       "name": "Route 3",
       "kind": "route",
-      "x": 0.394,
-      "y": 0.677,
+      "x": 0.379,
+      "y": 0.488,
       "games": null
     },
     {
       "id": "galar-mine",
       "name": "Galar Mine",
       "kind": "dungeon",
-      "x": 0.336,
-      "y": 0.681,
+      "x": 0.306,
+      "y": 0.434,
       "games": null
     },
     {
       "id": "route-4",
       "name": "Route 4",
       "kind": "route",
-      "x": 0.234,
-      "y": 0.599,
+      "x": 0.272,
+      "y": 0.468,
       "games": null
     },
     {
@@ -226,15 +226,15 @@
       "name": "Turffield",
       "kind": "city",
       "x": 0.18,
-      "y": 0.56,
+      "y": 0.44,
       "games": null
     },
     {
       "id": "route-5",
       "name": "Route 5",
       "kind": "route",
-      "x": 0.489,
-      "y": 0.533,
+      "x": 0.487,
+      "y": 0.422,
       "games": null
     },
     {
@@ -242,7 +242,7 @@
       "name": "Hulbury",
       "kind": "city",
       "x": 0.82,
-      "y": 0.56,
+      "y": 0.44,
       "games": null
     },
     {
@@ -250,7 +250,7 @@
       "name": "Galar Mine No. 2",
       "kind": "dungeon",
       "x": 0.713,
-      "y": 0.493,
+      "y": 0.387,
       "games": null
     },
     {
@@ -258,7 +258,7 @@
       "name": "Motostoke Outskirts",
       "kind": "route",
       "x": 0.607,
-      "y": 0.427,
+      "y": 0.333,
       "games": null
     },
     {
@@ -266,15 +266,15 @@
       "name": "Hammerlocke",
       "kind": "city",
       "x": 0.5,
-      "y": 0.36,
+      "y": 0.28,
       "games": null
     },
     {
       "id": "route-6",
       "name": "Route 6",
       "kind": "route",
-      "x": 0.384,
-      "y": 0.347,
+      "x": 0.367,
+      "y": 0.241,
       "games": null
     },
     {
@@ -282,7 +282,7 @@
       "name": "Stow-on-Side",
       "kind": "city",
       "x": 0.28,
-      "y": 0.36,
+      "y": 0.28,
       "games": null
     },
     {
@@ -290,15 +290,15 @@
       "name": "Glimwood Tangle",
       "kind": "dungeon",
       "x": 0.228,
-      "y": 0.287,
+      "y": 0.207,
       "games": null
     },
     {
       "id": "ballonlea",
       "name": "Ballonlea",
       "kind": "city",
-      "x": 0.22,
-      "y": 0.24,
+      "x": 0.2,
+      "y": 0.16,
       "games": null
     },
     {
@@ -306,7 +306,7 @@
       "name": "Route 7",
       "kind": "route",
       "x": 0.531,
-      "y": 0.316,
+      "y": 0.243,
       "games": null
     },
     {
@@ -314,7 +314,7 @@
       "name": "Route 8",
       "kind": "route",
       "x": 0.609,
-      "y": 0.224,
+      "y": 0.157,
       "games": null
     },
     {
@@ -322,7 +322,7 @@
       "name": "Circhester",
       "kind": "city",
       "x": 0.64,
-      "y": 0.18,
+      "y": 0.12,
       "games": null
     },
     {
@@ -330,7 +330,7 @@
       "name": "Route 9",
       "kind": "route",
       "x": 0.71,
-      "y": 0.24,
+      "y": 0.18,
       "games": null
     },
     {
@@ -338,7 +338,7 @@
       "name": "Route 9 Tunnel",
       "kind": "dungeon",
       "x": 0.75,
-      "y": 0.2,
+      "y": 0.14,
       "games": null
     },
     {
@@ -346,7 +346,7 @@
       "name": "Spikemuth",
       "kind": "city",
       "x": 0.86,
-      "y": 0.22,
+      "y": 0.16,
       "games": null
     },
     {
@@ -354,7 +354,7 @@
       "name": "Route 10",
       "kind": "route",
       "x": 0.5,
-      "y": 0.2,
+      "y": 0.15,
       "games": null
     },
     {
@@ -362,7 +362,7 @@
       "name": "Wyndon",
       "kind": "city",
       "x": 0.5,
-      "y": 0.04,
+      "y": 0.02,
       "games": null
     },
     {
@@ -370,7 +370,7 @@
       "name": "Armor Station",
       "kind": "route",
       "x": 0.96,
-      "y": 0.92,
+      "y": 0.76,
       "games": null
     },
     {
@@ -378,79 +378,79 @@
       "name": "Master Dojo",
       "kind": "building",
       "x": 0.92,
-      "y": 0.78,
+      "y": 0.64,
       "games": null
     },
     {
       "id": "warm-up-tunnel",
       "name": "Warm-Up Tunnel",
       "kind": "dungeon",
-      "x": 0.99,
-      "y": 0.918,
+      "x": 0.949,
+      "y": 0.709,
       "games": null
     },
     {
       "id": "forest-of-focus",
       "name": "Forest of Focus",
       "kind": "route",
-      "x": 0.824,
-      "y": 0.82,
+      "x": 0.78,
+      "y": 0.688,
       "games": null
     },
     {
       "id": "fields-of-honor",
       "name": "Fields Of Honor",
       "kind": "route",
-      "x": 0.938,
-      "y": 0.827,
+      "x": 0.87,
+      "y": 0.688,
       "games": null
     },
     {
       "id": "soothing-wetlands",
       "name": "Soothing Wetlands",
       "kind": "route",
-      "x": 0.866,
-      "y": 0.793,
+      "x": 0.833,
+      "y": 0.724,
       "games": null
     },
     {
       "id": "challenge-beach",
       "name": "Challenge Beach",
       "kind": "route",
-      "x": 0.897,
-      "y": 0.842,
+      "x": 0.904,
+      "y": 0.736,
       "games": null
     },
     {
       "id": "brawlers-cave",
       "name": "Brawlers Cave",
       "kind": "dungeon",
-      "x": 0.854,
-      "y": 0.871,
+      "x": 0.869,
+      "y": 0.804,
       "games": null
     },
     {
       "id": "challenge-road",
       "name": "Challenge Road",
       "kind": "route",
-      "x": 0.831,
-      "y": 0.898,
+      "x": 0.849,
+      "y": 0.834,
       "games": null
     },
     {
       "id": "courageous-cavern",
       "name": "Courageous Cavern",
       "kind": "dungeon",
-      "x": 0.824,
-      "y": 0.972,
+      "x": 0.89,
+      "y": 0.908,
       "games": null
     },
     {
       "id": "loop-lagoon",
       "name": "Loop Lagoon",
       "kind": "route",
-      "x": 0.769,
-      "y": 0.946,
+      "x": 0.869,
+      "y": 0.947,
       "games": null
     },
     {
@@ -458,63 +458,63 @@
       "name": "Training Lowlands",
       "kind": "route",
       "x": 0.99,
-      "y": 0.881,
+      "y": 0.742,
       "games": null
     },
     {
       "id": "workout-sea",
       "name": "Workout Sea",
       "kind": "sea",
-      "x": 0.737,
-      "y": 0.99,
+      "x": 0.783,
+      "y": 0.908,
       "games": null
     },
     {
       "id": "stepping-stone-sea",
       "name": "Stepping Stone Sea",
       "kind": "sea",
-      "x": 0.694,
-      "y": 0.95,
+      "x": 0.818,
+      "y": 0.908,
       "games": null
     },
     {
       "id": "insular-sea",
       "name": "Insular Sea",
       "kind": "sea",
-      "x": 0.654,
-      "y": 0.99,
+      "x": 0.775,
+      "y": 0.846,
       "games": null
     },
     {
       "id": "honeycalm-sea",
       "name": "Honeycalm Sea",
       "kind": "sea",
-      "x": 0.691,
-      "y": 0.99,
+      "x": 0.705,
+      "y": 0.889,
       "games": null
     },
     {
       "id": "isle-of-armor-caves",
       "name": "Isle of Armor Caves",
       "kind": "dungeon",
-      "x": 0.927,
-      "y": 0.899,
+      "x": 0.868,
+      "y": 0.734,
       "games": null
     },
     {
       "id": "towers-of-two-fists",
       "name": "Tower of Darkness / Tower of Waters",
       "kind": "building",
-      "x": 0.858,
-      "y": 0.942,
+      "x": 0.893,
+      "y": 0.832,
       "games": null
     },
     {
       "id": "honeycalm-island",
       "name": "Honeycalm Island",
       "kind": "route",
-      "x": 0.647,
-      "y": 0.95,
+      "x": 0.691,
+      "y": 0.85,
       "games": null
     },
     {
@@ -522,183 +522,183 @@
       "name": "Potbottom Desert",
       "kind": "route",
       "x": 0.99,
-      "y": 0.83,
+      "y": 0.706,
       "games": null
     },
     {
       "id": "crown-tundra-station",
       "name": "Crown Tundra Station",
       "kind": "route",
-      "x": 0.14,
-      "y": 0.12,
+      "x": 0.34,
+      "y": 0.82,
       "games": null
     },
     {
       "id": "max-lair",
       "name": "Max Lair",
       "kind": "dungeon",
-      "x": 0.191,
-      "y": 0.01,
+      "x": 0.32,
+      "y": 0.98,
       "games": null
     },
     {
       "id": "freezington",
       "name": "Freezington",
       "kind": "city",
-      "x": 0.06,
-      "y": 0.04,
+      "x": 0.18,
+      "y": 0.88,
       "games": null
     },
     {
       "id": "frostpoint-field",
       "name": "Frostpoint Field",
       "kind": "route",
-      "x": 0.085,
-      "y": 0.01,
+      "x": 0.235,
+      "y": 0.864,
       "games": null
     },
     {
       "id": "slippery-slope",
       "name": "Slippery Slope",
       "kind": "route",
-      "x": 0.107,
-      "y": 0.096,
+      "x": 0.248,
+      "y": 0.81,
       "games": null
     },
     {
       "id": "giants-bed",
       "name": "Giant's Bed",
       "kind": "route",
-      "x": 0.12,
-      "y": 0.02,
+      "x": 0.24,
+      "y": 0.94,
       "games": null
     },
     {
       "id": "giants-foot",
       "name": "Giant's Foot",
       "kind": "route",
-      "x": 0.085,
-      "y": 0.161,
+      "x": 0.189,
+      "y": 0.978,
       "games": null
     },
     {
       "id": "old-cemetery",
       "name": "Old Cemetery",
       "kind": "route",
-      "x": 0.047,
-      "y": 0.01,
+      "x": 0.193,
+      "y": 0.932,
       "games": null
     },
     {
       "id": "snowslide-slope",
       "name": "Snowslide Slope",
       "kind": "route",
-      "x": 0.01,
-      "y": 0.506,
+      "x": 0.101,
+      "y": 0.874,
       "games": null
     },
     {
       "id": "tunnel-to-the-top",
       "name": "Tunnel to the Top",
       "kind": "dungeon",
-      "x": 0.01,
-      "y": 0.045,
+      "x": 0.078,
+      "y": 0.902,
       "games": null
     },
     {
       "id": "path-to-the-peak",
       "name": "Path to the Peak",
       "kind": "route",
-      "x": 0.01,
-      "y": 0.093,
+      "x": 0.019,
+      "y": 0.837,
       "games": null
     },
     {
       "id": "crown-shrine",
       "name": "Crown Shrine",
       "kind": "building",
-      "x": 0.01,
-      "y": 0.13,
+      "x": 0.06,
+      "y": 0.8,
       "games": null
     },
     {
       "id": "ballimere-lake",
       "name": "Ballimere Lake",
       "kind": "route",
-      "x": 0.01,
-      "y": 0.604,
+      "x": 0.46,
+      "y": 0.92,
       "games": null
     },
     {
       "id": "lakeside-cave",
       "name": "Lakeside Cave",
       "kind": "dungeon",
-      "x": 0.05,
-      "y": 0.641,
+      "x": 0.42,
+      "y": 0.96,
       "games": null
     },
     {
       "id": "dyna-tree-hill",
       "name": "Dyna Tree Hill",
       "kind": "route",
-      "x": 0.01,
-      "y": 0.562,
+      "x": 0.56,
+      "y": 0.96,
       "games": null
     },
     {
       "id": "rock-peak-ruins",
       "name": "Rock Peak Ruins",
       "kind": "dungeon",
-      "x": 0.155,
-      "y": 0.01,
+      "x": 0.282,
+      "y": 0.92,
       "games": null
     },
     {
       "id": "iceberg-ruins",
       "name": "Iceberg Ruins",
       "kind": "dungeon",
-      "x": 0.01,
-      "y": 0.01,
+      "x": 0.11,
+      "y": 0.918,
       "games": null
     },
     {
       "id": "iron-ruins",
       "name": "Iron Ruins",
       "kind": "dungeon",
-      "x": 0.131,
-      "y": 0.054,
+      "x": 0.256,
+      "y": 0.894,
       "games": null
     },
     {
       "id": "split-decision-ruins",
       "name": "Split-Decision Ruins",
       "kind": "dungeon",
-      "x": 0.05,
-      "y": 0.475,
+      "x": 0.249,
+      "y": 0.99,
       "games": null
     },
     {
       "id": "frigid-sea",
       "name": "Frigid Sea",
       "kind": "sea",
-      "x": 0.026,
-      "y": 0.362,
+      "x": 0.04,
+      "y": 0.98,
       "games": null
     },
     {
       "id": "roaring-sea-caves",
       "name": "Roaring-Sea Caves",
       "kind": "dungeon",
-      "x": 0.057,
-      "y": 0.275,
+      "x": 0.091,
+      "y": 0.988,
       "games": null
     },
     {
       "id": "three-point-pass",
       "name": "Three-Point Pass",
       "kind": "route",
-      "x": 0.01,
-      "y": 0.471,
+      "x": 0.286,
+      "y": 0.99,
       "games": null
     }
   ],

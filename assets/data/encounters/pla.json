@@ -232,6 +232,21 @@
     },
     {
       "area": "horseshoe-plains",
+      "species": 78,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 40,
+      "max_level": 40,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "horseshoe-plains",
       "species": 77,
       "form": 0,
       "method": "outbreak",
@@ -697,21 +712,6 @@
     },
     {
       "area": "horseshoe-plains",
-      "species": 78,
-      "form": 0,
-      "method": "walk",
-      "min_level": 40,
-      "max_level": 40,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "horseshoe-plains",
       "species": 93,
       "form": 0,
       "method": "walk",
@@ -1072,6 +1072,21 @@
     },
     {
       "area": "floaro-gardens",
+      "species": 404,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 40,
+      "max_level": 40,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "floaro-gardens",
       "species": 266,
       "form": 0,
       "method": "outbreak",
@@ -1387,21 +1402,6 @@
     },
     {
       "area": "floaro-gardens",
-      "species": 404,
-      "form": 0,
-      "method": "walk",
-      "min_level": 40,
-      "max_level": 40,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "floaro-gardens",
       "species": 425,
       "form": 0,
       "method": "walk",
@@ -1624,6 +1624,21 @@
       ],
       "alpha": true,
       "verified": true
+    },
+    {
+      "area": "windswept-run",
+      "species": 397,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 32,
+      "max_level": 32,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": false
     },
     {
       "area": "windswept-run",
@@ -2277,8 +2292,8 @@
       "method": "walk",
       "min_level": 29,
       "max_level": 32,
-      "chance": "common",
-      "conditions": null,
+      "chance": "rare",
+      "conditions": "morning,day,evening",
       "versions": [
         "legends-arceus"
       ],
@@ -2434,6 +2449,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "natures-pantry",
+      "species": 47,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 30,
+      "max_level": 30,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2722,21 +2752,6 @@
     },
     {
       "area": "natures-pantry",
-      "species": 47,
-      "form": 0,
-      "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "natures-pantry",
       "species": 172,
       "form": 0,
       "method": "walk",
@@ -2803,6 +2818,21 @@
       "min_level": 25,
       "max_level": 28,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "deertrack-heights",
+      "species": 234,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 42,
+      "max_level": 42,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -3131,8 +3161,8 @@
       "form": 0,
       "method": "walk",
       "min_level": 24,
-      "max_level": 42,
-      "chance": "common",
+      "max_level": 29,
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -3412,6 +3442,21 @@
     },
     {
       "area": "grueling-grove",
+      "species": 214,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "grueling-grove",
       "species": 267,
       "form": 0,
       "method": "outbreak",
@@ -3573,21 +3618,6 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "grueling-grove",
-      "species": 214,
-      "form": 0,
-      "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
       "verified": true
     },
     {
@@ -4312,6 +4342,21 @@
     },
     {
       "area": "tidewater-dam",
+      "species": 400,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 16,
+      "max_level": 16,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "tidewater-dam",
       "species": 74,
       "form": 0,
       "method": "rock_smash",
@@ -4675,10 +4720,10 @@
       "species": 400,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
+      "min_level": 30,
       "max_level": 33,
-      "chance": "common",
-      "conditions": null,
+      "chance": "rare",
+      "conditions": "morning,day,evening",
       "versions": [
         "legends-arceus"
       ],
@@ -4848,6 +4893,21 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lake-verity",
+      "species": 130,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -5122,21 +5182,6 @@
     },
     {
       "area": "lake-verity",
-      "species": 130,
-      "form": 0,
-      "method": "walk",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "lake-verity",
       "species": 404,
       "form": 0,
       "method": "walk",
@@ -5179,6 +5224,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "sandgem-flats",
+      "species": 65,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5767,21 +5827,6 @@
     },
     {
       "area": "sandgem-flats",
-      "species": 65,
-      "form": 0,
-      "method": "walk",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "sandgem-flats",
       "species": 93,
       "form": 0,
       "method": "walk",
@@ -6142,6 +6187,21 @@
     },
     {
       "area": "ramanas-island",
+      "species": 392,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "ramanas-island",
       "species": 390,
       "form": 0,
       "method": "outbreak",
@@ -6493,21 +6553,6 @@
       "min_level": 47,
       "max_level": 50,
       "chance": "rare",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "ramanas-island",
-      "species": 392,
-      "form": 0,
-      "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
-      "chance": "common",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -7582,6 +7627,36 @@
     },
     {
       "area": "gapejaw-bog",
+      "species": 450,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 46,
+      "max_level": 46,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "gapejaw-bog",
+      "species": 465,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "gapejaw-bog",
       "species": 193,
       "form": 0,
       "method": "outbreak",
@@ -8932,21 +9007,6 @@
     },
     {
       "area": "gapejaw-bog",
-      "species": 450,
-      "form": 0,
-      "method": "walk",
-      "min_level": 46,
-      "max_level": 46,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "gapejaw-bog",
       "species": 453,
       "form": 0,
       "method": "walk",
@@ -8968,21 +9028,6 @@
       "min_level": 32,
       "max_level": 37,
       "chance": "rare",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "gapejaw-bog",
-      "species": 465,
-      "form": 0,
-      "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
-      "chance": "common",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -9018,6 +9063,21 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "scarlet-bog",
+      "species": 435,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -9310,9 +9370,9 @@
       "species": 435,
       "form": 0,
       "method": "walk",
-      "min_level": 45,
+      "min_level": 49,
       "max_level": 52,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -9439,6 +9499,21 @@
       ],
       "alpha": false,
       "verified": false
+    },
+    {
+      "area": "ursas-ring",
+      "species": 217,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 41,
+      "max_level": 41,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9786,13 +9861,43 @@
       "verified": true
     },
     {
-      "area": "ursas-ring",
-      "species": 217,
+      "area": "holm-of-trials",
+      "species": 389,
       "form": 0,
-      "method": "walk",
-      "min_level": 41,
-      "max_level": 41,
-      "chance": "common",
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "holm-of-trials",
+      "species": 454,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 47,
+      "max_level": 47,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "holm-of-trials",
+      "species": 705,
+      "form": 1,
+      "method": "fixed",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -10642,21 +10747,6 @@
     },
     {
       "area": "holm-of-trials",
-      "species": 389,
-      "form": 0,
-      "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "holm-of-trials",
       "species": 404,
       "form": 0,
       "method": "walk",
@@ -10750,9 +10840,9 @@
       "species": 454,
       "form": 0,
       "method": "walk",
-      "min_level": 47,
+      "min_level": 52,
       "max_level": 55,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -10821,21 +10911,6 @@
       "verified": true
     },
     {
-      "area": "holm-of-trials",
-      "species": 705,
-      "form": 1,
-      "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
       "area": "diamond-settlement",
       "species": 201,
       "form": 0,
@@ -10849,6 +10924,21 @@
       ],
       "alpha": false,
       "verified": false
+    },
+    {
+      "area": "diamond-heath",
+      "species": 111,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -11141,9 +11231,39 @@
       "form": 0,
       "method": "walk",
       "min_level": 38,
-      "max_level": 45,
-      "chance": "common",
+      "max_level": 41,
+      "chance": "rare",
       "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "cloudpool-ridge",
+      "species": 407,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
+      "conditions": "morning,day,evening",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "cloudpool-ridge",
+      "species": 430,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 55,
+      "max_level": 55,
+      "chance": "fixed",
+      "conditions": "night",
       "versions": [
         "legends-arceus"
       ],
@@ -11707,21 +11827,6 @@
     },
     {
       "area": "cloudpool-ridge",
-      "species": 407,
-      "form": 0,
-      "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
-      "chance": "common",
-      "conditions": "morning,day,evening",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "cloudpool-ridge",
       "species": 415,
       "form": 0,
       "method": "walk",
@@ -11729,21 +11834,6 @@
       "max_level": 35,
       "chance": "rare",
       "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "cloudpool-ridge",
-      "species": 430,
-      "form": 0,
-      "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
-      "chance": "common",
-      "conditions": "night",
       "versions": [
         "legends-arceus"
       ],
@@ -11778,6 +11868,21 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "shrouded-ruins",
+      "species": 463,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 52,
+      "max_level": 52,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -12276,21 +12381,6 @@
       "verified": true
     },
     {
-      "area": "shrouded-ruins",
-      "species": 463,
-      "form": 0,
-      "method": "walk",
-      "min_level": 52,
-      "max_level": 52,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
       "area": "cottonsedge-prairie",
       "species": 113,
       "form": 0,
@@ -12733,6 +12823,21 @@
       "min_level": 48,
       "max_level": 51,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "droning-meadow",
+      "species": 469,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 58,
+      "max_level": 58,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -13552,21 +13657,6 @@
     },
     {
       "area": "droning-meadow",
-      "species": 469,
-      "form": 0,
-      "method": "walk",
-      "min_level": 58,
-      "max_level": 58,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "droning-meadow",
       "species": 474,
       "form": 0,
       "method": "walk",
@@ -13593,6 +13683,21 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lake-valor",
+      "species": 340,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 64,
+      "max_level": 64,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -13701,21 +13806,6 @@
       "verified": true
     },
     {
-      "area": "lake-valor",
-      "species": 340,
-      "form": 0,
-      "method": "walk",
-      "min_level": 64,
-      "max_level": 64,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
       "area": "solaceon-ruins",
       "species": 201,
       "form": 0,
@@ -14548,6 +14638,36 @@
       "min_level": 40,
       "max_level": 40,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "ginkgo-landing",
+      "species": 67,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 40,
+      "max_level": 40,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "ginkgo-landing",
+      "species": 365,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -14827,21 +14947,6 @@
     },
     {
       "area": "ginkgo-landing",
-      "species": 67,
-      "form": 0,
-      "method": "walk",
-      "min_level": 40,
-      "max_level": 40,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "ginkgo-landing",
       "species": 81,
       "form": 0,
       "method": "walk",
@@ -14909,21 +15014,6 @@
       "max_level": 45,
       "chance": "rare",
       "conditions": "night,cloudy,drought,fog,rain,rainstorm,sunny",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "ginkgo-landing",
-      "species": 365,
-      "form": 0,
-      "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
-      "chance": "common",
-      "conditions": null,
       "versions": [
         "legends-arceus"
       ],
@@ -15787,6 +15877,21 @@
     },
     {
       "area": "bathers-lagoon",
+      "species": 55,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "bathers-lagoon",
       "species": 175,
       "form": 0,
       "method": "outbreak",
@@ -16242,8 +16347,8 @@
       "method": "walk",
       "min_level": 48,
       "max_level": 51,
-      "chance": "common",
-      "conditions": null,
+      "chance": "rare",
+      "conditions": "morning,day,evening",
       "versions": [
         "legends-arceus"
       ],
@@ -16867,6 +16972,21 @@
     },
     {
       "area": "deadwood-haunt",
+      "species": 477,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
+      "conditions": "night",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "deadwood-haunt",
       "species": 355,
       "form": 0,
       "method": "outbreak",
@@ -17271,21 +17391,6 @@
       "verified": true
     },
     {
-      "area": "deadwood-haunt",
-      "species": 477,
-      "form": 0,
-      "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
-      "chance": "common",
-      "conditions": "night",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
       "area": "sands-reach",
       "species": 74,
       "form": 0,
@@ -17574,6 +17679,21 @@
       "area": "tombolo-walk",
       "species": 113,
       "form": 0,
+      "method": "fixed",
+      "min_level": 51,
+      "max_level": 51,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "tombolo-walk",
+      "species": 113,
+      "form": 0,
       "method": "outbreak",
       "min_level": 37,
       "max_level": 39,
@@ -17721,13 +17841,13 @@
       "verified": true
     },
     {
-      "area": "tombolo-walk",
-      "species": 113,
+      "area": "castaway-shore",
+      "species": 224,
       "form": 0,
-      "method": "walk",
-      "min_level": 51,
-      "max_level": 51,
-      "chance": "common",
+      "method": "fixed",
+      "min_level": 46,
+      "max_level": 46,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -18112,21 +18232,6 @@
     },
     {
       "area": "castaway-shore",
-      "species": 224,
-      "form": 0,
-      "method": "walk",
-      "min_level": 46,
-      "max_level": 46,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "castaway-shore",
       "species": 451,
       "form": 0,
       "method": "walk",
@@ -18283,6 +18388,21 @@
       "min_level": 56,
       "max_level": 59,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "veilstone-cape",
+      "species": 432,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -18726,13 +18846,28 @@
       "verified": true
     },
     {
-      "area": "veilstone-cape",
-      "species": 432,
+      "area": "tranquility-cove",
+      "species": 642,
       "form": 0,
-      "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
-      "chance": "common",
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
+      "conditions": "rainstorm",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "tranquility-cove",
+      "species": 226,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -19282,21 +19417,6 @@
     },
     {
       "area": "tranquility-cove",
-      "species": 226,
-      "form": 0,
-      "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "tranquility-cove",
       "species": 396,
       "form": 0,
       "method": "walk",
@@ -19654,6 +19774,36 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "seagrass-haven",
+      "species": 423,
+      "form": 1,
+      "method": "fixed",
+      "min_level": 61,
+      "max_level": 61,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "seagrass-haven",
+      "species": 457,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20096,23 +20246,8 @@
       "form": 1,
       "method": "walk",
       "min_level": 45,
-      "max_level": 61,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "seagrass-haven",
-      "species": 457,
-      "form": 0,
-      "method": "walk",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
+      "max_level": 48,
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -20194,6 +20329,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "islespy-shore",
+      "species": 395,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 69,
+      "max_level": 69,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "islespy-shore",
@@ -20286,13 +20436,13 @@
       "verified": true
     },
     {
-      "area": "islespy-shore",
-      "species": 395,
+      "area": "spring-path",
+      "species": 414,
       "form": 0,
-      "method": "walk",
-      "min_level": 69,
-      "max_level": 69,
-      "chance": "common",
+      "method": "fixed",
+      "min_level": 56,
+      "max_level": 56,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -20547,7 +20697,7 @@
       "method": "walk",
       "min_level": 56,
       "max_level": 59,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -20584,6 +20734,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "firespit-island",
+      "species": 38,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 61,
+      "max_level": 61,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "firespit-island",
@@ -20733,21 +20898,6 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "firespit-island",
-      "species": 38,
-      "form": 0,
-      "method": "walk",
-      "min_level": 61,
-      "max_level": 61,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
       "verified": true
     },
     {
@@ -21412,21 +21562,6 @@
     },
     {
       "area": "wayward-cave",
-      "species": 169,
-      "form": 0,
-      "method": "cave",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "wayward-cave",
       "species": 339,
       "form": 0,
       "method": "cave",
@@ -21472,6 +21607,21 @@
     },
     {
       "area": "wayward-cave",
+      "species": 169,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "wayward-cave",
       "species": 443,
       "form": 0,
       "method": "rock_smash",
@@ -21493,6 +21643,21 @@
       "min_level": 35,
       "max_level": 38,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "wayward-wood",
+      "species": 414,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 55,
+      "max_level": 55,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -21971,8 +22136,8 @@
       "form": 0,
       "method": "walk",
       "min_level": 50,
-      "max_level": 55,
-      "chance": "common",
+      "max_level": 53,
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -22402,6 +22567,21 @@
     },
     {
       "area": "lonely-spring",
+      "species": 455,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 52,
+      "max_level": 52,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "lonely-spring",
       "species": 436,
       "form": 0,
       "method": "rock_smash",
@@ -22572,13 +22752,28 @@
       "method": "walk",
       "min_level": 52,
       "max_level": 55,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
       ],
       "alpha": true,
       "verified": true
+    },
+    {
+      "area": "clamberclaw-cliffs",
+      "species": 491,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
+      "conditions": "night",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
     },
     {
       "area": "clamberclaw-cliffs",
@@ -23062,6 +23257,36 @@
     },
     {
       "area": "celestica-ruins",
+      "species": 66,
+      "form": 0,
+      "method": "walk",
+      "min_level": 21,
+      "max_level": 63,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "celestica-ruins",
+      "species": 67,
+      "form": 0,
+      "method": "walk",
+      "min_level": 21,
+      "max_level": 63,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "celestica-ruins",
       "species": 74,
       "form": 0,
       "method": "walk",
@@ -23339,6 +23564,36 @@
       "max_level": 58,
       "chance": "uncommon",
       "conditions": "space_time_distortion",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "celestica-ruins",
+      "species": 436,
+      "form": 0,
+      "method": "walk",
+      "min_level": 21,
+      "max_level": 63,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "celestica-ruins",
+      "species": 437,
+      "form": 0,
+      "method": "walk",
+      "min_level": 21,
+      "max_level": 63,
+      "chance": null,
+      "conditions": null,
       "versions": [
         "legends-arceus"
       ],
@@ -23908,6 +24163,21 @@
       "min_level": 44,
       "max_level": 47,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "celestica-trail",
+      "species": 208,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -24472,21 +24742,6 @@
     },
     {
       "area": "celestica-trail",
-      "species": 208,
-      "form": 0,
-      "method": "walk",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "celestica-trail",
       "species": 224,
       "form": 0,
       "method": "walk",
@@ -24739,6 +24994,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "fabled-spring",
+      "species": 36,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 62,
+      "max_level": 62,
+      "chance": "fixed",
+      "conditions": "night",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25072,21 +25342,6 @@
     },
     {
       "area": "fabled-spring",
-      "species": 36,
-      "form": 0,
-      "method": "walk",
-      "min_level": 62,
-      "max_level": 62,
-      "chance": "common",
-      "conditions": "night",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "fabled-spring",
       "species": 173,
       "form": 0,
       "method": "walk",
@@ -25123,6 +25378,21 @@
       "min_level": 58,
       "max_level": 61,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "bolderoll-ravine",
+      "species": 76,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 60,
+      "max_level": 60,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -25537,21 +25807,6 @@
     },
     {
       "area": "bolderoll-ravine",
-      "species": 76,
-      "form": 0,
-      "method": "walk",
-      "min_level": 60,
-      "max_level": 60,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "bolderoll-ravine",
       "species": 92,
       "form": 0,
       "method": "walk",
@@ -25684,6 +25939,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "stonetooth-rows",
+      "species": 429,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 61,
+      "max_level": 61,
+      "chance": "fixed",
+      "conditions": "night",
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26017,21 +26287,6 @@
     },
     {
       "area": "stonetooth-rows",
-      "species": 429,
-      "form": 0,
-      "method": "walk",
-      "min_level": 61,
-      "max_level": 61,
-      "chance": "common",
-      "conditions": "night",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "stonetooth-rows",
       "species": 436,
       "form": 0,
       "method": "walk",
@@ -26119,6 +26374,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "sacred-plaza",
+      "species": 405,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 55,
+      "max_level": 55,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27041,8 +27311,8 @@
       "form": 0,
       "method": "walk",
       "min_level": 50,
-      "max_level": 55,
-      "chance": "common",
+      "max_level": 53,
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -27259,6 +27529,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "cloudcap-pass",
+      "species": 466,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 69,
+      "max_level": 69,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27531,21 +27816,6 @@
       "verified": true
     },
     {
-      "area": "cloudcap-pass",
-      "species": 466,
-      "form": 0,
-      "method": "walk",
-      "min_level": 69,
-      "max_level": 69,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
       "area": "moonview-arena",
       "species": 488,
       "form": 0,
@@ -27798,6 +28068,36 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "bonechill-wastes",
+      "species": 362,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 62,
+      "max_level": 62,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "bonechill-wastes",
+      "species": 460,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 68,
+      "max_level": 68,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -28780,9 +29080,9 @@
       "species": 362,
       "form": 0,
       "method": "walk",
-      "min_level": 62,
+      "min_level": 68,
       "max_level": 71,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -28916,9 +29216,9 @@
       "form": 0,
       "method": "walk",
       "min_level": 64,
-      "max_level": 68,
-      "chance": "common",
-      "conditions": null,
+      "max_level": 67,
+      "chance": "rare",
+      "conditions": "morning,day,evening",
       "versions": [
         "legends-arceus"
       ],
@@ -29053,6 +29353,36 @@
       "min_level": 48,
       "max_level": 51,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "icebound-falls",
+      "species": 125,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "icebound-falls",
+      "species": 448,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -29367,7 +29697,7 @@
       "method": "walk",
       "min_level": 62,
       "max_level": 65,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -29410,10 +29740,10 @@
       "species": 448,
       "form": 0,
       "method": "walk",
-      "min_level": 70,
+      "min_level": 67,
       "max_level": 70,
-      "chance": "common",
-      "conditions": null,
+      "chance": "rare",
+      "conditions": "snowstorm",
       "versions": [
         "legends-arceus"
       ],
@@ -29421,14 +29751,14 @@
       "verified": true
     },
     {
-      "area": "icebound-falls",
-      "species": 448,
+      "area": "avalanche-slopes",
+      "species": 445,
       "form": 0,
-      "method": "walk",
-      "min_level": 67,
-      "max_level": 70,
-      "chance": "rare",
-      "conditions": "snowstorm",
+      "method": "fixed",
+      "min_level": 85,
+      "max_level": 85,
+      "chance": "fixed",
+      "conditions": null,
       "versions": [
         "legends-arceus"
       ],
@@ -30367,21 +30697,6 @@
     },
     {
       "area": "avalanche-slopes",
-      "species": 445,
-      "form": 0,
-      "method": "walk",
-      "min_level": 85,
-      "max_level": 85,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "avalanche-slopes",
       "species": 463,
       "form": 0,
       "method": "walk",
@@ -30472,12 +30787,12 @@
     },
     {
       "area": "ice-column-chamber",
-      "species": 478,
+      "species": 712,
       "form": 0,
       "method": "cave",
-      "min_level": 72,
-      "max_level": 72,
-      "chance": "common",
+      "min_level": 48,
+      "max_level": 51,
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -30487,12 +30802,12 @@
     },
     {
       "area": "ice-column-chamber",
-      "species": 712,
+      "species": 478,
       "form": 0,
-      "method": "cave",
-      "min_level": 48,
-      "max_level": 51,
-      "chance": "rare",
+      "method": "fixed",
+      "min_level": 72,
+      "max_level": 72,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -30523,6 +30838,36 @@
       "min_level": 48,
       "max_level": 51,
       "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "arenas-approach",
+      "species": 68,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "arenas-approach",
+      "species": 221,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -31132,21 +31477,6 @@
     },
     {
       "area": "arenas-approach",
-      "species": 68,
-      "form": 0,
-      "method": "walk",
-      "min_level": 70,
-      "max_level": 70,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "arenas-approach",
       "species": 108,
       "form": 0,
       "method": "walk",
@@ -31234,21 +31564,6 @@
       ],
       "alpha": true,
       "verified": false
-    },
-    {
-      "area": "arenas-approach",
-      "species": 221,
-      "form": 0,
-      "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -32332,6 +32647,21 @@
     },
     {
       "area": "lake-acuity",
+      "species": 358,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 65,
+      "max_level": 65,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "lake-acuity",
       "species": 571,
       "form": 1,
       "method": "fixed",
@@ -32817,7 +33147,7 @@
       "method": "walk",
       "min_level": 64,
       "max_level": 67,
-      "chance": "common",
+      "chance": "rare",
       "conditions": null,
       "versions": [
         "legends-arceus"
@@ -33029,6 +33359,21 @@
       "max_level": 51,
       "chance": "rare",
       "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
+    },
+    {
+      "area": "hearts-crag",
+      "species": 282,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
+      "conditions": "morning,day,evening",
       "versions": [
         "legends-arceus"
       ],
@@ -33712,21 +34057,6 @@
     },
     {
       "area": "hearts-crag",
-      "species": 282,
-      "form": 0,
-      "method": "walk",
-      "min_level": 70,
-      "max_level": 70,
-      "chance": "common",
-      "conditions": "morning,day,evening",
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "hearts-crag",
       "species": 364,
       "form": 0,
       "method": "walk",
@@ -33964,6 +34294,21 @@
       ],
       "alpha": true,
       "verified": false
+    },
+    {
+      "area": "avaluggs-legacy",
+      "species": 473,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 68,
+      "max_level": 68,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
+      "verified": true
     },
     {
       "area": "avaluggs-legacy",
@@ -34237,21 +34582,6 @@
     },
     {
       "area": "avaluggs-legacy",
-      "species": 473,
-      "form": 0,
-      "method": "walk",
-      "min_level": 68,
-      "max_level": 68,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "avaluggs-legacy",
       "species": 478,
       "form": 0,
       "method": "walk",
@@ -34308,6 +34638,21 @@
         "legends-arceus"
       ],
       "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "snowpoint-temple",
+      "species": 475,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-arceus"
+      ],
+      "alpha": true,
       "verified": true
     },
     {
@@ -34558,21 +34903,6 @@
       "min_level": 66,
       "max_level": 69,
       "chance": "rare",
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": true,
-      "verified": true
-    },
-    {
-      "area": "snowpoint-temple",
-      "species": 475,
-      "form": 0,
-      "method": "walk",
-      "min_level": 70,
-      "max_level": 70,
-      "chance": "common",
       "conditions": null,
       "versions": [
         "legends-arceus"

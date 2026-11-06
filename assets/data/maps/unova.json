@@ -35,8 +35,8 @@
       "id": "route-19",
       "name": "Route 19",
       "kind": "route",
-      "x": 0.093,
-      "y": 0.92,
+      "x": 0.069,
+      "y": 0.922,
       "games": [
         "b2w2"
       ]
@@ -71,7 +71,7 @@
       "id": "route-20",
       "name": "Route 20",
       "kind": "route",
-      "x": 0.143,
+      "x": 0.165,
       "y": 0.95,
       "games": [
         "b2w2"
@@ -183,8 +183,8 @@
       "id": "castelia-sewers",
       "name": "Castelia Sewers",
       "kind": "dungeon",
-      "x": 0.267,
-      "y": 0.816,
+      "x": 0.269,
+      "y": 0.806,
       "games": [
         "b2w2"
       ]
@@ -193,24 +193,24 @@
       "id": "route-4",
       "name": "Route 4",
       "kind": "route",
-      "x": 0.334,
-      "y": 0.704,
+      "x": 0.383,
+      "y": 0.693,
       "games": null
     },
     {
       "id": "desert-resort",
       "name": "Desert Resort",
       "kind": "route",
-      "x": 0.261,
-      "y": 0.734,
+      "x": 0.302,
+      "y": 0.661,
       "games": null
     },
     {
       "id": "relic-passage",
       "name": "Relic Passage",
       "kind": "dungeon",
-      "x": 0.183,
-      "y": 0.72,
+      "x": 0.186,
+      "y": 0.677,
       "games": [
         "b2w2"
       ]
@@ -219,8 +219,8 @@
       "id": "relic-castle",
       "name": "Relic Castle",
       "kind": "dungeon",
-      "x": 0.26,
-      "y": 0.682,
+      "x": 0.274,
+      "y": 0.714,
       "games": null
     },
     {
@@ -251,8 +251,8 @@
       "id": "join-avenue",
       "name": "Join Avenue",
       "kind": "route",
-      "x": 0.36,
-      "y": 0.74,
+      "x": 0.345,
+      "y": 0.727,
       "games": [
         "b2w2"
       ]
@@ -269,16 +269,16 @@
       "id": "route-5",
       "name": "Route 5",
       "kind": "route",
-      "x": 0.264,
-      "y": 0.591,
+      "x": 0.296,
+      "y": 0.557,
       "games": null
     },
     {
       "id": "driftveil-drawbridge",
       "name": "Driftveil Drawbridge",
       "kind": "route",
-      "x": 0.216,
-      "y": 0.56,
+      "x": 0.184,
+      "y": 0.6,
       "games": null
     },
     {
@@ -293,7 +293,7 @@
       "id": "cold-storage",
       "name": "Cold Storage",
       "kind": "building",
-      "x": 0.16,
+      "x": 0.103,
       "y": 0.62,
       "games": [
         "bw"
@@ -303,16 +303,16 @@
       "id": "route-6",
       "name": "Route 6",
       "kind": "route",
-      "x": 0.149,
-      "y": 0.474,
+      "x": 0.167,
+      "y": 0.506,
       "games": null
     },
     {
       "id": "chargestone-cave",
       "name": "Chargestone Cave",
       "kind": "dungeon",
-      "x": 0.141,
-      "y": 0.401,
+      "x": 0.152,
+      "y": 0.397,
       "games": null
     },
     {
@@ -327,32 +327,32 @@
       "id": "route-7",
       "name": "Route 7",
       "kind": "route",
-      "x": 0.09,
-      "y": 0.26,
+      "x": 0.088,
+      "y": 0.269,
       "games": null
     },
     {
       "id": "celestial-tower",
       "name": "Celestial Tower",
       "kind": "building",
-      "x": 0.13,
-      "y": 0.249,
+      "x": 0.127,
+      "y": 0.236,
       "games": null
     },
     {
       "id": "mistralton-cave",
       "name": "Mistralton Cave",
       "kind": "dungeon",
-      "x": 0.092,
-      "y": 0.525,
+      "x": 0.122,
+      "y": 0.494,
       "games": null
     },
     {
       "id": "guidance-chamber",
       "name": "Guidance Chamber",
       "kind": "dungeon",
-      "x": 0.062,
-      "y": 0.485,
+      "x": 0.12,
+      "y": 0.457,
       "games": null
     },
     {
@@ -383,8 +383,8 @@
       "id": "twist-mountain",
       "name": "Twist Mountain",
       "kind": "dungeon",
-      "x": 0.123,
-      "y": 0.175,
+      "x": 0.122,
+      "y": 0.176,
       "games": null
     },
     {
@@ -399,7 +399,7 @@
       "id": "dragonspiral-tower",
       "name": "Dragonspiral Tower",
       "kind": "building",
-      "x": 0.12,
+      "x": 0.2,
       "y": 0.06,
       "games": null
     },
@@ -417,8 +417,8 @@
       "id": "route-8",
       "name": "Route 8",
       "kind": "route",
-      "x": 0.2,
-      "y": 0.017,
+      "x": 0.195,
+      "y": 0.195,
       "games": null
     },
     {
@@ -426,7 +426,7 @@
       "name": "Strange House",
       "kind": "building",
       "x": 0.58,
-      "y": 0.38,
+      "y": 0.3,
       "games": [
         "b2w2"
       ]
@@ -435,8 +435,8 @@
       "id": "moor-of-icirrus",
       "name": "Moor of Icirrus",
       "kind": "route",
-      "x": 0.24,
-      "y": 0.057,
+      "x": 0.235,
+      "y": 0.155,
       "games": null
     },
     {
@@ -453,8 +453,8 @@
       "id": "tubeline-bridge",
       "name": "Tubeline Bridge",
       "kind": "route",
-      "x": 0.32,
-      "y": 0.013,
+      "x": 0.31,
+      "y": 0.21,
       "games": null
     },
     {
@@ -469,48 +469,48 @@
       "id": "route-9",
       "name": "Route 9",
       "kind": "route",
-      "x": 0.44,
-      "y": 0.01,
+      "x": 0.425,
+      "y": 0.225,
       "games": null
     },
     {
       "id": "undella-bay",
       "name": "Undella Bay",
       "kind": "sea",
-      "x": 0.861,
-      "y": 0.371,
+      "x": 0.878,
+      "y": 0.265,
       "games": null
     },
     {
       "id": "route-14",
       "name": "Route 14",
       "kind": "route",
-      "x": 0.811,
-      "y": 0.367,
+      "x": 0.804,
+      "y": 0.384,
       "games": null
     },
     {
       "id": "opelucid-city",
       "name": "Opelucid City",
       "kind": "city",
-      "x": 0.48,
-      "y": 0.08,
+      "x": 0.46,
+      "y": 0.16,
       "games": null
     },
     {
       "id": "route-13",
       "name": "Route 13",
       "kind": "route",
-      "x": 0.819,
-      "y": 0.247,
+      "x": 0.808,
+      "y": 0.197,
       "games": null
     },
     {
       "id": "route-10",
       "name": "Route 10",
       "kind": "route",
-      "x": 0.567,
-      "y": 0.176,
+      "x": 0.52,
+      "y": 0.11,
       "games": [
         "bw"
       ]
@@ -527,32 +527,32 @@
       "id": "route-12",
       "name": "Route 12",
       "kind": "route",
-      "x": 0.697,
-      "y": 0.103,
+      "x": 0.684,
+      "y": 0.184,
       "games": null
     },
     {
       "id": "victory-road",
       "name": "Victory Road",
       "kind": "dungeon",
-      "x": 0.666,
-      "y": 0.264,
+      "x": 0.56,
+      "y": 0.06,
       "games": null
     },
     {
       "id": "village-bridge",
       "name": "Village Bridge",
       "kind": "route",
-      "x": 0.657,
-      "y": 0.111,
+      "x": 0.639,
+      "y": 0.208,
       "games": null
     },
     {
       "id": "trial-chamber",
       "name": "Trial Chamber",
       "kind": "dungeon",
-      "x": 0.624,
-      "y": 0.223,
+      "x": 0.6,
+      "y": 0.1,
       "games": [
         "bw"
       ]
@@ -561,24 +561,24 @@
       "id": "route-11",
       "name": "Route 11",
       "kind": "route",
-      "x": 0.542,
-      "y": 0.066,
+      "x": 0.524,
+      "y": 0.174,
       "games": null
     },
     {
       "id": "pokemon-league",
       "name": "Pokémon League",
       "kind": "building",
-      "x": 0.56,
-      "y": 0.28,
+      "x": 0.6,
+      "y": 0.01,
       "games": null
     },
     {
       "id": "challengers-cave",
       "name": "Challenger's Cave",
       "kind": "dungeon",
-      "x": 0.4,
-      "y": 0.05,
+      "x": 0.385,
+      "y": 0.185,
       "games": [
         "bw"
       ]
@@ -587,8 +587,8 @@
       "id": "marine-tube",
       "name": "Marine Tube",
       "kind": "building",
-      "x": 0.931,
-      "y": 0.239,
+      "x": 0.926,
+      "y": 0.252,
       "games": [
         "b2w2"
       ]
@@ -607,8 +607,8 @@
       "id": "route-22",
       "name": "Route 22",
       "kind": "route",
-      "x": 0.893,
-      "y": 0.152,
+      "x": 0.852,
+      "y": 0.112,
       "games": [
         "b2w2"
       ]
@@ -637,16 +637,16 @@
       "id": "giant-chasm",
       "name": "Giant Chasm",
       "kind": "dungeon",
-      "x": 0.871,
-      "y": 0.181,
+      "x": 0.864,
+      "y": 0.19,
       "games": null
     },
     {
       "id": "route-23",
       "name": "Route 23",
       "kind": "route",
-      "x": 0.751,
-      "y": 0.2,
+      "x": 0.698,
+      "y": 0.07,
       "games": [
         "b2w2"
       ]
@@ -655,16 +655,16 @@
       "id": "abyssal-ruins",
       "name": "Abyssal Ruins",
       "kind": "dungeon",
-      "x": 0.898,
-      "y": 0.37,
+      "x": 0.825,
+      "y": 0.296,
       "games": null
     },
     {
       "id": "abundant-shrine",
       "name": "Abundant Shrine",
       "kind": "route",
-      "x": 0.808,
-      "y": 0.409,
+      "x": 0.83,
+      "y": 0.41,
       "games": null
     },
     {
@@ -705,7 +705,7 @@
       "id": "cave-of-being",
       "name": "Cave of Being",
       "kind": "dungeon",
-      "x": 0.162,
+      "x": 0.173,
       "y": 0.91,
       "games": [
         "b2w2"
@@ -715,8 +715,8 @@
       "id": "clay-tunnel",
       "name": "Clay Tunnel",
       "kind": "dungeon",
-      "x": 0.094,
-      "y": 0.625,
+      "x": 0.076,
+      "y": 0.54,
       "games": [
         "b2w2"
       ]
@@ -726,7 +726,7 @@
       "name": "Underground Ruins",
       "kind": "dungeon",
       "x": 0.035,
-      "y": 0.588,
+      "y": 0.566,
       "games": [
         "b2w2"
       ]

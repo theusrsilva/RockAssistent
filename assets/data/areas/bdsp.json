@@ -516,10 +516,19 @@
       ]
     },
     {
+      "id": "trophy-garden",
+      "name": "Trophy Garden",
+      "kind": "route",
+      "order": 56,
+      "map_node": "route-212",
+      "poke_api_location_id": 23,
+      "bosses_before": []
+    },
+    {
       "id": "pastoria-city",
       "name": "Pastoria City",
       "kind": "city",
-      "order": 56,
+      "order": 57,
       "map_node": "pastoria-city",
       "poke_api_location_id": 3,
       "bosses_before": []
@@ -528,7 +537,7 @@
       "id": "great-marsh",
       "name": "Great Marsh (Safari Zone)",
       "kind": "route",
-      "order": 57,
+      "order": 58,
       "map_node": "great-marsh",
       "poke_api_location_id": 11,
       "bosses_before": []
@@ -537,7 +546,7 @@
       "id": "route-213",
       "name": "Route 213",
       "kind": "route",
-      "order": 58,
+      "order": 59,
       "map_node": "route-213",
       "poke_api_location_id": 44,
       "bosses_before": [
@@ -549,7 +558,7 @@
       "id": "hotel-grand-lake",
       "name": "Hotel Grand Lake",
       "kind": "building",
-      "order": 59,
+      "order": 60,
       "map_node": "valor-lakefront",
       "poke_api_location_id": 211,
       "bosses_before": []
@@ -558,7 +567,7 @@
       "id": "route-214",
       "name": "Route 214",
       "kind": "route",
-      "order": 60,
+      "order": 61,
       "map_node": "route-214",
       "poke_api_location_id": 45,
       "bosses_before": []
@@ -567,7 +576,7 @@
       "id": "ruin-maniac-cave",
       "name": "Ruin Maniac Cave",
       "kind": "dungeon",
-      "order": 61,
+      "order": 62,
       "map_node": "ruin-maniac-cave",
       "poke_api_location_id": 22,
       "bosses_before": []
@@ -576,7 +585,7 @@
       "id": "valor-lakefront",
       "name": "Valor Lakefront",
       "kind": "route",
-      "order": 62,
+      "order": 63,
       "map_node": "valor-lakefront",
       "poke_api_location_id": 29,
       "bosses_before": []
@@ -585,7 +594,7 @@
       "id": "celestic-town",
       "name": "Celestic Town",
       "kind": "city",
-      "order": 63,
+      "order": 64,
       "map_node": "celestic-town",
       "poke_api_location_id": 59,
       "bosses_before": [
@@ -596,7 +605,7 @@
       "id": "route-219-221",
       "name": "Routes 219-221",
       "kind": "sea",
-      "order": 64,
+      "order": 65,
       "map_node": "route-219",
       "poke_api_location_id": 50,
       "bosses_before": []
@@ -605,7 +614,7 @@
       "id": "fuego-ironworks",
       "name": "Fuego Ironworks",
       "kind": "building",
-      "order": 65,
+      "order": 66,
       "map_node": "fuego-ironworks",
       "poke_api_location_id": 9,
       "bosses_before": []
@@ -614,7 +623,7 @@
       "id": "canalave-city",
       "name": "Canalave City",
       "kind": "city",
-      "order": 66,
+      "order": 67,
       "map_node": "canalave-city",
       "poke_api_location_id": 1,
       "bosses_before": []
@@ -623,7 +632,7 @@
       "id": "iron-island",
       "name": "Iron Island",
       "kind": "dungeon",
-      "order": 67,
+      "order": 68,
       "map_node": "iron-island",
       "poke_api_location_id": 24,
       "bosses_before": [
@@ -634,7 +643,7 @@
       "id": "route-216",
       "name": "Route 216",
       "kind": "route",
-      "order": 68,
+      "order": 69,
       "map_node": "route-216",
       "poke_api_location_id": 47,
       "bosses_before": [
@@ -645,7 +654,7 @@
       "id": "route-217",
       "name": "Route 217",
       "kind": "route",
-      "order": 69,
+      "order": 70,
       "map_node": "route-217",
       "poke_api_location_id": 48,
       "bosses_before": []
@@ -654,7 +663,7 @@
       "id": "lake-acuity",
       "name": "Lake Acuity",
       "kind": "route",
-      "order": 70,
+      "order": 71,
       "map_node": "acuity-lakefront",
       "poke_api_location_id": 28,
       "bosses_before": []
@@ -663,7 +672,7 @@
       "id": "snowpoint-city",
       "name": "Snowpoint City",
       "kind": "city",
-      "order": 71,
+      "order": 72,
       "map_node": "snowpoint-city",
       "poke_api_location_id": 171,
       "bosses_before": []
@@ -672,7 +681,7 @@
       "id": "lake-valor",
       "name": "Lake Valor",
       "kind": "route",
-      "order": 72,
+      "order": 73,
       "map_node": "lake-valor",
       "poke_api_location_id": 27,
       "bosses_before": [
@@ -683,7 +692,7 @@
       "id": "galactic-hq",
       "name": "Galactic HQ",
       "kind": "building",
-      "order": 73,
+      "order": 74,
       "map_node": "veilstone-city",
       "poke_api_location_id": 181,
       "bosses_before": [
@@ -695,7 +704,7 @@
       "id": "spear-pillar",
       "name": "Spear Pillar",
       "kind": "dungeon",
-      "order": 74,
+      "order": 75,
       "map_node": "spear-pillar",
       "poke_api_location_id": 172,
       "bosses_before": [
@@ -707,7 +716,7 @@
       "id": "route-222",
       "name": "Route 222",
       "kind": "route",
-      "order": 75,
+      "order": 76,
       "map_node": "route-222",
       "poke_api_location_id": 52,
       "bosses_before": [
@@ -720,7 +729,7 @@
       "id": "sunyshore-city",
       "name": "Sunyshore City",
       "kind": "city",
-      "order": 76,
+      "order": 77,
       "map_node": "sunyshore-city",
       "poke_api_location_id": 4,
       "bosses_before": []
@@ -729,7 +738,7 @@
       "id": "route-223",
       "name": "Route 223",
       "kind": "sea",
-      "order": 77,
+      "order": 78,
       "map_node": "route-223",
       "poke_api_location_id": 62,
       "bosses_before": [
@@ -740,7 +749,7 @@
       "id": "victory-road",
       "name": "Victory Road",
       "kind": "dungeon",
-      "order": 78,
+      "order": 79,
       "map_node": "victory-road",
       "poke_api_location_id": 13,
       "bosses_before": []
@@ -749,7 +758,7 @@
       "id": "pokemon-league",
       "name": "Pokémon League",
       "kind": "building",
-      "order": 79,
+      "order": 80,
       "map_node": "pokemon-league",
       "poke_api_location_id": 5,
       "bosses_before": []
@@ -758,7 +767,7 @@
       "id": "ramanas-park",
       "name": "Ramanas Park",
       "kind": "route",
-      "order": 80,
+      "order": 81,
       "map_node": null,
       "poke_api_location_id": null,
       "bosses_before": [
@@ -774,7 +783,7 @@
       "id": "fullmoon-island",
       "name": "Fullmoon Island",
       "kind": "route",
-      "order": 81,
+      "order": 82,
       "map_node": "fullmoon-island",
       "poke_api_location_id": 177,
       "bosses_before": []
@@ -783,7 +792,7 @@
       "id": "spring-path",
       "name": "Spring Path / Sendoff Spring",
       "kind": "route",
-      "order": 82,
+      "order": 83,
       "map_node": "spring-path",
       "poke_api_location_id": 17,
       "bosses_before": []
@@ -792,7 +801,7 @@
       "id": "turnback-cave",
       "name": "Turnback Cave",
       "kind": "dungeon",
-      "order": 83,
+      "order": 84,
       "map_node": "turnback-cave",
       "poke_api_location_id": 18,
       "bosses_before": []
@@ -801,7 +810,7 @@
       "id": "snowpoint-temple",
       "name": "Snowpoint Temple",
       "kind": "dungeon",
-      "order": 84,
+      "order": 85,
       "map_node": "snowpoint-temple",
       "poke_api_location_id": 19,
       "bosses_before": []
@@ -810,7 +819,7 @@
       "id": "route-224",
       "name": "Route 224",
       "kind": "route",
-      "order": 85,
+      "order": 86,
       "map_node": "route-224",
       "poke_api_location_id": 53,
       "bosses_before": []
@@ -819,7 +828,7 @@
       "id": "seabreak-path",
       "name": "Seabreak Path / Flower Paradise",
       "kind": "route",
-      "order": 86,
+      "order": 87,
       "map_node": "flower-paradise",
       "poke_api_location_id": 187,
       "bosses_before": []
@@ -828,7 +837,7 @@
       "id": "newmoon-island",
       "name": "Newmoon Island",
       "kind": "route",
-      "order": 87,
+      "order": 88,
       "map_node": "newmoon-island",
       "poke_api_location_id": 183,
       "bosses_before": []
@@ -837,7 +846,7 @@
       "id": "hall-of-origin",
       "name": "Hall of Origin",
       "kind": "dungeon",
-      "order": 88,
+      "order": 89,
       "map_node": null,
       "poke_api_location_id": 188,
       "bosses_before": []
@@ -846,7 +855,7 @@
       "id": "fight-area",
       "name": "Fight Area",
       "kind": "city",
-      "order": 89,
+      "order": 90,
       "map_node": "fight-area",
       "poke_api_location_id": 185,
       "bosses_before": []
@@ -855,7 +864,7 @@
       "id": "route-225",
       "name": "Route 225",
       "kind": "route",
-      "order": 90,
+      "order": 91,
       "map_node": "route-225",
       "poke_api_location_id": 54,
       "bosses_before": []
@@ -864,7 +873,7 @@
       "id": "survival-area",
       "name": "Survival Area",
       "kind": "city",
-      "order": 91,
+      "order": 92,
       "map_node": "survival-area",
       "poke_api_location_id": 186,
       "bosses_before": []
@@ -873,7 +882,7 @@
       "id": "route-226-227",
       "name": "Routes 226-227",
       "kind": "route",
-      "order": 92,
+      "order": 93,
       "map_node": "route-227",
       "poke_api_location_id": 55,
       "bosses_before": []
@@ -882,7 +891,7 @@
       "id": "stark-mountain",
       "name": "Stark Mountain",
       "kind": "dungeon",
-      "order": 93,
+      "order": 94,
       "map_node": "stark-mountain",
       "poke_api_location_id": 16,
       "bosses_before": []
@@ -891,7 +900,7 @@
       "id": "route-228",
       "name": "Route 228",
       "kind": "route",
-      "order": 94,
+      "order": 95,
       "map_node": "route-228",
       "poke_api_location_id": 56,
       "bosses_before": []
@@ -900,7 +909,7 @@
       "id": "route-229",
       "name": "Route 229",
       "kind": "route",
-      "order": 95,
+      "order": 96,
       "map_node": "route-229",
       "poke_api_location_id": 57,
       "bosses_before": []
@@ -909,7 +918,7 @@
       "id": "resort-area",
       "name": "Resort Area",
       "kind": "city",
-      "order": 96,
+      "order": 97,
       "map_node": "resort-area",
       "poke_api_location_id": 60,
       "bosses_before": []
@@ -918,7 +927,7 @@
       "id": "route-230",
       "name": "Route 230",
       "kind": "sea",
-      "order": 97,
+      "order": 98,
       "map_node": "route-230",
       "poke_api_location_id": 64,
       "bosses_before": []
@@ -927,7 +936,7 @@
       "id": "battle-park",
       "name": "Battle Park",
       "kind": "building",
-      "order": 98,
+      "order": 99,
       "map_node": "fight-area",
       "poke_api_location_id": 213,
       "bosses_before": [

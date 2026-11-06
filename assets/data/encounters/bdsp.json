@@ -359,6 +359,22 @@
     },
     {
       "area": "lake-verity",
+      "species": 481,
+      "form": 0,
+      "method": "roaming",
+      "min_level": 50,
+      "max_level": 50,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "lake-verity",
       "species": 54,
       "form": 0,
       "method": "surf",
@@ -17033,144 +17049,6 @@
     },
     {
       "area": "eterna-forest",
-      "species": 198,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 11,
-      "chance": "common",
-      "conditions": "night",
-      "versions": [
-        "brilliant-diamond"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 200,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 11,
-      "chance": "common",
-      "conditions": "night",
-      "versions": [
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 265,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 11,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 266,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 10,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 267,
-      "form": 0,
-      "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
-      "chance": "rare",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 268,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 10,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 269,
-      "form": 0,
-      "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
-      "chance": "rare",
-      "conditions": null,
-      "versions": [
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 406,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 12,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
-      "species": 427,
-      "form": 0,
-      "method": "cave",
-      "min_level": 10,
-      "max_level": 12,
-      "chance": "uncommon",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "eterna-forest",
       "species": 190,
       "form": 0,
       "method": "honey",
@@ -17333,6 +17211,144 @@
       "form": 0,
       "method": "radar",
       "min_level": 11,
+      "max_level": 12,
+      "chance": "uncommon",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 198,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 11,
+      "chance": "common",
+      "conditions": "night",
+      "versions": [
+        "brilliant-diamond"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 200,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 11,
+      "chance": "common",
+      "conditions": "night",
+      "versions": [
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 265,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 11,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 266,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 10,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 267,
+      "form": 0,
+      "method": "walk",
+      "min_level": 12,
+      "max_level": 12,
+      "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 268,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 10,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 269,
+      "form": 0,
+      "method": "walk",
+      "min_level": 12,
+      "max_level": 12,
+      "chance": "rare",
+      "conditions": null,
+      "versions": [
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 406,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 12,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "eterna-forest",
+      "species": 427,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
       "max_level": 12,
       "chance": "uncommon",
       "conditions": null,
@@ -21190,262 +21206,6 @@
     },
     {
       "area": "route-212",
-      "species": 35,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 39,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 52,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 113,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 133,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 137,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 173,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 174,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 183,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 298,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 311,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 312,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 351,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 438,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 439,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
-      "species": 440,
-      "form": 0,
-      "method": "fixed",
-      "min_level": 16,
-      "max_level": 18,
-      "chance": "fixed",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-212",
       "species": 190,
       "form": 0,
       "method": "honey",
@@ -21668,38 +21428,6 @@
     },
     {
       "area": "route-212",
-      "species": 25,
-      "form": 0,
-      "method": "walk",
-      "min_level": 18,
-      "max_level": 18,
-      "chance": "uncommon",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-212",
-      "species": 172,
-      "form": 0,
-      "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
-      "chance": "common",
-      "conditions": null,
-      "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-212",
       "species": 194,
       "form": 0,
       "method": "walk",
@@ -21751,7 +21479,7 @@
       "species": 397,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
+      "min_level": 17,
       "max_level": 18,
       "chance": "common",
       "conditions": null,
@@ -21783,7 +21511,7 @@
       "species": 402,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
+      "min_level": 17,
       "max_level": 19,
       "chance": "common",
       "conditions": null,
@@ -21809,6 +21537,342 @@
       ],
       "alpha": false,
       "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 25,
+      "form": 0,
+      "method": "walk",
+      "min_level": 18,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 35,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 39,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 52,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 113,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 133,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 137,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 172,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 16,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 173,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 174,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 183,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 298,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 311,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 312,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 315,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 17,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 351,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 397,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 17,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 402,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 17,
+      "chance": "common",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "trophy-garden",
+      "species": 438,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 439,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "trophy-garden",
+      "species": 440,
+      "form": 0,
+      "method": "walk",
+      "min_level": 16,
+      "max_level": 18,
+      "chance": "uncommon",
+      "conditions": "national_dex",
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
     },
     {
       "area": "pastoria-city",
@@ -27304,6 +27368,22 @@
       "method": "fixed",
       "min_level": 70,
       "max_level": 70,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ],
+      "alpha": false,
+      "verified": false
+    },
+    {
+      "area": "fullmoon-island",
+      "species": 488,
+      "form": 0,
+      "method": "roaming",
+      "min_level": 50,
+      "max_level": 50,
       "chance": "fixed",
       "conditions": null,
       "versions": [

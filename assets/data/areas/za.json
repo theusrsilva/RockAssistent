@@ -250,10 +250,28 @@
       "bosses_before": []
     },
     {
+      "id": "academie-etoile",
+      "name": "Académie Étoile",
+      "kind": "building",
+      "order": 26,
+      "map_node": null,
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "lumiose-museum",
+      "name": "Lumiose Museum",
+      "kind": "building",
+      "order": 27,
+      "map_node": null,
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
       "id": "wild-zone-11",
       "name": "Wild Zone 11",
       "kind": "route",
-      "order": 26,
+      "order": 28,
       "map_node": "wild-zone-11",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -262,7 +280,7 @@
       "id": "wild-zone-12",
       "name": "Wild Zone 12",
       "kind": "route",
-      "order": 27,
+      "order": 29,
       "map_node": "wild-zone-12",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -271,7 +289,7 @@
       "id": "wild-zone-13",
       "name": "Wild Zone 13",
       "kind": "route",
-      "order": 28,
+      "order": 30,
       "map_node": "wild-zone-13",
       "poke_api_location_id": null,
       "bosses_before": [
@@ -292,7 +310,7 @@
       "id": "sewers-main-access",
       "name": "The Sewers (Main Access)",
       "kind": "dungeon",
-      "order": 29,
+      "order": 31,
       "map_node": "sewers",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -301,7 +319,7 @@
       "id": "sewers-canal-access",
       "name": "The Sewers (Canal Access)",
       "kind": "dungeon",
-      "order": 30,
+      "order": 32,
       "map_node": "sewers",
       "poke_api_location_id": null,
       "bosses_before": [
@@ -313,7 +331,7 @@
       "id": "rust-syndicate",
       "name": "Rust Syndicate Office",
       "kind": "building",
-      "order": 31,
+      "order": 33,
       "map_node": "bleu-district",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -322,7 +340,7 @@
       "id": "wild-zone-14",
       "name": "Wild Zone 14",
       "kind": "route",
-      "order": 32,
+      "order": 34,
       "map_node": "wild-zone-14",
       "poke_api_location_id": null,
       "bosses_before": [
@@ -340,7 +358,7 @@
       "id": "wild-zone-15",
       "name": "Wild Zone 15",
       "kind": "route",
-      "order": 33,
+      "order": 35,
       "map_node": "wild-zone-15",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -349,7 +367,7 @@
       "id": "vernal-avenue",
       "name": "Vernal Avenue",
       "kind": "city",
-      "order": 34,
+      "order": 36,
       "map_node": "vernal-avenue",
       "poke_api_location_id": 599,
       "bosses_before": []
@@ -358,7 +376,7 @@
       "id": "autumnal-avenue",
       "name": "Autumnal Avenue",
       "kind": "city",
-      "order": 35,
+      "order": 37,
       "map_node": "autumnal-avenue",
       "poke_api_location_id": 599,
       "bosses_before": [
@@ -373,7 +391,7 @@
       "id": "hibernal-avenue",
       "name": "Hibernal Avenue",
       "kind": "city",
-      "order": 36,
+      "order": 38,
       "map_node": "hibernal-avenue",
       "poke_api_location_id": 599,
       "bosses_before": []
@@ -382,7 +400,7 @@
       "id": "estival-avenue",
       "name": "Estival Avenue",
       "kind": "city",
-      "order": 37,
+      "order": 39,
       "map_node": "estival-avenue",
       "poke_api_location_id": 599,
       "bosses_before": []
@@ -391,7 +409,7 @@
       "id": "north-boulevard",
       "name": "North Boulevard",
       "kind": "city",
-      "order": 38,
+      "order": 40,
       "map_node": "north-boulevard",
       "poke_api_location_id": 599,
       "bosses_before": []
@@ -400,7 +418,7 @@
       "id": "wild-zone-16",
       "name": "Wild Zone 16",
       "kind": "route",
-      "order": 39,
+      "order": 41,
       "map_node": "wild-zone-16",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -409,7 +427,7 @@
       "id": "wild-zone-17",
       "name": "Wild Zone 17",
       "kind": "route",
-      "order": 40,
+      "order": 42,
       "map_node": "wild-zone-17",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -418,7 +436,7 @@
       "id": "hotel-richissime",
       "name": "Hotel Richissime",
       "kind": "building",
-      "order": 41,
+      "order": 43,
       "map_node": "north-boulevard",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -427,7 +445,7 @@
       "id": "wild-zone-18",
       "name": "Wild Zone 18",
       "kind": "route",
-      "order": 42,
+      "order": 44,
       "map_node": "wild-zone-18",
       "poke_api_location_id": null,
       "bosses_before": [
@@ -446,7 +464,7 @@
       "id": "wild-zone-19",
       "name": "Wild Zone 19",
       "kind": "route",
-      "order": 43,
+      "order": 45,
       "map_node": "wild-zone-19",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -455,7 +473,7 @@
       "id": "lysandre-cafe",
       "name": "Lysandre Café",
       "kind": "building",
-      "order": 44,
+      "order": 46,
       "map_node": "centrico-plaza",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -464,7 +482,7 @@
       "id": "centrico-plaza",
       "name": "Centrico Plaza",
       "kind": "city",
-      "order": 45,
+      "order": 47,
       "map_node": "centrico-plaza",
       "poke_api_location_id": 599,
       "bosses_before": [
@@ -475,7 +493,7 @@
       "id": "nouveau-cafe",
       "name": "Nouveau Café",
       "kind": "building",
-      "order": 46,
+      "order": 48,
       "map_node": "centrico-plaza",
       "poke_api_location_id": null,
       "bosses_before": []
@@ -484,7 +502,7 @@
       "id": "prism-tower",
       "name": "Prism Tower",
       "kind": "building",
-      "order": 47,
+      "order": 49,
       "map_node": "centrico-plaza",
       "poke_api_location_id": 600,
       "bosses_before": [
@@ -495,7 +513,7 @@
       "id": "lysandre-labs",
       "name": "Lysandre Labs",
       "kind": "dungeon",
-      "order": 48,
+      "order": 50,
       "map_node": "lysandre-labs",
       "poke_api_location_id": 601,
       "bosses_before": [
@@ -527,7 +545,7 @@
       "id": "wild-zone-20",
       "name": "Wild Zone 20",
       "kind": "route",
-      "order": 49,
+      "order": 51,
       "map_node": "wild-zone-20",
       "poke_api_location_id": null,
       "bosses_before": []
