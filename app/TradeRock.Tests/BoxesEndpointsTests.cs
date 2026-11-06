@@ -259,11 +259,20 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
     [InlineData("POST", "/api/boxes/move")]
     [InlineData("GET", "/api/settings/save-folders")]
     [InlineData("PUT", "/api/settings/save-folders")]
+    [InlineData("POST", "/api/saves/open-folder")]
     public void Rotas_de_saves_sao_so_da_janela_local(string method, string path)
     {
         var context = new DefaultHttpContext();
         context.Request.Method = method;
         context.Request.Path = path;
         Assert.True(AccessPolicy.IsLocalOnly(context.Request));
+    }
+
+    [Fact]
+    public async Task Escolher_pasta_sem_janela_da_no_window()
+    {
+        var response = await _client.PostAsync("/api/saves/open-folder", null);
+        Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
+        Assert.Contains("no_window", await response.Content.ReadAsStringAsync());
     }
 }

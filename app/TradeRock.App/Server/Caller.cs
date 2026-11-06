@@ -34,6 +34,8 @@ public static class AccessPolicy
         var path = request.Path;
         if (path.StartsWithSegments("/api/setup") || path.StartsWithSegments("/api/worker") || path.StartsWithSegments("/api/server")
             || path.StartsWithSegments("/api/app") || path.StartsWithSegments("/api/saves/open")
+            // "/api/saves/open" não cobre "/api/saves/open-folder" (segmento diferente): precisa estar aqui.
+            || path.StartsWithSegments("/api/saves/open-folder")
             || path.StartsWithSegments("/api/vault/export/native") || path.StartsWithSegments("/api/activities")
             || path.StartsWithSegments("/api/logs")
             || path.StartsWithSegments("/api/update")

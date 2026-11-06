@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link, useParams } from 'react-router'
+import { Link, useParams, useSearchParams } from 'react-router'
 import { LegalityPanel } from '../../components/Legality'
 import { ContentFile } from '../../components/Markdown'
 import { Button, Callout, HelpTip, Icon, Modal, Toggle, inputClass, useToast } from '../../components/ui'
@@ -48,6 +48,10 @@ function defaultSpec(trainer: TrainerSpec): PokemonSpec {
 export default function BuilderPage() {
   const { t, i18n } = useTranslation()
   const { id } = useParams()
+  // "+ Novo" numa posição vazia do cofre (tela Boxes): ao salvar, o Pokémon vai para essa caixa e posição.
+  const [query] = useSearchParams()
+  const targetBox = query.get('box')
+  const targetSlot = query.get('slot')
   const [mode, setMode] = useState<Mode>('auto')
   const [data, setData] = useState<BuilderData | null>(null)
   const [myTrainer, setMyTrainer] = useState<MyTrainer | null>(null)
@@ -163,6 +167,15 @@ export default function BuilderPage() {
     if (!current?.data) return
     try {
       const r = await api.post<{ created: boolean; pokemon: Pokemon }>('/api/builder/save', { data: current.data, game: spec?.game })
+      if (r.created && targetBox && targetSlot !== null && /^\d+$/.test(targetSlot)) {
+        try {
+          await api.post(`/api/vault/pokemon/${r.pokemon.id}/move`, { boxId: targetBox, slot: Number(targetSlot) })
+        } catch {
+          // A posição foi ocupada nesse meio-tempo (ou a caixa sumiu): ele fica na Caixa de entrada.
+          toast(t('boxes.newInInbox'))
+          return
+        }
+      }
       toast(t(r.created ? 'builder.saved' : 'builder.savedDuplicate'))
     } catch {
       toast(t('common.error'))

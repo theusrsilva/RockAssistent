@@ -15,6 +15,8 @@ import { ExportDialog } from './ExportDialog'
 import { InjectDialog } from './InjectDialog'
 import { SaveImportDialog } from './SaveImportDialog'
 import { Sidebar, type Scope } from './Sidebar'
+import { MoveDialog } from '../boxes/MoveDialog'
+import { backupsOf } from '../boxes/boxes'
 import { tagClass } from './tagColors'
 
 interface Filters {
@@ -40,8 +42,13 @@ type Dialog =
   | { kind: 'import' }
   | { kind: 'emptyTrash' }
   | { kind: 'rename'; id: string; name: string }
+  | { kind: 'moveToSave'; pokemon: VaultPokemon }
 
-export default function VaultPage() {
+/**
+ * Cofre do app. Na tela Boxes (aba "Cofre do app") vem embutido: sem o título próprio e, na janela do PC,
+ * com "Mover para um save" no painel (savesAvailable).
+ */
+export default function VaultPage({ embedded = false, savesAvailable = false }: { embedded?: boolean; savesAvailable?: boolean }) {
   const { t } = useTranslation()
   const toast = useToast()
   const navigate = useNavigate()
@@ -252,6 +259,7 @@ export default function VaultPage() {
       onTagsChanged={loadTags}
       onExport={(ids) => setDialog({ kind: 'export', ids })}
       onMove={(id, target) => void move(id, target)}
+      onMoveToSave={savesAvailable ? () => setDialog({ kind: 'moveToSave', pokemon: focusedPokemon }) : undefined}
       onClose={() => setFocused(null)}
     />
   )
@@ -259,7 +267,7 @@ export default function VaultPage() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-wrap items-center gap-2.5">
-        <h1 className="flex-1 font-display text-[23px] font-bold md:text-[28px]">{t('vault.title')}</h1>
+        {embedded ? <div className="flex-1" /> : <h1 className="flex-1 font-display text-[23px] font-bold md:text-[28px]">{t('vault.title')}</h1>}
         <div className="relative" ref={importRef}>
           <Button icon="download" iconAfter="expand_more" aria-expanded={importOpen} onClick={() => setImportOpen(!importOpen)}>
             {t('ui.vault.import')}
@@ -577,6 +585,8 @@ export default function VaultPage() {
               onTileClick={onTileClick}
               onToggle={toggle}
               onDrop={(id, slot) => void move(id, scope, slot)}
+              // "+ Novo" numa posição vazia: o construtor guarda o Pokémon e o põe aqui.
+              onNew={(slot) => navigate(`/criar?box=${encodeURIComponent(scope)}&slot=${slot}`)}
             />
           ) : list.length === 0 ? (
             <div className="flex flex-1 flex-col items-center justify-center gap-1.5 p-10 text-center text-muted">
@@ -615,6 +625,19 @@ export default function VaultPage() {
           ))}
       </div>
 
+      {dialog?.kind === 'moveToSave' && (
+        <MoveDialog
+          source={{ kind: 'vault', pokemonId: dialog.pokemon.id }}
+          title={t('boxes.moveTitle', { name: (dialog.pokemon.nickname || dialog.pokemon.speciesName).toUpperCase() })}
+          onClose={() => setDialog(null)}
+          onDone={(r) => {
+            setDialog(null)
+            if (r.mode === 'move') setFocused(null)
+            toast(backupsOf(r).length > 0 ? t('boxes.doneWithBackup', { count: backupsOf(r).length }) : t('boxes.done'))
+            reload()
+          }}
+        />
+      )}
       {dialog?.kind === 'export' && <ExportDialog ids={dialog.ids} onClose={() => setDialog(null)} />}
       {dialog?.kind === 'inject' && (
         <InjectDialog pokemon={selectedPokemon.length > 0 ? selectedPokemon : focusedPokemon ? [focusedPokemon] : []} onClose={() => setDialog(null)} />

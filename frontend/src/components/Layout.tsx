@@ -31,9 +31,10 @@ export const mainLinks: { to: string; key: string; icon: string; end?: boolean; 
   { to: '/historico', key: 'nav.history', icon: 'history' },
 ]
 
-/** No celular, os quatro primeiros viram abas e o resto fica em "Mais". */
-const tabLinks = mainLinks.slice(0, 4)
-const moreLinks = mainLinks.slice(4)
+/** No celular: Início, Pokédex, Boxes e Trocas viram abas; o resto (Guias incluído) fica em "Mais". */
+const tabPaths = ['/', '/pokedex', '/boxes', '/trocas']
+export const tabLinks = tabPaths.map((to) => mainLinks.find((l) => l.to === to)!)
+export const moreLinks = mainLinks.filter((l) => !tabPaths.includes(l.to))
 
 /** Resumo da conexão para o menu e o Início. */
 export function useConnectionSummary() {

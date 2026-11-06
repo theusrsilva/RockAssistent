@@ -12,6 +12,7 @@ import { AppImageWorkerSettings } from './setup/AppImageWorker'
 import { AccountsCard, ServerModeCard } from './settings/ServerSettings'
 import { ConnectionChecklist } from './settings/ConnectionChecklist'
 import { LogsTab } from './settings/LogsTab'
+import { SaveFoldersCard } from './settings/SaveFoldersCard'
 import { useAuth } from '../lib/auth'
 import { useConnection } from '../lib/connection'
 import { useConnectionSummary } from '../components/Layout'
@@ -52,9 +53,10 @@ export default function SettingsPage() {
   const asked = params.get('aba') as Tab | null
   const tab: Tab = tabs.some((x) => x.key === asked) ? asked! : 'conexao'
 
-  // Links antigos para o modo servidor (#servidor) caem na aba Avançado.
+  // Links antigos para o modo servidor (#servidor) caem na aba Avançado; o Boxes aponta para #pastas.
   useEffect(() => {
-    if (window.location.hash === '#servidor') document.getElementById('servidor')?.scrollIntoView()
+    const anchor = window.location.hash.slice(1)
+    if (anchor === 'servidor' || anchor === 'pastas') document.getElementById(anchor)?.scrollIntoView()
   }, [tab])
 
   async function saveSettings(next: TradeSettings) {
@@ -85,7 +87,13 @@ export default function SettingsPage() {
 
       {tab === 'conexao' && <ConnectionChecklist />}
       {tab === 'treinador' && <TrainerTab />}
-      {tab === 'preferencias' && <PreferencesTab settings={settings} onSave={saveSettings} />}
+      {tab === 'preferencias' && (
+        <div className="flex flex-col gap-4">
+          <PreferencesTab settings={settings} onSave={saveSettings} />
+          {/* Pastas de saves da tela Boxes: caminhos do PC, só na janela local. */}
+          {local && <SaveFoldersCard />}
+        </div>
+      )}
       {tab === 'avancado' && local && <AdvancedTab settings={settings} onSave={saveSettings} />}
       {tab === 'logs' && local && <LogsTab />}
       {tab === 'contas' && <AccountsCard />}

@@ -20,6 +20,8 @@ export class ApiError extends Error {
     public code: string | null,
     public errors: string[],
     public detail: string | null = null,
+    /** Motivo extra de alguns erros ({ error, reason }), como o save_wrong_game da tela Boxes. */
+    public reason: string | null = null,
   ) {
     super(`HTTP ${status}${code ? ` (${code})` : ''}`)
   }
@@ -44,17 +46,19 @@ async function request<T>(method: string, path: string, body?: unknown, signal?:
     let code: string | null = null
     let errors: string[] = []
     let detail: string | null = null
+    let reason: string | null = null
     try {
-      const data = (await response.json()) as { error?: string; errors?: string[]; message?: string }
+      const data = (await response.json()) as { error?: string; errors?: string[]; message?: string; reason?: string | null }
       code = data.error ?? null
       errors = data.errors ?? []
       detail = data.message ?? null
+      reason = data.reason ?? null
     } catch {
       // corpo vazio ou não-JSON
     }
     // Pela rede, o login expirou ou caiu (senha trocada, modo servidor desligado): volta à tela de entrada.
     if (response.status === 401 && code === 'login_required') window.dispatchEvent(new Event(unauthorizedEvent))
-    throw new ApiError(response.status, code, errors, detail)
+    throw new ApiError(response.status, code, errors, detail, reason)
   }
   if (response.status === 204) return undefined as T
   const text = await response.text()

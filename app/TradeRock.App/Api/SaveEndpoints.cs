@@ -43,6 +43,16 @@ public static class SaveEndpoints
             return Describe(cache, new SaveSession { Token = Guid.NewGuid(), FileName = Path.GetFileName(path), Path = path, Original = bytes });
         });
 
+        // Janela nativa: escolher uma pasta de saves (Configurações → Pastas de saves). Só devolve o caminho;
+        // quem chama acrescenta a pasta pelo PUT /api/settings/save-folders.
+        saves.MapPost("/open-folder", async (WindowBridge window) =>
+        {
+            if (!window.HasWindow)
+                return Results.Conflict(new { error = "no_window" });
+            var path = await window.PickFolderAsync("Escolha a pasta com os saves");
+            return path is null ? Results.NoContent() : Results.Ok(new { path });
+        });
+
         // Navegador: enviar o arquivo.
         saves.MapPost("/upload", async (HttpRequest request, IMemoryCache cache, CancellationToken ct) =>
         {
