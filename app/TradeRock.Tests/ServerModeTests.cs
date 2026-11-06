@@ -268,7 +268,7 @@ public sealed class ServerModeTests : IAsyncLifetime
         await CreateAccountAsync("gil", role: "admin");
         var fabi = await LoginAsync("fabi");
 
-        foreach (var path in new[] { "/api/setup", "/api/setup/report", "/api/worker", "/api/server" })
+        foreach (var path in new[] { "/api/setup", "/api/setup/report", "/api/worker", "/api/server", "/api/boxes/saves", "/api/settings/save-folders" })
         {
             var response = await fabi.GetAsync(path);
             Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);

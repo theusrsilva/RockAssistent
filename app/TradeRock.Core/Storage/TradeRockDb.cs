@@ -22,6 +22,7 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<Tag> Tags => Set<Tag>();
     public DbSet<PokemonTag> PokemonTags => Set<PokemonTag>();
     public DbSet<UserAccount> Users => Set<UserAccount>();
+    public DbSet<SaveAttachment> SaveAttachments => Set<SaveAttachment>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -111,6 +112,14 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
         {
             e.HasIndex(u => u.Username).IsUnique();
             e.Property(u => u.Role).HasConversion<string>();
+        });
+
+        model.Entity<SaveAttachment>(e =>
+        {
+            e.HasQueryFilter(a => a.OwnerId == Owner);
+            e.HasIndex(a => new { a.OwnerId, a.SavePath });
+            // Apagar o Pokémon do cofre de vez desfaz o anexo.
+            e.HasOne<StoredPokemon>().WithMany().HasForeignKey(a => a.PokemonId).OnDelete(DeleteBehavior.Cascade);
         });
 
         model.Entity<SettingEntry>(e => e.HasKey(s => s.Key));

@@ -26,7 +26,8 @@ public static class AccessPolicy
 
     /// <summary>
     /// Só pela janela local: assistente (prod.keys, placa, firmware), worker, modo servidor, fechar o app,
-    /// diálogos nativos (abririam no PC, não no celular), motor e configurações de troca, outras atividades (D26), logs (D28), atualização (D29).
+    /// diálogos nativos (abririam no PC, não no celular), motor e configurações de troca, outras atividades (D26), logs (D28), atualização (D29),
+    /// saves das pastas do PC (tela Boxes) e as pastas configuradas.
     /// </summary>
     public static bool IsLocalOnly(HttpRequest request)
     {
@@ -35,7 +36,8 @@ public static class AccessPolicy
             || path.StartsWithSegments("/api/app") || path.StartsWithSegments("/api/saves/open")
             || path.StartsWithSegments("/api/vault/export/native") || path.StartsWithSegments("/api/activities")
             || path.StartsWithSegments("/api/logs")
-            || path.StartsWithSegments("/api/update"))
+            || path.StartsWithSegments("/api/update")
+            || path.StartsWithSegments("/api/boxes") || path.StartsWithSegments("/api/settings/save-folders"))
             return true;
         return HttpMethods.IsPut(request.Method)
             && (path.StartsWithSegments("/api/engines/selected") || path.StartsWithSegments("/api/settings/trade"));

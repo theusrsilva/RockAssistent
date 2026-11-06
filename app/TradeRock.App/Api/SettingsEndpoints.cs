@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using TradeRock.App.Server;
 using TradeRock.Core.Games;
 using TradeRock.Core.Engines;
+using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
 using TradeRock.Core.Trading;
 
@@ -38,6 +39,25 @@ public static class SettingsEndpoints
             var normalized = body.Normalized();
             await settings.SetAsync(TradeSettingsKey, normalized, ct);
             return normalized;
+        });
+
+        // Pastas de saves da tela Boxes (só na janela local: são caminhos do PC).
+        api.MapGet("/settings/save-folders", async (SaveFolders folders, CancellationToken ct) =>
+            (await folders.GetAsync(ct)).Select(f => new { f.Path, f.Pattern, exists = Directory.Exists(f.Path) }));
+
+        api.MapPut("/settings/save-folders", async (IReadOnlyList<SaveFolder> body, SaveFolders folders, SaveLibrary library,
+            CancellationToken ct) =>
+        {
+            try
+            {
+                var saved = await folders.SetAsync(body, ct);
+                await library.ListAsync(refresh: true, ct);
+                return Results.Ok(saved.Select(f => new { f.Path, f.Pattern, exists = Directory.Exists(f.Path) }));
+            }
+            catch (SaveInjectionException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
         });
 
         api.MapGet("/engines", async (EngineRegistry registry, CancellationToken ct) =>

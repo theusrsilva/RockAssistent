@@ -147,6 +147,27 @@ public sealed class TrainerPreset : IOwned
     public TradeGame Game { get; set; }
 }
 
+/// <summary>
+/// Pokémon do cofre "anexado" a uma posição de um save do PC: quando o slot muda no jogo (subiu de nível,
+/// evoluiu), a sincronização (<c>POST /api/boxes/sync-attachments</c>) substitui os dados do cofre.
+/// </summary>
+public sealed class SaveAttachment : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public Guid PokemonId { get; set; }
+    public required string SavePath { get; set; }
+
+    /// <summary>SHA-256 do save na última vez que o anexo foi conferido (igual = nada mudou).</summary>
+    public required string SaveSha256 { get; set; }
+
+    /// <summary>Caixa (a partir de 0) ou -1 para o time.</summary>
+    public int Box { get; set; }
+
+    public int Slot { get; set; }
+    public DateTimeOffset AttachedAt { get; set; }
+}
+
 /// <summary>Configuração chave → JSON.</summary>
 public sealed class SettingEntry
 {

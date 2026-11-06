@@ -32,6 +32,44 @@ namespace TradeRock.Core.Storage.Migrations
                     b.ToTable("PokemonTags");
                 });
 
+            modelBuilder.Entity("TradeRock.Core.Storage.SaveAttachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("AttachedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Box")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PokemonId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SavePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SaveSha256")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Slot")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PokemonId");
+
+                    b.HasIndex("OwnerId", "SavePath");
+
+                    b.ToTable("SaveAttachments");
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.SettingEntry", b =>
                 {
                     b.Property<string>("Key")
@@ -380,6 +418,15 @@ namespace TradeRock.Core.Storage.Migrations
                     b.HasOne("TradeRock.Core.Storage.Tag", null)
                         .WithMany()
                         .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.SaveAttachment", b =>
+                {
+                    b.HasOne("TradeRock.Core.Storage.StoredPokemon", null)
+                        .WithMany()
+                        .HasForeignKey("PokemonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

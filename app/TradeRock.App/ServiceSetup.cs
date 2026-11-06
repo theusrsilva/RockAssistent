@@ -39,6 +39,8 @@ public static class ServiceSetup
         services.AddSingleton<TradeRock.Core.Setup.ISystemProbe, TradeRock.Core.Setup.RealSystemProbe>();
         services.AddSingleton<TradeRock.Core.Setup.SetupService>();
         services.AddSingleton<TradeRock.Core.Saves.SaveBackups>();
+        services.AddSingleton<TradeRock.Core.Saves.SaveFolders>();
+        services.AddSingleton<TradeRock.Core.Saves.SaveLibrary>();
         services.AddSingleton<SettingsStore>();
         services.AddSingleton<TradeRecorder>();
         services.AddSingleton<ITradeRecorder>(sp => sp.GetRequiredService<TradeRecorder>());

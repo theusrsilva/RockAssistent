@@ -110,6 +110,7 @@ public static class TradeRockServer
         api.MapBuilder();
         api.MapVault();
         api.MapSaves();
+        api.MapBoxes();
         api.MapSetup();
         api.MapWorker();
         api.MapServer();
