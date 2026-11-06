@@ -1,6 +1,5 @@
 using PKHeX.Core;
 using TradeRock.Core.Games;
-using TradeRock.Core.Pokemon;
 
 namespace TradeRock.Core.Saves;
 
@@ -22,15 +21,31 @@ public sealed record SaveInfo(
     string Sha256,
     bool Writable);
 
+/// <summary>Resumo de um Pokémon de save de qualquer geração (sem a família de troca: ver <see cref="SaveSlotEntry.Family"/>).</summary>
+/// <param name="TrainerId">O ID do treinador original como o jogo mostra.</param>
+public sealed record SlotSummary(
+    ushort Species,
+    byte Form,
+    string SpeciesName,
+    string Nickname,
+    byte Level,
+    bool IsShiny,
+    bool IsEgg,
+    byte Gender,
+    string OtName,
+    uint TrainerId,
+    ushort HeldItem,
+    string OriginGame,
+    int Language,
+    bool Fateful,
+    uint Pid);
+
 /// <summary>Um Pokémon de um save.</summary>
 /// <param name="Box">Caixa (a partir de 0) ou -1 para o time.</param>
-/// <param name="Data">Bytes decriptados no formato de caixa (SIZE_STORED) do tipo do save.</param>
-/// <param name="Context">Formato do Pokémon no PKHeX (dá para remontar o PKM a partir de <paramref name="Data"/>).</param>
-/// <param name="Family">
-/// Jogo do catálogo de troca com esse formato, ou null (Gen 1, 2, 4 a 7 fora do Let's Go).
-/// <c>Summary.Family</c> só tem sentido quando este campo não é null.
-/// </param>
-public sealed record SaveSlotEntry(int Box, int Slot, byte[] Data, PokemonSummary Summary, EntityContext Context, GameFamily? Family);
+/// <param name="Data">Bytes decriptados no formato de caixa (SIZE_STORED) do tipo do save (ver <see cref="SaveFileAccess.ToEntity"/>).</param>
+/// <param name="Context">Formato do Pokémon no PKHeX.</param>
+/// <param name="Family">Jogo do catálogo de troca com esse formato, ou null (Gen 1, 2, 4 a 7 fora do Let's Go).</param>
+public sealed record SaveSlotEntry(int Box, int Slot, byte[] Data, SlotSummary Summary, EntityContext Context, GameFamily? Family);
 
 /// <summary>
 /// Leitura e escrita de saves de todas as gerações pelo PKHeX.Core (que refaz os checksums e preserva
@@ -83,13 +98,45 @@ public static class SaveFileAccess
                 return;
             var data = new byte[pk.SIZE_STORED];
             pk.WriteDecryptedDataStored(data);
-            // Fora do catálogo o resumo leva uma família qualquer; quem lê usa SaveSlotEntry.Family.
-            var summary = PokemonReader.Summarize(pk, family ?? default);
-            entries.Add(new SaveSlotEntry(box, slot, data, summary, pk.Context, family));
+            entries.Add(new SaveSlotEntry(box, slot, data, Summarize(pk), pk.Context, family));
         }
     }
 
-    /// <summary>Grava (sobrescrevendo) um Pokémon do mesmo formato do save. No time, só até a primeira posição vazia.</summary>
+    /// <summary>Remonta o Pokémon a partir dos bytes de <see cref="SaveSlotEntry.Data"/> no formato do save.</summary>
+    public static PKM ToEntity(SaveFile sav, byte[] data)
+    {
+        var pk = EntityFormat.GetFromBytes(data.ToArray(), sav.Context);
+        if (pk is null || pk.GetType() != sav.BlankPKM.GetType())
+            throw new SaveInjectionException("sav_wrong_game", "Os dados não são de um Pokémon no formato deste save.");
+        return pk;
+    }
+
+    private static SlotSummary Summarize(PKM pk)
+    {
+        // O PKHeX não tem nomes em português; os nomes em inglês são os mesmos usados no Brasil.
+        var species = GameInfo.GetStrings("en").Species;
+        return new SlotSummary(
+            Species: pk.Species,
+            Form: pk.Form,
+            SpeciesName: pk.Species < species.Count ? species[pk.Species] : $"#{pk.Species}",
+            Nickname: pk.Nickname,
+            Level: pk.CurrentLevel,
+            IsShiny: pk.IsShiny,
+            IsEgg: pk.IsEgg,
+            Gender: pk.Gender,
+            OtName: pk.OriginalTrainerName,
+            TrainerId: pk.DisplayTID,
+            HeldItem: (ushort)pk.HeldItem,
+            OriginGame: pk.Version.ToString(),
+            Language: pk.Language,
+            Fateful: pk.FatefulEncounter,
+            Pid: pk.PID);
+    }
+
+    /// <summary>
+    /// Grava (sobrescrevendo) um Pokémon do mesmo formato do save. No time, e nas caixas da Gen 1 e 2 (que o jogo
+    /// guarda como lista), só até a primeira posição depois das ocupadas: sem buracos.
+    /// </summary>
     public static void WriteSlot(SaveFile sav, int box, int slot, PKM pk)
     {
         if (pk.Context != sav.Context || pk.GetType() != sav.BlankPKM.GetType())
@@ -102,10 +149,15 @@ public static class SaveFileAccess
             return;
         }
         CheckBoxSlot(sav, box, slot);
+        if (sav is SAV1 or SAV2 && slot > OccupiedInBox(sav, box))
+            throw SlotInvalid(box, slot);
         sav.SetBoxSlotAtIndex(pk, box, slot, WriteSettings);
     }
 
-    /// <summary>Esvazia uma posição. No time, os seguintes sobem uma posição (como no jogo).</summary>
+    /// <summary>
+    /// Esvazia uma posição. No time, os seguintes sobem uma posição na hora (como no jogo). Nas caixas da Gen 1 e 2
+    /// (SAV1/SAV2) a posição fica vazia na memória, mas os seguintes sobem quando o save é gravado (<see cref="Export"/>).
+    /// </summary>
     public static void ClearSlot(SaveFile sav, int box, int slot)
     {
         if (box == Party)
@@ -160,6 +212,9 @@ public static class SaveFileAccess
         if (sav.IsBoxSlotLocked(box, slot))
             throw new SaveInjectionException("slot_locked", $"A posição {slot + 1} da caixa {box + 1} está travada pelo jogo.");
     }
+
+    private static int OccupiedInBox(SaveFile sav, int box) =>
+        Enumerable.Range(0, sav.BoxSlotCount).Count(slot => sav.GetBoxSlotAtIndex(box, slot).Species != 0);
 
     private static SaveInjectionException SlotInvalid(int box, int slot) =>
         new("slot_invalid", box == Party
