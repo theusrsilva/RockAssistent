@@ -1,0 +1,85 @@
+:::bosses e
+
+## Dicas
+
+- **May** (Rival, Route 103): Inicial nv. 5 do rival, com vantagem sobre o seu. Use o golpe de status no primeiro turno e cure com Potion.
+- **Roxanne** (Líder de Ginásio, Rustboro Gym): Dois Geodude 12 e Nosepass 15 (Rock Tomb). Mudkip/Treecko vencem fácil; Torchic precisa de Fighting.
+- **May** (Rival, Rustboro City): Na saída de Rustboro. Inicial nv. 15 e um apoio nv. 13.
+- **Brawly** (Líder de Ginásio, Dewford Gym): Machop, Meditite e Makuhita 19: Flying ou Psychic.
+- **May** (Rival, Route 110): Inicial evoluído nv. 20 com 2 apoios: cubra os tipos deles.
+- **Wally** (Treinador Pokémon, Mauville City): Só um Ralts 16.
+- **Wattson** (Líder de Ginásio, Mauville Gym): Voltorb, Electrike, Magneton e Manectric 24: Ground.
+- **Tabitha** (Team Magma Admin, Mt. Chimney): Numel, Poochyena e Zubat até nv. 22: Water/Electric.
+- **Maxie** (Team Magma Leader, Mt. Chimney): Camerupt 25 é ×4 fraco a Water.
+- **Flannery** (Líder de Ginásio, Lavaridge Gym): Numel, Slugma, Camerupt e Torkoal 29: Water.
+- **Norman** (Líder de Ginásio, Petalburg Gym): Spinda, Vigoroth, Linoone e Slaking 31 (Truant): Fighting.
+- **Shelly** (Team Aqua Admin, Weather Institute 2F, Route 119): Carvanha e Mightyena 28: Electric e Fighting.
+- **May** (Rival, Route 119): Inicial evoluído nv. 31 e 2 apoios.
+- **Winona** (Líder de Ginásio, Fortree Gym): Swablu, Tropius, Pelipper, Skarmory e Altaria 33: Ice, Electric e Rock.
+- **May** (Rival, Lilycove City): Última luta com o rival: inicial final nv. 34 e 3 apoios.
+- **Tabitha** (Team Magma Admin, Magma Hideout, Jagged Pass): Camerupt 33 e Mightyena: Water.
+- **Maxie** (Team Magma Leader, Magma Hideout, Jagged Pass): Mightyena, Crobat e Camerupt 39: Water e Electric/Psychic.
+- **Matt** (Team Aqua Admin, Aqua Hideout, Lilycove City): Mightyena e Golbat 34: Electric e Fighting.
+- **Tate & Liza** (Líder de Ginásio, Mossdeep Gym): Claydol, Xatu, Lunatone e Solrock 42 em dupla: Water, Dark e Ghost.
+- **Maxie** (Team Magma Leader, Mossdeep Space Center): Camerupt 44: Water; o Metang do Steven ajuda.
+- **Tabitha** (Team Magma Admin, Mossdeep Space Center): Camerupt, Mightyena e Golbat até nv. 40.
+- **Shelly** (Team Aqua Admin, Seafloor Cavern): Sharpedo e Mightyena 37: Electric/Fighting.
+- **Archie** (Team Aqua Leader, Seafloor Cavern): Mightyena, Crobat e Sharpedo 43: Electric.
+- **Juan** (Líder de Ginásio, Sootopolis Gym): Kingdra 46 só é fraco a Dragon; os outros são Water: Electric e Grass.
+- **Wally** (Treinador Pokémon, Victory Road): Gardevoir 45 e Magneton: tenha Fire/Ground e Steel/Poison.
+- **Sidney** (Elite Four, Pokémon League): Dark: Fighting e Bug.
+- **Phoebe** (Elite Four, Pokémon League): Ghost: Dark e Ghost.
+- **Glacia** (Elite Four, Pokémon League): Ice: Fire, Fighting, Electric (Walrein).
+- **Drake** (Elite Four, Pokémon League): Dragon: Ice ×4 em Flygon, Altaria e Salamence; Kingdra só cai com Dragon.
+- **Wallace** (Campeão, Pokémon League): Water: Electric e Grass. Gyarados e Ludicolo cortam essas opções: tenha Rock e Fire/Flying.
+- **Steven** (Treinador Pokémon, Meteor Falls (inner room)): Pós-jogo, sala interna do Meteor Falls (Waterfall). Metagross 78: Fire e Ground.
+- **Roxanne** (Líder de Ginásio, Rustboro Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Brawly** (Líder de Ginásio, Dewford Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Wattson** (Líder de Ginásio, Mauville Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Flannery** (Líder de Ginásio, Lavaridge Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Norman** (Líder de Ginásio, Petalburg Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Winona** (Líder de Ginásio, Fortree Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Tate & Liza** (Líder de Ginásio, Mossdeep Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Juan** (Líder de Ginásio, Sootopolis Gym): Revanche nº 1 pelo Match Call (pós-jogo), em dupla.
+- **Roxanne** (Líder de Ginásio, Rustboro Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Brawly** (Líder de Ginásio, Dewford Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Wattson** (Líder de Ginásio, Mauville Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Flannery** (Líder de Ginásio, Lavaridge Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Norman** (Líder de Ginásio, Petalburg Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Winona** (Líder de Ginásio, Fortree Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Tate & Liza** (Líder de Ginásio, Mossdeep Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Juan** (Líder de Ginásio, Sootopolis Gym): Revanche nº 2 pelo Match Call (pós-jogo), em dupla.
+- **Roxanne** (Líder de Ginásio, Rustboro Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Brawly** (Líder de Ginásio, Dewford Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Wattson** (Líder de Ginásio, Mauville Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Flannery** (Líder de Ginásio, Lavaridge Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Norman** (Líder de Ginásio, Petalburg Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Winona** (Líder de Ginásio, Fortree Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Tate & Liza** (Líder de Ginásio, Mossdeep Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Juan** (Líder de Ginásio, Sootopolis Gym): Revanche nº 3 pelo Match Call (pós-jogo), em dupla.
+- **Roxanne** (Líder de Ginásio, Rustboro Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Brawly** (Líder de Ginásio, Dewford Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Wattson** (Líder de Ginásio, Mauville Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Flannery** (Líder de Ginásio, Lavaridge Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Norman** (Líder de Ginásio, Petalburg Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Winona** (Líder de Ginásio, Fortree Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Tate & Liza** (Líder de Ginásio, Mossdeep Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Juan** (Líder de Ginásio, Sootopolis Gym): Revanche nº 4 pelo Match Call (pós-jogo), em dupla.
+- **Wally** (Treinador Pokémon, Victory Road): Revanche na Victory Road (pós-jogo): mesmo time, nv. 48.
+- **Wally** (Treinador Pokémon, Victory Road): Revanche na Victory Road (pós-jogo): mesmo time, nv. 51.
+- **Wally** (Treinador Pokémon, Victory Road): Revanche na Victory Road (pós-jogo): mesmo time, nv. 54.
+- **Wally** (Treinador Pokémon, Victory Road): Revanche na Victory Road (pós-jogo): mesmo time, nv. 57.
+- **Anabel** (Salon Maiden, Battle Tower, Battle Frontier): Battle Tower. Alakazam, Entei e Snorlax: Dark e Fighting.
+- **Anabel** (Salon Maiden, Battle Tower, Battle Frontier): Raikou, Latios e Snorlax: Ground para o Raikou, Ice/Dragon para o Latios.
+- **Tucker** (Dome Ace, Battle Dome, Battle Frontier): Battle Dome. Swampert, Salamence e Charizard: Grass e Ice.
+- **Tucker** (Dome Ace, Battle Dome, Battle Frontier): Swampert, Metagross e Latias.
+- **Spenser** (Palace Maven, Battle Palace, Battle Frontier): Battle Palace (natureza decide). Crobat, Slaking e Lapras.
+- **Spenser** (Palace Maven, Battle Palace, Battle Frontier): Arcanine, Slaking e Suicune.
+- **Greta** (Arena Tycoon, Battle Arena, Battle Frontier): Battle Arena (3 turnos). Heracross, Umbreon e Shedinja: leve Fire/Rock/Ghost para o Shedinja.
+- **Greta** (Arena Tycoon, Battle Arena, Battle Frontier): Umbreon, Gengar e Breloom.
+- **Lucy** (Pike Queen, Battle Pike, Battle Frontier): Battle Pike. Seviper, Shuckle e Milotic.
+- **Lucy** (Pike Queen, Battle Pike, Battle Frontier): Seviper, Steelix e Gyarados.
+- **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Battle Pyramid. Os 3 Regis: Fighting, Fire e Water.
+- **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Articuno, Zapdos e Moltres: Rock e Electric.
+
+<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes) -->

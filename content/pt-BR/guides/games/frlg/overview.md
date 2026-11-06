@@ -1,24 +1,21 @@
-## Resumo
+## Ficha
 
 | | |
 | --- | --- |
 | Plataforma | Game Boy Advance (2004) |
 | Geração | 3 (remake de Red/Green) |
-| Região | Kanto + Ilhas Sevii |
+| Região | Kanto + Sevii Islands |
 | Iniciais | Bulbasaur, Charmander, Squirtle |
+| Par | FireRed e LeafGreen (exclusivos diferentes) |
 | Ginásios | 8 + Elite Four |
 
-## Diferenças entre as versões
+## Novidades
 
-- **Só no FireRed:** Ekans, Oddish, Psyduck, Growlithe, Shellder, Scyther, Electabuzz.
-- **Só no LeafGreen:** Sandshrew, Vulpix, Slowpoke, Bellsprout, Staryu, Pinsir, Magmar.
+- Mecânicas da Gen 3: habilidades, naturezas, IVs/EVs, Special Attack e Special Defense separados.
+- Sevii Islands: história extra e pós-jogo novo.
+- Wireless Adapter na caixa: troca e batalha sem cabo.
+- Teachy TV, Fame Checker, VS Seeker e Running Shoes.
+- Pokédex Nacional depois do Hall da Fama (60 espécies vistas).
+- Troca com Ruby/Sapphire/Emerald depois de entregar Ruby e Sapphire ao Celio.
 
-## Fatos rápidos
-
-- Vinha com o Wireless Adapter: troca e batalha sem cabo.
-- A Pokédex Nacional sai depois do Hall da Fama, com 60 Pokémon vistos.
-- Troca com Ruby/Sapphire/Emerald só depois de consertar a Network Machine na One Island (pós-jogo).
-
-## Chefes
-
-:::bosses frlg
+<!-- fontes: assets/data/areas/frlg.json, bosses/frlg.json, dex.sqlite (exclusivos); docs/superpowers/sources/frlg-pokemythology-notes.md; pokemondb.net (TMs), serebii.net (trocas) -->
