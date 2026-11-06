@@ -96,5 +96,8 @@ describe('erros', () => {
     expect(errorKey(new ApiError(400, 'algo_novo', []))).toBe('common.error')
     expect(errorKey(new Error('x'))).toBe('common.error')
     expect(errorKey(new ApiError(403, 'local_only', []))).toBe('boxes.errors.local_only')
+    // O VaultStore.MoveAsync (destino no cofre) responde estes dois.
+    expect(errorKey(new ApiError(400, 'box_full', []))).toBe('boxes.errors.box_full')
+    expect(errorKey(new ApiError(400, 'box_not_found', []))).toBe('boxes.errors.box_not_found')
   })
 })

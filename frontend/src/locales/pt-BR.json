@@ -2027,7 +2027,9 @@
       "invalid_pokemon": "Os dados desse Pokémon não puderam ser lidos.",
       "move_invalid": "Esse movimento não existe.",
       "local_only": "Só na janela do PC.",
-      "no_window": "Abra o RockAssistent pela janela do PC para escolher a pasta."
+      "no_window": "Abra o RockAssistent pela janela do PC para escolher a pasta.",
+      "box_not_found": "A caixa do cofre não existe mais. Escolha outra.",
+      "box_full": "Essa caixa do cofre está cheia. Escolha outra ou a Caixa de entrada."
     },
     "foldersCard": {
       "title": "Pastas de saves",

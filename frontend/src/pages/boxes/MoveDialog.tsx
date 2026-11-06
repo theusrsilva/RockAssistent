@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Callout, Field, HelpTip, Modal, Segmented, selectClass } from '../../components/ui'
-import { api } from '../../lib/api'
+import { ApiError, api } from '../../lib/api'
 import type { VaultOverview } from '../../lib/types'
 import { errorMessage, fileName, planDrop, type DragSource, type MoveMode, type MoveResult, type SaveBoxes, type SaveEntry } from './boxes'
 
@@ -16,6 +16,7 @@ export function MoveDialog({
   source,
   title,
   allowVault = true,
+  onStale,
   onClose,
   onDone,
 }: {
@@ -23,6 +24,8 @@ export function MoveDialog({
   title: string
   /** Falso para Pokémon de jogo fora do catálogo de troca (não vão para o cofre). */
   allowVault?: boolean
+  /** 409 save_changed: o save mudou no disco; quem abriu o diálogo recarrega o que mostra. */
+  onStale?: () => void
   onClose: () => void
   onDone: (result: MoveResult) => void
 }) {
@@ -87,6 +90,11 @@ export function MoveDialog({
       onDone(await api.post<MoveResult>('/api/boxes/move', plan.body))
     } catch (e) {
       setError(errorMessage(t, e))
+      if (e instanceof ApiError && e.code === 'save_changed') {
+        onStale?.()
+        // As posições livres podem ter mudado: relê o save de destino também.
+        if (dest === 'save' && saveId) api.get<SaveBoxes>(`/api/boxes/saves/${saveId}`).then(setSave).catch(() => undefined)
+      }
     } finally {
       setBusy(false)
     }

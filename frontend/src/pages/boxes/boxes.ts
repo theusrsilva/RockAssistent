@@ -205,6 +205,8 @@ export const KNOWN_ERRORS = [
   'pokemon_not_found',
   'invalid_pokemon',
   'move_invalid',
+  'box_not_found',
+  'box_full',
   'local_only',
   'no_window',
 ] as const

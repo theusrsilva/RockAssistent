@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useCallback, useReducer } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router'
 import { Callout, PageTitle, Segmented } from '../../components/ui'
@@ -18,6 +18,8 @@ export default function BoxesPage() {
   const remote = me?.local === false
   // "Ver no cofre" (/boxes?pokemon=id) e ?aba=cofre abrem direto no cofre.
   const [state, dispatch] = useReducer(tabReducer, { remote, wantsVault: params.has('pokemon') || params.get('aba') === 'cofre' }, initialTab)
+  // Identidade estável: o SavesTab usa no efeito de montagem (senão refaria os GETs a cada render).
+  const onForbidden = useCallback(() => dispatch({ type: 'forbidden' }), [])
 
   return (
     <div className="flex flex-col gap-5">
@@ -37,7 +39,7 @@ export default function BoxesPage() {
             {t('boxes.localOnly')}
           </Callout>
         ) : (
-          <SavesTab onForbidden={() => dispatch({ type: 'forbidden' })} />
+          <SavesTab onForbidden={onForbidden} />
         )
       ) : (
         <VaultTab savesAvailable={!state.savesBlocked} />

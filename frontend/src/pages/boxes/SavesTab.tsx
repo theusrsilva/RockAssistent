@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router'
 import { Badge, Button, Callout, Icon, IconButton, Segmented, selectClass, useIsMobile, useToast } from '../../components/ui'
@@ -49,6 +49,8 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
   const [moving, setMoving] = useState<SaveSlot | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  // Trava contra envio duplo: o estado só muda no próximo render, e dois drops seguidos chegariam antes dele.
+  const busyRef = useRef(false)
   // Caixa do cofre mostrada embaixo ('inbox' ou o id da caixa).
   const [overview, setOverview] = useState<VaultOverview | null>(null)
   const [vaultScope, setVaultScope] = useState('inbox')
@@ -127,10 +129,12 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
   }
 
   async function run(source: DragSource, target: DropTarget) {
+    if (busyRef.current) return
     setError(null)
     const plan = planDrop(source, target, dragMode)
     if (plan.kind === 'none') return
     if (plan.kind === 'refuse') return setError(t(`boxes.errors.${plan.code}`))
+    busyRef.current = true
     setBusy(true)
     try {
       if (plan.kind === 'move') {
@@ -154,8 +158,15 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
         void loadList()
       }
     } finally {
+      busyRef.current = false
       setBusy(false)
     }
+  }
+
+  /** O save mudou no disco (409 save_changed vindo do diálogo): mostra o que está lá agora. */
+  const reloadStale = () => {
+    if (saveId) void loadSave(saveId)
+    void loadList()
   }
 
   const info = save?.info
@@ -341,16 +352,18 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
               hint={false}
               onTileClick={() => undefined}
               onToggle={() => undefined}
-              onDrop={(id, slot) => void run({ kind: 'vault', pokemonId: id }, { kind: 'vault', boxId: vaultBox, slot, occupied: true })}
-              onDropSource={(src, slot) =>
-                void run(src, { kind: 'vault', boxId: vaultBox, slot, occupied: vaultList.some((p) => p.slot === slot) })
+              onDrop={(id, slot) => {
+                if (!busy) void run({ kind: 'vault', pokemonId: id }, { kind: 'vault', boxId: vaultBox, slot, occupied: true })
+              }}
+              onDropSource={
+                busy ? undefined : (src, slot) => void run(src, { kind: 'vault', boxId: vaultBox, slot, occupied: vaultList.some((p) => p.slot === slot) })
               }
             />
           ) : (
             <div
               className={`min-h-[120px] rounded-lg p-1 ${vaultOver ? 'ring-2 ring-accent' : ''}`}
               onDragOver={(e) => {
-                if (acceptsAny(e)) {
+                if (!busy && acceptsAny(e)) {
                   e.preventDefault()
                   setVaultOver(true)
                 }
@@ -359,7 +372,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
               onDrop={(e) => {
                 setVaultOver(false)
                 const src = draggedSource(e)
-                if (src) void run(src, { kind: 'vault', boxId: null, slot: null, occupied: false })
+                if (src && !busy) void run(src, { kind: 'vault', boxId: null, slot: null, occupied: false })
               }}
             >
               {vaultList.length === 0 ? (
@@ -393,6 +406,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
           source={sourceOf(moving)}
           title={t('boxes.moveTitle', { name: (moving.summary.nickname || moving.summary.speciesName).toUpperCase() })}
           allowVault={moving.family !== null}
+          onStale={reloadStale}
           onClose={() => setMoving(null)}
           onDone={(r) => {
             setMoving(null)

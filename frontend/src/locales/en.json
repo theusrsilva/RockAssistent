@@ -2027,7 +2027,9 @@
       "invalid_pokemon": "This Pokémon's data couldn't be read.",
       "move_invalid": "That move doesn't exist.",
       "local_only": "Only in the PC window.",
-      "no_window": "Open RockAssistent in the PC window to choose the folder."
+      "no_window": "Open RockAssistent in the PC window to choose the folder.",
+      "box_not_found": "That vault box doesn't exist anymore. Pick another.",
+      "box_full": "That vault box is full. Pick another one or the Inbox."
     },
     "foldersCard": {
       "title": "Save folders",
