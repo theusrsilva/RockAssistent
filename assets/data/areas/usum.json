@@ -1,0 +1,1035 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de usum)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/usum-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "iki-town",
+      "name": "Iki Town",
+      "kind": "city",
+      "order": 1,
+      "map_node": "iki-town",
+      "poke_api_location_id": 719,
+      "bosses_before": []
+    },
+    {
+      "id": "mahalo-trail",
+      "name": "Mahalo Trail",
+      "kind": "route",
+      "order": 2,
+      "map_node": "mahalo-trail",
+      "poke_api_location_id": 720,
+      "bosses_before": [
+        "hau-1",
+        "hau-2"
+      ]
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "order": 3,
+      "map_node": "route-1",
+      "poke_api_location_id": 711,
+      "bosses_before": []
+    },
+    {
+      "id": "kukui-lab",
+      "name": "Kukui's Lab",
+      "kind": "building",
+      "order": 4,
+      "map_node": "route-1",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-1-hauoli-outskirts",
+      "name": "Route 1 (Hau'oli Outskirts)",
+      "kind": "route",
+      "order": 5,
+      "map_node": "route-1-hauoli-outskirts",
+      "poke_api_location_id": 710,
+      "bosses_before": []
+    },
+    {
+      "id": "trainers-school",
+      "name": "Trainers' School",
+      "kind": "building",
+      "order": 6,
+      "map_node": "route-1",
+      "poke_api_location_id": 710,
+      "bosses_before": []
+    },
+    {
+      "id": "hauoli-city",
+      "name": "Hau'oli City",
+      "kind": "city",
+      "order": 7,
+      "map_node": "hauoli-city",
+      "poke_api_location_id": 1042,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "order": 8,
+      "map_node": "route-2",
+      "poke_api_location_id": 713,
+      "bosses_before": [
+        "ilima-1"
+      ]
+    },
+    {
+      "id": "hauoli-cemetery",
+      "name": "Hau'oli Cemetery",
+      "kind": "route",
+      "order": 9,
+      "map_node": "hauoli-cemetery",
+      "poke_api_location_id": 725,
+      "bosses_before": []
+    },
+    {
+      "id": "big-wave-beach",
+      "name": "Big Wave Beach",
+      "kind": "route",
+      "order": 10,
+      "map_node": "big-wave-beach",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "berry-fields",
+      "name": "Berry Fields",
+      "kind": "route",
+      "order": 11,
+      "map_node": "berry-fields",
+      "poke_api_location_id": 728,
+      "bosses_before": []
+    },
+    {
+      "id": "verdant-cavern",
+      "name": "Verdant Cavern",
+      "kind": "dungeon",
+      "order": 12,
+      "map_node": "verdant-cavern",
+      "poke_api_location_id": 1043,
+      "bosses_before": []
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "order": 13,
+      "map_node": "route-3",
+      "poke_api_location_id": 712,
+      "bosses_before": [
+        "totem-gumshoos",
+        "totem-raticate"
+      ]
+    },
+    {
+      "id": "kalae-bay",
+      "name": "Kala'e Bay",
+      "kind": "sea",
+      "order": 14,
+      "map_node": "kalae-bay",
+      "poke_api_location_id": 714,
+      "bosses_before": []
+    },
+    {
+      "id": "melemele-meadow",
+      "name": "Melemele Meadow",
+      "kind": "route",
+      "order": 15,
+      "map_node": "melemele-meadow",
+      "poke_api_location_id": 726,
+      "bosses_before": []
+    },
+    {
+      "id": "seaward-cave",
+      "name": "Seaward Cave",
+      "kind": "dungeon",
+      "order": 16,
+      "map_node": "seaward-cave",
+      "poke_api_location_id": 727,
+      "bosses_before": []
+    },
+    {
+      "id": "ten-carat-hill",
+      "name": "Ten Carat Hill",
+      "kind": "dungeon",
+      "order": 17,
+      "map_node": "ten-carat-hill",
+      "poke_api_location_id": 723,
+      "bosses_before": [
+        "dulse-1",
+        "soliera-1",
+        "hau-3",
+        "hala-1"
+      ]
+    },
+    {
+      "id": "alola-photo-club",
+      "name": "Alola Photo Club",
+      "kind": "building",
+      "order": 18,
+      "map_node": "hauoli-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "heahea-beach",
+      "name": "Heahea Beach",
+      "kind": "route",
+      "order": 19,
+      "map_node": "heahea-beach",
+      "poke_api_location_id": 1047,
+      "bosses_before": []
+    },
+    {
+      "id": "heahea-city",
+      "name": "Heahea City",
+      "kind": "city",
+      "order": 20,
+      "map_node": "heahea-city",
+      "poke_api_location_id": 741,
+      "bosses_before": []
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "order": 21,
+      "map_node": "route-4",
+      "poke_api_location_id": 731,
+      "bosses_before": [
+        "dexio-1",
+        "sina-1"
+      ]
+    },
+    {
+      "id": "pikachu-valley",
+      "name": "Pikachu Valley",
+      "kind": "route",
+      "order": 22,
+      "map_node": "pikachu-valley",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "paniola-town",
+      "name": "Paniola Town",
+      "kind": "city",
+      "order": 23,
+      "map_node": "paniola-town",
+      "poke_api_location_id": 740,
+      "bosses_before": []
+    },
+    {
+      "id": "paniola-ranch",
+      "name": "Paniola Ranch",
+      "kind": "route",
+      "order": 24,
+      "map_node": "paniola-ranch",
+      "poke_api_location_id": 745,
+      "bosses_before": [
+        "hau-4"
+      ]
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "order": 25,
+      "map_node": "route-5",
+      "poke_api_location_id": 732,
+      "bosses_before": [
+        "gladion-1"
+      ]
+    },
+    {
+      "id": "brooklet-hill",
+      "name": "Brooklet Hill",
+      "kind": "route",
+      "order": 26,
+      "map_node": "brooklet-hill",
+      "poke_api_location_id": 748,
+      "bosses_before": []
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "order": 27,
+      "map_node": "route-6",
+      "poke_api_location_id": 733,
+      "bosses_before": [
+        "totem-araquanid",
+        "dulse-2",
+        "soliera-2"
+      ]
+    },
+    {
+      "id": "royal-avenue",
+      "name": "Royal Avenue",
+      "kind": "city",
+      "order": 28,
+      "map_node": "royal-avenue",
+      "poke_api_location_id": 743,
+      "bosses_before": []
+    },
+    {
+      "id": "battle-royal-dome",
+      "name": "Battle Royal Dome",
+      "kind": "building",
+      "order": 29,
+      "map_node": "royal-avenue",
+      "poke_api_location_id": 754,
+      "bosses_before": []
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "order": 30,
+      "map_node": "route-7",
+      "poke_api_location_id": 734,
+      "bosses_before": [
+        "battle-royal"
+      ]
+    },
+    {
+      "id": "wela-volcano-park",
+      "name": "Wela Volcano Park",
+      "kind": "route",
+      "order": 31,
+      "map_node": "wela-volcano-park",
+      "poke_api_location_id": 746,
+      "bosses_before": []
+    },
+    {
+      "id": "dividing-peak-tunnel",
+      "name": "Dividing Peak Tunnel",
+      "kind": "dungeon",
+      "order": 32,
+      "map_node": "dividing-peak-tunnel",
+      "poke_api_location_id": 1046,
+      "bosses_before": [
+        "totem-marowak"
+      ]
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "order": 33,
+      "map_node": "route-8",
+      "poke_api_location_id": 735,
+      "bosses_before": []
+    },
+    {
+      "id": "lush-jungle",
+      "name": "Lush Jungle",
+      "kind": "route",
+      "order": 34,
+      "map_node": "lush-jungle",
+      "poke_api_location_id": 750,
+      "bosses_before": []
+    },
+    {
+      "id": "dimensional-research-lab",
+      "name": "Dimensional Research Lab",
+      "kind": "building",
+      "order": 35,
+      "map_node": "heahea-city",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "totem-lurantis"
+      ]
+    },
+    {
+      "id": "diglett-tunnel",
+      "name": "Diglett's Tunnel",
+      "kind": "dungeon",
+      "order": 36,
+      "map_node": "diglett-tunnel",
+      "poke_api_location_id": 753,
+      "bosses_before": []
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "order": 37,
+      "map_node": "route-9",
+      "poke_api_location_id": 736,
+      "bosses_before": []
+    },
+    {
+      "id": "memorial-hill",
+      "name": "Memorial Hill",
+      "kind": "route",
+      "order": 38,
+      "map_node": "memorial-hill",
+      "poke_api_location_id": 744,
+      "bosses_before": []
+    },
+    {
+      "id": "akala-outskirts",
+      "name": "Akala Outskirts",
+      "kind": "route",
+      "order": 39,
+      "map_node": "akala-outskirts",
+      "poke_api_location_id": 752,
+      "bosses_before": [
+        "plumeria-1"
+      ]
+    },
+    {
+      "id": "konikoni-city",
+      "name": "Konikoni City",
+      "kind": "city",
+      "order": 40,
+      "map_node": "konikoni-city",
+      "poke_api_location_id": 742,
+      "bosses_before": []
+    },
+    {
+      "id": "ruins-of-life",
+      "name": "Ruins of Life",
+      "kind": "dungeon",
+      "order": 41,
+      "map_node": "ruins-of-life",
+      "poke_api_location_id": 751,
+      "bosses_before": []
+    },
+    {
+      "id": "hano-grand-resort",
+      "name": "Hano Grand Resort",
+      "kind": "building",
+      "order": 42,
+      "map_node": "hano-grand-resort",
+      "poke_api_location_id": 737,
+      "bosses_before": [
+        "olivia-1"
+      ]
+    },
+    {
+      "id": "hano-beach",
+      "name": "Hano Beach",
+      "kind": "route",
+      "order": 43,
+      "map_node": "hano-beach",
+      "poke_api_location_id": 738,
+      "bosses_before": []
+    },
+    {
+      "id": "aether-paradise",
+      "name": "Aether Paradise",
+      "kind": "building",
+      "order": 44,
+      "map_node": "aether-paradise",
+      "poke_api_location_id": 796,
+      "bosses_before": []
+    },
+    {
+      "id": "malie-city",
+      "name": "Malie City",
+      "kind": "city",
+      "order": 45,
+      "map_node": "malie-city",
+      "poke_api_location_id": 1045,
+      "bosses_before": []
+    },
+    {
+      "id": "malie-garden",
+      "name": "Malie Garden",
+      "kind": "route",
+      "order": 46,
+      "map_node": "malie-garden",
+      "poke_api_location_id": 769,
+      "bosses_before": [
+        "hau-5"
+      ]
+    },
+    {
+      "id": "malie-library",
+      "name": "Malie Library",
+      "kind": "building",
+      "order": 47,
+      "map_node": "malie-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "malie-outer-cape",
+      "name": "Malie City Outer Cape",
+      "kind": "route",
+      "order": 48,
+      "map_node": "malie-outer-cape",
+      "poke_api_location_id": 798,
+      "bosses_before": []
+    },
+    {
+      "id": "kantonian-gym",
+      "name": "Kantonian Gym",
+      "kind": "building",
+      "order": 49,
+      "map_node": "malie-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "order": 50,
+      "map_node": "route-10",
+      "poke_api_location_id": 755,
+      "bosses_before": []
+    },
+    {
+      "id": "mount-hokulani",
+      "name": "Mount Hokulani",
+      "kind": "route",
+      "order": 51,
+      "map_node": "mount-hokulani",
+      "poke_api_location_id": 770,
+      "bosses_before": []
+    },
+    {
+      "id": "hokulani-observatory",
+      "name": "Hokulani Observatory",
+      "kind": "building",
+      "order": 52,
+      "map_node": "mount-hokulani",
+      "poke_api_location_id": 778,
+      "bosses_before": []
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "order": 53,
+      "map_node": "route-11",
+      "poke_api_location_id": 756,
+      "bosses_before": [
+        "totem-togedemaru",
+        "guzma-1"
+      ]
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "order": 54,
+      "map_node": "route-12",
+      "poke_api_location_id": 763,
+      "bosses_before": []
+    },
+    {
+      "id": "blush-mountain",
+      "name": "Blush Mountain",
+      "kind": "route",
+      "order": 55,
+      "map_node": "blush-mountain",
+      "poke_api_location_id": 771,
+      "bosses_before": []
+    },
+    {
+      "id": "geothermal-power-plant",
+      "name": "Geothermal Power Plant",
+      "kind": "building",
+      "order": 56,
+      "map_node": "blush-mountain",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "ulaula-beach",
+      "name": "Ula'ula Beach",
+      "kind": "route",
+      "order": 57,
+      "map_node": "ulaula-beach",
+      "poke_api_location_id": 1049,
+      "bosses_before": []
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "order": 58,
+      "map_node": "route-13",
+      "poke_api_location_id": 758,
+      "bosses_before": []
+    },
+    {
+      "id": "tapu-village",
+      "name": "Tapu Village",
+      "kind": "city",
+      "order": 59,
+      "map_node": "tapu-village",
+      "poke_api_location_id": 759,
+      "bosses_before": []
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "order": 60,
+      "map_node": "route-14",
+      "poke_api_location_id": 765,
+      "bosses_before": []
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "order": 61,
+      "map_node": "route-15",
+      "poke_api_location_id": 760,
+      "bosses_before": []
+    },
+    {
+      "id": "aether-house",
+      "name": "Aether House",
+      "kind": "building",
+      "order": 62,
+      "map_node": "route-15",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "abandoned-thrifty-megamart",
+      "name": "Abandoned Thrifty Megamart",
+      "kind": "building",
+      "order": 63,
+      "map_node": "route-14",
+      "poke_api_location_id": 777,
+      "bosses_before": []
+    },
+    {
+      "id": "haina-desert",
+      "name": "Haina Desert",
+      "kind": "route",
+      "order": 64,
+      "map_node": "haina-desert",
+      "poke_api_location_id": 764,
+      "bosses_before": [
+        "totem-mimikyu",
+        "plumeria-2"
+      ]
+    },
+    {
+      "id": "ruins-of-abundance",
+      "name": "Ruins of Abundance",
+      "kind": "dungeon",
+      "order": 65,
+      "map_node": "ruins-of-abundance",
+      "poke_api_location_id": 772,
+      "bosses_before": []
+    },
+    {
+      "id": "melemele-sea",
+      "name": "Melemele Sea",
+      "kind": "sea",
+      "order": 66,
+      "map_node": "melemele-sea",
+      "poke_api_location_id": 715,
+      "bosses_before": []
+    },
+    {
+      "id": "sandy-cave",
+      "name": "Sandy Cave",
+      "kind": "dungeon",
+      "order": 67,
+      "map_node": "sandy-cave",
+      "poke_api_location_id": 1048,
+      "bosses_before": []
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "order": 68,
+      "map_node": "route-16",
+      "poke_api_location_id": 761,
+      "bosses_before": []
+    },
+    {
+      "id": "ulaula-meadow",
+      "name": "Ula'ula Meadow",
+      "kind": "route",
+      "order": 69,
+      "map_node": "ulaula-meadow",
+      "poke_api_location_id": 766,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-of-the-sunne",
+      "name": "Lake of the Sunne",
+      "kind": "route",
+      "order": 70,
+      "map_node": "lake-of-the-sunne",
+      "poke_api_location_id": 773,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-of-the-moone",
+      "name": "Lake of the Moone",
+      "kind": "route",
+      "order": 71,
+      "map_node": "lake-of-the-moone",
+      "poke_api_location_id": 774,
+      "bosses_before": []
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17",
+      "kind": "route",
+      "order": 72,
+      "map_node": "route-17",
+      "poke_api_location_id": 762,
+      "bosses_before": []
+    },
+    {
+      "id": "po-town",
+      "name": "Po Town",
+      "kind": "city",
+      "order": 73,
+      "map_node": "po-town",
+      "poke_api_location_id": 767,
+      "bosses_before": []
+    },
+    {
+      "id": "shady-house",
+      "name": "Shady House",
+      "kind": "building",
+      "order": 74,
+      "map_node": "po-town",
+      "poke_api_location_id": 776,
+      "bosses_before": []
+    },
+    {
+      "id": "seafolk-village",
+      "name": "Seafolk Village",
+      "kind": "city",
+      "order": 75,
+      "map_node": "seafolk-village",
+      "poke_api_location_id": 788,
+      "bosses_before": [
+        "guzma-2",
+        "gladion-2",
+        "nanu-1",
+        "faba-1",
+        "faba-1-multi",
+        "guzma-3",
+        "dulse-3",
+        "soliera-3",
+        "lusamine-1"
+      ]
+    },
+    {
+      "id": "poni-wilds",
+      "name": "Poni Wilds",
+      "kind": "route",
+      "order": 76,
+      "map_node": "poni-wilds",
+      "poke_api_location_id": 781,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-beach",
+      "name": "Poni Beach",
+      "kind": "route",
+      "order": 77,
+      "map_node": "poni-beach",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "ancient-poni-path",
+      "name": "Ancient Poni Path",
+      "kind": "route",
+      "order": 78,
+      "map_node": "ancient-poni-path",
+      "poke_api_location_id": 782,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-breaker-coast",
+      "name": "Poni Breaker Coast",
+      "kind": "sea",
+      "order": 79,
+      "map_node": "poni-breaker-coast",
+      "poke_api_location_id": 783,
+      "bosses_before": []
+    },
+    {
+      "id": "ruins-of-hope",
+      "name": "Ruins of Hope",
+      "kind": "dungeon",
+      "order": 80,
+      "map_node": "ruins-of-hope",
+      "poke_api_location_id": 792,
+      "bosses_before": []
+    },
+    {
+      "id": "exeggutor-island",
+      "name": "Exeggutor Island",
+      "kind": "route",
+      "order": 81,
+      "map_node": "exeggutor-island",
+      "poke_api_location_id": 794,
+      "bosses_before": []
+    },
+    {
+      "id": "vast-poni-canyon",
+      "name": "Vast Poni Canyon",
+      "kind": "dungeon",
+      "order": 82,
+      "map_node": "vast-poni-canyon",
+      "poke_api_location_id": 789,
+      "bosses_before": []
+    },
+    {
+      "id": "altar-of-the-sunne",
+      "name": "Altar of the Sunne",
+      "kind": "building",
+      "order": 83,
+      "map_node": "altar-of-the-sunne",
+      "poke_api_location_id": 790,
+      "bosses_before": [
+        "dulse-4",
+        "soliera-4",
+        "totem-kommo-o"
+      ]
+    },
+    {
+      "id": "altar-of-the-moone",
+      "name": "Altar of the Moone",
+      "kind": "building",
+      "order": 84,
+      "map_node": "altar-of-the-moone",
+      "poke_api_location_id": 791,
+      "bosses_before": [
+        "necrozma-1"
+      ]
+    },
+    {
+      "id": "ultra-megalopolis",
+      "name": "Ultra Megalopolis",
+      "kind": "route",
+      "order": 85,
+      "map_node": "ultra-megalopolis",
+      "poke_api_location_id": 1050,
+      "bosses_before": [
+        "necrozma-1-um"
+      ]
+    },
+    {
+      "id": "mount-lanakila",
+      "name": "Mount Lanakila",
+      "kind": "dungeon",
+      "order": 86,
+      "map_node": "mount-lanakila",
+      "poke_api_location_id": 775,
+      "bosses_before": [
+        "ultra-necrozma",
+        "mina-1",
+        "ilima-2",
+        "mallow-2",
+        "lana-2",
+        "kiawe-2",
+        "sophocles-2",
+        "nanu-2",
+        "totem-ribombee",
+        "hapu-1"
+      ]
+    },
+    {
+      "id": "plank-bridge",
+      "name": "Plank Bridge",
+      "kind": "route",
+      "order": 87,
+      "map_node": "plank-bridge",
+      "poke_api_location_id": 721,
+      "bosses_before": [
+        "gladion-3"
+      ]
+    },
+    {
+      "id": "ruins-of-conflict",
+      "name": "Ruins of Conflict",
+      "kind": "dungeon",
+      "order": 88,
+      "map_node": "ruins-of-conflict",
+      "poke_api_location_id": 722,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "order": 89,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 779,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-grove",
+      "name": "Poni Grove",
+      "kind": "route",
+      "order": 90,
+      "map_node": "poni-grove",
+      "poke_api_location_id": 784,
+      "bosses_before": [
+        "molayne-1",
+        "olivia-e4",
+        "acerola-1",
+        "kahili-1",
+        "hau-champion",
+        "hala-2",
+        "ilima-3",
+        "totem-gumshoos-2",
+        "totem-raticate-2",
+        "mallow-3",
+        "lana-3",
+        "kiawe-3",
+        "faba-rr"
+      ]
+    },
+    {
+      "id": "festival-plaza",
+      "name": "Festival Plaza",
+      "kind": "building",
+      "order": 91,
+      "map_node": null,
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "ultra-space",
+      "name": "Ultra Space Wilds",
+      "kind": "route",
+      "order": 92,
+      "map_node": "ultra-space",
+      "poke_api_location_id": 1051,
+      "bosses_before": []
+    },
+    {
+      "id": "reverse-world",
+      "name": "Reverse World",
+      "kind": "route",
+      "order": 93,
+      "map_node": "reverse-world",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-plains",
+      "name": "Poni Plains",
+      "kind": "route",
+      "order": 94,
+      "map_node": "poni-plains",
+      "poke_api_location_id": 785,
+      "bosses_before": []
+    },
+    {
+      "id": "plains-grotto",
+      "name": "Plains Grotto",
+      "kind": "dungeon",
+      "order": 95,
+      "map_node": "plains-grotto",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-meadow",
+      "name": "Poni Meadow",
+      "kind": "route",
+      "order": 96,
+      "map_node": "poni-meadow",
+      "poke_api_location_id": 780,
+      "bosses_before": []
+    },
+    {
+      "id": "resolution-cave",
+      "name": "Resolution Cave",
+      "kind": "dungeon",
+      "order": 97,
+      "map_node": "resolution-cave",
+      "poke_api_location_id": 793,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-coast",
+      "name": "Poni Coast",
+      "kind": "route",
+      "order": 98,
+      "map_node": "poni-coast",
+      "poke_api_location_id": 786,
+      "bosses_before": []
+    },
+    {
+      "id": "poni-gauntlet",
+      "name": "Poni Gauntlet",
+      "kind": "route",
+      "order": 99,
+      "map_node": "poni-gauntlet",
+      "poke_api_location_id": 787,
+      "bosses_before": []
+    },
+    {
+      "id": "rainbow-rocket-castle",
+      "name": "Rainbow Rocket Castle",
+      "kind": "building",
+      "order": 100,
+      "map_node": "aether-paradise",
+      "poke_api_location_id": 1053,
+      "bosses_before": []
+    },
+    {
+      "id": "battle-tree",
+      "name": "Battle Tree",
+      "kind": "building",
+      "order": 101,
+      "map_node": "poni-gauntlet",
+      "poke_api_location_id": 795,
+      "bosses_before": [
+        "archie-rr",
+        "maxie-rr",
+        "cyrus-rr-us",
+        "cyrus-rr-um",
+        "lysandre-rr-us",
+        "lysandre-rr-um",
+        "ghetsis-rr-us",
+        "ghetsis-rr-um",
+        "giovanni-rr-us",
+        "giovanni-rr-um",
+        "faba-2",
+        "dexio-2",
+        "morimoto-iwao",
+        "aristo-1",
+        "dexio-3",
+        "molayne-2",
+        "olivia-e4-2",
+        "acerola-2",
+        "kahili-2",
+        "defense-hau",
+        "defense-gladion",
+        "defense-lusamine",
+        "defense-guzma",
+        "defense-plumeria",
+        "defense-sophocles",
+        "defense-hapu",
+        "defense-ryuki",
+        "defense-tristan",
+        "defense-kukui"
+      ]
+    }
+  ]
+}

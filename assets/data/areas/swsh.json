@@ -1,0 +1,897 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de swsh)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/swsh-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "postwick",
+      "name": "Postwick",
+      "kind": "city",
+      "order": 1,
+      "map_node": "postwick",
+      "poke_api_location_id": 924,
+      "bosses_before": []
+    },
+    {
+      "id": "slumbering-weald",
+      "name": "Slumbering Weald",
+      "kind": "dungeon",
+      "order": 2,
+      "map_node": "slumbering-weald",
+      "poke_api_location_id": 930,
+      "bosses_before": [
+        "hop-1"
+      ]
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "order": 3,
+      "map_node": "route-1",
+      "poke_api_location_id": 868,
+      "bosses_before": []
+    },
+    {
+      "id": "wedgehurst",
+      "name": "Wedgehurst",
+      "kind": "city",
+      "order": 4,
+      "map_node": "wedgehurst",
+      "poke_api_location_id": 948,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "order": 5,
+      "map_node": "route-2",
+      "poke_api_location_id": 869,
+      "bosses_before": []
+    },
+    {
+      "id": "meetup-spot",
+      "name": "Meetup Spot",
+      "kind": "route",
+      "order": 6,
+      "map_node": "meetup-spot",
+      "poke_api_location_id": 1115,
+      "bosses_before": [
+        "hop-2"
+      ]
+    },
+    {
+      "id": "rolling-fields",
+      "name": "Rolling Fields",
+      "kind": "route",
+      "order": 7,
+      "map_node": "rolling-fields",
+      "poke_api_location_id": 928,
+      "bosses_before": []
+    },
+    {
+      "id": "dappled-grove",
+      "name": "Dappled Grove",
+      "kind": "route",
+      "order": 8,
+      "map_node": "dappled-grove",
+      "poke_api_location_id": 889,
+      "bosses_before": []
+    },
+    {
+      "id": "watchtower-ruins",
+      "name": "Watchtower Ruins",
+      "kind": "route",
+      "order": 9,
+      "map_node": "watchtower-ruins",
+      "poke_api_location_id": 947,
+      "bosses_before": []
+    },
+    {
+      "id": "east-lake-axewell",
+      "name": "East Lake Axewell",
+      "kind": "route",
+      "order": 10,
+      "map_node": "east-lake-axewell",
+      "poke_api_location_id": 892,
+      "bosses_before": []
+    },
+    {
+      "id": "west-lake-axewell",
+      "name": "West Lake Axewell",
+      "kind": "route",
+      "order": 11,
+      "map_node": "west-lake-axewell",
+      "poke_api_location_id": 949,
+      "bosses_before": []
+    },
+    {
+      "id": "axews-eye",
+      "name": "Axews Eye",
+      "kind": "route",
+      "order": 12,
+      "map_node": "axews-eye",
+      "poke_api_location_id": 878,
+      "bosses_before": []
+    },
+    {
+      "id": "south-lake-miloch",
+      "name": "South Lake Miloch",
+      "kind": "route",
+      "order": 13,
+      "map_node": "south-lake-miloch",
+      "poke_api_location_id": 933,
+      "bosses_before": []
+    },
+    {
+      "id": "giants-seat",
+      "name": "Giants Seat",
+      "kind": "route",
+      "order": 14,
+      "map_node": "giants-seat",
+      "poke_api_location_id": 903,
+      "bosses_before": []
+    },
+    {
+      "id": "north-lake-miloch",
+      "name": "North Lake Miloch",
+      "kind": "route",
+      "order": 15,
+      "map_node": "north-lake-miloch",
+      "poke_api_location_id": 921,
+      "bosses_before": []
+    },
+    {
+      "id": "motostoke-riverbank",
+      "name": "Motostoke Riverbank",
+      "kind": "route",
+      "order": 16,
+      "map_node": "motostoke-riverbank",
+      "poke_api_location_id": 920,
+      "bosses_before": []
+    },
+    {
+      "id": "bridge-field",
+      "name": "Bridge Field",
+      "kind": "route",
+      "order": 17,
+      "map_node": "bridge-field",
+      "poke_api_location_id": 883,
+      "bosses_before": []
+    },
+    {
+      "id": "stony-wilderness",
+      "name": "Stony Wilderness",
+      "kind": "route",
+      "order": 18,
+      "map_node": "stony-wilderness",
+      "poke_api_location_id": 938,
+      "bosses_before": []
+    },
+    {
+      "id": "dusty-bowl",
+      "name": "Dusty Bowl",
+      "kind": "route",
+      "order": 19,
+      "map_node": "dusty-bowl",
+      "poke_api_location_id": 890,
+      "bosses_before": []
+    },
+    {
+      "id": "giants-mirror",
+      "name": "Giants Mirror",
+      "kind": "route",
+      "order": 20,
+      "map_node": "giants-mirror",
+      "poke_api_location_id": 902,
+      "bosses_before": []
+    },
+    {
+      "id": "hammerlocke-hills",
+      "name": "Hammerlocke Hills",
+      "kind": "route",
+      "order": 21,
+      "map_node": "hammerlocke-hills",
+      "poke_api_location_id": 906,
+      "bosses_before": []
+    },
+    {
+      "id": "giants-cap",
+      "name": "Giants Cap",
+      "kind": "route",
+      "order": 22,
+      "map_node": "giants-cap",
+      "poke_api_location_id": 1041,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-of-outrage",
+      "name": "Lake Of Outrage",
+      "kind": "route",
+      "order": 23,
+      "map_node": "lake-of-outrage",
+      "poke_api_location_id": 913,
+      "bosses_before": []
+    },
+    {
+      "id": "motostoke",
+      "name": "Motostoke",
+      "kind": "city",
+      "order": 24,
+      "map_node": "motostoke",
+      "poke_api_location_id": 918,
+      "bosses_before": []
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "order": 25,
+      "map_node": "route-3",
+      "poke_api_location_id": 870,
+      "bosses_before": []
+    },
+    {
+      "id": "galar-mine",
+      "name": "Galar Mine",
+      "kind": "dungeon",
+      "order": 26,
+      "map_node": "galar-mine",
+      "poke_api_location_id": 898,
+      "bosses_before": [
+        "hop-3"
+      ]
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "order": 27,
+      "map_node": "route-4",
+      "poke_api_location_id": 871,
+      "bosses_before": [
+        "bede-1"
+      ]
+    },
+    {
+      "id": "turffield",
+      "name": "Turffield",
+      "kind": "city",
+      "order": 28,
+      "map_node": "turffield",
+      "poke_api_location_id": 945,
+      "bosses_before": []
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "order": 29,
+      "map_node": "route-5",
+      "poke_api_location_id": 872,
+      "bosses_before": [
+        "milo"
+      ]
+    },
+    {
+      "id": "hulbury",
+      "name": "Hulbury",
+      "kind": "city",
+      "order": 30,
+      "map_node": "hulbury",
+      "poke_api_location_id": 909,
+      "bosses_before": [
+        "hop-4"
+      ]
+    },
+    {
+      "id": "galar-mine-2",
+      "name": "Galar Mine No. 2",
+      "kind": "dungeon",
+      "order": 31,
+      "map_node": "galar-mine-2",
+      "poke_api_location_id": 899,
+      "bosses_before": [
+        "nessa"
+      ]
+    },
+    {
+      "id": "motostoke-outskirts",
+      "name": "Motostoke Outskirts",
+      "kind": "route",
+      "order": 32,
+      "map_node": "motostoke-outskirts",
+      "poke_api_location_id": 919,
+      "bosses_before": [
+        "bede-2",
+        "marnie-1",
+        "kabu"
+      ]
+    },
+    {
+      "id": "hammerlocke",
+      "name": "Hammerlocke",
+      "kind": "city",
+      "order": 33,
+      "map_node": "hammerlocke",
+      "poke_api_location_id": 905,
+      "bosses_before": []
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "order": 34,
+      "map_node": "route-6",
+      "poke_api_location_id": 873,
+      "bosses_before": []
+    },
+    {
+      "id": "stow-on-side",
+      "name": "Stow-on-Side",
+      "kind": "city",
+      "order": 35,
+      "map_node": "stow-on-side",
+      "poke_api_location_id": 939,
+      "bosses_before": []
+    },
+    {
+      "id": "glimwood-tangle",
+      "name": "Glimwood Tangle",
+      "kind": "dungeon",
+      "order": 36,
+      "map_node": "glimwood-tangle",
+      "poke_api_location_id": 904,
+      "bosses_before": [
+        "hop-5",
+        "bea",
+        "allister",
+        "bede-3"
+      ]
+    },
+    {
+      "id": "ballonlea",
+      "name": "Ballonlea",
+      "kind": "city",
+      "order": 37,
+      "map_node": "ballonlea",
+      "poke_api_location_id": 880,
+      "bosses_before": []
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "order": 38,
+      "map_node": "route-7",
+      "poke_api_location_id": 874,
+      "bosses_before": [
+        "opal",
+        "hop-6"
+      ]
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "order": 39,
+      "map_node": "route-8",
+      "poke_api_location_id": 875,
+      "bosses_before": []
+    },
+    {
+      "id": "circhester",
+      "name": "Circhester",
+      "kind": "city",
+      "order": 40,
+      "map_node": "circhester",
+      "poke_api_location_id": 886,
+      "bosses_before": []
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "order": 41,
+      "map_node": "route-9",
+      "poke_api_location_id": 876,
+      "bosses_before": [
+        "gordie",
+        "melony",
+        "hop-7"
+      ]
+    },
+    {
+      "id": "route-9-tunnel",
+      "name": "Route 9 Tunnel",
+      "kind": "dungeon",
+      "order": 42,
+      "map_node": "route-9-tunnel",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "spikemuth",
+      "name": "Spikemuth",
+      "kind": "city",
+      "order": 43,
+      "map_node": "spikemuth",
+      "poke_api_location_id": 934,
+      "bosses_before": []
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "order": 44,
+      "map_node": "route-10",
+      "poke_api_location_id": 877,
+      "bosses_before": [
+        "marnie-2",
+        "piers",
+        "raihan"
+      ]
+    },
+    {
+      "id": "wyndon",
+      "name": "Wyndon",
+      "kind": "city",
+      "order": 45,
+      "map_node": "wyndon",
+      "poke_api_location_id": 951,
+      "bosses_before": []
+    },
+    {
+      "id": "rose-tower",
+      "name": "Rose Tower",
+      "kind": "building",
+      "order": 46,
+      "map_node": "wyndon",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "marnie-cup",
+        "hop-cup"
+      ]
+    },
+    {
+      "id": "energy-plant",
+      "name": "Energy Plant",
+      "kind": "building",
+      "order": 47,
+      "map_node": "hammerlocke",
+      "poke_api_location_id": 1114,
+      "bosses_before": [
+        "oleana",
+        "bede-cup",
+        "nessa-cup",
+        "bea-cup",
+        "allister-cup",
+        "raihan-cup"
+      ]
+    },
+    {
+      "id": "battle-tower",
+      "name": "Battle Tower",
+      "kind": "building",
+      "order": 48,
+      "map_node": "wyndon",
+      "poke_api_location_id": 881,
+      "bosses_before": [
+        "rose",
+        "eternatus-1",
+        "leon",
+        "hop-postgame-1",
+        "sordward-1",
+        "shielbert-1",
+        "sordward-2",
+        "shielbert-2",
+        "bede-leader",
+        "sordward-3",
+        "shielbert-3",
+        "hop-final",
+        "hop-final-shield",
+        "morimoto"
+      ]
+    },
+    {
+      "id": "armor-station",
+      "name": "Armor Station",
+      "kind": "route",
+      "order": 49,
+      "map_node": "armor-station",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "master-dojo",
+      "name": "Master Dojo",
+      "kind": "building",
+      "order": 50,
+      "map_node": "master-dojo",
+      "poke_api_location_id": 916,
+      "bosses_before": [
+        "klara-1",
+        "avery-1"
+      ]
+    },
+    {
+      "id": "warm-up-tunnel",
+      "name": "Warm-Up Tunnel",
+      "kind": "dungeon",
+      "order": 51,
+      "map_node": "warm-up-tunnel",
+      "poke_api_location_id": 946,
+      "bosses_before": [
+        "mustard-1"
+      ]
+    },
+    {
+      "id": "forest-of-focus",
+      "name": "Forest of Focus",
+      "kind": "route",
+      "order": 52,
+      "map_node": "forest-of-focus",
+      "poke_api_location_id": 894,
+      "bosses_before": [
+        "klara-2",
+        "avery-2",
+        "klara-3",
+        "avery-3"
+      ]
+    },
+    {
+      "id": "fields-of-honor",
+      "name": "Fields Of Honor",
+      "kind": "route",
+      "order": 53,
+      "map_node": "fields-of-honor",
+      "poke_api_location_id": 893,
+      "bosses_before": []
+    },
+    {
+      "id": "soothing-wetlands",
+      "name": "Soothing Wetlands",
+      "kind": "route",
+      "order": 54,
+      "map_node": "soothing-wetlands",
+      "poke_api_location_id": 932,
+      "bosses_before": []
+    },
+    {
+      "id": "challenge-beach",
+      "name": "Challenge Beach",
+      "kind": "route",
+      "order": 55,
+      "map_node": "challenge-beach",
+      "poke_api_location_id": 884,
+      "bosses_before": []
+    },
+    {
+      "id": "brawlers-cave",
+      "name": "Brawlers Cave",
+      "kind": "dungeon",
+      "order": 56,
+      "map_node": "brawlers-cave",
+      "poke_api_location_id": 882,
+      "bosses_before": []
+    },
+    {
+      "id": "challenge-road",
+      "name": "Challenge Road",
+      "kind": "route",
+      "order": 57,
+      "map_node": "challenge-road",
+      "poke_api_location_id": 885,
+      "bosses_before": []
+    },
+    {
+      "id": "courageous-cavern",
+      "name": "Courageous Cavern",
+      "kind": "dungeon",
+      "order": 58,
+      "map_node": "courageous-cavern",
+      "poke_api_location_id": 887,
+      "bosses_before": []
+    },
+    {
+      "id": "loop-lagoon",
+      "name": "Loop Lagoon",
+      "kind": "route",
+      "order": 59,
+      "map_node": "loop-lagoon",
+      "poke_api_location_id": 915,
+      "bosses_before": []
+    },
+    {
+      "id": "training-lowlands",
+      "name": "Training Lowlands",
+      "kind": "route",
+      "order": 60,
+      "map_node": "training-lowlands",
+      "poke_api_location_id": 943,
+      "bosses_before": []
+    },
+    {
+      "id": "workout-sea",
+      "name": "Workout Sea",
+      "kind": "sea",
+      "order": 61,
+      "map_node": "workout-sea",
+      "poke_api_location_id": 950,
+      "bosses_before": []
+    },
+    {
+      "id": "stepping-stone-sea",
+      "name": "Stepping Stone Sea",
+      "kind": "sea",
+      "order": 62,
+      "map_node": "stepping-stone-sea",
+      "poke_api_location_id": 937,
+      "bosses_before": []
+    },
+    {
+      "id": "insular-sea",
+      "name": "Insular Sea",
+      "kind": "sea",
+      "order": 63,
+      "map_node": "insular-sea",
+      "poke_api_location_id": 911,
+      "bosses_before": []
+    },
+    {
+      "id": "honeycalm-sea",
+      "name": "Honeycalm Sea",
+      "kind": "sea",
+      "order": 64,
+      "map_node": "honeycalm-sea",
+      "poke_api_location_id": 908,
+      "bosses_before": []
+    },
+    {
+      "id": "isle-of-armor-caves",
+      "name": "Isle of Armor Caves",
+      "kind": "dungeon",
+      "order": 65,
+      "map_node": "isle-of-armor-caves",
+      "poke_api_location_id": 1116,
+      "bosses_before": []
+    },
+    {
+      "id": "towers-of-two-fists",
+      "name": "Tower of Darkness / Tower of Waters",
+      "kind": "building",
+      "order": 66,
+      "map_node": "towers-of-two-fists",
+      "poke_api_location_id": 941,
+      "bosses_before": []
+    },
+    {
+      "id": "honeycalm-island",
+      "name": "Honeycalm Island",
+      "kind": "route",
+      "order": 67,
+      "map_node": "honeycalm-island",
+      "poke_api_location_id": 907,
+      "bosses_before": [
+        "mustard-tower",
+        "mustard-final",
+        "honey-1"
+      ]
+    },
+    {
+      "id": "potbottom-desert",
+      "name": "Potbottom Desert",
+      "kind": "route",
+      "order": 68,
+      "map_node": "potbottom-desert",
+      "poke_api_location_id": 925,
+      "bosses_before": []
+    },
+    {
+      "id": "crown-tundra-station",
+      "name": "Crown Tundra Station",
+      "kind": "route",
+      "order": 69,
+      "map_node": "crown-tundra-station",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "max-lair",
+      "name": "Max Lair",
+      "kind": "dungeon",
+      "order": 70,
+      "map_node": "max-lair",
+      "poke_api_location_id": 917,
+      "bosses_before": [
+        "peony-1",
+        "marnie-final",
+        "klara-final",
+        "avery-final"
+      ]
+    },
+    {
+      "id": "freezington",
+      "name": "Freezington",
+      "kind": "city",
+      "order": 71,
+      "map_node": "freezington",
+      "poke_api_location_id": 895,
+      "bosses_before": []
+    },
+    {
+      "id": "frostpoint-field",
+      "name": "Frostpoint Field",
+      "kind": "route",
+      "order": 72,
+      "map_node": "frostpoint-field",
+      "poke_api_location_id": 897,
+      "bosses_before": []
+    },
+    {
+      "id": "slippery-slope",
+      "name": "Slippery Slope",
+      "kind": "route",
+      "order": 73,
+      "map_node": "slippery-slope",
+      "poke_api_location_id": 929,
+      "bosses_before": []
+    },
+    {
+      "id": "giants-bed",
+      "name": "Giant's Bed",
+      "kind": "route",
+      "order": 74,
+      "map_node": "giants-bed",
+      "poke_api_location_id": 900,
+      "bosses_before": []
+    },
+    {
+      "id": "giants-foot",
+      "name": "Giant's Foot",
+      "kind": "route",
+      "order": 75,
+      "map_node": "giants-foot",
+      "poke_api_location_id": 901,
+      "bosses_before": []
+    },
+    {
+      "id": "old-cemetery",
+      "name": "Old Cemetery",
+      "kind": "route",
+      "order": 76,
+      "map_node": "old-cemetery",
+      "poke_api_location_id": 922,
+      "bosses_before": []
+    },
+    {
+      "id": "snowslide-slope",
+      "name": "Snowslide Slope",
+      "kind": "route",
+      "order": 77,
+      "map_node": "snowslide-slope",
+      "poke_api_location_id": 931,
+      "bosses_before": []
+    },
+    {
+      "id": "tunnel-to-the-top",
+      "name": "Tunnel to the Top",
+      "kind": "dungeon",
+      "order": 78,
+      "map_node": "tunnel-to-the-top",
+      "poke_api_location_id": 944,
+      "bosses_before": []
+    },
+    {
+      "id": "path-to-the-peak",
+      "name": "Path to the Peak",
+      "kind": "route",
+      "order": 79,
+      "map_node": "path-to-the-peak",
+      "poke_api_location_id": 923,
+      "bosses_before": []
+    },
+    {
+      "id": "crown-shrine",
+      "name": "Crown Shrine",
+      "kind": "building",
+      "order": 80,
+      "map_node": "crown-shrine",
+      "poke_api_location_id": 888,
+      "bosses_before": []
+    },
+    {
+      "id": "ballimere-lake",
+      "name": "Ballimere Lake",
+      "kind": "route",
+      "order": 81,
+      "map_node": "ballimere-lake",
+      "poke_api_location_id": 879,
+      "bosses_before": []
+    },
+    {
+      "id": "lakeside-cave",
+      "name": "Lakeside Cave",
+      "kind": "dungeon",
+      "order": 82,
+      "map_node": "lakeside-cave",
+      "poke_api_location_id": 914,
+      "bosses_before": []
+    },
+    {
+      "id": "dyna-tree-hill",
+      "name": "Dyna Tree Hill",
+      "kind": "route",
+      "order": 83,
+      "map_node": "dyna-tree-hill",
+      "poke_api_location_id": 891,
+      "bosses_before": []
+    },
+    {
+      "id": "rock-peak-ruins",
+      "name": "Rock Peak Ruins",
+      "kind": "dungeon",
+      "order": 84,
+      "map_node": "rock-peak-ruins",
+      "poke_api_location_id": 927,
+      "bosses_before": []
+    },
+    {
+      "id": "iceberg-ruins",
+      "name": "Iceberg Ruins",
+      "kind": "dungeon",
+      "order": 85,
+      "map_node": "iceberg-ruins",
+      "poke_api_location_id": 910,
+      "bosses_before": []
+    },
+    {
+      "id": "iron-ruins",
+      "name": "Iron Ruins",
+      "kind": "dungeon",
+      "order": 86,
+      "map_node": "iron-ruins",
+      "poke_api_location_id": 912,
+      "bosses_before": []
+    },
+    {
+      "id": "split-decision-ruins",
+      "name": "Split-Decision Ruins",
+      "kind": "dungeon",
+      "order": 87,
+      "map_node": "split-decision-ruins",
+      "poke_api_location_id": 935,
+      "bosses_before": []
+    },
+    {
+      "id": "frigid-sea",
+      "name": "Frigid Sea",
+      "kind": "sea",
+      "order": 88,
+      "map_node": "frigid-sea",
+      "poke_api_location_id": 896,
+      "bosses_before": []
+    },
+    {
+      "id": "roaring-sea-caves",
+      "name": "Roaring-Sea Caves",
+      "kind": "dungeon",
+      "order": 89,
+      "map_node": "roaring-sea-caves",
+      "poke_api_location_id": 926,
+      "bosses_before": []
+    },
+    {
+      "id": "three-point-pass",
+      "name": "Three-Point Pass",
+      "kind": "route",
+      "order": 90,
+      "map_node": "three-point-pass",
+      "poke_api_location_id": 940,
+      "bosses_before": []
+    }
+  ]
+}

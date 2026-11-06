@@ -1,0 +1,651 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de bw)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/bw-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "nuvema-town",
+      "name": "Nuvema Town",
+      "kind": "city",
+      "order": 1,
+      "map_node": "nuvema-town",
+      "poke_api_location_id": 346,
+      "bosses_before": []
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "order": 2,
+      "map_node": "route-1",
+      "poke_api_location_id": 356,
+      "bosses_before": [
+        "bianca-1",
+        "cheren-1"
+      ]
+    },
+    {
+      "id": "accumula-town",
+      "name": "Accumula Town",
+      "kind": "city",
+      "order": 3,
+      "map_node": "accumula-town",
+      "poke_api_location_id": 347,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "order": 4,
+      "map_node": "route-2",
+      "poke_api_location_id": 357,
+      "bosses_before": [
+        "n-accumula"
+      ]
+    },
+    {
+      "id": "striaton-city",
+      "name": "Striaton City",
+      "kind": "city",
+      "order": 5,
+      "map_node": "striaton-city",
+      "poke_api_location_id": 348,
+      "bosses_before": [
+        "bianca-2"
+      ]
+    },
+    {
+      "id": "dreamyard",
+      "name": "Dreamyard",
+      "kind": "route",
+      "order": 6,
+      "map_node": "dreamyard",
+      "poke_api_location_id": 374,
+      "bosses_before": [
+        "cheren-2",
+        "striaton-trio"
+      ]
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "order": 7,
+      "map_node": "route-3",
+      "poke_api_location_id": 358,
+      "bosses_before": []
+    },
+    {
+      "id": "wellspring-cave",
+      "name": "Wellspring Cave",
+      "kind": "dungeon",
+      "order": 8,
+      "map_node": "wellspring-cave",
+      "poke_api_location_id": 395,
+      "bosses_before": [
+        "cheren-3"
+      ]
+    },
+    {
+      "id": "nacrene-city",
+      "name": "Nacrene City",
+      "kind": "city",
+      "order": 9,
+      "map_node": "nacrene-city",
+      "poke_api_location_id": 349,
+      "bosses_before": []
+    },
+    {
+      "id": "pinwheel-forest",
+      "name": "Pinwheel Forest",
+      "kind": "dungeon",
+      "order": 10,
+      "map_node": "pinwheel-forest",
+      "poke_api_location_id": 375,
+      "bosses_before": [
+        "n-nacrene",
+        "lenora"
+      ]
+    },
+    {
+      "id": "skyarrow-bridge",
+      "name": "Skyarrow Bridge",
+      "kind": "route",
+      "order": 11,
+      "map_node": "skyarrow-bridge",
+      "poke_api_location_id": 406,
+      "bosses_before": []
+    },
+    {
+      "id": "castelia-city",
+      "name": "Castelia City",
+      "kind": "city",
+      "order": 12,
+      "map_node": "castelia-city",
+      "poke_api_location_id": 350,
+      "bosses_before": []
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "order": 13,
+      "map_node": "route-4",
+      "poke_api_location_id": 359,
+      "bosses_before": [
+        "burgh",
+        "bianca-3"
+      ]
+    },
+    {
+      "id": "desert-resort",
+      "name": "Desert Resort",
+      "kind": "route",
+      "order": 14,
+      "map_node": "desert-resort",
+      "poke_api_location_id": 376,
+      "bosses_before": [
+        "cheren-4"
+      ]
+    },
+    {
+      "id": "relic-castle",
+      "name": "Relic Castle",
+      "kind": "dungeon",
+      "order": 15,
+      "map_node": "relic-castle",
+      "poke_api_location_id": 377,
+      "bosses_before": []
+    },
+    {
+      "id": "nimbasa-city",
+      "name": "Nimbasa City",
+      "kind": "city",
+      "order": 16,
+      "map_node": "nimbasa-city",
+      "poke_api_location_id": 351,
+      "bosses_before": []
+    },
+    {
+      "id": "anville-town",
+      "name": "Anville Town",
+      "kind": "city",
+      "order": 17,
+      "map_node": "anville-town",
+      "poke_api_location_id": 385,
+      "bosses_before": [
+        "n-nimbasa",
+        "elesa"
+      ]
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "order": 18,
+      "map_node": "route-16",
+      "poke_api_location_id": 371,
+      "bosses_before": []
+    },
+    {
+      "id": "lostlorn-forest",
+      "name": "Lostlorn Forest",
+      "kind": "dungeon",
+      "order": 19,
+      "map_node": "lostlorn-forest",
+      "poke_api_location_id": 414,
+      "bosses_before": []
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "order": 20,
+      "map_node": "route-5",
+      "poke_api_location_id": 360,
+      "bosses_before": []
+    },
+    {
+      "id": "driftveil-drawbridge",
+      "name": "Driftveil Drawbridge",
+      "kind": "route",
+      "order": 21,
+      "map_node": "driftveil-drawbridge",
+      "poke_api_location_id": 407,
+      "bosses_before": [
+        "cheren-5"
+      ]
+    },
+    {
+      "id": "driftveil-city",
+      "name": "Driftveil City",
+      "kind": "city",
+      "order": 22,
+      "map_node": "driftveil-city",
+      "poke_api_location_id": 352,
+      "bosses_before": []
+    },
+    {
+      "id": "cold-storage",
+      "name": "Cold Storage",
+      "kind": "building",
+      "order": 23,
+      "map_node": "cold-storage",
+      "poke_api_location_id": 378,
+      "bosses_before": [
+        "clay"
+      ]
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "order": 24,
+      "map_node": "route-6",
+      "poke_api_location_id": 361,
+      "bosses_before": []
+    },
+    {
+      "id": "chargestone-cave",
+      "name": "Chargestone Cave",
+      "kind": "dungeon",
+      "order": 25,
+      "map_node": "chargestone-cave",
+      "poke_api_location_id": 379,
+      "bosses_before": [
+        "bianca-4"
+      ]
+    },
+    {
+      "id": "mistralton-city",
+      "name": "Mistralton City",
+      "kind": "city",
+      "order": 26,
+      "map_node": "mistralton-city",
+      "poke_api_location_id": 353,
+      "bosses_before": [
+        "n-chargestone"
+      ]
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "order": 27,
+      "map_node": "route-7",
+      "poke_api_location_id": 362,
+      "bosses_before": [
+        "skyla"
+      ]
+    },
+    {
+      "id": "celestial-tower",
+      "name": "Celestial Tower",
+      "kind": "building",
+      "order": 28,
+      "map_node": "celestial-tower",
+      "poke_api_location_id": 398,
+      "bosses_before": [
+        "cheren-6"
+      ]
+    },
+    {
+      "id": "mistralton-cave",
+      "name": "Mistralton Cave",
+      "kind": "dungeon",
+      "order": 29,
+      "map_node": "mistralton-cave",
+      "poke_api_location_id": 396,
+      "bosses_before": []
+    },
+    {
+      "id": "guidance-chamber",
+      "name": "Guidance Chamber",
+      "kind": "dungeon",
+      "order": 30,
+      "map_node": "guidance-chamber",
+      "poke_api_location_id": 416,
+      "bosses_before": []
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17",
+      "kind": "sea",
+      "order": 31,
+      "map_node": "route-17",
+      "poke_api_location_id": 372,
+      "bosses_before": []
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "order": 32,
+      "map_node": "route-18",
+      "poke_api_location_id": 373,
+      "bosses_before": []
+    },
+    {
+      "id": "p2-laboratory",
+      "name": "P2 Laboratory",
+      "kind": "building",
+      "order": 33,
+      "map_node": "p2-laboratory",
+      "poke_api_location_id": 405,
+      "bosses_before": []
+    },
+    {
+      "id": "twist-mountain",
+      "name": "Twist Mountain",
+      "kind": "dungeon",
+      "order": 34,
+      "map_node": "twist-mountain",
+      "poke_api_location_id": 380,
+      "bosses_before": []
+    },
+    {
+      "id": "icirrus-city",
+      "name": "Icirrus City",
+      "kind": "city",
+      "order": 35,
+      "map_node": "icirrus-city",
+      "poke_api_location_id": 354,
+      "bosses_before": []
+    },
+    {
+      "id": "dragonspiral-tower",
+      "name": "Dragonspiral Tower",
+      "kind": "building",
+      "order": 36,
+      "map_node": "dragonspiral-tower",
+      "poke_api_location_id": 381,
+      "bosses_before": [
+        "brycen"
+      ]
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "order": 37,
+      "map_node": "route-8",
+      "poke_api_location_id": 363,
+      "bosses_before": []
+    },
+    {
+      "id": "moor-of-icirrus",
+      "name": "Moor of Icirrus",
+      "kind": "route",
+      "order": 38,
+      "map_node": "moor-of-icirrus",
+      "poke_api_location_id": 399,
+      "bosses_before": [
+        "bianca-5"
+      ]
+    },
+    {
+      "id": "tubeline-bridge",
+      "name": "Tubeline Bridge",
+      "kind": "route",
+      "order": 39,
+      "map_node": "tubeline-bridge",
+      "poke_api_location_id": 408,
+      "bosses_before": []
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "order": 40,
+      "map_node": "route-9",
+      "poke_api_location_id": 364,
+      "bosses_before": []
+    },
+    {
+      "id": "shopping-mall-nine",
+      "name": "Shopping Mall Nine",
+      "kind": "building",
+      "order": 41,
+      "map_node": "route-9",
+      "poke_api_location_id": 400,
+      "bosses_before": []
+    },
+    {
+      "id": "opelucid-city",
+      "name": "Opelucid City",
+      "kind": "city",
+      "order": 42,
+      "map_node": "opelucid-city",
+      "poke_api_location_id": 355,
+      "bosses_before": []
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "order": 43,
+      "map_node": "route-10",
+      "poke_api_location_id": 365,
+      "bosses_before": [
+        "drayden",
+        "iris"
+      ]
+    },
+    {
+      "id": "badge-check-gates",
+      "name": "Badge Check Gates",
+      "kind": "route",
+      "order": 44,
+      "map_node": "route-10",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "cheren-7"
+      ]
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "order": 45,
+      "map_node": "victory-road",
+      "poke_api_location_id": 382,
+      "bosses_before": []
+    },
+    {
+      "id": "trial-chamber",
+      "name": "Trial Chamber",
+      "kind": "dungeon",
+      "order": 46,
+      "map_node": "trial-chamber",
+      "poke_api_location_id": 415,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "order": 47,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 386,
+      "bosses_before": []
+    },
+    {
+      "id": "ns-castle",
+      "name": "N's Castle",
+      "kind": "building",
+      "order": 48,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 387,
+      "bosses_before": [
+        "shauntal",
+        "grimsley",
+        "caitlin",
+        "marshal"
+      ]
+    },
+    {
+      "id": "challengers-cave",
+      "name": "Challenger's Cave",
+      "kind": "dungeon",
+      "order": 49,
+      "map_node": "challengers-cave",
+      "poke_api_location_id": 401,
+      "bosses_before": [
+        "n-castle-black",
+        "n-castle-white",
+        "ghetsis",
+        "alder"
+      ]
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "order": 50,
+      "map_node": "route-11",
+      "poke_api_location_id": 366,
+      "bosses_before": []
+    },
+    {
+      "id": "village-bridge",
+      "name": "Village Bridge",
+      "kind": "route",
+      "order": 51,
+      "map_node": "village-bridge",
+      "poke_api_location_id": 409,
+      "bosses_before": []
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "order": 52,
+      "map_node": "route-12",
+      "poke_api_location_id": 367,
+      "bosses_before": []
+    },
+    {
+      "id": "lacunosa-town",
+      "name": "Lacunosa Town",
+      "kind": "city",
+      "order": 53,
+      "map_node": "lacunosa-town",
+      "poke_api_location_id": 383,
+      "bosses_before": []
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "order": 54,
+      "map_node": "route-13",
+      "poke_api_location_id": 368,
+      "bosses_before": []
+    },
+    {
+      "id": "giant-chasm",
+      "name": "Giant Chasm",
+      "kind": "dungeon",
+      "order": 55,
+      "map_node": "giant-chasm",
+      "poke_api_location_id": 403,
+      "bosses_before": []
+    },
+    {
+      "id": "undella-town",
+      "name": "Undella Town",
+      "kind": "city",
+      "order": 56,
+      "map_node": "undella-town",
+      "poke_api_location_id": 384,
+      "bosses_before": []
+    },
+    {
+      "id": "undella-bay",
+      "name": "Undella Bay",
+      "kind": "sea",
+      "order": 57,
+      "map_node": "undella-bay",
+      "poke_api_location_id": 413,
+      "bosses_before": [
+        "cynthia",
+        "morimoto"
+      ]
+    },
+    {
+      "id": "abyssal-ruins",
+      "name": "Abyssal Ruins",
+      "kind": "dungeon",
+      "order": 58,
+      "map_node": "abyssal-ruins",
+      "poke_api_location_id": 428,
+      "bosses_before": []
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "order": 59,
+      "map_node": "route-14",
+      "poke_api_location_id": 369,
+      "bosses_before": []
+    },
+    {
+      "id": "abundant-shrine",
+      "name": "Abundant Shrine",
+      "kind": "route",
+      "order": 60,
+      "map_node": "abundant-shrine",
+      "poke_api_location_id": 412,
+      "bosses_before": []
+    },
+    {
+      "id": "black-city",
+      "name": "Black City / White Forest",
+      "kind": "route",
+      "order": 61,
+      "map_node": "black-city",
+      "poke_api_location_id": 392,
+      "bosses_before": []
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "order": 62,
+      "map_node": "route-15",
+      "poke_api_location_id": 370,
+      "bosses_before": []
+    },
+    {
+      "id": "marvelous-bridge",
+      "name": "Marvelous Bridge",
+      "kind": "route",
+      "order": 63,
+      "map_node": "marvelous-bridge",
+      "poke_api_location_id": 410,
+      "bosses_before": []
+    },
+    {
+      "id": "royal-unova",
+      "name": "Royal Unova",
+      "kind": "building",
+      "order": 64,
+      "map_node": "castelia-city",
+      "poke_api_location_id": 388,
+      "bosses_before": []
+    },
+    {
+      "id": "liberty-garden",
+      "name": "Liberty Garden",
+      "kind": "route",
+      "order": 65,
+      "map_node": "liberty-garden",
+      "poke_api_location_id": 404,
+      "bosses_before": []
+    }
+  ]
+}

@@ -1049,10 +1049,6 @@
       "to": "route-22"
     },
     {
-      "from": "victory-road",
-      "to": "indigo-plateau"
-    },
-    {
       "from": "viridian-city",
       "to": "route-2"
     },

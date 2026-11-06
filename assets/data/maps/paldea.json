@@ -1,0 +1,879 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Paldea",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+  ],
+  "region": "paldea",
+  "nodes": [
+    {
+      "id": "cabo-poco",
+      "name": "Cabo Poco",
+      "kind": "city",
+      "x": 0.44,
+      "y": 0.98,
+      "games": null
+    },
+    {
+      "id": "poco-path",
+      "name": "Poco Path",
+      "kind": "route",
+      "x": 0.41,
+      "y": 0.9,
+      "games": null
+    },
+    {
+      "id": "inleth-grotto",
+      "name": "Inleth Grotto",
+      "kind": "dungeon",
+      "x": 0.45,
+      "y": 0.922,
+      "games": null
+    },
+    {
+      "id": "south-province-area-one",
+      "name": "South Province (Area One)",
+      "kind": "route",
+      "x": 0.432,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "los-platos",
+      "name": "Los Platos",
+      "kind": "city",
+      "x": 0.46,
+      "y": 0.84,
+      "games": null
+    },
+    {
+      "id": "mesagoza",
+      "name": "Mesagoza",
+      "kind": "city",
+      "x": 0.5,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "south-province-area-two",
+      "name": "South Province (Area Two)",
+      "kind": "route",
+      "x": 0.337,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "cortondo",
+      "name": "Cortondo",
+      "kind": "city",
+      "x": 0.26,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "south-province-area-three",
+      "name": "South Province (Area Three)",
+      "kind": "route",
+      "x": 0.396,
+      "y": 0.821,
+      "games": null
+    },
+    {
+      "id": "artazon",
+      "name": "Artazon",
+      "kind": "city",
+      "x": 0.32,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "south-province-area-five",
+      "name": "South Province (Area Five)",
+      "kind": "route",
+      "x": 0.36,
+      "y": 0.56,
+      "games": null
+    },
+    {
+      "id": "west-province-area-one",
+      "name": "West Province (Area One)",
+      "kind": "route",
+      "x": 0.295,
+      "y": 0.502,
+      "games": null
+    },
+    {
+      "id": "south-province-area-four",
+      "name": "South Province (Area Four)",
+      "kind": "route",
+      "x": 0.549,
+      "y": 0.85,
+      "games": null
+    },
+    {
+      "id": "south-paldean-sea",
+      "name": "South Paldean Sea",
+      "kind": "sea",
+      "x": 0.6,
+      "y": 0.99,
+      "games": null
+    },
+    {
+      "id": "east-paldean-sea",
+      "name": "East Paldean Sea",
+      "kind": "sea",
+      "x": 0.99,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "west-paldean-sea",
+      "name": "West Paldean Sea",
+      "kind": "sea",
+      "x": 0.01,
+      "y": 0.7,
+      "games": null
+    },
+    {
+      "id": "east-province-area-one",
+      "name": "East Province (Area One)",
+      "kind": "route",
+      "x": 0.666,
+      "y": 0.647,
+      "games": null
+    },
+    {
+      "id": "levincia",
+      "name": "Levincia",
+      "kind": "city",
+      "x": 0.84,
+      "y": 0.56,
+      "games": null
+    },
+    {
+      "id": "east-province-area-two",
+      "name": "East Province (Area Two)",
+      "kind": "route",
+      "x": 0.794,
+      "y": 0.477,
+      "games": null
+    },
+    {
+      "id": "east-province-area-three",
+      "name": "East Province (Area Three)",
+      "kind": "route",
+      "x": 0.826,
+      "y": 0.443,
+      "games": null
+    },
+    {
+      "id": "zapapico",
+      "name": "Zapapico",
+      "kind": "city",
+      "x": 0.78,
+      "y": 0.36,
+      "games": null
+    },
+    {
+      "id": "cascarrafa",
+      "name": "Cascarrafa",
+      "kind": "city",
+      "x": 0.18,
+      "y": 0.44,
+      "games": null
+    },
+    {
+      "id": "asado-desert",
+      "name": "Asado Desert",
+      "kind": "route",
+      "x": 0.205,
+      "y": 0.479,
+      "games": null
+    },
+    {
+      "id": "porto-marinada",
+      "name": "Porto Marinada",
+      "kind": "city",
+      "x": 0.04,
+      "y": 0.5,
+      "games": null
+    },
+    {
+      "id": "west-province-area-three",
+      "name": "West Province (Area Three)",
+      "kind": "route",
+      "x": 0.276,
+      "y": 0.424,
+      "games": null
+    },
+    {
+      "id": "tagtree-thicket",
+      "name": "Tagtree Thicket",
+      "kind": "route",
+      "x": 0.62,
+      "y": 0.34,
+      "games": null
+    },
+    {
+      "id": "dalizapa-passage",
+      "name": "Dalizapa Passage",
+      "kind": "dungeon",
+      "x": 0.46,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "medali",
+      "name": "Medali",
+      "kind": "city",
+      "x": 0.3,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "glaseado-mountain",
+      "name": "Glaseado Mountain",
+      "kind": "route",
+      "x": 0.48,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "montenevera",
+      "name": "Montenevera",
+      "kind": "city",
+      "x": 0.78,
+      "y": 0.2,
+      "games": null
+    },
+    {
+      "id": "west-province-area-two",
+      "name": "West Province (Area Two)",
+      "kind": "route",
+      "x": 0.296,
+      "y": 0.395,
+      "games": null
+    },
+    {
+      "id": "alfornada-cavern",
+      "name": "Alfornada Cavern",
+      "kind": "dungeon",
+      "x": 0.638,
+      "y": 0.875,
+      "games": null
+    },
+    {
+      "id": "south-province-area-six",
+      "name": "South Province (Area Six)",
+      "kind": "route",
+      "x": 0.662,
+      "y": 0.842,
+      "games": null
+    },
+    {
+      "id": "alfornada",
+      "name": "Alfornada",
+      "kind": "city",
+      "x": 0.68,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "north-province-area-three",
+      "name": "North Province (Area Three)",
+      "kind": "route",
+      "x": 0.398,
+      "y": 0.114,
+      "games": null
+    },
+    {
+      "id": "casseroya-lake",
+      "name": "Casseroya Lake",
+      "kind": "sea",
+      "x": 0.34,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "socarrat-trail",
+      "name": "Socarrat Trail",
+      "kind": "route",
+      "x": 0.411,
+      "y": 0.023,
+      "games": null
+    },
+    {
+      "id": "north-province-area-two",
+      "name": "North Province (Area Two)",
+      "kind": "route",
+      "x": 0.509,
+      "y": 0.07,
+      "games": null
+    },
+    {
+      "id": "north-province-area-one",
+      "name": "North Province (Area One)",
+      "kind": "route",
+      "x": 0.431,
+      "y": 0.074,
+      "games": null
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "x": 0.62,
+      "y": 0.7,
+      "games": null
+    },
+    {
+      "id": "zero-gate",
+      "name": "Zero Gate",
+      "kind": "building",
+      "x": 0.485,
+      "y": 0.617,
+      "games": null
+    },
+    {
+      "id": "area-zero",
+      "name": "Area Zero",
+      "kind": "dungeon",
+      "x": 0.5,
+      "y": 0.46,
+      "games": null
+    },
+    {
+      "id": "north-paldean-sea",
+      "name": "North Paldean Sea",
+      "kind": "sea",
+      "x": 0.5,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "kitakami-road",
+      "name": "Kitakami Road",
+      "kind": "route",
+      "x": 0.9,
+      "y": 0.82,
+      "games": null
+    },
+    {
+      "id": "mossui-town",
+      "name": "Mossui Town",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.9,
+      "games": null
+    },
+    {
+      "id": "apple-hills",
+      "name": "Apple Hills",
+      "kind": "route",
+      "x": 0.842,
+      "y": 0.852,
+      "games": null
+    },
+    {
+      "id": "chilling-waterhead",
+      "name": "Chilling Waterhead",
+      "kind": "route",
+      "x": 0.803,
+      "y": 0.868,
+      "games": null
+    },
+    {
+      "id": "loyalty-plaza",
+      "name": "Loyalty Plaza",
+      "kind": "route",
+      "x": 0.818,
+      "y": 0.782,
+      "games": null
+    },
+    {
+      "id": "revelers-road",
+      "name": "Reveler's Road",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.716,
+      "games": null
+    },
+    {
+      "id": "kitakami-hall",
+      "name": "Kitakami Hall",
+      "kind": "building",
+      "x": 0.858,
+      "y": 0.765,
+      "games": null
+    },
+    {
+      "id": "onis-maw",
+      "name": "Oni's Maw",
+      "kind": "route",
+      "x": 0.877,
+      "y": 0.706,
+      "games": null
+    },
+    {
+      "id": "oni-mountain",
+      "name": "Oni Mountain",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.74,
+      "games": null
+    },
+    {
+      "id": "dreaded-den",
+      "name": "Dreaded Den",
+      "kind": "dungeon",
+      "x": 0.99,
+      "y": 0.7,
+      "games": null
+    },
+    {
+      "id": "infernal-pass",
+      "name": "Infernal Pass",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "crystal-pool",
+      "name": "Crystal Pool",
+      "kind": "route",
+      "x": 0.967,
+      "y": 0.829,
+      "games": null
+    },
+    {
+      "id": "mossfell-confluence",
+      "name": "Mossfell Confluence",
+      "kind": "route",
+      "x": 0.945,
+      "y": 0.939,
+      "games": null
+    },
+    {
+      "id": "fellhorn-gorge",
+      "name": "Fellhorn Gorge",
+      "kind": "route",
+      "x": 0.916,
+      "y": 0.908,
+      "games": null
+    },
+    {
+      "id": "wistful-fields",
+      "name": "Wistful Fields",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.907,
+      "games": null
+    },
+    {
+      "id": "kitakami-wilds",
+      "name": "Kitakami Wilds",
+      "kind": "route",
+      "x": 0.832,
+      "y": 0.942,
+      "games": null
+    },
+    {
+      "id": "paradise-barrens",
+      "name": "Paradise Barrens",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.949,
+      "games": null
+    },
+    {
+      "id": "timeless-woods",
+      "name": "Timeless Woods",
+      "kind": "route",
+      "x": 0.8,
+      "y": 0.96,
+      "games": null
+    },
+    {
+      "id": "blueberry-academy",
+      "name": "Blueberry Academy",
+      "kind": "building",
+      "x": 0.08,
+      "y": 0.88,
+      "games": null
+    },
+    {
+      "id": "terarium-central",
+      "name": "Central Plaza",
+      "kind": "route",
+      "x": 0.1,
+      "y": 0.94,
+      "games": null
+    },
+    {
+      "id": "savanna-biome",
+      "name": "Savanna Biome",
+      "kind": "route",
+      "x": 0.18,
+      "y": 0.86,
+      "games": null
+    },
+    {
+      "id": "coastal-biome",
+      "name": "Coastal Biome",
+      "kind": "route",
+      "x": 0.02,
+      "y": 0.84,
+      "games": null
+    },
+    {
+      "id": "canyon-biome",
+      "name": "Canyon Biome",
+      "kind": "route",
+      "x": 0.18,
+      "y": 0.99,
+      "games": null
+    },
+    {
+      "id": "polar-biome",
+      "name": "Polar Biome",
+      "kind": "route",
+      "x": 0.02,
+      "y": 0.98,
+      "games": null
+    },
+    {
+      "id": "chargestone-cavern",
+      "name": "Chargestone Cavern",
+      "kind": "dungeon",
+      "x": 0.06,
+      "y": 0.99,
+      "games": null
+    },
+    {
+      "id": "torchlit-labyrinth",
+      "name": "Torchlit Labyrinth",
+      "kind": "dungeon",
+      "x": 0.14,
+      "y": 0.99,
+      "games": null
+    },
+    {
+      "id": "area-zero-underdepths",
+      "name": "Area Zero Underdepths",
+      "kind": "dungeon",
+      "x": 0.52,
+      "y": 0.54,
+      "games": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "cabo-poco",
+      "to": "poco-path"
+    },
+    {
+      "from": "poco-path",
+      "to": "inleth-grotto"
+    },
+    {
+      "from": "poco-path",
+      "to": "los-platos"
+    },
+    {
+      "from": "los-platos",
+      "to": "south-province-area-one"
+    },
+    {
+      "from": "south-province-area-one",
+      "to": "mesagoza"
+    },
+    {
+      "from": "cabo-poco",
+      "to": "south-paldean-sea"
+    },
+    {
+      "from": "south-province-area-one",
+      "to": "south-province-area-two"
+    },
+    {
+      "from": "south-province-area-two",
+      "to": "cortondo"
+    },
+    {
+      "from": "cortondo",
+      "to": "south-province-area-three"
+    },
+    {
+      "from": "south-province-area-two",
+      "to": "artazon"
+    },
+    {
+      "from": "artazon",
+      "to": "south-province-area-five"
+    },
+    {
+      "from": "south-province-area-three",
+      "to": "south-province-area-four"
+    },
+    {
+      "from": "south-province-area-four",
+      "to": "alfornada"
+    },
+    {
+      "from": "south-province-area-four",
+      "to": "south-province-area-six"
+    },
+    {
+      "from": "south-province-area-six",
+      "to": "alfornada"
+    },
+    {
+      "from": "south-province-area-six",
+      "to": "alfornada-cavern"
+    },
+    {
+      "from": "artazon",
+      "to": "west-province-area-one"
+    },
+    {
+      "from": "west-province-area-one",
+      "to": "cascarrafa"
+    },
+    {
+      "from": "cascarrafa",
+      "to": "asado-desert"
+    },
+    {
+      "from": "asado-desert",
+      "to": "west-province-area-three"
+    },
+    {
+      "from": "cascarrafa",
+      "to": "porto-marinada"
+    },
+    {
+      "from": "porto-marinada",
+      "to": "west-paldean-sea"
+    },
+    {
+      "from": "west-province-area-one",
+      "to": "west-province-area-two"
+    },
+    {
+      "from": "west-province-area-two",
+      "to": "medali"
+    },
+    {
+      "from": "mesagoza",
+      "to": "east-province-area-one"
+    },
+    {
+      "from": "east-province-area-one",
+      "to": "levincia"
+    },
+    {
+      "from": "levincia",
+      "to": "east-province-area-two"
+    },
+    {
+      "from": "east-province-area-two",
+      "to": "east-province-area-three"
+    },
+    {
+      "from": "east-province-area-three",
+      "to": "zapapico"
+    },
+    {
+      "from": "east-province-area-one",
+      "to": "pokemon-league"
+    },
+    {
+      "from": "levincia",
+      "to": "east-paldean-sea"
+    },
+    {
+      "from": "zapapico",
+      "to": "tagtree-thicket"
+    },
+    {
+      "from": "tagtree-thicket",
+      "to": "dalizapa-passage"
+    },
+    {
+      "from": "dalizapa-passage",
+      "to": "medali"
+    },
+    {
+      "from": "west-province-area-two",
+      "to": "west-province-area-three"
+    },
+    {
+      "from": "medali",
+      "to": "glaseado-mountain"
+    },
+    {
+      "from": "glaseado-mountain",
+      "to": "montenevera"
+    },
+    {
+      "from": "zapapico",
+      "to": "montenevera"
+    },
+    {
+      "from": "glaseado-mountain",
+      "to": "north-province-area-three"
+    },
+    {
+      "from": "north-province-area-three",
+      "to": "casseroya-lake"
+    },
+    {
+      "from": "casseroya-lake",
+      "to": "socarrat-trail"
+    },
+    {
+      "from": "socarrat-trail",
+      "to": "north-province-area-one"
+    },
+    {
+      "from": "north-province-area-one",
+      "to": "north-province-area-two"
+    },
+    {
+      "from": "glaseado-mountain",
+      "to": "casseroya-lake"
+    },
+    {
+      "from": "casseroya-lake",
+      "to": "north-paldean-sea"
+    },
+    {
+      "from": "north-province-area-two",
+      "to": "north-paldean-sea"
+    },
+    {
+      "from": "area-zero",
+      "to": "zero-gate"
+    },
+    {
+      "from": "zero-gate",
+      "to": "mesagoza"
+    },
+    {
+      "from": "area-zero",
+      "to": "area-zero-underdepths"
+    },
+    {
+      "from": "area-zero",
+      "to": "glaseado-mountain"
+    },
+    {
+      "from": "mesagoza",
+      "to": "kitakami-road"
+    },
+    {
+      "from": "kitakami-road",
+      "to": "mossui-town"
+    },
+    {
+      "from": "mossui-town",
+      "to": "apple-hills"
+    },
+    {
+      "from": "kitakami-road",
+      "to": "loyalty-plaza"
+    },
+    {
+      "from": "loyalty-plaza",
+      "to": "revelers-road"
+    },
+    {
+      "from": "revelers-road",
+      "to": "onis-maw"
+    },
+    {
+      "from": "onis-maw",
+      "to": "oni-mountain"
+    },
+    {
+      "from": "oni-mountain",
+      "to": "dreaded-den"
+    },
+    {
+      "from": "mossui-town",
+      "to": "mossfell-confluence"
+    },
+    {
+      "from": "mossfell-confluence",
+      "to": "fellhorn-gorge"
+    },
+    {
+      "from": "fellhorn-gorge",
+      "to": "crystal-pool"
+    },
+    {
+      "from": "crystal-pool",
+      "to": "infernal-pass"
+    },
+    {
+      "from": "infernal-pass",
+      "to": "oni-mountain"
+    },
+    {
+      "from": "mossfell-confluence",
+      "to": "wistful-fields"
+    },
+    {
+      "from": "wistful-fields",
+      "to": "paradise-barrens"
+    },
+    {
+      "from": "mossui-town",
+      "to": "kitakami-wilds"
+    },
+    {
+      "from": "kitakami-wilds",
+      "to": "timeless-woods"
+    },
+    {
+      "from": "apple-hills",
+      "to": "chilling-waterhead"
+    },
+    {
+      "from": "loyalty-plaza",
+      "to": "kitakami-hall"
+    },
+    {
+      "from": "mesagoza",
+      "to": "blueberry-academy"
+    },
+    {
+      "from": "blueberry-academy",
+      "to": "terarium-central"
+    },
+    {
+      "from": "terarium-central",
+      "to": "savanna-biome"
+    },
+    {
+      "from": "terarium-central",
+      "to": "coastal-biome"
+    },
+    {
+      "from": "terarium-central",
+      "to": "canyon-biome"
+    },
+    {
+      "from": "terarium-central",
+      "to": "polar-biome"
+    },
+    {
+      "from": "canyon-biome",
+      "to": "torchlit-labyrinth"
+    },
+    {
+      "from": "polar-biome",
+      "to": "chargestone-cavern"
+    }
+  ]
+}

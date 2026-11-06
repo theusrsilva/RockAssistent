@@ -351,6 +351,16 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     [InlineData("dp", "twinleaf-town")]
     [InlineData("pt", "twinleaf-town")]
     [InlineData("bdsp", "twinleaf-town")]
+    [InlineData("bw", "nuvema-town")]
+    [InlineData("b2w2", "aspertia-city")]
+    [InlineData("xy", "vaniville-town")]
+    [InlineData("oras", "littleroot-town")]
+    [InlineData("sm", "iki-town")]
+    [InlineData("usum", "iki-town")]
+    [InlineData("swsh", "postwick")]
+    [InlineData("pla", "jubilife-village")]
+    [InlineData("sv", "cabo-poco")]
+    [InlineData("za", "gare-de-lumiose")]
     public void Areas_em_ordem_com_mapa_locais_do_dex_e_chefes(string game, string start)
     {
         Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
@@ -388,6 +398,48 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(linked.Count, linked.Distinct().Count());
         foreach (var gym in bosses.Where(b => b.Kind == "gym" && !b.Id.Contains("rematch")))
             Assert.True(linked.Contains(gym.Id), $"{game}: ginásio {gym.Id} não aparece em bosses_before");
+    }
+
+    [Theory]
+    [InlineData("bdsp", "brilliant-diamond")]
+    [InlineData("pla", "legends-arceus")]
+    [InlineData("sv", "scarlet")]
+    [InlineData("za", "legends-za")]
+    public void Encontros_proprios_com_area_especie_metodo_e_versao(string game, string someVersion)
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
+        var store = new GameDataStore(fx.Service, NullLogger<GameDataStore>.Instance);
+        var encounters = store.Encounters(game);
+        Assert.NotEmpty(encounters);
+        var areas = store.Areas(game).Select(a => a.Id).ToHashSet();
+        var versions = GameVersions.ByKey(game).PokeApiVersions;
+        Assert.All(encounters, e =>
+        {
+            Assert.Contains(e.Area, areas);
+            Assert.InRange(e.Species, 1, GameDataValidator.MaxSpecies);
+            Assert.Contains(e.Method, GameDataValidator.EncounterMethods);
+            Assert.NotEmpty(e.Versions);
+            Assert.All(e.Versions, v => Assert.Contains(v, versions));
+            Assert.InRange(e.MinLevel, 1, e.MaxLevel);
+        });
+        Assert.Contains(encounters, e => e.Versions.Contains(someVersion));
+        // Os Legends têm Alphas; os outros não.
+        Assert.Equal(game is "pla" or "za", encounters.Any(e => e.Alpha));
+        // Cobertura mínima: não é um arquivo de uma área só.
+        Assert.True(encounters.Select(e => e.Area).Distinct().Count() >= 10, $"{game}: poucas áreas com encontro");
+    }
+
+    [Fact]
+    public void Mapas_sem_aresta_repetida()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        foreach (var region in Enum.GetValues<Region>())
+        {
+            var map = store.Map(region);
+            Assert.NotNull(map);
+            var keys = map.Edges.Select(e => string.CompareOrdinal(e.From, e.To) < 0 ? (e.From, e.To) : (e.To, e.From)).ToList();
+            Assert.Equal(keys.Count, keys.Distinct().Count());
+        }
     }
 
     [Fact]
@@ -449,6 +501,9 @@ public sealed class GameDataApiTests : IAsyncLifetime
             Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync($"/api/data/zz/{kind}")).StatusCode);
         }
         Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/maps/atlantis")).StatusCode);
-        Assert.Equal(HttpStatusCode.NotFound, (await _client.GetAsync("/api/data/maps/unova")).StatusCode);
+        // Toda região tem mapa desde a Task 13: o 404 não tem mais como aparecer com os dados embutidos.
+        var unova = await _client.GetFromJsonAsync<JsonElement>("/api/data/maps/unova");
+        Assert.Equal("unova", unova.GetProperty("region").GetString());
+        Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/maps/5")).StatusCode);
     }
 }

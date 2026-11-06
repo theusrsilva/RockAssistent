@@ -1,0 +1,536 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de za)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem e nomes: docs/superpowers/sources/za-pokemythology-notes.md (Wild Zones e missões) e https://www.serebii.net/pokearth/lumiosecity/. Distritos, avenidas e bulevares apontam para o location lumiose-city. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta."
+  ],
+  "items": [
+    {
+      "id": "gare-de-lumiose",
+      "name": "Gare de Lumiose",
+      "kind": "building",
+      "order": 1,
+      "map_node": "gare-de-lumiose",
+      "poke_api_location_id": 687,
+      "bosses_before": []
+    },
+    {
+      "id": "vert-district",
+      "name": "Vert District",
+      "kind": "city",
+      "order": 2,
+      "map_node": "vert-district",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "andi-1"
+      ]
+    },
+    {
+      "id": "hotel-z",
+      "name": "Hotel Z",
+      "kind": "building",
+      "order": 3,
+      "map_node": "vert-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-research-lab",
+      "name": "Pokémon Research Lab",
+      "kind": "building",
+      "order": 4,
+      "map_node": "vert-district",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "taunie-1",
+        "zach-z"
+      ]
+    },
+    {
+      "id": "wild-zone-1",
+      "name": "Wild Zone 1",
+      "kind": "route",
+      "order": 5,
+      "map_node": "wild-zone-1",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "looker-bureau",
+      "name": "Looker Bureau",
+      "kind": "building",
+      "order": 6,
+      "map_node": "vert-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "bleu-district",
+      "name": "Bleu District",
+      "kind": "city",
+      "order": 7,
+      "map_node": "bleu-district",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "josee-1",
+        "emma-1"
+      ]
+    },
+    {
+      "id": "rouge-district",
+      "name": "Rouge District",
+      "kind": "city",
+      "order": 8,
+      "map_node": "rouge-district",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "yvon-y",
+        "naveen-1"
+      ]
+    },
+    {
+      "id": "south-boulevard",
+      "name": "South Boulevard",
+      "kind": "city",
+      "order": 9,
+      "map_node": "south-boulevard",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "xavi-x",
+        "lida-1"
+      ]
+    },
+    {
+      "id": "wild-zone-2",
+      "name": "Wild Zone 2",
+      "kind": "route",
+      "order": 10,
+      "map_node": "wild-zone-2",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-3",
+      "name": "Wild Zone 3",
+      "kind": "route",
+      "order": 11,
+      "map_node": "wild-zone-3",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-4",
+      "name": "Wild Zone 4",
+      "kind": "route",
+      "order": 12,
+      "map_node": "wild-zone-4",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-5",
+      "name": "Wild Zone 5",
+      "kind": "route",
+      "order": 13,
+      "map_node": "wild-zone-5",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-6",
+      "name": "Wild Zone 6",
+      "kind": "route",
+      "order": 14,
+      "map_node": "wild-zone-6",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "restaurant-le-nah",
+      "name": "Restaurant Le Nah",
+      "kind": "building",
+      "order": 15,
+      "map_node": "south-boulevard",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "magenta-district",
+      "name": "Magenta District",
+      "kind": "city",
+      "order": 16,
+      "map_node": "magenta-district",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "rintaro-w",
+        "taunie-2"
+      ]
+    },
+    {
+      "id": "quasartico-inc",
+      "name": "Quasartico Inc.",
+      "kind": "building",
+      "order": 17,
+      "map_node": "magenta-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "jaune-district",
+      "name": "Jaune District",
+      "kind": "city",
+      "order": 18,
+      "map_node": "jaune-district",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "vinnie-v"
+      ]
+    },
+    {
+      "id": "wild-zone-7",
+      "name": "Wild Zone 7",
+      "kind": "route",
+      "order": 19,
+      "map_node": "wild-zone-7",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-8",
+      "name": "Wild Zone 8",
+      "kind": "route",
+      "order": 20,
+      "map_node": "wild-zone-8",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-9",
+      "name": "Wild Zone 9",
+      "kind": "route",
+      "order": 21,
+      "map_node": "wild-zone-9",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-10",
+      "name": "Wild Zone 10",
+      "kind": "route",
+      "order": 22,
+      "map_node": "wild-zone-10",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "electrical-substation",
+      "name": "Electrical Substation",
+      "kind": "building",
+      "order": 23,
+      "map_node": "wild-zone-14",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "racine-construction",
+      "name": "Racine Construction",
+      "kind": "building",
+      "order": 24,
+      "map_node": "jaune-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "justice-dojo",
+      "name": "Justice Dojo",
+      "kind": "building",
+      "order": 25,
+      "map_node": "jaune-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-11",
+      "name": "Wild Zone 11",
+      "kind": "route",
+      "order": 26,
+      "map_node": "wild-zone-11",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-12",
+      "name": "Wild Zone 12",
+      "kind": "route",
+      "order": 27,
+      "map_node": "wild-zone-12",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-13",
+      "name": "Wild Zone 13",
+      "kind": "route",
+      "order": 28,
+      "map_node": "wild-zone-13",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "rogue-slowbro",
+        "rogue-camerupt",
+        "rogue-victreebel",
+        "naveen-2",
+        "mani-quiz",
+        "tarragon-1",
+        "canari-f",
+        "rogue-beedrill",
+        "rogue-hawlucha",
+        "rogue-banette",
+        "josee-2"
+      ]
+    },
+    {
+      "id": "sewers-main-access",
+      "name": "The Sewers (Main Access)",
+      "kind": "dungeon",
+      "order": 29,
+      "map_node": "sewers",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "sewers-canal-access",
+      "name": "The Sewers (Canal Access)",
+      "kind": "dungeon",
+      "order": 30,
+      "map_node": "sewers",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "gwynn-1",
+        "ivor-e"
+      ]
+    },
+    {
+      "id": "rust-syndicate",
+      "name": "Rust Syndicate Office",
+      "kind": "building",
+      "order": 31,
+      "map_node": "bleu-district",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-14",
+      "name": "Wild Zone 14",
+      "kind": "route",
+      "order": 32,
+      "map_node": "wild-zone-14",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "philippe-1",
+        "rogue-mawile",
+        "rogue-barbaracle",
+        "gwynn-2",
+        "rogue-ampharos",
+        "corbeau-d",
+        "lida-2",
+        "naveen-3"
+      ]
+    },
+    {
+      "id": "wild-zone-15",
+      "name": "Wild Zone 15",
+      "kind": "route",
+      "order": 33,
+      "map_node": "wild-zone-15",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "vernal-avenue",
+      "name": "Vernal Avenue",
+      "kind": "city",
+      "order": 34,
+      "map_node": "vernal-avenue",
+      "poke_api_location_id": 599,
+      "bosses_before": []
+    },
+    {
+      "id": "autumnal-avenue",
+      "name": "Autumnal Avenue",
+      "kind": "city",
+      "order": 35,
+      "map_node": "autumnal-avenue",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "asami-1",
+        "rogue-froslass",
+        "rogue-altaria",
+        "rogue-venusaur",
+        "lebanne-1"
+      ]
+    },
+    {
+      "id": "hibernal-avenue",
+      "name": "Hibernal Avenue",
+      "kind": "city",
+      "order": 36,
+      "map_node": "hibernal-avenue",
+      "poke_api_location_id": 599,
+      "bosses_before": []
+    },
+    {
+      "id": "estival-avenue",
+      "name": "Estival Avenue",
+      "kind": "city",
+      "order": 37,
+      "map_node": "estival-avenue",
+      "poke_api_location_id": 599,
+      "bosses_before": []
+    },
+    {
+      "id": "north-boulevard",
+      "name": "North Boulevard",
+      "kind": "city",
+      "order": 38,
+      "map_node": "north-boulevard",
+      "poke_api_location_id": 599,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-16",
+      "name": "Wild Zone 16",
+      "kind": "route",
+      "order": 39,
+      "map_node": "wild-zone-16",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-17",
+      "name": "Wild Zone 17",
+      "kind": "route",
+      "order": 40,
+      "map_node": "wild-zone-17",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "hotel-richissime",
+      "name": "Hotel Richissime",
+      "kind": "building",
+      "order": 41,
+      "map_node": "north-boulevard",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "wild-zone-18",
+      "name": "Wild Zone 18",
+      "kind": "route",
+      "order": 42,
+      "map_node": "wild-zone-18",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "tournoi-canari",
+        "tournoi-ivor",
+        "tournoi-corbeau",
+        "jacinthe-c",
+        "rogue-dragonite",
+        "rogue-tyranitar",
+        "philippe-2",
+        "rogue-starmie",
+        "emma-2"
+      ]
+    },
+    {
+      "id": "wild-zone-19",
+      "name": "Wild Zone 19",
+      "kind": "route",
+      "order": 43,
+      "map_node": "wild-zone-19",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "lysandre-cafe",
+      "name": "Lysandre Café",
+      "kind": "building",
+      "order": 44,
+      "map_node": "centrico-plaza",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "centrico-plaza",
+      "name": "Centrico Plaza",
+      "kind": "city",
+      "order": 45,
+      "map_node": "centrico-plaza",
+      "poke_api_location_id": 599,
+      "bosses_before": [
+        "griselle-1"
+      ]
+    },
+    {
+      "id": "nouveau-cafe",
+      "name": "Nouveau Café",
+      "kind": "building",
+      "order": 46,
+      "map_node": "centrico-plaza",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "prism-tower",
+      "name": "Prism Tower",
+      "kind": "building",
+      "order": 47,
+      "map_node": "centrico-plaza",
+      "poke_api_location_id": 600,
+      "bosses_before": [
+        "grisham-b"
+      ]
+    },
+    {
+      "id": "lysandre-labs",
+      "name": "Lysandre Labs",
+      "kind": "dungeon",
+      "order": 48,
+      "map_node": "lysandre-labs",
+      "poke_api_location_id": 601,
+      "bosses_before": [
+        "taunie-3",
+        "rogue-gengar-heracross",
+        "l-final",
+        "griselle-reward",
+        "lida-reward",
+        "tarragon-reward",
+        "xavi-reward",
+        "gwynn-reward",
+        "lebanne-reward",
+        "naveen-reward",
+        "yvon-reward",
+        "rintaro-reward",
+        "canari-reward",
+        "mani-reward",
+        "emma-reward",
+        "corbeau-reward",
+        "taunie-reward",
+        "ivor-reward",
+        "philippe-reward",
+        "jacinthe-reward",
+        "grisham-reward",
+        "vinnie-reward"
+      ]
+    },
+    {
+      "id": "wild-zone-20",
+      "name": "Wild Zone 20",
+      "kind": "route",
+      "order": 49,
+      "map_node": "wild-zone-20",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    }
+  ]
+}

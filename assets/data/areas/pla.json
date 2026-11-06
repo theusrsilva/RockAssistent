@@ -1,0 +1,1050 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de pla)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/pla-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "jubilife-village",
+      "name": "Jubilife Village",
+      "kind": "city",
+      "order": 1,
+      "map_node": "jubilife-village",
+      "poke_api_location_id": 998,
+      "bosses_before": []
+    },
+    {
+      "id": "prelude-beach",
+      "name": "Prelude Beach",
+      "kind": "route",
+      "order": 2,
+      "map_node": "prelude-beach",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "volo-1",
+        "akari-1"
+      ]
+    },
+    {
+      "id": "practice-field",
+      "name": "Practice Field",
+      "kind": "route",
+      "order": 3,
+      "map_node": "practice-field",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "obsidian-fieldlands",
+      "name": "Obsidian Fieldlands",
+      "kind": "route",
+      "order": 4,
+      "map_node": "fieldlands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "fieldlands-camp",
+      "name": "Fieldlands Camp",
+      "kind": "building",
+      "order": 5,
+      "map_node": "fieldlands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "aspiration-hill",
+      "name": "Aspiration Hill",
+      "kind": "route",
+      "order": 6,
+      "map_node": "aspiration-hill",
+      "poke_api_location_id": 955,
+      "bosses_before": []
+    },
+    {
+      "id": "horseshoe-plains",
+      "name": "Horseshoe Plains",
+      "kind": "route",
+      "order": 7,
+      "map_node": "horseshoe-plains",
+      "poke_api_location_id": 992,
+      "bosses_before": []
+    },
+    {
+      "id": "floaro-gardens",
+      "name": "Floaro Gardens",
+      "kind": "route",
+      "order": 8,
+      "map_node": "floaro-gardens",
+      "poke_api_location_id": 980,
+      "bosses_before": []
+    },
+    {
+      "id": "deertrack-path",
+      "name": "Deertrack Path",
+      "kind": "route",
+      "order": 9,
+      "map_node": "deertrack-path",
+      "poke_api_location_id": 974,
+      "bosses_before": []
+    },
+    {
+      "id": "windswept-run",
+      "name": "Windswept Run",
+      "kind": "route",
+      "order": 10,
+      "map_node": "windswept-run",
+      "poke_api_location_id": 1039,
+      "bosses_before": [
+        "mai-1"
+      ]
+    },
+    {
+      "id": "natures-pantry",
+      "name": "Nature's Pantry",
+      "kind": "route",
+      "order": 11,
+      "map_node": "natures-pantry",
+      "poke_api_location_id": 1006,
+      "bosses_before": []
+    },
+    {
+      "id": "deertrack-heights",
+      "name": "Deertrack Heights",
+      "kind": "route",
+      "order": 12,
+      "map_node": "deertrack-heights",
+      "poke_api_location_id": 973,
+      "bosses_before": []
+    },
+    {
+      "id": "worn-bridge",
+      "name": "Worn Bridge",
+      "kind": "route",
+      "order": 13,
+      "map_node": "worn-bridge",
+      "poke_api_location_id": 1040,
+      "bosses_before": [
+        "alpha-kricketune"
+      ]
+    },
+    {
+      "id": "grueling-grove",
+      "name": "Grueling Grove",
+      "kind": "route",
+      "order": 14,
+      "map_node": "grueling-grove",
+      "poke_api_location_id": 986,
+      "bosses_before": []
+    },
+    {
+      "id": "oreburrow-tunnel",
+      "name": "Oreburrow Tunnel",
+      "kind": "dungeon",
+      "order": 15,
+      "map_node": "oreburrow-tunnel",
+      "poke_api_location_id": 1008,
+      "bosses_before": []
+    },
+    {
+      "id": "the-heartwood",
+      "name": "The Heartwood",
+      "kind": "route",
+      "order": 16,
+      "map_node": "the-heartwood",
+      "poke_api_location_id": 1028,
+      "bosses_before": []
+    },
+    {
+      "id": "grandtree-arena",
+      "name": "Grandtree Arena",
+      "kind": "building",
+      "order": 17,
+      "map_node": "grandtree-arena",
+      "poke_api_location_id": 985,
+      "bosses_before": []
+    },
+    {
+      "id": "tidewater-dam",
+      "name": "Tidewater Dam",
+      "kind": "route",
+      "order": 18,
+      "map_node": "tidewater-dam",
+      "poke_api_location_id": 1029,
+      "bosses_before": [
+        "lian-1",
+        "irida-1",
+        "noble-kleavor",
+        "akari-2"
+      ]
+    },
+    {
+      "id": "obsidian-falls",
+      "name": "Obsidian Falls",
+      "kind": "route",
+      "order": 19,
+      "map_node": "obsidian-falls",
+      "poke_api_location_id": 1007,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-verity",
+      "name": "Lake Verity",
+      "kind": "sea",
+      "order": 20,
+      "map_node": "lake-verity",
+      "poke_api_location_id": 1001,
+      "bosses_before": []
+    },
+    {
+      "id": "sandgem-flats",
+      "name": "Sandgem Flats",
+      "kind": "route",
+      "order": 21,
+      "map_node": "sandgem-flats",
+      "poke_api_location_id": 1014,
+      "bosses_before": []
+    },
+    {
+      "id": "ramanas-island",
+      "name": "Ramanas Island",
+      "kind": "route",
+      "order": 22,
+      "map_node": "ramanas-island",
+      "poke_api_location_id": 1011,
+      "bosses_before": []
+    },
+    {
+      "id": "crimson-mirelands",
+      "name": "Crimson Mirelands",
+      "kind": "route",
+      "order": 23,
+      "map_node": "mirelands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "mirelands-camp",
+      "name": "Mirelands Camp",
+      "kind": "building",
+      "order": 24,
+      "map_node": "mirelands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "golden-lowlands",
+      "name": "Golden Lowlands",
+      "kind": "route",
+      "order": 25,
+      "map_node": "golden-lowlands",
+      "poke_api_location_id": 984,
+      "bosses_before": []
+    },
+    {
+      "id": "bolderoll-slope",
+      "name": "Bolderoll Slope",
+      "kind": "route",
+      "order": 26,
+      "map_node": "bolderoll-slope",
+      "poke_api_location_id": 960,
+      "bosses_before": []
+    },
+    {
+      "id": "gapejaw-bog",
+      "name": "Gapejaw Bog",
+      "kind": "route",
+      "order": 27,
+      "map_node": "gapejaw-bog",
+      "poke_api_location_id": 981,
+      "bosses_before": []
+    },
+    {
+      "id": "scarlet-bog",
+      "name": "Scarlet Bog",
+      "kind": "route",
+      "order": 28,
+      "map_node": "scarlet-bog",
+      "poke_api_location_id": 1015,
+      "bosses_before": []
+    },
+    {
+      "id": "bogbound-camp",
+      "name": "Bogbound Camp",
+      "kind": "building",
+      "order": 29,
+      "map_node": "bogbound-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "sludge-mound",
+      "name": "Sludge Mound",
+      "kind": "route",
+      "order": 30,
+      "map_node": "sludge-mound",
+      "poke_api_location_id": 1019,
+      "bosses_before": []
+    },
+    {
+      "id": "ursas-ring",
+      "name": "Ursa's Ring",
+      "kind": "route",
+      "order": 31,
+      "map_node": "ursas-ring",
+      "poke_api_location_id": 1033,
+      "bosses_before": []
+    },
+    {
+      "id": "holm-of-trials",
+      "name": "Holm of Trials",
+      "kind": "route",
+      "order": 32,
+      "map_node": "holm-of-trials",
+      "poke_api_location_id": 991,
+      "bosses_before": []
+    },
+    {
+      "id": "diamond-settlement",
+      "name": "Diamond Settlement",
+      "kind": "city",
+      "order": 33,
+      "map_node": "diamond-settlement",
+      "poke_api_location_id": 976,
+      "bosses_before": []
+    },
+    {
+      "id": "diamond-heath",
+      "name": "Diamond Heath",
+      "kind": "route",
+      "order": 34,
+      "map_node": "diamond-heath",
+      "poke_api_location_id": 975,
+      "bosses_before": []
+    },
+    {
+      "id": "cloudpool-ridge",
+      "name": "Cloudpool Ridge",
+      "kind": "route",
+      "order": 35,
+      "map_node": "cloudpool-ridge",
+      "poke_api_location_id": 968,
+      "bosses_before": []
+    },
+    {
+      "id": "shrouded-ruins",
+      "name": "Shrouded Ruins",
+      "kind": "dungeon",
+      "order": 36,
+      "map_node": "shrouded-ruins",
+      "poke_api_location_id": 1018,
+      "bosses_before": []
+    },
+    {
+      "id": "cottonsedge-prairie",
+      "name": "Cottonsedge Prairie",
+      "kind": "route",
+      "order": 37,
+      "map_node": "cottonsedge-prairie",
+      "poke_api_location_id": 970,
+      "bosses_before": []
+    },
+    {
+      "id": "droning-meadow",
+      "name": "Droning Meadow",
+      "kind": "route",
+      "order": 38,
+      "map_node": "droning-meadow",
+      "poke_api_location_id": 977,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-valor",
+      "name": "Lake Valor",
+      "kind": "sea",
+      "order": 39,
+      "map_node": "lake-valor",
+      "poke_api_location_id": 1000,
+      "bosses_before": []
+    },
+    {
+      "id": "solaceon-ruins",
+      "name": "Solaceon Ruins",
+      "kind": "dungeon",
+      "order": 40,
+      "map_node": "solaceon-ruins",
+      "poke_api_location_id": 1022,
+      "bosses_before": []
+    },
+    {
+      "id": "brava-arena",
+      "name": "Brava Arena",
+      "kind": "building",
+      "order": 41,
+      "map_node": "brava-arena",
+      "poke_api_location_id": 962,
+      "bosses_before": [
+        "volo-2",
+        "coin-1",
+        "ursaluna-1"
+      ]
+    },
+    {
+      "id": "cobalt-coastlands",
+      "name": "Cobalt Coastlands",
+      "kind": "route",
+      "order": 42,
+      "map_node": "beachside-camp",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "noble-lilligant"
+      ]
+    },
+    {
+      "id": "beachside-camp",
+      "name": "Beachside Camp",
+      "kind": "building",
+      "order": 43,
+      "map_node": "beachside-camp",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "irida-2"
+      ]
+    },
+    {
+      "id": "ginkgo-landing",
+      "name": "Ginkgo Landing",
+      "kind": "route",
+      "order": 44,
+      "map_node": "ginkgo-landing",
+      "poke_api_location_id": 982,
+      "bosses_before": []
+    },
+    {
+      "id": "crossing-slope",
+      "name": "Crossing Slope",
+      "kind": "route",
+      "order": 45,
+      "map_node": "crossing-slope",
+      "poke_api_location_id": 971,
+      "bosses_before": []
+    },
+    {
+      "id": "aipom-hill",
+      "name": "Aipom Hill",
+      "kind": "route",
+      "order": 46,
+      "map_node": "aipom-hill",
+      "poke_api_location_id": 952,
+      "bosses_before": []
+    },
+    {
+      "id": "coastlands-camp",
+      "name": "Coastlands Camp",
+      "kind": "building",
+      "order": 47,
+      "map_node": "coastlands-camp",
+      "poke_api_location_id": 969,
+      "bosses_before": []
+    },
+    {
+      "id": "bathers-lagoon",
+      "name": "Bathers' Lagoon",
+      "kind": "route",
+      "order": 48,
+      "map_node": "bathers-lagoon",
+      "poke_api_location_id": 958,
+      "bosses_before": []
+    },
+    {
+      "id": "hideaway-bay",
+      "name": "Hideaway Bay",
+      "kind": "route",
+      "order": 49,
+      "map_node": "hideaway-bay",
+      "poke_api_location_id": 990,
+      "bosses_before": []
+    },
+    {
+      "id": "deadwood-haunt",
+      "name": "Deadwood Haunt",
+      "kind": "route",
+      "order": 50,
+      "map_node": "deadwood-haunt",
+      "poke_api_location_id": 972,
+      "bosses_before": []
+    },
+    {
+      "id": "sands-reach",
+      "name": "Sand's Reach",
+      "kind": "route",
+      "order": 51,
+      "map_node": "sands-reach",
+      "poke_api_location_id": 1013,
+      "bosses_before": []
+    },
+    {
+      "id": "tombolo-walk",
+      "name": "Tombolo Walk",
+      "kind": "route",
+      "order": 52,
+      "map_node": "tombolo-walk",
+      "poke_api_location_id": 1030,
+      "bosses_before": []
+    },
+    {
+      "id": "castaway-shore",
+      "name": "Castaway Shore",
+      "kind": "route",
+      "order": 53,
+      "map_node": "castaway-shore",
+      "poke_api_location_id": 963,
+      "bosses_before": []
+    },
+    {
+      "id": "windbreak-stand",
+      "name": "Windbreak Stand",
+      "kind": "route",
+      "order": 54,
+      "map_node": "windbreak-stand",
+      "poke_api_location_id": 1038,
+      "bosses_before": []
+    },
+    {
+      "id": "veilstone-cape",
+      "name": "Veilstone Cape",
+      "kind": "route",
+      "order": 55,
+      "map_node": "veilstone-cape",
+      "poke_api_location_id": 1034,
+      "bosses_before": []
+    },
+    {
+      "id": "tranquility-cove",
+      "name": "Tranquility Cove",
+      "kind": "sea",
+      "order": 56,
+      "map_node": "tranquility-cove",
+      "poke_api_location_id": 1031,
+      "bosses_before": []
+    },
+    {
+      "id": "tidal-passage",
+      "name": "Tidal Passage",
+      "kind": "route",
+      "order": 57,
+      "map_node": "tidal-passage",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "lunkers-lair",
+      "name": "Lunker's Lair",
+      "kind": "sea",
+      "order": 58,
+      "map_node": "lunkers-lair",
+      "poke_api_location_id": 1003,
+      "bosses_before": []
+    },
+    {
+      "id": "seagrass-haven",
+      "name": "Seagrass Haven",
+      "kind": "sea",
+      "order": 59,
+      "map_node": "seagrass-haven",
+      "poke_api_location_id": 1016,
+      "bosses_before": []
+    },
+    {
+      "id": "seaside-hollow",
+      "name": "Seaside Hollow",
+      "kind": "dungeon",
+      "order": 60,
+      "map_node": "seaside-hollow",
+      "poke_api_location_id": 1017,
+      "bosses_before": []
+    },
+    {
+      "id": "islespy-shore",
+      "name": "Islespy Shore",
+      "kind": "route",
+      "order": 61,
+      "map_node": "islespy-shore",
+      "poke_api_location_id": 997,
+      "bosses_before": []
+    },
+    {
+      "id": "spring-path",
+      "name": "Spring Path",
+      "kind": "route",
+      "order": 62,
+      "map_node": "spring-path",
+      "poke_api_location_id": 1025,
+      "bosses_before": []
+    },
+    {
+      "id": "firespit-island",
+      "name": "Firespit Island",
+      "kind": "route",
+      "order": 63,
+      "map_node": "firespit-island",
+      "poke_api_location_id": 979,
+      "bosses_before": []
+    },
+    {
+      "id": "molten-arena",
+      "name": "Molten Arena",
+      "kind": "building",
+      "order": 64,
+      "map_node": "molten-arena",
+      "poke_api_location_id": 1004,
+      "bosses_before": [
+        "clover-1",
+        "coin-2",
+        "charm-1",
+        "noble-arcanine",
+        "adaman-1"
+      ]
+    },
+    {
+      "id": "lava-dome-sanctum",
+      "name": "Lava Dome Sanctum",
+      "kind": "dungeon",
+      "order": 65,
+      "map_node": "lava-dome-sanctum",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "coronet-highlands",
+      "name": "Coronet Highlands",
+      "kind": "route",
+      "order": 66,
+      "map_node": "highlands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "highlands-camp",
+      "name": "Highlands Camp",
+      "kind": "building",
+      "order": 67,
+      "map_node": "highlands-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "heavenward-lookout",
+      "name": "Heavenward Lookout",
+      "kind": "route",
+      "order": 68,
+      "map_node": "heavenward-lookout",
+      "poke_api_location_id": 988,
+      "bosses_before": []
+    },
+    {
+      "id": "wayward-cave",
+      "name": "Wayward Cave",
+      "kind": "dungeon",
+      "order": 69,
+      "map_node": "wayward-cave",
+      "poke_api_location_id": 1035,
+      "bosses_before": []
+    },
+    {
+      "id": "wayward-wood",
+      "name": "Wayward Wood",
+      "kind": "route",
+      "order": 70,
+      "map_node": "wayward-wood",
+      "poke_api_location_id": 1036,
+      "bosses_before": []
+    },
+    {
+      "id": "ancient-quarry",
+      "name": "Ancient Quarry",
+      "kind": "dungeon",
+      "order": 71,
+      "map_node": "ancient-quarry",
+      "poke_api_location_id": 953,
+      "bosses_before": [
+        "melli-1",
+        "ingo-1"
+      ]
+    },
+    {
+      "id": "sonorous-path",
+      "name": "Sonorous Path",
+      "kind": "route",
+      "order": 72,
+      "map_node": "sonorous-path",
+      "poke_api_location_id": 1023,
+      "bosses_before": []
+    },
+    {
+      "id": "lonely-spring",
+      "name": "Lonely Spring",
+      "kind": "route",
+      "order": 73,
+      "map_node": "lonely-spring",
+      "poke_api_location_id": 1002,
+      "bosses_before": []
+    },
+    {
+      "id": "mountain-camp",
+      "name": "Mountain Camp",
+      "kind": "building",
+      "order": 74,
+      "map_node": "mountain-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "clamberclaw-cliffs",
+      "name": "Clamberclaw Cliffs",
+      "kind": "route",
+      "order": 75,
+      "map_node": "clamberclaw-cliffs",
+      "poke_api_location_id": 966,
+      "bosses_before": []
+    },
+    {
+      "id": "celestica-ruins",
+      "name": "Celestica Ruins",
+      "kind": "dungeon",
+      "order": 76,
+      "map_node": "celestica-ruins",
+      "poke_api_location_id": 964,
+      "bosses_before": []
+    },
+    {
+      "id": "primeval-grotto",
+      "name": "Primeval Grotto",
+      "kind": "dungeon",
+      "order": 77,
+      "map_node": "primeval-grotto",
+      "poke_api_location_id": 1010,
+      "bosses_before": []
+    },
+    {
+      "id": "celestica-trail",
+      "name": "Celestica Trail",
+      "kind": "route",
+      "order": 78,
+      "map_node": "celestica-trail",
+      "poke_api_location_id": 965,
+      "bosses_before": []
+    },
+    {
+      "id": "fabled-spring",
+      "name": "Fabled Spring",
+      "kind": "route",
+      "order": 79,
+      "map_node": "fabled-spring",
+      "poke_api_location_id": 978,
+      "bosses_before": []
+    },
+    {
+      "id": "bolderoll-ravine",
+      "name": "Bolderoll Ravine",
+      "kind": "route",
+      "order": 80,
+      "map_node": "bolderoll-ravine",
+      "poke_api_location_id": 959,
+      "bosses_before": []
+    },
+    {
+      "id": "stonetooth-rows",
+      "name": "Stonetooth Rows",
+      "kind": "route",
+      "order": 81,
+      "map_node": "stonetooth-rows",
+      "poke_api_location_id": 1026,
+      "bosses_before": []
+    },
+    {
+      "id": "sacred-plaza",
+      "name": "Sacred Plaza",
+      "kind": "route",
+      "order": 82,
+      "map_node": "sacred-plaza",
+      "poke_api_location_id": 1012,
+      "bosses_before": []
+    },
+    {
+      "id": "cloudcap-pass",
+      "name": "Cloudcap Pass",
+      "kind": "route",
+      "order": 83,
+      "map_node": "cloudcap-pass",
+      "poke_api_location_id": 967,
+      "bosses_before": []
+    },
+    {
+      "id": "moonview-arena",
+      "name": "Moonview Arena",
+      "kind": "building",
+      "order": 84,
+      "map_node": "moonview-arena",
+      "poke_api_location_id": 1005,
+      "bosses_before": []
+    },
+    {
+      "id": "alabaster-icelands",
+      "name": "Alabaster Icelands",
+      "kind": "route",
+      "order": 85,
+      "map_node": "snowfields-camp",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "melli-2",
+        "noble-electrode",
+        "akari-3"
+      ]
+    },
+    {
+      "id": "snowfields-camp",
+      "name": "Snowfields Camp",
+      "kind": "building",
+      "order": 86,
+      "map_node": "snowfields-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "whiteout-valley",
+      "name": "Whiteout Valley",
+      "kind": "route",
+      "order": 87,
+      "map_node": "whiteout-valley",
+      "poke_api_location_id": 1037,
+      "bosses_before": []
+    },
+    {
+      "id": "crevasse-passage",
+      "name": "Crevasse Passage",
+      "kind": "dungeon",
+      "order": 88,
+      "map_node": "crevasse-passage",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "bonechill-wastes",
+      "name": "Bonechill Wastes",
+      "kind": "route",
+      "order": 89,
+      "map_node": "bonechill-wastes",
+      "poke_api_location_id": 961,
+      "bosses_before": []
+    },
+    {
+      "id": "icebound-falls",
+      "name": "Icebound Falls",
+      "kind": "route",
+      "order": 90,
+      "map_node": "icebound-falls",
+      "poke_api_location_id": 994,
+      "bosses_before": []
+    },
+    {
+      "id": "avalanche-slopes",
+      "name": "Avalanche Slopes",
+      "kind": "route",
+      "order": 91,
+      "map_node": "avalanche-slopes",
+      "poke_api_location_id": 956,
+      "bosses_before": []
+    },
+    {
+      "id": "ice-column-chamber",
+      "name": "Ice Column Chamber",
+      "kind": "dungeon",
+      "order": 92,
+      "map_node": "ice-column-chamber",
+      "poke_api_location_id": 993,
+      "bosses_before": []
+    },
+    {
+      "id": "arenas-approach",
+      "name": "Arena's Approach",
+      "kind": "route",
+      "order": 93,
+      "map_node": "arenas-approach",
+      "poke_api_location_id": 954,
+      "bosses_before": []
+    },
+    {
+      "id": "snowfall-hot-spring",
+      "name": "Snowfall Hot Spring",
+      "kind": "route",
+      "order": 94,
+      "map_node": "snowfall-hot-spring",
+      "poke_api_location_id": 1020,
+      "bosses_before": []
+    },
+    {
+      "id": "glacier-terrace",
+      "name": "Glacier Terrace",
+      "kind": "route",
+      "order": 95,
+      "map_node": "glacier-terrace",
+      "poke_api_location_id": 983,
+      "bosses_before": []
+    },
+    {
+      "id": "lake-acuity",
+      "name": "Lake Acuity",
+      "kind": "sea",
+      "order": 96,
+      "map_node": "lake-acuity",
+      "poke_api_location_id": 999,
+      "bosses_before": []
+    },
+    {
+      "id": "icepeak-camp",
+      "name": "Icepeak Camp",
+      "kind": "building",
+      "order": 97,
+      "map_node": "icepeak-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "icepeak-cavern",
+      "name": "Icepeak Cavern",
+      "kind": "dungeon",
+      "order": 98,
+      "map_node": "icepeak-cavern",
+      "poke_api_location_id": 996,
+      "bosses_before": []
+    },
+    {
+      "id": "hearts-crag",
+      "name": "Heart's Crag",
+      "kind": "route",
+      "order": 99,
+      "map_node": "hearts-crag",
+      "poke_api_location_id": 987,
+      "bosses_before": []
+    },
+    {
+      "id": "pearl-settlement",
+      "name": "Pearl Settlement",
+      "kind": "city",
+      "order": 100,
+      "map_node": "pearl-settlement",
+      "poke_api_location_id": 1009,
+      "bosses_before": []
+    },
+    {
+      "id": "avaluggs-legacy",
+      "name": "Avalugg's Legacy",
+      "kind": "route",
+      "order": 101,
+      "map_node": "avaluggs-legacy",
+      "poke_api_location_id": 957,
+      "bosses_before": []
+    },
+    {
+      "id": "snowpoint-temple",
+      "name": "Snowpoint Temple",
+      "kind": "building",
+      "order": 102,
+      "map_node": "snowpoint-temple",
+      "poke_api_location_id": 1021,
+      "bosses_before": [
+        "gaeric-1"
+      ]
+    },
+    {
+      "id": "icepeak-arena",
+      "name": "Icepeak Arena",
+      "kind": "building",
+      "order": 103,
+      "map_node": "icepeak-arena",
+      "poke_api_location_id": 995,
+      "bosses_before": [
+        "sabi-1",
+        "braviary-1"
+      ]
+    },
+    {
+      "id": "secret-hollow",
+      "name": "Secret Hollow",
+      "kind": "dungeon",
+      "order": 104,
+      "map_node": "secret-hollow",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "noble-avalugg",
+        "alpha-goodra-verity",
+        "alpha-overqwil-valor",
+        "alpha-zoroark-acuity"
+      ]
+    },
+    {
+      "id": "ancient-retreat",
+      "name": "Ancient Retreat",
+      "kind": "building",
+      "order": 105,
+      "map_node": "ancient-retreat",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "summit-camp",
+      "name": "Summit Camp",
+      "kind": "building",
+      "order": 106,
+      "map_node": "summit-camp",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "stone-portal",
+      "name": "Stone Portal",
+      "kind": "dungeon",
+      "order": 107,
+      "map_node": "stone-portal",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "temple-of-sinnoh",
+      "name": "Temple of Sinnoh",
+      "kind": "building",
+      "order": 108,
+      "map_node": "temple-of-sinnoh",
+      "poke_api_location_id": 1027,
+      "bosses_before": [
+        "beni-1"
+      ]
+    },
+    {
+      "id": "turnback-cave",
+      "name": "Turnback Cave",
+      "kind": "dungeon",
+      "order": 109,
+      "map_node": "turnback-cave",
+      "poke_api_location_id": 1032,
+      "bosses_before": [
+        "kamado-1",
+        "charm-2",
+        "origin-palkia",
+        "kamado-2",
+        "volo-3",
+        "volo-giratina",
+        "adaman-3",
+        "irida-3",
+        "arceus",
+        "akari-4",
+        "ress-1",
+        "ingo-2",
+        "ingo-3",
+        "akari-5"
+      ]
+    }
+  ]
+}

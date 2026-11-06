@@ -163,7 +163,10 @@
       "kind": "building",
       "x": 0.28,
       "y": 0.92,
-      "games": null
+      "games": [
+        "rs",
+        "e"
+      ]
     },
     {
       "id": "route-107",
@@ -577,7 +580,10 @@
       "kind": "route",
       "x": 0.74,
       "y": 0.71,
-      "games": null
+      "games": [
+        "rs",
+        "e"
+      ]
     },
     {
       "id": "route-131",
@@ -663,6 +669,46 @@
       "y": 0.92,
       "games": [
         "e"
+      ]
+    },
+    {
+      "id": "sea-mauville",
+      "name": "Sea Mauville",
+      "kind": "dungeon",
+      "x": 0.66,
+      "y": 0.66,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "mirage-spots",
+      "name": "Mirage Spots",
+      "kind": "route",
+      "x": 0.9,
+      "y": 0.82,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "battle-resort",
+      "name": "Battle Resort",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.3,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "scorched-slab",
+      "name": "Scorched Slab",
+      "kind": "dungeon",
+      "x": 0.52,
+      "y": 0.08,
+      "games": [
+        "oras"
       ]
     }
   ],
@@ -1010,6 +1056,22 @@
     {
       "from": "battle-frontier",
       "to": "artisan-cave"
+    },
+    {
+      "from": "route-108",
+      "to": "sea-mauville"
+    },
+    {
+      "from": "route-130",
+      "to": "mirage-spots"
+    },
+    {
+      "from": "ever-grande-city",
+      "to": "battle-resort"
+    },
+    {
+      "from": "route-120",
+      "to": "scorched-slab"
     }
   ]
 }

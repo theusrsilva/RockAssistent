@@ -1,0 +1,1093 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Unova",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+  ],
+  "region": "unova",
+  "nodes": [
+    {
+      "id": "nuvema-town",
+      "name": "Nuvema Town",
+      "kind": "city",
+      "x": 0.9,
+      "y": 0.94,
+      "games": null
+    },
+    {
+      "id": "aspertia-city",
+      "name": "Aspertia City",
+      "kind": "city",
+      "x": 0.04,
+      "y": 0.9,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "x": 0.851,
+      "y": 0.876,
+      "games": null
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "kind": "route",
+      "x": 0.093,
+      "y": 0.92,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "accumula-town",
+      "name": "Accumula Town",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "floccesy-town",
+      "name": "Floccesy Town",
+      "kind": "city",
+      "x": 0.12,
+      "y": 0.86,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "x": 0.807,
+      "y": 0.734,
+      "games": null
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "kind": "route",
+      "x": 0.143,
+      "y": 0.95,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "striaton-city",
+      "name": "Striaton City",
+      "kind": "city",
+      "x": 0.76,
+      "y": 0.7,
+      "games": null
+    },
+    {
+      "id": "floccesy-ranch",
+      "name": "Floccesy Ranch",
+      "kind": "route",
+      "x": 0.16,
+      "y": 0.82,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "dreamyard",
+      "name": "Dreamyard",
+      "kind": "route",
+      "x": 0.72,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "virbank-city",
+      "name": "Virbank City",
+      "kind": "city",
+      "x": 0.22,
+      "y": 0.96,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "x": 0.7,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "virbank-complex",
+      "name": "Virbank Complex",
+      "kind": "route",
+      "x": 0.26,
+      "y": 0.99,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "wellspring-cave",
+      "name": "Wellspring Cave",
+      "kind": "dungeon",
+      "x": 0.66,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "nacrene-city",
+      "name": "Nacrene City",
+      "kind": "city",
+      "x": 0.56,
+      "y": 0.74,
+      "games": null
+    },
+    {
+      "id": "castelia-city",
+      "name": "Castelia City",
+      "kind": "city",
+      "x": 0.34,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "pinwheel-forest",
+      "name": "Pinwheel Forest",
+      "kind": "route",
+      "x": 0.487,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "skyarrow-bridge",
+      "name": "Skyarrow Bridge",
+      "kind": "route",
+      "x": 0.413,
+      "y": 0.86,
+      "games": null
+    },
+    {
+      "id": "liberty-garden",
+      "name": "Liberty Garden",
+      "kind": "route",
+      "x": 0.44,
+      "y": 0.98,
+      "games": null
+    },
+    {
+      "id": "castelia-sewers",
+      "name": "Castelia Sewers",
+      "kind": "dungeon",
+      "x": 0.267,
+      "y": 0.816,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "x": 0.334,
+      "y": 0.704,
+      "games": null
+    },
+    {
+      "id": "desert-resort",
+      "name": "Desert Resort",
+      "kind": "route",
+      "x": 0.261,
+      "y": 0.734,
+      "games": null
+    },
+    {
+      "id": "relic-passage",
+      "name": "Relic Passage",
+      "kind": "dungeon",
+      "x": 0.183,
+      "y": 0.72,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "relic-castle",
+      "name": "Relic Castle",
+      "kind": "dungeon",
+      "x": 0.26,
+      "y": 0.682,
+      "games": null
+    },
+    {
+      "id": "nimbasa-city",
+      "name": "Nimbasa City",
+      "kind": "city",
+      "x": 0.36,
+      "y": 0.58,
+      "games": null
+    },
+    {
+      "id": "anville-town",
+      "name": "Anville Town",
+      "kind": "city",
+      "x": 0.44,
+      "y": 0.48,
+      "games": null
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "x": 0.422,
+      "y": 0.556,
+      "games": null
+    },
+    {
+      "id": "join-avenue",
+      "name": "Join Avenue",
+      "kind": "route",
+      "x": 0.36,
+      "y": 0.74,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "lostlorn-forest",
+      "name": "Lostlorn Forest",
+      "kind": "route",
+      "x": 0.465,
+      "y": 0.584,
+      "games": null
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "x": 0.264,
+      "y": 0.591,
+      "games": null
+    },
+    {
+      "id": "driftveil-drawbridge",
+      "name": "Driftveil Drawbridge",
+      "kind": "route",
+      "x": 0.216,
+      "y": 0.56,
+      "games": null
+    },
+    {
+      "id": "driftveil-city",
+      "name": "Driftveil City",
+      "kind": "city",
+      "x": 0.12,
+      "y": 0.58,
+      "games": null
+    },
+    {
+      "id": "cold-storage",
+      "name": "Cold Storage",
+      "kind": "building",
+      "x": 0.16,
+      "y": 0.62,
+      "games": [
+        "bw"
+      ]
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "x": 0.149,
+      "y": 0.474,
+      "games": null
+    },
+    {
+      "id": "chargestone-cave",
+      "name": "Chargestone Cave",
+      "kind": "dungeon",
+      "x": 0.141,
+      "y": 0.401,
+      "games": null
+    },
+    {
+      "id": "mistralton-city",
+      "name": "Mistralton City",
+      "kind": "city",
+      "x": 0.14,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "x": 0.09,
+      "y": 0.26,
+      "games": null
+    },
+    {
+      "id": "celestial-tower",
+      "name": "Celestial Tower",
+      "kind": "building",
+      "x": 0.13,
+      "y": 0.249,
+      "games": null
+    },
+    {
+      "id": "mistralton-cave",
+      "name": "Mistralton Cave",
+      "kind": "dungeon",
+      "x": 0.092,
+      "y": 0.525,
+      "games": null
+    },
+    {
+      "id": "guidance-chamber",
+      "name": "Guidance Chamber",
+      "kind": "dungeon",
+      "x": 0.062,
+      "y": 0.485,
+      "games": null
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17",
+      "kind": "sea",
+      "x": 0.772,
+      "y": 0.921,
+      "games": null
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "x": 0.78,
+      "y": 0.99,
+      "games": null
+    },
+    {
+      "id": "p2-laboratory",
+      "name": "P2 Laboratory",
+      "kind": "building",
+      "x": 0.7,
+      "y": 0.98,
+      "games": null
+    },
+    {
+      "id": "twist-mountain",
+      "name": "Twist Mountain",
+      "kind": "dungeon",
+      "x": 0.123,
+      "y": 0.175,
+      "games": null
+    },
+    {
+      "id": "icirrus-city",
+      "name": "Icirrus City",
+      "kind": "city",
+      "x": 0.16,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "dragonspiral-tower",
+      "name": "Dragonspiral Tower",
+      "kind": "building",
+      "x": 0.12,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "lentimas-town",
+      "name": "Lentimas Town",
+      "kind": "city",
+      "x": 0.62,
+      "y": 0.34,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "x": 0.2,
+      "y": 0.017,
+      "games": null
+    },
+    {
+      "id": "strange-house",
+      "name": "Strange House",
+      "kind": "building",
+      "x": 0.58,
+      "y": 0.38,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "moor-of-icirrus",
+      "name": "Moor of Icirrus",
+      "kind": "route",
+      "x": 0.24,
+      "y": 0.057,
+      "games": null
+    },
+    {
+      "id": "reversal-mountain",
+      "name": "Reversal Mountain",
+      "kind": "dungeon",
+      "x": 0.727,
+      "y": 0.307,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "tubeline-bridge",
+      "name": "Tubeline Bridge",
+      "kind": "route",
+      "x": 0.32,
+      "y": 0.013,
+      "games": null
+    },
+    {
+      "id": "undella-town",
+      "name": "Undella Town",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "x": 0.44,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "undella-bay",
+      "name": "Undella Bay",
+      "kind": "sea",
+      "x": 0.861,
+      "y": 0.371,
+      "games": null
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "x": 0.811,
+      "y": 0.367,
+      "games": null
+    },
+    {
+      "id": "opelucid-city",
+      "name": "Opelucid City",
+      "kind": "city",
+      "x": 0.48,
+      "y": 0.08,
+      "games": null
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "x": 0.819,
+      "y": 0.247,
+      "games": null
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "x": 0.567,
+      "y": 0.176,
+      "games": [
+        "bw"
+      ]
+    },
+    {
+      "id": "lacunosa-town",
+      "name": "Lacunosa Town",
+      "kind": "city",
+      "x": 0.78,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "x": 0.697,
+      "y": 0.103,
+      "games": null
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "x": 0.666,
+      "y": 0.264,
+      "games": null
+    },
+    {
+      "id": "village-bridge",
+      "name": "Village Bridge",
+      "kind": "route",
+      "x": 0.657,
+      "y": 0.111,
+      "games": null
+    },
+    {
+      "id": "trial-chamber",
+      "name": "Trial Chamber",
+      "kind": "dungeon",
+      "x": 0.624,
+      "y": 0.223,
+      "games": [
+        "bw"
+      ]
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "x": 0.542,
+      "y": 0.066,
+      "games": null
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "x": 0.56,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "challengers-cave",
+      "name": "Challenger's Cave",
+      "kind": "dungeon",
+      "x": 0.4,
+      "y": 0.05,
+      "games": [
+        "bw"
+      ]
+    },
+    {
+      "id": "marine-tube",
+      "name": "Marine Tube",
+      "kind": "building",
+      "x": 0.931,
+      "y": 0.239,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "humilau-city",
+      "name": "Humilau City",
+      "kind": "city",
+      "x": 0.96,
+      "y": 0.16,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "kind": "route",
+      "x": 0.893,
+      "y": 0.152,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "kind": "sea",
+      "x": 0.99,
+      "y": 0.106,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "seaside-cave",
+      "name": "Seaside Cave",
+      "kind": "dungeon",
+      "x": 0.95,
+      "y": 0.066,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "giant-chasm",
+      "name": "Giant Chasm",
+      "kind": "dungeon",
+      "x": 0.871,
+      "y": 0.181,
+      "games": null
+    },
+    {
+      "id": "route-23",
+      "name": "Route 23",
+      "kind": "route",
+      "x": 0.751,
+      "y": 0.2,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "abyssal-ruins",
+      "name": "Abyssal Ruins",
+      "kind": "dungeon",
+      "x": 0.898,
+      "y": 0.37,
+      "games": null
+    },
+    {
+      "id": "abundant-shrine",
+      "name": "Abundant Shrine",
+      "kind": "route",
+      "x": 0.808,
+      "y": 0.409,
+      "games": null
+    },
+    {
+      "id": "black-city",
+      "name": "Black City / White Forest",
+      "kind": "route",
+      "x": 0.74,
+      "y": 0.46,
+      "games": null
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "x": 0.636,
+      "y": 0.489,
+      "games": null
+    },
+    {
+      "id": "marvelous-bridge",
+      "name": "Marvelous Bridge",
+      "kind": "route",
+      "x": 0.532,
+      "y": 0.517,
+      "games": null
+    },
+    {
+      "id": "nature-preserve",
+      "name": "Nature Preserve",
+      "kind": "route",
+      "x": 0.04,
+      "y": 0.4,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "cave-of-being",
+      "name": "Cave of Being",
+      "kind": "dungeon",
+      "x": 0.162,
+      "y": 0.91,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "clay-tunnel",
+      "name": "Clay Tunnel",
+      "kind": "dungeon",
+      "x": 0.094,
+      "y": 0.625,
+      "games": [
+        "b2w2"
+      ]
+    },
+    {
+      "id": "underground-ruins",
+      "name": "Underground Ruins",
+      "kind": "dungeon",
+      "x": 0.035,
+      "y": 0.588,
+      "games": [
+        "b2w2"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "nuvema-town",
+      "to": "route-1"
+    },
+    {
+      "from": "route-1",
+      "to": "accumula-town"
+    },
+    {
+      "from": "accumula-town",
+      "to": "route-2"
+    },
+    {
+      "from": "route-2",
+      "to": "striaton-city"
+    },
+    {
+      "from": "striaton-city",
+      "to": "route-3"
+    },
+    {
+      "from": "route-3",
+      "to": "nacrene-city"
+    },
+    {
+      "from": "nacrene-city",
+      "to": "pinwheel-forest"
+    },
+    {
+      "from": "pinwheel-forest",
+      "to": "skyarrow-bridge"
+    },
+    {
+      "from": "skyarrow-bridge",
+      "to": "castelia-city"
+    },
+    {
+      "from": "castelia-city",
+      "to": "route-4"
+    },
+    {
+      "from": "route-4",
+      "to": "nimbasa-city"
+    },
+    {
+      "from": "striaton-city",
+      "to": "dreamyard"
+    },
+    {
+      "from": "route-3",
+      "to": "wellspring-cave"
+    },
+    {
+      "from": "route-4",
+      "to": "desert-resort"
+    },
+    {
+      "from": "desert-resort",
+      "to": "relic-castle"
+    },
+    {
+      "from": "castelia-city",
+      "to": "castelia-sewers"
+    },
+    {
+      "from": "castelia-sewers",
+      "to": "relic-passage"
+    },
+    {
+      "from": "relic-passage",
+      "to": "relic-castle"
+    },
+    {
+      "from": "relic-passage",
+      "to": "driftveil-city"
+    },
+    {
+      "from": "castelia-city",
+      "to": "liberty-garden"
+    },
+    {
+      "from": "nimbasa-city",
+      "to": "anville-town"
+    },
+    {
+      "from": "nimbasa-city",
+      "to": "route-16"
+    },
+    {
+      "from": "route-16",
+      "to": "lostlorn-forest"
+    },
+    {
+      "from": "route-16",
+      "to": "marvelous-bridge"
+    },
+    {
+      "from": "marvelous-bridge",
+      "to": "route-15"
+    },
+    {
+      "from": "route-15",
+      "to": "black-city"
+    },
+    {
+      "from": "black-city",
+      "to": "route-14"
+    },
+    {
+      "from": "route-14",
+      "to": "undella-town"
+    },
+    {
+      "from": "route-14",
+      "to": "abundant-shrine"
+    },
+    {
+      "from": "nimbasa-city",
+      "to": "route-5"
+    },
+    {
+      "from": "route-5",
+      "to": "driftveil-drawbridge"
+    },
+    {
+      "from": "driftveil-drawbridge",
+      "to": "driftveil-city"
+    },
+    {
+      "from": "driftveil-city",
+      "to": "route-6"
+    },
+    {
+      "from": "route-6",
+      "to": "chargestone-cave"
+    },
+    {
+      "from": "chargestone-cave",
+      "to": "mistralton-city"
+    },
+    {
+      "from": "mistralton-city",
+      "to": "route-7"
+    },
+    {
+      "from": "route-7",
+      "to": "twist-mountain"
+    },
+    {
+      "from": "twist-mountain",
+      "to": "icirrus-city"
+    },
+    {
+      "from": "icirrus-city",
+      "to": "route-8"
+    },
+    {
+      "from": "route-8",
+      "to": "moor-of-icirrus"
+    },
+    {
+      "from": "icirrus-city",
+      "to": "dragonspiral-tower"
+    },
+    {
+      "from": "route-7",
+      "to": "celestial-tower"
+    },
+    {
+      "from": "route-6",
+      "to": "mistralton-cave"
+    },
+    {
+      "from": "mistralton-cave",
+      "to": "guidance-chamber"
+    },
+    {
+      "from": "driftveil-city",
+      "to": "cold-storage"
+    },
+    {
+      "from": "route-8",
+      "to": "tubeline-bridge"
+    },
+    {
+      "from": "tubeline-bridge",
+      "to": "route-9"
+    },
+    {
+      "from": "route-9",
+      "to": "opelucid-city"
+    },
+    {
+      "from": "opelucid-city",
+      "to": "route-10"
+    },
+    {
+      "from": "route-10",
+      "to": "victory-road"
+    },
+    {
+      "from": "victory-road",
+      "to": "pokemon-league"
+    },
+    {
+      "from": "victory-road",
+      "to": "trial-chamber"
+    },
+    {
+      "from": "route-9",
+      "to": "challengers-cave"
+    },
+    {
+      "from": "opelucid-city",
+      "to": "route-11"
+    },
+    {
+      "from": "route-11",
+      "to": "village-bridge"
+    },
+    {
+      "from": "village-bridge",
+      "to": "route-12"
+    },
+    {
+      "from": "route-12",
+      "to": "lacunosa-town"
+    },
+    {
+      "from": "lacunosa-town",
+      "to": "route-13"
+    },
+    {
+      "from": "route-13",
+      "to": "undella-town"
+    },
+    {
+      "from": "route-13",
+      "to": "giant-chasm"
+    },
+    {
+      "from": "undella-town",
+      "to": "undella-bay"
+    },
+    {
+      "from": "undella-bay",
+      "to": "abyssal-ruins"
+    },
+    {
+      "from": "route-1",
+      "to": "route-17"
+    },
+    {
+      "from": "route-17",
+      "to": "route-18"
+    },
+    {
+      "from": "route-17",
+      "to": "p2-laboratory"
+    },
+    {
+      "from": "aspertia-city",
+      "to": "route-19"
+    },
+    {
+      "from": "route-19",
+      "to": "floccesy-town"
+    },
+    {
+      "from": "floccesy-town",
+      "to": "route-20"
+    },
+    {
+      "from": "route-20",
+      "to": "virbank-city"
+    },
+    {
+      "from": "virbank-city",
+      "to": "virbank-complex"
+    },
+    {
+      "from": "floccesy-town",
+      "to": "floccesy-ranch"
+    },
+    {
+      "from": "route-20",
+      "to": "cave-of-being"
+    },
+    {
+      "from": "virbank-city",
+      "to": "castelia-city"
+    },
+    {
+      "from": "mistralton-city",
+      "to": "lentimas-town"
+    },
+    {
+      "from": "lentimas-town",
+      "to": "reversal-mountain"
+    },
+    {
+      "from": "reversal-mountain",
+      "to": "undella-town"
+    },
+    {
+      "from": "lentimas-town",
+      "to": "strange-house"
+    },
+    {
+      "from": "undella-town",
+      "to": "marine-tube"
+    },
+    {
+      "from": "marine-tube",
+      "to": "humilau-city"
+    },
+    {
+      "from": "humilau-city",
+      "to": "route-22"
+    },
+    {
+      "from": "route-22",
+      "to": "route-23"
+    },
+    {
+      "from": "route-23",
+      "to": "victory-road"
+    },
+    {
+      "from": "route-22",
+      "to": "giant-chasm"
+    },
+    {
+      "from": "humilau-city",
+      "to": "route-21"
+    },
+    {
+      "from": "route-21",
+      "to": "seaside-cave"
+    },
+    {
+      "from": "driftveil-city",
+      "to": "clay-tunnel"
+    },
+    {
+      "from": "clay-tunnel",
+      "to": "underground-ruins"
+    },
+    {
+      "from": "mistralton-city",
+      "to": "nature-preserve"
+    },
+    {
+      "from": "route-4",
+      "to": "join-avenue"
+    }
+  ]
+}
