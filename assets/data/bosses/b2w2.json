@@ -1,0 +1,3889 @@
+{
+  "source": [
+    "https://github.com/fuddlesworth/pokebw2/tree/main/res/trainers/data",
+    "https://www.serebii.net/black2white2/gyms.shtml",
+    "https://www.serebii.net/black2white2/elitefour.shtml",
+    "https://www.serebii.net/black2white2/rival.shtml",
+    "https://www.serebii.net/black2white2/strongtrainers.shtml",
+    "https://www.serebii.net/black2white2/n.shtml",
+    "https://www.serebii.net/black2white2/memorylink.shtml",
+    "https://www.pokemythology.net/detonados/detonado-black-2-white-2/"
+  ],
+  "items": [
+    {
+      "id": "hugh-aspertia",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Aspertia City",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 501,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Tepig; com Snivy: Tepig 5; com Oshawott: Snivy 5",
+      "versions": null
+    },
+    {
+      "id": "hugh-floccesy-ranch",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Floccesy Ranch",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 501,
+          "form": 0,
+          "level": 8,
+          "moves": [
+            "tackle",
+            "tail-whip"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 8,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 8; com Oshawott: Snivy 8",
+      "versions": null
+    },
+    {
+      "id": "cheren",
+      "kind": "gym",
+      "name": "Cheren",
+      "title": "Gym Leader",
+      "location": "Aspertia Gym",
+      "order": 3,
+      "badge": "Basic Badge",
+      "party": [
+        {
+          "species": 504,
+          "form": 0,
+          "level": 11,
+          "moves": [
+            "work-up",
+            "bite",
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 506,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "work-up",
+            "bite",
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 13,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Patrat 12, Pidove 12, Lillipup 14",
+      "versions": null
+    },
+    {
+      "id": "roxie",
+      "kind": "gym",
+      "name": "Roxie",
+      "title": "Gym Leader",
+      "location": "Virbank Gym",
+      "order": 4,
+      "badge": "Toxic Badge",
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "smog",
+            "assurance",
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 544,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "venoshock",
+            "poison-sting",
+            "protect",
+            "pursuit"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Koffing 17, Grimer 17, Whirlipede 19",
+      "versions": null
+    },
+    {
+      "id": "burgh",
+      "kind": "gym",
+      "name": "Burgh",
+      "title": "Gym Leader",
+      "location": "Castelia Gym",
+      "order": 5,
+      "badge": "Insect Badge",
+      "party": [
+        {
+          "species": 541,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "struggle-bug",
+            "razor-leaf",
+            "string-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 557,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "struggle-bug",
+            "smack-down",
+            "feint-attack",
+            "rock-polish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 542,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "struggle-bug",
+            "razor-leaf",
+            "cut",
+            "string-shot"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Dwebble 24, Shelmet 24, Karrablast 24, Leavanny 26",
+      "versions": null
+    },
+    {
+      "id": "colress-desert",
+      "kind": "evil",
+      "name": "Colress",
+      "title": "Team Plasma",
+      "location": "Route 4",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 81,
+          "form": 0,
+          "level": 21,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 599,
+          "form": 0,
+          "level": 23,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "ingo",
+      "kind": "other",
+      "name": "Ingo",
+      "title": "Subway Boss",
+      "location": "Gear Station, Nimbasa City",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 525,
+          "form": 0,
+          "level": 26,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": true,
+      "notes": "golpes padrão do nível; dupla: Ingo e Emmet juntos, com o Nate (ou a Rosa) do seu lado",
+      "versions": null
+    },
+    {
+      "id": "emmet",
+      "kind": "other",
+      "name": "Emmet",
+      "title": "Subway Boss",
+      "location": "Gear Station, Nimbasa City",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 533,
+          "form": 0,
+          "level": 26,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": true,
+      "notes": "golpes padrão do nível; dupla: Ingo e Emmet juntos, com o Nate (ou a Rosa) do seu lado",
+      "versions": null
+    },
+    {
+      "id": "elesa",
+      "kind": "gym",
+      "name": "Elesa",
+      "title": "Gym Leader",
+      "location": "Nimbasa Gym",
+      "order": 9,
+      "badge": "Bolt Badge",
+      "party": [
+        {
+          "species": 587,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "volt-switch",
+            "quick-attack",
+            "pursuit"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 180,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "volt-switch",
+            "take-down",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 523,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "volt-switch",
+            "flame-charge",
+            "quick-attack",
+            "pursuit"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 30,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Emolga 30, Flaaffy 30, Joltik 30, Zebstrika 32",
+      "versions": null
+    },
+    {
+      "id": "rood",
+      "kind": "other",
+      "name": "Rood",
+      "title": "Pokémon Trainer",
+      "location": "Driftveil City",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 507,
+          "form": 0,
+          "level": 27,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 27,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "clay",
+      "kind": "gym",
+      "name": "Clay",
+      "title": "Gym Leader",
+      "location": "Driftveil Gym",
+      "order": 11,
+      "badge": "Quake Badge",
+      "party": [
+        {
+          "species": 552,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "bulldoze",
+            "crunch",
+            "sand-tomb",
+            "torment"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 28,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "bulldoze",
+            "crush-claw",
+            "rollout",
+            "fury-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 530,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "bulldoze",
+            "metal-claw",
+            "slash",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Krokorok 34, Sandslash 34, Onix 34, Excadrill 36",
+      "versions": null
+    },
+    {
+      "id": "skyla",
+      "kind": "gym",
+      "name": "Skyla",
+      "title": "Gym Leader",
+      "location": "Mistralton Gym",
+      "order": 12,
+      "badge": "Jet Badge",
+      "party": [
+        {
+          "species": 528,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "acrobatics",
+            "heart-stamp",
+            "assurance",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "air-cutter",
+            "steel-wing",
+            "fury-attack",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 581,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "air-slash",
+            "bubble-beam",
+            "roost",
+            "feather-dance"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Swoobat 40, Skarmory 40, Sigilyph 40, Swanna 42",
+      "versions": null
+    },
+    {
+      "id": "hugh-undella",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Undella Town",
+      "order": 13,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 39,
+          "moves": [],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 39,
+          "moves": [],
+          "ability": null,
+          "item": "miracle-seed",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": "mystic-water",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Tepig; com Snivy: Unfezant 39, Simipour 39, Emboar 41; com Oshawott: Unfezant 39, Simisear 39, Serperior 41",
+      "versions": null
+    },
+    {
+      "id": "zinzolin-lacunosa",
+      "kind": "evil",
+      "name": "Zinzolin",
+      "title": "Team Plasma",
+      "location": "Lacunosa Town",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 615,
+          "form": 0,
+          "level": 42,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 215,
+          "form": 0,
+          "level": 44,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 44,
+      "verified": true,
+      "notes": "golpes padrão do nível; dupla: Zinzolin e um Grunt juntos, com o Hugh do seu lado",
+      "versions": null
+    },
+    {
+      "id": "drayden",
+      "kind": "gym",
+      "name": "Drayden",
+      "title": "Gym Leader",
+      "location": "Opelucid Gym",
+      "order": 15,
+      "badge": "Legend Badge",
+      "party": [
+        {
+          "species": 621,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "dragon-tail",
+            "revenge",
+            "slash",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "dragon-tail",
+            "crunch",
+            "earth-power",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "dragon-tail",
+            "slash",
+            "assurance",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Druddigon 50, Flygon 50, Altaria 50, Haxorus 52",
+      "versions": null
+    },
+    {
+      "id": "zinzolin-opelucid",
+      "kind": "evil",
+      "name": "Zinzolin",
+      "title": "Team Plasma",
+      "location": "Opelucid City",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 615,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "ice-beam",
+            "reflect",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 615,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "ice-beam",
+            "light-screen",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 461,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "slash",
+            "ice-shard",
+            "metal-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "shadow-opelucid",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Opelucid City",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 624,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 624,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "hone-claws"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "slash",
+            "future-sight",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "marlon",
+      "kind": "gym",
+      "name": "Marlon",
+      "title": "Gym Leader",
+      "location": "Humilau Gym",
+      "order": 18,
+      "badge": "Wave Badge",
+      "party": [
+        {
+          "species": 565,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "scald",
+            "smack-down",
+            "crunch",
+            "shell-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 321,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "scald",
+            "rollout",
+            "bounce",
+            "amnesia"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 593,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "scald",
+            "ominous-wind",
+            "brine",
+            "recover"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Wailord 53, Carracosta 53, Mantine 53, Jellicent 55",
+      "versions": null
+    },
+    {
+      "id": "zinzolin-frigate",
+      "kind": "evil",
+      "name": "Zinzolin",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate (Seaside Cave)",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 615,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "ice-beam",
+            "reflect",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 615,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "ice-beam",
+            "light-screen",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 461,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "night-slash",
+            "slash",
+            "ice-shard",
+            "metal-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "dupla: Zinzolin e um Grunt juntos, com o Hugh do seu lado",
+      "versions": null
+    },
+    {
+      "id": "zinzolin-giant-chasm",
+      "kind": "evil",
+      "name": "Zinzolin",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate, Giant Chasm",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 615,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "ice-beam",
+            "reflect",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 615,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "ice-beam",
+            "light-screen",
+            "slash",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 461,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "night-slash",
+            "slash",
+            "ice-shard",
+            "metal-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "colress-giant-chasm",
+      "kind": "evil",
+      "name": "Colress",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate, Giant Chasm",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 82,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "volt-switch",
+            "flash-cannon",
+            "tri-attack",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": "eviolite",
+          "tera_type": null
+        },
+        {
+          "species": 375,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "meteor-mash",
+            "zen-headbutt",
+            "rock-slide",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 606,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "psychic",
+            "energy-ball",
+            "calm-mind",
+            "recover"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "discharge",
+            "flash-cannon",
+            "explosion",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "gear-grind",
+            "thunderbolt",
+            "giga-impact",
+            "shift-gear"
+          ],
+          "ability": null,
+          "item": "air-balloon",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "shadow-giant-chasm-1",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate, Giant Chasm",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "hone-claws"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "night-slash",
+            "slash",
+            "future-sight",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "três lutas seguidas contra a Shadow Triad",
+      "versions": null
+    },
+    {
+      "id": "shadow-giant-chasm-2",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate, Giant Chasm",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "hone-claws"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 617,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "bug-buzz",
+            "giga-drain",
+            "swift",
+            "me-first"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "três lutas seguidas contra a Shadow Triad",
+      "versions": null
+    },
+    {
+      "id": "shadow-giant-chasm-3",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Plasma Frigate, Giant Chasm",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 624,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "metal-claw",
+            "feint-attack",
+            "slash",
+            "hone-claws"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 354,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "shadow-claw",
+            "sucker-punch",
+            "psychic",
+            "will-o-wisp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 51,
+      "verified": true,
+      "notes": "três lutas seguidas contra a Shadow Triad",
+      "versions": null
+    },
+    {
+      "id": "ghetsis",
+      "kind": "evil",
+      "name": "Ghetsis",
+      "title": "Team Plasma",
+      "location": "Giant Chasm",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "protect",
+            "shadow-ball",
+            "toxic",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 537,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "muddy-water",
+            "sludge-wave",
+            "earthquake",
+            "drain-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "thunderbolt",
+            "crunch",
+            "flamethrower",
+            "acrobatics"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 452,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "night-slash",
+            "earthquake",
+            "poison-fang",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "poison-jab",
+            "sucker-punch",
+            "shadow-ball",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 635,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "dragon-rush",
+            "crunch",
+            "rock-slide",
+            "frustration"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "hugh-victory-road",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Victory Road",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "facade",
+            "aerial-ace",
+            "u-turn",
+            "swagger"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "rock-slide",
+            "crunch",
+            "brick-break",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": "miracle-seed",
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "head-charge",
+            "wild-charge",
+            "megahorn",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "surf",
+            "x-scissor",
+            "ice-beam",
+            "revenge"
+          ],
+          "ability": null,
+          "item": "mystic-water",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 55, Simipour 55, Bouffalant 55, Emboar 57; com Oshawott: Unfezant 55, Simisear 55, Bouffalant 55, Serperior 57",
+      "versions": null
+    },
+    {
+      "id": "shauntal",
+      "kind": "elite",
+      "name": "Shauntal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "will-o-wisp",
+            "grass-knot",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 426,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "psychic",
+            "thunderbolt",
+            "acrobatics",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 623,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "heavy-slam",
+            "earthquake",
+            "brick-break",
+            "shadow-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "energy-ball",
+            "fire-blast",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Cofagrigus 60, Drifblim 60, Golurk 60, Banette 60, Chandelure 62",
+      "versions": null
+    },
+    {
+      "id": "grimsley",
+      "kind": "elite",
+      "name": "Grimsley",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "night-slash",
+            "fake-out",
+            "aerial-ace",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "crunch",
+            "brick-break",
+            "poison-jab",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "crunch",
+            "dragon-claw",
+            "earthquake",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "metal-claw",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Liepard 60, Scrafty 60, Krookodile 60, Absol 60, Bisharp 62",
+      "versions": null
+    },
+    {
+      "id": "caitlin",
+      "kind": "elite",
+      "name": "Caitlin",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 518,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "charge-beam",
+            "dream-eater",
+            "yawn",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 579,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "psychic",
+            "energy-ball",
+            "focus-blast",
+            "recover"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "ice-beam",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 576,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "thunderbolt",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Musharna 60, Reuniclus 60, Sigilyph 60, Gothitelle 60, Metagross 62",
+      "versions": null
+    },
+    {
+      "id": "marshal",
+      "kind": "elite",
+      "name": "Marshal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 538,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "storm-throw",
+            "bulldoze",
+            "rock-tomb",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 539,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "brick-break",
+            "retaliate",
+            "rock-slide",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "high-jump-kick",
+            "u-turn",
+            "bounce",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 534,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "hammer-arm",
+            "bulk-up",
+            "stone-edge",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Throh 60, Sawk 60, Mienshao 60, Lucario 60, Conkeldurr 62",
+      "versions": null
+    },
+    {
+      "id": "iris",
+      "kind": "champion",
+      "name": "Iris",
+      "title": "Champion",
+      "location": "Pokémon League",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 635,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "flamethrower",
+            "charge-beam",
+            "dragon-pulse",
+            "surf"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "rock-slide",
+            "flamethrower",
+            "dragon-tail",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 567,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "acrobatics",
+            "rock-slide",
+            "dragon-claw",
+            "endeavor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "earthquake",
+            "double-edge",
+            "rock-slide",
+            "autotomize"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "surf",
+            "ice-beam",
+            "thunderbolt",
+            "sing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "earthquake",
+            "x-scissor",
+            "dual-chop",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": "focus-sash",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "Modo Desafio (Challenge Mode): Hydreigon 61, Druddigon 61, Archeops 61, Aggron 61, Lapras 61, Haxorus 63",
+      "versions": null
+    },
+    {
+      "id": "n-castle-black-2",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 644,
+          "form": 0,
+          "level": 70,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "black-2"
+      ]
+    },
+    {
+      "id": "n-castle-white-2",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 643,
+          "form": 0,
+          "level": 70,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": [
+        "white-2"
+      ]
+    },
+    {
+      "id": "shadow-icirrus-1",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Icirrus City",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "iron-head",
+            "low-sweep",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "guillotine",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "sucker-punch",
+            "psycho-cut",
+            "x-scissor",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação: uma luta simples, uma tripla e uma rotativa",
+      "versions": null
+    },
+    {
+      "id": "shadow-icirrus-2",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Icirrus City",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "iron-head",
+            "low-sweep",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 617,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "bug-buzz",
+            "giga-drain",
+            "focus-blast",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "guillotine",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação: uma luta simples, uma tripla e uma rotativa; luta tripla",
+      "versions": null
+    },
+    {
+      "id": "shadow-icirrus-3",
+      "kind": "evil",
+      "name": "Shadow",
+      "title": "Team Plasma",
+      "location": "Icirrus City",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "shadow-claw",
+            "sucker-punch",
+            "psychic",
+            "will-o-wisp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "iron-head",
+            "low-sweep",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "guillotine",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação: uma luta simples, uma tripla e uma rotativa; luta rotativa",
+      "versions": null
+    },
+    {
+      "id": "cilan",
+      "kind": "other",
+      "name": "Cilan",
+      "title": "Pokémon Trainer",
+      "location": "Striaton City (old gym)",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 556,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "petal-dance",
+            "sucker-punch",
+            "poison-jab",
+            "cotton-guard"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 598,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "power-whip",
+            "leech-seed",
+            "gyro-ball",
+            "curse"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "energy-ball",
+            "rock-slide",
+            "crunch",
+            "work-up"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia: dupla com um dos três do seu lado contra os outros dois",
+      "versions": null
+    },
+    {
+      "id": "chili",
+      "kind": "other",
+      "name": "Chili",
+      "title": "Pokémon Trainer",
+      "location": "Striaton City (old gym)",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 631,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "fire-blast",
+            "sucker-punch",
+            "focus-blast",
+            "stockpile"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "flare-blitz",
+            "rock-slide",
+            "hammer-arm",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "flamethrower",
+            "grass-knot",
+            "crunch",
+            "work-up"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia: dupla com um dos três do seu lado contra os outros dois",
+      "versions": null
+    },
+    {
+      "id": "cress",
+      "kind": "other",
+      "name": "Cress",
+      "title": "Pokémon Trainer",
+      "location": "Striaton City (old gym)",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 550,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "aqua-tail",
+            "double-edge",
+            "ice-beam",
+            "swagger"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 199,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "scald",
+            "psychic",
+            "flamethrower",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "scald",
+            "ice-beam",
+            "crunch",
+            "work-up"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia: dupla com um dos três do seu lado contra os outros dois",
+      "versions": null
+    },
+    {
+      "id": "alder",
+      "kind": "other",
+      "name": "Alder",
+      "title": "Pokémon Trainer",
+      "location": "Alder's house, Floccesy Town",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 617,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "bug-buzz",
+            "focus-blast",
+            "giga-drain",
+            "acid-spray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 589,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "x-scissor",
+            "iron-head",
+            "reversal",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "head-charge",
+            "megahorn",
+            "earthquake",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 534,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "superpower",
+            "stone-edge",
+            "poison-jab",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 628,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "crush-claw",
+            "superpower",
+            "aerial-ace",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 637,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "heat-wave",
+            "quiver-dance",
+            "silver-wind",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "cheren-memory-link",
+      "kind": "other",
+      "name": "Cheren",
+      "title": "Pokémon Trainer",
+      "location": "Route 5",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "fake-out",
+            "night-slash",
+            "shadow-claw",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 521,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "air-slash",
+            "quick-attack",
+            "facade",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "outrage",
+            "rock-slide",
+            "x-scissor",
+            "surf"
+          ],
+          "ability": null,
+          "item": "dragon-gem",
+          "tera_type": null
+        },
+        {
+          "species": 526,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stone-edge",
+            "stealth-rock",
+            "earthquake",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "energy-ball",
+            "brick-break",
+            "payback",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": "miracle-seed",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "hydro-pump",
+            "aqua-jet",
+            "blizzard",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": "focus-sash",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig no Black/White; com Snivy no Black/White: Liepard 65, Unfezant 65, Haxorus 65, Gigalith 65, Simipour 65, Emboar 67; com Oshawott no Black/White: Liepard 65, Unfezant 65, Haxorus 65, Gigalith 65, Simisear 65, Serperior 67; pós-jogo, só com o Memory Link de um save do Black/White; o time muda com o inicial escolhido no Black/White",
+      "versions": null
+    },
+    {
+      "id": "bianca-memory-link",
+      "kind": "other",
+      "name": "Bianca",
+      "title": "Pokémon Trainer",
+      "location": "Route 1 (north of Nuvema Town)",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 508,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "ice-fang",
+            "surf",
+            "wild-charge",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "overheat",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 518,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "yawn",
+            "dream-eater",
+            "psychic",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "drain-punch",
+            "u-turn",
+            "fake-out",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "surf",
+            "rock-slide",
+            "brick-break",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 497,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "leaf-storm",
+            "dragon-tail",
+            "coil",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig no Black/White; com Snivy no Black/White: Stoutland 63, Chandelure 63, Musharna 63, Mienshao 63, Simisear 63, Samurott 65; com Oshawott no Black/White: Stoutland 63, Chandelure 63, Musharna 63, Mienshao 63, Simisage 63, Emboar 65; pós-jogo, só com o Memory Link de um save do Black/White; o time muda com o inicial escolhido no Black/White",
+      "versions": null
+    },
+    {
+      "id": "hugh-rematch",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Undella Town",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "facade",
+            "aerial-ace",
+            "u-turn",
+            "swagger"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "rock-slide",
+            "crunch",
+            "brick-break",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": "miracle-seed",
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "head-charge",
+            "wild-charge",
+            "megahorn",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "earthquake",
+            "fire-blast",
+            "dragon-claw",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": "dragon-fang",
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "wild-charge",
+            "flamethrower",
+            "dragon-claw",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "hydro-pump",
+            "megahorn",
+            "ice-beam",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": "mystic-water",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 62, Simipour 62, Bouffalant 62, Flygon 62, Eelektross 62, Emboar 64; com Oshawott: Unfezant 62, Simisear 62, Bouffalant 62, Flygon 62, Eelektross 62, Serperior 64; pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "hugh-driftveil",
+      "kind": "rival",
+      "name": "Hugh",
+      "title": "Rival",
+      "location": "Driftveil City (old Team Plasma house)",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "giga-impact",
+            "aerial-ace",
+            "u-turn",
+            "swagger"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "rock-slide",
+            "focus-blast",
+            "acrobatics",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": "salac-berry",
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "head-charge",
+            "wild-charge",
+            "megahorn",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "earthquake",
+            "fire-blast",
+            "draco-meteor",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": "dragon-gem",
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "wild-charge",
+            "flamethrower",
+            "dragon-claw",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "hydro-pump",
+            "megahorn",
+            "ice-beam",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": "focus-sash",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 65, Simipour 65, Bouffalant 65, Flygon 65, Eelektross 65, Emboar 67; com Oshawott: Unfezant 65, Simisear 65, Bouffalant 65, Flygon 65, Eelektross 65, Serperior 67; pós-jogo, depois da luta em Undella; dá para lutar de novo uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "colress-rematch",
+      "kind": "other",
+      "name": "Colress",
+      "title": "Pokémon Trainer",
+      "location": "Plasma Frigate, P2 Laboratory",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 82,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "volt-switch",
+            "flash-cannon",
+            "tri-attack",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": "eviolite",
+          "tera_type": null
+        },
+        {
+          "species": 479,
+          "form": 2,
+          "level": 72,
+          "moves": [
+            "discharge",
+            "hydro-pump",
+            "will-o-wisp",
+            "substitute"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "meteor-mash",
+            "zen-headbutt",
+            "rock-slide",
+            "agility"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 606,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "psychic",
+            "energy-ball",
+            "calm-mind",
+            "recover"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "thunderbolt",
+            "flash-cannon",
+            "hyper-beam",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": "wise-glasses",
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "gear-grind",
+            "wild-charge",
+            "giga-impact",
+            "shift-gear"
+          ],
+          "ability": null,
+          "item": "air-balloon",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "pós-jogo; depois, uma vez por dia no convés do navio; o Rotom é a forma Wash",
+      "versions": null
+    },
+    {
+      "id": "n-spring",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 186,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "hydro-pump",
+            "focus-blast",
+            "psychic",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 171,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "thunder",
+            "signal-beam",
+            "hydro-pump",
+            "stockpile"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 73,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "rain-dance",
+            "giga-drain",
+            "scald",
+            "barrier"
+          ],
+          "ability": null,
+          "item": "damp-rock",
+          "tera_type": null
+        },
+        {
+          "species": 139,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "rain-dance",
+            "hydro-pump",
+            "ice-beam",
+            "earth-power"
+          ],
+          "ability": null,
+          "item": "damp-rock",
+          "tera_type": null
+        },
+        {
+          "species": 141,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "stone-edge",
+            "aqua-jet",
+            "x-scissor",
+            "low-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "hydro-pump",
+            "thunder",
+            "psychic",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação; time da primavera",
+      "versions": null
+    },
+    {
+      "id": "n-summer",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 38,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "fire-blast",
+            "solar-beam",
+            "foul-play",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "extreme-speed",
+            "overheat",
+            "wild-charge",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "megahorn",
+            "drill-run",
+            "flare-blitz",
+            "solar-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 275,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "dark-pulse",
+            "solar-beam",
+            "focus-blast",
+            "sunny-day"
+          ],
+          "ability": null,
+          "item": "heat-rock",
+          "tera_type": null
+        },
+        {
+          "species": 291,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "sunny-day",
+            "x-scissor",
+            "solar-beam",
+            "protect"
+          ],
+          "ability": null,
+          "item": "heat-rock",
+          "tera_type": null
+        },
+        {
+          "species": 470,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "leaf-blade",
+            "x-scissor",
+            "attract",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação; time da verão",
+      "versions": null
+    },
+    {
+      "id": "n-autumn",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 450,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "stone-edge",
+            "crunch",
+            "superpower",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 423,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "earth-power",
+            "muddy-water",
+            "ice-beam",
+            "sandstorm"
+          ],
+          "ability": null,
+          "item": "smooth-rock",
+          "tera_type": null
+        },
+        {
+          "species": 346,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "sandstorm",
+            "giga-drain",
+            "confuse-ray",
+            "stockpile"
+          ],
+          "ability": null,
+          "item": "smooth-rock",
+          "tera_type": null
+        },
+        {
+          "species": 348,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "rock-slide",
+            "x-scissor",
+            "aqua-tail",
+            "rock-polish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "bullet-punch",
+            "double-hit",
+            "bug-bite",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 464,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "earthquake",
+            "stone-edge",
+            "fire-punch",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação; time da outono",
+      "versions": null
+    },
+    {
+      "id": "n-winter",
+      "kind": "other",
+      "name": "N",
+      "title": "Pokémon Trainer",
+      "location": "N's Castle",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 460,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "blizzard",
+            "wood-hammer",
+            "earthquake",
+            "grass-whistle"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "blizzard",
+            "flash-cannon",
+            "signal-beam",
+            "hail"
+          ],
+          "ability": null,
+          "item": "icy-rock",
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "icicle-spear",
+            "hydro-pump",
+            "ice-shard",
+            "shell-smash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 473,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "earthquake",
+            "ice-shard",
+            "blizzard",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "blizzard",
+            "shadow-ball",
+            "psychic",
+            "hail"
+          ],
+          "ability": null,
+          "item": "icy-rock",
+          "tera_type": null
+        },
+        {
+          "species": 471,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "blizzard",
+            "shadow-ball",
+            "signal-beam",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por estação; time da inverno",
+      "versions": null
+    },
+    {
+      "id": "cynthia",
+      "kind": "other",
+      "name": "Cynthia",
+      "title": "Pokémon Trainer",
+      "location": "Undella Town",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 442,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "shadow-ball",
+            "double-team",
+            "dream-eater",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "blizzard",
+            "hydro-pump",
+            "attract",
+            "rest"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "extreme-speed",
+            "aura-sphere",
+            "air-slash",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "extreme-speed",
+            "close-combat",
+            "flash-cannon",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 471,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "ice-beam",
+            "shadow-ball",
+            "signal-beam",
+            "barrier"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "dragon-rush",
+            "earthquake",
+            "stone-edge",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 78,
+      "verified": true,
+      "notes": "pós-jogo: só na primavera e no verão; depois, uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "morimoto",
+      "kind": "other",
+      "name": "Morimoto",
+      "title": "Game Freak",
+      "location": "Game Freak building, Castelia City",
+      "order": 51,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "sucker-punch",
+            "night-slash",
+            "fake-out",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "surf",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "flamethrower",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "energy-ball",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "psychic",
+            "endeavor",
+            "air-slash",
+            "psyshock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 523,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "wild-charge",
+            "pursuit",
+            "giga-impact",
+            "flame-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 78,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "nishino",
+      "kind": "other",
+      "name": "Nishino",
+      "title": "Game Freak",
+      "location": "Game Freak building, Castelia City",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 36,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "cosmic-power",
+            "stored-power",
+            "metronome",
+            "sing"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 40,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "hyper-voice",
+            "thunderbolt",
+            "flamethrower",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 184,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "aqua-tail",
+            "double-edge",
+            "superpower",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 594,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "toxic",
+            "aqua-jet",
+            "protect",
+            "wish"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 463,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "power-whip",
+            "earthquake",
+            "fire-blast",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "superpower",
+            "crunch",
+            "body-slam",
+            "yawn"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 78,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "shauntal-rematch",
+      "kind": "elite",
+      "name": "Shauntal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 53,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "will-o-wisp",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 429,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "power-gem",
+            "perish-song"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "blizzard",
+            "ice-shard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 426,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "acrobatics",
+            "thunder"
+          ],
+          "ability": null,
+          "item": "flying-gem",
+          "tera_type": null
+        },
+        {
+          "species": 623,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "shadow-punch",
+            "earthquake",
+            "hammer-arm",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "fire-blast",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "revanche no pós-jogo; Modo Desafio (Challenge Mode): Cofagrigus 77, Gengar 77, Froslass 77, Drifblim 77, Golurk 77, Chandelure 79",
+      "versions": null
+    },
+    {
+      "id": "grimsley-rematch",
+      "kind": "elite",
+      "name": "Grimsley",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 54,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "sucker-punch",
+            "fake-out",
+            "aerial-ace",
+            "attract"
+          ],
+          "ability": null,
+          "item": "normal-gem",
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "night-slash",
+            "psychic",
+            "aerial-ace",
+            "haze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "head-smash",
+            "crunch",
+            "high-jump-kick",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "thunder-fang",
+            "fire-blast",
+            "sludge-bomb",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "rock-slide",
+            "earthquake",
+            "crunch",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "guillotine",
+            "night-slash",
+            "x-scissor",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "revanche no pós-jogo; Modo Desafio (Challenge Mode): Honchkrow 77, Scrafty 77, Krookodile 77, Houndoom 77, Tyranitar 77, Bisharp 79",
+      "versions": null
+    },
+    {
+      "id": "caitlin-rematch",
+      "kind": "elite",
+      "name": "Caitlin",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 55,
+      "badge": null,
+      "party": [
+        {
+          "species": 518,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "charge-beam",
+            "dream-eater",
+            "yawn",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "air-slash",
+            "psychic",
+            "flash-cannon",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "close-combat",
+            "leaf-blade",
+            "psycho-cut",
+            "night-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 579,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "psychic",
+            "thunder",
+            "recover",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 576,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "flatter",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "zen-headbutt",
+            "bullet-punch",
+            "earthquake",
+            "hammer-arm"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "revanche no pós-jogo; Modo Desafio (Challenge Mode): Musharna 77, Alakazam 77, Gallade 77, Reuniclus 77, Gothitelle 77, Metagross 79",
+      "versions": null
+    },
+    {
+      "id": "marshal-rematch",
+      "kind": "elite",
+      "name": "Marshal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 56,
+      "badge": null,
+      "party": [
+        {
+          "species": 538,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "superpower",
+            "earthquake",
+            "stone-edge",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 539,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "close-combat",
+            "retaliate",
+            "stone-edge",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": "muscle-band",
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "high-jump-kick",
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "aura-sphere",
+            "dragon-pulse",
+            "extreme-speed",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "high-jump-kick",
+            "u-turn",
+            "acrobatics",
+            "fake-out"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 534,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "hammer-arm",
+            "bulk-up",
+            "stone-edge",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "revanche no pós-jogo; Modo Desafio (Challenge Mode): Throh 77, Sawk 77, Machamp 77, Lucario 77, Mienshao 77, Conkeldurr 79",
+      "versions": null
+    },
+    {
+      "id": "iris-rematch",
+      "kind": "champion",
+      "name": "Iris",
+      "title": "Champion",
+      "location": "Pokémon League",
+      "order": 57,
+      "badge": null,
+      "party": [
+        {
+          "species": 635,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "fire-blast",
+            "focus-blast",
+            "dragon-pulse",
+            "surf"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "fire-punch",
+            "thunder-punch",
+            "outrage",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 567,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "acrobatics",
+            "stone-edge",
+            "dragon-claw",
+            "endeavor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "earthquake",
+            "double-edge",
+            "stone-edge",
+            "autotomize"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 76,
+          "moves": [
+            "hydro-pump",
+            "blizzard",
+            "thunder",
+            "sing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "earthquake",
+            "guillotine",
+            "outrage",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": "focus-sash",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 78,
+      "verified": true,
+      "notes": "revanche no pós-jogo; Modo Desafio (Challenge Mode): Hydreigon 81, Salamence 81, Archeops 81, Aggron 81, Lapras 81, Haxorus 83",
+      "versions": null
+    }
+  ]
+}

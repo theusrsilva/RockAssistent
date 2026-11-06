@@ -1,0 +1,2882 @@
+{
+  "source": [
+    "https://www.serebii.net/blackwhite/gyms.shtml",
+    "https://www.serebii.net/blackwhite/elitefour.shtml",
+    "https://www.serebii.net/blackwhite/cheren.shtml",
+    "https://www.serebii.net/blackwhite/bianca.shtml",
+    "https://www.serebii.net/blackwhite/plasma.shtml",
+    "https://www.serebii.net/blackwhite/strongtrainers.shtml",
+    "https://pokemondb.net/black-white/gymleaders-elitefour",
+    "https://www.pokemythology.net/detonados/detonado-black-white/"
+  ],
+  "items": [
+    {
+      "id": "bianca-1",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Player's house, Nuvema Town",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 495,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "leer"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Oshawott 5; com Oshawott: Tepig 5; dupla seguida: Bianca e depois Cheren",
+      "versions": null
+    },
+    {
+      "id": "cheren-1",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Player's house, Nuvema Town",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 501,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "tail-whip"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 5; com Oshawott: Snivy 5",
+      "versions": null
+    },
+    {
+      "id": "n-accumula",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "Accumula Town",
+      "order": 3,
+      "badge": null,
+      "party": [
+        {
+          "species": 509,
+          "form": 0,
+          "level": 7,
+          "moves": [
+            "scratch",
+            "growl",
+            "assist"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 7,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bianca-2",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Route 2",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 506,
+          "form": 0,
+          "level": 6,
+          "moves": [
+            "leer",
+            "tackle",
+            "odor-sleuth"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 495,
+          "form": 0,
+          "level": 7,
+          "moves": [
+            "tackle",
+            "leer",
+            "vine-whip"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 7,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Lillipup 6, Oshawott 7; com Oshawott: Lillipup 6, Tepig 7",
+      "versions": null
+    },
+    {
+      "id": "cheren-2",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Trainers' School, Striaton City",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 501,
+          "form": 0,
+          "level": 8,
+          "moves": [
+            "tackle",
+            "tail-whip",
+            "water-gun"
+          ],
+          "ability": null,
+          "item": "oran-berry",
+          "tera_type": null
+        },
+        {
+          "species": 509,
+          "form": 0,
+          "level": 8,
+          "moves": [
+            "scratch",
+            "growl",
+            "assist"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 8,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 8, Purrloin 8; com Oshawott: Snivy 8, Purrloin 8",
+      "versions": null
+    },
+    {
+      "id": "striaton-trio",
+      "kind": "gym",
+      "name": "Cress",
+      "title": "Gym Leader",
+      "location": "Striaton Gym",
+      "order": 6,
+      "badge": "Trio Badge",
+      "party": [
+        {
+          "species": 506,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "bite",
+            "work-up",
+            "odor-sleuth",
+            "helping-hand"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 515,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "water-gun",
+            "work-up",
+            "lick",
+            "fury-swipes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": "o líder depende do seu inicial: com Tepig, Cress; com Snivy, Chili: Lillipup 12, Pansear 14; com Oshawott, Cilan: Lillipup 12, Pansage 14",
+      "versions": null
+    },
+    {
+      "id": "cheren-3",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Route 3",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 501,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "tail-whip",
+            "water-gun",
+            "water-sport",
+            "focus-energy"
+          ],
+          "ability": null,
+          "item": "oran-berry",
+          "tera_type": null
+        },
+        {
+          "species": 509,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "growl",
+            "assist",
+            "sand-attack",
+            "fury-swipes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 14, Purrloin 12; com Oshawott: Snivy 14, Purrloin 12",
+      "versions": null
+    },
+    {
+      "id": "n-nacrene",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "Nacrene City",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 519,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "gust",
+            "growl",
+            "leer",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 535,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "growl",
+            "supersonic",
+            "round",
+            "bubble-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 532,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "leer",
+            "focus-energy",
+            "bide",
+            "low-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 13,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lenora",
+      "kind": "gym",
+      "name": "Lenora",
+      "title": "Gym Leader",
+      "location": "Nacrene Gym",
+      "order": 9,
+      "badge": "Basic Badge",
+      "party": [
+        {
+          "species": 507,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "take-down",
+            "bite",
+            "retaliate",
+            "leer"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 505,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "leer",
+            "crunch",
+            "retaliate",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "burgh",
+      "kind": "gym",
+      "name": "Burgh",
+      "title": "Gym Leader",
+      "location": "Castelia Gym",
+      "order": 10,
+      "badge": "Insect Badge",
+      "party": [
+        {
+          "species": 544,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "poison-tail",
+            "struggle-bug",
+            "pursuit",
+            "screech"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 557,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "smack-down",
+            "struggle-bug",
+            "feint-attack",
+            "sand-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 542,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "razor-leaf",
+            "struggle-bug",
+            "string-shot",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bianca-3",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Route 4 (Castelia City north exit)",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 507,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "odor-sleuth",
+            "bite",
+            "helping-hand",
+            "take-down"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 515,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "lick",
+            "water-gun",
+            "fury-swipes",
+            "water-sport"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 517,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "yawn",
+            "psybeam",
+            "imprison",
+            "moonlight"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 496,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "wrap",
+            "growth",
+            "leaf-tornado",
+            "leech-seed"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Herdier 18, Pansear 18, Munna 18, Dewott 20; com Oshawott: Herdier 18, Pansage 18, Munna 18, Pignite 20",
+      "versions": null
+    },
+    {
+      "id": "cheren-4",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Route 4",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 519,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "leer",
+            "quick-attack",
+            "air-cutter",
+            "roost"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 510,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "sand-attack",
+            "fury-swipes",
+            "pursuit",
+            "torment"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 513,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "incinerate",
+            "fury-swipes",
+            "yawn",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 502,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "water-sport",
+            "focus-energy",
+            "razor-shell",
+            "fury-cutter"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 22,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Pidove 20, Liepard 20, Pansage 20, Pignite 22; com Oshawott: Pidove 20, Liepard 20, Panpour 20, Servine 22",
+      "versions": null
+    },
+    {
+      "id": "n-nimbasa",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "Ferris wheel, Nimbasa City",
+      "order": 13,
+      "badge": null,
+      "party": [
+        {
+          "species": 551,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "sand-tomb",
+            "assurance",
+            "mud-slap",
+            "embargo"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 554,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "headbutt",
+            "uproar",
+            "facade",
+            "fire-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 559,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "feint-attack",
+            "headbutt",
+            "swagger",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "tailwind",
+            "whirlwind",
+            "psybeam",
+            "air-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 22,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "elesa",
+      "kind": "gym",
+      "name": "Elesa",
+      "title": "Gym Leader",
+      "location": "Nimbasa Gym",
+      "order": 14,
+      "badge": "Bolt Badge",
+      "party": [
+        {
+          "species": 587,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "pursuit",
+            "quick-attack",
+            "volt-switch",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 587,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "pursuit",
+            "quick-attack",
+            "volt-switch",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 523,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "quick-attack",
+            "spark",
+            "volt-switch",
+            "flame-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "cheren-5",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Route 5",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "fury-swipes",
+            "pursuit",
+            "torment",
+            "fake-out"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 513,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "fury-swipes",
+            "yawn",
+            "bite",
+            "flame-burst"
+          ],
+          "ability": null,
+          "item": "charcoal",
+          "tera_type": null
+        },
+        {
+          "species": 520,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "quick-attack",
+            "air-cutter",
+            "roost",
+            "detect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 502,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "focus-energy",
+            "razor-shell",
+            "fury-cutter",
+            "water-pulse"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Liepard 24, Pansage 24, Tranquill 24, Pignite 26; com Oshawott: Liepard 24, Panpour 24, Tranquill 24, Servine 26",
+      "versions": null
+    },
+    {
+      "id": "clay",
+      "kind": "gym",
+      "name": "Clay",
+      "title": "Gym Leader",
+      "location": "Driftveil Gym",
+      "order": 16,
+      "badge": "Quake Badge",
+      "party": [
+        {
+          "species": 552,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "crunch",
+            "swagger",
+            "bulldoze",
+            "torment"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 536,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "muddy-water",
+            "aqua-ring",
+            "bulldoze",
+            "bubble-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 530,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "slash",
+            "rock-slide",
+            "bulldoze",
+            "hone-claws"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 31,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bianca-4",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Route 6",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 507,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "helping-hand",
+            "take-down",
+            "work-up",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 515,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "water-sport",
+            "bite",
+            "scald",
+            "taunt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 518,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "defense-curl",
+            "lucky-chant",
+            "psybeam",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 496,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "leaf-tornado",
+            "leech-seed",
+            "mega-drain",
+            "slam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 28,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Herdier 26, Pansear 26, Musharna 26, Dewott 28; com Oshawott: Herdier 26, Pansage 26, Musharna 26, Pignite 28",
+      "versions": null
+    },
+    {
+      "id": "n-chargestone",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "Chargestone Cave",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 525,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "mud-slap",
+            "iron-defense",
+            "smack-down",
+            "power-gem"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 597,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "metal-claw",
+            "pin-missile",
+            "gyro-ball",
+            "iron-defense"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 595,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "electroweb",
+            "bug-bite",
+            "gastro-acid",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 599,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "thunder-shock",
+            "gear-grind",
+            "bind",
+            "charge-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 28,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "skyla",
+      "kind": "gym",
+      "name": "Skyla",
+      "title": "Gym Leader",
+      "location": "Mistralton Gym",
+      "order": 19,
+      "badge": "Jet Badge",
+      "party": [
+        {
+          "species": 528,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "heart-stamp",
+            "amnesia",
+            "acrobatics",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 521,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "quick-attack",
+            "air-slash",
+            "leer",
+            "razor-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 581,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "aqua-ring",
+            "aerial-ace",
+            "air-slash",
+            "bubble-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "cheren-6",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Route 7",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "roost",
+            "detect",
+            "taunt",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 510,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "torment",
+            "fake-out",
+            "hone-claws",
+            "assurance"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "leer",
+            "lick",
+            "fury-swipes",
+            "flame-burst"
+          ],
+          "ability": null,
+          "item": "charcoal",
+          "tera_type": null
+        },
+        {
+          "species": 502,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "fury-cutter",
+            "water-pulse",
+            "revenge",
+            "aqua-jet"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 33, Liepard 33, Simisage 33, Pignite 35; com Oshawott: Unfezant 33, Liepard 33, Simipour 33, Servine 35",
+      "versions": null
+    },
+    {
+      "id": "brycen",
+      "kind": "gym",
+      "name": "Brycen",
+      "title": "Gym Leader",
+      "location": "Icirrus Gym",
+      "order": 21,
+      "badge": "Freeze Badge",
+      "party": [
+        {
+          "species": 583,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "mirror-shot",
+            "acid-armor",
+            "frost-breath",
+            "astonish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 615,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "reflect",
+            "aurora-beam",
+            "frost-breath",
+            "rapid-spin"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 614,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "slash",
+            "brine",
+            "icicle-crash",
+            "swagger"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bianca-5",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Route 8",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 508,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "work-up",
+            "crunch",
+            "roar",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "leer",
+            "lick",
+            "fury-swipes",
+            "scald"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 518,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "defense-curl",
+            "lucky-chant",
+            "psybeam",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 497,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "mega-drain",
+            "slam",
+            "leaf-blade",
+            "coil"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Stoutland 38, Simisear 38, Musharna 38, Samurott 40; com Oshawott: Stoutland 38, Simisage 38, Musharna 38, Emboar 40",
+      "versions": null
+    },
+    {
+      "id": "drayden",
+      "kind": "gym",
+      "name": "Drayden",
+      "title": "Gym Leader",
+      "location": "Opelucid Gym",
+      "order": 23,
+      "badge": "Legend Badge",
+      "party": [
+        {
+          "species": 611,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "dragon-dance",
+            "dragon-rage",
+            "dragon-tail",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "chip-away",
+            "revenge",
+            "dragon-tail",
+            "night-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "dragon-dance",
+            "slash",
+            "dragon-tail",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "black"
+      ]
+    },
+    {
+      "id": "iris",
+      "kind": "gym",
+      "name": "Iris",
+      "title": "Gym Leader",
+      "location": "Opelucid Gym",
+      "order": 24,
+      "badge": "Legend Badge",
+      "party": [
+        {
+          "species": 611,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "dragon-dance",
+            "dragon-rage",
+            "dragon-tail",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "chip-away",
+            "revenge",
+            "dragon-tail",
+            "night-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "dragon-dance",
+            "slash",
+            "dragon-tail",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "white"
+      ]
+    },
+    {
+      "id": "cheren-7",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Route 10",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 521,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "detect",
+            "taunt",
+            "air-slash",
+            "razor-wind"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 510,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "assurance",
+            "slash",
+            "taunt",
+            "night-slash"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "leer",
+            "lick",
+            "fury-swipes",
+            "flame-burst"
+          ],
+          "ability": null,
+          "item": "charcoal",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "aqua-jet",
+            "slash",
+            "encore",
+            "aqua-tail"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 45,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 43, Liepard 43, Simisage 43, Emboar 45; com Oshawott: Unfezant 43, Liepard 43, Simipour 43, Serperior 45",
+      "versions": null
+    },
+    {
+      "id": "shauntal",
+      "kind": "elite",
+      "name": "Shauntal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "will-o-wisp",
+            "grass-knot",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 593,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "energy-ball",
+            "brine",
+            "surf",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 623,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "curse",
+            "earthquake",
+            "brick-break",
+            "shadow-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "payback",
+            "fire-blast",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "grimsley",
+      "kind": "elite",
+      "name": "Grimsley",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 560,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "crunch",
+            "brick-break",
+            "poison-jab",
+            "sand-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 510,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "night-slash",
+            "fake-out",
+            "aerial-ace",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "crunch",
+            "dragon-claw",
+            "earthquake",
+            "foul-play"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "metal-claw",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "caitlin",
+      "kind": "elite",
+      "name": "Caitlin",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 579,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "psychic",
+            "energy-ball",
+            "focus-blast",
+            "thunder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 518,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "charge-beam",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "ice-beam",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 576,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "thunderbolt",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "marshal",
+      "kind": "elite",
+      "name": "Marshal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 538,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "storm-throw",
+            "bulldoze",
+            "stone-edge",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 539,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "karate-chop",
+            "grass-knot",
+            "stone-edge",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 534,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "hammer-arm",
+            "grass-knot",
+            "stone-edge",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "jump-kick",
+            "u-turn",
+            "rock-slide",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "n-castle-black",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "N's Castle",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 644,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "zen-headbutt",
+            "giga-impact",
+            "light-screen",
+            "fusion-bolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 565,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "aqua-jet",
+            "waterfall",
+            "stone-edge",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "frost-breath",
+            "blizzard",
+            "hail",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 567,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "dragon-claw",
+            "acrobatics",
+            "stone-edge",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 571,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "night-slash",
+            "flamethrower",
+            "focus-blast",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "thunderbolt",
+            "flash-cannon",
+            "hyper-beam",
+            "metal-sound"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "black"
+      ]
+    },
+    {
+      "id": "n-castle-white",
+      "kind": "evil",
+      "name": "N",
+      "title": "Team Plasma",
+      "location": "N's Castle",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 643,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "extrasensory",
+            "hyper-beam",
+            "reflect",
+            "fusion-flare"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 565,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "aqua-jet",
+            "waterfall",
+            "stone-edge",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "frost-breath",
+            "blizzard",
+            "hail",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 567,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "dragon-claw",
+            "acrobatics",
+            "stone-edge",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 571,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "night-slash",
+            "flamethrower",
+            "focus-blast",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "thunderbolt",
+            "flash-cannon",
+            "hyper-beam",
+            "metal-sound"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "white"
+      ]
+    },
+    {
+      "id": "ghetsis",
+      "kind": "evil",
+      "name": "Ghetsis",
+      "title": "Team Plasma",
+      "location": "N's Castle",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "protect",
+            "shadow-ball",
+            "psychic",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "head-charge",
+            "wild-charge",
+            "earthquake",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 537,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "muddy-water",
+            "sludge-wave",
+            "earthquake",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "night-slash",
+            "x-scissor",
+            "stone-edge",
+            "metal-burst"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "crunch",
+            "wild-charge",
+            "flamethrower",
+            "acrobatics"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 635,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "dragon-pulse",
+            "surf",
+            "fire-blast",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "shauntal-rematch",
+      "kind": "elite",
+      "name": "Shauntal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 563,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "will-o-wisp",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 593,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "hydro-pump",
+            "sludge-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "blizzard",
+            "ice-shard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 426,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "acrobatics",
+            "thunder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 623,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-punch",
+            "earthquake",
+            "hammer-arm",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "fire-blast",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 73,
+      "verified": true,
+      "notes": "pós-jogo: a Elite Four volta mais forte antes da luta com o Alder",
+      "versions": null
+    },
+    {
+      "id": "grimsley-rematch",
+      "kind": "elite",
+      "name": "Grimsley",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "aqua-jet",
+            "night-slash",
+            "waterfall",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 510,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "sucker-punch",
+            "fake-out",
+            "aerial-ace",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "head-smash",
+            "crunch",
+            "brick-break",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 452,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "thunder-fang",
+            "poison-fang",
+            "fire-fang",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "smack-down",
+            "earthquake",
+            "foul-play",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "guillotine",
+            "night-slash",
+            "x-scissor",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 73,
+      "verified": true,
+      "notes": "pós-jogo: a Elite Four volta mais forte antes da luta com o Alder",
+      "versions": null
+    },
+    {
+      "id": "caitlin-rematch",
+      "kind": "elite",
+      "name": "Caitlin",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 518,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "psychic",
+            "dream-eater",
+            "hypnosis",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 561,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "air-slash",
+            "psychic",
+            "flash-cannon",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 437,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "payback",
+            "flash-cannon",
+            "psychic",
+            "charge-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 579,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "psychic",
+            "thunder",
+            "energy-ball",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 576,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "psychic",
+            "payback",
+            "flatter",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "zen-headbutt",
+            "bullet-punch",
+            "earthquake",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 73,
+      "verified": true,
+      "notes": "pós-jogo: a Elite Four volta mais forte antes da luta com o Alder",
+      "versions": null
+    },
+    {
+      "id": "marshal-rematch",
+      "kind": "elite",
+      "name": "Marshal",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 286,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "mach-punch",
+            "spore",
+            "grass-knot",
+            "sky-uppercut"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 539,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "close-combat",
+            "retaliate",
+            "stone-edge",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 538,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "superpower",
+            "retaliate",
+            "earthquake",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "venoshock",
+            "toxic",
+            "low-sweep",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "high-jump-kick",
+            "u-turn",
+            "acrobatics",
+            "fake-out"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 534,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "hammer-arm",
+            "earthquake",
+            "stone-edge",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 73,
+      "verified": true,
+      "notes": "pós-jogo: a Elite Four volta mais forte antes da luta com o Alder",
+      "versions": null
+    },
+    {
+      "id": "alder",
+      "kind": "champion",
+      "name": "Alder",
+      "title": "Champion",
+      "location": "Pokémon League",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 617,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "focus-blast",
+            "bug-buzz",
+            "me-first",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 626,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "head-charge",
+            "megahorn",
+            "earthquake",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 621,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "outrage",
+            "superpower",
+            "night-slash",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "blizzard",
+            "flash-cannon",
+            "light-screen",
+            "acid-armor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 589,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "x-scissor",
+            "iron-head",
+            "aerial-ace",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 637,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "overheat",
+            "quiver-dance",
+            "bug-buzz",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "só no pós-jogo, depois de vencer a Elite Four de novo",
+      "versions": null
+    },
+    {
+      "id": "bianca-rematch",
+      "kind": "rival",
+      "name": "Bianca",
+      "title": "Rival",
+      "location": "Professor Juniper's Lab, Nuvema Town",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 508,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "return",
+            "ice-fang",
+            "surf",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "return",
+            "surf",
+            "rock-slide",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 518,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "return",
+            "yawn",
+            "dream-eater",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 620,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "return",
+            "drain-punch",
+            "u-turn",
+            "fake-out"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "return",
+            "shadow-ball",
+            "psychic",
+            "overheat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 497,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "return",
+            "leaf-storm",
+            "dragon-tail",
+            "coil"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Stoutland 63, Simisear 63, Musharna 63, Mienshao 63, Chandelure 63, Samurott 65; com Oshawott: Stoutland 63, Simisage 63, Musharna 63, Mienshao 63, Chandelure 63, Emboar 65; pós-jogo: sábados, no fim da tarde",
+      "versions": null
+    },
+    {
+      "id": "cheren-rematch",
+      "kind": "rival",
+      "name": "Cheren",
+      "title": "Rival",
+      "location": "Victory Road",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "fake-out",
+            "night-slash",
+            "shadow-claw",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "flamethrower",
+            "brick-break",
+            "payback",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": "charcoal",
+          "tera_type": null
+        },
+        {
+          "species": 521,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "air-slash",
+            "quick-attack",
+            "facade",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": "scope-lens",
+          "tera_type": null
+        },
+        {
+          "species": 526,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stone-edge",
+            "stealth-rock",
+            "earthquake",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "outrage",
+            "rock-slide",
+            "x-scissor",
+            "surf"
+          ],
+          "ability": null,
+          "item": "dragon-gem",
+          "tera_type": null
+        },
+        {
+          "species": 503,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "hydro-pump",
+            "aqua-jet",
+            "blizzard",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": "focus-sash",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "time para quem escolheu Tepig; com Snivy: Liepard 65, Simisage 65, Unfezant 65, Gigalith 65, Haxorus 65, Emboar 67; com Oshawott: Liepard 65, Simipour 65, Unfezant 65, Gigalith 65, Haxorus 65, Serperior 67; pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "cynthia",
+      "kind": "other",
+      "name": "Cynthia",
+      "title": "Pokémon Trainer",
+      "location": "Undella Town",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 442,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "sucker-punch",
+            "shadow-ball",
+            "will-o-wisp",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "crunch",
+            "wild-charge",
+            "dragon-claw",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "hydro-pump",
+            "blizzard",
+            "bulldoze",
+            "dragon-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 628,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "brave-bird",
+            "crush-claw",
+            "shadow-claw",
+            "retaliate"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "extreme-speed",
+            "dragon-pulse",
+            "close-combat",
+            "aura-sphere"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "dragon-rush",
+            "crunch",
+            "earthquake",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo: só na primavera e no verão; depois, uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "morimoto",
+      "kind": "other",
+      "name": "Morimoto",
+      "title": "Game Freak",
+      "location": "Game Freak building, Castelia City",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "sucker-punch",
+            "night-slash",
+            "fake-out",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "surf",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "flamethrower",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 512,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "energy-ball",
+            "payback",
+            "acrobatics",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "petaya-berry",
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "psychic",
+            "endeavor",
+            "air-slash",
+            "psyshock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 523,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "wild-charge",
+            "pursuit",
+            "giga-impact",
+            "flame-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 77,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia",
+      "versions": null
+    }
+  ]
+}
