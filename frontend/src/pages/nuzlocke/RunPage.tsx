@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router'
 import { Badge, Button, Callout, Card, Modal, PageTitle, Segmented } from '../../components/ui'
@@ -11,8 +11,11 @@ import BossCard from './BossCard'
 import { runGameLabel, statusTone } from './NuzlockePage'
 import TeamCard from './TeamCard'
 import TrainersCard from './TrainersCard'
-import { formatRules, isFinished, nuzlockeErrorMessage, runStats, sortAreas, useRun, type GameArea, type RunView } from './nuzlocke'
-import { monName, type Mutate } from './parts'
+import { areaStates, formatRules, isFinished, nuzlockeErrorMessage, runStats, sortAreas, useRun, type GameArea, type RunView } from './nuzlocke'
+import { CardTitle, monName, type Mutate } from './parts'
+import RegionMap from './RegionMap'
+import type { MapGraph } from './regionMap'
+import { gameVersionByKey } from '../../lib/gameVersions'
 
 type Tab = 'run' | 'graveyard' | 'stats'
 type Confirm = 'champion' | 'wipe' | 'delete'
@@ -21,7 +24,7 @@ type Confirm = 'champion' | 'wipe' | 'delete'
 export default function RunPage() {
   const { id = '' } = useParams()
   const { t } = useTranslation()
-  const { view, setView, error: loadError } = useRun(id)
+  const { view, mutate, error: loadError } = useRun(id)
 
   if (loadError)
     return (
@@ -33,10 +36,10 @@ export default function RunPage() {
       </div>
     )
   if (!view) return <p className="text-sm text-muted">{t('common.loading')}</p>
-  return <Run view={view} setView={setView} />
+  return <Run view={view} mutate={mutate} />
 }
 
-function Run({ view, setView }: { view: RunView; setView: (v: RunView) => void }) {
+function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
   const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const [tab, setTab] = useState<Tab>('run')
@@ -49,16 +52,9 @@ function Run({ view, setView }: { view: RunView; setView: (v: RunView) => void }
   const names = useMemo(() => new Map((speciesOptions ?? []).map((s) => [s.value, s.text])), [speciesOptions])
   const areasData = useApiGet<GameArea[]>(`/api/data/${run.gameKey}/areas`)
   const areas = useMemo(() => sortAreas(areasData.data ?? []), [areasData.data])
+  const mapData = useApiGet<MapGraph>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
+  const states = useMemo(() => areaStates(view), [view])
   const areaName = useMemo(() => new Map(areas.map((a) => [a.id, a.name])), [areas])
-
-  const mutate: Mutate = useCallback(
-    async (request) => {
-      const v = await request
-      setView(v)
-      return v
-    },
-    [setView],
-  )
 
   /** Ação simples do cabeçalho ou do chefe: o erro aparece no topo. */
   const act = async (request: () => Promise<RunView>) => {
@@ -155,7 +151,19 @@ function Run({ view, setView }: { view: RunView; setView: (v: RunView) => void }
 
       {tab === 'run' && (
         <>
-          {/* Tarefa 24: o mapa da região (<RegionMap states={areaStates(view)} …/>) entra aqui, acima das colunas. */}
+          {mapData.data && mapData.data.nodes.length > 0 && (
+            <Card className="flex flex-col gap-2 p-3! sm:p-4!">
+              <CardTitle icon="map">{t('nuzlocke.map.title')}</CardTitle>
+              <RegionMap
+                graph={mapData.data}
+                game={run.gameKey}
+                areas={areas}
+                states={states}
+                current={view.currentArea?.id ?? null}
+                onSelect={readOnly ? undefined : (areaId) => areaId !== view.currentArea?.id && void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}/area`, { areaId }))}
+              />
+            </Card>
+          )}
           <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
             <div className="flex flex-col gap-4">
               <BossCard view={view} names={names} readOnly={readOnly} onDefeat={(bossId) => void act(() => api.post<RunView>(`/api/nuzlocke/${run.id}/boss/${bossId}/defeated`))} />

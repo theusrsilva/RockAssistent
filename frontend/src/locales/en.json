@@ -2221,7 +2221,13 @@
           "missed": "Encounter that doesn't count (e.g. a dupe under a clause): the area stays free."
         },
         "save": "Record"
-      }
+      },
+      "noEncounterConfirm": "Mark the area with no encounter?",
+      "noEncounterConfirmText": "The area becomes used: under the first encounter rule, you won't be able to record another catch here.",
+      "lostTitle": "Lost in this area ({{count}})",
+      "caughtAfterAll": "Caught it after all",
+      "toParty": "Team",
+      "toBox": "Box"
     },
     "team": {
       "title": "Team",
@@ -2300,6 +2306,17 @@
       "run_not_found": "We couldn't find this run.",
       "mon_not_found": "We couldn't find this Pokémon in the run.",
       "run_finished": "This run is over and won't change anymore."
+    },
+    "map": {
+      "title": "Map",
+      "current": "Current area",
+      "states": {
+        "none": "Not visited",
+        "visited": "Visited",
+        "caught": "Caught",
+        "missed": "Missed the encounter",
+        "dead": "Died"
+      }
     }
   },
   "hunt": {

@@ -6,8 +6,8 @@ import { Badge, Button, Callout, Card, Field, Modal, Segmented, Toggle, inputCla
 import { api, spriteUrl } from '../../lib/api'
 import { titleCase, versionName } from '../../lib/dex'
 import type { Option } from '../../lib/types'
-import { areaUsed, nuzlockeErrorMessage, type GameArea, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
-import { CardTitle, type Mutate } from './parts'
+import { areaUsed, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
+import { CardTitle, monName, type Mutate } from './parts'
 
 type CatchStatus = Exclude<MonStatus, 'dead'>
 const CATCH_STATUSES: CatchStatus[] = ['party', 'box', 'failed', 'missed']
@@ -33,7 +33,20 @@ export default function AreaCard({
   const toast = useToast()
   const [catching, setCatching] = useState<{ species: number | null; level: number } | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [confirmNone, setConfirmNone] = useState(false)
   const area = view.currentArea
+  const lostHere = area ? view.lost.filter((m) => m.areaId === area.id) : []
+
+  /** "Capturei afinal": o encontro perdido vira captura (o servidor confere as cláusulas de novo). */
+  async function recover(mon: MonInfo, status: 'party' | 'box') {
+    setError(null)
+    try {
+      await mutate(api.put<RunView>(`/api/nuzlocke/${runId}/mon/${mon.id}`, { status }))
+      toast(t('nuzlocke.area.saved'))
+    } catch (e) {
+      setError(nuzlockeErrorMessage(t, e))
+    }
+  }
   const used = area ? areaUsed(view, area.id) : false
   const runId = view.run.id
 
@@ -51,6 +64,7 @@ export default function AreaCard({
   }
 
   async function noEncounter() {
+    setConfirmNone(false)
     if (!area) return
     setError(null)
     try {
@@ -96,12 +110,63 @@ export default function AreaCard({
               <Button variant="secondary" size="sm" icon="add" onClick={() => setCatching({ species: null, level: 5 })}>
                 {t('nuzlocke.area.other')}
               </Button>
-              <Button variant="ghost" size="sm" icon="block" onClick={() => void noEncounter()}>
+              <Button variant="ghost" size="sm" icon="block" disabled={used && view.run.rules.firstEncounterOnly} onClick={() => setConfirmNone(true)}>
                 {t('nuzlocke.area.noEncounter')}
               </Button>
             </div>
           )}
+          {lostHere.length > 0 && (
+            <details className="text-sm">
+              <summary className="cursor-pointer font-semibold text-muted">{t('nuzlocke.area.lostTitle', { count: lostHere.length })}</summary>
+              <ul className="mt-1.5 flex flex-col gap-1.5">
+                {lostHere.map((m) => (
+                  <li key={m.id} className="flex flex-wrap items-center gap-2">
+                    {m.species > 0 ? (
+                      <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9 opacity-70" loading="lazy" />
+                    ) : (
+                      <span aria-hidden className="icon flex h-9 w-9 items-center justify-center text-muted">
+                        block
+                      </span>
+                    )}
+                    <span className="min-w-0 flex-1 truncate">
+                      <span className="font-semibold">{m.species > 0 ? monName(m, names) : t('nuzlocke.area.noEncounter')}</span>{' '}
+                      <span className="text-muted">· {t(`nuzlocke.area.form.statuses.${m.status}`)}</span>
+                    </span>
+                    {!readOnly && m.species > 0 && (
+                      <span className="flex items-center gap-1">
+                        <span className="text-[12px] text-muted">{t('nuzlocke.area.caughtAfterAll')}:</span>
+                        <Button size="sm" variant="secondary" disabled={view.party.length >= 6} onClick={() => void recover(m, 'party')}>
+                          {t('nuzlocke.area.toParty')}
+                        </Button>
+                        <Button size="sm" variant="secondary" onClick={() => void recover(m, 'box')}>
+                          {t('nuzlocke.area.toBox')}
+                        </Button>
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
         </>
+      )}
+
+      {confirmNone && (
+        <Modal
+          title={t('nuzlocke.area.noEncounterConfirm')}
+          actions={
+            <>
+              <Button variant="secondary" onClick={() => setConfirmNone(false)}>
+                {t('common.cancel')}
+              </Button>
+              <Button icon="block" onClick={() => void noEncounter()}>
+                {t('nuzlocke.area.noEncounter')}
+              </Button>
+            </>
+          }
+        >
+          {t('nuzlocke.area.noEncounterConfirmText')}
+        </Modal>
       )}
 
       {catching && area && (

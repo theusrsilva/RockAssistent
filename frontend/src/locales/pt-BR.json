@@ -2221,7 +2221,13 @@
           "missed": "Encontro que não conta (ex.: repetido pela cláusula): a área continua livre."
         },
         "save": "Registrar"
-      }
+      },
+      "noEncounterConfirm": "Marcar a área sem encontro?",
+      "noEncounterConfirmText": "A área fica usada: pela regra do primeiro encontro, você não poderá registrar outra captura aqui.",
+      "lostTitle": "Perdidos nesta área ({{count}})",
+      "caughtAfterAll": "Capturei afinal",
+      "toParty": "Equipe",
+      "toBox": "Caixa"
     },
     "team": {
       "title": "Equipe",
@@ -2300,6 +2306,17 @@
       "run_not_found": "Não achamos esta run.",
       "mon_not_found": "Não achamos este Pokémon na run.",
       "run_finished": "Esta run já terminou e não muda mais."
+    },
+    "map": {
+      "title": "Mapa",
+      "current": "Área atual",
+      "states": {
+        "none": "Não visitada",
+        "visited": "Visitada",
+        "caught": "Capturou",
+        "missed": "Perdeu o encontro",
+        "dead": "Morreu"
+      }
     }
   },
   "hunt": {

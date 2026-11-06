@@ -35,6 +35,8 @@ export default function TeamCard({
   const [error, setError] = useState<string | null>(null)
   const [dying, setDying] = useState<MonInfo | null>(null)
   const [editing, setEditing] = useState<MonInfo | null>(null)
+  /** Pokémon com mudança de nível em voo: os botões −/+ esperam a resposta (dois cliques não mandam o mesmo valor). */
+  const [leveling, setLeveling] = useState<Set<string>>(new Set())
   const over = new Set(overCap(view.party, view.levelCap).map((m) => m.id))
 
   const update = async (mon: MonInfo, body: Record<string, unknown>) => {
@@ -70,7 +72,16 @@ export default function TeamCard({
               names={names}
               cap={over.has(m.id) ? view.levelCap : null}
               readOnly={readOnly}
-              onLevel={(level) => void update(m, { level })}
+              levelBusy={leveling.has(m.id)}
+              onLevel={async (level) => {
+                setLeveling((s) => new Set(s).add(m.id))
+                await update(m, { level })
+                setLeveling((s) => {
+                  const next = new Set(s)
+                  next.delete(m.id)
+                  return next
+                })
+              }}
               onBox={() => void update(m, { status: 'box' })}
               onDie={() => setDying(m)}
               onEdit={() => setEditing(m)}
@@ -119,6 +130,7 @@ function MonRow({
   names,
   cap,
   readOnly,
+  levelBusy,
   onLevel,
   onBox,
   onDie,
@@ -130,6 +142,7 @@ function MonRow({
   /** Preenchido quando o Pokémon passou do cap. */
   cap: number | null
   readOnly: boolean
+  levelBusy: boolean
   onLevel: (level: number) => void
   onBox: () => void
   onDie: () => void
@@ -156,9 +169,9 @@ function MonRow({
           {mon.nickname && <div className="truncate text-[12px] text-muted">{names.get(mon.species) ?? `#${mon.species}`}</div>}
         </div>
         <div className="flex items-center gap-1">
-          {!readOnly && <IconButton name="remove" label={t('nuzlocke.team.levelDown')} className="h-7 w-7" disabled={mon.level <= 1} onClick={() => onLevel(mon.level - 1)} />}
+          {!readOnly && <IconButton name="remove" label={t('nuzlocke.team.levelDown')} className="h-7 w-7" disabled={levelBusy || mon.level <= 1} onClick={() => onLevel(mon.level - 1)} />}
           <span className={`min-w-12 text-center text-sm font-bold tabular-nums ${cap != null ? 'text-bad' : ''}`}>{t('nuzlocke.boss.level', { level: mon.level })}</span>
-          {!readOnly && <IconButton name="add" label={t('nuzlocke.team.levelUp')} className="h-7 w-7" disabled={mon.level >= 100} onClick={() => onLevel(mon.level + 1)} />}
+          {!readOnly && <IconButton name="add" label={t('nuzlocke.team.levelUp')} className="h-7 w-7" disabled={levelBusy || mon.level >= 100} onClick={() => onLevel(mon.level + 1)} />}
         </div>
       </div>
       {cap != null && (

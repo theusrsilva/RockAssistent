@@ -1,6 +1,6 @@
 // Nuzlocke: tipos espelho de /api/nuzlocke (TradeRock.Core/Nuzlocke) e contas puras da tela da run.
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { TFunction } from 'i18next'
 import { api, ApiError } from '../../lib/api'
 
@@ -299,19 +299,32 @@ export function nuzlockeErrorMessage(t: TFunction, e: unknown): string {
 
 // ---- Carregamento ----
 
-/** A run aberta: carrega, recebe o RunView devolvido pelas alterações e recarrega quando pedir. */
+/**
+ * A run aberta: carrega e aplica o RunView devolvido pelas alterações (<mutate>). Cada pedido leva um número de
+ * sequência e só o mais novo vale: uma resposta atrasada não apaga um estado mais novo. Trocar de run limpa a tela.
+ */
 export function useRun(id: string) {
-  const [view, setView] = useState<RunView | null>(null)
-  const [error, setError] = useState<unknown>(null)
-  const load = useCallback(() => {
+  const [state, setState] = useState<{ id: string; view: RunView | null; error: unknown }>({ id, view: null, error: null })
+  if (state.id !== id) setState({ id, view: null, error: null })
+  const last = useRef(0)
+
+  useEffect(() => {
+    const seq = ++last.current
     api.get<RunView>(`/api/nuzlocke/${id}`).then(
-      (v) => {
-        setView(v)
-        setError(null)
-      },
-      (e: unknown) => setError(e),
+      (view) => seq === last.current && setState({ id, view, error: null }),
+      (error: unknown) => seq === last.current && setState({ id, view: null, error }),
     )
   }, [id])
-  useEffect(load, [load])
-  return { view, setView, error, reload: load }
+
+  const mutate = useCallback(
+    async (request: Promise<RunView>) => {
+      const seq = ++last.current
+      const view = await request
+      if (seq === last.current) setState((s) => (s.id === view.run.id ? { ...s, view, error: null } : s))
+      return view
+    },
+    [],
+  )
+
+  return { view: state.id === id ? state.view : null, error: state.id === id ? state.error : null, mutate }
 }

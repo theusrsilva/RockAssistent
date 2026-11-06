@@ -137,3 +137,14 @@ describe('estatísticas', () => {
     expect(runStats(v)).toEqual({ caught: 3, deaths: 1, bosses: 2, areas: 2, shinies: 2, lost: 1 })
   })
 })
+
+describe('areaStates (precedência)', () => {
+  it('morto vence capturado na mesma área; visitada sem registro fica visitada', () => {
+    const v = view({
+      visitedAreas: ['route-1', 'route-2'],
+      party: [mon({ id: 'a', areaId: 'route-1' })],
+      graveyard: [mon({ id: 'b', areaId: 'route-1', status: 'dead' })],
+    })
+    expect(areaStates(v)).toEqual({ 'route-1': 'dead', 'route-2': 'visited' })
+  })
+})
