@@ -375,11 +375,12 @@ public static class BoxesEndpoints
         if (inSave.PID != current.PID || inSave.TID16 != current.TID16 || inSave.OriginalTrainerName != current.OriginalTrainerName)
             return "slot_changed";
 
-        a.SaveSha256 = entry.Info.Sha256;
         try
         {
             var before = stored.Sha256;
             var replaced = await store.ReplaceAsync(stored.Id, slot.Data, ct);
+            // Só depois de substituir: se falhar, o anexo é tentado de novo na próxima sincronização.
+            a.SaveSha256 = entry.Info.Sha256;
             return replaced.Sha256 == before ? "unchanged" : "updated";
         }
         catch (Exception ex) when (ex is VaultException or InvalidPokemonFileException)

@@ -113,6 +113,11 @@ public sealed class SaveLibraryTests : IAsyncLifetime
         Assert.Equal(14, boxes.BoxNames.Count);
         Assert.False(File.Exists(path + ".traderock.tmp"));
 
+        // A lista sem varredura nova já mostra o save gravado.
+        var listed = Assert.Single(await _library.ListAsync(false, default));
+        Assert.Equal(result.NewSha256, listed.Info!.Sha256);
+        Assert.Equal(new DateTimeOffset(File.GetLastWriteTimeUtc(path), TimeSpan.Zero), listed.Info.ModifiedAt);
+
         // O arquivo mudou desde a leitura: não grava por cima.
         var changed = await Assert.ThrowsAsync<SaveInjectionException>(() =>
             _library.ApplyAsync(entry.Id, [new SaveChange(0, 1, gengar)], default, expectedSha256: entry.Info.Sha256));
@@ -123,6 +128,32 @@ public sealed class SaveLibraryTests : IAsyncLifetime
         var wrong = await Assert.ThrowsAsync<SaveInjectionException>(() =>
             _library.ApplyAsync(entry.Id, [new SaveChange(0, 1, pk8)], default));
         Assert.Equal("sav_wrong_game", wrong.Code);
+    }
+
+    [LinuxFact]
+    [System.Runtime.Versioning.UnsupportedOSPlatform("windows")]
+    public async Task Pasta_sem_permissao_de_escrita_da_save_unwritable_sem_mexer_no_original()
+    {
+        Assert.SkipWhen(Environment.IsPrivilegedProcess || OperatingSystem.IsWindows(), "Como root (ou no Windows) a permissão não vale.");
+        var path = Path.Combine(_saves, "fr.sav");
+        File.WriteAllBytes(path, SaveFixture.BlankFireRed());
+        var original = File.ReadAllBytes(path);
+        var entry = await Single("fr.sav");
+        var gengar = Mon(SaveFileAccess.Open(original), Gengar);
+
+        File.SetUnixFileMode(_saves, UnixFileMode.UserRead | UnixFileMode.UserExecute);
+        try
+        {
+            var ex = await Assert.ThrowsAsync<SaveInjectionException>(() =>
+                _library.ApplyAsync(entry.Id, [new SaveChange(0, 0, gengar)], default));
+            Assert.Equal("save_unwritable", ex.Code);
+        }
+        finally
+        {
+            File.SetUnixFileMode(_saves, UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute);
+        }
+        Assert.Equal(original, File.ReadAllBytes(path));
+        Assert.False(File.Exists(path + ".traderock.tmp"));
     }
 
     [Fact]

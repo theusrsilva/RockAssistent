@@ -194,6 +194,33 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Sincronizacao_que_falha_tenta_de_novo_na_proxima()
+    {
+        var saveId = await AddFireRedAsync();
+        var mewtwo = await DemoAsync(Mewtwo);
+        await Post("/api/boxes/move", new
+        {
+            from = new { kind = "vault", pokemonId = mewtwo },
+            to = new { kind = "save", saveId, box = 0, slot = 0 },
+            mode = "attach",
+        });
+
+        // O Mewtwo sobe de nível no save, e o cofre já tem outro registro com esses mesmos dados:
+        // substituir daria dois Pokémon iguais no cofre (pokemon_duplicate).
+        var inSave = Assert.Single((await SlotsAsync(saveId)).EnumerateArray());
+        var pk = new PK3(inSave.GetProperty("data").GetBytesFromBase64()) { CurrentLevel = 75 };
+        pk.RefreshChecksum();
+        var data = new byte[pk.SIZE_STORED];
+        pk.WriteDecryptedDataStored(data);
+        await _app.Services.GetRequiredService<PokemonStore>().ImportAsync(data, PokemonOrigin.Imported, "m.pk3", default, GameFamily.Frlg);
+        await Post($"/api/boxes/saves/{saveId}/apply", new { changes = new[] { new { box = 0, slot = 0, data } } });
+
+        Assert.Equal("slot_changed", (await Post("/api/boxes/sync-attachments", new { }))[0].GetProperty("status").GetString());
+        // O SHA do save não foi marcado como conferido: a próxima sincronização tenta de novo.
+        Assert.Equal("slot_changed", (await Post("/api/boxes/sync-attachments", new { }))[0].GetProperty("status").GetString());
+    }
+
+    [Fact]
     public async Task Save_para_cofre_de_jogo_fora_do_catalogo_e_recusado()
     {
         var sav = BlankSaveFile.Get(GameVersion.C, "ROCHA", LanguageID.English);

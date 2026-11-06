@@ -157,25 +157,65 @@ public sealed class SaveLibrary(SaveFolders folders, SaveBackups backups, TimePr
 
             var backup = backups.Create(original, System.IO.Path.GetFileName(path));
             var temp = path + ".traderock.tmp";
-            await File.WriteAllBytesAsync(temp, result, ct);
-            File.Replace(temp, path, destinationBackupFileName: null);
+            try
+            {
+                await File.WriteAllBytesAsync(temp, result, ct);
+                File.Replace(temp, path, destinationBackupFileName: null);
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                // Pasta sem permissão, arquivo só-leitura ou aberto pelo emulador (Windows): o original fica como estava.
+                throw new SaveInjectionException("save_unwritable", "O save não pôde ser gravado (sem permissão ou em uso).", ex);
+            }
+            finally
+            {
+                TryDelete(temp);
+            }
 
             // Relê o arquivo gravado: o que vale é o disco (as caixas da Gen 1 e 2 se compactam na gravação).
             var written = await ReadFileAsync(path, ct);
             var newSha = SaveInjection.Sha256(written);
-            if (newSha != SaveInjection.Sha256(result))
+            if (newSha != SaveInjection.Sha256(result) || !Matches(written, expected))
             {
                 File.Copy(backup, path, overwrite: true);
-                throw new SaveInjectionException("verify_failed", "A conferência do save gravado falhou; o original voltou.");
+                throw new SaveInjectionException("verify_failed",
+                    "A conferência do save gravado falhou; o arquivo foi restaurado do backup.");
             }
-            Verify(SaveFileAccess.Open(written), expected);
             _cache.Remove(path);
-            Scan(path);
+            var fresh = Scan(path).Entry;
+            if (_last is { } last)
+                _last = last.Select(e => e.Path == path ? fresh : e).ToList();
             return new SaveWriteResult(backup, newSha);
         }
         finally
         {
             _gate.Release();
+        }
+    }
+
+    private static bool Matches(byte[] written, IReadOnlyList<(int Box, ushort Species, uint Pid, ushort Tid)> expected)
+    {
+        try
+        {
+            Verify(SaveFileAccess.Open(written), expected);
+            return true;
+        }
+        catch (SaveInjectionException)
+        {
+            return false;
+        }
+    }
+
+    private static void TryDelete(string path)
+    {
+        try
+        {
+            if (File.Exists(path))
+                File.Delete(path);
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+        {
+            // Sem permissão para apagar: sobra o temporário, mas o save original está intacto.
         }
     }
 

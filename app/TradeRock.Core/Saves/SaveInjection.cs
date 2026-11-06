@@ -20,7 +20,7 @@ public sealed record SaveLayout(
 /// <summary>Um Pokémon (decriptado) indo para uma posição de caixa do save.</summary>
 public sealed record Placement(byte[] Data, int Box, int Slot);
 
-public sealed class SaveInjectionException(string code, string message) : Exception(message)
+public sealed class SaveInjectionException(string code, string message, Exception? inner = null) : Exception(message, inner)
 {
     public string Code { get; } = code;
 }
