@@ -107,6 +107,42 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.DoesNotContain("not-a-move", noDex.Message);
     }
 
+    // Gen 1–3: os chefes da história (até o campeão) têm 8 líderes com insígnia, 4 da Elite 4 e 1 campeão; o resto
+    // (Kanto no GSC, revanches, Frontier Brains) vem depois, com Order maior. "drops" lista as quedas de nível
+    // entre ginásios seguidos que o jogo tem de verdade (no GSC, a Jasmine vem antes do Pryce e tem time mais forte).
+    [Theory]
+    [InlineData("rb", "")]
+    [InlineData("y", "")]
+    [InlineData("gs", "jasmine>pryce")]
+    [InlineData("c", "jasmine>pryce")]
+    [InlineData("rs", "")]
+    [InlineData("e", "")]
+    [InlineData("frlg", "")]
+    public void Chefes_da_historia_das_geracoes_1_a_3(string game, string drops)
+    {
+        var bosses = FromFiles(GameDataStore.EmbeddedFiles()).Bosses(game).OrderBy(b => b.Order).ToList();
+        Assert.Equal(bosses.Count, bosses.Select(b => b.Order).Distinct().Count());
+        var champion = Assert.Single(bosses, b => b.Kind == "champion" && b.Order == bosses.Where(x => x.Kind == "champion").Min(x => x.Order));
+        var story = bosses.Where(b => b.Order <= champion.Order).ToList();
+
+        var gyms = story.Where(b => b.Kind == "gym").ToList();
+        Assert.Equal(8, gyms.Count);
+        Assert.Equal(8, gyms.Select(g => g.Badge).Distinct().Count());
+        Assert.All(bosses.Where(b => b.Kind == "gym"), g => Assert.False(string.IsNullOrWhiteSpace(g.Badge)));
+        Assert.Equal(4, story.Count(b => b.Kind == "elite"));
+        Assert.Single(story, b => b.Kind == "champion");
+        Assert.True(story.Where(b => b.Kind == "elite").All(e => e.Order < champion.Order));
+
+        var found = gyms.Zip(gyms.Skip(1)).Where(p => p.Second.LevelCap < p.First.LevelCap)
+            .Select(p => $"{p.First.Id}>{p.Second.Id}");
+        Assert.Equal(drops, string.Join(",", found));
+
+        var rivals = bosses.Where(b => b.Kind == "rival").ToList();
+        Assert.True(rivals.Count >= 3);
+        Assert.All(rivals.Zip(rivals.Skip(1)), p => Assert.True(p.Second.LevelCap >= p.First.LevelCap, $"{p.First.Id} -> {p.Second.Id}"));
+        Assert.True(rivals.Max(r => r.Order) < champion.Order || game is "gs" or "c");
+    }
+
     [Fact]
     public void Validador_rejeita_jogo_desconhecido_nos_metodos()
     {

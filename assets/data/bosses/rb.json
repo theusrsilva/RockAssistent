@@ -1,0 +1,1101 @@
+{
+  "source": [
+    "https://github.com/pret/pokered/blob/master/data/trainers/parties.asm",
+    "https://github.com/pret/pokered/blob/master/data/trainers/special_moves.asm",
+    "https://github.com/pret/pokered/blob/master/engine/battle/read_trainer_party.asm",
+    "https://www.pokemythology.net/detonados/detonado-red-blue/"
+  ],
+  "items": [
+    {
+      "id": "rival-1",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Oak's Lab, Pallet Town",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 7,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5"
+    },
+    {
+      "id": "rival-2",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 16,
+          "form": 0,
+          "level": 9,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 7,
+          "form": 0,
+          "level": 8,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 9,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 8; com Bulbasaur: Pidgey 9, Charmander 8; luta opcional"
+    },
+    {
+      "id": "brock",
+      "kind": "gym",
+      "name": "Brock",
+      "title": "Gym Leader",
+      "location": "Pewter Gym",
+      "order": 3,
+      "badge": "Boulder Badge",
+      "party": [
+        {
+          "species": 74,
+          "form": 0,
+          "level": 12,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 14,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Onix tem Bide no 3º golpe"
+    },
+    {
+      "id": "rival-3",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Cerulean City (north exit, before Nugget Bridge)",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 63,
+          "form": 0,
+          "level": 15,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 19,
+          "form": 0,
+          "level": 15,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 7,
+          "form": 0,
+          "level": 17,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 18, Abra 15, Rattata 15, Bulbasaur 17; com Bulbasaur: Pidgeotto 18, Abra 15, Rattata 15, Charmander 17"
+    },
+    {
+      "id": "misty",
+      "kind": "gym",
+      "name": "Misty",
+      "title": "Gym Leader",
+      "location": "Cerulean Gym",
+      "order": 5,
+      "badge": "Cascade Badge",
+      "party": [
+        {
+          "species": 120,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 21,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Starmie tem Bubble Beam no 3º golpe"
+    },
+    {
+      "id": "rival-4",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "S.S. Anne 2F",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 19,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 20,
+          "form": 0,
+          "level": 16,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 8,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20"
+    },
+    {
+      "id": "lt-surge",
+      "kind": "gym",
+      "name": "Lt. Surge",
+      "title": "Gym Leader",
+      "location": "Vermilion Gym",
+      "order": 7,
+      "badge": "Thunder Badge",
+      "party": [
+        {
+          "species": 100,
+          "form": 0,
+          "level": 21,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Raichu tem Thunderbolt no 3º golpe"
+    },
+    {
+      "id": "erika",
+      "kind": "gym",
+      "name": "Erika",
+      "title": "Gym Leader",
+      "location": "Celadon Gym",
+      "order": 8,
+      "badge": "Rainbow Badge",
+      "party": [
+        {
+          "species": 71,
+          "form": 0,
+          "level": 29,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 114,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 45,
+          "form": 0,
+          "level": 29,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 29,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Vileplume tem Mega Drain no 3º golpe"
+    },
+    {
+      "id": "giovanni-hideout",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Rocket Hideout B4F",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 29,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 29,
+      "verified": true,
+      "notes": "golpes padrão do nível"
+    },
+    {
+      "id": "rival-5",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Pokémon Tower 2F",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 23,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 22,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 8,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25"
+    },
+    {
+      "id": "rival-6",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Silph Co. 7F",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 40,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40"
+    },
+    {
+      "id": "giovanni-silph",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Silph Co. 11F",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 33,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "golpes padrão do nível"
+    },
+    {
+      "id": "koga",
+      "kind": "gym",
+      "name": "Koga",
+      "title": "Gym Leader",
+      "location": "Fuchsia Gym",
+      "order": 13,
+      "badge": "Soul Badge",
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 89,
+          "form": 0,
+          "level": 39,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 43,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Weezing tem Toxic no 3º golpe"
+    },
+    {
+      "id": "sabrina",
+      "kind": "gym",
+      "name": "Sabrina",
+      "title": "Gym Leader",
+      "location": "Saffron Gym",
+      "order": 14,
+      "badge": "Marsh Badge",
+      "party": [
+        {
+          "species": 64,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 43,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Alakazam tem Psywave no 3º golpe"
+    },
+    {
+      "id": "blaine",
+      "kind": "gym",
+      "name": "Blaine",
+      "title": "Gym Leader",
+      "location": "Cinnabar Gym",
+      "order": 15,
+      "badge": "Volcano Badge",
+      "party": [
+        {
+          "species": 58,
+          "form": 0,
+          "level": 42,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 77,
+          "form": 0,
+          "level": 40,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 42,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 47,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Arcanine tem Fire Blast no 3º golpe"
+    },
+    {
+      "id": "giovanni-gym",
+      "kind": "gym",
+      "name": "Giovanni",
+      "title": "Gym Leader",
+      "location": "Viridian Gym",
+      "order": 16,
+      "badge": "Earth Badge",
+      "party": [
+        {
+          "species": 111,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 51,
+          "form": 0,
+          "level": 42,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 44,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 34,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 112,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Rhydon tem Fissure no 3º golpe"
+    },
+    {
+      "id": "rival-7",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 47,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 47,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 47, Alakazam 50, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 47, Alakazam 50, Charizard 53"
+    },
+    {
+      "id": "lorelei",
+      "kind": "elite",
+      "name": "Lorelei",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 87,
+          "form": 0,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Lapras tem Blizzard no 3º golpe"
+    },
+    {
+      "id": "bruno",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Machamp tem Fissure no 3º golpe"
+    },
+    {
+      "id": "agatha",
+      "kind": "elite",
+      "name": "Agatha",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 94,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Gengar tem Toxic no 3º golpe"
+    },
+    {
+      "id": "lance",
+      "kind": "elite",
+      "name": "Lance",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Dragonite tem Barrier no 3º golpe"
+    },
+    {
+      "id": "champion",
+      "kind": "champion",
+      "name": "Blue",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 112,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 63,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 65,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "golpes padrão do nível, mas o Pidgeot tem Sky Attack e o inicial tem um golpe forte no 3º golpe (Blastoise: Blizzard; Venusaur: Mega Drain; Charizard: Fire Blast); time para quem escolheu Charmander; com Squirtle: Pidgeot 61, Alakazam 59, Rhydon 61, Gyarados 61, Arcanine 63, Venusaur 65; com Bulbasaur: Pidgeot 61, Alakazam 59, Rhydon 61, Exeggutor 61, Gyarados 63, Charizard 65"
+    }
+  ]
+}

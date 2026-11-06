@@ -1,0 +1,1960 @@
+{
+  "source": [
+    "https://github.com/pret/pokefirered/blob/master/src/data/trainer_parties.h",
+    "https://github.com/pret/pokefirered/blob/master/src/data/trainers.h",
+    "https://www.pokemythology.net/detonados/detonado-firered-leafgreen/"
+  ],
+  "items": [
+    {
+      "id": "rival-oaks-lab",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Oak's Lab, Pallet Town",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 7,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5; pode perder: a história continua"
+    },
+    {
+      "id": "rival-route-22-early",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 16,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "tackle",
+            "sand-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 7,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "tackle",
+            "tail-whip"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 9,
+      "verified": true,
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 9; com Bulbasaur: Pidgey 9, Charmander 9; luta opcional"
+    },
+    {
+      "id": "brock",
+      "kind": "gym",
+      "name": "Brock",
+      "title": "Gym Leader",
+      "location": "Pewter Gym",
+      "order": 3,
+      "badge": "Boulder Badge",
+      "party": [
+        {
+          "species": 74,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "tackle",
+            "defense-curl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "tackle",
+            "bind",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "rival-cerulean",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Cerulean City (north exit, before Nugget Bridge)",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "tackle",
+            "sand-attack",
+            "gust",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 63,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "teleport"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 19,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "tackle",
+            "tail-whip",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 7,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "tail-whip",
+            "withdraw",
+            "water-gun"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeotto 17, Abra 16, Rattata 15, Bulbasaur 18; com Bulbasaur: Pidgeotto 17, Abra 16, Rattata 15, Charmander 18"
+    },
+    {
+      "id": "misty",
+      "kind": "gym",
+      "name": "Misty",
+      "title": "Gym Leader",
+      "location": "Cerulean Gym",
+      "order": 5,
+      "badge": "Cascade Badge",
+      "party": [
+        {
+          "species": 120,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "harden",
+            "recover",
+            "water-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "swift",
+            "recover",
+            "rapid-spin",
+            "water-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "rival-ss-anne",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "S.S. Anne 2F",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 19,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 20,
+          "form": 0,
+          "level": 16,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 8,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20"
+    },
+    {
+      "id": "lt-surge",
+      "kind": "gym",
+      "name": "Lt. Surge",
+      "title": "Gym Leader",
+      "location": "Vermilion Gym",
+      "order": 7,
+      "badge": "Thunder Badge",
+      "party": [
+        {
+          "species": 100,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "sonic-boom",
+            "tackle",
+            "screech",
+            "shock-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "quick-attack",
+            "thunder-wave",
+            "double-team",
+            "shock-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "quick-attack",
+            "thunder-wave",
+            "double-team",
+            "shock-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "erika",
+      "kind": "gym",
+      "name": "Erika",
+      "title": "Gym Leader",
+      "location": "Celadon Gym",
+      "order": 8,
+      "badge": "Rainbow Badge",
+      "party": [
+        {
+          "species": 71,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "stun-spore",
+            "acid",
+            "poison-powder",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 114,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "poison-powder",
+            "constrict",
+            "ingrain",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 45,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "sleep-powder",
+            "acid",
+            "stun-spore",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 29,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "giovanni-hideout",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Rocket Hideout B4F",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 29,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 29,
+      "verified": true,
+      "notes": "golpes padrão do nível"
+    },
+    {
+      "id": "rival-pokemon-tower",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Pokémon Tower 2F",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 17,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 23,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 22,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 8,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25"
+    },
+    {
+      "id": "rival-silph",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Silph Co. 7F",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 40,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40"
+    },
+    {
+      "id": "giovanni-silph",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Silph Co. 11F",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 33,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "golpes padrão do nível"
+    },
+    {
+      "id": "koga",
+      "kind": "gym",
+      "name": "Koga",
+      "title": "Gym Leader",
+      "location": "Fuchsia Gym",
+      "order": 13,
+      "badge": "Soul Badge",
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "self-destruct",
+            "sludge",
+            "smokescreen",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 89,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "minimize",
+            "sludge",
+            "acid-armor",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "self-destruct",
+            "sludge",
+            "smokescreen",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "tackle",
+            "sludge",
+            "smokescreen",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "sabrina",
+      "kind": "gym",
+      "name": "Sabrina",
+      "title": "Gym Leader",
+      "location": "Saffron Gym",
+      "order": 14,
+      "badge": "Marsh Badge",
+      "party": [
+        {
+          "species": 64,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "psybeam",
+            "reflect",
+            "future-sight",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "barrier",
+            "psybeam",
+            "baton-pass",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "psybeam",
+            "gust",
+            "leech-life",
+            "supersonic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "psychic",
+            "recover",
+            "future-sight",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "blaine",
+      "kind": "gym",
+      "name": "Blaine",
+      "title": "Gym Leader",
+      "location": "Cinnabar Gym",
+      "order": 15,
+      "badge": "Volcano Badge",
+      "party": [
+        {
+          "species": 58,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "bite",
+            "roar",
+            "take-down",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 77,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "stomp",
+            "bounce",
+            "fire-spin",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "stomp",
+            "bounce",
+            "fire-spin",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "bite",
+            "roar",
+            "take-down",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "giovanni-gym",
+      "kind": "gym",
+      "name": "Giovanni",
+      "title": "Gym Leader",
+      "location": "Viridian Gym",
+      "order": 16,
+      "badge": "Earth Badge",
+      "party": [
+        {
+          "species": 111,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "take-down",
+            "rock-blast",
+            "scary-face",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 51,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "slash",
+            "sand-tomb",
+            "mud-slap",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "body-slam",
+            "double-kick",
+            "poison-sting",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 34,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "thrash",
+            "double-kick",
+            "poison-sting",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "take-down",
+            "rock-blast",
+            "scary-face",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "rival-route-22-late",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "feather-dance",
+            "wing-attack",
+            "gust",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "take-down",
+            "horn-drill",
+            "rock-blast",
+            "fury-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 58,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "flame-wheel",
+            "take-down",
+            "leer",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "solar-beam",
+            "sleep-powder",
+            "poison-powder",
+            "stun-spore"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "psychic",
+            "calm-mind",
+            "future-sight",
+            "disable"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "water-gun",
+            "rain-dance",
+            "bite",
+            "rapid-spin"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 45, Alakazam 47, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 45, Alakazam 47, Charizard 53"
+    },
+    {
+      "id": "lorelei",
+      "kind": "elite",
+      "name": "Lorelei",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 87,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "ice-beam",
+            "surf",
+            "hail",
+            "safeguard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "spikes",
+            "protect",
+            "hail",
+            "dive"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "ice-beam",
+            "surf",
+            "amnesia",
+            "yawn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "ice-punch",
+            "double-slap",
+            "lovely-kiss",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "confuse-ray",
+            "ice-beam",
+            "surf",
+            "body-slam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "bruno",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "earthquake",
+            "rock-tomb",
+            "iron-tail",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "sky-uppercut",
+            "mach-punch",
+            "rock-tomb",
+            "counter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "mega-kick",
+            "foresight",
+            "brick-break",
+            "facade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "double-edge",
+            "earthquake",
+            "iron-tail",
+            "sand-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "cross-chop",
+            "bulk-up",
+            "scary-face",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "agatha",
+      "kind": "elite",
+      "name": "Agatha",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 94,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "shadow-punch",
+            "confuse-ray",
+            "toxic",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "confuse-ray",
+            "poison-fang",
+            "air-cutter",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "hypnosis",
+            "dream-eater",
+            "curse",
+            "mean-look"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "sludge-bomb",
+            "screech",
+            "iron-tail",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "shadow-ball",
+            "sludge-bomb",
+            "hypnosis",
+            "nightmare"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "lance",
+      "kind": "elite",
+      "name": "Lance",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "hyper-beam",
+            "dragon-rage",
+            "twister",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "hyper-beam",
+            "safeguard",
+            "dragon-rage",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "hyper-beam",
+            "safeguard",
+            "thunder-wave",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "hyper-beam",
+            "ancient-power",
+            "wing-attack",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "hyper-beam",
+            "safeguard",
+            "outrage",
+            "wing-attack"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "champion",
+      "kind": "champion",
+      "name": "Blue",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "aerial-ace",
+            "feather-dance",
+            "sand-attack",
+            "whirlwind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "psychic",
+            "future-sight",
+            "recover",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 112,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "take-down",
+            "earthquake",
+            "rock-tomb",
+            "scary-face"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "extreme-speed",
+            "flamethrower",
+            "roar",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "giga-drain",
+            "egg-bomb",
+            "sleep-powder",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "hydro-pump",
+            "rain-dance",
+            "skull-bash",
+            "bite"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 59, Alakazam 57, Rhydon 59, Gyarados 59, Arcanine 61, Venusaur 63; com Bulbasaur: Pidgeot 59, Alakazam 57, Rhydon 59, Exeggutor 59, Gyarados 61, Charizard 63"
+    },
+    {
+      "id": "rocket-admin-warehouse-1",
+      "kind": "evil",
+      "name": "Admin",
+      "title": "Team Rocket Admin",
+      "location": "Rocket Warehouse, Five Island",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 89,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "sludge-bomb",
+            "screech",
+            "minimize",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "sludge-bomb",
+            "bite",
+            "earthquake",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 45,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sludge-bomb",
+            "giga-drain",
+            "sleep-powder",
+            "stun-spore"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "rocket-admin-warehouse-2",
+      "kind": "evil",
+      "name": "Admin",
+      "title": "Team Rocket Admin",
+      "location": "Rocket Warehouse, Five Island",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 42,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "confuse-ray",
+            "sludge-bomb",
+            "air-cutter",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sludge-bomb",
+            "thunderbolt",
+            "explosion",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "flamethrower",
+            "crunch",
+            "iron-tail",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": null
+    },
+    {
+      "id": "lorelei-rematch",
+      "kind": "elite",
+      "name": "Lorelei",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 87,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "ice-beam",
+            "surf",
+            "signal-beam",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "ice-beam",
+            "surf",
+            "supersonic",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 221,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "blizzard",
+            "earthquake",
+            "double-edge",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "ice-beam",
+            "psychic",
+            "lovely-kiss",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "ice-beam",
+            "surf",
+            "psychic",
+            "thunder"
+          ],
+          "ability": null,
+          "item": "cheri-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 66,
+      "verified": true,
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+    },
+    {
+      "id": "bruno-rematch",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 208,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "earthquake",
+            "iron-tail",
+            "crunch",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "sky-uppercut",
+            "mach-punch",
+            "rock-slide",
+            "counter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "mega-kick",
+            "foresight",
+            "earthquake",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 208,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "earthquake",
+            "iron-tail",
+            "crunch",
+            "dragon-breath"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "cross-chop",
+            "earthquake",
+            "brick-break",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": "persim-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 68,
+      "verified": true,
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+    },
+    {
+      "id": "agatha-rematch",
+      "kind": "elite",
+      "name": "Agatha",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 94,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "confuse-ray",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "sludge-bomb",
+            "air-cutter",
+            "shadow-ball",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 200,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "thunderbolt",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "sludge-bomb",
+            "earthquake",
+            "giga-drain",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "shadow-ball",
+            "psychic",
+            "thunderbolt",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": "chesto-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+    },
+    {
+      "id": "lance-rematch",
+      "kind": "elite",
+      "name": "Lance",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "hyper-beam",
+            "dragon-dance",
+            "earthquake",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "hyper-beam",
+            "earthquake",
+            "dragon-claw",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "hyper-beam",
+            "dragon-dance",
+            "surf",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "hyper-beam",
+            "ancient-power",
+            "aerial-ace",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "hyper-beam",
+            "outrage",
+            "thunderbolt",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": "persim-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 72,
+      "verified": true,
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+    },
+    {
+      "id": "champion-rematch",
+      "kind": "champion",
+      "name": "Blue",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 214,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "megahorn",
+            "earthquake",
+            "counter",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "calm-mind",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 248,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "crunch",
+            "earthquake",
+            "thunderbolt",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "extreme-speed",
+            "overheat",
+            "aerial-ace",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "giga-drain",
+            "psychic",
+            "sleep-powder",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "hydro-pump",
+            "ice-beam",
+            "earthquake",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "time para quem escolheu Charmander; com Squirtle: Heracross 72, Alakazam 73, Tyranitar 72, Gyarados 73, Arcanine 73, Venusaur 75; com Bulbasaur: Heracross 72, Alakazam 73, Tyranitar 72, Exeggutor 73, Gyarados 73, Charizard 75; revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)"
+    }
+  ]
+}
