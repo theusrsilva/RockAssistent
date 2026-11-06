@@ -79,6 +79,9 @@ namespace TradeRock.Core.Storage.Migrations
                     b.Property<Guid>("RunId")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Shiny")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Species")
                         .HasColumnType("INTEGER");
 

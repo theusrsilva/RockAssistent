@@ -69,6 +69,7 @@ describe('multiplicador de dano', () => {
 
 const move = (over: Partial<LearnedMove>): LearnedMove => ({
   id: 1,
+  identifier: 'tackle',
   name: 'Tackle',
   type: 'normal',
   class: 'physical',

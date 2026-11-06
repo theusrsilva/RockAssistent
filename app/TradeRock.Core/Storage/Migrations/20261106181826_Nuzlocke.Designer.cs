@@ -11,7 +11,7 @@ using TradeRock.Core.Storage;
 namespace TradeRock.Core.Storage.Migrations
 {
     [DbContext(typeof(TradeRockDb))]
-    [Migration("20261106180633_Nuzlocke")]
+    [Migration("20261106181826_Nuzlocke")]
     partial class Nuzlocke
     {
         /// <inheritdoc />
@@ -81,6 +81,9 @@ namespace TradeRock.Core.Storage.Migrations
 
                     b.Property<Guid>("RunId")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("Shiny")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Species")
                         .HasColumnType("INTEGER");

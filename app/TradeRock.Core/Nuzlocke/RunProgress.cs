@@ -30,7 +30,8 @@ public sealed record MonInfo(
     string? DeathCause,
     DateTimeOffset CaughtAt,
     DateTimeOffset? DiedAt,
-    IReadOnlyList<string> Moves);
+    IReadOnlyList<string> Moves,
+    bool Shiny);
 
 /// <summary>Uma espécie que aparece na área, com os métodos, as versões e a faixa de nível juntados.</summary>
 public sealed record SpeciesEncounterOption(
@@ -152,13 +153,14 @@ public static class RunProgress
         JsonSerializer.Deserialize<NuzlockeRules>(run.RulesJson, Json) ?? NuzlockeRules.Default;
 
     public static MonInfo Info(NuzlockeMon m) => new(m.Id, m.AreaId, m.Species, m.Form, m.Nickname, m.Level, m.Status,
-        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? []);
+        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? [], m.Shiny);
 
     public static IReadOnlyList<string> DefeatedBosses(IReadOnlyList<NuzlockeEvent> events) =>
         events.OrderBy(e => e.At).Where(e => e.Kind == NuzlockeEvents.BossDefeated).Select(e => Read(e, "bossId"))
             .OfType<string>().Distinct().ToList();
 
-    private static bool InVersion(IReadOnlyList<string>? versions, string? version) =>
+    /// <summary>Vale na versão? (sem versão escolhida ou sem lista = vale.)</summary>
+    public static bool InVersion(IReadOnlyList<string>? versions, string? version) =>
         version is null || versions is null || versions.Contains(version);
 
     private static string? Read(NuzlockeEvent e, string property)

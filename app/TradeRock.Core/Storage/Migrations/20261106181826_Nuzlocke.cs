@@ -64,6 +64,7 @@ namespace TradeRock.Core.Storage.Migrations
                     Nickname = table.Column<string>(type: "TEXT", nullable: true),
                     Level = table.Column<int>(type: "INTEGER", nullable: false),
                     Status = table.Column<string>(type: "TEXT", nullable: false),
+                    Shiny = table.Column<bool>(type: "INTEGER", nullable: false),
                     DeathCause = table.Column<string>(type: "TEXT", nullable: true),
                     CaughtAt = table.Column<long>(type: "INTEGER", nullable: false),
                     DiedAt = table.Column<long>(type: "INTEGER", nullable: true),

@@ -283,7 +283,7 @@ public sealed class ServerModeTests : IAsyncLifetime
         // Hunt e anexo de save da conta também vão embora.
         Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync("/api/hunts",
             new { species = 906, form = 0, gameKey = "sv", methodId = "masuda" })).StatusCode);
-        var runResponse = await edu.PostAsync("/api/nuzlocke", new { gameKey = "frlg" });
+        var runResponse = await edu.PostAsync("/api/nuzlocke", new { gameKey = "frlg", version = "firered" });
         Assert.Equal(HttpStatusCode.OK, runResponse.StatusCode);
         var runId = (await runResponse.Content.ReadFromJsonAsync<JsonElement>(Ct)).GetProperty("run").GetProperty("id").GetString();
         Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync($"/api/nuzlocke/{runId}/encounter",

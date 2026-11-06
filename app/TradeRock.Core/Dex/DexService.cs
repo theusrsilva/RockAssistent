@@ -71,20 +71,6 @@ public sealed class DexService(DexDatabase db)
     /// <summary>Identificadores de todos os golpes (como o PokeAPI escreve: <c>thunder-punch</c>).</summary>
     public IReadOnlySet<string> MoveIdentifiers() => _moveIdentifiers.Value;
 
-    private readonly Lazy<IReadOnlyDictionary<int, string>> _moveIdentifiersById = new(() =>
-    {
-        using var c = db.Open();
-        using var cmd = Command(c, "SELECT id, identifier FROM moves");
-        using var r = cmd.ExecuteReader();
-        var ids = new Dictionary<int, string>();
-        while (r.Read())
-            ids[r.GetInt32(0)] = r.GetString(1);
-        return ids;
-    }, LazyThreadSafetyMode.ExecutionAndPublication);
-
-    /// <summary>Identificador do golpe (<c>thunder-punch</c>) pelo id do PokeAPI; null se não existe.</summary>
-    public string? MoveIdentifier(int moveId) => _moveIdentifiersById.Value.GetValueOrDefault(moveId);
-
     /// <summary>Nome da espécie em inglês; null se não existe.</summary>
     public string? SpeciesName(int speciesId) => Data.Species.TryGetValue(speciesId, out var s) ? s.Name : null;
 
@@ -624,7 +610,8 @@ public sealed class DexService(DexDatabase db)
         var machines = Machines(c, game.MainGroupId);
         var groups = new Dictionary<string, List<LearnedMove>>();
         using var cmd = Command(c, """
-            SELECT pm.move_id, pm.method, pm.level, coalesce(m.name_en, m.identifier), m.type_id, m.power, m.pp, m.accuracy, m.damage_class
+            SELECT pm.move_id, pm.method, pm.level, coalesce(m.name_en, m.identifier), m.type_id, m.power, m.pp, m.accuracy, m.damage_class,
+                   m.identifier
             FROM pokemon_moves pm JOIN moves m ON m.id = pm.move_id
             WHERE pm.pokemon_id = $p AND pm.version_group_id = $vg
             ORDER BY pm.method, pm.level, pm."order", m.name_en
@@ -637,7 +624,7 @@ public sealed class DexService(DexDatabase db)
             var stats = data.MoveAt(id, game.Order, Int(r, 4) ?? 0, Int(r, 5), Int(r, 6), Int(r, 7));
             machines.TryGetValue(id, out var machine);
             var isMachine = method == "machine";
-            groups.GetOrAdd(method).Add(new LearnedMove(id, r.GetString(3), data.TypeName(stats.Type), Str(r, 8), stats.Power,
+            groups.GetOrAdd(method).Add(new LearnedMove(id, r.GetString(9), r.GetString(3), data.TypeName(stats.Type), Str(r, 8), stats.Power,
                 stats.Accuracy, stats.Pp, method == "level-up" ? r.GetInt32(2) : null,
                 isMachine ? machine?.Number : null, isMachine ? machine?.Name : null));
         }

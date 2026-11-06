@@ -47,6 +47,8 @@ export interface EncounterInfo {
 
 export interface LearnedMove {
   id: number
+  /** Identificador do PokeAPI (`thunder-punch`), como nos golpes dos chefes. */
+  identifier: string
   name: string
   type: string
   class: string | null

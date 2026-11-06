@@ -10,7 +10,7 @@ public sealed class RunProgressTests
         new(id, "gym", id, null, null, order, null, [], cap, true, null, versions.Length == 0 ? null : versions);
 
     private static MonInfo Mon(int level) =>
-        new(Guid.NewGuid(), "route-1", 25, 0, "Pika", level, NuzlockeStatus.Party, null, DateTimeOffset.UtcNow, null, []);
+        new(Guid.NewGuid(), "route-1", 25, 0, "Pika", level, NuzlockeStatus.Party, null, DateTimeOffset.UtcNow, null, [], false);
 
     [Fact]
     public void Proximo_chefe_e_o_de_menor_ordem_nao_vencido()

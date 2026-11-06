@@ -59,8 +59,11 @@ public sealed record SpeciesMoves(IReadOnlyList<LearnedMove> LevelUp, IReadOnlyL
     public static SpeciesMoves Empty { get; } = new([], [], [], []);
 }
 
-/// <summary>Golpe aprendido, com tipo e força da geração do jogo. <see cref="Machine"/> é o nome do TM/HM ("TM30").</summary>
-public sealed record LearnedMove(int Id, string Name, string Type, string? Class, int? Power, int? Accuracy, int? Pp,
+/// <summary>
+/// Golpe aprendido, com tipo e força da geração do jogo. <see cref="Identifier"/>: o do PokeAPI (<c>thunder-punch</c>, como
+/// nos golpes dos chefes). <see cref="Machine"/> é o nome do TM/HM ("TM30").
+/// </summary>
+public sealed record LearnedMove(int Id, string Identifier, string Name, string Type, string? Class, int? Power, int? Accuracy, int? Pp,
     int? Level, int? MachineNumber, string? Machine);
 
 /// <summary>Status base, total e os pontos de esforço (EVs) que a espécie dá ao ser derrotada.</summary>

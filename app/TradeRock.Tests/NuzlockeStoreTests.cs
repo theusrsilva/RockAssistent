@@ -43,7 +43,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         return ValueTask.CompletedTask;
     }
 
-    private Task<RunView> NewFrlg(NuzlockeRules? rules = null) => _store.CreateAsync(new NewRun("Kanto", "frlg", null, rules), Ct);
+    private Task<RunView> NewFrlg(NuzlockeRules? rules = null) => _store.CreateAsync(new NewRun("Kanto", "frlg", "firered", rules), Ct);
 
     private static async Task<string> Fails(Func<Task> action) =>
         (await Assert.ThrowsAsync<NuzlockeException>(action)).Code;
@@ -78,7 +78,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         var pidgey = Assert.Single(view.AreaEncounters, e => e.Species == 16);
         Assert.Equal("Pidgey", pidgey.Name);
         Assert.Contains("walk", pidgey.Methods);
-        Assert.Equal(["firered", "leafgreen"], pidgey.Versions);
+        Assert.Equal(["firered"], pidgey.Versions);
         Assert.Contains("route-1", view.VisitedAreas);
 
         var viridian = await _store.SetAreaAsync(run.Run.Id, "viridian-city", Ct);
@@ -89,6 +89,10 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     [Fact]
     public async Task Versao_escolhida_filtra_os_encontros()
     {
+        Assert.Equal("version_required", await Fails(() => _store.CreateAsync(new NewRun(null, "frlg", null, null), Ct)));
+        Assert.Equal("version_required", await Fails(() => _store.CreateAsync(new NewRun(null, "swsh", " ", null), Ct)));
+        // Jogo de uma versão só não precisa escolher.
+        Assert.Null((await _store.CreateAsync(new NewRun(null, "pla", null, null), Ct)).Run.Version);
         var run = await _store.CreateAsync(new NewRun(null, "frlg", "leafgreen", null), Ct);
         Assert.Equal("FireRed / LeafGreen", run.Run.Name);
         var view = await _store.SetAreaAsync(run.Run.Id, "route-1", Ct);
@@ -111,6 +115,8 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         await _store.EncounterAsync(shinyRun.Run.Id, new NewEncounter("route-1", 16, 0, "A", 3, NuzlockeStatus.Party), Ct);
         var view = await _store.EncounterAsync(shinyRun.Run.Id, new NewEncounter("route-1", 19, 0, "B", 3, NuzlockeStatus.Party, Shiny: true), Ct);
         Assert.Equal(2, view.Party.Count);
+        Assert.True(view.Party.Single(m => m.Species == 19).Shiny);
+        Assert.False(view.Party.Single(m => m.Species == 16).Shiny);
 
         // Encontro perdido (fugiu) também usa a área.
         await _store.EncounterAsync(id, new NewEncounter("route-22", 0, 0, null, 0, NuzlockeStatus.Failed), Ct);
@@ -188,7 +194,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     [Fact]
     public async Task Run_no_sv_sem_treinadores_comuns_nao_falha()
     {
-        var view = await _store.CreateAsync(new NewRun("Paldea", "sv", null, null), Ct);
+        var view = await _store.CreateAsync(new NewRun("Paldea", "sv", "scarlet", null), Ct);
         Assert.False(view.TrainersAvailable);
         Assert.Empty(view.AreaTrainers);
         Assert.NotNull(view.CurrentArea);
@@ -237,13 +243,58 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         var run = await NewFrlg();
         var view = await _store.EncounterAsync(run.Run.Id, new NewEncounter("route-1", 16, 0, "Pidge", 5, NuzlockeStatus.Party), Ct);
         var learnset = await _store.LearnsetAsync(run.Run.Id, view.Party.Single().Id, Ct);
+        Assert.Contains(learnset.Known, m => m.Move == "tackle" && m.Name == "Tackle" && m.Type == "normal");
+        Assert.All(learnset.Known, m => Assert.True(m.Level <= 5));
         Assert.NotEmpty(learnset.Upcoming);
         Assert.All(learnset.Upcoming, m => Assert.True(m.Level > 5));
         Assert.Contains(learnset.Upcoming, m => m.Move == "gust");
+
+        // Pidgey 15: conhece Tackle, Sand Attack e Gust; o próximo é Whirlwind no 19.
+        var mon = view.Party.Single();
+        await _store.UpdateMonAsync(run.Run.Id, mon.Id, new MonChanges(null, 15, null, null, null), Ct);
+        var at15 = await _store.LearnsetAsync(run.Run.Id, mon.Id, Ct);
+        Assert.Superset(new HashSet<string> { "tackle", "sand-attack", "gust" }, at15.Known.Select(m => m.Move).ToHashSet());
+        Assert.Equal(("whirlwind", 19), (at15.Upcoming[0].Move, at15.Upcoming[0].Level));
         var pidgeotto = Assert.Single(learnset.Evolutions);
         Assert.Equal(17, pidgeotto.Species);
         Assert.Contains("level 18", pidgeotto.Conditions);
         Assert.All(pidgeotto.Upcoming, m => Assert.True(m.Level > 5));
+    }
+
+    [Fact]
+    public async Task Mon_missed_que_vira_capturado_passa_pelas_clausulas()
+    {
+        var id = (await NewFrlg(NuzlockeRules.Default with { SpeciesClause = true })).Run.Id;
+        await _store.EncounterAsync(id, new NewEncounter("route-1", 16, 0, "Pidge", 3, NuzlockeStatus.Party), Ct);
+        var view = await _store.EncounterAsync(id, new NewEncounter("route-2", 16, 0, "Dois", 3, NuzlockeStatus.Missed), Ct);
+        var dupe = view.Lost.Single();
+        Assert.Equal("dupe", await Fails(() => _store.UpdateMonAsync(id, dupe.Id, new MonChanges(NuzlockeStatus.Party, null, null, null, null), Ct)));
+
+        // Área já usada: outro Pokémon capturado na rota.
+        await _store.EncounterAsync(id, new NewEncounter("route-22", 56, 0, "Mankey", 3, NuzlockeStatus.Box), Ct);
+        view = await _store.EncounterAsync(id, new NewEncounter("route-22", 21, 0, "Spear", 3, NuzlockeStatus.Missed), Ct);
+        var second = view.Lost.Single(m => m.Species == 21);
+        Assert.Equal("area_already_used", await Fails(() =>
+            _store.UpdateMonAsync(id, second.Id, new MonChanges(NuzlockeStatus.Box, null, null, null, null), Ct)));
+
+        // Sozinho na área e sem repetir espécie, pode virar capturado; e o próprio não conta contra si.
+        view = await _store.EncounterAsync(id, new NewEncounter("viridian-forest", 10, 0, "Cat", 3, NuzlockeStatus.Missed), Ct);
+        var caterpie = view.Lost.Single(m => m.Species == 10);
+        view = await _store.UpdateMonAsync(id, caterpie.Id, new MonChanges(NuzlockeStatus.Box, null, null, null, null), Ct);
+        Assert.Contains(view.Box, m => m.Id == caterpie.Id);
+        // Mudar entre party e box (já capturado) não reconfere as cláusulas.
+        view = await _store.UpdateMonAsync(id, caterpie.Id, new MonChanges(NuzlockeStatus.Party, null, null, null, null), Ct);
+        Assert.Contains(view.Party, m => m.Id == caterpie.Id);
+    }
+
+    [Fact]
+    public async Task Chefe_de_outra_versao_nao_pode_ser_vencido()
+    {
+        var bea = _data.Bosses("swsh").First(b => b.Versions is ["sword"]);
+        var shield = await _store.CreateAsync(new NewRun(null, "swsh", "shield", null), Ct);
+        Assert.Equal("unknown_boss", await Fails(() => _store.DefeatBossAsync(shield.Run.Id, bea.Id, Ct)));
+        var sword = await _store.CreateAsync(new NewRun(null, "swsh", "sword", null), Ct);
+        Assert.Contains(bea.Id, (await _store.DefeatBossAsync(sword.Run.Id, bea.Id, Ct)).DefeatedBosses);
     }
 
     [Fact]
@@ -357,7 +408,7 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
     {
         Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
         var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke",
-            new { name = "Kanto", gameKey = "frlg", rules = new { firstEncounterOnly = true, nicknameRequired = true, speciesClause = true } }, Ct));
+            new { name = "Kanto", gameKey = "frlg", version = "firered", rules = new { firstEncounterOnly = true, nicknameRequired = true, speciesClause = true } }, Ct));
         var run = view.GetProperty("run");
         var id = run.GetProperty("id").GetGuid();
         Assert.True(run.GetProperty("rules").GetProperty("speciesClause").GetBoolean());
@@ -383,6 +434,8 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
         Assert.Equal("gust", view.GetProperty("party")[0].GetProperty("moves")[0].GetString());
         var learnset = await Ok(await _client.GetAsync($"/api/nuzlocke/{id}/mon/{monId}/learnset", Ct));
         Assert.Equal(17, learnset.GetProperty("evolutions")[0].GetProperty("species").GetInt32());
+        Assert.Contains(learnset.GetProperty("known").EnumerateArray(), m => m.GetProperty("move").GetString() == "tackle");
+        Assert.False(view.GetProperty("party")[0].GetProperty("shiny").GetBoolean());
 
         var bossId = view.GetProperty("nextBoss").GetProperty("id").GetString();
         view = await Ok(await _client.PostAsync($"/api/nuzlocke/{id}/boss/{bossId}/defeated", null, Ct));
@@ -398,6 +451,8 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
             HttpStatusCode.Conflict));
 
         Assert.Equal("unknown_game", await Error(await _client.PostAsJsonAsync("/api/nuzlocke", new { gameKey = "zz" }, Ct),
+            HttpStatusCode.BadRequest));
+        Assert.Equal("version_required", await Error(await _client.PostAsJsonAsync("/api/nuzlocke", new { gameKey = "swsh" }, Ct),
             HttpStatusCode.BadRequest));
         Assert.Equal(HttpStatusCode.NoContent, (await _client.DeleteAsync($"/api/nuzlocke/{id}", Ct)).StatusCode);
         Assert.Equal("run_not_found", await Error(await _client.GetAsync($"/api/nuzlocke/{id}", Ct), HttpStatusCode.NotFound));

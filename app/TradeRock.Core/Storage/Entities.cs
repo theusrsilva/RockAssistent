@@ -242,6 +242,7 @@ public sealed class NuzlockeMon
     /// <summary><c>party</c>, <c>box</c>, <c>dead</c>, <c>missed</c> ou <c>failed</c>.</summary>
     public required string Status { get; set; }
 
+    public bool Shiny { get; set; }
     public string? DeathCause { get; set; }
     public DateTimeOffset CaughtAt { get; set; }
     public DateTimeOffset? DiedAt { get; set; }

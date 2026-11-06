@@ -63,8 +63,12 @@ public sealed record LearnsetMove(string Move, string Name, string Type, int Lev
 public sealed record EvolutionLearnset(int Species, string Name, IReadOnlyList<string> Conditions, IReadOnlyList<LearnsetMove> OnEvolve,
     IReadOnlyList<LearnsetMove> Upcoming);
 
-/// <summary>Próximos golpes do Pokémon da run, no grupo de versões da run.</summary>
-public sealed record MonLearnset(int Species, int Level, IReadOnlyList<LearnsetMove> Upcoming, IReadOnlyList<EvolutionLearnset> Evolutions);
+/// <summary>
+/// Golpes do Pokémon da run, no grupo de versões da run. <see cref="Known"/>: os por nível até o nível atual (para mostrar
+/// nome e tipo dos golpes); <see cref="Upcoming"/>: os acima dele.
+/// </summary>
+public sealed record MonLearnset(int Species, int Level, IReadOnlyList<LearnsetMove> Known, IReadOnlyList<LearnsetMove> Upcoming,
+    IReadOnlyList<EvolutionLearnset> Evolutions);
 
 /// <summary>
 /// Runs de Nuzlocke, por conta como o cofre. Os Pokémon e os eventos são da run: toda consulta passa primeiro pela run
@@ -107,6 +111,9 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         var version = string.IsNullOrWhiteSpace(body.Version) ? null : body.Version.Trim();
         if (version is not null && !game.PokeApiVersions.Contains(version))
             throw new NuzlockeException("unknown_version");
+        // Jogo com duas versões: chefes, treinadores e encontros mudam de uma para a outra.
+        if (version is null && game.PokeApiVersions.Count > 1)
+            throw new NuzlockeException("version_required");
         var name = body.Name?.Trim();
         if (string.IsNullOrEmpty(name))
             name = game.Name;
@@ -190,12 +197,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         {
             if (rules.NicknameRequired && nickname is null)
                 throw new NuzlockeException("nickname_required");
-            var clauseFree = rules.ShinyClause && body.Shiny;
-            if (!clauseFree && rules.FirstEncounterOnly && mons.Any(m => m.AreaId == area.Id && m.Status != NuzlockeStatus.Missed))
-                throw new NuzlockeException("area_already_used");
-            if (!clauseFree && (rules.SpeciesClause || rules.DupesClause)
-                && mons.Any(m => NuzlockeStatus.Caught(m.Status) && SameLine(m.Species, body.Species, rules.DupesClause)))
-                throw new NuzlockeException("dupe");
+            CheckClauses(rules, mons, area.Id, body.Species, body.Shiny);
             if (status == NuzlockeStatus.Party && mons.Count(m => m.Status == NuzlockeStatus.Party) >= MaxPartySize)
                 throw new NuzlockeException("party_full");
         }
@@ -210,6 +212,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             Nickname = nickname,
             Level = body.Level,
             Status = status,
+            Shiny = body.Shiny,
             CaughtAt = time.GetUtcNow(),
             MovesJson = "[]",
         };
@@ -255,8 +258,12 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             becameCaught = NuzlockeStatus.Caught(status) && !NuzlockeStatus.Caught(mon.Status);
             if (!NuzlockeStatus.All.Contains(status))
                 throw new NuzlockeException("invalid_status");
-            if (NuzlockeStatus.Caught(status))
+            if (becameCaught)
+            {
                 CheckSpecies(mon.Species, mon.Form, caught: true);
+                var others = await db.NuzlockeMons.Where(m => m.RunId == run.Id && m.Id != mon.Id).ToListAsync(ct);
+                CheckClauses(rules, others, mon.AreaId, mon.Species, mon.Shiny);
+            }
             if (status == NuzlockeStatus.Party
                 && await db.NuzlockeMons.CountAsync(m => m.RunId == run.Id && m.Id != mon.Id && m.Status == NuzlockeStatus.Party, ct) >= MaxPartySize)
                 throw new NuzlockeException("party_full");
@@ -280,7 +287,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
     {
         await using var db = await dbFactory.CreateDbContextAsync(ct);
         var run = await FindActive(db, id, ct);
-        if (data.Bosses(run.GameKey).All(b => b.Id != bossId))
+        if (!data.Bosses(run.GameKey).Any(b => b.Id == bossId && RunProgress.InVersion(b.Versions, run.Version)))
             throw new NuzlockeException("unknown_boss");
         var already = await db.NuzlockeEvents.Where(e => e.RunId == run.Id && e.Kind == NuzlockeEvents.BossDefeated).ToListAsync(ct);
         if (!RunProgress.DefeatedBosses(already).Contains(bossId))
@@ -330,10 +337,10 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             gameKey = run.GameKey;
         }
         if (mon.Species < 1 || !DexDatabase.ResourceExists)
-            return new MonLearnset(mon.Species, mon.Level, [], []);
+            return new MonLearnset(mon.Species, mon.Level, [], [], []);
         var detail = await dex.GetAsync(mon.Species, gameKey, "en", ct);
         if (detail is null)
-            return new MonLearnset(mon.Species, mon.Level, [], []);
+            return new MonLearnset(mon.Species, mon.Level, [], [], []);
 
         var evolutions = new List<EvolutionLearnset>();
         foreach (var step in detail.EvolutionChain.Where(s => s.FromSpeciesId == mon.Species))
@@ -344,14 +351,32 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             evolutions.Add(new EvolutionLearnset(step.SpeciesId, next.Name, step.Conditions,
                 LevelMoves(next, l => l == 0), LevelMoves(next, l => l > mon.Level)));
         }
-        return new MonLearnset(mon.Species, mon.Level, LevelMoves(detail, l => l > mon.Level), evolutions);
+        return new MonLearnset(mon.Species, mon.Level, LevelMoves(detail, l => l <= mon.Level), LevelMoves(detail, l => l > mon.Level),
+            evolutions);
     }
 
     private List<LearnsetMove> LevelMoves(SpeciesDetail detail, Func<int, bool> level) =>
         detail.Moves.LevelUp.Where(m => m.Level is { } l && level(l))
-            .Select(m => new LearnsetMove(dex.MoveIdentifier(m.Id) ?? m.Name, m.Name, m.Type, m.Level ?? 0))
+            .Select(m => new LearnsetMove(m.Identifier, m.Name, m.Type, m.Level ?? 0))
             .OrderBy(m => m.Level).ThenBy(m => m.Name, StringComparer.Ordinal)
             .ToList();
+
+    /// <summary>
+    /// Cláusulas de quem vai ser capturado: área já usada por outro Pokémon (<c>area_already_used</c>) e espécie ou linha
+    /// já capturada (<c>dupe</c>). Shiny com a cláusula de shiny passa pelas duas. <paramref name="others"/>: os outros
+    /// Pokémon da run (sem o próprio).
+    /// </summary>
+    private void CheckClauses(NuzlockeRules rules, IEnumerable<NuzlockeMon> others, string areaId, int species, bool shiny)
+    {
+        if (rules.ShinyClause && shiny)
+            return;
+        var list = others.ToList();
+        if (rules.FirstEncounterOnly && list.Any(m => m.AreaId == areaId && m.Status != NuzlockeStatus.Missed))
+            throw new NuzlockeException("area_already_used");
+        if ((rules.SpeciesClause || rules.DupesClause)
+            && list.Any(m => NuzlockeStatus.Caught(m.Status) && SameLine(m.Species, species, rules.DupesClause)))
+            throw new NuzlockeException("dupe");
+    }
 
     private bool SameLine(int a, int b, bool byLine)
     {
