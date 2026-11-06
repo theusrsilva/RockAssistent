@@ -11,12 +11,15 @@ import { BoxGrid, PokemonTile } from '../vault/BoxGrid'
 import { acceptsAny, draggedSource, startSaveDrag } from '../vault/dnd'
 import {
   backupsOf,
+  cloneBody,
   errorMessage,
+  evolveBody,
   fileName,
   planDrop,
   type ApplyResult,
   type DragSource,
   type DropTarget,
+  type EvolveLegality,
   type MoveMode,
   type MoveResult,
   type SaveBoxes,
@@ -25,6 +28,7 @@ import {
   type SaveSlot,
 } from './boxes'
 import { ComingSoonActions } from './ComingSoonActions'
+import { EvolveDialog } from './EvolveDialog'
 import { MoveDialog } from './MoveDialog'
 
 const gameName = (key: string) => GAME_VERSIONS.find((g) => g.key === key)?.name ?? key
@@ -35,7 +39,7 @@ const slotKey = (s: { box: number; slot: number }) => `${s.box}:${s.slot}`
  * embaixo, para arrastar entre os dois) e o painel do Pokémon à direita. Só na janela do PC.
  */
 export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const toast = useToast()
   const mobile = useIsMobile()
   const [folders, setFolders] = useState<SaveFolder[] | null>(null)
@@ -47,6 +51,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
   const [focused, setFocused] = useState<string | null>(null)
   const [dragMode, setDragMode] = useState<MoveMode>('copy')
   const [moving, setMoving] = useState<SaveSlot | null>(null)
+  const [evolving, setEvolving] = useState<SaveSlot | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
   // Trava contra envio duplo: o estado só muda no próximo render, e dois drops seguidos chegariam antes dele.
@@ -163,6 +168,29 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
     }
   }
 
+  /** Clonar no save: cópia na primeira posição livre do mesmo save (a partir da caixa do Pokémon). */
+  async function clone(entry: SaveSlot) {
+    if (busyRef.current || !save || !saveId) return
+    setError(null)
+    const body = cloneBody(saveId, entry, save)
+    if (!body) return setError(t('boxes.cloneNoSpace'))
+    busyRef.current = true
+    setBusy(true)
+    try {
+      const r = await api.post<MoveResult>('/api/boxes/move', body)
+      const to = body.to as { box: number; slot: number }
+      toast(t('boxes.cloned', { box: save.boxNames[to.box] || t('boxes.boxN', { n: to.box + 1 }), slot: to.slot + 1 }))
+      await afterWrite(backupsOf(r))
+    } catch (e) {
+      if (forbidden(e)) return
+      setError(errorMessage(t, e))
+      if (e instanceof ApiError && e.code === 'save_changed') reloadStale()
+    } finally {
+      busyRef.current = false
+      setBusy(false)
+    }
+  }
+
   /** O save mudou no disco (409 save_changed vindo do diálogo): mostra o que está lá agora. */
   const reloadStale = () => {
     if (saveId) void loadSave(saveId)
@@ -207,6 +235,10 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
       }
       canMove={focusedSlot.box >= 0}
       onMove={() => setMoving(focusedSlot)}
+      onClone={writable ? () => void clone(focusedSlot) : undefined}
+      onEvolve={writable && !focusedSlot.summary.isEgg ? () => setEvolving(focusedSlot) : undefined}
+      cloneHint={t('boxes.readOnlyHint')}
+      evolveHint={writable ? t('boxes.evolveDialog.egg') : t('boxes.readOnlyHint')}
       onClose={() => setFocused(null)}
     />
   )
@@ -416,6 +448,25 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
           }}
         />
       )}
+      {evolving && saveId && save && (
+        <EvolveDialog
+          name={(evolving.summary.nickname || evolving.summary.speciesName).toUpperCase()}
+          optionsUrl={`/api/boxes/saves/${saveId}/slot/${evolving.box}/${evolving.slot}/evolve-options`}
+          submit={async (option) => {
+            // O SHA do save aberto: se o emulador gravou no meio, o backend responde 409 save_changed.
+            const r = await api.post<ApplyResult & { legality: EvolveLegality }>(
+              `/api/boxes/saves/${saveId}/slot/${evolving.box}/${evolving.slot}/evolve`,
+              evolveBody(option, i18n.language, save.info.sha256),
+            )
+            await afterWrite([r.backupPath])
+            return r.legality
+          }}
+          onError={(e) => {
+            if (e instanceof ApiError && e.code === 'save_changed') reloadStale()
+          }}
+          onClose={() => setEvolving(null)}
+        />
+      )}
     </div>
   )
 }
@@ -503,6 +554,10 @@ function SlotPanel({
   place,
   canMove,
   onMove,
+  onClone,
+  onEvolve,
+  cloneHint,
+  evolveHint,
   onClose,
 }: {
   entry: SaveSlot
@@ -510,6 +565,11 @@ function SlotPanel({
   place: string
   canMove: boolean
   onMove: () => void
+  /** Sem a função (save só de leitura, ovo), o botão fica desligado com a dica. */
+  onClone?: () => void
+  onEvolve?: () => void
+  cloneHint: string
+  evolveHint: string
   onClose: () => void
 }) {
   const { t } = useTranslation()
@@ -572,7 +632,7 @@ function SlotPanel({
             {entry.family === null ? t('boxes.moveOtherSave') : t('boxes.moveAction')}
           </Button>
         </div>
-        <ComingSoonActions />
+        <ComingSoonActions onClone={onClone} onEvolve={onEvolve} cloneHint={cloneHint} evolveHint={evolveHint} />
         <div className="flex items-center gap-1.5">
           <IconButton name="menu_book" label={t('boxes.viewDex')} onClick={() => navigate(`/pokedex/${s.species}`)} />
           <a

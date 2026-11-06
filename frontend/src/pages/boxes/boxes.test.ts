@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { ApiError } from '../../lib/api'
-import { backupsOf, errorKey, initialTab, planDrop, tabReducer, type DragSource } from './boxes'
+import { backupsOf, cloneBody, errorKey, evolveBody, firstFreeSlot, initialTab, planDrop, tabReducer, type DragSource, type SaveBoxes, type SaveSlot } from './boxes'
 
 const fromSave: DragSource = { kind: 'save', saveId: 'a1b2c3d4', box: 0, slot: 3, data: 'AAA', family: 'frlg' }
 const fromVault: DragSource = { kind: 'vault', pokemonId: 'p1' }
@@ -99,5 +99,40 @@ describe('erros', () => {
     // O VaultStore.MoveAsync (destino no cofre) responde estes dois.
     expect(errorKey(new ApiError(400, 'box_full', []))).toBe('boxes.errors.box_full')
     expect(errorKey(new ApiError(400, 'box_not_found', []))).toBe('boxes.errors.box_not_found')
+  })
+})
+
+const slotAt = (box: number, slot: number) => ({ box, slot }) as SaveSlot
+const saveWith = (slots: SaveSlot[], boxCount = 2, slotsPerBox = 3) =>
+  ({ info: { boxCount, slotsPerBox, sha256: 'abc' }, slots, boxNames: [] }) as unknown as SaveBoxes
+
+describe('evoluir e clonar', () => {
+  it('o POST evolve do save leva o sha256 do save aberto', () => {
+    expect(evolveBody({ species: 94, form: 0 }, 'pt-BR', 'abc')).toEqual({ species: 94, form: 0, language: 'pt-BR', sha256: 'abc' })
+    expect(evolveBody({ species: 94, form: 0 }, 'en')).toEqual({ species: 94, form: 0, language: 'en' })
+    expect(evolveBody({ species: 94, form: 0 }, 'fr')).toMatchObject({ language: 'pt-BR' })
+  })
+
+  it('primeira posição livre a partir da caixa, dando a volta', () => {
+    const save = saveWith([slotAt(-1, 0), slotAt(1, 0), slotAt(1, 1), slotAt(0, 0)])
+    expect(firstFreeSlot(save, 1)).toEqual({ box: 1, slot: 2 })
+    expect(firstFreeSlot(save, -1)).toEqual({ box: 0, slot: 1 })
+    const full = saveWith([slotAt(0, 0), slotAt(0, 1), slotAt(0, 2)], 1)
+    expect(firstFreeSlot(full, 0)).toBeNull()
+  })
+
+  it('clonar no save é copiar para a posição livre do mesmo save', () => {
+    const save = saveWith([slotAt(0, 0)])
+    expect(cloneBody('a1', slotAt(0, 0), save)).toEqual({
+      from: { kind: 'save', saveId: 'a1', box: 0, slot: 0 },
+      to: { kind: 'save', saveId: 'a1', box: 0, slot: 1 },
+      mode: 'copy',
+    })
+    expect(cloneBody('a1', slotAt(0, 0), saveWith([slotAt(0, 0)], 1, 1))).toBeNull()
+  })
+
+  it('erros novos da evolução têm texto', () => {
+    expect(errorKey(new ApiError(400, 'evolve_not_available', []))).toBe('boxes.errors.evolve_not_available')
+    expect(errorKey(new ApiError(400, 'evolve_wrong_target', []))).toBe('boxes.errors.evolve_wrong_target')
   })
 })

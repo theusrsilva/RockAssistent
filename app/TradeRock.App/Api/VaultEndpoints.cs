@@ -1,10 +1,12 @@
 using PKHeX.Core;
 using TradeRock.App.Server;
 using System.IO.Compression;
+using TradeRock.Core.Builder;
 using TradeRock.Core.Games;
 using TradeRock.Core.Pokemon;
 using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
+using TradeEvolution = TradeRock.Core.Builder.TradeEvolution;
 
 namespace TradeRock.App.Api;
 
@@ -17,6 +19,10 @@ public static class VaultEndpoints
     public sealed record TagDto(string Name, string Color);
     public sealed record AssignTagsDto(IReadOnlyList<Guid> PokemonIds, IReadOnlyList<Guid>? Add, IReadOnlyList<Guid>? Remove);
     public sealed record ReplaceDto(byte[] Data);
+
+    /// <param name="Sha256">Só nos saves: o SHA do save aberto na tela (409 save_changed se mudou no disco).</param>
+    /// <param name="Language">Idioma das mensagens de legalidade ("pt-BR" ou "en").</param>
+    public sealed record EvolveDto(ushort Species, byte Form, string? Sha256 = null, string? Language = null);
 
     /// <summary>Jogo de destino (chave do catálogo: sv, swsh, za...).</summary>
     public sealed record TransferDto(string? Game);
@@ -85,6 +91,49 @@ public static class VaultEndpoints
             catch (InvalidPokemonFileException ex)
             {
                 return Results.BadRequest(new { error = "invalid", errors = new[] { ex.Code } });
+            }
+        });
+
+        // Evoluir por troca sem trocar (Tarefa 18). A entrada continua a mesma (id, caixa, etiquetas, histórico); o
+        // Pokémon de antes vai para a lixeira, de onde dá para recuperar.
+        vault.MapGet("/pokemon/{id:guid}/evolve-options", async (Guid id, PokemonStore store, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Family);
+            return Results.Ok(EvolveOptions(pk));
+        });
+
+        vault.MapPost("/pokemon/{id:guid}/evolve", async (Guid id, EvolveDto body, PokemonStore store, VaultStore vault,
+            SettingsStore settings, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            var original = await store.ReadDataAsync(p, ct);
+            var pk = PokemonReader.ToEntity(original, p.Family);
+            try
+            {
+                var evolved = TradeEvolution.Apply(pk, body.Species, body.Form);
+                var replaced = await store.ReplaceAsync(id, SameSize(evolved, original.Length), ct);
+                // Cópia do Pokémon de antes na lixeira (o SHA antigo ficou livre com a troca dos dados).
+                var backup = await store.ImportAsync(original, p.Origin, p.SourceFileName, ct, p.Family);
+                if (backup.Pokemon.Id != id)
+                    await vault.TrashAsync([backup.Pokemon.Id], ct);
+                var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
+                return Results.Ok(new
+                {
+                    pokemon = PokemonEndpoints.PokemonDto.From(replaced, me),
+                    legality = LegalityDto(evolved, body.Language),
+                    backupId = backup.Pokemon.Id == id ? (Guid?)null : backup.Pokemon.Id,
+                });
+            }
+            catch (TradeEvolutionException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
+            catch (VaultException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
             }
         });
 
@@ -188,6 +237,46 @@ public static class VaultEndpoints
             }
             return Results.Ok(new { written });
         });
+    }
+
+    /// <summary>Opções de evolução por troca para a tela (nomes em inglês, como os itens no resto do app).</summary>
+    internal static IReadOnlyList<object> EvolveOptions(PKM pk)
+    {
+        var strings = GameInfo.GetStrings("en");
+        return TradeEvolution.Options(pk).Select(o => (object)new
+        {
+            species = o.Species,
+            form = o.Form,
+            speciesName = strings.specieslist[o.Species],
+            requiredItem = o.RequiredItem,
+            requiredItemName = o.RequiredItem is { } item ? strings.itemlist[TradeEvolution.NationalItem(pk, item)] : null,
+            holdsItem = o.RequiredItem is { } held && pk.HeldItem == held,
+            tradeWith = o.TradeWith,
+            tradeWithName = o.TradeWith is { } with ? strings.specieslist[with] : null,
+        }).ToList();
+    }
+
+    /// <summary>Veredito do PKHeX depois de evoluir. Só avisa: a evolução já foi gravada.</summary>
+    internal static object LegalityDto(PKM pk, string? language)
+    {
+        var report = LegalityReporter.Analyze(pk, language is "en" ? "en" : "pt-BR");
+        return new
+        {
+            status = report.Status.ToString().ToLowerInvariant(),
+            valid = report.Status != LegalityStatus.Illegal,
+            messages = report.Problems.Select(c => c.Message).Distinct().ToList(),
+        };
+    }
+
+    /// <summary>Bytes no mesmo tamanho do arquivo de antes (o .pk3 do cofre pode ter 80 ou 100 bytes).</summary>
+    private static byte[] SameSize(PKM pk, int length)
+    {
+        var data = new byte[length == pk.SIZE_PARTY ? pk.SIZE_PARTY : pk.SIZE_STORED];
+        if (data.Length == pk.SIZE_PARTY)
+            pk.WriteDecryptedDataParty(data);
+        else
+            pk.WriteDecryptedDataStored(data);
+        return data;
     }
 
     private static bool IsValidExport(ExportDto body) =>

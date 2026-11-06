@@ -5,6 +5,7 @@ using TradeRock.Core.Games;
 using TradeRock.Core.Pokemon;
 using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
+using TradeEvolution = TradeRock.Core.Builder.TradeEvolution;
 
 namespace TradeRock.App.Api;
 
@@ -66,6 +67,40 @@ public static class BoxesEndpoints
                 return Error(ex);
             }
         });
+
+        // Evoluir por troca um Pokémon do save (Tarefa 18). Vale também no time (caixa -1).
+        boxes.MapGet("/saves/{id}/slot/{box:int}/{slot:int}/evolve-options", (string id, int box, int slot, SaveLibrary library,
+            CancellationToken ct) => Run(async () =>
+        {
+            var entry = await SlotAsync(library, id, box, slot, ct);
+            var (sav, _) = await library.OpenAsync(id, ct);
+            return VaultEndpoints.EvolveOptions(SaveFileAccess.ToEntity(sav, entry.Data));
+        }));
+
+        boxes.MapPost("/saves/{id}/slot/{box:int}/{slot:int}/evolve", (string id, int box, int slot, VaultEndpoints.EvolveDto body,
+            SaveLibrary library, CancellationToken ct) => Run(async () =>
+        {
+            var current = await library.ReadAsync(id, ct);
+            var entry = current.Slots.FirstOrDefault(e => e.Box == box && e.Slot == slot)
+                ?? throw new BoxesException("slot_empty", StatusCodes.Status404NotFound);
+            var (sav, _) = await library.OpenAsync(id, ct);
+            PKM evolved;
+            try
+            {
+                evolved = TradeEvolution.Apply(SaveFileAccess.ToEntity(sav, entry.Data), body.Species, body.Form);
+            }
+            catch (TradeEvolutionException ex)
+            {
+                throw new BoxesException(ex.Code);
+            }
+            // O SHA da tela vale mais; sem ele, o da leitura de onde veio o Pokémon.
+            var written = await library.ApplyAsync(id, [new SaveChange(box, slot, Stored(evolved))], ct, body.Sha256 ?? current.Info.Sha256);
+            return new
+            {
+                written.BackupPath, written.NewSha256, save = await library.ReadAsync(id, ct),
+                legality = VaultEndpoints.LegalityDto(evolved, body.Language),
+            };
+        }));
 
         boxes.MapPost("/move", (MoveDto body, SaveLibrary library, PokemonStore store, VaultStore vault,
             IDbContextFactory<TradeRockDb> dbFactory, TimeProvider time, CancellationToken ct) =>

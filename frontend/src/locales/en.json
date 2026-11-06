@@ -2029,7 +2029,9 @@
       "local_only": "Only in the PC window.",
       "no_window": "Open RockAssistent in the PC window to choose the folder.",
       "box_not_found": "That vault box doesn't exist anymore. Pick another.",
-      "box_full": "That vault box is full. Pick another one or the Inbox."
+      "box_full": "That vault box is full. Pick another one or the Inbox.",
+      "evolve_not_available": "This Pokémon does not evolve by trade.",
+      "evolve_wrong_target": "That evolution does not apply to this Pokémon. Open the list again."
     },
     "foldersCard": {
       "title": "Save folders",
@@ -2050,6 +2052,22 @@
         "citra": "Citra (3DS): in Citra's sdmc folder, under Nintendo 3DS/…/title/…/data; the file is called main."
       },
       "whereNote": "You can pick a parent folder: RockAssistent also looks in subfolders."
+    },
+    "cloneVaultHint": "The vault keeps one copy of each Pokémon. To have copies, use \"Move or copy to a save\".",
+    "cloneNoSpace": "There is no free slot in this save for the copy.",
+    "cloned": "Copied to {{box}}, slot {{slot}}.",
+    "readOnlyHint": "This save is read-only.",
+    "evolveDialog": {
+      "title": "Trade-evolve {{name}}",
+      "help": "The app does the evolution a trade would trigger, without another game. Trainer, moves and everything else stay the same.",
+      "none": "This Pokémon does not evolve by trade (or it is holding an Everstone).",
+      "needsItem": "In a trade it must hold {{item}}. The app evolves it even without the item.",
+      "usesItem": "It is holding {{item}}: the item is used up by the evolution.",
+      "tradeWith": "In the game, it must be traded for a {{species}}.",
+      "done": "It evolved into {{species}}.",
+      "illegal": "PKHeX found problems after the evolution. It is still saved, but a trade may refuse it:",
+      "vaultDone": "It evolved into {{species}}. The previous one is in the trash.",
+      "egg": "Eggs do not evolve."
     }
   },
   "trades": {

@@ -209,6 +209,8 @@ export const KNOWN_ERRORS = [
   'box_full',
   'local_only',
   'no_window',
+  'evolve_not_available',
+  'evolve_wrong_target',
 ] as const
 
 export function codeKey(code: string | null | undefined): string {
@@ -231,3 +233,57 @@ export function errorMessage(t: TFunction, e: unknown): string {
 
 /** Nome do arquivo de um caminho (Linux ou Windows). */
 export const fileName = (path: string) => path.split(/[\\/]/).pop() || path
+
+// ---------- Evoluir por troca e clonar (Tarefa 18) ----------
+
+/** Uma opção de GET …/evolve-options (cofre ou save). Nomes em inglês, como os itens no resto do app. */
+export interface EvolveOption {
+  species: number
+  form: number
+  speciesName: string
+  /** Item que precisa segurar (número do formato do Pokémon) ou null. */
+  requiredItem: number | null
+  requiredItemName: string | null
+  holdsItem: boolean
+  /** Karrablast ↔ Shelmet: a espécie com que precisa ser trocado. */
+  tradeWith: number | null
+  tradeWithName: string | null
+}
+
+/** Veredito do PKHeX depois de evoluir: só avisa, a evolução já foi gravada. */
+export interface EvolveLegality {
+  status: LegalityStatus
+  valid: boolean
+  messages: string[]
+}
+
+/** Corpo do POST …/evolve. No save leva o SHA do save aberto (409 save_changed se o emulador gravou no meio). */
+export function evolveBody(option: Pick<EvolveOption, 'species' | 'form'>, language: string, sha256?: string) {
+  return { species: option.species, form: option.form, language: language === 'en' ? 'en' : 'pt-BR', ...(sha256 ? { sha256 } : {}) }
+}
+
+/** Primeira posição livre do save a partir da caixa dada (o time começa na primeira caixa), dando a volta. */
+export function firstFreeSlot(save: SaveBoxes, fromBox: number): { box: number; slot: number } | null {
+  const { boxCount, slotsPerBox } = save.info
+  const used = new Set(save.slots.filter((s) => s.box >= 0).map((s) => `${s.box}:${s.slot}`))
+  const start = fromBox >= 0 && fromBox < boxCount ? fromBox : 0
+  for (let i = 0; i < boxCount; i++) {
+    const box = (start + i) % boxCount
+    for (let slot = 0; slot < slotsPerBox; slot++) if (!used.has(`${box}:${slot}`)) return { box, slot }
+  }
+  return null
+}
+
+/**
+ * Clonar no save = copiar para a primeira posição livre do mesmo save (pelo /api/boxes/move, modo copy).
+ * Null quando o save está cheio. No cofre não existe clone: ele guarda um arquivo de cada (SHA único por conta).
+ */
+export function cloneBody(saveId: string, entry: Pick<SaveSlot, 'box' | 'slot'>, save: SaveBoxes): MoveBody | null {
+  const free = firstFreeSlot(save, entry.box)
+  if (!free) return null
+  return {
+    from: { kind: 'save', saveId, box: entry.box, slot: entry.slot },
+    to: { kind: 'save', saveId, box: free.box, slot: free.slot },
+    mode: 'copy',
+  }
+}

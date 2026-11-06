@@ -2029,7 +2029,9 @@
       "local_only": "Só na janela do PC.",
       "no_window": "Abra o RockAssistent pela janela do PC para escolher a pasta.",
       "box_not_found": "A caixa do cofre não existe mais. Escolha outra.",
-      "box_full": "Essa caixa do cofre está cheia. Escolha outra ou a Caixa de entrada."
+      "box_full": "Essa caixa do cofre está cheia. Escolha outra ou a Caixa de entrada.",
+      "evolve_not_available": "Este Pokémon não evolui por troca.",
+      "evolve_wrong_target": "Essa evolução não vale para este Pokémon. Abra a lista de novo."
     },
     "foldersCard": {
       "title": "Pastas de saves",
@@ -2050,6 +2052,22 @@
         "citra": "Citra (3DS): na pasta sdmc do Citra, dentro de Nintendo 3DS/…/title/…/data; o arquivo se chama main."
       },
       "whereNote": "Pode escolher uma pasta acima: o RockAssistent procura também nas subpastas."
+    },
+    "cloneVaultHint": "O cofre guarda uma cópia de cada Pokémon. Para ter cópias, use \"Mover ou copiar para um save\".",
+    "cloneNoSpace": "Não há posição livre neste save para a cópia.",
+    "cloned": "Cópia feita em {{box}}, posição {{slot}}.",
+    "readOnlyHint": "Este save é só de leitura.",
+    "evolveDialog": {
+      "title": "Evoluir {{name}} por troca",
+      "help": "O app faz a evolução que aconteceria numa troca, sem precisar de outro jogo. O treinador, os golpes e o resto continuam iguais.",
+      "none": "Este Pokémon não evolui por troca (ou está segurando uma Everstone).",
+      "needsItem": "Na troca precisa segurar {{item}}. O app evolui mesmo sem o item.",
+      "usesItem": "Está segurando {{item}}: o item é gasto na evolução.",
+      "tradeWith": "No jogo, precisa ser trocado por um {{species}}.",
+      "done": "Evoluiu para {{species}}.",
+      "illegal": "O PKHeX achou problemas depois da evolução. Ele continua guardado, mas pode ser recusado numa troca:",
+      "vaultDone": "Evoluiu para {{species}}. O de antes ficou na lixeira.",
+      "egg": "Ovos não evoluem."
     }
   },
   "trades": {

@@ -13,6 +13,7 @@ using TradeRock.Core;
 using TradeRock.Core.Games;
 using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
+using TradeRock.Core.Trading;
 
 namespace TradeRock.Tests;
 
@@ -66,6 +67,87 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
         (await Get("/api/vault/pokemon")).EnumerateArray().Single(p => p.GetProperty("species").GetInt32() == species).GetProperty("id").GetGuid();
 
     private async Task<JsonElement> SlotsAsync(string saveId) => (await Get($"/api/boxes/saves/{saveId}")).GetProperty("slots");
+
+    private static byte[] StoredBytes(PKM pk)
+    {
+        var data = new byte[pk.SIZE_STORED];
+        pk.WriteDecryptedDataStored(data);
+        return data;
+    }
+
+    [Fact]
+    public async Task Evoluir_Haunter_no_save_grava_e_rele()
+    {
+        var saveId = await AddFireRedAsync();
+        var haunter = await TradeEvolutionPkhexTests.LegalAsync(TradeGame.FireRed, 93);
+        var data = StoredBytes(haunter);
+        // Na caixa e no time (caixa -1).
+        await Post($"/api/boxes/saves/{saveId}/apply", new { changes = new object[] { new { box = 0, slot = 0, data }, new { box = -1, slot = 0, data } } });
+
+        var options = await Get($"/api/boxes/saves/{saveId}/slot/0/0/evolve-options");
+        var option = Assert.Single(options.EnumerateArray());
+        Assert.Equal(Gengar, option.GetProperty("species").GetInt32());
+        Assert.Equal("Gengar", option.GetProperty("speciesName").GetString());
+
+        var sha = (await Get($"/api/boxes/saves/{saveId}")).GetProperty("info").GetProperty("sha256").GetString();
+        var result = await Post($"/api/boxes/saves/{saveId}/slot/0/0/evolve", new { species = Gengar, form = 0, sha256 = sha, language = "en" });
+        Assert.True(File.Exists(result.GetProperty("backupPath").GetString()));
+        Assert.True(result.GetProperty("legality").GetProperty("valid").GetBoolean(), result.GetProperty("legality").ToString());
+        var slots = (await SlotsAsync(saveId)).EnumerateArray().ToList();
+        Assert.Equal(Gengar, slots.Single(e => e.GetProperty("box").GetInt32() == 0).GetProperty("summary").GetProperty("species").GetInt32());
+
+        // O SHA velho não vale mais.
+        var stale = await _client.PostAsJsonAsync($"/api/boxes/saves/{saveId}/slot/-1/0/evolve", new { species = Gengar, form = 0, sha256 = sha });
+        Assert.Equal(HttpStatusCode.Conflict, stale.StatusCode);
+        Assert.Contains("save_changed", await stale.Content.ReadAsStringAsync());
+
+        // O time também evolui (sem SHA: vale o da leitura).
+        await Post($"/api/boxes/saves/{saveId}/slot/-1/0/evolve", new { species = Gengar, form = 0 });
+        var party = (await SlotsAsync(saveId)).EnumerateArray().Single(e => e.GetProperty("box").GetInt32() == -1);
+        Assert.Equal(Gengar, party.GetProperty("summary").GetProperty("species").GetInt32());
+        var sav = SaveFixture.Open(File.ReadAllBytes(Path.Combine(_saves, "fr.sav")));
+        var partyGengar = sav.GetPartySlotAtIndex(0);
+        Assert.Equal(Gengar, partyGengar.Species);
+        Assert.Equal(partyGengar.GetStats(partyGengar.PersonalInfo)[0], partyGengar.Stat_HPMax); // atributos de Gengar
+
+        // Gengar não evolui mais.
+        var again = await _client.PostAsJsonAsync($"/api/boxes/saves/{saveId}/slot/0/0/evolve", new { species = Gengar, form = 0 });
+        Assert.Equal(HttpStatusCode.BadRequest, again.StatusCode);
+        Assert.Contains("evolve_not_available", await again.Content.ReadAsStringAsync());
+        var empty = await _client.GetAsync($"/api/boxes/saves/{saveId}/slot/0/5/evolve-options");
+        Assert.Equal(HttpStatusCode.NotFound, empty.StatusCode);
+    }
+
+    [Fact]
+    public async Task Evoluir_no_cofre_mantem_a_entrada_e_guarda_o_original_na_lixeira()
+    {
+        var haunter = await TradeEvolutionPkhexTests.LegalAsync(TradeGame.FireRed, 93);
+        var store = _app.Services.GetRequiredService<PokemonStore>();
+        var stored = (await store.ImportAsync(StoredBytes(haunter), PokemonOrigin.Created, "haunter.pk3", default, GameFamily.Frlg)).Pokemon;
+
+        var options = await Get($"/api/vault/pokemon/{stored.Id}/evolve-options");
+        Assert.Equal(Gengar, Assert.Single(options.EnumerateArray()).GetProperty("species").GetInt32());
+
+        var wrong = await _client.PostAsJsonAsync($"/api/vault/pokemon/{stored.Id}/evolve", new { species = Mewtwo, form = 0 });
+        Assert.Equal(HttpStatusCode.BadRequest, wrong.StatusCode);
+        Assert.Contains("evolve_wrong_target", await wrong.Content.ReadAsStringAsync());
+
+        var result = await Post($"/api/vault/pokemon/{stored.Id}/evolve", new { species = Gengar, form = 0 });
+        Assert.Equal(stored.Id, result.GetProperty("pokemon").GetProperty("id").GetGuid());
+        Assert.Equal(Gengar, result.GetProperty("pokemon").GetProperty("species").GetInt32());
+        Assert.True(result.GetProperty("legality").GetProperty("valid").GetBoolean());
+        var backupId = result.GetProperty("backupId").GetGuid();
+        var backup = await store.GetAsync(backupId, default);
+        Assert.NotNull(backup?.DeletedAt);
+        Assert.Equal((ushort)93, backup!.Species);
+
+        var mewtwo = await DemoAsync(Mewtwo);
+        Assert.Equal(0, (await Get($"/api/vault/pokemon/{mewtwo}/evolve-options")).GetArrayLength());
+        var none = await _client.PostAsJsonAsync($"/api/vault/pokemon/{mewtwo}/evolve", new { species = Gengar, form = 0 });
+        Assert.Contains("evolve_not_available", await none.Content.ReadAsStringAsync());
+        var missing = await _client.GetAsync($"/api/vault/pokemon/{Guid.NewGuid()}/evolve-options");
+        Assert.Equal(HttpStatusCode.NotFound, missing.StatusCode);
+    }
 
     [Fact]
     public async Task Pastas_e_lista_de_saves_com_arquivo_ruim()
