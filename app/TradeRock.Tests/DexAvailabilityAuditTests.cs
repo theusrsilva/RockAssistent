@@ -8,7 +8,8 @@ namespace TradeRock.Tests;
 
 /// <summary>
 /// Auditoria da disponibilidade da Pokédex: compara, por jogo, o PokeAPI, os nossos encontros e o PKHeX. Grava
-/// <c>dex-availability-audit.csv</c> (todas as divergências) e <c>dex-availability-summary.txt</c> na pasta do teste.
+/// <c>dex-availability-audit.csv</c> (todas as divergências) e <c>dex-availability-summary.txt</c> (o que passou a ser
+/// obtível e as travas de shiny) na pasta do teste.
 /// </summary>
 public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<DexFixture>
 {
@@ -23,6 +24,7 @@ public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<Dex
         var summary = new StringBuilder();
         var changed = GameVersions.All.ToDictionary(g => g.Key, _ => new List<string>());
         var lost = GameVersions.All.ToDictionary(g => g.Key, _ => new List<string>());
+        var locked = GameVersions.All.ToDictionary(g => g.Key, _ => new List<string>());
         for (var species = 1; species <= 1025; species++)
         {
             var before = dex.Availability(species, null, pkhex: false, ct);
@@ -43,10 +45,15 @@ public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<Dex
                     changed[g.Key].Add($"{name} ({now})");
                 if (old != AvailabilityKind.None && now == AvailabilityKind.None)
                     lost[g.Key].Add(name);
+                if (after.Single(a => a.GameKey == g.Key).ShinyLocked)
+                    locked[g.Key].Add(name);
             }
         }
         foreach (var g in GameVersions.All)
             summary.Append($"{g.Key}: +{changed[g.Key].Count} ({string.Join(", ", changed[g.Key].Take(10))})\n");
+        summary.Append("\nShiny travado (todos os encontros travados e sem ovo):\n");
+        foreach (var g in GameVersions.All)
+            summary.Append($"{g.Key}: {locked[g.Key].Count} ({string.Join(", ", locked[g.Key])})\n");
         File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "dex-availability-audit.csv"), csv.ToString());
         File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "dex-availability-summary.txt"), summary.ToString());
         TestContext.Current.SendDiagnosticMessage(summary.ToString());

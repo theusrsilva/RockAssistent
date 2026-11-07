@@ -13,9 +13,10 @@ namespace TradeRock.Core.Dex;
 /// <remarks>
 /// Fica de fora o que não se consegue só jogando: Mystery Gift (<see cref="MysteryGift"/>), raids e surtos de
 /// distribuição do SwSh e do SV, Dream World e Dream Radar (Gen 5), My Pokémon Ranch, presentes de evento da Gen 1 e
-/// da Gen 3 (<c>EncounterGift1</c>/<c>EncounterGift3*</c>), bônus do Colosseum, Pokémon GO e os encontros
-/// "fatídicos" da Gen 3 e da Gen 4 (só com item de evento: Deoxys, Darkrai, Shaymin, Arceus...) e a Magearna (código
-/// QR). Encontro de uma forma anterior (ou ovo dela) conta como <see cref="AvailabilityKind.Evolution"/>.
+/// da Gen 3 (<c>EncounterGift1</c>/<c>EncounterGift3*</c>), bônus do Colosseum, Pokémon GO e a Magearna (código QR).
+/// Lendários de um lugar do jogo aberto por item de evento (Mew da Faraway Island, Deoxys, Darkrai, Shaymin, Arceus...)
+/// contam: o encontro existe no jogo. Encontro de uma forma anterior conta como <see cref="AvailabilityKind.Evolution"/>.
+/// <para>Também guarda, por espécie e jogo, se há encontro em que ela pode ser shiny (<see cref="ShinyInfo"/>).</para>
 /// </remarks>
 public static class PkhexAvailability
 {
@@ -49,19 +50,25 @@ public static class PkhexAvailability
             ["za"] = (EntityContext.Gen9a, [GameVersion.ZA]),
         };
 
-    private static readonly Lazy<FrozenDictionary<string, FrozenDictionary<int, AvailabilityKind>>> Table =
+    private static readonly Lazy<FrozenDictionary<string, GameTable>> Table =
         new(Build, LazyThreadSafetyMode.ExecutionAndPublication);
+
+    private sealed record GameTable(FrozenDictionary<int, AvailabilityKind> Kinds, FrozenDictionary<int, ShinyInfo> Shiny);
 
     /// <summary>Calcula a tabela em segundo plano (para a primeira ficha da Pokédex não esperar).</summary>
     public static void Warm() => _ = Task.Run(() => Table.Value);
 
     /// <summary>Jeito mais forte de conseguir a espécie no jogo pelo PKHeX; <see cref="AvailabilityKind.None"/> se nenhum.</summary>
     public static AvailabilityKind Kind(string gameKey, int species) =>
-        Table.Value.TryGetValue(gameKey, out var game) ? game.GetValueOrDefault(species) : AvailabilityKind.None;
+        Table.Value.TryGetValue(gameKey, out var game) ? game.Kinds.GetValueOrDefault(species) : AvailabilityKind.None;
 
     /// <summary>Espécies obtíveis no jogo pelo PKHeX, com o jeito mais forte.</summary>
     public static IReadOnlyDictionary<int, AvailabilityKind> ForGame(string gameKey) =>
-        Table.Value.TryGetValue(gameKey, out var game) ? game : FrozenDictionary<int, AvailabilityKind>.Empty;
+        Table.Value.TryGetValue(gameKey, out var game) ? game.Kinds : FrozenDictionary<int, AvailabilityKind>.Empty;
+
+    /// <summary>Encontros da espécie no jogo quanto a shiny; nulo quando o PKHeX não tem encontro nenhum dela lá.</summary>
+    public static ShinyInfo? Shiny(string gameKey, int species) =>
+        Table.Value.TryGetValue(gameKey, out var game) ? game.Shiny.GetValueOrDefault(species) : null;
 
     /// <summary>Ordem de força: Encounter &gt; Gift &gt; Trade &gt; Evolution &gt; Egg &gt; None.</summary>
     public static int Strength(AvailabilityKind kind) => kind switch
@@ -76,13 +83,14 @@ public static class PkhexAvailability
 
     public static AvailabilityKind Strongest(AvailabilityKind a, AvailabilityKind b) => Strength(b) > Strength(a) ? b : a;
 
-    private static FrozenDictionary<string, FrozenDictionary<int, AvailabilityKind>> Build() =>
+    private static FrozenDictionary<string, GameTable> Build() =>
         Games.ToFrozenDictionary(g => g.Key, g => BuildGame(g.Value.Context, g.Value.Versions));
 
-    private static FrozenDictionary<int, AvailabilityKind> BuildGame(EntityContext context, GameVersion[] versions)
+    private static GameTable BuildGame(EntityContext context, GameVersion[] versions)
     {
         var personal = PKHeX.Core.GameData.GetPersonal(versions[0]);
         var result = new Dictionary<int, AvailabilityKind>();
+        var shiny = new Dictionary<int, ShinyInfo>();
         for (ushort species = 1; species <= personal.MaxSpeciesID; species++)
         {
             var forms = Math.Max((byte)1, personal[species].FormCount);
@@ -98,12 +106,34 @@ public static class PkhexAvailability
                 foreach (var enc in EncounterMovesetGenerator.GenerateEncounters(pk, ReadOnlyMemory<ushort>.Empty, versions))
                 {
                     var kind = Classify(enc, species);
-                    if (kind != AvailabilityKind.None)
-                        result[species] = Strongest(result.GetValueOrDefault(species), kind);
+                    if (kind == AvailabilityKind.None)
+                        continue;
+                    result[species] = Strongest(result.GetValueOrDefault(species), kind);
+                    var info = shiny.GetValueOrDefault(species) ?? ShinyInfo.Empty;
+                    if (CanBeShiny(enc))
+                        info = kind == AvailabilityKind.Evolution ? info with { Evolution = true }
+                            : IsWild(enc) ? info with { Wild = true }
+                            : info with { Fixed = true };
+                    shiny[species] = info;
                 }
             }
         }
-        return result.ToFrozenDictionary();
+        return new GameTable(result.ToFrozenDictionary(), shiny.ToFrozenDictionary());
+    }
+
+    /// <summary>
+    /// O encontro pode sair shiny? Pela propriedade <see cref="IShinyPotential.Shiny"/> do PKHeX: <see cref="Shiny.Never"/>
+    /// é travado e <see cref="Shiny.FixedValue"/> (PID fixo, como nas trocas antigas) também não dá para caçar.
+    /// </summary>
+    internal static bool CanBeShiny(IEncounterable enc) =>
+        enc is not IShinyPotential { Shiny: PKHeX.Core.Shiny.Never or PKHeX.Core.Shiny.FixedValue };
+
+    /// <summary>Selvagem ou raid (onde valem os métodos de campo: Poké Radar, SOS, Max Raid, Tera Raid...).</summary>
+    private static bool IsWild(IEncounterable enc)
+    {
+        var name = enc.GetType().Name;
+        return name.StartsWith("EncounterSlot", StringComparison.Ordinal) || name is "EncounterStatic8N" or "EncounterStatic8U"
+            or "EncounterTera9";
     }
 
     /// <summary>Tipo de um encontro do PKHeX para a espécie pedida; None para o que não se consegue só jogando.</summary>
@@ -136,14 +166,19 @@ public static class PkhexAvailability
             || name.Contains("XD", StringComparison.Ordinal) || name.StartsWith("EncounterTransfer", StringComparison.Ordinal)
             || name.StartsWith("EncounterStatic8Nest", StringComparison.Ordinal) && name != "EncounterStatic8N")
             return false;
-        // Gen 3 e Gen 4: "fatídico" = só com item de evento (Ilha do Nascimento, Member Card, Oak's Letter...). Na Gen 7,
-        // a Magearna só sai pelo código QR do evento.
-        if (enc.Generation == 7 && enc.Species == (ushort)PKHeX.Core.Species.Magearna)
-            return false;
-        // No Platinum, Darkrai, Shaymin e Arceus não vêm marcados como fatídicos, mas também só saem com item de evento.
-        if (enc.Generation == 4 && enc.Species is (ushort)PKHeX.Core.Species.Darkrai or (ushort)PKHeX.Core.Species.Shaymin
-                or (ushort)PKHeX.Core.Species.Arceus)
-            return false;
-        return enc.Generation > 4 || enc is not IFatefulEncounterReadOnly { FatefulEncounter: true };
+        // A Magearna da Gen 7 só sai pelo código QR do evento.
+        return !(enc.Generation == 7 && enc.Species == (ushort)PKHeX.Core.Species.Magearna);
     }
+}
+
+/// <summary>
+/// Encontros de uma espécie num jogo (tabelas do PKHeX) em que ela pode sair shiny: <see cref="Wild"/> (selvagem ou
+/// raid), <see cref="Fixed"/> (fixo, presente ou troca) e <see cref="Evolution"/> (uma forma anterior). Tudo falso =
+/// todos os encontros são travados (Mew do BDSP, Zacian, iniciais da Gen 8 em diante...).
+/// </summary>
+public sealed record ShinyInfo(bool Wild, bool Fixed, bool Evolution)
+{
+    public static ShinyInfo Empty { get; } = new(false, false, false);
+
+    public bool Locked => !Wild && !Fixed && !Evolution;
 }

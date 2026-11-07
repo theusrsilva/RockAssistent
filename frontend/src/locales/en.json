@@ -1756,6 +1756,7 @@
       "trade": "In-game trade",
       "none": "Can't be caught"
     },
+    "shinyLocked": "Shiny locked in this game",
     "notInGame": "This Pokémon doesn't exist in {{game}}. General data still shows; moves, locations and texts stay empty.",
     "flavorFrom": "This game has no Pokédex entry for this Pokémon; this one is from {{game}}.",
     "tabs": {
@@ -2497,6 +2498,7 @@
       "start": "Start the hunt",
       "kinds": {
         "encounter": "encounter",
+        "static": "static encounter",
         "gift": "gift",
         "egg": "egg",
         "evolution": "evolution"
@@ -2533,6 +2535,7 @@
     "errors": {
       "unknown_game": "Unknown game.",
       "unknown_method": "Unknown method.",
+      "shiny_locked": "This Pokémon can never be shiny in this game (every encounter is shiny locked).",
       "method_not_in_game": "This method doesn't exist in this game.",
       "invalid_species": "Invalid Pokémon.",
       "invalid_form": "Invalid form.",

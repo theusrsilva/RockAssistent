@@ -437,7 +437,9 @@ public sealed class DexService(DexDatabase db)
             else if (kind == AvailabilityKind.None && row.EvolvesFrom is null && g.Generation >= 2 && !NoBreeding.Contains(g.Key)
                      && data.Descendants(speciesId).Any(d => In(d) && data.Breedable.Contains(d)))
                 kind = AvailabilityKind.Egg;
-            return new GameAvailability(g.Key, g.Name, kind);
+            var locked = pkhex && kind != AvailabilityKind.None && PkhexAvailability.Shiny(g.Key, speciesId) is { Locked: true }
+                && !CanHatchIn(speciesId, g.Key);
+            return new GameAvailability(g.Key, g.Name, kind, locked);
         }).ToList();
     }
 
@@ -1021,19 +1023,14 @@ public sealed class DexService(DexDatabase db)
 
             // Quem existe em cada grupo de versões (golpes e encontros) e em cada Pokédex regional.
             var byGroup = Pairs(c, "SELECT DISTINCT p.species_id, pm.version_group_id FROM pokemon_moves pm JOIN pokemon p ON p.id = pm.pokemon_id");
-            // Encontros que contam para a disponibilidade. Ficam de fora os que só saem com evento (bônus do
-            // Colosseum, Pokémon Channel, Pokémon Ranger, os ingressos e cartas de evento da Gen 3 e da Gen 4, a
-            // Altering Cave do FRLG fora o Zubat, a Magearna do código QR) e o New Mauville do Sun/Moon, que o PokeAPI
-            // tem errado (é do ORAS). O PKHeX e o Serebii concordam (auditoria em DexAvailabilityAuditTests).
+            // Encontros que contam para a disponibilidade. Ficam de fora os de outros jogos e aparelhos (bônus do
+            // Colosseum, Pokémon Channel, Pokémon Ranger), a Magearna do código QR e o New Mauville do Sun/Moon, que o
+            // PokeAPI tem errado (é do ORAS). O PKHeX e o Serebii concordam (auditoria em DexAvailabilityAuditTests).
             const string countable = """
                 SELECT DISTINCT p.species_id, v.version_group_id FROM encounters e
                 JOIN pokemon p ON p.id = e.pokemon_id JOIN versions v ON v.id = e.version_id
                 JOIN location_areas a ON a.id = e.location_area_id JOIN locations l ON l.id = a.location_id
                 WHERE e.method NOT IN ('colosseum-bonus-disc-jpn', 'colosseum-bonus-disc-us', 'pokemon-channel-pal', 'pokemon-ranger')
-                  AND l.identifier NOT IN ('navel-rock', 'birth-island', 'faraway-island', 'newmoon-island', 'flower-paradise',
-                                           'sinnoh-hall-of-origin-1', 'sinnoh-hall-of-origin-2')
-                  AND NOT (l.identifier = 'southern-island' AND v.identifier IN ('ruby', 'sapphire', 'emerald'))
-                  AND NOT (l.identifier = 'kanto-altering-cave' AND p.species_id <> 41)
                   AND NOT (l.identifier = 'new-mauville' AND v.identifier IN ('sun', 'moon'))
                   AND p.species_id <> 801
                 """;

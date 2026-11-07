@@ -65,7 +65,8 @@ export default function SpeciesPage() {
     )
 
   const detail = species.data
-  const kind = availability.data?.find((a) => a.gameKey === game)?.kind
+  const gameAvailability = availability.data?.find((a) => a.gameKey === game)
+  const kind = gameAvailability?.kind
   const defaultForm = detail?.forms.find((f) => f.isDefault) ?? detail?.forms[0]
   const form = detail?.forms.find((f) => f.id === formId) ?? defaultForm
   const types = form?.types ?? detail?.types
@@ -103,6 +104,7 @@ export default function SpeciesPage() {
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-start">
             {types && <TypeList types={types} />}
             {kind && <Badge tone={kind === 'none' ? 'slate' : 'emerald'}>{t(`dex.availability.${kind}`)}</Badge>}
+            {gameAvailability?.shinyLocked && <Badge tone="amber">{t('dex.shinyLocked')}</Badge>}
           </div>
         </div>
         <GameSelector value={game} onChange={chooseGame} availability={availability.data} />

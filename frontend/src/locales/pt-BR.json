@@ -1756,6 +1756,7 @@
       "trade": "Troca no jogo",
       "none": "Não dá para pegar"
     },
+    "shinyLocked": "Shiny travado neste jogo",
     "notInGame": "Este Pokémon não existe em {{game}}. Os dados gerais aparecem mesmo assim; golpes, locais e textos ficam vazios.",
     "flavorFrom": "Este jogo não tem texto da Pokédex para este Pokémon; este é o de {{game}}.",
     "tabs": {
@@ -2497,6 +2498,7 @@
       "start": "Começar a hunt",
       "kinds": {
         "encounter": "encontro",
+        "static": "encontro fixo",
         "gift": "presente",
         "egg": "ovo",
         "evolution": "evolução"
@@ -2533,6 +2535,7 @@
     "errors": {
       "unknown_game": "Jogo desconhecido.",
       "unknown_method": "Método desconhecido.",
+      "shiny_locked": "Este Pokémon nunca sai shiny neste jogo (todos os encontros são travados).",
       "method_not_in_game": "Este método não existe neste jogo.",
       "invalid_species": "Pokémon inválido.",
       "invalid_form": "Forma inválida.",

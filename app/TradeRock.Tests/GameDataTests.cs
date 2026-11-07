@@ -570,10 +570,11 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(AvailabilityKind.Encounter, await Kind(127, "gs"));  // Pinsir do concurso de insetos
         Assert.Equal(AvailabilityKind.Gift, await Kind(447, "dp"));       // ovo do Riolu
         Assert.Equal(AvailabilityKind.Trade, await Kind(302, "b2w2"));    // Sableye por troca
-        // Só com evento: fora.
-        Assert.NotEqual(AvailabilityKind.Encounter, await Kind(249, "frlg")); // Lugia (Mystic Ticket)
-        Assert.Equal(AvailabilityKind.None, await Kind(491, "pt"));       // Darkrai (Member Card)
+        // Lugar aberto por item de evento conta (o encontro está no jogo); código QR e jogos à parte, não.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(491, "pt"));  // Darkrai (Member Card)
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(151, "e"));   // Mew (Faraway Island)
         Assert.Equal(AvailabilityKind.None, await Kind(801, "sm"));       // Magearna (código QR)
+        Assert.Equal(AvailabilityKind.None, await Kind(385, "rs"));       // Jirachi (disco bônus do Colosseum)
 
         var detail = store.SpeciesEncounters("za", 1);
         Assert.NotNull(detail);

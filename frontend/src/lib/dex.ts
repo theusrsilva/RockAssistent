@@ -188,6 +188,8 @@ export interface GameAvailability {
   gameKey: string
   name: string
   kind: AvailabilityKind
+  /** Dá para conseguir, mas sempre travado para shiny (e não dá para chocar). */
+  shinyLocked: boolean
 }
 
 /** As 18 identidades de tipo do PokeAPI, na ordem da tabela de tipos. */
