@@ -24,6 +24,7 @@ internal static class Program
 
         app.StartAsync().GetAwaiter().GetResult();
         // A disponibilidade da Pokédex pelo PKHeX leva uns segundos para calcular: começa já, em segundo plano.
+        TradeRock.Core.Dex.PkhexAvailability.Logger = logger;
         TradeRock.Core.Dex.PkhexAvailability.Warm();
 
         if (options.NoWindow)

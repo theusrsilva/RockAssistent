@@ -225,15 +225,15 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     [Fact]
     public async Task Disponibilidade_por_jogo()
     {
-        var all = await Dex.AvailabilityAsync(94, Ct);
+        var all = await Dex.AvailabilityAsync(94, null, Ct);
         Assert.Equal(22, all.Count);
         Assert.Equal(AvailabilityKind.Evolution, all.Single(a => a.GameKey == "frlg").Kind);
-        Assert.Equal(AvailabilityKind.None, (await Dex.AvailabilityAsync(906, Ct)).Single(a => a.GameKey == "frlg").Kind);
+        Assert.Equal(AvailabilityKind.None, (await Dex.AvailabilityAsync(906, null, Ct)).Single(a => a.GameKey == "frlg").Kind);
 
-        var gastly = await Dex.AvailabilityAsync(92, Ct);
+        var gastly = await Dex.AvailabilityAsync(92, null, Ct);
         Assert.Equal(AvailabilityKind.Encounter, gastly.Single(a => a.GameKey == "frlg").Kind);
 
-        var pichu = await Dex.AvailabilityAsync(172, Ct);
+        var pichu = await Dex.AvailabilityAsync(172, null, Ct);
         Assert.Equal(AvailabilityKind.None, pichu.Single(a => a.GameKey == "rb").Kind);
         Assert.Equal(AvailabilityKind.Egg, pichu.Single(a => a.GameKey == "frlg").Kind);
     }

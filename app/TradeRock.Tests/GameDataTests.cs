@@ -634,7 +634,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(AvailabilityKind.Encounter, await Kind(137, "za"));
         Assert.Equal(AvailabilityKind.None, await Kind(906, "za"));   // Sprigatito não está no Z-A
         Assert.Equal(AvailabilityKind.Encounter, await Kind(1001, "sv")); // Wo-Chien: encontro fixo
-        Assert.NotEqual(AvailabilityKind.None, await Kind(906, "sv")); // inicial
+        Assert.Equal(AvailabilityKind.Gift, await Kind(906, "sv"));    // inicial: o PKHeX o tem como fixo, mas é presente
+        Assert.Equal(AvailabilityKind.Gift, await Kind(1, "frlg"));    // inicial do Prof. Oak (presente no PokeAPI)
+        Assert.Equal(AvailabilityKind.Gift, await Kind(387, "dp"));    // Turtwig
         // Jogos do PokeAPI continuam como antes.
         Assert.Equal(AvailabilityKind.Encounter, await Kind(92, "frlg"));
         // PKHeX: o que o PokeAPI não tem.

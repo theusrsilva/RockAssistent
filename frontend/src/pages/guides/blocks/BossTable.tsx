@@ -6,8 +6,9 @@ import { spriteUrl } from '../../../lib/api'
 import { useApiGet } from '../../../lib/dex'
 import { gameVersionByKey } from '../../../lib/gameVersions'
 import { useSpeciesOptions } from '../../../lib/hunts'
-import type { BossBattle } from '../../nuzlocke/nuzlocke'
-import { BossVariantTabs, useBossVariant } from './BossVariants'
+import type { BossBattle, StarterInfo } from '../../nuzlocke/nuzlocke'
+import { BossVariantTabs, bossVariant } from './BossVariants'
+import { useGuideStarter, useGuideStarters } from './guideStarter'
 import { BlockState, BlockTable, cell, versionLabel, type BlockProps } from './common'
 
 /** Nomes das espécies (a mesma lista do Nuzlocke e do Hunt, pedida uma vez). */
@@ -26,6 +27,9 @@ export default function BossTable({ args: [game] }: BlockProps) {
   const names = useSpeciesNames()
   const versions = gameVersionByKey(game)?.pokeApiVersions ?? []
   const [version, setVersion] = useState<string>('')
+  // Uma escolha de inicial para a tabela toda (e para os cartões do mesmo jogo), com a lista pedida uma vez.
+  const [starter, setStarter] = useGuideStarter(game)
+  const starters = useGuideStarters(game, !!state.data?.some((b) => b.variants?.length))
   return (
     <BlockState state={state} empty={(d) => d.length === 0}>
       {(bosses) => {
@@ -43,7 +47,16 @@ export default function BossTable({ args: [game] }: BlockProps) {
             )}
             <BlockTable head={[t('guides.col.boss'), t('guides.col.location'), t('guides.col.cap'), t('guides.col.team')]}>
               {shown.map((b) => (
-                <BossRow key={b.id} game={game} boss={b} names={names} versionBadge={!split} />
+                <BossRow
+                  key={b.id}
+                  game={game}
+                  boss={b}
+                  names={names}
+                  versionBadge={!split}
+                  starters={starters}
+                  starter={starter}
+                  onStarter={setStarter}
+                />
               ))}
             </BlockTable>
           </>
@@ -54,9 +67,25 @@ export default function BossTable({ args: [game] }: BlockProps) {
 }
 
 /** Uma linha da tabela; com variantes por inicial, as abas ficam em cima do time e o cap acompanha. */
-function BossRow({ game, boss: b, names, versionBadge }: { game: string; boss: BossBattle; names: Map<number, string>; versionBadge: boolean }) {
+function BossRow({
+  game,
+  boss: b,
+  names,
+  versionBadge,
+  starters,
+  starter: chosen,
+  onStarter,
+}: {
+  game: string
+  boss: BossBattle
+  names: Map<number, string>
+  versionBadge: boolean
+  starters: StarterInfo[]
+  starter: string | null
+  onStarter: (starter: string) => void
+}) {
   const { t } = useTranslation()
-  const { starter, setStarter, team } = useBossVariant(b)
+  const { starter, team } = bossVariant(b, chosen)
   return (
     <tr>
       <td className={`${cell} min-w-36`}>
@@ -72,7 +101,7 @@ function BossRow({ game, boss: b, names, versionBadge }: { game: string; boss: B
       <td className={`${cell} font-bold tabular-nums`}>{team.levelCap}</td>
       <td className={cell}>
         <div className="flex flex-col gap-1.5">
-          <BossVariantTabs game={game} boss={b} names={names} value={starter} onChange={setStarter} />
+          <BossVariantTabs boss={b} starters={starters} names={names} value={starter} onChange={onStarter} />
           <div className="flex gap-1">
             {team.party.map((p, i) => (
               <Link key={i} to={`/pokedex/${p.species}`} className="flex w-12 shrink-0 flex-col items-center" title={names.get(p.species)}>

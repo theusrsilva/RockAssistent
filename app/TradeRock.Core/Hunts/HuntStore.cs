@@ -210,7 +210,7 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
                     kinds.Add("encounter");
             }
             // A Pokédex só marca "egg" quando não há encontro nem evolução; aqui vale saber se dá para chocar.
-            if (dex.CanHatchIn(species, game.Key))
+            if (dex.CanHatchIn(species, game.Key, data.Encounters))
                 kinds.Add("egg");
             ApplyShinyLocks(kinds, PkhexAvailability.Shiny(game.Key, species));
             if (kinds.Count == 0)
@@ -247,7 +247,7 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
 
     /// <summary>A espécie só aparece travada para shiny no jogo (nem ovo)? Veja <see cref="ApplyShinyLocks"/>.</summary>
     public bool IsShinyLocked(int species, string gameKey) =>
-        PkhexAvailability.Shiny(gameKey, species) is { Locked: true } && !dex.CanHatchIn(species, gameKey);
+        PkhexAvailability.Shiny(gameKey, species) is { Locked: true } && !dex.CanHatchIn(species, gameKey, data.Encounters);
 
     private static bool Fits(string methodId, int species, HashSet<string> kinds)
     {

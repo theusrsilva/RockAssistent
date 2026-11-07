@@ -381,14 +381,12 @@ public sealed class DexService(DexDatabase db)
     }
 
     /// <summary>Disponibilidade só com o PokeAPI. Veja a sobrecarga com os nossos encontros.</summary>
-    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId, CancellationToken ct) =>
-        AvailabilityAsync(speciesId, null, ct);
-
     /// <summary>
     /// Como conseguir a espécie em cada jogo: o jeito mais forte (Encounter &gt; Gift &gt; Trade &gt; Evolution &gt; Egg)
     /// entre três fontes: o PokeAPI (encontros; nos jogos com encontros próprios ele não conta), os nossos encontros
     /// (<paramref name="ownEncounters"/>: BDSP, Arceus, SV e Z-A; <c>gift</c> = Gift, <c>trade</c> = Trade, o resto =
-    /// Encounter) e as tabelas do PKHeX (<see cref="PkhexAvailability"/>). Sem nenhum deles, valem Evolution (evolui de
+    /// Encounter) e as tabelas do PKHeX (<see cref="PkhexAvailability"/>; o encontro fixo dele, que não diz se é
+    /// presente, fica abaixo de Gift e Trade e só vira Encounter quando ninguém mais classifica). Sem nenhum deles, valem Evolution (evolui de
     /// uma espécie que existe no jogo) e Egg (melhor esforço: forma base, o jogo tem criação, e alguma evolução dela
     /// existe no jogo e pode botar ovo), senão None.
     /// </summary>
@@ -408,9 +406,9 @@ public sealed class DexService(DexDatabase db)
         {
             var game = data.Game(g.Key);
             var own = ownEncounters?.Invoke(g.Key) ?? [];
-            var ownSpecies = own.Select(e => e.Species).ToHashSet();
             var fromPkhex = pkhex ? PkhexAvailability.ForGame(g.Key) : new Dictionary<int, AvailabilityKind>();
-            bool In(int s) => game.Exists.Contains(s) || ownSpecies.Contains(s) || fromPkhex.ContainsKey(s);
+            var statics = pkhex ? PkhexAvailability.Statics(g.Key) : new HashSet<int>();
+            var In = Presence(game, own, pkhex);
             if (row is null || !In(speciesId))
                 return new GameAvailability(g.Key, g.Name, AvailabilityKind.None);
 
@@ -431,6 +429,8 @@ public sealed class DexService(DexDatabase db)
                     "trade" => AvailabilityKind.Trade,
                     _ => AvailabilityKind.Encounter,
                 });
+            if (PkhexAvailability.Strength(kind) < PkhexAvailability.Strength(AvailabilityKind.Trade) && statics.Contains(speciesId))
+                kind = AvailabilityKind.Encounter;
             if (PkhexAvailability.Strength(kind) < PkhexAvailability.Strength(AvailabilityKind.Evolution)
                 && row.EvolvesFrom is { } from && In(from))
                 kind = AvailabilityKind.Evolution;
@@ -438,27 +438,38 @@ public sealed class DexService(DexDatabase db)
                      && data.Descendants(speciesId).Any(d => In(d) && data.Breedable.Contains(d)))
                 kind = AvailabilityKind.Egg;
             var locked = pkhex && kind != AvailabilityKind.None && PkhexAvailability.Shiny(g.Key, speciesId) is { Locked: true }
-                && !CanHatchIn(speciesId, g.Key);
+                && !CanHatchIn(speciesId, g.Key, ownEncounters);
             return new GameAvailability(g.Key, g.Name, kind, locked);
         }).ToList();
+    }
+
+    /// <summary>A espécie existe no jogo por alguma fonte: PokeAPI, nossos encontros ou PKHeX.</summary>
+    private static Func<int, bool> Presence(GameInfo game, IReadOnlyList<OwnEncounter> own, bool pkhex)
+    {
+        var ownSpecies = own.Select(e => e.Species).ToHashSet();
+        var fromPkhex = pkhex ? PkhexAvailability.ForGame(game.Key) : new Dictionary<int, AvailabilityKind>();
+        var statics = pkhex ? PkhexAvailability.Statics(game.Key) : new HashSet<int>();
+        return s => game.Exists.Contains(s) || ownSpecies.Contains(s) || fromPkhex.ContainsKey(s) || statics.Contains(s);
     }
 
     /// <summary>
     /// A espécie sai de ovo no jogo (direto ou chocando a forma base e evoluindo)? Melhor esforço, como o Egg de
     /// <see cref="AvailabilityAsync"/>: o jogo tem criação, a espécie existe nele e alguém da família (a partir da
     /// forma base, incluindo ela) existe no jogo e não é do grupo "no-eggs". Lendários sem família ficam de fora.
+    /// "Existe no jogo" é o mesmo da disponibilidade: PokeAPI, nossos encontros ou PKHeX.
     /// </summary>
-    public bool CanHatchIn(int speciesId, string gameKey)
+    /// <param name="ownEncounters">Encontros próprios do jogo (<c>GameDataStore.Encounters</c>); nulo = sem eles.</param>
+    public bool CanHatchIn(int speciesId, string gameKey, Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters = null)
     {
         var data = Data;
         var group = GameVersions.ByKey(gameKey);
-        var game = data.Game(gameKey);
+        var In = Presence(data.Game(gameKey), ownEncounters?.Invoke(gameKey) ?? [], pkhex: true);
         if (group.Generation < 2 || NoBreeding.Contains(gameKey) || !data.Species.TryGetValue(speciesId, out var row)
-            || !game.Exists.Contains(speciesId))
+            || !In(speciesId))
             return false;
         while (row.EvolvesFrom is { } from && data.Species.TryGetValue(from, out var parent))
             row = parent;
-        return data.Descendants(row.Id).Prepend(row.Id).Any(d => game.Exists.Contains(d) && data.Breedable.Contains(d));
+        return data.Descendants(row.Id).Prepend(row.Id).Any(d => In(d) && data.Breedable.Contains(d));
     }
 
     // ---- partes da ficha ----

@@ -1,39 +1,32 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { bossTeam, chosenVariant, type BossBattle } from '../../nuzlocke/nuzlocke'
-import { StarterPicker, starterName, useStarters } from '../../nuzlocke/StarterPicker'
+import { bossTeam, chosenVariant, type BossBattle, type StarterInfo } from '../../nuzlocke/nuzlocke'
+import { StarterPicker, starterName } from '../../nuzlocke/StarterPicker'
 
-/** Inicial escolhido nas abas de um chefe (padrão = a primeira variante) e o time que vai com ele. */
-export function useBossVariant(boss: BossBattle) {
-  const [starter, setStarter] = useState<string | null>(null)
+/** Time mostrado para o chefe com o inicial escolhido no guia (sem escolha ou sem a variante: a primeira). */
+export function bossVariant(boss: BossBattle, starter: string | null) {
   const variant = chosenVariant(boss, starter)
-  return { starter: variant?.starter ?? null, setStarter, team: bossTeam(boss, starter) }
+  return { starter: variant?.starter ?? null, team: bossTeam(boss, starter) }
 }
 
-type TabsProps = {
-  game: string
-  boss: BossBattle
-  names: Map<number, string>
-  value: string | null
-  onChange: (starter: string) => void
-}
-
-/** Abas "Se você escolheu X" com o sprite do inicial do jogador. Nada quando a batalha tem um time só. */
-export function BossVariantTabs(props: TabsProps) {
-  // Só pede a lista de iniciais quando a batalha tem variantes (a tabela tem uma linha por chefe).
-  return props.boss.variants?.length ? <Tabs {...props} /> : null
-}
-
-function Tabs({
-  game,
+/**
+ * Abas "Se você escolheu X" com o sprite do inicial do jogador. Nada quando a batalha tem um time só. A escolha e a
+ * lista de iniciais vêm de cima (uma para a tabela ou o guia inteiro: veja guideStarter.ts).
+ */
+export function BossVariantTabs({
   boss,
+  starters,
   names,
   value,
   onChange,
-}: TabsProps) {
+}: {
+  boss: BossBattle
+  starters: StarterInfo[]
+  names: Map<number, string>
+  value: string | null
+  onChange: (starter: string) => void
+}) {
   const { t } = useTranslation()
-  const starters = useStarters(game)
-  const options = starters.filter((s) => boss.variants?.some((v) => v.starter === s.id))
+  const options = boss.variants?.length ? starters.filter((s) => boss.variants?.some((v) => v.starter === s.id)) : []
   if (options.length === 0) return null
   return (
     <StarterPicker
