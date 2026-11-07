@@ -6,7 +6,6 @@ using TradeRock.Core.Games;
 using TradeRock.Core.Pokemon;
 using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
-using TradeEvolution = TradeRock.Core.Builder.TradeEvolution;
 
 namespace TradeRock.App.Api;
 

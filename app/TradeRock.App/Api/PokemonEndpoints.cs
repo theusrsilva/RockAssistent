@@ -28,7 +28,7 @@ public static class PokemonEndpoints
             return new(
                 p.Id, p.Family, p.Species, p.Form, p.SpeciesName, p.Nickname, p.Level, p.IsShiny, p.IsEgg, p.Gender, p.OtName,
                 tid, sid, p.OriginGame, p.Origin, p.SourceFileName, p.Size, p.Sha256, p.AddedAt, p.HeldItem,
-                gen3 ? TradeEvolution.EvolvesInto(p.Species, p.HeldItem) : null, p.Fateful, p.Legality,
+                gen3 ? Gen3TradeEvolution.EvolvesInto(p.Species, p.HeldItem) : null, p.Fateful, p.Legality,
                 gen3 ? TradeRules.For(new TradeRuleInput(p.Species, p.IsEgg, p.Fateful, p.Level, p.OtName, p.Tid, p.Sid, p.HeldItem), me) : [],
                 p.BoxId, p.Slot, p.DeletedAt, p.Tags.Select(t => t.TagId).ToList(), possibleDuplicate);
         }

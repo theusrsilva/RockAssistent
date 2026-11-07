@@ -3,11 +3,10 @@ using TradeRock.Core.Builder;
 using TradeRock.Core.Games;
 using TradeRock.Core.Pokemon;
 using TradeRock.Core.Trading;
-using Evolution = TradeRock.Core.Builder.TradeEvolution;
 
 namespace TradeRock.Tests;
 
-/// <summary>Evoluir por troca pela tabela do PKHeX (Tarefa 18). O <c>TradeEvolutionTests</c> antigo é o da Gen 3 do assistente.</summary>
+/// <summary>Evoluir por troca pela tabela do PKHeX (Tarefa 18). O <c>Gen3TradeEvolutionTests</c> é o da Gen 3 do assistente.</summary>
 public sealed class TradeEvolutionPkhexTests
 {
     private const ushort Kadabra = 64, Alakazam = 65, Haunter = 93, Gengar = 94, Onix = 95, Steelix = 208, Pikachu = 25;
@@ -24,10 +23,10 @@ public sealed class TradeEvolutionPkhexTests
     public async Task Haunter_vira_Gengar_legal()
     {
         var haunter = await LegalAsync(TradeGame.FireRed, Haunter);
-        var option = Assert.Single(Evolution.Options(haunter));
+        var option = Assert.Single(TradeEvolution.Options(haunter));
         Assert.Equal(new TradeEvolutionOption(Gengar, 0, null), option);
 
-        var gengar = Evolution.Apply(haunter, Gengar, 0);
+        var gengar = TradeEvolution.Apply(haunter, Gengar, 0);
 
         Assert.Equal(Haunter, haunter.Species); // o original não muda
         Assert.Equal(Gengar, gengar.Species);
@@ -45,8 +44,8 @@ public sealed class TradeEvolutionPkhexTests
     public async Task Pikachu_nao_evolui_por_troca()
     {
         var pikachu = await LegalAsync(TradeGame.FireRed, Pikachu, 10);
-        Assert.Empty(Evolution.Options(pikachu));
-        Assert.Equal("evolve_not_available", Assert.Throws<TradeEvolutionException>(() => Evolution.Apply(pikachu, 26, 0)).Code);
+        Assert.Empty(TradeEvolution.Options(pikachu));
+        Assert.Equal("evolve_not_available", Assert.Throws<TradeEvolutionException>(() => TradeEvolution.Apply(pikachu, 26, 0)).Code);
     }
 
     [Fact]
@@ -54,11 +53,11 @@ public sealed class TradeEvolutionPkhexTests
     {
         var kadabra = await LegalAsync(TradeGame.Sword, Kadabra);
         Assert.IsType<PK8>(kadabra);
-        Assert.Equal(Alakazam, Assert.Single(Evolution.Options(kadabra)).Species);
-        var alakazam = Evolution.Apply(kadabra, Alakazam, 0);
+        Assert.Equal(Alakazam, Assert.Single(TradeEvolution.Options(kadabra)).Species);
+        var alakazam = TradeEvolution.Apply(kadabra, Alakazam, 0);
         Assert.Equal(Alakazam, alakazam.Species);
         Assert.Equal(kadabra.EncryptionConstant, alakazam.EncryptionConstant);
-        Assert.Equal("evolve_wrong_target", Assert.Throws<TradeEvolutionException>(() => Evolution.Apply(kadabra, Gengar, 0)).Code);
+        Assert.Equal("evolve_wrong_target", Assert.Throws<TradeEvolutionException>(() => TradeEvolution.Apply(kadabra, Gengar, 0)).Code);
     }
 
     [Fact]
@@ -66,12 +65,12 @@ public sealed class TradeEvolutionPkhexTests
     {
         var onix = new PK3 { Species = Onix, CurrentLevel = 30, Language = 2 };
         onix.ClearNickname();
-        var option = Assert.Single(Evolution.Options(onix)); // sem o item, a opção aparece com o item exigido
+        var option = Assert.Single(TradeEvolution.Options(onix)); // sem o item, a opção aparece com o item exigido
         Assert.Equal(199, option.RequiredItem); // Metal Coat na numeração da Gen 3
-        Assert.Equal(233, Evolution.NationalItem(onix, 199));
+        Assert.Equal(233, TradeEvolution.NationalItem(onix, 199));
 
         onix.HeldItem = 199;
-        var steelix = Evolution.Apply(onix, Steelix, 0);
+        var steelix = TradeEvolution.Apply(onix, Steelix, 0);
         Assert.Equal(Steelix, steelix.Species);
         Assert.Equal(0, steelix.HeldItem);
         Assert.Equal("STEELIX", steelix.Nickname);
@@ -81,11 +80,11 @@ public sealed class TradeEvolutionPkhexTests
     public void Everstone_e_apelido()
     {
         var kadabra = new PK3 { Species = Kadabra, CurrentLevel = 30, Language = 2, HeldItem = 195 }; // Everstone (Gen 3)
-        Assert.Empty(Evolution.Options(kadabra));
+        Assert.Empty(TradeEvolution.Options(kadabra));
 
         kadabra.HeldItem = 0;
         kadabra.SetNickname("ROCHINHA");
-        var alakazam = Evolution.Apply(kadabra, Alakazam, 0);
+        var alakazam = TradeEvolution.Apply(kadabra, Alakazam, 0);
         Assert.Equal("ROCHINHA", alakazam.Nickname);
     }
 
@@ -93,7 +92,7 @@ public sealed class TradeEvolutionPkhexTests
     public void Karrablast_pede_troca_com_Shelmet()
     {
         var karrablast = new PK8 { Species = 588, CurrentLevel = 30 };
-        var option = Assert.Single(Evolution.Options(karrablast));
+        var option = Assert.Single(TradeEvolution.Options(karrablast));
         Assert.Equal((ushort)589, option.Species);
         Assert.Equal((ushort)616, option.TradeWith);
         Assert.Null(option.RequiredItem);
@@ -103,11 +102,11 @@ public sealed class TradeEvolutionPkhexTests
     public void Gen2_pega_o_item_da_tabela_da_gen3()
     {
         var onix = new PK2 { Species = Onix, CurrentLevel = 30 };
-        var option = Assert.Single(Evolution.Options(onix));
+        var option = Assert.Single(TradeEvolution.Options(onix));
         Assert.Equal(143, option.RequiredItem); // Metal Coat na Gen 2
-        Assert.Equal(233, Evolution.NationalItem(onix, 143));
+        Assert.Equal(233, TradeEvolution.NationalItem(onix, 143));
         var haunter = new PK1 { Species = Haunter, CurrentLevel = 30 };
-        var gengar = Evolution.Apply(haunter, Gengar, 0);
+        var gengar = TradeEvolution.Apply(haunter, Gengar, 0);
         Assert.Equal(Gengar, gengar.Species);
         Assert.Equal(8, ((PK1)gengar).Type1); // Ghost
     }

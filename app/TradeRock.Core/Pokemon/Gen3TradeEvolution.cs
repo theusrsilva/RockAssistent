@@ -8,7 +8,7 @@ namespace TradeRock.Core.Pokemon;
 /// Importa porque o Switch trava ao salvar depois de uma evolução por troca recebida do
 /// frlg-ldn-trade (issue #8 do tornadus/frlg-ldn-trade). O assistente avisa antes de enviar.
 /// </summary>
-public static class TradeEvolution
+public static class Gen3TradeEvolution
 {
     private const ushort KingsRock = 187;
     private const ushort DeepSeaTooth = 192;

@@ -26,8 +26,8 @@ public sealed record Pk3Summary(
     ushort HeldItem,
     bool Fateful)
 {
-    /// <summary>Espécie em que evolui ao ser trocado (ver <see cref="TradeEvolution"/>), ou null.</summary>
-    public ushort? EvolvesOnTradeInto => TradeEvolution.EvolvesInto(Species, HeldItem);
+    /// <summary>Espécie em que evolui ao ser trocado (ver <see cref="Gen3TradeEvolution"/>), ou null.</summary>
+    public ushort? EvolvesOnTradeInto => Gen3TradeEvolution.EvolvesInto(Species, HeldItem);
 }
 
 /// <summary>.pk3 lido e normalizado: bytes decriptados (80 ou 100), hash e resumo.</summary>
