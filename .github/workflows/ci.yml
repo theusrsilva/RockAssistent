@@ -31,8 +31,10 @@ jobs:
 
       - name: Build e testes
         run: |
+          # Monta ~/.cache/traderock inteira: montando só a subpasta pokeapi, o Docker cria a pasta-mãe como
+          # root dentro do container e os testes do pokeldn não conseguem criar ~/.cache/traderock/pokeldn-test.
           mkdir -p ~/.cache/traderock/pokeapi
-          docker run --rm -v "$PWD:/workspace" -v "$HOME/.cache/traderock/pokeapi:/home/dev/.cache/traderock/pokeapi" \
+          docker run --rm -v "$PWD:/workspace" -v "$HOME/.cache/traderock:/home/dev/.cache/traderock" \
             -w /workspace traderock-dev scripts/ci.sh
 
   # .deb e AppImage (scripts/package-linux.sh). Na tag, também o código-fonte completo e o das
