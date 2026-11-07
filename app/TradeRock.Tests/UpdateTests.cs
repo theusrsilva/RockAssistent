@@ -60,7 +60,7 @@ public class AppVersionTests
     [Fact]
     public void Release_da_transicao_tem_os_dois_nomes()
     {
-        // O que scripts/release-legacy-names.sh deixa no Release: cada arquivo com o nome novo e o antigo, os dois no
+        // Release da transição de nome (TradeRock → RockAssistent): cada arquivo com o nome novo e o antigo, os dois no
         // SHA256SUMS. A versão nova escolhe o novo; a antiga (que só conhece TradeRock-*) acha o seu e o hash dele.
         static ReleaseAsset A(string name) => new(name, UpdateFixture.Download("v1.2.3", name), 3);
         string[] names = ["SHA256SUMS", "traderock_1.2.3_amd64.deb", "RockAssistent-Setup-1.2.3.exe", "RockAssistent-1.2.3-x86_64.AppImage",

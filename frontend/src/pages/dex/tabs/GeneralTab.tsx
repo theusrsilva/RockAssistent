@@ -2,17 +2,20 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { dexLang, genderRatio, titleCase, versionName, type SpeciesDetail } from '../../../lib/dex'
 import { Badge } from '../../../components/ui'
+import { gameVersionByKey } from '../../../lib/gameVersions'
 import { DamageTakenGrid } from '../DamageTakenGrid'
 import { EvolutionChain } from '../EvolutionChain'
 import { TypeList } from '../TypeBadge'
 import { Fact, Section } from './parts'
 
-export function GeneralTab({ detail }: { detail: SpeciesDetail }) {
+export function GeneralTab({ detail, game }: { detail: SpeciesDetail; game: string }) {
   const { t, i18n } = useTranslation()
   const lang = dexLang(i18n.language)
   const number = (n: number, digits = 1) => n.toLocaleString(i18n.language, { maximumFractionDigits: digits })
   const gender = genderRatio(detail.genderRate)
   const forms = detail.forms.filter((f) => !f.isDefault)
+  // Sem texto no jogo escolhido, o servidor manda o mais recente de outro jogo.
+  const gameVersions = gameVersionByKey(game).pokeApiVersions
 
   return (
     <div className="flex flex-col gap-4">
@@ -24,6 +27,7 @@ export function GeneralTab({ detail }: { detail: SpeciesDetail }) {
               <Badge tone="sky">{versionName(f.version)}</Badge>
               {lang === 'pt-BR' && f.language !== 'pt-BR' && <Badge>{t('dex.general.inEnglish')}</Badge>}
             </div>
+            {!gameVersions.includes(f.version) && <p className="text-xs text-muted">{t('dex.flavorFrom', { game: versionName(f.version) })}</p>}
             <p className="text-sm">{f.text}</p>
           </div>
         ))}

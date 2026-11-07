@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { AreaState, GameArea } from './nuzlocke'
-import { MAP_STATES, SCALE, currentNodeId, graphForGame, nodeAreas, nodeState, shortLabel, stateClass, viewBoxFor, type MapGraph, type MapNode } from './regionMap'
+import { MAP_STATES, SCALE, currentNodeId, graphForGame, nodeAreas, nodeState, labelFontSize, shortLabel, stateClass, viewBoxFor, type MapGraph, type MapNode } from './regionMap'
 
 /**
  * Mapa esquemático da região: cidades (quadrado), rotas (círculo), dungeons (losango), construções (quadrado pequeno)
@@ -124,7 +124,7 @@ function Node({ node, state, current, onSelect }: { node: MapNode; state: AreaSt
       <circle cx={cx} cy={cy} r={27} strokeWidth={5} className={`ring fill-none ${current ? 'stroke-accent' : 'stroke-transparent'}`} />
       <Shape kind={node.kind} cx={cx} cy={cy} className={`${stateClass(state)}`} />
       {node.kind === 'city' && (
-        <text x={cx} y={cy + 46} textAnchor="middle" className="fill-ink text-[26px] font-bold" style={{ paintOrder: 'stroke', stroke: 'var(--color-bg)', strokeWidth: 6 }}>
+        <text x={cx} y={cy + 46} textAnchor="middle" fontSize={labelFontSize(node.name)} className="fill-ink font-bold" style={{ paintOrder: 'stroke', stroke: 'var(--color-bg)', strokeWidth: 6 }}>
           {shortLabel(node.name)}
         </text>
       )}

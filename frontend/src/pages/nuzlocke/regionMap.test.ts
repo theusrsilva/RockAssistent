@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { areaNodeId, currentNodeId, graphForGame, nodeAreas, nodeState, shortLabel, stateClass, viewBoxFor, type MapGraph } from './regionMap'
+import { areaNodeId, currentNodeId, graphForGame, nodeAreas, nodeState, labelFontSize, shortLabel, stateClass, viewBoxFor, type MapGraph } from './regionMap'
 import type { GameArea } from './nuzlocke'
 
 const graph: MapGraph = {
@@ -74,6 +74,12 @@ describe('desenho', () => {
     expect(shortLabel('One Island')).toBe('One')
     expect(shortLabel('Seven Island')).toBe('Seven')
     expect(shortLabel('Cinnabar Island')).toBe('Cinnabar Island')
+  })
+  it('rótulos das ilhas numeradas em fonte menor (não se colam)', () => {
+    expect(labelFontSize('Two Island')).toBe(18)
+    expect(labelFontSize('Three Island')).toBe(18)
+    expect(labelFontSize('Cinnabar Island')).toBe(26)
+    expect(labelFontSize('Pallet Town')).toBe(26)
   })
   it('viewBox cobre os nós com margem', () => {
     const vb = viewBoxFor(graphForGame(graph, 'frlg').nodes)

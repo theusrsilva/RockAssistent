@@ -89,6 +89,12 @@ export const shortLabel = (name: string) => {
 }
 
 /**
+ * Fonte do rótulo da cidade: 18 nas ilhas numeradas das Sevii (One, Two e Three ficam a 60 unidades umas das outras
+ * e, na fonte 26, os rótulos se colam); 26 nas outras.
+ */
+export const labelFontSize = (name: string) => (NUMBERED_ISLAND.test(name) ? 18 : 26)
+
+/**
  * viewBox justo em volta dos nós. Margens: dos lados cabe metade de um rótulo longo ("Cinnabar Island", fonte 26);
  * embaixo, o rótulo da cidade (46 abaixo do centro); em cima, só o anel do nó atual.
  */

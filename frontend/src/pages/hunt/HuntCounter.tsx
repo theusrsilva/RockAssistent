@@ -22,7 +22,7 @@ import {
   type HuntGame,
 } from '../../lib/hunts'
 import { BackLink } from '../dex/tabs/parts'
-import { gameName } from './HuntPage'
+import { gameName } from '../../components/HuntCard'
 
 /** O cronômetro é gravado a cada 30 s enquanto corre, ao pausar e ao sair da página. */
 const SAVE_EVERY_MS = 30_000

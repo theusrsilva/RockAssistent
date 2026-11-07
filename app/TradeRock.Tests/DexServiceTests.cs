@@ -163,6 +163,15 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public async Task Sem_texto_no_jogo_vem_o_mais_recente_de_outro()
+    {
+        var g = await Dex.GetAsync(94, "sv", "pt-BR", Ct); // o dex.sqlite não tem texto do Gengar no SV
+        var flavor = Assert.Single(g!.FlavorTexts);
+        Assert.NotEmpty(flavor.Text);
+        Assert.DoesNotContain(flavor.Version, new[] { "scarlet", "violet" });
+    }
+
+    [Fact]
     public async Task Sprigatito_nao_existe_no_FireRed()
     {
         var s = await Dex.GetAsync(906, "frlg", "pt-BR", Ct);

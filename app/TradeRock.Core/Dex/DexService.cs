@@ -650,7 +650,24 @@ public sealed class DexService(DexDatabase db)
             else if (texts.TryGetValue((id, English), out text))
                 result.Add(new FlavorText(identifier, English, text));
         }
-        return result;
+        return result.Count > 0 ? result : LatestFlavor(c, speciesId, language);
+    }
+
+    /// <summary>
+    /// Nenhuma versão do jogo tem texto (ex.: Gengar no SV): o texto da versão mais recente que tiver um, no idioma
+    /// pedido ou em inglês. O <c>Version</c> diz de qual jogo veio.
+    /// </summary>
+    private static List<FlavorText> LatestFlavor(SqliteConnection c, int speciesId, string language)
+    {
+        using var cmd = Command(c, """
+            SELECT v.identifier, f.language, f.text
+            FROM flavor_text f JOIN versions v ON v.id = f.version_id
+            WHERE f.species_id = $s AND f.language IN ($l, $en)
+            ORDER BY f.version_id DESC, f.language = $l DESC
+            LIMIT 1
+            """, ("$s", speciesId), ("$l", language), ("$en", English));
+        using var r = cmd.ExecuteReader();
+        return r.Read() ? [new FlavorText(r.GetString(0), r.GetString(1), r.GetString(2))] : [];
     }
 
     private static List<EncounterInfo> Encounters(SqliteConnection c, int speciesId, GameInfo game)

@@ -184,11 +184,13 @@ ela). As telas novas ainda não foram vistas num navegador: anote tudo o que par
 ### Atalho global do Contador Hunt
 
 Os testes automáticos cobrem o combo, a tabela de teclas, a API e o SSE com um atalho falso. No WSLg (XWayland) o
-`XGrabKey` e o `BadAccess` de outra conexão foram verificados; a tecla apertada de verdade, não. Para conferir à mão:
+`XGrabKey` e o `BadAccess` de outra conexão foram verificados; a tecla apertada de verdade, não. O atalho global só fica
+ativo (tecla pega no sistema) enquanto um contador de hunt está aberto, e teclas de texto sem Ctrl/Alt/Meta (letras,
+dígitos, Espaço, Enter, Tab...) são recusadas no global. Para conferir à mão:
 
 1. **Linux com X11** (sessão "Xorg"/X11, não Wayland): abra o app, Configurações → Preferências → ligue "Atalho global".
    Crie uma hunt, abra o contador e ponha outra janela na frente (um editor de texto, o emulador). Aperte o atalho de
-   somar (padrão Espaço): o contador sobe uma vez por aperto (segurar a tecla não repete). Com a janela do app na frente,
+   somar (escolha antes uma tecla aceita no global, como F8 ou Ctrl+Espaço): o contador sobe uma vez por aperto (segurar a tecla não repete). Com a janela do app na frente,
    conta uma vez só. Com NumLock e CapsLock ligados, continua funcionando.
 2. **Tecla em uso:** com outro programa que pegue a mesma tecla global (ex.: `xbindkeys` com `F8`), escolha F8 → o app
    mostra "Outro programa já usa essa tecla" e o atalho anterior continua.
