@@ -199,7 +199,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(["chikorita", "totodile"], rival.Variants!.Select(v => v.Starter));
         Assert.Equal(6, rival.ForStarter("chikorita").LevelCap);
         // Sem o campo "variants" continua valendo (um time só).
-        Assert.Null(FromFiles(new Dictionary<string, string> { ["bosses/frlg.json"] = GameDataStore.EmbeddedFiles()["bosses/frlg.json"] }).Bosses("frlg")[0].Variants);
+        Assert.Null(FromFiles(new Dictionary<string, string> { ["bosses/frlg.json"] = GameDataStore.EmbeddedFiles()["bosses/frlg.json"] }).Bosses("frlg").Single(b => b.Id == "brock").Variants);
     }
 
     [Fact]

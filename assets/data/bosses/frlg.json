@@ -26,8 +26,58 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5; pode perder: a história continua",
-      "versions": null
+      "notes": "golpes padrão do nível; pode perder: a história continua",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 4,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 7,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 1,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-2",
@@ -65,8 +115,103 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 9; com Bulbasaur: Pidgey 9, Charmander 9; luta opcional",
-      "versions": null
+      "notes": "luta opcional",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "sand-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 4,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "scratch",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "sand-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 7,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "sand-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 1,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "brock",
@@ -172,8 +317,187 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeotto 17, Abra 16, Rattata 15, Bulbasaur 18; com Bulbasaur: Pidgeotto 17, Abra 16, Rattata 15, Charmander 18",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "tackle",
+                "sand-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "teleport"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 4,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "metal-claw",
+                "ember",
+                "growl",
+                "scratch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "tackle",
+                "sand-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "teleport"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 7,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "withdraw",
+                "water-gun"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "tackle",
+                "sand-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "teleport"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 1,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "sleep-powder",
+                "poison-powder",
+                "vine-whip",
+                "leech-seed"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "misty",
@@ -266,8 +590,139 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 5,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 8,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 2,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "lt-surge",
@@ -482,8 +937,166 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 5,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 8,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 2,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-6",
@@ -542,8 +1155,166 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "giovanni-silph",
@@ -990,8 +1761,283 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 45, Alakazam 47, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 45, Alakazam 47, Charizard 53",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "feather-dance",
+                "wing-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "take-down",
+                "horn-drill",
+                "rock-blast",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "solar-beam",
+                "sleep-powder",
+                "poison-powder",
+                "stun-spore"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "hydro-pump",
+                "twister",
+                "leer",
+                "rain-dance"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "psychic",
+                "calm-mind",
+                "future-sight",
+                "disable"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "flamethrower",
+                "wing-attack",
+                "slash",
+                "scary-face"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "feather-dance",
+                "wing-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "take-down",
+                "horn-drill",
+                "rock-blast",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "flame-wheel",
+                "take-down",
+                "leer",
+                "agility"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "solar-beam",
+                "sleep-powder",
+                "poison-powder",
+                "stun-spore"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "psychic",
+                "calm-mind",
+                "future-sight",
+                "disable"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "water-gun",
+                "rain-dance",
+                "bite",
+                "rapid-spin"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "feather-dance",
+                "wing-attack",
+                "gust",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "take-down",
+                "horn-drill",
+                "rock-blast",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "hydro-pump",
+                "twister",
+                "leer",
+                "rain-dance"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "flame-wheel",
+                "take-down",
+                "leer",
+                "agility"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "psychic",
+                "calm-mind",
+                "future-sight",
+                "disable"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "razor-leaf",
+                "sweet-scent",
+                "growth",
+                "synthesis"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "lorelei",
@@ -1429,8 +2475,283 @@
       ],
       "level_cap": 63,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Pidgeot 59, Alakazam 57, Rhydon 59, Gyarados 59, Arcanine 61, Venusaur 63; com Bulbasaur: Pidgeot 59, Alakazam 57, Rhydon 59, Exeggutor 59, Gyarados 61, Charizard 63",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "aerial-ace",
+                "feather-dance",
+                "sand-attack",
+                "whirlwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "future-sight",
+                "recover",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "take-down",
+                "earthquake",
+                "rock-tomb",
+                "scary-face"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "giga-drain",
+                "egg-bomb",
+                "sleep-powder",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "hydro-pump",
+                "dragon-rage",
+                "bite",
+                "thrash"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "fire-blast",
+                "aerial-ace",
+                "slash",
+                "fire-spin"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "aerial-ace",
+                "feather-dance",
+                "sand-attack",
+                "whirlwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "future-sight",
+                "recover",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "take-down",
+                "earthquake",
+                "rock-tomb",
+                "scary-face"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "extreme-speed",
+                "flamethrower",
+                "roar",
+                "bite"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "giga-drain",
+                "egg-bomb",
+                "sleep-powder",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "hydro-pump",
+                "rain-dance",
+                "skull-bash",
+                "bite"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "aerial-ace",
+                "feather-dance",
+                "sand-attack",
+                "whirlwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "future-sight",
+                "recover",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "take-down",
+                "earthquake",
+                "rock-tomb",
+                "scary-face"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "hydro-pump",
+                "dragon-rage",
+                "bite",
+                "thrash"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "extreme-speed",
+                "flamethrower",
+                "roar",
+                "bite"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "solar-beam",
+                "synthesis",
+                "sunny-day",
+                "growth"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rocket-admin-warehouse-1",
@@ -1982,8 +3303,283 @@
       ],
       "level_cap": 75,
       "verified": true,
-      "notes": "time para quem escolheu Charmander; com Squirtle: Heracross 72, Alakazam 73, Tyranitar 72, Gyarados 73, Arcanine 73, Venusaur 75; com Bulbasaur: Heracross 72, Alakazam 73, Tyranitar 72, Exeggutor 73, Gyarados 73, Charizard 75; revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
-      "versions": null
+      "notes": "revanche: depois de levar o Ruby e o Sapphire à Network Machine (One Island)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 214,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "megahorn",
+                "earthquake",
+                "counter",
+                "rock-tomb"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "psychic",
+                "shadow-ball",
+                "calm-mind",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 248,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "crunch",
+                "earthquake",
+                "thunderbolt",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "giga-drain",
+                "psychic",
+                "sleep-powder",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "hydro-pump",
+                "dragon-dance",
+                "earthquake",
+                "hyper-beam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 75,
+              "moves": [
+                "fire-blast",
+                "dragon-claw",
+                "aerial-ace",
+                "earthquake"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 75,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 214,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "megahorn",
+                "earthquake",
+                "counter",
+                "rock-tomb"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "psychic",
+                "shadow-ball",
+                "calm-mind",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 248,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "crunch",
+                "earthquake",
+                "thunderbolt",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "extreme-speed",
+                "overheat",
+                "aerial-ace",
+                "iron-tail"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "giga-drain",
+                "psychic",
+                "sleep-powder",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 75,
+              "moves": [
+                "hydro-pump",
+                "ice-beam",
+                "earthquake",
+                "rain-dance"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 75,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 214,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "megahorn",
+                "earthquake",
+                "counter",
+                "rock-tomb"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "psychic",
+                "shadow-ball",
+                "calm-mind",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 248,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "crunch",
+                "earthquake",
+                "thunderbolt",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "hydro-pump",
+                "dragon-dance",
+                "earthquake",
+                "hyper-beam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 73,
+              "moves": [
+                "extreme-speed",
+                "overheat",
+                "aerial-ace",
+                "iron-tail"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 75,
+              "moves": [
+                "solar-beam",
+                "sludge-bomb",
+                "earthquake",
+                "sunny-day"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 75,
+          "verified": true
+        }
+      ]
     }
   ]
 }

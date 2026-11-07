@@ -29,8 +29,58 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Cyndaquil 5; com Totodile: Chikorita 5; pode perder: a história continua",
-      "versions": null
+      "notes": "golpes padrão do nível; pode perder: a história continua",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 155,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 158,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 152,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "sage-li",
@@ -207,8 +257,112 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Gastly 12, Zubat 14, Quilava 16; com Totodile: Gastly 12, Zubat 14, Bayleef 16",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 92,
+              "form": 0,
+              "level": 12,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 14,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 156,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 16,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 92,
+              "form": 0,
+              "level": 12,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 14,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 159,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 16,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 92,
+              "form": 0,
+              "level": 12,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 14,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 153,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 16,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "whitney",
@@ -321,8 +475,199 @@
       ],
       "level_cap": 22,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Haunter 20, Magnemite 18, Zubat 20, Quilava 22; com Totodile: Haunter 20, Magnemite 18, Zubat 20, Bayleef 22",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 93,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "lick",
+                "spite",
+                "mean-look",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "supersonic",
+                "sonic-boom"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leech-life",
+                "supersonic",
+                "bite",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 156,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "leer",
+                "smokescreen",
+                "ember",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 93,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "lick",
+                "spite",
+                "mean-look",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "supersonic",
+                "sonic-boom"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leech-life",
+                "supersonic",
+                "bite",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 159,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "leer",
+                "rage",
+                "water-gun",
+                "bite"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 93,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "lick",
+                "spite",
+                "mean-look",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "supersonic",
+                "sonic-boom"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 41,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leech-life",
+                "supersonic",
+                "bite",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 153,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "growl",
+                "reflect",
+                "razor-leaf",
+                "poison-powder"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "morty",
@@ -950,8 +1295,241 @@
       ],
       "level_cap": 32,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Quilava 32; com Totodile: Golbat 30, Magnemite 28, Haunter 30, Sneasel 32, Meganium 32",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 42,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "lick",
+                "mean-look",
+                "curse",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 215,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "screech",
+                "feint-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 156,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "smokescreen",
+                "ember",
+                "quick-attack",
+                "flame-wheel"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 32,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 42,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "lick",
+                "mean-look",
+                "curse",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 215,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "screech",
+                "feint-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "rage",
+                "water-gun",
+                "bite",
+                "scary-face"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 32,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 42,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 81,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "tackle",
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "lick",
+                "mean-look",
+                "curse",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 215,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "screech",
+                "feint-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "reflect",
+                "razor-leaf",
+                "poison-powder",
+                "body-slam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 32,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "executive-radio-tower-5f-f",
@@ -1234,8 +1812,283 @@
       ],
       "level_cap": 38,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Typhlosion 38; com Totodile: Sneasel 34, Golbat 36, Magneton 35, Haunter 35, Kadabra 35, Meganium 38",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "disable",
+                "psybeam",
+                "recover",
+                "future-sight"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 157,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "smokescreen",
+                "ember",
+                "quick-attack",
+                "flame-wheel"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "disable",
+                "psybeam",
+                "recover",
+                "future-sight"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "rage",
+                "water-gun",
+                "scary-face",
+                "slash"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 93,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "disable",
+                "psybeam",
+                "recover",
+                "future-sight"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "reflect",
+                "razor-leaf",
+                "poison-powder",
+                "body-slam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "will",
@@ -2226,8 +3079,283 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Typhlosion 45; com Totodile: Sneasel 41, Golbat 42, Magneton 41, Gengar 43, Alakazam 43, Meganium 45",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "disable",
+                "recover",
+                "future-sight",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 157,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "smokescreen",
+                "quick-attack",
+                "flame-wheel",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "disable",
+                "recover",
+                "future-sight",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "rage",
+                "water-gun",
+                "scary-face",
+                "slash"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 42,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "leech-life",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "thunder-shock",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "disable",
+                "recover",
+                "future-sight",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "razor-leaf",
+                "poison-powder",
+                "body-slam",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "blaine",
@@ -2481,8 +3609,283 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Typhlosion 50; com Totodile: Sneasel 45, Crobat 48, Magneton 45, Gengar 46, Alakazam 46, Meganium 50; revanche: só às segundas e quartas, uma vez por dia, depois da luta no Mt. Moon",
-      "versions": null
+      "notes": "revanche: só às segundas e quartas, uma vez por dia, depois da luta no Mt. Moon",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 169,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "toxic",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "thunder",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "recover",
+                "future-sight",
+                "psychic",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 157,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "smokescreen",
+                "quick-attack",
+                "fire-blast",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 169,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "toxic",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "thunder",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "recover",
+                "future-sight",
+                "psychic",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "surf",
+                "rain-dance",
+                "slash",
+                "screech"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 215,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "quick-attack",
+                "screech",
+                "feint-attack",
+                "fury-cutter"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 169,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "toxic",
+                "bite",
+                "confuse-ray",
+                "wing-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 82,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "thunder",
+                "sonic-boom",
+                "thunder-wave",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 94,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "mean-look",
+                "curse",
+                "shadow-ball",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "recover",
+                "future-sight",
+                "psychic",
+                "reflect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "giga-drain",
+                "body-slam",
+                "light-screen",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "red",
