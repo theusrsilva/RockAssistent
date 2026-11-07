@@ -13,7 +13,7 @@
 - Latios (OR) / Latias (AS), Lv. 30: Southern Island (story).
 - Castform: Weather Institute.
 - Cosplay Pikachu (Lv. 20): Pokémon Breeder in the Slateport Contest Hall, after your first contest.
-- Johto starters (Delta Episode), Unova starters (after it), Sinnoh starters (after the League rematch): Prof. Birch.
+- Johto starters (when you leave your house after the credits), Unova starters (after the Delta Episode), Sinnoh starters (after the League rematch): Prof. Birch, in Littleroot.
 - Beldum (Lv. 1): Steven's house, Mossdeep, after the Delta Episode.
 - Camerupt and Sharpedo (Lv. 40): former admins, Battle Resort.
 

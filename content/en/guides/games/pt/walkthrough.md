@@ -550,7 +550,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 :::boss pt volkner
 
-- Tip: Ground types win; Electivire has Fire Punch and Ice Punch.
+- Tip: Ground types win; Electivire has Thunder Punch and Fire Punch.
 
 ## Route 223 → Pokémon League
 
@@ -641,7 +641,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 :::boss pt volkner-fight-area
 
-- Tip: Ground for all three; watch Electivire's Ice Punch.
+- Tip: Ground for all three; watch Electivire's Fire Punch and Brick Break.
 
 ## Battle Frontier → Route 230
 
@@ -649,7 +649,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 - Battle Frontier: Tower, Factory, Arcade, Castle and Hall.
 - Routes 225–226 to the Survival Area; Battleground hosts Gym Leader rematches.
-- Barry is outside the Battleground on weekends.
+- Barry is outside the Battleground on weekends; his team grows in stages (Lv 79–85 after 10 wins at the League).
 - Route 228: ultimate move tutor; Resort Area: your Villa.
 - Mars and Jupiter attack Stark Mountain: beat them on the way (double with Buck).
 

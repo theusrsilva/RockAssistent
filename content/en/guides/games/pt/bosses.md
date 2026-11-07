@@ -26,7 +26,7 @@ All bosses in story order, with teams and levels.
 - **Mars (Spear Pillar, Mt. Coronet)**: Spread moves help; KO Purugly with Fighting.
 - **Jupiter (Spear Pillar, Mt. Coronet)**: Ground for Skuntank (Bronzor is immune: watch Levitate).
 - **Cyrus (Distortion World)**: Weavile (4× Fighting) and Gyarados (4× Electric): bring answers; Houndoom falls to Water/Ground.
-- **Volkner (Sunyshore Gym)**: Ground types win; Electivire has Fire Punch and Ice Punch.
+- **Volkner (Sunyshore Gym)**: Ground types win; Electivire has Thunder Punch and Fire Punch.
 - **Barry (Pokémon League (before the Elite Four))**: Six Pokémon with Snorlax: Fighting for it, counter for his starter.
 - **Aaron (Pokémon League)**: Fire and Rock sweep; Drapion needs Ground.
 - **Bertha (Pokémon League)**: Water and Grass; Gliscor needs Ice (4×).
@@ -34,11 +34,11 @@ All bosses in story order, with teams and levels.
 - **Lucian (Pokémon League)**: Dark, Ghost and Bug; Bronzong takes Fire.
 - **Cynthia (Pokémon League)**: Ice (4×) for Garchomp; Spiritomb has no weakness; Togekiss is new here.
 - **Flint (Fight Area)**: Water/Ground spread (Surf, Earthquake with a Flying ally) covers both.
-- **Volkner (Fight Area)**: Ground for all three; watch Electivire's Ice Punch.
+- **Volkner (Fight Area)**: Ground for all three; watch Electivire's Fire Punch and Brick Break.
 - **Mars (Stark Mountain)**: Double with Buck: Fighting for Purugly, Fire for Bronzong.
 - **Jupiter (Stark Mountain)**: Ground for Skuntank, Electric for Golbat.
 - **Barry (Survival Area (outside the Battleground))**: Lv 59–65: same counters, more levels.
-- **Barry (Survival Area (outside the Battleground))**: Lv 79–85 after the National Dex: bring a Lv 80+ team.
+- **Barry (Survival Area (outside the Battleground))**: Lv 79–85 after 10 wins at the League: bring a Lv 80+ team.
 - **Aaron (Pokémon League)**: Fire and Rock again; Scizor is 4× weak to Fire.
 - **Bertha (Pokémon League)**: Water and Grass; Ice for Gliscor.
 - **Flint (Pokémon League)**: Water and Ground.

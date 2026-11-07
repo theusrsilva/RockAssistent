@@ -13,7 +13,7 @@
 - Latios (OR) / Latias (AS), nv. 30: Southern Island (história).
 - Castform: Weather Institute.
 - Pikachu Cosplay (nv. 20): Pokémon Breeder no Contest Hall de Slateport, depois do primeiro concurso.
-- Iniciais de Johto (Delta Episode), de Unova (depois dele) e de Sinnoh (depois da revanche da Liga): Prof. Birch.
+- Iniciais de Johto (ao sair de casa depois dos créditos), de Unova (depois do Delta Episode) e de Sinnoh (depois da revanche da Liga): Prof. Birch, em Littleroot.
 - Beldum (nv. 1): casa do Steven, Mossdeep, depois do Delta Episode.
 - Camerupt e Sharpedo (nv. 40): ex-admins, Battle Resort.
 

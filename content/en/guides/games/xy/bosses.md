@@ -13,7 +13,7 @@ All story and postgame bosses, in order. The walkthrough shows each one with its
 - **Korrina** (Gym Leader, Geosenge Town): Two Lucario with a partner: Fire, Fighting and Ground moves hit hard.
 - **Serena** (Rival, Tower of Mastery, Shalour City): Rival: Absol is weak to Fighting and Fairy.
 - **Korrina** (Gym Leader, Shalour Gym): Flying and Psychic beat her team; Hawlucha is fast, hit it first.
-- **Korrina** (Gym Leader, Tower of Mastery, Shalour City): You use her loaned Lucario; Mega Evolve it at once.
+- **Korrina** (Gym Leader, Tower of Mastery, Shalour City): You use the Lucario she just gave you; Mega Evolve it at once (the battle restarts if you don't).
 - **Serena** (Rival, Coumarine City): Same core team as before, three levels higher.
 - **Ramos** (Gym Leader, Coumarine Gym): Fire, Flying, Ice or Poison; Gogoat can heal with Leech Seed.
 - **Team Flare Admin** (Team Flare, Kalos Power Plant): Houndoom: Water, Ground, Rock or Fighting.

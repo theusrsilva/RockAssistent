@@ -109,7 +109,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Do**
 
-- Trick House: one puzzle per badge, with prizes.
+- Trick House: new puzzles as you earn badges (the last after the League), with prizes.
 - Rydel gives a bike (Mach or Acro; you can swap).
 - Wally challenges you at the gym door; Wally's uncle gives HM06 Rock Smash.
 
@@ -518,7 +518,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Do**
 
-- Victory Road needs Strength, Rock Smash, Surf and Waterfall.
+- Victory Road needs Surf, Strength and Waterfall (Flash helps).
 - Wally waits at the exit with Mega Gallade.
 
 **Items**
@@ -665,7 +665,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 **Items**
 
 - Blastoisinite, Leftovers, TM63 Embargo (S.S. Tidal).
-- TM87 Swagger, Gengarite, Audinite (Battle Resort); Metagrossite (Steven).
+- TM87 Swagger, Gengarite, Audinite (Battle Resort); Metagrossite (Steven, at the League, after the first rematch).
 
 **Boss**
 

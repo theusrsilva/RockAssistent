@@ -550,7 +550,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 :::boss pt volkner
 
-- Dica: Tipos Ground vencem; o Electivire tem Fire Punch e Ice Punch.
+- Dica: Tipos Ground vencem; o Electivire tem Thunder Punch e Fire Punch.
 
 ## Route 223 → Pokémon League
 
@@ -641,7 +641,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 :::boss pt volkner-fight-area
 
-- Dica: Ground nos três; cuidado com o Ice Punch do Electivire.
+- Dica: Ground nos três; cuidado com o Fire Punch e o Brick Break do Electivire.
 
 ## Battle Frontier → Route 230
 
@@ -649,7 +649,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 - Battle Frontier: Tower, Factory, Arcade, Castle e Hall.
 - Routes 225–226 até a Survival Area; o Battleground tem revanches dos líderes.
-- O Barry fica na porta do Battleground nos fins de semana.
+- O Barry fica na porta do Battleground nos fins de semana; o time dele sobe por etapas (Lv 79–85 depois de 10 vitórias na Liga).
 - Route 228: tutor dos golpes finais; Resort Area: a sua Villa.
 - Mars e Jupiter atacam o Stark Mountain: vença os dois (dupla com o Buck).
 

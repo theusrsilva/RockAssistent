@@ -60,7 +60,7 @@ All 92 TMs and 8 HMs. Locations are the same in both versions.
 - TM54 False Swipe: Dark Cave; Goldenrod Dept. Store.
 - TM55 Brine: Celadon Dept. Store.
 - TM56 Fling: Rock Tunnel.
-- TM57 Charge Beam: Power Plant (return the Machine Part); Goldenrod lottery (Wednesday).
+- TM57 Charge Beam: Power Plant (return the Machine Part); Olivine City; Goldenrod lottery (Wednesday).
 - TM58 Endure: Celadon Game Corner.
 - TM59 Dragon Pulse: Clair (Blackthorn Gym); Battle Frontier.
 - TM60 Drain Punch: Route 39; Goldenrod lottery (Thursday).

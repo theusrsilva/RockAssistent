@@ -469,7 +469,7 @@
 - Challenger's Cave (sul da Route 9, Flash).
 - Leste de Unova: Route 11, Village Bridge, Route 12, Lacunosa Town, Route 13.
 - Giant Chasm: Kyurem Lv 75 na caverna de dentro.
-- Undella Town: Cynthia (primavera/verão) e Dive.
+- Undella Town: Cynthia (primavera/verão; revanche diária só na primavera) e Dive.
 
 **Itens**
 

@@ -223,7 +223,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 :::boss xy korrina-lucario
 
-- Dica: Você usa o Lucario emprestado; megaevolua logo no começo.
+- Dica: Você usa o Lucario que ela acabou de dar; megaevolua logo no começo (sem megaevoluir, a luta recomeça).
 
 ## Route 12 → Coumarine City
 

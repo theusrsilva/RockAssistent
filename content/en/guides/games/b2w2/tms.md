@@ -16,7 +16,7 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM10 Hidden Power: 18 BP.
 - TM11 Sunny Day: Mistralton City (shop), $50,000.
 - TM12 Taunt: Route 23.
-- TM13 Ice Beam: Giant Chasm (Strength).
+- TM13 Ice Beam: Giant Chasm (Surf).
 - TM14 Blizzard: Lacunosa Town (Pokémon Center), $70,000.
 - TM15 Hyper Beam: Shopping Mall Nine (Route 9), $90,000.
 - TM16 Light Screen: Nimbasa City (shop), $30,000.
@@ -96,7 +96,7 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM90 Substitute: Twist Mountain.
 - TM91 Flash Cannon: Twist Mountain.
 - TM92 Trick Room: Abundant Shrine.
-- TM93 Wild Charge: Victory Road (Surf and Waterfall).
+- TM93 Wild Charge: Victory Road (Surf).
 - TM94 Rock Smash: Virbank Complex.
 - TM95 Snarl: Lostlorn Forest, from the trainer dressed as Zoroark in the trailer.
 - HM01 Cut: Roxie (Virbank).

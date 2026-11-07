@@ -3,6 +3,8 @@
     "https://www.serebii.net/xy/gyms.shtml",
     "https://www.serebii.net/xy/elitefour.shtml",
     "https://www.serebii.net/xy/teamflare.shtml",
+    "https://www.serebii.net/pokearth/kalos/kalospowerplant.shtml",
+    "https://www.serebii.net/pokearth/kalos/pokeballfactory.shtml",
     "https://www.serebii.net/xy/az.shtml",
     "https://www.serebii.net/xy/looker.shtml",
     "https://www.pokewiki.de/Serena",
@@ -575,8 +577,8 @@
         }
       ],
       "level_cap": 36,
-      "verified": false,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "espécies e níveis conferidos na Serebii (Pokéarth) e no detonado; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -802,8 +804,8 @@
         }
       ],
       "level_cap": 38,
-      "verified": false,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "espécies e níveis conferidos na Serebii (Pokéarth) e no detonado; golpes não listados nas fontes",
       "versions": null
     },
     {

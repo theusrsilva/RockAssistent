@@ -34,34 +34,25 @@ outra fonte.
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| trainers/dp.json | Os eventos do DP na decomp (`zone_event_release` + `map_header.c`, script 3000+id) não batem com os times (ex.: Clarice Lv. 54 e Deandre Lv. 56 na Eterna Forest, Psychics Lv. 15 na Victory Road). Por isso o lugar vem do Platinum, pelo mesmo índice e nome (os índices do DP e do Pt batem: 840 de 850 nomes iguais; eventos e `scripts.s`, que trazem também as lutas de script). `verified: true` só quando os eventos do DP dão a mesma área (196 de 433). Os 6 sem lugar no Pt ficam na área dos eventos do DP, com `verified: false`. Classe pelo nome do Pt. Objetos `TRAINER_DUMMY_*` (um Rattata Lv. 5, "Mickey"/"Angelica") ficaram fora. Conferido: nenhum treinador fica mais de 14 níveis acima da mediana da área, salvo Veteran Grant e Hiker Alexander (acesso tardio, o Pt também os põe ali). | pokediamond / pokeplatinum |
-| guias/dp (itens) | Odd Keystone na Route 208 em D/P (a Serebii diz só Platinum); Old Rod "depois do Pokétch"; Exp. Share no portão da Route 206 com 35 vistos; Quick Claw em Jubilife; Storage Key. | serebii pokearth, pokemondb |
+| trainers/dp.json | Os eventos do DP na decomp (`zone_event_release` + `map_header.c`, script 3000+id) não batem com os times (ex.: Clarice Lv. 54 e Deandre Lv. 56 na Eterna Forest, Psychics Lv. 15 na Victory Road). Por isso o lugar vem do Platinum, pelo mesmo índice e nome (os índices do DP e do Pt batem: 840 de 850 nomes iguais; eventos e `scripts.s`, que trazem também as lutas de script). `verified: true` só quando os eventos do DP dão a mesma área (196 de 433). Os 6 sem lugar no Pt ficam na área dos eventos do DP, com `verified: false`. Classe pelo nome do Pt. Objetos `TRAINER_DUMMY_*` (um Rattata Lv. 5, "Mickey"/"Angelica") ficaram fora. Conferido: nenhum treinador fica mais de 14 níveis acima da mediana da área, salvo Veteran Grant e Hiker Alexander (acesso tardio, o Pt também os põe ali). | pokediamond / pokeplatinum; sem fonte nova (é convenção de método, não um fato a conferir) |
 
 ### Platinum (`pt`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| bosses/crasher-wake-rematch, buck-battleground | Níveis da decompilação diferentes das notas e da pokemondb (Wake: Gyarados 66, Quagsire 63; Buck: Umbreon 63). Ficaram os da decompilação, que seguem o padrão 61–65 dos outros líderes. | pret/pokeplatinum res/trainers/data; pokemondb.net/platinum/gymleaders-elitefour; notas da Pokémon Mythology |
-| bosses/rival-survival-area-2 | Falta saber o que libera o Barry mais forte (inicial 85) na Survival Area: as notas falam em 20 vitórias na Liga, outras fontes em 10 entradas no Hall da Fama. O time intermediário (inicial 75, "unused" na decompilação) existe nos dados do jogo e não entrou. | pret/pokeplatinum generated/trainers.txt; notas da Pokémon Mythology |
-| guias/pt (presentes) | Porygon Lv 25 em Veilstone exige a National Dex? | serebii platinum/gift; rankedboost |
-| guias/pt (chefes) | Electivire do Volkner com Fire/Ice Punch; condição da revanche da Elite Four; Barry na Survival Area "fins de semana". | dittobase, guidestrats |
 
 ### HeartGold / SoulSilver (`hgss`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| trainers/hgss.json | Lutas de script de todos os `scr_seq_<n>_<mapa>.s` do mapa (Fuchsia Gym, ginásio do Blaine nas Seafoam Islands, Route 24, 25 e 34...). Goldenrod Tunnel (MAPSEC Goldenrod City) → goldenrod-underground. Bug Catcher Wayne (índice 533, Ilex Forest) está nos dados mas em nenhum evento ou script da decomp: entrou na ilex-forest com `verified: false`. | pokeheartgold |
-| guias/hgss (detonado) | Ordem das 5 Kimono Girls e "sem cura entre as lutas"; Vs. Recorder; quem dá a Apricorn Box; Kiyo exige Waterfall?; ordem Chuck → SecretPotion. | serebii, strategywiki |
-| guias/hgss/tms | TM57 Charge Beam também em Olivine; TM22 Solar Beam em Goldenrod ou Celadon. | serebii tmhm, pokemondb, dittobase |
+| trainers/hgss.json | Lutas de script de todos os `scr_seq_<n>_<mapa>.s` do mapa (Fuchsia Gym, ginásio do Blaine nas Seafoam Islands, Route 24, 25 e 34...). Goldenrod Tunnel (MAPSEC Goldenrod City) → goldenrod-underground. Bug Catcher Wayne (índice 533, Ilex Forest) está nos dados mas em nenhum evento ou script da decomp: entrou na ilex-forest com `verified: false`. | pokeheartgold; serebii pokearth ilexforest (sem lista de treinadores); strategywiki HGSS Ilex Forest; Bulbapedia por busca (só o Wayne do Crystal) |
 
 ### Black / White (`bw`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| bosses (golpes e itens) | Não há decompilação do Black/White: espécies e níveis conferidos na Serebii, na pokemondb (ginásios e Elite 4) e nas notas; golpes e itens vêm só da Serebii. | serebii.net/blackwhite (gyms, elitefour, cheren, bianca, plasma, strongtrainers); pokemondb.net/black-white/gymleaders-elitefour |
+| bosses (golpes e itens) | Não há decompilação do Black/White: espécies e níveis conferidos na Serebii, na pokemondb (ginásios e Elite 4) e nas notas; golpes e itens vêm só da Serebii. | serebii.net/blackwhite (gyms, elitefour, cheren, bianca, plasma, strongtrainers); pokemondb.net/black-white/gymleaders-elitefour; sem 2ª fonte com golpes nesta rodada |
 | trainers/bw.json | Sem decompilação: tudo da Serebii (Pokéarth, seção Black & White), fonte única, `verified: false`. Black City só no Black e White Forest só no White (área `black-city`); "Black Only"/"White Only" viram `versions`. Classe separada do nome pela lista de classes do pokebw2 (a Serebii junta "Classe Nome"); "Cycling" virou "Cyclist". Lass Dye (Nacrene): a Serebii põe "Black Only" na tabela errada; ficou Lilligant no Black e Whimsicott no White. Mesmo treinador com o mesmo time nas duas versões (ex.: Ace Trainer Glinda, Marvelous Bridge) virou uma entrada só, com `versions` nulo. Golpe repetido na Serebii (Harden, Harden) entrou uma vez. Challenger's Cave entrou (o apóstrofo da URL tinha quebrado o download). | serebii.net/pokearth/unova |
-| guias/bw (estações) | Bianca "sábados" ou "fins de semana"; Cynthia só na primavera ou na primavera e no verão. | gamerguides, serebii seasons |
-| guias/bw (itens) | Full Heal do quiz da Trainers' School; quem dá a Dusk Ball/Great Ball e a Sun Stone/Soothe Bell; "item semanal" em Anville; TM31 da senhora do PC de Icirrus. | serebii pokearth, guidestrats |
 
 ### Black 2 / White 2 (`b2w2`)
 
@@ -69,25 +60,21 @@ outra fonte.
 | --- | --- | --- |
 | bosses (Modo Desafio e Modo Fácil) | O time do Modo Desafio dos líderes, da Elite 4 e da Iris está nas notas (espécies da decompilação, níveis da Serebii). Nos outros treinadores o jogo só sobe os níveis (de 1 a 5); no Modo Fácil, baixa. Esses níveis não foram listados. | fuddlesworth/pokebw2 res/trainers/data; serebii.net/black2white2/easychallengemode.shtml |
 | bosses (fora) | PWT, Black Tower/White Treehollow (Benga e Boss Trainers), Charles (motoqueiro) e Grunts não entraram. A decompilação usada (fuddlesworth/pokebw2) é um projeto novo e não da pret. | fuddlesworth/pokebw2; notas da Pokémon Mythology |
-| bosses/cheren, roxie, burgh, elesa | A decompilação dá 3 golpes explícitos a alguns Pokémon; a Serebii mostra um 4º (Detect, Helping Hand, Clear Smog, Protect, Electro Ball). O JSON segue a decompilação. | fuddlesworth/pokebw2 res/trainers/data; serebii.net/black2white2/gyms.shtml |
+| bosses/cheren, roxie, burgh, elesa | A decompilação dá 3 golpes explícitos a alguns Pokémon; a Serebii mostra um 4º (Detect, Helping Hand, Clear Smog, Protect, Electro Ball). O JSON segue a decompilação. | fuddlesworth/pokebw2 res/trainers/data; serebii.net/black2white2/gyms.shtml; sem 3ª fonte nesta rodada |
 | trainers/b2w2.json | Decomp pokebw2 (B2 US, com os mapas das duas versões) conferida com a Serebii: 405 de 407 times batem (Backpacker Blossom na Route 16 e um grunt do Plasma Frigate só na decomp). `versions` pelas notas "Black 2 Only"/"White 2 Only" da Serebii (Route 4 e Reversal Mountain). 82 treinadores que a decomp não põe em mapa (ginásios e lutas de script) vieram da Serebii com o time da decomp. | pokebw2; serebii.net/pokearth/unova |
-| guias/b2w2/tms | "BP no Battle Subway"; TM13 exige Strength?; TM93 exige Surf e Waterfall? | pokemondb, dittobase |
-| guias/b2w2 (detonado) | Charles bloqueia a ponte até 4 insígnias; Pokéstar Studios; "Relic Passage (completo depois do PWT)"; Zoroark apontando para o N's Castle. | gamerguides, strategywiki |
 
 ### X / Y (`xy`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| bosses/flare-admin-power-plant, flare-admin-factory | Admins genéricos da Team Flare: só o detonado (sem golpes); os times não foram confirmados em nenhuma outra fonte. | notas; serebii.net/xy/teamflare.shtml (só o Lysandre) |
-| guias/xy (detonado) | Korrina em Geosenge em "batalha dupla"; Lucario emprestado; Sycamore "ao sul de Couriway"; revanche em Kiloude "diária"; fósseis Lv 20. | thonky, serebii |
+| guias/xy (detonado) + bosses/korrina-geosenge | Korrina em Geosenge: o guia e o JSON dizem dupla com a Serena/Calem do seu lado; nenhuma fonte diz o formato (a Serebii lista os dois Lucario Lv 25 como luta comum e nenhuma cita o rival). O resto da linha (Lucario da torre, Sycamore ao sul de Couriway, revanche diária em Kiloude, fósseis Lv 20) foi confirmado. | thonky, serebii pokearth, Bulbapedia por busca; gamerguides/supercheats bloqueiam (403) |
 
 ### Omega Ruby / Alpha Sapphire (`oras`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| shiny-methods/dexnav | Nível de busca 999: a Pokestats dá 1/476,49 e a Serebii dá 1/542,37 (faixa 901–999). Também faltam as odds abaixo do nível 100 e o efeito do Amuleto fora dos níveis 100, 200 e 999. O DexNav não segue a conta de rolagens. | pokestats.gg/shiny-hunting-hub/methods/dexnav; serebii.net |
+| shiny-methods/dexnav | Nível de busca 999: a Pokestats dá 1/476,49 e a Serebii dá 1/542,37 (faixa 901–999). Também faltam as odds abaixo do nível 100 e o efeito do Amuleto fora dos níveis 100, 200 e 999. O DexNav não segue a conta de rolagens. | pokestats.gg/shiny-hunting-hub/methods/dexnav; serebii.net; pokebase 372339 (regras da Bulbapedia: 0,06%/rolagem no nível 100, 0,08% no 200, +0,0001%/nível acima; 4% de chance de 4 rolagens extras; sem tabela final) |
 | areas | Rotas juntas das notas (105–108, 129–131, 132–134) separadas; Route 115 e os 11 lugares de Mirage (Mirage Spots, Crescent Isle, Fabled Cave...) acrescentados, todos no nó `mirage-spots`. Team Hideout segue sem location (como o RS na Task 12). | pokeapi.co |
-| guias/oras (detonado) | Momento do inicial de Johto; HMs da Victory Road; Metagrossite na Liga ou no Battle Resort; Trick House "um por insígnia"; Magma/Aqua Suit; Glalitite no Shoal Cave; TM74/84/95 nas Mirage spots; TM60 Quash. | pokebase, gamerguides, serebii |
 
 ### Sun / Moon (`sm`)
 
@@ -184,8 +171,6 @@ outra fonte.
 
 | jogos | item | dúvida | fontes tentadas |
 | --- | --- | --- | --- |
-| dp, pt | shiny-methods/poke_radar_dppt | Corrente 40: 1/200 (Smogon, usado), 1/199,4 (fórmula da Serebii), 1/199,8 e 1/195,07 (Pokestats). | smogon.com/ingame/guides/dpp_pokeradar; serebii.net/games/shiny.shtml; pokestats.gg/shiny-hunting-hub/methods/poke-radar |
-| xy, oras, sm, usum, swsh, sv | ovo sem Masuda com o Amuleto | 1/1365,67 pela Bulbapedia e 1/2048,25 pela Rotom Labs. Hoje não há método de ovo sem Masuda nesses jogos (só no BDSP, egg_bdsp). | bulbapedia (bloqueia acesso automático); rotomlabs.net/shiny-rates |
 | gs, c | bosses (ordem de Kanto) | A ordem dos 8 ginásios de Kanto no pós-jogo é livre; usamos Vermilion, Saffron, Celadon, Fuchsia, Cerulean, Pewter, Seafoam, Viridian. Os times estão confirmados (decompilação). | pret/pokecrystal, pret/pokegold |
 | rb, y, gs, c, rs, e, frlg, dp, pt, hgss, bw, b2w2 | bosses (golpes) | Times "golpes padrão do nível" (rivais do começo, Kimono Girls etc.) ficaram com `moves: []` (o jogo tira os golpes do learnset no nível). Falta derivar os golpes do learnset de cada geração. | decompilações (pret, pokebw2) |
 | dp, pt, hgss | bosses (Battle Tower/Frontier) | Tower Tycoon Palmer e os Frontier Brains (Pt/HGSS) não entraram: os times ficam nos dados da Frontier (vários conjuntos por série, Thorton e Argenta aleatórios). | pret/pokeplatinum res/trainers/frontier |

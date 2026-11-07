@@ -109,7 +109,7 @@ _Ordem da história. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Faça**
 
-- Trick House: um desafio por insígnia, com prêmios.
+- Trick House: desafios novos conforme as insígnias (o último depois da Liga), com prêmios.
 - O Rydel dá uma bicicleta (Mach ou Acro; dá para trocar).
 - O Wally desafia você na porta do ginásio; o tio dele dá a HM06 Rock Smash.
 
@@ -518,7 +518,7 @@ _Ordem da história. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Faça**
 
-- A Victory Road pede Strength, Rock Smash, Surf e Waterfall.
+- A Victory Road pede Surf, Strength e Waterfall (Flash ajuda).
 - O Wally espera na saída com o Mega Gallade.
 
 **Itens**
@@ -665,7 +665,7 @@ _Ordem da história. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 **Itens**
 
 - Blastoisinite, Leftovers, TM63 Embargo (S.S. Tidal).
-- TM87 Swagger, Gengarite, Audinite (Battle Resort); Metagrossite (Steven).
+- TM87 Swagger, Gengarite, Audinite (Battle Resort); Metagrossite (Steven, na Liga, depois da primeira revanche).
 
 **Chefe**
 

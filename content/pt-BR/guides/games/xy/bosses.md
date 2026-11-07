@@ -13,7 +13,7 @@ Todos os chefes da história e do pós-jogo, em ordem. O detonado mostra cada um
 - **Korrina** (Gym Leader, Geosenge Town): Dois Lucario com um parceiro: golpes de Fogo, Lutador e Terra batem forte.
 - **Serena** (Rival, Tower of Mastery, Shalour City): Rival: o Absol é fraco a Lutador e Fada.
 - **Korrina** (Gym Leader, Shalour Gym): Voador e Psíquico vencem o time; o Hawlucha é rápido, ataque-o primeiro.
-- **Korrina** (Gym Leader, Tower of Mastery, Shalour City): Você usa o Lucario emprestado; megaevolua logo no começo.
+- **Korrina** (Gym Leader, Tower of Mastery, Shalour City): Você usa o Lucario que ela acabou de dar; megaevolua logo no começo (sem megaevoluir, a luta recomeça).
 - **Serena** (Rival, Coumarine City): Mesmo time de antes, três níveis acima.
 - **Ramos** (Gym Leader, Coumarine Gym): Fogo, Voador, Gelo ou Venenoso; o Gogoat se cura com Leech Seed.
 - **Team Flare Admin** (Team Flare, Kalos Power Plant): Houndoom: Água, Terra, Pedra ou Lutador.

@@ -38,8 +38,8 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 - Town Map (Barry)
 - Pokétch (Pokétch Company)
 - TM10 Hidden Power (Jubilife)
-- Old Rod (oeste de Jubilife, depois do Pokétch)
-- Quick Claw (Jubilife)
+- Old Rod (Fisherman na portaria oeste de Jubilife, rumo à Route 218)
+- Quick Claw (1º andar dos Condomínios de Jubilife)
 
 **Encontros**
 
@@ -183,9 +183,9 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 
 **Itens**
 
-- Exp. Share (portaria da Route 206, 35 vistos)
+- Exp. Share (assistente do Rowan na portaria da Route 206, 35 vistos)
 - TM26 Earthquake (parte escondida da Wayward Cave)
-- Odd Keystone (Route 208)
+- Odd Keystone (Route 208, Black Belt escondido nas árvores)
 - Poffin Case (Fan Club de Hearthome)
 - TM43 Secret Power e TM45 Attract (Amity Square)
 
@@ -452,7 +452,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 
 **Faça**
 
-- Use a Storage Key no Galactic Warehouse de Veilstone.
+- Um Grunt deixa cair a Storage Key na frente do prédio da Galactic (depois do Lake Acuity); use-a no Galactic Warehouse de Veilstone.
 - Pegue o HM02 Fly no depósito e a Galactic Key.
 - Vença o Cyrus (ele dá a Master Ball) e depois o Saturn para libertar o trio dos lagos.
 

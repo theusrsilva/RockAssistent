@@ -5,7 +5,7 @@
 5. Challenger's Cave (south of Route 9) and the Royal Unova cruise (Castelia).
 6. East Unova: Route 11, Village Bridge, Route 12, Lacunosa Town, Route 13.
 7. Giant Chasm: Kyurem Lv 75.
-8. Undella Town: HM06 Dive, Cynthia (spring and summer), Abyssal Ruins.
+8. Undella Town: HM06 Dive, Cynthia (spring and summer; daily rematch only in spring), Abyssal Ruins.
 9. Route 14 and Abundant Shrine: Landorus (with Tornadus and Thundurus).
 10. Black City or White Forest; Route 15 (PokéTransfer Lab, Ditto for Rotom); Marvelous Bridge (Orbs).
 11. Strong trainers: Bianca (Saturdays), Cheren (Victory Road), Morimoto (Castelia).
