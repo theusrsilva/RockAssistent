@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text;
 using Microsoft.Data.Sqlite;
+using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
 
 namespace TradeRock.Core.Dex;
@@ -379,51 +380,155 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult(new TypeChart(generation, types.Select(t => t.Name).ToList(), factors));
     }
 
+    /// <summary>Disponibilidade só com o PokeAPI. Veja a sobrecarga com os nossos encontros.</summary>
     /// <summary>
-    /// Como conseguir a espécie em cada jogo, na ordem: Encounter (o PokeAPI tem um encontro numa versão do jogo),
-    /// Evolution (evolui de uma espécie que existe no jogo), Egg (melhor esforço: forma base, o jogo tem criação, e
-    /// alguma evolução dela existe no jogo e pode botar ovo), senão None. Gift fica para os nossos dados (Task 8).
+    /// Como conseguir a espécie em cada jogo: o jeito mais forte (Encounter &gt; Gift &gt; Trade &gt; Evolution &gt; Egg)
+    /// entre três fontes: o PokeAPI (encontros; nos jogos com encontros próprios ele não conta), os nossos encontros
+    /// (<paramref name="ownEncounters"/>: BDSP, Arceus, SV e Z-A; <c>gift</c> = Gift, <c>trade</c> = Trade, o resto =
+    /// Encounter) e as tabelas do PKHeX (<see cref="PkhexAvailability"/>; o encontro fixo dele, que não diz se é
+    /// presente, fica abaixo de Gift e Trade e só vira Encounter quando ninguém mais classifica). Sem nenhum deles, valem Evolution (evolui de
+    /// uma espécie que existe no jogo) e Egg (melhor esforço: forma base, o jogo tem criação, e alguma evolução dela
+    /// existe no jogo e pode botar ovo), senão None.
     /// </summary>
-    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId, CancellationToken ct)
+    /// <param name="ownEncounters">Encontros próprios do jogo (<c>GameDataStore.Encounters</c>); nulo = sem eles.</param>
+    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId,
+        Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters, CancellationToken ct) =>
+        Task.FromResult(Availability(speciesId, ownEncounters, pkhex: true, ct));
+
+    /// <param name="pkhex">Usa as tabelas do PKHeX (desligado só na auditoria, para comparar as fontes).</param>
+    internal IReadOnlyList<GameAvailability> Availability(int speciesId, Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters,
+        bool pkhex, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
         var data = Data;
         data.Species.TryGetValue(speciesId, out var row);
-        IReadOnlyList<GameAvailability> result = GameVersions.All.Select(g =>
+        return GameVersions.All.Select(g =>
         {
             var game = data.Game(g.Key);
+            var all = ownEncounters?.Invoke(g.Key) ?? [];
+            // Nos nossos dados, o que só sai com item de evento fica para a segunda passada (com requisito).
+            var own = all.Where(e => OwnRequirement(g.Key, e) is null).ToList();
+            var fromPkhex = pkhex ? PkhexAvailability.ForGame(g.Key) : new Dictionary<int, AvailabilityKind>();
+            var statics = pkhex ? PkhexAvailability.Statics(g.Key) : new HashSet<int>();
+            var In = Presence(game, all, pkhex);
+            if (row is null)
+                return new GameAvailability(g.Key, g.Name, AvailabilityKind.None);
+
             var kind = AvailabilityKind.None;
-            if (row is not null && game.Exists.Contains(speciesId))
+            if (In(speciesId))
             {
-                if (game.Encounters.Contains(speciesId))
+                kind = fromPkhex.GetValueOrDefault(speciesId);
+                if (all.Count == 0 && game.Exists.Contains(speciesId))
+                {
+                    if (game.Encounters.Contains(speciesId))
+                        kind = AvailabilityKind.Encounter;
+                    else if (game.Gifts.Contains(speciesId))
+                        kind = PkhexAvailability.Strongest(kind, AvailabilityKind.Gift);
+                    else if (game.Trades.Contains(speciesId))
+                        kind = PkhexAvailability.Strongest(kind, AvailabilityKind.Trade);
+                }
+                foreach (var e in own.Where(e => e.Species == speciesId))
+                    kind = PkhexAvailability.Strongest(kind, OwnKind(e));
+                if (PkhexAvailability.Strength(kind) < PkhexAvailability.Strength(AvailabilityKind.Trade) && statics.Contains(speciesId))
                     kind = AvailabilityKind.Encounter;
-                else if (row.EvolvesFrom is { } from && game.Exists.Contains(from))
+                if (PkhexAvailability.Strength(kind) < PkhexAvailability.Strength(AvailabilityKind.Evolution)
+                    && row.EvolvesFrom is { } from && In(from))
                     kind = AvailabilityKind.Evolution;
-                else if (row.EvolvesFrom is null && g.Generation >= 2 && !NoBreeding.Contains(g.Key)
-                         && data.Descendants(speciesId).Any(d => game.Exists.Contains(d) && data.Breedable.Contains(d)))
+                else if (kind == AvailabilityKind.None && row.EvolvesFrom is null && g.Generation >= 2 && !NoBreeding.Contains(g.Key)
+                         && data.Descendants(speciesId).Any(d => In(d) && data.Breedable.Contains(d)))
                     kind = AvailabilityKind.Egg;
             }
-            return new GameAvailability(g.Key, g.Name, kind);
+
+            // Segunda passada: sem jeito normal, vale o que precisa do Pokéwalker ou de um item de evento (com aviso).
+            string? requires = null;
+            if (kind == AvailabilityKind.None)
+            {
+                if (Requirement(speciesId) is { } direct)
+                    (kind, requires) = direct;
+                // Evolui de quem só vem com requisito (Pokéwalker, evento): a espécie tem que ser da geração do jogo e a
+                // forma anterior não pode ter jeito normal.
+                else if (row.EvolvesFrom is { } from && row.Generation <= g.Generation && Requirement(from) is { Requires: var tag }
+                         && !NormallyIn(from))
+                    (kind, requires) = (AvailabilityKind.Evolution, tag);
+            }
+
+            var locked = pkhex && kind != AvailabilityKind.None && PkhexAvailability.Shiny(g.Key, speciesId) is { Locked: true }
+                && !CanHatchIn(speciesId, g.Key, ownEncounters);
+            return new GameAvailability(g.Key, g.Name, kind, locked, requires);
+
+            // Tem jeito normal de conseguir (sem requisito) em alguma fonte?
+            bool NormallyIn(int species) =>
+                (all.Count == 0 && (game.Encounters.Contains(species) || game.Gifts.Contains(species) || game.Trades.Contains(species)))
+                || own.Any(e => e.Species == species) || fromPkhex.ContainsKey(species) || statics.Contains(species);
+
+            // Jeito com requisito de uma espécie (PKHeX, PokeAPI e nossos dados); nulo = nenhum.
+            (AvailabilityKind Kind, string Requires)? Requirement(int species)
+            {
+                (AvailabilityKind Kind, string Requires)? best = null;
+                void Offer(AvailabilityKind k, string tag)
+                {
+                    if (best is null || PkhexAvailability.Strength(k) > PkhexAvailability.Strength(best.Value.Kind))
+                        best = (k, tag);
+                }
+                if (pkhex && PkhexAvailability.Required(g.Key).TryGetValue(species, out var p))
+                    Offer(p.Kind, p.Requires);
+                if (all.Count == 0 && game.Events.Contains(species))
+                    Offer(AvailabilityKind.Encounter, Requires.EventItem);
+                foreach (var e in all.Where(e => e.Species == species))
+                    if (OwnRequirement(g.Key, e) is { } tag)
+                        Offer(OwnKind(e), tag);
+                return best;
+            }
         }).ToList();
-        return Task.FromResult(result);
+    }
+
+    private static AvailabilityKind OwnKind(OwnEncounter e) => e.Method switch
+    {
+        "gift" => AvailabilityKind.Gift,
+        "trade" => AvailabilityKind.Trade,
+        _ => AvailabilityKind.Encounter,
+    };
+
+    /// <summary>
+    /// Requisito de um encontro dos nossos dados: no BDSP, Darkrai (Newmoon Island), Shaymin (Flower Paradise) e
+    /// Arceus (Hall of Origin) só com o item do evento; no SV, o Pecharunt só com o item do Mystery Gift (Mochi Mayhem).
+    /// </summary>
+    private static string? OwnRequirement(string gameKey, OwnEncounter e) => (gameKey, e.Area, e.Species) switch
+    {
+        ("bdsp", "newmoon-island" or "flower-paradise" or "hall-of-origin", _) => Requires.EventItem,
+        ("sv", _, 1025) => Requires.EventItem,
+        _ => null,
+    };
+
+    /// <summary>A espécie existe no jogo por alguma fonte: PokeAPI, nossos encontros ou PKHeX.</summary>
+    private static Func<int, bool> Presence(GameInfo game, IReadOnlyList<OwnEncounter> own, bool pkhex)
+    {
+        var ownSpecies = own.Select(e => e.Species).ToHashSet();
+        var fromPkhex = pkhex ? PkhexAvailability.ForGame(game.Key) : new Dictionary<int, AvailabilityKind>();
+        var statics = pkhex ? PkhexAvailability.Statics(game.Key) : new HashSet<int>();
+        var required = pkhex ? PkhexAvailability.Required(game.Key) : new Dictionary<int, (AvailabilityKind, string)>();
+        return s => game.Exists.Contains(s) || ownSpecies.Contains(s) || fromPkhex.ContainsKey(s) || statics.Contains(s)
+                    || required.ContainsKey(s);
     }
 
     /// <summary>
     /// A espécie sai de ovo no jogo (direto ou chocando a forma base e evoluindo)? Melhor esforço, como o Egg de
     /// <see cref="AvailabilityAsync"/>: o jogo tem criação, a espécie existe nele e alguém da família (a partir da
     /// forma base, incluindo ela) existe no jogo e não é do grupo "no-eggs". Lendários sem família ficam de fora.
+    /// "Existe no jogo" é o mesmo da disponibilidade: PokeAPI, nossos encontros ou PKHeX.
     /// </summary>
-    public bool CanHatchIn(int speciesId, string gameKey)
+    /// <param name="ownEncounters">Encontros próprios do jogo (<c>GameDataStore.Encounters</c>); nulo = sem eles.</param>
+    public bool CanHatchIn(int speciesId, string gameKey, Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters = null)
     {
         var data = Data;
         var group = GameVersions.ByKey(gameKey);
-        var game = data.Game(gameKey);
+        var In = Presence(data.Game(gameKey), ownEncounters?.Invoke(gameKey) ?? [], pkhex: true);
         if (group.Generation < 2 || NoBreeding.Contains(gameKey) || !data.Species.TryGetValue(speciesId, out var row)
-            || !game.Exists.Contains(speciesId))
+            || !In(speciesId))
             return false;
         while (row.EvolvesFrom is { } from && data.Species.TryGetValue(from, out var parent))
             row = parent;
-        return data.Descendants(row.Id).Prepend(row.Id).Any(d => game.Exists.Contains(d) && data.Breedable.Contains(d));
+        return data.Descendants(row.Id).Prepend(row.Id).Any(d => In(d) && data.Breedable.Contains(d));
     }
 
     // ---- partes da ficha ----
@@ -789,7 +894,8 @@ public sealed class DexService(DexDatabase db)
         int? National, string[] Search);
 
     private sealed record GameInfo(string Key, int Generation, int MainGroupId, int Order,
-        IReadOnlyList<(int Id, string Identifier)> Versions, HashSet<int> Exists, HashSet<int> Encounters, IReadOnlyList<int> GroupIds)
+        IReadOnlyList<(int Id, string Identifier)> Versions, HashSet<int> Exists, HashSet<int> Encounters, HashSet<int> Gifts,
+        HashSet<int> Trades, HashSet<int> Events, IReadOnlyList<int> GroupIds)
     {
         public string VersionIdList { get; } = string.Join(",", Versions.Select(v => v.Id));
     }
@@ -987,10 +1093,30 @@ public sealed class DexService(DexDatabase db)
 
             // Quem existe em cada grupo de versões (golpes e encontros) e em cada Pokédex regional.
             var byGroup = Pairs(c, "SELECT DISTINCT p.species_id, pm.version_group_id FROM pokemon_moves pm JOIN pokemon p ON p.id = pm.pokemon_id");
-            var encounterByGroup = Pairs(c, """
+            // Encontros que contam para a disponibilidade. Ficam de fora os de outros jogos e aparelhos (bônus do
+            // Colosseum, Pokémon Channel, Pokémon Ranger), a Magearna do código QR e o New Mauville do Sun/Moon, que o
+            // PokeAPI tem errado (é do ORAS). O PKHeX e o Serebii concordam (auditoria em DexAvailabilityAuditTests).
+            const string countable = """
                 SELECT DISTINCT p.species_id, v.version_group_id FROM encounters e
                 JOIN pokemon p ON p.id = e.pokemon_id JOIN versions v ON v.id = e.version_id
-                """);
+                JOIN location_areas a ON a.id = e.location_area_id JOIN locations l ON l.id = a.location_id
+                WHERE e.method NOT IN ('colosseum-bonus-disc-jpn', 'colosseum-bonus-disc-us', 'pokemon-channel-pal', 'pokemon-ranger')
+                  AND NOT (l.identifier = 'new-mauville' AND v.identifier IN ('sun', 'moon'))
+                  AND p.species_id <> 801
+                """;
+            // Lugares abertos só por item de evento (Mystery Gift): contam, mas com o requisito "event_item".
+            const string eventOnly = """
+                (l.identifier IN ('navel-rock', 'birth-island', 'faraway-island', 'newmoon-island', 'flower-paradise',
+                                  'sinnoh-hall-of-origin-1', 'sinnoh-hall-of-origin-2')
+                 OR (l.identifier = 'southern-island' AND v.identifier IN ('ruby', 'sapphire', 'emerald'))
+                 OR (l.identifier = 'kanto-altering-cave' AND p.species_id <> 41))
+                """;
+            // Presentes (gift, gift-egg) e trocas (npc-trade) à parte: viram Gift e Trade, não Encounter.
+            var normal = countable + " AND NOT " + eventOnly;
+            var encounterByGroup = Pairs(c, normal + " AND e.method NOT IN ('gift', 'gift-egg', 'npc-trade')");
+            var giftByGroup = Pairs(c, normal + " AND e.method IN ('gift', 'gift-egg')");
+            var tradeByGroup = Pairs(c, normal + " AND e.method = 'npc-trade'");
+            var eventByGroup = Pairs(c, countable + " AND " + eventOnly);
             var byDex = new Dictionary<string, HashSet<int>>();
             using (var cmd = Command(c, "SELECT d.identifier, n.species_id FROM pokemon_dex_numbers n JOIN pokedexes d ON d.id = n.pokedex_id"))
             using (var r = cmd.ExecuteReader())
@@ -1011,17 +1137,25 @@ public sealed class DexService(DexDatabase db)
                 var gameVersions = groupIds.SelectMany(id => versions.Where(v => v.Group == id))
                     .OrderBy(v => groupIds.IndexOf(v.Group)).ThenBy(v => v.Id).Select(v => (v.Id, v.Identifier)).ToList();
 
-                var encounters = groupIds.SelectMany(id => encounterByGroup.GetValueOrDefault(id) ?? []).ToHashSet();
+                HashSet<int> Union(Dictionary<int, HashSet<int>> pairs) =>
+                    groupIds.SelectMany(id => pairs.GetValueOrDefault(id) ?? []).ToHashSet();
+                var encounters = Union(encounterByGroup);
+                var gifts = Union(giftByGroup);
+                var trades = Union(tradeByGroup);
+                var events = Union(eventByGroup);
                 var exists = groupIds.SelectMany(id => byGroup.GetValueOrDefault(id) ?? [])
-                    .Concat(encounters)
+                    .Concat(encounters).Concat(gifts).Concat(trades)
                     .Concat(RegionalDexes[g.Key].SelectMany(d => byDex.TryGetValue(d, out var set)
                         ? set
                         : throw new InvalidOperationException($"Pokédex ausente no dex.sqlite: {d}")))
                     .Where(id => species.TryGetValue(id, out var s) && s.Generation <= g.Generation)
                     .ToHashSet();
                 encounters.IntersectWith(exists);
+                gifts.IntersectWith(exists);
+                trades.IntersectWith(exists);
+                events.IntersectWith(exists);
                 games[g.Key] = new GameInfo(g.Key, g.Generation, groupIds[0], groups[g.PokeApiVersionGroup].Order, gameVersions,
-                    exists, encounters, groupIds);
+                    exists, encounters, gifts, trades, events, groupIds);
             }
 
             var breedable = new HashSet<int>();

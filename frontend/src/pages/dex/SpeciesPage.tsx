@@ -65,7 +65,8 @@ export default function SpeciesPage() {
     )
 
   const detail = species.data
-  const kind = availability.data?.find((a) => a.gameKey === game)?.kind
+  const gameAvailability = availability.data?.find((a) => a.gameKey === game)
+  const kind = gameAvailability?.kind
   const defaultForm = detail?.forms.find((f) => f.isDefault) ?? detail?.forms[0]
   const form = detail?.forms.find((f) => f.id === formId) ?? defaultForm
   const types = form?.types ?? detail?.types
@@ -103,13 +104,15 @@ export default function SpeciesPage() {
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-start">
             {types && <TypeList types={types} />}
             {kind && <Badge tone={kind === 'none' ? 'slate' : 'emerald'}>{t(`dex.availability.${kind}`)}</Badge>}
+            {gameAvailability?.requires && <Badge tone="amber">{t(`dex.requires.${gameAvailability.requires}`)}</Badge>}
+            {gameAvailability?.shinyLocked && <Badge tone="amber">{t('dex.shinyLocked')}</Badge>}
           </div>
         </div>
         <GameSelector value={game} onChange={chooseGame} availability={availability.data} />
       </div>
 
       {detail && detail.forms.length > 1 && (
-        <div className="-mt-1 flex gap-1 overflow-x-auto pb-1" role="tablist" aria-label={t('dex.sprite.forms')}>
+        <div className="-mt-1 flex gap-1 scroll-x pb-1" role="tablist" aria-label={t('dex.sprite.forms')}>
           {detail.forms.map((f) => (
             <button
               key={f.id}
@@ -133,7 +136,7 @@ export default function SpeciesPage() {
         </div>
       )}
 
-      <div className="-mx-1 flex gap-1 overflow-x-auto border-b border-line px-1" role="tablist">
+      <div className="-mx-1 flex gap-1 scroll-x border-b border-line px-1" role="tablist">
         {tabs.map((tb) => (
           <button
             key={tb}

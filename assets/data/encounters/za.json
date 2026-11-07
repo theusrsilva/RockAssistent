@@ -1,8 +1,9 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/lumiosecity/ (Wild Zones 1-20, distritos, esgotos, Lysandre Labs; níveis e Alphas)",
+    "https://www.serebii.net/legendsz-a/legendary.shtml (Xerneas, Yveltal, Zygarde, Diancie e Mewtwo: local e nível)",
     "docs/superpowers/sources/za-pokemythology-notes.md (espécies por Wild Zone, dia/noite, cidade, raros por setor e lendários)",
-    "Distritos = method city (a Serebii agrupa os setores por distrito). Alpha = Alpha garantido; os outros Alphas (5%) não entram. verified = a espécie também está nas notas para a área.",
+    "Distritos = method city (a Serebii agrupa os setores por distrito). Alpha = Alpha garantido; os outros Alphas (5%) não entram. Em 07/11/2026 todas as linhas foram conferidas nas páginas de área da Serebii (espécie, forma, níveis e Alpha garantido).",
     "https://www.serebii.net/legendsz-a/giftpokemon.shtml (presentes)",
     "https://www.serebii.net/legendsz-a/ingametrades.shtml (trocas)",
     "https://gmtreks.com/pokemon-z-a/main-missions/36 (Alpha Aegislash lv 50 no Lysandre Labs)",
@@ -55,7 +56,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -85,7 +86,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -100,7 +101,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -130,7 +131,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -175,7 +176,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -190,7 +191,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -205,7 +206,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -250,7 +251,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -280,7 +281,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -295,7 +296,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -325,7 +326,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -400,7 +401,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -415,7 +416,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -535,7 +536,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -550,7 +551,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -625,7 +626,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -640,7 +641,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -670,7 +671,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -685,7 +686,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -775,7 +776,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -790,7 +791,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -805,7 +806,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -820,7 +821,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -835,7 +836,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -865,7 +866,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -880,7 +881,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -895,7 +896,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -955,7 +956,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -970,7 +971,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vert-district",
@@ -1345,7 +1346,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1375,7 +1376,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1390,7 +1391,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1420,7 +1421,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1450,7 +1451,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1465,7 +1466,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1480,7 +1481,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1495,7 +1496,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1540,7 +1541,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1570,7 +1571,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1585,7 +1586,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1615,7 +1616,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1690,7 +1691,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1705,7 +1706,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1840,7 +1841,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1870,7 +1871,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1915,7 +1916,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1930,7 +1931,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1960,7 +1961,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -1975,7 +1976,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2065,7 +2066,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2080,7 +2081,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2095,7 +2096,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2110,7 +2111,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2125,7 +2126,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2185,7 +2186,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2245,7 +2246,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2260,7 +2261,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bleu-district",
@@ -2365,7 +2366,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2395,7 +2396,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2410,7 +2411,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2440,7 +2441,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2485,7 +2486,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2500,7 +2501,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2515,7 +2516,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2560,7 +2561,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2590,7 +2591,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2605,7 +2606,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2635,7 +2636,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2710,7 +2711,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2725,7 +2726,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2845,7 +2846,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2920,7 +2921,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2935,7 +2936,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2965,7 +2966,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -2980,7 +2981,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3070,7 +3071,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3085,7 +3086,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3100,7 +3101,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3115,7 +3116,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3130,7 +3131,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3190,7 +3191,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3250,7 +3251,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3265,7 +3266,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3340,7 +3341,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3865,7 +3866,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-5",
@@ -3910,7 +3911,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-5",
@@ -3925,7 +3926,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-5",
@@ -3940,7 +3941,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-5",
@@ -4165,7 +4166,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4195,7 +4196,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4210,7 +4211,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4270,7 +4271,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4285,7 +4286,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4300,7 +4301,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4315,7 +4316,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4360,7 +4361,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4390,7 +4391,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4405,7 +4406,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4435,7 +4436,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4510,7 +4511,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4525,7 +4526,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4645,7 +4646,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4660,7 +4661,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4735,7 +4736,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4750,7 +4751,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4780,7 +4781,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4795,7 +4796,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4885,7 +4886,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4900,7 +4901,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4915,7 +4916,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4930,7 +4931,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -4945,7 +4946,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -5005,7 +5006,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -5065,7 +5066,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -5080,7 +5081,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "magenta-district",
@@ -5119,6 +5120,21 @@
       "method": "gift",
       "min_level": 14,
       "max_level": 14,
+      "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "legends-za"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "magenta-district",
+      "species": 719,
+      "form": 0,
+      "method": "fixed",
+      "min_level": 70,
+      "max_level": 70,
       "chance": "fixed",
       "conditions": null,
       "versions": [
@@ -5200,7 +5216,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5230,7 +5246,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5245,7 +5261,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5305,7 +5321,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5320,7 +5336,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5335,7 +5351,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5380,7 +5396,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5410,7 +5426,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5425,7 +5441,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5455,7 +5471,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5485,7 +5501,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5530,7 +5546,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5545,7 +5561,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5575,7 +5591,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5650,7 +5666,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5665,7 +5681,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5695,7 +5711,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5710,7 +5726,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5755,7 +5771,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5770,7 +5786,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5800,7 +5816,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5815,7 +5831,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5905,7 +5921,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5920,7 +5936,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5935,7 +5951,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5950,7 +5966,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5965,7 +5981,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -5995,7 +6011,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6010,7 +6026,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6025,7 +6041,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6085,7 +6101,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6100,7 +6116,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6115,7 +6131,7 @@
         "legends-za"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6130,7 +6146,7 @@
         "legends-za"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jaune-district",
@@ -6250,7 +6266,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-7",
@@ -6835,7 +6851,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-11",
@@ -7450,7 +7466,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sewers-canal-access",
@@ -7750,7 +7766,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-15",
@@ -7825,7 +7841,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-15",
@@ -8440,7 +8456,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lysandre-labs",

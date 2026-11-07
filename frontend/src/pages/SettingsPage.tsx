@@ -71,7 +71,7 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col gap-[18px]">
       <h1 className="font-display text-[23px] font-bold md:text-[28px]">{t('settings.title')}</h1>
-      <div className="flex gap-1 overflow-x-auto border-b border-line" role="tablist">
+      <div className="flex gap-1 scroll-x border-b border-line" role="tablist">
         {tabs.map((x) => (
           <button
             key={x.key}

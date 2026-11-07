@@ -42,8 +42,13 @@ public sealed record HuntChanges(int? Count, IReadOnlyDictionary<string, string>
 /// <summary>Método de shiny que vale para a espécie num jogo (modificadores só os do jogo).</summary>
 public sealed record HuntMethodOption(string Id, string Name, string NameEn, double BaseOdds, IReadOnlyList<ShinyModifier> Modifiers);
 
-/// <summary>Jogo em que dá para caçar a espécie: como se obtém (<c>encounter</c>, <c>gift</c>, <c>egg</c>, <c>evolution</c>) e os métodos.</summary>
-public sealed record HuntGame(string GameKey, string Name, IReadOnlyList<string> Kinds, IReadOnlyList<HuntMethodOption> Methods);
+/// <summary>
+/// Jogo em que dá para caçar a espécie: como se obtém (<c>encounter</c>, <c>static</c> = só encontro fixo, <c>gift</c>,
+/// <c>egg</c>, <c>evolution</c>) e os métodos.
+/// </summary>
+/// <param name="Requires">Nulo, ou o requisito de todo jeito de conseguir a espécie no jogo (<see cref="Dex.Requires"/>).</param>
+public sealed record HuntGame(string GameKey, string Name, IReadOnlyList<string> Kinds, IReadOnlyList<HuntMethodOption> Methods,
+    string? Requires = null);
 
 /// <summary>
 /// Hunts de shiny (Contador Hunt), por conta como o cofre. Guarda a escolha (espécie, jogo, método e modificadores),
@@ -96,6 +101,8 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
         if (body.Form < 0)
             throw new HuntException("invalid_form");
         var method = Method(body.GameKey, body.MethodId);
+        if (IsShinyLocked(body.Species, body.GameKey))
+            throw new HuntException("shiny_locked");
         var modifiers = Normalize(method, body.GameKey, body.Modifiers);
         var hunt = new ShinyHunt
         {
@@ -184,12 +191,13 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
     {
         if (species is < 1 or > MaxSpecies)
             throw new HuntException("invalid_species");
-        var availability = await dex.AvailabilityAsync(species, ct);
+        var availability = await dex.AvailabilityAsync(species, data.Encounters, ct);
         var result = new List<HuntGame>();
         foreach (var game in GameVersions.All)
         {
             var kinds = new HashSet<string>();
-            switch (availability.FirstOrDefault(a => a.GameKey == game.Key)?.Kind)
+            var available = availability.FirstOrDefault(a => a.GameKey == game.Key);
+            switch (available?.Kind)
             {
                 case AvailabilityKind.Encounter: kinds.Add("encounter"); break;
                 case AvailabilityKind.Evolution: kinds.Add("evolution"); break;
@@ -205,8 +213,9 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
                     kinds.Add("encounter");
             }
             // A Pokédex só marca "egg" quando não há encontro nem evolução; aqui vale saber se dá para chocar.
-            if (dex.CanHatchIn(species, game.Key))
+            if (dex.CanHatchIn(species, game.Key, data.Encounters))
                 kinds.Add("egg");
+            ApplyShinyLocks(kinds, PkhexAvailability.Shiny(game.Key, species));
             if (kinds.Count == 0)
                 continue;
 
@@ -215,11 +224,33 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
                 .Select(m => new HuntMethodOption(m.Id, m.Name, m.NameEn, m.BaseOdds,
                     m.Modifiers.Where(x => x.Games is null || x.Games.Contains(game.Key)).ToList()))
                 .ToList();
-            string[] order = ["encounter", "gift", "egg", "evolution"];
-            result.Add(new HuntGame(game.Key, game.Name, order.Where(kinds.Contains).ToList(), methods));
+            string[] order = ["encounter", "static", "gift", "egg", "evolution"];
+            result.Add(new HuntGame(game.Key, game.Name, order.Where(kinds.Contains).ToList(), methods, available?.Requires));
         }
         return result;
     }
+
+    /// <summary>
+    /// Travas de shiny (tabelas do PKHeX): quando o PKHeX conhece os encontros da espécie no jogo, só ficam os jeitos
+    /// em que ela pode sair shiny. Sem encontro selvagem destravado, "encounter" vira "static" (só chance normal ou
+    /// soft reset, sem métodos de campo); sem fixo nem selvagem destravado, sai "gift"; sem forma anterior destravada,
+    /// sai "evolution" (o ovo, quando dá para chocar, continua). Lista vazia = jogo travado.
+    /// </summary>
+    internal static void ApplyShinyLocks(HashSet<string> kinds, ShinyInfo? shiny)
+    {
+        if (shiny is null)
+            return;
+        if (!shiny.Wild && kinds.Remove("encounter") && shiny.Fixed)
+            kinds.Add("static");
+        if (!shiny.Wild && !shiny.Fixed)
+            kinds.Remove("gift");
+        if (!shiny.Evolution)
+            kinds.Remove("evolution");
+    }
+
+    /// <summary>A espécie só aparece travada para shiny no jogo (nem ovo)? Veja <see cref="ApplyShinyLocks"/>.</summary>
+    public bool IsShinyLocked(int species, string gameKey) =>
+        PkhexAvailability.Shiny(gameKey, species) is { Locked: true } && !dex.CanHatchIn(species, gameKey, data.Encounters);
 
     private static bool Fits(string methodId, int species, HashSet<string> kinds)
     {

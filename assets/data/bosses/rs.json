@@ -31,8 +31,58 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Treecko 5; com Treecko: Torchic 5; se você joga com a May, o rival é o Brendan, com o mesmo time",
-      "versions": null
+      "notes": "golpes padrão do nível; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 255,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 258,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 252,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "roxanne",
@@ -159,8 +209,112 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Wailmer 18, Numel 18, Grovyle 20; com Treecko: Wailmer 18, Shroomish 18, Combusken 20; se você joga com a May, o rival é o Brendan, com o mesmo time",
-      "versions": null
+      "notes": "golpes padrão do nível; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 320,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 256,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 285,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 322,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 259,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 320,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 322,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 253,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "wally-mauville",
@@ -642,8 +796,112 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Numel 29, Wailmer 29, Grovyle 31; com Treecko: Wailmer 29, Shroomish 29, Combusken 31; se você joga com a May, o rival é o Brendan, com o mesmo time",
-      "versions": null
+      "notes": "golpes padrão do nível; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 320,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 256,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 285,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 322,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 259,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 322,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 320,
+              "form": 0,
+              "level": 29,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 253,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "winona",
@@ -764,8 +1022,139 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Torchic; com Mudkip: Swellow 31, Numel 32, Wailmer 32, Grovyle 34; com Treecko: Swellow 31, Wailmer 32, Shroomish 32, Combusken 34; se você joga com a May, o rival é o Brendan, com o mesmo time",
-      "versions": null
+      "notes": "golpes padrão do nível; se você joga com a May, o rival é o Brendan, com o mesmo time",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 320,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 256,
+              "form": 0,
+              "level": 34,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 34,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 322,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 259,
+              "form": 0,
+              "level": 34,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 34,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 31,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 322,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 320,
+              "form": 0,
+              "level": 32,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 253,
+              "form": 0,
+              "level": 34,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 34,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "tabitha-hideout",

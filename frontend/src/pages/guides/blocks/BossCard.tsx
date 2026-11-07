@@ -4,6 +4,8 @@ import { useApiGet } from '../../../lib/dex'
 import type { BossBattle } from '../../nuzlocke/nuzlocke'
 import { BattlePokemon } from '../../nuzlocke/parts'
 import { useSpeciesNames } from './BossTable'
+import { BossVariantTabs, bossVariant } from './BossVariants'
+import { useGuideStarter, useGuideStarters } from './guideStarter'
 import { BlockState, versionLabel, type BlockProps } from './common'
 
 /** :::boss <jogo> <id> — um chefe: time com sprites, níveis, golpes, habilidade e item. */
@@ -21,31 +23,42 @@ export default function BossCard({ args: [game, id] }: BlockProps) {
               {t('guides.block.empty')}
             </Callout>
           )
-        return (
-          <div className="my-3 flex flex-col gap-2 rounded-lg border border-line bg-surface p-3">
-            <div className="flex flex-wrap items-start gap-2">
-              <div className="min-w-0 flex-1">
-                <div className="font-bold">{boss.name}</div>
-                <div className="text-[12.5px] text-muted">{[boss.title, boss.location].filter(Boolean).join(' · ')}</div>
-                <div className="mt-1 flex flex-wrap gap-1">
-                  {boss.badge && <Badge tone="amber" icon="military_tech">{boss.badge}</Badge>}
-                  {boss.versions && <Badge>{boss.versions.map((v) => versionLabel(game, v)).join(' / ')}</Badge>}
-                  {!boss.verified && <Badge>{t('guides.block.notVerified')}</Badge>}
-                </div>
-              </div>
-              <div className="rounded-lg bg-accent-soft px-3 py-1.5 text-center">
-                <div className="text-[11px] font-bold tracking-wide text-muted uppercase">{t('guides.col.cap')}</div>
-                <div className="font-display text-xl leading-none font-bold tabular-nums">{boss.levelCap}</div>
-              </div>
-            </div>
-            <div className="grid gap-1.5 sm:grid-cols-2">
-              {boss.party.map((p, i) => (
-                <BattlePokemon key={i} p={p} names={names} />
-              ))}
-            </div>
-          </div>
-        )
+        return <Boss game={game} boss={boss} names={names} />
       }}
     </BlockState>
+  )
+}
+
+/** O cartão; com variantes por inicial, abas "Se você escolheu X" em cima do time (o cap acompanha). */
+function Boss({ game, boss, names }: { game: string; boss: BossBattle; names: Map<number, string> }) {
+  const { t } = useTranslation()
+  // A escolha vale para o guia todo do jogo (tabela e outros cartões); a lista de iniciais é pedida uma vez.
+  const [chosen, setStarter] = useGuideStarter(game)
+  const starters = useGuideStarters(game, !!boss.variants?.length)
+  const { starter, team } = bossVariant(boss, chosen)
+  return (
+    <div className="my-3 flex flex-col gap-2 rounded-lg border border-line bg-surface p-3">
+      <div className="flex flex-wrap items-start gap-2">
+        <div className="min-w-0 flex-1">
+          <div className="font-bold">{boss.name}</div>
+          <div className="text-[12.5px] text-muted">{[boss.title, boss.location].filter(Boolean).join(' · ')}</div>
+          <div className="mt-1 flex flex-wrap gap-1">
+            {boss.badge && <Badge tone="amber" icon="military_tech">{boss.badge}</Badge>}
+            {boss.versions && <Badge>{boss.versions.map((v) => versionLabel(game, v)).join(' / ')}</Badge>}
+            {!team.verified && <Badge>{t('guides.block.notVerified')}</Badge>}
+          </div>
+        </div>
+        <div className="rounded-lg bg-accent-soft px-3 py-1.5 text-center">
+          <div className="text-[11px] font-bold tracking-wide text-muted uppercase">{t('guides.col.cap')}</div>
+          <div className="font-display text-xl leading-none font-bold tabular-nums">{team.levelCap}</div>
+        </div>
+      </div>
+      <BossVariantTabs boss={boss} starters={starters} names={names} value={starter} onChange={setStarter} />
+      <div className="grid gap-1.5 sm:grid-cols-2">
+        {team.party.map((p, i) => (
+          <BattlePokemon key={i} p={p} names={names} />
+        ))}
+      </div>
+    </div>
   )
 }

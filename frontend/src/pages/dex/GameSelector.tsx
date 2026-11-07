@@ -17,7 +17,8 @@ export function GameSelector({
   availability?: GameAvailability[] | null
 }) {
   const { t } = useTranslation()
-  const kindOf = (key: string) => availability?.find((a) => a.gameKey === key)?.kind
+  const entry = (key: string) => availability?.find((a) => a.gameKey === key)
+  const kindOf = (key: string) => entry(key)?.kind
   return (
     <select
       aria-label={t('dex.game.label')}
@@ -29,9 +30,11 @@ export function GameSelector({
         <optgroup key={generation} label={t('dex.generation', { n: generation })}>
           {games.map((g) => {
             const none = kindOf(g.key) === 'none'
+            const requires = entry(g.key)?.requires
+            const note = none ? t('dex.game.unavailable') : requires ? t(`dex.requires.${requires}`) : null
             return (
               <option key={g.key} value={g.key} className={none ? 'text-muted' : ''}>
-                {none ? `${g.name} (${t('dex.game.unavailable')})` : g.name}
+                {note ? `${g.name} (${note})` : g.name}
               </option>
             )
           })}

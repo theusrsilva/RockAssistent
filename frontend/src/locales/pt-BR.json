@@ -1044,7 +1044,7 @@
   },
   "login": {
     "title": "Entrar no RockAssistent",
-    "intro": "Este RockAssistent está aberto na rede da casa. Entre com a sua conta para ver o seu cofre e trocar.",
+    "intro": "Assistente offline para os jogos principais de Pokémon: Pokédex, guias de todos os jogos, Boxes com os seus saves, Contador Hunt, Nuzlocke e VGC. Também troca Pokémon com o seu Switch pelo wireless local (o PC ou um ESP32 faz o papel de outro console).",
     "username": "Nome de usuário",
     "password": "Senha",
     "submit": "Entrar",
@@ -1482,7 +1482,7 @@
       "keysTitle": "Suas chaves ficam com você",
       "keysSub": "Nunca baixa, mostra ou envia o prod.keys.",
       "offlineTitle": "Sem telemetria",
-      "offlineSub": "Só consulta o GitHub para achar versões novas, e dá para desligar.",
+      "offlineSub": "Só consulta o GitHub para achar versões novas (dá para desligar). Smogon e pokepast.es só se você ligar nas Configurações; nada do seu PC é enviado.",
       "freeTitle": "Software livre",
       "freeSub": "AGPL-3.0: use, estude e modifique.",
       "license": "Licença, código-fonte e marcas",
@@ -1753,8 +1753,14 @@
       "evolution": "Por evolução",
       "egg": "Por ovo",
       "gift": "Presente",
+      "trade": "Troca no jogo",
       "none": "Não dá para pegar"
     },
+    "requires": {
+      "pokewalker": "Precisa do Pokéwalker",
+      "event_item": "Precisa de um item de evento (Mystery Gift)"
+    },
+    "shinyLocked": "Shiny travado neste jogo",
     "notInGame": "Este Pokémon não existe em {{game}}. Os dados gerais aparecem mesmo assim; golpes, locais e textos ficam vazios.",
     "flavorFrom": "Este jogo não tem texto da Pokédex para este Pokémon; este é o de {{game}}.",
     "tabs": {
@@ -1867,9 +1873,35 @@
       "seaweed": "Algas no fundo do mar",
       "berry-trees": "Árvores de frutas",
       "wanderer": "Andando pelo mapa",
-      "wanderer-water": "Andando na água"
+      "wanderer-water": "Andando na água",
+      "fish": "Pescando",
+      "tree": "Em árvores",
+      "city": "Na cidade",
+      "dexnav": "DexNav",
+      "max_raid": "Max Raid",
+      "tera_raid": "Tera Raid",
+      "honey": "Árvore de mel",
+      "radar": "Poké Radar",
+      "roaming": "Andarilho",
+      "rock_smash": "Quebrando pedras",
+      "cave": "Caverna",
+      "outbreak": "Surto em massa",
+      "raid": "Raid",
+      "fixed": "Encontro fixo",
+      "trade": "Troca com personagem"
     },
     "condition": {
+      "morning": "de manhã",
+      "day": "de dia",
+      "evening": "à tarde",
+      "night": "à noite",
+      "alpha": "Alfa",
+      "national_dex": "com a Pokédex Nacional",
+      "space_time_distortion": "em distorção espaço-temporal",
+      "old_rod": "Vara Velha",
+      "good_rod": "Vara Boa",
+      "super_rod": "Super Vara",
+      "rare_spawn": "aparição rara",
       "time-morning": "de manhã",
       "time-day": "de dia",
       "time-night": "à noite",
@@ -2015,6 +2047,11 @@
     "notFoundHint": "Talvez o endereço esteja errado ou o guia tenha mudado de lugar.",
     "backToGuides": "Ver todos os guias",
     "pageError": "Não deu para abrir esta página do guia.",
+    "encounters": {
+      "total_one": "{{count}} Pokémon",
+      "total_other": "{{count}} Pokémon",
+      "showAll": "Ver todos os encontros ({{count}})"
+    },
     "block": {
       "error": "Não deu para carregar estes dados.",
       "empty": "Sem dados para mostrar aqui.",
@@ -2022,6 +2059,7 @@
       "unknownHint": "Confira o nome da diretiva no guia.",
       "notVerified": "não conferido",
       "allVersions": "Todas",
+      "ifYouChose": "Se você escolheu {{name}}",
       "level": "Nv. {{level}}",
       "levels": "Nv. {{min}}–{{max}}",
       "alpha": "Alfa",
@@ -2276,6 +2314,15 @@
       "versionHelp": "Os chefes e os encontros mudam de uma versão para a outra.",
       "start": "Começar a run"
     },
+    "starter": {
+      "label": "Seu inicial",
+      "help": "Opcional, mas recomendado: o time do rival muda conforme o inicial que você escolheu.",
+      "none": "Não sei",
+      "yours": "Inicial: {{name}}",
+      "unknown": "Inicial não informado",
+      "change": "Trocar",
+      "bossHint": "O time deste chefe muda conforme o seu inicial. Informe o inicial no topo da run para ver o time certo."
+    },
     "run": {
       "pause": "Pausar",
       "resume": "Continuar",
@@ -2408,6 +2455,7 @@
     "errors": {
       "unknown_game": "Jogo desconhecido.",
       "unknown_version": "Esta versão não é deste jogo.",
+      "invalid_starter": "Este Pokémon não é um dos iniciais deste jogo.",
       "version_required": "Escolha a versão do jogo.",
       "unknown_area": "Área desconhecida neste jogo.",
       "unknown_boss": "Este chefe não é desta versão.",
@@ -2470,6 +2518,7 @@
       "start": "Começar a hunt",
       "kinds": {
         "encounter": "encontro",
+        "static": "encontro fixo",
         "gift": "presente",
         "egg": "ovo",
         "evolution": "evolução"
@@ -2506,6 +2555,7 @@
     "errors": {
       "unknown_game": "Jogo desconhecido.",
       "unknown_method": "Método desconhecido.",
+      "shiny_locked": "Este Pokémon nunca sai shiny neste jogo (todos os encontros são travados).",
       "method_not_in_game": "Este método não existe neste jogo.",
       "invalid_species": "Pokémon inválido.",
       "invalid_form": "Forma inválida.",

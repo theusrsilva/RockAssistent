@@ -23,6 +23,9 @@ internal static class Program
         var logger = app.Services.GetRequiredService<ILoggerFactory>().CreateLogger("TradeRock");
 
         app.StartAsync().GetAwaiter().GetResult();
+        // A disponibilidade da Pokédex pelo PKHeX leva uns segundos para calcular: começa já, em segundo plano.
+        TradeRock.Core.Dex.PkhexAvailability.Logger = logger;
+        TradeRock.Core.Dex.PkhexAvailability.Warm();
 
         if (options.NoWindow)
         {

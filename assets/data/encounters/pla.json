@@ -4,7 +4,7 @@
     "https://pokemondb.net/location (2ª fonte: Hisui) e docs/superpowers/sources/pla-pokemythology-notes.md",
     "https://www.serebii.net/legendsarceus/legendary.shtml",
     "https://pokemondb.net/location/hisui-celestica-ruins",
-    "Distorção do espaço-tempo = walk com conditions space_time_distortion. Chance pela maior porcentagem do Serebii (>= 20% common, >= 5% uncommon). verified = a espécie também aparece na área no pokemondb ou nas notas."
+    "Distorção do espaço-tempo = walk com conditions space_time_distortion. Chance pela maior porcentagem do Serebii (>= 20% common, >= 5% uncommon). verified = a espécie também aparece na área no pokemondb ou nas notas. Em 07/11/2026 as linhas que faltavam conferir (distorções, minérios, Mass Outbreaks, Alphas e sub-áreas) foram conferidas uma a uma na página da área da Serebii (espécie, forma, método, nível e Alpha)."
   ],
   "items": [
     {
@@ -65,7 +65,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jubilife-village",
@@ -80,7 +80,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "jubilife-village",
@@ -95,7 +95,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aspiration-hill",
@@ -365,7 +365,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -380,7 +380,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -395,7 +395,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -410,7 +410,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -455,7 +455,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -470,7 +470,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -485,7 +485,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -515,7 +515,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -635,7 +635,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -650,7 +650,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -665,7 +665,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -680,7 +680,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -695,7 +695,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -725,7 +725,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -740,7 +740,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -755,7 +755,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -770,7 +770,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -815,7 +815,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -830,7 +830,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -845,7 +845,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -875,7 +875,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -890,7 +890,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -995,7 +995,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -1010,7 +1010,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -1025,7 +1025,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -1040,7 +1040,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "horseshoe-plains",
@@ -1055,7 +1055,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaro-gardens",
@@ -1430,7 +1430,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-path",
@@ -1445,7 +1445,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-path",
@@ -1535,7 +1535,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-path",
@@ -1565,7 +1565,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-path",
@@ -1790,7 +1790,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1820,7 +1820,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1835,7 +1835,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1850,7 +1850,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1865,7 +1865,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1880,7 +1880,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1895,7 +1895,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1910,7 +1910,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1925,7 +1925,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -1955,7 +1955,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2045,7 +2045,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2060,7 +2060,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2075,7 +2075,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2090,7 +2090,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2105,7 +2105,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2135,7 +2135,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2165,7 +2165,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2180,7 +2180,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2195,7 +2195,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2210,7 +2210,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2225,7 +2225,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2240,7 +2240,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2255,7 +2255,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2270,7 +2270,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2300,7 +2300,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2390,7 +2390,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2405,7 +2405,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2420,7 +2420,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2435,7 +2435,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -2450,7 +2450,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2570,7 +2570,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2630,7 +2630,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2720,7 +2720,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2780,7 +2780,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "natures-pantry",
@@ -2930,7 +2930,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -2945,7 +2945,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3020,7 +3020,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3035,7 +3035,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3050,7 +3050,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3065,7 +3065,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3125,7 +3125,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3140,7 +3140,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3215,7 +3215,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3230,7 +3230,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3245,7 +3245,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3260,7 +3260,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deertrack-heights",
@@ -3365,7 +3365,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "worn-bridge",
@@ -3380,7 +3380,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "worn-bridge",
@@ -3560,7 +3560,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "grueling-grove",
@@ -3875,7 +3875,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "the-heartwood",
@@ -3935,7 +3935,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "the-heartwood",
@@ -3965,7 +3965,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "the-heartwood",
@@ -3980,7 +3980,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "the-heartwood",
@@ -4340,7 +4340,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4370,7 +4370,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4385,7 +4385,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4445,7 +4445,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4460,7 +4460,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4475,7 +4475,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4580,7 +4580,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4595,7 +4595,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4610,7 +4610,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4640,7 +4640,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4655,7 +4655,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4760,7 +4760,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4775,7 +4775,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tidewater-dam",
@@ -4790,7 +4790,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "obsidian-falls",
@@ -4835,7 +4835,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "obsidian-falls",
@@ -4850,7 +4850,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "obsidian-falls",
@@ -4880,7 +4880,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -4955,7 +4955,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -4970,7 +4970,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5000,7 +5000,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5015,7 +5015,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5090,7 +5090,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5105,7 +5105,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5120,7 +5120,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5135,7 +5135,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5150,7 +5150,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5165,7 +5165,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5195,7 +5195,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5210,7 +5210,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -5225,7 +5225,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5465,7 +5465,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5480,7 +5480,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5495,7 +5495,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5510,7 +5510,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5540,7 +5540,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5555,7 +5555,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5570,7 +5570,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5585,7 +5585,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5735,7 +5735,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5750,7 +5750,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5765,7 +5765,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5780,7 +5780,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5795,7 +5795,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5840,7 +5840,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5855,7 +5855,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5870,7 +5870,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5885,7 +5885,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5915,7 +5915,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5930,7 +5930,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5945,7 +5945,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -5960,7 +5960,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -6110,7 +6110,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -6125,7 +6125,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -6140,7 +6140,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -6155,7 +6155,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sandgem-flats",
@@ -6170,7 +6170,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-island",
@@ -7040,7 +7040,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "golden-lowlands",
@@ -7325,7 +7325,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-slope",
@@ -7385,7 +7385,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-slope",
@@ -7715,7 +7715,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -7775,7 +7775,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8090,7 +8090,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8105,7 +8105,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8120,7 +8120,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8135,7 +8135,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8150,7 +8150,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8165,7 +8165,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8180,7 +8180,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8210,7 +8210,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8225,7 +8225,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8240,7 +8240,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8360,7 +8360,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8375,7 +8375,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8420,7 +8420,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8435,7 +8435,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8450,7 +8450,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8510,7 +8510,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8645,7 +8645,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8660,7 +8660,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8675,7 +8675,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8690,7 +8690,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8705,7 +8705,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8720,7 +8720,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8735,7 +8735,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8765,7 +8765,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8780,7 +8780,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8795,7 +8795,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8915,7 +8915,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8930,7 +8930,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8975,7 +8975,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -8990,7 +8990,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -9005,7 +9005,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "gapejaw-bog",
@@ -9050,7 +9050,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "scarlet-bog",
@@ -9215,7 +9215,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "scarlet-bog",
@@ -9500,7 +9500,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9530,7 +9530,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9545,7 +9545,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9560,7 +9560,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9575,7 +9575,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ursas-ring",
@@ -9980,7 +9980,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -9995,7 +9995,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10010,7 +10010,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10025,7 +10025,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10190,7 +10190,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10205,7 +10205,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10220,7 +10220,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10235,7 +10235,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10250,7 +10250,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10265,7 +10265,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10280,7 +10280,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10295,7 +10295,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10310,7 +10310,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10325,7 +10325,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10340,7 +10340,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10355,7 +10355,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10370,7 +10370,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10385,7 +10385,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10400,7 +10400,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10460,7 +10460,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10610,7 +10610,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10625,7 +10625,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10640,7 +10640,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10655,7 +10655,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10670,7 +10670,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10685,7 +10685,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10700,7 +10700,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10715,7 +10715,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10730,7 +10730,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10745,7 +10745,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10760,7 +10760,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10775,7 +10775,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10790,7 +10790,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10805,7 +10805,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10820,7 +10820,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10880,7 +10880,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "holm-of-trials",
@@ -10925,7 +10925,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -10955,7 +10955,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -10970,7 +10970,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -11000,7 +11000,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -11015,7 +11015,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "diamond-heath",
@@ -11405,7 +11405,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudpool-ridge",
@@ -11420,7 +11420,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudpool-ridge",
@@ -11435,7 +11435,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudpool-ridge",
@@ -11450,7 +11450,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudpool-ridge",
@@ -11990,7 +11990,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shrouded-ruins",
@@ -12005,7 +12005,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shrouded-ruins",
@@ -12020,7 +12020,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shrouded-ruins",
@@ -12035,7 +12035,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shrouded-ruins",
@@ -12140,7 +12140,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shrouded-ruins",
@@ -12395,7 +12395,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12425,7 +12425,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12440,7 +12440,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12470,7 +12470,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12485,7 +12485,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12500,7 +12500,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12515,7 +12515,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12530,7 +12530,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cottonsedge-prairie",
@@ -12860,7 +12860,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -12875,7 +12875,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -12890,7 +12890,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -12905,7 +12905,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13070,7 +13070,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13085,7 +13085,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13100,7 +13100,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13115,7 +13115,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13130,7 +13130,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13145,7 +13145,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13160,7 +13160,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13190,7 +13190,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13205,7 +13205,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13220,7 +13220,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13265,7 +13265,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13280,7 +13280,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13295,7 +13295,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13310,7 +13310,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13325,7 +13325,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13340,7 +13340,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13415,7 +13415,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13430,7 +13430,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13445,7 +13445,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13460,7 +13460,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13475,7 +13475,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13490,7 +13490,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13505,7 +13505,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13520,7 +13520,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13535,7 +13535,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13550,7 +13550,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13595,7 +13595,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13610,7 +13610,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13625,7 +13625,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13640,7 +13640,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13655,7 +13655,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "droning-meadow",
@@ -13670,7 +13670,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-valor",
@@ -13730,7 +13730,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-valor",
@@ -13745,7 +13745,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-valor",
@@ -14810,7 +14810,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ginkgo-landing",
@@ -14825,7 +14825,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ginkgo-landing",
@@ -14945,7 +14945,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ginkgo-landing",
@@ -14960,7 +14960,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ginkgo-landing",
@@ -14975,7 +14975,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ginkgo-landing",
@@ -15095,7 +15095,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "crossing-slope",
@@ -15110,7 +15110,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "crossing-slope",
@@ -15125,7 +15125,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "crossing-slope",
@@ -15140,7 +15140,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "crossing-slope",
@@ -15155,7 +15155,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "crossing-slope",
@@ -15515,7 +15515,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -15545,7 +15545,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -15575,7 +15575,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -15590,7 +15590,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -15635,7 +15635,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -15650,7 +15650,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "aipom-hill",
@@ -16010,7 +16010,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bathers-lagoon",
@@ -16040,7 +16040,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bathers-lagoon",
@@ -16565,7 +16565,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -16610,7 +16610,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -16685,7 +16685,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -16700,7 +16700,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -16715,7 +16715,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -16730,7 +16730,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hideaway-bay",
@@ -17090,7 +17090,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deadwood-haunt",
@@ -17105,7 +17105,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deadwood-haunt",
@@ -17120,7 +17120,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deadwood-haunt",
@@ -17135,7 +17135,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deadwood-haunt",
@@ -17150,7 +17150,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "deadwood-haunt",
@@ -17405,7 +17405,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17420,7 +17420,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17435,7 +17435,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17450,7 +17450,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17495,7 +17495,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17510,7 +17510,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17525,7 +17525,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17540,7 +17540,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17555,7 +17555,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sands-reach",
@@ -17720,7 +17720,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tombolo-walk",
@@ -17750,7 +17750,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tombolo-walk",
@@ -18020,7 +18020,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18035,7 +18035,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18050,7 +18050,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18065,7 +18065,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18080,7 +18080,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18095,7 +18095,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18110,7 +18110,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18125,7 +18125,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "castaway-shore",
@@ -18290,7 +18290,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windbreak-stand",
@@ -18305,7 +18305,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windbreak-stand",
@@ -18530,7 +18530,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "veilstone-cape",
@@ -18560,7 +18560,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "veilstone-cape",
@@ -18680,7 +18680,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "veilstone-cape",
@@ -18950,7 +18950,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -18965,7 +18965,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -18980,7 +18980,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -18995,7 +18995,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -19310,7 +19310,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -19430,7 +19430,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -19730,7 +19730,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lunkers-lair",
@@ -19745,7 +19745,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lunkers-lair",
@@ -19760,7 +19760,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lunkers-lair",
@@ -19775,7 +19775,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20150,7 +20150,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20165,7 +20165,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20180,7 +20180,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20195,7 +20195,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seagrass-haven",
@@ -20300,7 +20300,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seaside-hollow",
@@ -20330,7 +20330,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "islespy-shore",
@@ -20495,7 +20495,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20510,7 +20510,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20525,7 +20525,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20540,7 +20540,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20555,7 +20555,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20570,7 +20570,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20585,7 +20585,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20645,7 +20645,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20660,7 +20660,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20675,7 +20675,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -20735,7 +20735,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "firespit-island",
@@ -20885,7 +20885,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "firespit-island",
@@ -21485,7 +21485,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wayward-cave",
@@ -22160,7 +22160,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ancient-quarry",
@@ -22175,7 +22175,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ancient-quarry",
@@ -23330,7 +23330,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23345,7 +23345,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23360,7 +23360,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23405,7 +23405,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23435,7 +23435,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23465,7 +23465,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23480,7 +23480,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23495,7 +23495,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23510,7 +23510,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23525,7 +23525,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23540,7 +23540,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23585,7 +23585,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23600,7 +23600,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23615,7 +23615,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23630,7 +23630,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23645,7 +23645,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23660,7 +23660,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23675,7 +23675,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23750,7 +23750,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23765,7 +23765,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23780,7 +23780,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23840,7 +23840,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23870,7 +23870,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23885,7 +23885,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23900,7 +23900,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23915,7 +23915,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23930,7 +23930,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23945,7 +23945,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23960,7 +23960,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23975,7 +23975,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23990,7 +23990,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -24005,7 +24005,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -24020,7 +24020,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -24035,7 +24035,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -24050,7 +24050,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "primeval-grotto",
@@ -24335,7 +24335,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24350,7 +24350,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24365,7 +24365,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24380,7 +24380,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24395,7 +24395,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24425,7 +24425,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24440,7 +24440,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24455,7 +24455,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24470,7 +24470,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24485,7 +24485,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24530,7 +24530,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24545,7 +24545,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24560,7 +24560,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24575,7 +24575,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24590,7 +24590,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24605,7 +24605,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24620,7 +24620,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24680,7 +24680,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24695,7 +24695,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24710,7 +24710,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24725,7 +24725,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24740,7 +24740,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24770,7 +24770,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24785,7 +24785,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24800,7 +24800,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24815,7 +24815,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24830,7 +24830,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24875,7 +24875,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24890,7 +24890,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24905,7 +24905,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24920,7 +24920,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24935,7 +24935,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24950,7 +24950,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-trail",
@@ -24965,7 +24965,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25115,7 +25115,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25130,7 +25130,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25175,7 +25175,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25190,7 +25190,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25205,7 +25205,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25220,7 +25220,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25265,7 +25265,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fabled-spring",
@@ -25625,7 +25625,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25640,7 +25640,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25655,7 +25655,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25670,7 +25670,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25685,7 +25685,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25700,7 +25700,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25715,7 +25715,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25820,7 +25820,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25835,7 +25835,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25850,7 +25850,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25865,7 +25865,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25880,7 +25880,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25895,7 +25895,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bolderoll-ravine",
@@ -25910,7 +25910,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -25940,7 +25940,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -25955,7 +25955,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26045,7 +26045,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26060,7 +26060,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26075,7 +26075,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26090,7 +26090,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26150,7 +26150,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26165,7 +26165,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26180,7 +26180,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26210,7 +26210,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26225,7 +26225,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26240,7 +26240,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26255,7 +26255,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26315,7 +26315,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26330,7 +26330,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stonetooth-rows",
@@ -26345,7 +26345,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26645,7 +26645,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26660,7 +26660,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26675,7 +26675,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26705,7 +26705,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26720,7 +26720,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26810,7 +26810,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26825,7 +26825,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26840,7 +26840,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26855,7 +26855,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26870,7 +26870,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26900,7 +26900,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26915,7 +26915,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26930,7 +26930,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26960,7 +26960,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26975,7 +26975,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -26990,7 +26990,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27005,7 +27005,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27140,7 +27140,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27155,7 +27155,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27170,7 +27170,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27200,7 +27200,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27215,7 +27215,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27305,7 +27305,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27320,7 +27320,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27335,7 +27335,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27350,7 +27350,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27365,7 +27365,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27395,7 +27395,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27410,7 +27410,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27425,7 +27425,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27455,7 +27455,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27470,7 +27470,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27485,7 +27485,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sacred-plaza",
@@ -27500,7 +27500,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27620,7 +27620,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27635,7 +27635,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27650,7 +27650,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27665,7 +27665,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cloudcap-pass",
@@ -27815,7 +27815,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "whiteout-valley",
@@ -28325,7 +28325,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28340,7 +28340,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28355,7 +28355,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28400,7 +28400,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28415,7 +28415,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28430,7 +28430,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28460,7 +28460,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28475,7 +28475,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28565,7 +28565,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28580,7 +28580,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28715,7 +28715,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28730,7 +28730,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28745,7 +28745,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28775,7 +28775,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28790,7 +28790,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28805,7 +28805,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28835,7 +28835,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28850,7 +28850,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28865,7 +28865,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28910,7 +28910,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28925,7 +28925,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28940,7 +28940,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28970,7 +28970,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -28985,7 +28985,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29075,7 +29075,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29090,7 +29090,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29225,7 +29225,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29240,7 +29240,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29255,7 +29255,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29285,7 +29285,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29300,7 +29300,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29315,7 +29315,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "bonechill-wastes",
@@ -29405,7 +29405,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29420,7 +29420,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29435,7 +29435,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29450,7 +29450,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29465,7 +29465,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29480,7 +29480,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29495,7 +29495,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29510,7 +29510,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29585,7 +29585,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "icebound-falls",
@@ -29780,7 +29780,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avalanche-slopes",
@@ -29855,7 +29855,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avalanche-slopes",
@@ -29900,7 +29900,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avalanche-slopes",
@@ -29975,7 +29975,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avalanche-slopes",
@@ -30725,7 +30725,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ice-column-chamber",
@@ -30980,7 +30980,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -30995,7 +30995,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31025,7 +31025,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31040,7 +31040,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31070,7 +31070,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31085,7 +31085,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31100,7 +31100,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31115,7 +31115,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31235,7 +31235,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31370,7 +31370,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31385,7 +31385,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31400,7 +31400,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31535,7 +31535,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31670,7 +31670,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31685,7 +31685,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31700,7 +31700,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "arenas-approach",
@@ -31805,7 +31805,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "snowfall-hot-spring",
@@ -32195,7 +32195,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glacier-terrace",
@@ -32210,7 +32210,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glacier-terrace",
@@ -32225,7 +32225,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glacier-terrace",
@@ -32240,7 +32240,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glacier-terrace",
@@ -32660,7 +32660,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32750,7 +32750,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32765,7 +32765,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32855,7 +32855,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32930,7 +32930,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32945,7 +32945,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32960,7 +32960,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -32975,7 +32975,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -33365,7 +33365,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33380,7 +33380,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33395,7 +33395,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33410,7 +33410,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33455,7 +33455,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33470,7 +33470,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33485,7 +33485,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33500,7 +33500,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33515,7 +33515,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33530,7 +33530,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33545,7 +33545,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33560,7 +33560,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33575,7 +33575,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33590,7 +33590,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33620,7 +33620,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33635,7 +33635,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33650,7 +33650,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33695,7 +33695,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33710,7 +33710,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33770,7 +33770,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33785,7 +33785,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33800,7 +33800,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33815,7 +33815,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33830,7 +33830,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33845,7 +33845,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33875,7 +33875,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33890,7 +33890,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33905,7 +33905,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33920,7 +33920,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33935,7 +33935,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33950,7 +33950,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33980,7 +33980,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -33995,7 +33995,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34040,7 +34040,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34055,7 +34055,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34115,7 +34115,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34130,7 +34130,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34145,7 +34145,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34160,7 +34160,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34175,7 +34175,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34190,7 +34190,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearts-crag",
@@ -34220,7 +34220,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pearl-settlement",
@@ -34235,7 +34235,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pearl-settlement",
@@ -34250,7 +34250,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pearl-settlement",
@@ -34265,7 +34265,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avaluggs-legacy",
@@ -34325,7 +34325,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "avaluggs-legacy",
@@ -34910,7 +34910,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "secret-hollow",
@@ -34925,7 +34925,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "temple-of-sinnoh",

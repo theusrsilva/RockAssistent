@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Logging.Abstractions;
 using TradeRock.App;
 using TradeRock.Core;
+using TradeRock.Core.Dex;
 using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
 using TradeRock.Core.Hunts;
@@ -167,6 +168,46 @@ public sealed class HuntStoreTests(DexFixture fx) : IClassFixture<DexFixture>, I
         // Ovo Estranho só para os bebês do Crystal.
         Assert.DoesNotContain(pikachu.Single(g => g.GameKey == "c").Methods, m => m.Id == "odd_egg");
         Assert.Contains((await _store.GamesForSpeciesAsync(172, Ct)).Single(g => g.GameKey == "c").Methods, m => m.Id == "odd_egg");
+    }
+
+    [Fact]
+    public async Task Travas_de_shiny_tiram_o_jogo_e_os_metodos()
+    {
+        var mew = await _store.GamesForSpeciesAsync(151, Ct);
+        Assert.DoesNotContain(mew, g => g.GameKey == "bdsp"); // presente travado
+        Assert.Contains(mew, g => g.GameKey == "e");           // Faraway Island: pode ser shiny
+        Assert.Equal("shiny_locked", (await Assert.ThrowsAsync<HuntException>(() =>
+            _store.CreateAsync(new NewHunt(151, 0, "bdsp", "full_odds_bdsp", null), Ct))).Code);
+
+        var zacian = await _store.GamesForSpeciesAsync(888, Ct);
+        Assert.DoesNotContain(zacian, g => g.GameKey == "swsh");
+        Assert.True(_store.IsShinyLocked(888, "swsh"));
+
+        // Comum continua, com os métodos de campo.
+        var swsh = (await _store.GamesForSpeciesAsync(25, Ct)).Single(g => g.GameKey == "swsh");
+        Assert.Contains("encounter", swsh.Kinds);
+        Assert.Contains(swsh.Methods, m => m.Id == "brilliant");
+        Assert.False(_store.IsShinyLocked(25, "swsh"));
+
+        // Só encontro fixo destravado: sem métodos de campo (Regirock no Platinum: Snowpoint Temple... fixo).
+        var regirock = (await _store.GamesForSpeciesAsync(377, Ct)).Single(g => g.GameKey == "pt");
+        Assert.Equal(["static"], regirock.Kinds);
+        Assert.DoesNotContain(regirock.Methods, m => m.Id == "poke_radar_dppt");
+        Assert.Contains(regirock.Methods, m => m.Id == "full_odds_gen2_5");
+    }
+
+    [Fact]
+    public void Travas_aplicadas_aos_tipos()
+    {
+        var kinds = new HashSet<string> { "encounter", "gift", "evolution", "egg" };
+        HuntStore.ApplyShinyLocks(kinds, new ShinyInfo(Wild: false, Fixed: true, Evolution: false));
+        Assert.Equal(["egg", "gift", "static"], kinds.Order());
+        var locked = new HashSet<string> { "encounter", "gift" };
+        HuntStore.ApplyShinyLocks(locked, ShinyInfo.Empty);
+        Assert.Empty(locked);
+        var unknown = new HashSet<string> { "encounter" };
+        HuntStore.ApplyShinyLocks(unknown, null);
+        Assert.Equal(["encounter"], unknown);
     }
 
     [Fact]

@@ -55,7 +55,7 @@ export default function TypeChartPage() {
       {chart.loading && <p className="text-sm text-muted">{t('common.loading')}</p>}
 
       {data && (
-        <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+        <div className="scroll-x rounded-xl border border-line bg-surface">
           <table className="border-collapse text-xs">
             <thead>
               <tr>

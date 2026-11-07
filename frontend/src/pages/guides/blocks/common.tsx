@@ -35,7 +35,7 @@ export function BlockState<T>({ state, empty, children }: { state: Loaded<T>; em
 /** Tabela com rolagem lateral no celular. */
 export function BlockTable({ head, children }: { head: ReactNode[]; children: ReactNode }) {
   return (
-    <div className="my-3 overflow-x-auto rounded-lg border border-line">
+    <div className="my-3 scroll-x rounded-lg border border-line">
       <table className="w-full border-collapse text-left text-[13px]">
         <thead className="bg-surface2 text-[11.5px] tracking-wide text-muted uppercase">
           <tr>

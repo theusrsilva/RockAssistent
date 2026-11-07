@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { activeRules, areaStates, areaUsed, defaultMoves, formatRule, formatRules, overCap, runStats, sortAreas, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
+import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, formatRule, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
 
 const mon = (over: Partial<MonInfo>): MonInfo => ({
   id: over.id ?? 'm',
@@ -29,7 +29,7 @@ const rules: NuzlockeRules = {
 }
 
 const view = (over: Partial<RunView>): RunView => ({
-  run: { id: 'r', name: 'Kanto', gameKey: 'frlg', version: 'firered', rules, status: 'active', startedAt: '', endedAt: null, currentAreaId: 'route-1' },
+  run: { id: 'r', name: 'Kanto', gameKey: 'frlg', version: 'firered', starter: null, rules, status: 'active', startedAt: '', endedAt: null, currentAreaId: 'route-1' },
   currentArea: null,
   nextBoss: null,
   levelCap: null,
@@ -146,5 +146,45 @@ describe('areaStates (precedência)', () => {
       graveyard: [mon({ id: 'b', areaId: 'route-1', status: 'dead' })],
     })
     expect(areaStates(v)).toEqual({ 'route-1': 'dead', 'route-2': 'visited' })
+  })
+})
+
+describe('variantes por inicial', () => {
+  const p = (species: number, level: number) => ({ species, form: 0, level, moves: [], ability: null, item: null, teraType: null })
+  const rival: BossBattle = {
+    id: 'rival-cherrygrove',
+    kind: 'rival',
+    name: 'Silver',
+    title: null,
+    location: null,
+    order: 1,
+    badge: null,
+    party: [p(158, 5)],
+    levelCap: 5,
+    verified: true,
+    notes: null,
+    versions: null,
+    variants: [
+      { starter: 'chikorita', party: [p(155, 5)], levelCap: 5, verified: true },
+      { starter: 'cyndaquil', party: [p(158, 5)], levelCap: 5, verified: true },
+      { starter: 'totodile', party: [p(152, 6)], levelCap: 6, verified: false },
+    ],
+  }
+
+  it('mostra o time do inicial escolhido', () => {
+    expect(chosenVariant(rival, 'totodile')?.starter).toBe('totodile')
+    expect(bossTeam(rival, 'totodile')).toMatchObject({ levelCap: 6, verified: false })
+    expect(bossTeam(rival, 'chikorita').party[0].species).toBe(155)
+  })
+
+  it('sem escolha (ou inicial sem variante) começa na primeira variante', () => {
+    expect(chosenVariant(rival, null)?.starter).toBe('chikorita')
+    expect(chosenVariant(rival, 'bulbasaur')?.starter).toBe('chikorita')
+  })
+
+  it('chefe sem variantes usa o time padrão', () => {
+    const gym = { ...rival, variants: null }
+    expect(chosenVariant(gym, 'chikorita')).toBeNull()
+    expect(bossTeam(gym, 'chikorita').party[0].species).toBe(158)
   })
 })

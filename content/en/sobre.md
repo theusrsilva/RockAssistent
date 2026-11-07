@@ -1,6 +1,7 @@
-RockAssistent trades Pokémon with **Pokémon FireRed and LeafGreen on Nintendo Switch** using the game's
-local wireless. Your PC (or an ESP32) pretends to be a second Switch in the Direct Corner trade room.
-The app was previously called TradeRock.
+RockAssistent is an offline assistant for the main Pokémon games: Pokédex, guides for every game, Boxes
+with your saves, Shiny Hunt counter, Nuzlocke and VGC. It also trades Pokémon with your Switch over the
+game's local wireless: your PC (or an ESP32) acts as another console. The app was previously called
+TradeRock and only did trades.
 
 It is **free software**, under the **GNU AGPL-3.0**: you may use, study, modify and redistribute it,
 as long as you keep the same license and offer the source code. It comes with no warranty.

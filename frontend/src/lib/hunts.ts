@@ -1,4 +1,5 @@
 // Contador Hunt: tipos espelho de /api/hunts (TradeRock.Core/Hunts/HuntStore.cs), a fila de incrementos e contas puras.
+import type { Requirement } from './dex'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { TFunction } from 'i18next'
@@ -66,13 +67,15 @@ export function huntMethodName(hunt: Pick<Hunt, 'methodName' | 'methodNameEn'>, 
   return language.startsWith('en') ? hunt.methodNameEn : hunt.methodName
 }
 
-export type HuntKind = 'encounter' | 'gift' | 'egg' | 'evolution'
+export type HuntKind = 'encounter' | 'static' | 'gift' | 'egg' | 'evolution'
 
 export interface HuntGame {
   gameKey: string
   name: string
   kinds: HuntKind[]
   methods: HuntMethod[]
+  /** Pokéwalker ou item de evento (Mystery Gift): todo jeito de conseguir no jogo precisa disso; null = nada. */
+  requires: Requirement | null
 }
 
 /** Erros com texto próprio (o resto vira "common.error"). */
@@ -80,6 +83,7 @@ export const HUNT_ERRORS = [
   'unknown_game',
   'unknown_method',
   'method_not_in_game',
+  'shiny_locked',
   'invalid_species',
   'invalid_form',
   'unknown_modifier',

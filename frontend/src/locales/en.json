@@ -1044,7 +1044,7 @@
   },
   "login": {
     "title": "Sign in to RockAssistent",
-    "intro": "This RockAssistent is open on the home network. Sign in with your account to see your vault and trade.",
+    "intro": "Offline assistant for the main Pokémon games: Pokédex, guides for every game, Boxes with your saves, Shiny Hunt counter, Nuzlocke and VGC. It also trades Pokémon with your Switch over local wireless (your PC or an ESP32 acts as another console).",
     "username": "Username",
     "password": "Password",
     "submit": "Sign in",
@@ -1482,7 +1482,7 @@
       "keysTitle": "Your keys stay with you",
       "keysSub": "Never downloads, shows or sends prod.keys.",
       "offlineTitle": "No telemetry",
-      "offlineSub": "It only checks GitHub for new versions, and you can turn that off.",
+      "offlineSub": "It only checks GitHub for new versions (you can turn that off). Smogon and pokepast.es only if you turn them on in Settings; nothing from your PC is sent.",
       "freeTitle": "Free software",
       "freeSub": "AGPL-3.0: use, study and modify it.",
       "license": "License, source code and trademarks",
@@ -1753,8 +1753,14 @@
       "evolution": "By evolution",
       "egg": "By egg",
       "gift": "Gift",
+      "trade": "In-game trade",
       "none": "Can't be caught"
     },
+    "requires": {
+      "pokewalker": "Needs the Pokéwalker",
+      "event_item": "Needs an event item (Mystery Gift)"
+    },
+    "shinyLocked": "Shiny locked in this game",
     "notInGame": "This Pokémon doesn't exist in {{game}}. General data still shows; moves, locations and texts stay empty.",
     "flavorFrom": "This game has no Pokédex entry for this Pokémon; this one is from {{game}}.",
     "tabs": {
@@ -1867,9 +1873,35 @@
       "seaweed": "Seaweed underwater",
       "berry-trees": "Berry trees",
       "wanderer": "Wandering on the map",
-      "wanderer-water": "Wandering on water"
+      "wanderer-water": "Wandering on water",
+      "fish": "Fishing",
+      "tree": "In trees",
+      "city": "In the city",
+      "dexnav": "DexNav",
+      "max_raid": "Max Raid",
+      "tera_raid": "Tera Raid",
+      "honey": "Honey tree",
+      "radar": "Poké Radar",
+      "roaming": "Roaming",
+      "rock_smash": "Rock Smash",
+      "cave": "Cave",
+      "outbreak": "Mass outbreak",
+      "raid": "Raid",
+      "fixed": "Static encounter",
+      "trade": "In-game trade"
     },
     "condition": {
+      "morning": "in the morning",
+      "day": "during the day",
+      "evening": "in the evening",
+      "night": "at night",
+      "alpha": "Alpha",
+      "national_dex": "with the National Dex",
+      "space_time_distortion": "in a space-time distortion",
+      "old_rod": "Old Rod",
+      "good_rod": "Good Rod",
+      "super_rod": "Super Rod",
+      "rare_spawn": "rare spawn",
       "time-morning": "in the morning",
       "time-day": "during the day",
       "time-night": "at night",
@@ -2015,6 +2047,11 @@
     "notFoundHint": "The address may be wrong or the guide may have moved.",
     "backToGuides": "See all guides",
     "pageError": "Couldn't open this guide page.",
+    "encounters": {
+      "total_one": "{{count}} Pokémon",
+      "total_other": "{{count}} Pokémon",
+      "showAll": "See all encounters ({{count}})"
+    },
     "block": {
       "error": "Couldn't load this data.",
       "empty": "No data to show here.",
@@ -2022,6 +2059,7 @@
       "unknownHint": "Check the directive name in the guide.",
       "notVerified": "not verified",
       "allVersions": "All",
+      "ifYouChose": "If you picked {{name}}",
       "level": "Lv. {{level}}",
       "levels": "Lv. {{min}}–{{max}}",
       "alpha": "Alpha",
@@ -2276,6 +2314,15 @@
       "versionHelp": "Bosses and encounters change from one version to the other.",
       "start": "Start the run"
     },
+    "starter": {
+      "label": "Your starter",
+      "help": "Optional, but recommended: the rival's team changes with the starter you picked.",
+      "none": "Not sure",
+      "yours": "Starter: {{name}}",
+      "unknown": "Starter not set",
+      "change": "Change",
+      "bossHint": "This boss's team depends on your starter. Set your starter at the top of the run to see the right team."
+    },
     "run": {
       "pause": "Pause",
       "resume": "Resume",
@@ -2408,6 +2455,7 @@
     "errors": {
       "unknown_game": "Unknown game.",
       "unknown_version": "This version isn't from this game.",
+      "invalid_starter": "This Pokémon isn't one of this game's starters.",
       "version_required": "Choose the game version.",
       "unknown_area": "Unknown area in this game.",
       "unknown_boss": "This boss isn't from this version.",
@@ -2470,6 +2518,7 @@
       "start": "Start the hunt",
       "kinds": {
         "encounter": "encounter",
+        "static": "static encounter",
         "gift": "gift",
         "egg": "egg",
         "evolution": "evolution"
@@ -2506,6 +2555,7 @@
     "errors": {
       "unknown_game": "Unknown game.",
       "unknown_method": "Unknown method.",
+      "shiny_locked": "This Pokémon can never be shiny in this game (every encounter is shiny locked).",
       "method_not_in_game": "This method doesn't exist in this game.",
       "invalid_species": "Invalid Pokémon.",
       "invalid_form": "Invalid form.",

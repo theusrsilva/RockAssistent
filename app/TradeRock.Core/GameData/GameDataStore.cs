@@ -92,6 +92,25 @@ public sealed class GameDataStore
 
     public IReadOnlyList<OwnEncounter> Encounters(string gameKey) => _encounters.GetValueOrDefault(gameKey) ?? [];
 
+    /// <summary>
+    /// Encontros da espécie no formato da ficha da Pokédex (aba "Onde achar"), uma linha por versão; nulo quando o jogo
+    /// não tem encontros próprios (vale o PokeAPI). A área vira o lugar; a chance em texto fica de fora (0); as
+    /// condições são as nossas, separadas por vírgula, mais <c>alpha</c> nos alfas.
+    /// </summary>
+    public IReadOnlyList<EncounterInfo>? SpeciesEncounters(string gameKey, int species)
+    {
+        var own = Encounters(gameKey);
+        if (own.Count == 0)
+            return null;
+        var names = Areas(gameKey).ToDictionary(a => a.Id, a => a.Name);
+        return own.Where(e => e.Species == species)
+            .SelectMany(e => e.Versions.Select(v => new EncounterInfo(v, names.GetValueOrDefault(e.Area) ?? e.Area, null, e.Method,
+                e.MinLevel, e.MaxLevel, 0,
+                [.. (e.Conditions?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries) ?? []),
+                    .. (e.Alpha ? new[] { "alpha" } : [])])))
+            .ToList();
+    }
+
     public MapGraph? Map(Region region) => _maps.GetValueOrDefault(region);
 
     /// <summary>Times sugeridos do VGC (<c>vgc/teams.json</c>).</summary>

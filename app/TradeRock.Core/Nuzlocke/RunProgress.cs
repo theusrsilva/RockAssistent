@@ -12,6 +12,7 @@ public sealed record RunInfo(
     string Name,
     string GameKey,
     string? Version,
+    string? Starter,
     NuzlockeRules Rules,
     string Status,
     DateTimeOffset StartedAt,
@@ -90,7 +91,7 @@ public static class RunProgress
         var areas = data.Areas(run.GameKey);
         var area = CurrentArea(areas, run.CurrentAreaId);
         var defeated = DefeatedBosses(events);
-        var boss = NextBoss(data.Bosses(run.GameKey), defeated, run.Version);
+        var boss = NextBoss(data.Bosses(run.GameKey), defeated, run.Version, run.Starter);
         int? cap = boss is { LevelCap: > 0 } ? boss.LevelCap : null;
 
         var all = mons.OrderBy(m => m.CaughtAt).Select(Info).ToList();
@@ -137,16 +138,18 @@ public static class RunProgress
 
     /// <summary>
     /// O chefe de menor <c>Order</c> ainda não vencido. Com versão escolhida, só os chefes dela (os sem
-    /// <c>Versions</c> valem para todas); sem versão, todos.
+    /// <c>Versions</c> valem para todas); sem versão, todos. Com inicial, o time (e o cap) da variante dele, quando
+    /// a batalha tem uma (<see cref="BossBattle.ForStarter"/>); sem, o time padrão.
     /// </summary>
-    public static BossBattle? NextBoss(IReadOnlyList<BossBattle> bosses, IReadOnlyCollection<string> defeated, string? version) =>
-        bosses.Where(b => !defeated.Contains(b.Id) && InVersion(b.Versions, version)).MinBy(b => b.Order);
+    public static BossBattle? NextBoss(IReadOnlyList<BossBattle> bosses, IReadOnlyCollection<string> defeated, string? version,
+        string? starter = null) =>
+        bosses.Where(b => !defeated.Contains(b.Id) && InVersion(b.Versions, version)).MinBy(b => b.Order)?.ForStarter(starter);
 
     /// <summary>Quem da equipe está acima do cap (sem cap, ninguém).</summary>
     public static IReadOnlyList<MonInfo> OverCap(IReadOnlyList<MonInfo> party, int? cap) =>
         cap is { } c ? party.Where(m => m.Level > c).ToList() : [];
 
-    public static RunInfo RunInfo(NuzlockeRun run) => new(run.Id, run.Name, run.GameKey, run.Version, Rules(run), run.Status,
+    public static RunInfo RunInfo(NuzlockeRun run) => new(run.Id, run.Name, run.GameKey, run.Version, run.Starter, Rules(run), run.Status,
         run.StartedAt, run.EndedAt, run.CurrentAreaId);
 
     public static NuzlockeRules Rules(NuzlockeRun run) =>

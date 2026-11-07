@@ -176,6 +176,77 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.DoesNotContain("not-a-move", noDex.Message);
     }
 
+    private static Dictionary<string, string> RivalWithVariants(string variants) => new()
+    {
+        ["bosses/hgss.json"] = $$"""
+            { {{Source}}, "items": [ { "id": "rival", "kind": "rival", "name": "Silver", "title": null, "location": null,
+              "order": 1, "badge": null, "party": [ { "species": 158, "form": 0, "level": 5, "moves": [], "ability": null,
+              "item": null, "tera_type": null } ], "level_cap": 5, "verified": true, "notes": null, "versions": null,
+              "variants": {{variants}} } ] }
+            """,
+    };
+
+    private static string Variant(string starter, int level, int cap, string moves = "") => $$"""
+        { "starter": "{{starter}}", "party": [ { "species": 155, "form": 0, "level": {{level}}, "moves": [{{moves}}],
+          "ability": null, "item": null, "tera_type": null } ], "level_cap": {{cap}}, "verified": true }
+        """;
+
+    [Fact]
+    public void Variantes_por_inicial_validas_carregam()
+    {
+        var store = FromFiles(RivalWithVariants($"[{Variant("chikorita", 6, 6)}, {Variant("totodile", 5, 5)}]"));
+        var rival = Assert.Single(store.Bosses("hgss"));
+        Assert.Equal(["chikorita", "totodile"], rival.Variants!.Select(v => v.Starter));
+        Assert.Equal(6, rival.ForStarter("chikorita").LevelCap);
+        // Sem o campo "variants" continua valendo (um time só).
+        Assert.Null(FromFiles(new Dictionary<string, string> { ["bosses/frlg.json"] = GameDataStore.EmbeddedFiles()["bosses/frlg.json"] }).Bosses("frlg").Single(b => b.Id == "brock").Variants);
+    }
+
+    [Fact]
+    public void Validador_rejeita_variante_com_inicial_de_outro_jogo_repetida_ou_cap_errado()
+    {
+        var badMove = Variant("totodile", 5, 5, "\"not-a-move\"");
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(RivalWithVariants(
+            $"[{Variant("mudkip", 5, 5)}, {Variant("chikorita", 6, 9)}, {badMove}, {Variant("totodile", 5, 5)}]"),
+            m => m != "not-a-move"));
+        Assert.Contains("bosses/hgss/rival/variants/mudkip: mudkip não é inicial do hgss", ex.Message);
+        Assert.Contains("variants/chikorita: level_cap 9 diferente do maior nível do time (6)", ex.Message);
+        Assert.Contains("variante repetida para totodile", ex.Message);
+        Assert.Contains("variants/totodile: golpe not-a-move", ex.Message);
+        Assert.Contains("variants vazio", Assert.Throws<InvalidDataException>(() => FromFiles(RivalWithVariants("[]"))).Message);
+    }
+
+    [Fact]
+    public void Rivais_do_HGSS_tem_os_tres_times()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        var rivals = store.Bosses("hgss").Where(b => b.Id.StartsWith("rival-", StringComparison.Ordinal)).ToList();
+        Assert.Equal(7, rivals.Count);
+        Assert.All(rivals, r =>
+        {
+            Assert.Equal(["chikorita", "cyndaquil", "totodile"], r.Variants!.Select(v => v.Starter));
+            // O time padrão é o de quem escolheu Cyndaquil.
+            Assert.Equal(System.Text.Json.JsonSerializer.Serialize(r.Party),
+                System.Text.Json.JsonSerializer.Serialize(r.Variants!.Single(v => v.Starter == "cyndaquil").Party));
+            Assert.DoesNotContain("com Chikorita", r.Notes ?? "");
+        });
+        // O rival fica com o inicial que tem vantagem sobre o do jogador.
+        var first = rivals.Single(r => r.Id == "rival-cherrygrove");
+        Assert.Equal(155, first.ForStarter("chikorita").Party[0].Species);
+        Assert.Equal(158, first.ForStarter("cyndaquil").Party[0].Species);
+        Assert.Equal(152, first.ForStarter("totodile").Party[0].Species);
+    }
+
+    [Fact]
+    public void Iniciais_de_todos_os_jogos()
+    {
+        Assert.All(GameVersions.All, g => Assert.NotEmpty(GameStarters.For(g.Key)));
+        Assert.All(GameVersions.All.Where(g => g.Key is not ("y" or "lgpe")), g => Assert.Equal(3, GameStarters.For(g.Key).Count));
+        Assert.Equal(["pikachu"], GameStarters.For("y").Select(s => s.Id));
+        Assert.Equal(["chikorita", "tepig", "totodile"], GameStarters.For("za").Select(s => s.Id));
+        Assert.Empty(GameStarters.For("zz"));
+    }
+
     // Gen 1–5: os chefes da história (até o campeão) têm, em cada versão, 8 líderes com insígnias distintas, a Elite 4
     // (4 pessoas) e 1 campeão; o resto (Kanto no GSC/HGSS, revanches, Frontier Brains) vem depois, com Order maior.
     // No BW, o Alder só é enfrentado no pós-jogo, depois da revanche da Elite 4, por isso a Elite 4 aparece duas vezes
@@ -545,6 +616,63 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(game is "pla" or "za", encounters.Any(e => e.Alpha));
         // Cobertura mínima: não é um arquivo de uma área só.
         Assert.True(encounters.Select(e => e.Area).Distinct().Count() >= 10, $"{game}: poucas áreas com encontro");
+    }
+
+    [Fact]
+    public async Task Disponibilidade_usa_os_encontros_proprios()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
+        var store = new GameDataStore(fx.Service, NullLogger<GameDataStore>.Instance);
+        async Task<AvailabilityKind> Kind(int species, string game) =>
+            (await fx.Service.AvailabilityAsync(species, store.Encounters, TestContext.Current.CancellationToken))
+            .Single(a => a.GameKey == game).Kind;
+
+        // Bulbasaur no Z-A: presente no laboratório e selvagem numa Wild Zone.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(1, "za"));
+        Assert.NotEqual(AvailabilityKind.None, await Kind(142, "za")); // Aerodactyl: presente (o PKHeX o tem como fixo)
+        // Porygon: troca nos nossos dados; o PKHeX também o tem selvagem (o mais forte vence).
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(137, "za"));
+        Assert.Equal(AvailabilityKind.None, await Kind(906, "za"));   // Sprigatito não está no Z-A
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(1001, "sv")); // Wo-Chien: encontro fixo
+        Assert.Equal(AvailabilityKind.Gift, await Kind(906, "sv"));    // inicial: o PKHeX o tem como fixo, mas é presente
+        Assert.Equal(AvailabilityKind.Gift, await Kind(1, "frlg"));    // inicial do Prof. Oak (presente no PokeAPI)
+        Assert.Equal(AvailabilityKind.Gift, await Kind(387, "dp"));    // Turtwig
+        // Jogos do PokeAPI continuam como antes.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(92, "frlg"));
+        // PKHeX: o que o PokeAPI não tem.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(127, "gs"));  // Pinsir do concurso de insetos
+        Assert.Equal(AvailabilityKind.Gift, await Kind(447, "dp"));       // ovo do Riolu
+        Assert.Equal(AvailabilityKind.Trade, await Kind(302, "b2w2"));    // Sableye por troca
+        // Lugar aberto por item de evento conta (o encontro está no jogo); código QR e jogos à parte, não.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(491, "pt"));  // Darkrai (Member Card)
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(151, "e"));   // Mew (Faraway Island)
+        Assert.Equal(AvailabilityKind.None, await Kind(801, "sm"));       // Magearna (código QR)
+        Assert.Equal(AvailabilityKind.None, await Kind(385, "rs"));       // Jirachi (disco bônus do Colosseum)
+
+        // Requisitos: só pelo Pokéwalker ou por item de evento (com aviso); havendo jeito normal, nenhum.
+        async Task<GameAvailability> Full(int species, string game) =>
+            (await fx.Service.AvailabilityAsync(species, store.Encounters, TestContext.Current.CancellationToken))
+            .Single(a => a.GameKey == game);
+        var kecleon = await Full(352, "hgss");
+        Assert.NotEqual(AvailabilityKind.None, kecleon.Kind);
+        Assert.Equal(Requires.Pokewalker, kecleon.Requires);
+        var octillery = await Full(224, "hgss");
+        Assert.Equal(AvailabilityKind.Evolution, octillery.Kind);
+        Assert.Null(octillery.Requires);
+        var pecharunt = await Full(1025, "sv");
+        Assert.NotEqual(AvailabilityKind.None, pecharunt.Kind);
+        Assert.Equal(Requires.EventItem, pecharunt.Requires);
+        Assert.Equal(Requires.EventItem, (await Full(151, "e")).Requires);
+        Assert.Equal(Requires.EventItem, (await Full(491, "pt")).Requires);
+        var zigzagoon = await Full(263, "e");
+        Assert.Equal(AvailabilityKind.Encounter, zigzagoon.Kind);
+        Assert.Null(zigzagoon.Requires);
+
+        var detail = store.SpeciesEncounters("za", 1);
+        Assert.NotNull(detail);
+        Assert.Contains(detail, e => e.Method == "gift" && e.Version == "legends-za");
+        Assert.Contains(detail, e => e.Method == "walk" && e.MinLevel > 1);
+        Assert.Null(store.SpeciesEncounters("frlg", 1));
     }
 
     [Fact]

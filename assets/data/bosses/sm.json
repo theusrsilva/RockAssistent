@@ -17,7 +17,10 @@
     "https://www.pokewiki.de/Shigeki_Morimoto",
     "https://www.pokemythology.net/detonados/detonado-sun-moon/",
     "https://www.supercheats.com/pokemon-sun/walkthrough/team-skull-battle-battle-royal-matchup",
-    "https://www.serebii.net/sunmoon/ultrabeasts.shtml"
+    "https://www.serebii.net/sunmoon/ultrabeasts.shtml",
+    "https://www.pokewiki.de/Hau",
+    "https://www.pokewiki.de/Gladio",
+    "https://www.pokewiki.de/Elima"
   ],
   "items": [
     {
@@ -45,8 +48,70 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Popplio 5; com Popplio: Litten 5",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 728,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "pound",
+                "water-gun",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 722,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leafage",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 725,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "scratch",
+                "ember",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hau-2",
@@ -86,8 +151,109 @@
       ],
       "level_cap": 7,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pichu 6, Popplio 7; com Popplio: Pichu 6, Litten 7",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 172,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "thunder-shock",
+                "charm",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 728,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "pound",
+                "water-gun",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 172,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "thunder-shock",
+                "charm",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 722,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "leafage",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 172,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "thunder-shock",
+                "charm",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 725,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "scratch",
+                "ember",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "ilima-1",
@@ -126,8 +292,106 @@
       ],
       "level_cap": 10,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Yungoos 9, Smeargle 10; com Popplio: Yungoos 9, Smeargle 10",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 734,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "pursuit",
+                "leer"
+              ],
+              "ability": "stakeout",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 235,
+              "form": 0,
+              "level": 10,
+              "moves": [
+                "ember",
+                "tackle"
+              ],
+              "ability": "technician",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 10,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 734,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "pursuit",
+                "leer"
+              ],
+              "ability": "stakeout",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 235,
+              "form": 0,
+              "level": 10,
+              "moves": [
+                "water-gun",
+                "tackle"
+              ],
+              "ability": "technician",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 10,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 734,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "pursuit",
+                "leer"
+              ],
+              "ability": "stakeout",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 235,
+              "form": 0,
+              "level": 10,
+              "moves": [
+                "leafage",
+                "tackle"
+              ],
+              "ability": "technician",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 10,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "totem-gumshoos",
@@ -259,8 +523,115 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 13, Popplio 14; com Popplio: Pikachu 13, Litten 14",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 13,
+              "moves": [
+                "growl",
+                "play-nice",
+                "quick-attack",
+                "electro-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 728,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "water-gun",
+                "growl",
+                "disarming-voice",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 13,
+              "moves": [
+                "growl",
+                "play-nice",
+                "quick-attack",
+                "electro-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 722,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "leafage",
+                "growl",
+                "peck",
+                "astonish"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 13,
+              "moves": [
+                "growl",
+                "play-nice",
+                "quick-attack",
+                "electro-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 725,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "ember",
+                "growl",
+                "lick",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hala-1",
@@ -476,8 +847,106 @@
       ],
       "level_cap": 17,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Pikachu 16, Brionne 17; com Popplio: Pikachu 16, Torracat 17",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "electro-ball",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 729,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "aqua-jet",
+                "disarming-voice",
+                "pound"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 17,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "electro-ball",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 723,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "razor-leaf",
+                "peck",
+                "tackle"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 17,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 25,
+              "form": 0,
+              "level": 16,
+              "moves": [
+                "electro-ball",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 726,
+              "form": 0,
+              "level": 17,
+              "moves": [
+                "fire-fang",
+                "lick",
+                "scratch"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 17,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "gladion-1",
@@ -621,8 +1090,133 @@
       ],
       "level_cap": 19,
       "verified": true,
-      "notes": "todos contra todos: The Masked Royal (Rockruff 19), Hau (Dartrix 19, para quem escolheu Litten; Brionne com Rowlet, Torracat com Popplio) e Gladion (Type: Null 19)",
-      "versions": null
+      "notes": "todos contra todos: The Masked Royal (Rockruff 19), Hau (o inicial dele, 19) e Gladion (Type: Null 19)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 729,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "aqua-jet",
+                "disarming-voice",
+                "pound"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 772,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "tackle",
+                "pursuit"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 19,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 723,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "razor-leaf",
+                "peck",
+                "tackle"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 772,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "tackle",
+                "pursuit"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 19,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 726,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "fire-fang",
+                "lick",
+                "scratch"
+              ],
+              "ability": null,
+              "item": "normalium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 772,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "tackle",
+                "pursuit"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 19,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "totem-salazzle",
@@ -1064,8 +1658,142 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 28, Flareon 28, Brionne 29; com Popplio: Raichu 28, Leafeon 28, Torracat 29",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "electro-ball",
+                "quick-attack",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "fire-fang",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 729,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "bubble-beam",
+                "disarming-voice"
+              ],
+              "ability": null,
+              "item": "waterium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 29,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "electro-ball",
+                "quick-attack",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "water-pulse",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 723,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "razor-leaf",
+                "pluck"
+              ],
+              "ability": null,
+              "item": "grassium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 29,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "electro-ball",
+                "quick-attack",
+                "psychic"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 470,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "giga-drain",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 726,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "fire-fang",
+                "bite"
+              ],
+              "ability": null,
+              "item": "firium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 29,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "molayne-1",
@@ -1960,8 +2688,187 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Crobat 52, Weavile 52, Lucario 52, Silvally 53; com Popplio: Crobat 52, Weavile 52, Lucario 52, Silvally 53; o detonado dá Golbat 52 no lugar do Crobat",
-      "versions": null
+      "notes": "o detonado dá Golbat 52 no lugar do Crobat",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "acrobatics",
+                "cross-poison"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "metal-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "aura-sphere",
+                "metal-claw",
+                "quick-attack"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 9,
+              "level": 53,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "fire-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "acrobatics",
+                "cross-poison"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "metal-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "aura-sphere",
+                "metal-claw",
+                "quick-attack"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 10,
+              "level": 53,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "water-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "acrobatics",
+                "cross-poison"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "metal-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "aura-sphere",
+                "metal-claw",
+                "quick-attack"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 11,
+              "level": 53,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "grass-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hau-6",
@@ -2030,8 +2937,196 @@
       ],
       "level_cap": 54,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 53, Flareon 53, Komala 53, Primarina 54; com Popplio: Raichu 53, Leafeon 53, Komala 53, Incineroar 54",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 53,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "flare-blitz",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 730,
+              "form": 0,
+              "level": 54,
+              "moves": [
+                "sparkling-aria",
+                "moonblast",
+                "hyper-voice"
+              ],
+              "ability": null,
+              "item": "waterium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 54,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 53,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "hydro-pump",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 724,
+              "form": 0,
+              "level": 54,
+              "moves": [
+                "spirit-shackle",
+                "leaf-blade",
+                "smack-down"
+              ],
+              "ability": null,
+              "item": "grassium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 54,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 53,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 470,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "leaf-blade",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 53,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 727,
+              "form": 0,
+              "level": 54,
+              "moves": [
+                "darkest-lariat",
+                "flare-blitz",
+                "earthquake"
+              ],
+              "ability": null,
+              "item": "firium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 54,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hala-elite",
@@ -2459,8 +3554,283 @@
       ],
       "level_cap": 58,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Lycanroc 57, Ninetales 56, Braviary 56, Magnezone 56, Snorlax 56, Incineroar 58; com Popplio: Lycanroc 57, Ninetales 56, Braviary 56, Magnezone 56, Snorlax 56, Decidueye 58; o primeiro campeão de Alola: a luta final é com o Kukui; depois você é o campeão",
-      "versions": null
+      "notes": "o primeiro campeão de Alola: a luta final é com o Kukui; depois você é o campeão",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 56,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 727,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "flare-blitz",
+                "darkest-lariat",
+                "outrage",
+                "cross-chop"
+              ],
+              "ability": null,
+              "item": "firium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 58,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 56,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 730,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "sparkling-aria",
+                "moonblast",
+                "aqua-jet",
+                "hyper-voice"
+              ],
+              "ability": null,
+              "item": "waterium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 58,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 56,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 56,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 724,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "leaf-blade",
+                "spirit-shackle",
+                "brave-bird",
+                "sucker-punch"
+              ],
+              "ability": null,
+              "item": "grassium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 58,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "anabel-1",
@@ -3576,8 +4946,238 @@
       ],
       "level_cap": 63,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Raichu 63, Flareon 63, Komala 63, Crabominable 63, Primarina 63; com Popplio: Raichu 63, Leafeon 63, Komala 63, Crabominable 63, Incineroar 63; defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
-      "versions": null
+      "notes": "defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 63,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "flare-blitz",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 740,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "close-combat",
+                "ice-hammer",
+                "stone-edge",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 730,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "sparkling-aria",
+                "moonblast",
+                "hyper-voice"
+              ],
+              "ability": null,
+              "item": "waterium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 63,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "hydro-pump",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 740,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "close-combat",
+                "ice-hammer",
+                "stone-edge",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 724,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "spirit-shackle",
+                "leaf-blade",
+                "smack-down"
+              ],
+              "ability": null,
+              "item": "grassium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 26,
+              "form": 1,
+              "level": 63,
+              "moves": [
+                "thunderbolt",
+                "quick-attack",
+                "psychic",
+                "focus-blast"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 470,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "leaf-blade",
+                "quick-attack",
+                "charm",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 775,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "wood-hammer",
+                "sucker-punch",
+                "earthquake",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 740,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "close-combat",
+                "ice-hammer",
+                "stone-edge",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 727,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "darkest-lariat",
+                "flare-blitz",
+                "earthquake"
+              ],
+              "ability": null,
+              "item": "firium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "defense-gladion",
@@ -3661,8 +5261,241 @@
       ],
       "level_cap": 63,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Crobat 63, Weavile 63, Porygon-Z 63, Lucario 63, Silvally 63; com Popplio: Crobat 63, Weavile 63, Porygon-Z 63, Lucario 63, Silvally 63; defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
-      "versions": null
+      "notes": "defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "acrobatics",
+                "cross-poison",
+                "x-scissor",
+                "steel-wing"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "brick-break",
+                "shadow-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 474,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "tri-attack",
+                "dark-pulse",
+                "ice-beam",
+                "thunderbolt"
+              ],
+              "ability": "download",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "aura-sphere",
+                "flash-cannon",
+                "extreme-speed",
+                "psychic"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 9,
+              "level": 63,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "fire-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "acrobatics",
+                "cross-poison",
+                "x-scissor",
+                "steel-wing"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "brick-break",
+                "shadow-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 474,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "tri-attack",
+                "dark-pulse",
+                "ice-beam",
+                "thunderbolt"
+              ],
+              "ability": "download",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "aura-sphere",
+                "flash-cannon",
+                "extreme-speed",
+                "psychic"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 10,
+              "level": 63,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "water-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "acrobatics",
+                "cross-poison",
+                "x-scissor",
+                "steel-wing"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 461,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "ice-shard",
+                "night-slash",
+                "brick-break",
+                "shadow-claw"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 474,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "tri-attack",
+                "dark-pulse",
+                "ice-beam",
+                "thunderbolt"
+              ],
+              "ability": "download",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 448,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "aura-sphere",
+                "flash-cannon",
+                "extreme-speed",
+                "psychic"
+              ],
+              "ability": "inner-focus",
+              "item": "steelium-z--held",
+              "tera_type": null
+            },
+            {
+              "species": 773,
+              "form": 11,
+              "level": 63,
+              "moves": [
+                "crunch",
+                "crush-claw",
+                "x-scissor",
+                "multi-attack"
+              ],
+              "ability": "rks-system",
+              "item": "grass-memory",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "defense-faba",
@@ -4355,8 +6188,283 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "time para quem escolheu Litten; com Rowlet: Lycanroc 65, Ninetales 65, Braviary 65, Magnezone 65, Snorlax 65, Incineroar 65; com Popplio: Lycanroc 65, Ninetales 65, Braviary 65, Magnezone 65, Snorlax 65, Decidueye 65; defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
-      "versions": null
+      "notes": "defesa do título: um dos desafiantes depois da Elite Four (sorteado)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 727,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "flare-blitz",
+                "darkest-lariat",
+                "outrage",
+                "cross-chop"
+              ],
+              "ability": null,
+              "item": "firium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "litten",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 730,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "sparkling-aria",
+                "moonblast",
+                "aqua-jet",
+                "hyper-voice"
+              ],
+              "ability": null,
+              "item": "waterium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "popplio",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "accelerock",
+                "crunch",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 38,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "dazzling-gleam",
+                "blizzard",
+                "ice-shard",
+                "safeguard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 628,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "crush-claw",
+                "brave-bird",
+                "whirlwind",
+                "tailwind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 462,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "thunderbolt",
+                "flash-cannon",
+                "thunder-wave",
+                "mirror-coat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "heavy-slam",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 724,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "leaf-blade",
+                "spirit-shackle",
+                "brave-bird",
+                "sucker-punch"
+              ],
+              "ability": null,
+              "item": "grassium-z--held",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        }
+      ]
     }
   ]
 }

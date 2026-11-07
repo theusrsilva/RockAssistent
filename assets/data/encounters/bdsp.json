@@ -1,8 +1,9 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/sinnoh/ (páginas por área, aba BDSP; Grand Underground por bioma)",
+    "https://www.serebii.net/brilliantdiamondshiningpearl/legendary.shtml (Mesprit e Cresselia errantes, nível 50)",
     "https://pokemondb.net/location (2ª fonte: Sinnoh, Geração 8)",
-    "Métodos: walk/cave (matinho ou caverna), surf, fish (conditions old_rod/good_rod/super_rod), honey, radar, outbreak (swarm), fixed, gift. No Grand Underground, conditions diz a etapa (after_strength, national_dex...). verified = a espécie também aparece na página da área no pokemondb.",
+    "Métodos: walk/cave (matinho ou caverna), surf, fish (conditions old_rod/good_rod/super_rod), honey, radar, outbreak (swarm), fixed, gift. No Grand Underground, conditions diz a etapa (after_strength, national_dex...). verified = a espécie também aparece na página da área no pokemondb. Em 07/11/2026 as linhas que faltavam (mel, Poké Radar, pesca, Trophy Garden, Great Marsh, Ramanas Park, errantes) foram conferidas na página da área da Serebii (espécie, nível e versão).",
     "https://www.serebii.net/pokearth/sinnoh/oreburghcity.shtml"
   ],
   "items": [
@@ -292,7 +293,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -308,7 +309,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -324,7 +325,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -372,7 +373,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -628,7 +629,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -644,7 +645,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -660,7 +661,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -675,7 +676,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -690,7 +691,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -706,7 +707,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -722,7 +723,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -738,7 +739,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -754,7 +755,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-218",
@@ -15996,7 +15997,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-town",
@@ -16012,7 +16013,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16124,7 +16125,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16140,7 +16141,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16156,7 +16157,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16172,7 +16173,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16187,7 +16188,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16202,7 +16203,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16218,7 +16219,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16234,7 +16235,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16250,7 +16251,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16266,7 +16267,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "valley-windworks",
@@ -16442,7 +16443,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16458,7 +16459,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16474,7 +16475,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16489,7 +16490,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16504,7 +16505,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16520,7 +16521,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16536,7 +16537,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16552,7 +16553,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "floaroma-meadow",
@@ -16568,7 +16569,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16712,7 +16713,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16728,7 +16729,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16744,7 +16745,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16759,7 +16760,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16774,7 +16775,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16790,7 +16791,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16806,7 +16807,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16822,7 +16823,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -16838,7 +16839,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-205",
@@ -17060,7 +17061,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17076,7 +17077,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17138,7 +17139,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17154,7 +17155,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17170,7 +17171,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17186,7 +17187,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "eterna-forest",
@@ -17484,7 +17485,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17500,7 +17501,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17516,7 +17517,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17531,7 +17532,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17546,7 +17547,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17562,7 +17563,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17578,7 +17579,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17594,7 +17595,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17610,7 +17611,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-211",
@@ -17818,7 +17819,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17834,7 +17835,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17850,7 +17851,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17865,7 +17866,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17880,7 +17881,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17896,7 +17897,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17912,7 +17913,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17928,7 +17929,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -17944,7 +17945,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "cycling-road",
@@ -18167,7 +18168,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "old-chateau",
@@ -18199,7 +18200,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18215,7 +18216,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18231,7 +18232,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18246,7 +18247,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18261,7 +18262,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18277,7 +18278,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18293,7 +18294,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18309,7 +18310,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18325,7 +18326,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-207",
@@ -18835,7 +18836,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "mt-coronet",
@@ -18851,7 +18852,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "mt-coronet",
@@ -18867,7 +18868,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "mt-coronet",
@@ -19011,7 +19012,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19027,7 +19028,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19043,7 +19044,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19058,7 +19059,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19073,7 +19074,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19089,7 +19090,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19105,7 +19106,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19121,7 +19122,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19137,7 +19138,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-208",
@@ -19313,7 +19314,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hearthome-city",
@@ -19329,7 +19330,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19425,7 +19426,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19441,7 +19442,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19457,7 +19458,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19473,7 +19474,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19488,7 +19489,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19503,7 +19504,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19519,7 +19520,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19535,7 +19536,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19551,7 +19552,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -19567,7 +19568,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-209",
@@ -20395,7 +20396,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20411,7 +20412,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20427,7 +20428,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20442,7 +20443,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20457,7 +20458,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20473,7 +20474,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20489,7 +20490,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20505,7 +20506,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20521,7 +20522,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-210",
@@ -20837,7 +20838,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20853,7 +20854,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20869,7 +20870,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20884,7 +20885,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20899,7 +20900,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20915,7 +20916,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20931,7 +20932,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20947,7 +20948,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -20963,7 +20964,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-215",
@@ -21217,7 +21218,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21233,7 +21234,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21249,7 +21250,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21264,7 +21265,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21279,7 +21280,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21295,7 +21296,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21311,7 +21312,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21327,7 +21328,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21343,7 +21344,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-212",
@@ -21567,7 +21568,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21583,7 +21584,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21599,7 +21600,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21615,7 +21616,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21631,7 +21632,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21647,7 +21648,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21679,7 +21680,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21695,7 +21696,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21711,7 +21712,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21727,7 +21728,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21743,7 +21744,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21759,7 +21760,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21791,7 +21792,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21839,7 +21840,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21855,7 +21856,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "trophy-garden",
@@ -21871,7 +21872,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pastoria-city",
@@ -22207,7 +22208,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22239,7 +22240,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22255,7 +22256,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22271,7 +22272,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22335,7 +22336,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22383,7 +22384,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22415,7 +22416,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22431,7 +22432,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22463,7 +22464,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22527,7 +22528,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22543,7 +22544,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22559,7 +22560,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22575,7 +22576,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "great-marsh",
@@ -22591,7 +22592,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22703,7 +22704,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22719,7 +22720,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22735,7 +22736,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22750,7 +22751,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22765,7 +22766,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22781,7 +22782,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22797,7 +22798,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22813,7 +22814,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -22829,7 +22830,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-213",
@@ -23085,7 +23086,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23101,7 +23102,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23117,7 +23118,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23132,7 +23133,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23147,7 +23148,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23163,7 +23164,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23179,7 +23180,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23195,7 +23196,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23211,7 +23212,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-214",
@@ -23847,7 +23848,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23863,7 +23864,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23879,7 +23880,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23894,7 +23895,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23909,7 +23910,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23925,7 +23926,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23941,7 +23942,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23957,7 +23958,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -23973,7 +23974,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-219-221",
@@ -24322,7 +24323,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24338,7 +24339,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24354,7 +24355,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24369,7 +24370,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24384,7 +24385,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24400,7 +24401,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24416,7 +24417,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24432,7 +24433,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -24448,7 +24449,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fuego-ironworks",
@@ -25053,7 +25054,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "iron-island",
@@ -25501,7 +25502,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-acuity",
@@ -25837,7 +25838,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-valor",
@@ -25996,7 +25997,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spear-pillar",
@@ -26011,7 +26012,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26123,7 +26124,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26139,7 +26140,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26155,7 +26156,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26170,7 +26171,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26185,7 +26186,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26201,7 +26202,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26217,7 +26218,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26233,7 +26234,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26249,7 +26250,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-222",
@@ -26950,7 +26951,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
@@ -27125,7 +27126,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27140,7 +27141,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27155,7 +27156,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27171,7 +27172,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27186,7 +27187,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27201,7 +27202,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27216,7 +27217,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27231,7 +27232,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27246,7 +27247,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27262,7 +27263,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27278,7 +27279,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27294,7 +27295,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27310,7 +27311,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27326,7 +27327,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27342,7 +27343,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27358,7 +27359,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ramanas-park",
@@ -27374,7 +27375,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "fullmoon-island",
@@ -27390,7 +27391,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "spring-path",
@@ -27630,7 +27631,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "snowpoint-temple",
@@ -27726,7 +27727,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-224",
@@ -28062,7 +28063,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hall-of-origin",
@@ -28078,7 +28079,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-225",
@@ -29193,7 +29194,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "stark-mountain",

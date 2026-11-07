@@ -240,7 +240,7 @@ export default function TradePage() {
 
       <div className="flex flex-wrap items-end justify-between gap-4">
         <h1 className="font-display text-[23px] font-bold md:text-[28px]">{t('ui.trade.title')}</h1>
-        <ol className="flex max-w-full items-center gap-1.5 overflow-x-auto" aria-label="steps">
+        <ol className="flex max-w-full items-center gap-1.5 scroll-x" aria-label="steps">
           {wizardSteps.map((s, i) => {
             const on = i === step
             const done = i < step

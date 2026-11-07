@@ -16,7 +16,8 @@
     "https://www.pokemythology.net/detonados/detonado-sword-shield/",
     "https://www.serebii.net/pokedex-swsh/eternatus/locations.shtml",
     "https://samurai-gamers.com/pokemon-sword-and-shield/dojo-matron-honey-battle-court-guide",
-    "https://www.pokewiki.de/Mastrich"
+    "https://www.pokewiki.de/Mastrich",
+    "https://www.pokewiki.de/Hop"
   ],
   "items": [
     {
@@ -54,8 +55,100 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 3, Sobble 5; com Sobble: Wooloo 3, Scorbunny 5",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 3,
+              "moves": [
+                "tackle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 816,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "pound",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 3,
+              "moves": [
+                "tackle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 810,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "scratch",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 3,
+              "moves": [
+                "tackle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 813,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hop-2",
@@ -106,8 +199,142 @@
       ],
       "level_cap": 8,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 6, Rookidee 5, Sobble 8; com Sobble: Wooloo 6, Rookidee 5, Scorbunny 8",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "leer",
+                "peck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 816,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "pound",
+                "growl",
+                "water-gun"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "leer",
+                "peck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 810,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "scratch",
+                "growl",
+                "branch-poke"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "leer",
+                "peck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 813,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "tackle",
+                "growl",
+                "ember"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hop-3",
@@ -159,8 +386,145 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 11, Rookidee 12, Sobble 14; com Sobble: Wooloo 11, Rookidee 12, Scorbunny 14",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 11,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "peck",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 816,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "pound",
+                "growl",
+                "water-gun",
+                "bind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 11,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "peck",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 810,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "scratch",
+                "growl",
+                "branch-poke",
+                "taunt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 11,
+              "moves": [
+                "tackle",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 821,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "peck",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 813,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "tackle",
+                "growl",
+                "ember",
+                "quick-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "bede-1",
@@ -310,8 +674,157 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 18, Corvisquire 19, Drizzile 21; com Sobble: Wooloo 18, Corvisquire 19, Raboot 21",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "growl",
+                "defense-curl",
+                "double-kick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 822,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "leer",
+                "peck",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 817,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "round",
+                "growl",
+                "water-pulse",
+                "bind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "growl",
+                "defense-curl",
+                "double-kick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 822,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "leer",
+                "peck",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 811,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "round",
+                "razor-leaf",
+                "double-hit",
+                "screech"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 831,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "tackle",
+                "growl",
+                "defense-curl",
+                "double-kick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 822,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "leer",
+                "peck",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 814,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "round",
+                "growl",
+                "double-kick",
+                "flame-charge"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "nessa",
@@ -613,8 +1126,193 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Cramorant 28, Toxel 29, Silicobra 30, Drizzile 33; com Sobble: Cramorant 29, Toxel 29, Silicobra 30, Raboot 33",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 845,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "dive",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 848,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "tearful-look",
+                "nuzzle",
+                "flail",
+                "acid"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 843,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "glare",
+                "dig",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 817,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "water-pulse",
+                "sucker-punch",
+                "round",
+                "tearful-look"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 845,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "dive",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 848,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "tearful-look",
+                "nuzzle",
+                "flail",
+                "acid"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 843,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "glare",
+                "dig",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 811,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "knock-off",
+                "razor-leaf",
+                "screech",
+                "round"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 845,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "dive",
+                "fury-attack",
+                "pluck"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 848,
+              "form": 0,
+              "level": 29,
+              "moves": [
+                "tearful-look",
+                "nuzzle",
+                "flail",
+                "acid"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 843,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "glare",
+                "dig",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 814,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "flame-charge",
+                "agility",
+                "round",
+                "double-kick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "bea",
@@ -975,8 +1673,235 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Inteleon 37; com Sobble: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Cinderace 37",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 709,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "horn-leech",
+                "shadow-claw",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 631,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "fire-lash",
+                "bug-bite",
+                "slash",
+                "lick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "body-slam",
+                "stockpile",
+                "heavy-slam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 836,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "spark",
+                "crunch",
+                "roar",
+                "nuzzle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "snipe-shot",
+                "sucker-punch",
+                "tearful-look",
+                "whirlpool"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 709,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "horn-leech",
+                "shadow-claw",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 631,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "fire-lash",
+                "bug-bite",
+                "slash",
+                "lick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "body-slam",
+                "stockpile",
+                "heavy-slam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 836,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "spark",
+                "crunch",
+                "roar",
+                "nuzzle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "drum-beating",
+                "knock-off",
+                "slam",
+                "brutal-swing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 709,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "horn-leech",
+                "shadow-claw",
+                "confuse-ray"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 631,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "fire-lash",
+                "bug-bite",
+                "slash",
+                "lick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "body-slam",
+                "stockpile",
+                "heavy-slam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 836,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "spark",
+                "crunch",
+                "roar",
+                "nuzzle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "pyro-ball",
+                "headbutt",
+                "acrobatics",
+                "agility"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "gordie",
@@ -1203,8 +2128,235 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Inteleon 41; com Sobble: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Cinderace 41",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "double-kick",
+                "take-down",
+                "growl",
+                "defense-curl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "drill-peck",
+                "scary-face",
+                "pluck",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "spark",
+                "bubble-beam",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "heavy-slam",
+                "body-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "snipe-shot",
+                "tearful-look",
+                "sucker-punch",
+                "liquidation"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 41,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "double-kick",
+                "take-down",
+                "growl",
+                "defense-curl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "drill-peck",
+                "scary-face",
+                "pluck",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "spark",
+                "bubble-beam",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "heavy-slam",
+                "body-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "drum-beating",
+                "double-hit",
+                "brick-break",
+                "knock-off"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 41,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "double-kick",
+                "take-down",
+                "growl",
+                "defense-curl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "drill-peck",
+                "scary-face",
+                "pluck",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "spark",
+                "bubble-beam",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "heavy-slam",
+                "body-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 41,
+              "moves": [
+                "pyro-ball",
+                "counter",
+                "mega-kick",
+                "double-kick"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 41,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "marnie-2",
@@ -1584,8 +2736,235 @@
       ],
       "level_cap": 49,
       "verified": true,
-      "notes": "semifinal da Champion Cup; time para quem escolheu Scorbunny; com Grookey: Dubwool 48, Corviknight 48, Pincurchin 47, Snorlax 47, Cinderace 49; com Sobble: Dubwool 48, Corviknight 48, Pincurchin 47, Snorlax 47, Inteleon 49",
-      "versions": null
+      "notes": "semifinal da Champion Cup",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "cotton-guard",
+                "reversal",
+                "body-slam",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "swagger"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "thunderbolt",
+                "poison-jab",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "heavy-slam",
+                "high-horsepower",
+                "hammer-arm"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "snipe-shot",
+                "mud-shot",
+                "icy-wind",
+                "dark-pulse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 49,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "cotton-guard",
+                "reversal",
+                "body-slam",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "swagger"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "thunderbolt",
+                "poison-jab",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "heavy-slam",
+                "high-horsepower",
+                "hammer-arm"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "drum-beating",
+                "high-horsepower",
+                "snarl",
+                "uproar"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 49,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "cotton-guard",
+                "reversal",
+                "body-slam",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "swagger"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "thunderbolt",
+                "poison-jab",
+                "curse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "heavy-slam",
+                "high-horsepower",
+                "hammer-arm"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "pyro-ball",
+                "counter",
+                "gunk-shot",
+                "bounce"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 49,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "oleana",
@@ -2289,8 +3668,283 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Aegislash 62, Dragapult 62, Haxorus 63, Seismitoad 64, Cinderace 64, Charizard 65; com Sobble: Aegislash 62, Dragapult 62, Haxorus 63, Rhyperior 64, Rillaboom 64, Charizard 65; Charizard usa Gigantamax",
-      "versions": null
+      "notes": "Charizard usa Gigantamax",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 681,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "kings-shield",
+                "shadow-ball",
+                "sacred-sword",
+                "flash-cannon"
+              ],
+              "ability": "stance-change",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 887,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "shadow-ball",
+                "flamethrower",
+                "thunderbolt",
+                "dragon-breath"
+              ],
+              "ability": "clear-body",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "poison-jab",
+                "iron-tail",
+                "outrage",
+                "earthquake"
+              ],
+              "ability": "mold-breaker",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 537,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "toxic",
+                "drain-punch",
+                "liquidation",
+                "earthquake"
+              ],
+              "ability": "water-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "pyro-ball",
+                "feint",
+                "acrobatics",
+                "quick-attack"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fire-blast",
+                "air-slash",
+                "solar-beam",
+                "ancient-power"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 681,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "kings-shield",
+                "shadow-ball",
+                "sacred-sword",
+                "flash-cannon"
+              ],
+              "ability": "stance-change",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 887,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "shadow-ball",
+                "flamethrower",
+                "thunderbolt",
+                "dragon-breath"
+              ],
+              "ability": "clear-body",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "poison-jab",
+                "iron-tail",
+                "outrage",
+                "earthquake"
+              ],
+              "ability": "mold-breaker",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 866,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "teeter-dance",
+                "psychic",
+                "freeze-dry",
+                "thunderbolt"
+              ],
+              "ability": "tangled-feet",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "snipe-shot",
+                "dark-pulse",
+                "mud-shot",
+                "tearful-look"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fire-blast",
+                "air-slash",
+                "solar-beam",
+                "ancient-power"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 681,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "kings-shield",
+                "shadow-ball",
+                "sacred-sword",
+                "flash-cannon"
+              ],
+              "ability": "stance-change",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 887,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "shadow-ball",
+                "flamethrower",
+                "thunderbolt",
+                "dragon-breath"
+              ],
+              "ability": "clear-body",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "poison-jab",
+                "iron-tail",
+                "outrage",
+                "earthquake"
+              ],
+              "ability": "mold-breaker",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 464,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "earthquake",
+                "stone-edge",
+                "megahorn",
+                "heat-crash"
+              ],
+              "ability": "solid-rock",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "drum-beating",
+                "knock-off",
+                "high-horsepower",
+                "endeavor"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fire-blast",
+                "air-slash",
+                "solar-beam",
+                "ancient-power"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "hop-postgame-1",
@@ -2388,8 +4042,283 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Inteleon 60; com Sobble: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Cinderace 60; pós-jogo; Rillaboom usa Dynamax",
-      "versions": null
+      "notes": "pós-jogo; o inicial dele usa Dynamax",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "brave-bird"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "bubble-beam",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "hammer-arm",
+                "high-horsepower",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 845,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dive",
+                "drill-peck",
+                "throat-chop",
+                "steel-wing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "snipe-shot",
+                "sucker-punch",
+                "liquidation",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 60,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "brave-bird"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "bubble-beam",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "hammer-arm",
+                "high-horsepower",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 845,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dive",
+                "drill-peck",
+                "throat-chop",
+                "steel-wing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "drum-beating",
+                "slam",
+                "knock-off",
+                "uproar"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 60,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "scary-face",
+                "brave-bird"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "bubble-beam",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "hammer-arm",
+                "high-horsepower",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 845,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dive",
+                "drill-peck",
+                "throat-chop",
+                "steel-wing"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "double-edge",
+                "headbutt",
+                "pyro-ball",
+                "agility"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 60,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "sordward-1",
@@ -2964,9 +4893,284 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "pós-jogo: a última luta; time para quem escolheu Scorbunny; com Grookey: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zamazenta 70; com Sobble: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zamazenta 70",
+      "notes": "pós-jogo: a última luta",
       "versions": [
         "sword"
+      ],
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "snipe-shot",
+                "sucker-punch",
+                "ice-beam",
+                "dark-pulse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 889,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-bash",
+                "psychic-fangs",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": "rusted-shield",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "drum-beating",
+                "slam",
+                "knock-off",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 889,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-bash",
+                "psychic-fangs",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": "rusted-shield",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "gunk-shot",
+                "iron-head",
+                "pyro-ball",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 889,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-bash",
+                "psychic-fangs",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": "rusted-shield",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        }
       ]
     },
     {
@@ -3065,9 +5269,284 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "pós-jogo: a última luta; time para quem escolheu Scorbunny; com Grookey: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zacian 70; com Sobble: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zacian 70",
+      "notes": "pós-jogo: a última luta",
       "versions": [
         "shield"
+      ],
+      "variants": [
+        {
+          "starter": "grookey",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 818,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "snipe-shot",
+                "sucker-punch",
+                "ice-beam",
+                "dark-pulse"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 888,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-blade",
+                "wild-charge",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": "rusted-sword",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "scorbunny",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 812,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "drum-beating",
+                "slam",
+                "knock-off",
+                "high-horsepower"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 888,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-blade",
+                "wild-charge",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": "rusted-sword",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "sobble",
+          "party": [
+            {
+              "species": 832,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "cotton-guard",
+                "double-kick",
+                "double-edge",
+                "headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "hammer-arm",
+                "earthquake",
+                "heavy-slam",
+                "crunch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 871,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "zing-zap",
+                "poison-jab",
+                "liquidation",
+                "recover"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 823,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "steel-wing",
+                "drill-peck",
+                "swagger",
+                "light-screen"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 815,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "gunk-shot",
+                "iron-head",
+                "pyro-ball",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 888,
+              "form": 1,
+              "level": 70,
+              "moves": [
+                "crunch",
+                "behemoth-blade",
+                "wild-charge",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": "rusted-sword",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        }
       ]
     },
     {

@@ -37,8 +37,64 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Torchic; com Treecko: Torchic 5; com Mudkip: Treecko 5; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
-      "versions": null
+      "notes": "rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 255,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "scratch"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 258,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 252,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "pound"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "roxanne",
@@ -138,10 +194,10 @@
           "form": 0,
           "level": 18,
           "moves": [
-            "headbutt",
-            "mega-drain",
             "stun-spore",
-            "leech-seed"
+            "leech-seed",
+            "mega-drain",
+            "headbutt"
           ],
           "ability": "effect-spore",
           "item": null,
@@ -152,10 +208,10 @@
           "form": 0,
           "level": 18,
           "moves": [
-            "harden",
-            "incinerate",
             "ember",
-            "rock-throw"
+            "rock-throw",
+            "harden",
+            "incinerate"
           ],
           "ability": "magma-armor",
           "item": null,
@@ -166,10 +222,10 @@
           "form": 0,
           "level": 20,
           "moves": [
+            "mud-slap",
             "foresight",
             "mud-shot",
-            "bide",
-            "mud-slap"
+            "bide"
           ],
           "ability": "torrent",
           "item": null,
@@ -178,8 +234,157 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "time para quem escolheu Torchic; com Treecko: Wailmer 18, Shroomish 18, Combusken 20; com Mudkip: Slugma 18, Wailmer 18, Grovyle 20; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
-      "versions": null
+      "notes": "rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 320,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "water-gun",
+                "rollout",
+                "whirlpool",
+                "astonish"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "stun-spore",
+                "leech-seed",
+                "mega-drain",
+                "headbutt"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 256,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "sand-attack",
+                "peck",
+                "double-kick",
+                "flame-charge"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 285,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "stun-spore",
+                "leech-seed",
+                "mega-drain",
+                "headbutt"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 218,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "ember",
+                "rock-throw",
+                "harden",
+                "incinerate"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 259,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "mud-slap",
+                "foresight",
+                "mud-shot",
+                "bide"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 218,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "ember",
+                "rock-throw",
+                "harden",
+                "incinerate"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 320,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "water-gun",
+                "rollout",
+                "whirlpool",
+                "astonish"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 253,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "quick-attack",
+                "mega-drain",
+                "fury-cutter",
+                "pursuit"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "wally-1",
@@ -854,8 +1059,157 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": "time para quem escolheu Torchic; com Treecko: Wailmer 31, Shroomish 31, Combusken 33; com Mudkip: Slugma 31, Wailmer 31, Grovyle 33; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
-      "versions": null
+      "notes": "rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 320,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "water-pulse",
+                "mist",
+                "brine",
+                "rest"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 285,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "poison-powder",
+                "worry-seed",
+                "giga-drain",
+                "growth"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 256,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "double-kick",
+                "flame-charge",
+                "quick-attack",
+                "bulk-up"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 285,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "poison-powder",
+                "worry-seed",
+                "giga-drain",
+                "growth"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 218,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "clear-smog",
+                "ancient-power",
+                "flame-burst",
+                "rock-slide"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 259,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "bide",
+                "mud-bomb",
+                "rock-slide",
+                "protect"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 218,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "clear-smog",
+                "ancient-power",
+                "flame-burst",
+                "rock-slide"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 320,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "water-pulse",
+                "mist",
+                "brine",
+                "rest"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 253,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "pursuit",
+                "leaf-blade",
+                "agility",
+                "slam"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "winona",
@@ -996,8 +1350,199 @@
       ],
       "level_cap": 39,
       "verified": true,
-      "notes": "time para quem escolheu Torchic; com Treecko: Swellow 37, Wailord 37, Breloom 37, Blaziken 39; com Mudkip: Swellow 37, Magcargo 37, Wailord 37, Sceptile 39; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); a Pokéwiki dá o inicial no nível 38",
-      "versions": null
+      "notes": "rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); a Pokéwiki dá o inicial no nível 38",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "double-team",
+                "aerial-ace",
+                "quick-guard",
+                "agility"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 321,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "rest",
+                "brine",
+                "water-spout",
+                "amnesia"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 286,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "counter",
+                "mach-punch",
+                "force-palm",
+                "mind-reader"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 257,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "quick-attack",
+                "bulk-up",
+                "blaze-kick",
+                "focus-energy"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 39,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "double-team",
+                "aerial-ace",
+                "quick-guard",
+                "agility"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 286,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "counter",
+                "mach-punch",
+                "force-palm",
+                "mind-reader"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 219,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "flame-burst",
+                "rock-slide",
+                "lava-plume",
+                "amnesia"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 260,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "mud-bomb",
+                "rock-slide",
+                "protect",
+                "muddy-water"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 39,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "double-team",
+                "aerial-ace",
+                "quick-guard",
+                "agility"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 219,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "flame-burst",
+                "rock-slide",
+                "lava-plume",
+                "amnesia"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 321,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "rest",
+                "brine",
+                "water-spout",
+                "amnesia"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 254,
+              "form": 0,
+              "level": 39,
+              "moves": [
+                "agility",
+                "slam",
+                "dual-chop",
+                "detect"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 39,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "courtney-mt-pyre",
@@ -1959,20 +2504,6 @@
           "tera_type": null
         },
         {
-          "species": 219,
-          "form": 0,
-          "level": 48,
-          "moves": [
-            "earth-power",
-            "lava-plume",
-            "body-slam",
-            "rock-slide"
-          ],
-          "ability": "magma-armor",
-          "item": null,
-          "tera_type": null
-        },
-        {
           "species": 286,
           "form": 0,
           "level": 48,
@@ -1983,6 +2514,20 @@
             "rock-tomb"
           ],
           "ability": "effect-spore",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 219,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "earth-power",
+            "lava-plume",
+            "body-slam",
+            "rock-slide"
+          ],
+          "ability": "magma-armor",
           "item": null,
           "tera_type": null
         },
@@ -2003,8 +2548,241 @@
       ],
       "level_cap": 50,
       "verified": true,
-      "notes": "time para quem escolheu Torchic; com Treecko: Swellow 48, Raichu 48, Breloom 48, Wailord 48, Blaziken 50; com Mudkip: Swellow 48, Raichu 48, Wailord 48, Magcargo 48, Sceptile 50; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); pós-jogo, depois dos créditos; o inicial megaevolui",
-      "versions": null
+      "notes": "rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); pós-jogo, depois dos créditos; o inicial megaevolui",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "treecko",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "aerial-ace",
+                "quick-attack",
+                "u-turn",
+                "steel-wing"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 26,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "thunder-wave",
+                "thunderbolt",
+                "quick-attack",
+                "light-screen"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 321,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "surf",
+                "heavy-slam",
+                "bulldoze",
+                "ice-beam"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 286,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "seed-bomb",
+                "force-palm",
+                "venoshock",
+                "rock-tomb"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 257,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "blaze-kick",
+                "brick-break",
+                "quick-attack",
+                "shadow-claw"
+              ],
+              "ability": "blaze",
+              "item": "blazikenite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        },
+        {
+          "starter": "torchic",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "aerial-ace",
+                "quick-attack",
+                "u-turn",
+                "steel-wing"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 26,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "thunder-wave",
+                "thunderbolt",
+                "quick-attack",
+                "light-screen"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 286,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "seed-bomb",
+                "force-palm",
+                "venoshock",
+                "rock-tomb"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 219,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "earth-power",
+                "lava-plume",
+                "body-slam",
+                "rock-slide"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 260,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "earthquake",
+                "muddy-water",
+                "rock-slide",
+                "brick-break"
+              ],
+              "ability": "torrent",
+              "item": "swampertite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        },
+        {
+          "starter": "mudkip",
+          "party": [
+            {
+              "species": 277,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "aerial-ace",
+                "quick-attack",
+                "u-turn",
+                "steel-wing"
+              ],
+              "ability": "guts",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 26,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "thunder-wave",
+                "thunderbolt",
+                "quick-attack",
+                "light-screen"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 219,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "earth-power",
+                "lava-plume",
+                "body-slam",
+                "rock-slide"
+              ],
+              "ability": "magma-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 321,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "surf",
+                "heavy-slam",
+                "bulldoze",
+                "ice-beam"
+              ],
+              "ability": "water-veil",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 254,
+              "form": 0,
+              "level": 50,
+              "moves": [
+                "leaf-blade",
+                "x-scissor",
+                "dual-chop",
+                "night-slash"
+              ],
+              "ability": "overgrow",
+              "item": "sceptilite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 50,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "courtney-delta-petalburg",

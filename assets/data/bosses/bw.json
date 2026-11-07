@@ -34,15 +34,74 @@
             "tackle",
             "leer"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Oshawott 5; com Oshawott: Tepig 5; dupla seguida: Bianca e depois Cheren",
-      "versions": null
+      "notes": "dupla seguida: Bianca e depois Cheren",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 501,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 495,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leer"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 498,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cheren-1",
@@ -61,15 +120,74 @@
             "tackle",
             "tail-whip"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 5; com Oshawott: Snivy 5",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 498,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 501,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 495,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leer"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "n-accumula",
@@ -117,7 +235,7 @@
             "tackle",
             "odor-sleuth"
           ],
-          "ability": null,
+          "ability": "vital-spirit",
           "item": null,
           "tera_type": null
         },
@@ -130,15 +248,116 @@
             "leer",
             "vine-whip"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 7,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Lillipup 6, Oshawott 7; com Oshawott: Lillipup 6, Tepig 7",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "leer",
+                "tackle",
+                "odor-sleuth"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 501,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "water-gun"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "leer",
+                "tackle",
+                "odor-sleuth"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 495,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "leer",
+                "vine-whip"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 6,
+              "moves": [
+                "leer",
+                "tackle",
+                "odor-sleuth"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 498,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "ember"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 7,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cheren-2",
@@ -158,7 +377,7 @@
             "tail-whip",
             "water-gun"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "oran-berry",
           "tera_type": null
         },
@@ -171,20 +390,121 @@
             "growl",
             "assist"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 8,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 8, Purrloin 8; com Oshawott: Snivy 8, Purrloin 8",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 498,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "ember"
+              ],
+              "ability": "blaze",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "scratch",
+                "growl",
+                "assist"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 501,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "water-gun"
+              ],
+              "ability": "torrent",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "scratch",
+                "growl",
+                "assist"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 495,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "tackle",
+                "leer",
+                "vine-whip"
+              ],
+              "ability": "overgrow",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "scratch",
+                "growl",
+                "assist"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 8,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "striaton-trio",
       "kind": "gym",
-      "name": "Cress",
+      "name": "Cilan, Chili ou Cress",
       "title": "Gym Leader",
       "location": "Striaton Gym",
       "order": 6,
@@ -200,7 +520,7 @@
             "odor-sleuth",
             "helping-hand"
           ],
-          "ability": null,
+          "ability": "vital-spirit",
           "item": null,
           "tera_type": null
         },
@@ -214,15 +534,122 @@
             "lick",
             "fury-swipes"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "o líder depende do seu inicial: com Tepig, Cress; com Snivy, Chili: Lillipup 12, Pansear 14; com Oshawott, Cilan: Lillipup 12, Pansage 14",
-      "versions": null
+      "notes": "o líder depende do seu inicial: com Snivy, Chili; com Tepig, Cress; com Oshawott, Cilan",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "bite",
+                "work-up",
+                "odor-sleuth",
+                "helping-hand"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 513,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "incinerate",
+                "work-up",
+                "lick",
+                "fury-swipes"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "bite",
+                "work-up",
+                "odor-sleuth",
+                "helping-hand"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 515,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "water-gun",
+                "work-up",
+                "lick",
+                "fury-swipes"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 506,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "bite",
+                "work-up",
+                "odor-sleuth",
+                "helping-hand"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 511,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "vine-whip",
+                "work-up",
+                "lick",
+                "fury-swipes"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cheren-3",
@@ -243,7 +670,7 @@
             "water-sport",
             "focus-energy"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "oran-berry",
           "tera_type": null
         },
@@ -257,15 +684,122 @@
             "sand-attack",
             "fury-swipes"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Tepig 14, Purrloin 12; com Oshawott: Snivy 14, Purrloin 12",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 498,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "tail-whip",
+                "ember",
+                "odor-sleuth",
+                "defense-curl"
+              ],
+              "ability": "blaze",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "growl",
+                "assist",
+                "sand-attack",
+                "fury-swipes"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 501,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "tail-whip",
+                "water-gun",
+                "water-sport",
+                "focus-energy"
+              ],
+              "ability": "torrent",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "growl",
+                "assist",
+                "sand-attack",
+                "fury-swipes"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 495,
+              "form": 0,
+              "level": 14,
+              "moves": [
+                "leer",
+                "vine-whip",
+                "wrap",
+                "growth"
+              ],
+              "ability": "overgrow",
+              "item": "oran-berry",
+              "tera_type": null
+            },
+            {
+              "species": 509,
+              "form": 0,
+              "level": 12,
+              "moves": [
+                "growl",
+                "assist",
+                "sand-attack",
+                "fury-swipes"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 14,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "n-nacrene",
@@ -443,7 +977,7 @@
             "helping-hand",
             "take-down"
           ],
-          "ability": null,
+          "ability": "intimidate",
           "item": null,
           "tera_type": null
         },
@@ -457,7 +991,7 @@
             "fury-swipes",
             "water-sport"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         },
@@ -471,7 +1005,7 @@
             "imprison",
             "moonlight"
           ],
-          "ability": null,
+          "ability": "forewarn",
           "item": null,
           "tera_type": null
         },
@@ -485,15 +1019,206 @@
             "leaf-tornado",
             "leech-seed"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Herdier 18, Pansear 18, Munna 18, Dewott 20; com Oshawott: Herdier 18, Pansage 18, Munna 18, Pignite 20",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "odor-sleuth",
+                "bite",
+                "helping-hand",
+                "take-down"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 513,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "lick",
+                "incinerate",
+                "fury-swipes",
+                "yawn"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 517,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "yawn",
+                "psybeam",
+                "imprison",
+                "moonlight"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 502,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "water-sport",
+                "focus-energy",
+                "razor-shell",
+                "fury-cutter"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "odor-sleuth",
+                "bite",
+                "helping-hand",
+                "take-down"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 515,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "lick",
+                "water-gun",
+                "fury-swipes",
+                "water-sport"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 517,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "yawn",
+                "psybeam",
+                "imprison",
+                "moonlight"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 496,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "wrap",
+                "growth",
+                "leaf-tornado",
+                "leech-seed"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "odor-sleuth",
+                "bite",
+                "helping-hand",
+                "take-down"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 511,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "lick",
+                "vine-whip",
+                "fury-swipes",
+                "leech-seed"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 517,
+              "form": 0,
+              "level": 18,
+              "moves": [
+                "yawn",
+                "psybeam",
+                "imprison",
+                "moonlight"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "defense-curl",
+                "flame-charge",
+                "arm-thrust",
+                "smog"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cheren-4",
@@ -514,7 +1239,7 @@
             "air-cutter",
             "roost"
           ],
-          "ability": null,
+          "ability": "super-luck",
           "item": null,
           "tera_type": null
         },
@@ -528,7 +1253,7 @@
             "pursuit",
             "torment"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": null,
           "tera_type": null
         },
@@ -542,7 +1267,7 @@
             "yawn",
             "bite"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         },
@@ -556,15 +1281,206 @@
             "razor-shell",
             "fury-cutter"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "sitrus-berry",
           "tera_type": null
         }
       ],
       "level_cap": 22,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Pidove 20, Liepard 20, Pansage 20, Pignite 22; com Oshawott: Pidove 20, Liepard 20, Panpour 20, Servine 22",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 519,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "air-cutter",
+                "roost"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "sand-attack",
+                "fury-swipes",
+                "pursuit",
+                "torment"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 511,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "vine-whip",
+                "fury-swipes",
+                "leech-seed",
+                "bite"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "defense-curl",
+                "flame-charge",
+                "arm-thrust",
+                "smog"
+              ],
+              "ability": "blaze",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 519,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "air-cutter",
+                "roost"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "sand-attack",
+                "fury-swipes",
+                "pursuit",
+                "torment"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 513,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "incinerate",
+                "fury-swipes",
+                "yawn",
+                "bite"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 502,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "water-sport",
+                "focus-energy",
+                "razor-shell",
+                "fury-cutter"
+              ],
+              "ability": "torrent",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 519,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "leer",
+                "quick-attack",
+                "air-cutter",
+                "roost"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "sand-attack",
+                "fury-swipes",
+                "pursuit",
+                "torment"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 515,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "water-gun",
+                "fury-swipes",
+                "water-sport",
+                "bite"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 496,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "wrap",
+                "growth",
+                "leaf-tornado",
+                "leech-seed"
+              ],
+              "ability": "overgrow",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "n-nimbasa",
@@ -713,7 +1629,7 @@
             "torment",
             "fake-out"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": null,
           "tera_type": null
         },
@@ -727,7 +1643,7 @@
             "bite",
             "flame-burst"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": "charcoal",
           "tera_type": null
         },
@@ -741,7 +1657,7 @@
             "roost",
             "detect"
           ],
-          "ability": null,
+          "ability": "super-luck",
           "item": null,
           "tera_type": null
         },
@@ -755,15 +1671,206 @@
             "fury-cutter",
             "water-pulse"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "sitrus-berry",
           "tera_type": null
         }
       ],
       "level_cap": 26,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Liepard 24, Pansage 24, Tranquill 24, Pignite 26; com Oshawott: Liepard 24, Panpour 24, Tranquill 24, Servine 26",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "pursuit",
+                "torment",
+                "fake-out"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 511,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "leech-seed",
+                "bite",
+                "seed-bomb"
+              ],
+              "ability": "gluttony",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 520,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "quick-attack",
+                "air-cutter",
+                "roost",
+                "detect"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "flame-charge",
+                "arm-thrust",
+                "smog",
+                "rollout"
+              ],
+              "ability": "blaze",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "pursuit",
+                "torment",
+                "fake-out"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 513,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "yawn",
+                "bite",
+                "flame-burst"
+              ],
+              "ability": "gluttony",
+              "item": "charcoal",
+              "tera_type": null
+            },
+            {
+              "species": 520,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "quick-attack",
+                "air-cutter",
+                "roost",
+                "detect"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 502,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "focus-energy",
+                "razor-shell",
+                "fury-cutter",
+                "water-pulse"
+              ],
+              "ability": "torrent",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "pursuit",
+                "torment",
+                "fake-out"
+              ],
+              "ability": "unburden",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 515,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "fury-swipes",
+                "water-sport",
+                "bite",
+                "scald"
+              ],
+              "ability": "gluttony",
+              "item": "mystic-water",
+              "tera_type": null
+            },
+            {
+              "species": 520,
+              "form": 0,
+              "level": 24,
+              "moves": [
+                "quick-attack",
+                "air-cutter",
+                "roost",
+                "detect"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 496,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "growth",
+                "leaf-tornado",
+                "leech-seed",
+                "mega-drain"
+              ],
+              "ability": "overgrow",
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "clay",
@@ -841,7 +1948,7 @@
             "work-up",
             "crunch"
           ],
-          "ability": null,
+          "ability": "intimidate",
           "item": null,
           "tera_type": null
         },
@@ -855,7 +1962,7 @@
             "scald",
             "taunt"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         },
@@ -869,7 +1976,7 @@
             "psybeam",
             "hypnosis"
           ],
-          "ability": null,
+          "ability": "forewarn",
           "item": null,
           "tera_type": null
         },
@@ -883,15 +1990,206 @@
             "mega-drain",
             "slam"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 28,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Herdier 26, Pansear 26, Musharna 26, Dewott 28; com Oshawott: Herdier 26, Pansage 26, Musharna 26, Pignite 28",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "helping-hand",
+                "take-down",
+                "work-up",
+                "crunch"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 513,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "yawn",
+                "bite",
+                "flame-burst",
+                "amnesia"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 502,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "razor-shell",
+                "fury-cutter",
+                "water-pulse",
+                "revenge"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 28,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "helping-hand",
+                "take-down",
+                "work-up",
+                "crunch"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 515,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "water-sport",
+                "bite",
+                "scald",
+                "taunt"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 496,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "leaf-tornado",
+                "leech-seed",
+                "mega-drain",
+                "slam"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 28,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 507,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "helping-hand",
+                "take-down",
+                "work-up",
+                "crunch"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 511,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "leech-seed",
+                "bite",
+                "seed-bomb",
+                "torment"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "arm-thrust",
+                "smog",
+                "rollout",
+                "take-down"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 28,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "n-chargestone",
@@ -1040,7 +2338,7 @@
             "taunt",
             "air-slash"
           ],
-          "ability": null,
+          "ability": "super-luck",
           "item": "scope-lens",
           "tera_type": null
         },
@@ -1054,7 +2352,7 @@
             "hone-claws",
             "assurance"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": "sitrus-berry",
           "tera_type": null
         },
@@ -1068,7 +2366,7 @@
             "fury-swipes",
             "flame-burst"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": "charcoal",
           "tera_type": null
         },
@@ -1082,15 +2380,206 @@
             "revenge",
             "aqua-jet"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "leftovers",
           "tera_type": null
         }
       ],
       "level_cap": 35,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 33, Liepard 33, Simisage 33, Pignite 35; com Oshawott: Unfezant 33, Liepard 33, Simipour 33, Servine 35",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "roost",
+                "detect",
+                "taunt",
+                "air-slash"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "torment",
+                "fake-out",
+                "hone-claws",
+                "assurance"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 512,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "seed-bomb"
+              ],
+              "ability": "gluttony",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "smog",
+                "rollout",
+                "take-down",
+                "heat-crash"
+              ],
+              "ability": "blaze",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 35,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "roost",
+                "detect",
+                "taunt",
+                "air-slash"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "torment",
+                "fake-out",
+                "hone-claws",
+                "assurance"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 514,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "flame-burst"
+              ],
+              "ability": "gluttony",
+              "item": "charcoal",
+              "tera_type": null
+            },
+            {
+              "species": 502,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "fury-cutter",
+                "water-pulse",
+                "revenge",
+                "aqua-jet"
+              ],
+              "ability": "torrent",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 35,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "roost",
+                "detect",
+                "taunt",
+                "air-slash"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "torment",
+                "fake-out",
+                "hone-claws",
+                "assurance"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 516,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "scald"
+              ],
+              "ability": "gluttony",
+              "item": "mystic-water",
+              "tera_type": null
+            },
+            {
+              "species": 496,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "leech-seed",
+                "mega-drain",
+                "slam",
+                "leaf-blade"
+              ],
+              "ability": "overgrow",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 35,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "brycen",
@@ -1168,7 +2657,7 @@
             "roar",
             "retaliate"
           ],
-          "ability": null,
+          "ability": "intimidate",
           "item": null,
           "tera_type": null
         },
@@ -1182,7 +2671,7 @@
             "fury-swipes",
             "scald"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         },
@@ -1196,7 +2685,7 @@
             "psybeam",
             "hypnosis"
           ],
-          "ability": null,
+          "ability": "forewarn",
           "item": null,
           "tera_type": null
         },
@@ -1210,15 +2699,206 @@
             "leaf-blade",
             "coil"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Stoutland 38, Simisear 38, Musharna 38, Samurott 40; com Oshawott: Stoutland 38, Simisage 38, Musharna 38, Emboar 40",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "work-up",
+                "crunch",
+                "roar",
+                "retaliate"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 514,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "flame-burst"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 503,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "revenge",
+                "aqua-jet",
+                "slash",
+                "encore"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "work-up",
+                "crunch",
+                "roar",
+                "retaliate"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 516,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "scald"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 497,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "mega-drain",
+                "slam",
+                "leaf-blade",
+                "coil"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "work-up",
+                "crunch",
+                "roar",
+                "retaliate"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 512,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "seed-bomb"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "defense-curl",
+                "lucky-chant",
+                "psybeam",
+                "hypnosis"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 40,
+              "moves": [
+                "rollout",
+                "take-down",
+                "heat-crash",
+                "assurance"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "drayden",
@@ -1357,7 +3037,7 @@
             "air-slash",
             "razor-wind"
           ],
-          "ability": null,
+          "ability": "super-luck",
           "item": "scope-lens",
           "tera_type": null
         },
@@ -1371,7 +3051,7 @@
             "taunt",
             "night-slash"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": "sitrus-berry",
           "tera_type": null
         },
@@ -1385,7 +3065,7 @@
             "fury-swipes",
             "flame-burst"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": "charcoal",
           "tera_type": null
         },
@@ -1399,15 +3079,206 @@
             "encore",
             "aqua-tail"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "leftovers",
           "tera_type": null
         }
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Unfezant 43, Liepard 43, Simisage 43, Emboar 45; com Oshawott: Unfezant 43, Liepard 43, Simipour 43, Serperior 45",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "detect",
+                "taunt",
+                "air-slash",
+                "razor-wind"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "assurance",
+                "slash",
+                "taunt",
+                "night-slash"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 512,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "seed-bomb"
+              ],
+              "ability": "gluttony",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "take-down",
+                "heat-crash",
+                "assurance",
+                "flamethrower"
+              ],
+              "ability": "blaze",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "detect",
+                "taunt",
+                "air-slash",
+                "razor-wind"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "assurance",
+                "slash",
+                "taunt",
+                "night-slash"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 514,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "flame-burst"
+              ],
+              "ability": "gluttony",
+              "item": "charcoal",
+              "tera_type": null
+            },
+            {
+              "species": 503,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "aqua-jet",
+                "slash",
+                "encore",
+                "aqua-tail"
+              ],
+              "ability": "torrent",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 521,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "detect",
+                "taunt",
+                "air-slash",
+                "razor-wind"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 510,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "assurance",
+                "slash",
+                "taunt",
+                "night-slash"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 516,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "leer",
+                "lick",
+                "fury-swipes",
+                "scald"
+              ],
+              "ability": "gluttony",
+              "item": "mystic-water",
+              "tera_type": null
+            },
+            {
+              "species": 497,
+              "form": 0,
+              "level": 45,
+              "moves": [
+                "slam",
+                "leaf-blade",
+                "coil",
+                "giga-drain"
+              ],
+              "ability": "overgrow",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 45,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "shauntal",
@@ -2508,7 +4379,7 @@
             "surf",
             "wild-charge"
           ],
-          "ability": null,
+          "ability": "intimidate",
           "item": null,
           "tera_type": null
         },
@@ -2522,7 +4393,7 @@
             "rock-slide",
             "brick-break"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": null,
           "tera_type": null
         },
@@ -2536,7 +4407,7 @@
             "dream-eater",
             "psychic"
           ],
-          "ability": null,
+          "ability": "forewarn",
           "item": null,
           "tera_type": null
         },
@@ -2550,7 +4421,7 @@
             "u-turn",
             "fake-out"
           ],
-          "ability": null,
+          "ability": "inner-focus",
           "item": null,
           "tera_type": null
         },
@@ -2564,7 +4435,7 @@
             "psychic",
             "overheat"
           ],
-          "ability": null,
+          "ability": "flash-fire",
           "item": null,
           "tera_type": null
         },
@@ -2578,15 +4449,290 @@
             "dragon-tail",
             "coil"
           ],
-          "ability": null,
+          "ability": "overgrow",
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Stoutland 63, Simisear 63, Musharna 63, Mienshao 63, Chandelure 63, Samurott 65; com Oshawott: Stoutland 63, Simisage 63, Musharna 63, Mienshao 63, Chandelure 63, Emboar 65; pós-jogo: sábados, no fim da tarde",
-      "versions": null
+      "notes": "pós-jogo: sábados, no fim da tarde",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "ice-fang",
+                "surf",
+                "wild-charge"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 514,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "flamethrower",
+                "rock-slide",
+                "brick-break"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "yawn",
+                "dream-eater",
+                "psychic"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 620,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "drain-punch",
+                "u-turn",
+                "fake-out"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 609,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "shadow-ball",
+                "psychic",
+                "overheat"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 503,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "return",
+                "aqua-tail",
+                "x-scissor",
+                "aerial-ace"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "ice-fang",
+                "surf",
+                "wild-charge"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 516,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "surf",
+                "rock-slide",
+                "brick-break"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "yawn",
+                "dream-eater",
+                "psychic"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 620,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "drain-punch",
+                "u-turn",
+                "fake-out"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 609,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "shadow-ball",
+                "psychic",
+                "overheat"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 497,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "return",
+                "leaf-storm",
+                "dragon-tail",
+                "coil"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 508,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "ice-fang",
+                "surf",
+                "wild-charge"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 512,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "energy-ball",
+                "rock-slide",
+                "brick-break"
+              ],
+              "ability": "gluttony",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 518,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "yawn",
+                "dream-eater",
+                "psychic"
+              ],
+              "ability": "forewarn",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 620,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "drain-punch",
+                "u-turn",
+                "fake-out"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 609,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "return",
+                "shadow-ball",
+                "psychic",
+                "overheat"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "return",
+                "flare-blitz",
+                "brick-break",
+                "wild-charge"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cheren-rematch",
@@ -2607,7 +4753,7 @@
             "shadow-claw",
             "aerial-ace"
           ],
-          "ability": null,
+          "ability": "unburden",
           "item": "sitrus-berry",
           "tera_type": null
         },
@@ -2621,7 +4767,7 @@
             "payback",
             "rock-slide"
           ],
-          "ability": null,
+          "ability": "gluttony",
           "item": "charcoal",
           "tera_type": null
         },
@@ -2635,7 +4781,7 @@
             "facade",
             "u-turn"
           ],
-          "ability": null,
+          "ability": "super-luck",
           "item": "scope-lens",
           "tera_type": null
         },
@@ -2649,7 +4795,7 @@
             "earthquake",
             "giga-impact"
           ],
-          "ability": null,
+          "ability": "sturdy",
           "item": "leftovers",
           "tera_type": null
         },
@@ -2663,7 +4809,7 @@
             "x-scissor",
             "surf"
           ],
-          "ability": null,
+          "ability": "rivalry",
           "item": "dragon-gem",
           "tera_type": null
         },
@@ -2677,15 +4823,290 @@
             "blizzard",
             "x-scissor"
           ],
-          "ability": null,
+          "ability": "torrent",
           "item": "focus-sash",
           "tera_type": null
         }
       ],
       "level_cap": 67,
       "verified": true,
-      "notes": "time para quem escolheu Tepig; com Snivy: Liepard 65, Simisage 65, Unfezant 65, Gigalith 65, Haxorus 65, Emboar 67; com Oshawott: Liepard 65, Simipour 65, Unfezant 65, Gigalith 65, Haxorus 65, Serperior 67; pós-jogo",
-      "versions": null
+      "notes": "pós-jogo",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "snivy",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fake-out",
+                "night-slash",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 512,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "energy-ball",
+                "brick-break",
+                "payback",
+                "rock-slide"
+              ],
+              "ability": "gluttony",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 521,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "air-slash",
+                "quick-attack",
+                "facade",
+                "u-turn"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 526,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "stealth-rock",
+                "earthquake",
+                "giga-impact"
+              ],
+              "ability": "sturdy",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "outrage",
+                "rock-slide",
+                "x-scissor",
+                "surf"
+              ],
+              "ability": "rivalry",
+              "item": "dragon-gem",
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "flare-blitz",
+                "head-smash",
+                "brick-break",
+                "wild-charge"
+              ],
+              "ability": "blaze",
+              "item": "focus-sash",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 67,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fake-out",
+                "night-slash",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 514,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "flamethrower",
+                "brick-break",
+                "payback",
+                "rock-slide"
+              ],
+              "ability": "gluttony",
+              "item": "charcoal",
+              "tera_type": null
+            },
+            {
+              "species": 521,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "air-slash",
+                "quick-attack",
+                "facade",
+                "u-turn"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 526,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "stealth-rock",
+                "earthquake",
+                "giga-impact"
+              ],
+              "ability": "sturdy",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "outrage",
+                "rock-slide",
+                "x-scissor",
+                "surf"
+              ],
+              "ability": "rivalry",
+              "item": "dragon-gem",
+              "tera_type": null
+            },
+            {
+              "species": 503,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "hydro-pump",
+                "aqua-jet",
+                "blizzard",
+                "x-scissor"
+              ],
+              "ability": "torrent",
+              "item": "focus-sash",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 67,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 510,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "fake-out",
+                "night-slash",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": "unburden",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 516,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "surf",
+                "brick-break",
+                "payback",
+                "rock-slide"
+              ],
+              "ability": "gluttony",
+              "item": "mystic-water",
+              "tera_type": null
+            },
+            {
+              "species": 521,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "air-slash",
+                "quick-attack",
+                "facade",
+                "u-turn"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 526,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "stone-edge",
+                "stealth-rock",
+                "earthquake",
+                "giga-impact"
+              ],
+              "ability": "sturdy",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 612,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "outrage",
+                "rock-slide",
+                "x-scissor",
+                "surf"
+              ],
+              "ability": "rivalry",
+              "item": "dragon-gem",
+              "tera_type": null
+            },
+            {
+              "species": 497,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "leaf-storm",
+                "coil",
+                "dragon-tail",
+                "leaf-blade"
+              ],
+              "ability": "overgrow",
+              "item": "focus-sash",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 67,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "cynthia",
