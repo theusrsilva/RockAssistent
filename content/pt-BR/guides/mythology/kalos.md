@@ -12,7 +12,7 @@
   Eternal Flower.
 - Com raiva da guerra, AZ transformou a máquina na **arma final** e acabou com o conflito, matando os dois lados.
 - O Floette o abandonou ao saber; AZ ficou imortal e vagou por 3.000 anos procurando por ele.
-- A arma final está escondida sob Geosenge Town, cidade das pedras em pé.
+- A arma final está escondida sob Geosenge Town, cidade das pedras em pé; os túmulos dos Pokémon que a alimentaram ficam na Route 10, cujas pedras absorveram a energia deles.
 
 ## Mega Evolução
 
@@ -56,4 +56,4 @@
 - Pedras de Geosenge Town = alinhamentos de Carnac (Bretanha).
 - O nome "Kalos" vem do grego "beleza".
 
-<!-- fontes: Bulbapedia (Kalos, AZ, Ultimate Weapon, Aura trio, Team Flare), Serebii; docs/superpowers/sources/xy-pokemythology-notes.md -->
+<!-- fontes: Bulbapedia (Kalos, AZ, Ultimate Weapon, Geosenge Town, Kalos Route 10, Aura trio, Team Flare), Serebii; docs/superpowers/sources/xy-pokemythology-notes.md -->

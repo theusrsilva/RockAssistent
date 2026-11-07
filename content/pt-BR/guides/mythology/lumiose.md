@@ -1,6 +1,6 @@
 ## A cidade
 
-- Legends: Z-A se passa só em Lumiose City (Kalos), depois dos eventos de X/Y, durante um plano de reconstrução da cidade.
+- Legends: Z-A se passa só em Lumiose City (Kalos), cinco anos depois dos eventos de X/Y, durante um plano de reconstrução da cidade.
 - Inspirada em Paris; a Prism Tower (≈ Torre Eiffel) fica no centro, em Centrico Plaza.
 - Distritos: Vert, Bleu, Magenta, Rouge e Jaune, com setores, avenidas e o Saison Canal.
 - DLC Mega Dimension: Hyperspace Lumiose, uma versão distorcida da cidade.

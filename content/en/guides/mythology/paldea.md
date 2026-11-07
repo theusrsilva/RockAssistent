@@ -1,6 +1,6 @@
 ## The region
 
-- Based on the Iberian Peninsula (Spain and Portugal); the Naranja/Uva Academy is in Mesagoza, in the center.
+- Based on the Iberian Peninsula (Spain and Portugal); the Naranja/Uva Academy is in Mesagoza, in the center, in a building that resembles the Sagrada Família (Barcelona).
 - Games: Scarlet/Violet, with the DLCs The Teal Mask (Kitakami) and The Indigo Disk (Blueberry Academy).
 - Core lore: the Great Crater of Paldea (Area Zero), Terastal and the Paradox Pokémon.
 
@@ -68,4 +68,4 @@
 - Kitakami recalls rural Japan (festival, rice fields).
 - Blueberry Academy is in Unova, in a dome under the sea.
 
-<!-- fontes: Bulbapedia (Paldea, Area Zero, Treasures of Ruin, Loyal Three, Ogerpon, Terapagos, Team Star), Serebii; docs/superpowers/sources/sv-pokemythology-notes.md -->
+<!-- fontes: Bulbapedia (Paldea, Naranja Academy, Area Zero, Treasures of Ruin, Loyal Three, Ogerpon, Terapagos, Team Star), Serebii; docs/superpowers/sources/sv-pokemythology-notes.md -->

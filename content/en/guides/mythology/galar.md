@@ -6,7 +6,7 @@
 
 ## The Darkest Day
 
-- In the distant past a meteorite fell on Galar carrying **Eternatus**; its energy is the Galar particle that
+- About 20,000 years ago a meteorite fell on Galar carrying **Eternatus**; its energy is the Galar particle that
   makes Dynamax possible.
 - 3,000 years ago, Eternatus caused the Darkest Day: giant, uncontrolled Pokémon all over the region.
 - The official history says two young heroes with a sword and a shield saved Galar.

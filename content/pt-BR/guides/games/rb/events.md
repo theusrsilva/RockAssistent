@@ -1,5 +1,5 @@
-- **Mew** era o único Pokémon de evento: distribuído em lojas e eventos (nv. 5), passado por troca.
+- **Mew** era o único Pokémon de evento: distribuído em eventos da Nintendo por troca direta (nv. 5).
 - Não há Mystery Gift nem itens-chave de evento nesta geração.
-- O Virtual Console do 3DS (2016) teve uma distribuição de Mew para quem transferisse pelo Poké Transporter.
+- Virtual Console do 3DS (2016): Mew nv. 5 por código do eShop e em lojas, só no Japão; fora do Japão não houve.
 
-<!-- fontes: assets/data/areas/rb.json, bosses/rb.json; docs/superpowers/sources/rb-pokemythology-notes.md; pokemondb.net e serebii.net (TMs, trocas, prêmios) -->
+<!-- fontes: assets/data/areas/rb.json, bosses/rb.json; docs/superpowers/sources/rb-pokemythology-notes.md; pokemondb.net e serebii.net (TMs, trocas, prêmios); eventos: serebii.net/news (Mew do VC, 2016), Bulbapedia por busca (Events, Mew) -->

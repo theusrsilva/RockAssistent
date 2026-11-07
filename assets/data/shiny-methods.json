@@ -1,6 +1,7 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Masuda_method",
+    "https://github.com/pret/pokecrystal/blob/master/data/events/odd_eggs.asm",
     "https://pokestats.gg/shiny-hunting-hub/methods/arceus-massive-outbreak",
     "https://pokestats.gg/shiny-hunting-hub/methods/arceus-outbreak",
     "https://pokestats.gg/shiny-hunting-hub/methods/catch-combo",
@@ -150,7 +151,7 @@
       "games": [
         "c"
       ],
-      "notes": "14% fora do Japão; 50% na versão japonesa (que precisava do Mobile System GB). A Rotom Labs dá 1/10.",
+      "notes": "14% fora do Japão (soma das entradas shiny da tabela OddEggProbabilities da decompilação: 1+3+3+2+2+2+1); 50% na versão japonesa (que precisava do Mobile System GB). O 1/10 da Rotom Labs está errado.",
       "verified": true
     },
     {

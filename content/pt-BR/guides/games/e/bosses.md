@@ -82,4 +82,4 @@
 - **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Battle Pyramid. Os 3 Regis: Fighting, Fire e Water.
 - **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Articuno, Zapdos e Moltres: Rock e Electric.
 
-<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes) -->
+<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes, Battle Tents e Frontier Brains), pret/pokeemerald (data/text/battle_tent.inc) -->

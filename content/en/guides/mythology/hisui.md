@@ -57,7 +57,7 @@
 | Volo (Ginkgo Guild) | Find Arceus and remake the world; uses Giratina |
 | Kamado | Distrusts the player for falling from the sky; banishes the player for a while |
 
-- **Cogita:** a mysterious woman who knows the myths; she and Volo look like Cynthia (the game hints they are related).
+- **Cogita:** a mysterious woman who knows the myths; she and Volo look like Cynthia, but no family tie was ever confirmed.
 
 ## Real-world parallels
 

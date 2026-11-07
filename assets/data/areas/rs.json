@@ -2,6 +2,7 @@
   "source": [
     "https://www.pokemythology.net/detonados/detonado-ruby-sapphire/",
     "https://pokeapi.co/docs/v2#locations",
+    "hideout: team-magma-hideout (694) tem encontros do Ruby e do Sapphire; os únicos encontros dos dois hideouts no PokeAPI são os 2 Electrode fixos (iguais em team-aqua-hideout, 692, só Sapphire), então 694 cobre as duas versões.",
     "Ordem, nomes e tipo: docs/superpowers/sources/rs-pokemythology-notes.md. bosses_before: chefes vencidos desde a área anterior da lista (a união das áreas visitadas = chefes já vencidos)."
   ],
   "items": [
@@ -541,7 +542,7 @@
       "kind": "building",
       "order": 57,
       "map_node": "aqua-hideout",
-      "poke_api_location_id": null,
+      "poke_api_location_id": 694,
       "bosses_before": [
         "rival-lilycove"
       ]

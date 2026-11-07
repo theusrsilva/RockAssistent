@@ -12,33 +12,23 @@ outra fonte.
 
 ## Dúvidas por jogo
 
-### Crystal (`c`)
-
-| item | dúvida | fontes tentadas |
-| --- | --- | --- |
-| shiny-methods/odd_egg | Chance de shiny do Ovo Estranho fora do Japão: 14% na Pokestats e 1/10 na Rotom Labs. | pokestats.gg/shiny-hunting-hub/methods/odd-egg; rotomlabs.net/shiny-rates |
-
 ### Ruby / Sapphire (`rs`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| areas/rs/hideout | Hideout da Magma (Ruby) e da Aqua (Sapphire) numa área só, sem `poke_api_location_id`: no PokeAPI o team-magma-hideout tem encontros do Ruby e do Sapphire e o team-aqua-hideout só do Sapphire, então nenhum dos dois serve para a área inteira. | pokeapi.co |
 | trainers/rs.json (versões) | Os grunts da Magma (Ruby) e da Aqua (Sapphire) e o Collector Hector (times diferentes) vêm de `constants/version.inc`; levam `versions`. Para isso `TrainerBattle` ganhou `versions` (como os chefes). | pokeruby |
 
 ### Emerald (`e`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| bosses (Frontier Brains) | O nível ficou 50 (categoria Lv. 50); no Open Level o jogo usa o nível do seu Pokémon mais forte (mínimo 60). O Noland (Battle Factory) não entrou: usa Pokémon alugados, sem time fixo na decompilação. | pret/pokeemerald src/frontier_util.c |
-| areas/e/magma-hideout | Apontado para `magma-hideout` (486, encontros do Emerald); o PokeAPI também tem `team-magma-hideout` (694) com encontros do Emerald, que ficou sem área. | pokeapi.co |
-| guides `walkthrough.md`, `postgame.md`, `bosses.md` | Regras dos Battle Tents (Slateport/Verdanturf/Fallarbor) e times/dicas dos Frontier Brains não reconferidos numa segunda fonte (times tirados de `bosses/e.json`). | poketools.com, notas do pokemythology |
+| bosses (Frontier Brains) | O nível ficou 50 (categoria Lv. 50); no Open Level o jogo usa o nível do seu Pokémon mais forte (mínimo 60). O Noland (Battle Factory) não entrou: usa Pokémon alugados, sem time fixo na decompilação. | pret/pokeemerald src/frontier_util.c; times dos 6 Brains conferidos em altissimo1.github.io (RSE); Open Level = maior nível do time, mínimo 60 (FRONTIER_MIN_LEVEL_OPEN). Fica a escolha do autor (nível 50 ou 60) |
 
 ### FireRed / LeafGreen (`frlg`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| areas/frlg/dunsparce-tunnel | O PokeAPI põe o Dunsparce em `three-isle-port` (não em `three-isle-path`); a área aponta para o port. | pokeapi.co |
-| areas (Sevii) | Acrescentados Cape Brink, Water Path, Ruin Valley, Green Path, Outcast Island, Pattern Bush, Altering Cave, Canyon Entrance, Five Isle Meadow, Memorial Pillar, Water Labyrinth, Resort Gorgeous, Lost Cave e as 7 câmaras de Tanoby (locais do PokeAPI com encontros que as notas não citavam). Ordem dentro das ilhas aproximada. | pokeapi.co |
+| areas (Sevii) | Acrescentados Cape Brink, Water Path, Ruin Valley, Green Path, Outcast Island, Pattern Bush, Altering Cave, Canyon Entrance, Five Isle Meadow, Memorial Pillar, Water Labyrinth, Resort Gorgeous, Lost Cave e as 7 câmaras de Tanoby (locais do PokeAPI com encontros que as notas não citavam). Ordem dentro das ilhas aproximada. | pokeapi.co; o detonado da Bulbapedia (por busca) faz Four e Six Island (parte 18) antes de Five e Seven (parte 19); strategywiki.org deu 403 |
 
 ### Diamond / Pearl (`dp`)
 
@@ -218,7 +208,6 @@ outra fonte.
 | todos | trainers/*.json (mapa → área) | Prédios, andares, ginásios e salas contam na área que os contém (ex.: ginásio → cidade, MossdeepCity_SpaceCenter → mossdeep-space-center no e e mossdeep-city no rs, que não tem essa área). Gen 4: MAPSEC do cabeçalho do mapa (dp, hgss) ou o nome da pasta (pt); Restaurant (Hotel Grand Lake) → valor-lakefront, Cafe → route-210-south, Trainers' School → jubilife-city, Wise Trio's Room (c) → ecruteak-city. | decompilações |
 | rb, y | trainers/rb.json, y.json | A Gen 1 não dá nome aos treinadores: `name` = classe (o id fica `<classe>-<área>`). Jr. Trainer ♂/♀ e Swimmer ♂/♀ ficam com a classe sem o símbolo (em todos os jogos). | pokered / pokeyellow |
 | gs, c | trainers/gs.json, c.json (itens) | `BERRY` da Gen 2 virou `oran-berry` e `PINK_BOW` virou `silk-scarf` (o PokeAPI não tem os itens da Gen 2; mesmo efeito). | pokegold / pokecrystal |
-| rb, y, gs, c, rs, e, frlg | guides `events.md` | Eventos e distribuições da Gen 1–3 (Mew, Surfing Pikachu, Mystery Gift do Stadium, Virtual Console, Jirachi, Old Sea Map só no Japão) escritos de memória ou com uma fonte só; não conferidos. | serebii.net, pokemondb.net (Bulbapedia deu 403) |
 | sm, usum | guias/Battle Tree | Red e Blue na 20ª e na 50ª batalha da Battle Tree. | serebii battletree; thonky |
 
 ## VGC Champions
@@ -232,13 +221,7 @@ outra fonte.
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| guias/mechanics/status.md (Duração do sono) | Gen 2: contador 2–8 ou 1–6? O guia diz "1–7 (Gen 1–2)" como aproximação. | Bulbapedia Sleep; dragonflycave |
-| guias/mythology/galar.md (Meteorito do Eternatus) | "Há 20.000 anos" só aparece em wikis de fã; o guia ficou sem data. | Bulbapedia Darkest Day e Eternatus |
-| guias/mythology/hoenn.md (Mt. Chimney) | Inspirado no Sakurajima ou no Monte Aso (Sakurajima ≈ Mt. Pyre)? O guia não cita mais o vulcão real. | Bulbapedia Hoenn |
-| guias/mythology/kalos.md (Pedras de Geosenge) | Túmulo dos Pokémon usados na máquina? A Bulbapedia só diz que lembram Carnac; o guia diz só que a arma fica sob a cidade. | Bulbapedia Geosenge Town |
-| guias/mythology/hisui.md (Cogita e Volo) | Parentes da Cynthia? Só sugestão do jogo; o guia escreve como sugestão. | Bulbapedia Cogita e Volo |
-| guias/mythology/lumiose.md (Época do Z-A) | "Cinco anos depois" de X/Y tem uma fonte só; o guia diz "depois dos eventos de X/Y". | Bulbapedia Team Flare |
-| guias/mythology/paldea.md (Academy = Universidade de Salamanca) | Comparação de fãs; tirada do guia. | Bulbapedia Paldea |
+| guias/mythology/hoenn.md (Mt. Chimney) | Inspirado no Sakurajima ou no Monte Aso (Sakurajima ≈ Mt. Pyre)? O guia não cita mais o vulcão real. | Bulbapedia Hoenn; por busca: só sites de fã (ap2hyc) dizem Aso; a Bulbapedia só diz que Hoenn é Kyūshū |
 
 ## Dados a corrigir nos JSON
 
