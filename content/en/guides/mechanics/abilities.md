@@ -45,7 +45,7 @@
 
 | Ability | Effect |
 | --- | --- |
-| Synchronize | Wild Pokémon with the same nature (see [Natures](/guias/mechanics/natures/natures)) |
+| Synchronize | Wild Pokémon with the same nature: 50% from Emerald to Gen 7, 100% in SwSh, no effect in SV (see [Natures](/guias/mechanics/natures/natures)) |
 | Cute Charm | 2/3 chance of a wild Pokémon of the opposite gender |
 | Static / Magnet Pull | More Electric / Steel encounters |
 | Flash Fire, Storm Drain, Lightning Rod etc. | More encounters of the linked type (SwSh) |

@@ -11,7 +11,7 @@
 | Capturado (maioria, até a Gen 7) | 70 |
 | Capturado (maioria, Gen 8+) | 50 |
 | Chocado | 120 |
-| Friend Ball | 200 |
+| Friend Ball | 200 (Gen 2–7), 150 (Gen 8+) |
 | Alguns lendários e espécies difíceis | 0 ou 35 |
 
 ## O que sobe

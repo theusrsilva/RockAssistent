@@ -58,8 +58,8 @@
 
 | Jeito | Jogos | Efeito |
 | --- | --- | --- |
-| Synchronize na frente do time | Gen 3–7: 50%; SwSh: 100%; SV: a partir da atualização 3.0.0 | Selvagem nasce com a natureza do líder |
-| Everstone num dos pais | Emerald e Gen 4: 50%; Gen 5+: 100% | Filhote herda a natureza |
+| Synchronize na frente do time | Emerald–Gen 7: 50%; SwSh: 100%; SV: sem efeito | Selvagem nasce com a natureza do líder |
+| Everstone num dos pais | Emerald, Gen 4 e BW: 50% (DPPt: só mãe ou Ditto); B2W2+: 100% | Filhote herda a natureza |
 | Mints | SwSh e SV | Troca o efeito nos stats; a natureza original continua registrada |
 
 <!-- fontes: Bulbapedia (Nature, Synchronize, Mint), Serebii (natures), pokemondb (natures) -->

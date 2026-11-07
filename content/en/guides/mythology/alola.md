@@ -30,7 +30,7 @@
 | Solgaleo | Sun | Altar of the Sunne (Sun); Plank Bridge (Ultra Sun) |
 | Lunala | Moon | Altar of the Moone (Moon); Plank Bridge (Ultra Moon) |
 | Necrozma | Prism, stolen light | Ten Carat Hill (SM, postgame); Mount Lanakila after the Megalo Tower (USUM) |
-| Type: Null / Silvally | Artificial chimera (RKS System) | Gift at Aether Paradise (SM) or from Wicke in Poni Grove (USUM), in the postgame |
+| Type: Null / Silvally | Artificial chimera (RKS System) | Gift at Aether Paradise (SM) or at the Ancient Poni Path (USUM), after the title |
 | Magearna | Machine built 500 years ago | QR Code event |
 | Marshadow | Shadow | Event |
 | Zeraora | Lightning | Event |

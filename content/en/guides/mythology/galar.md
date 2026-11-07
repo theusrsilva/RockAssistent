@@ -6,9 +6,9 @@
 
 ## The Darkest Day
 
-- About 20,000 years ago a meteorite fell on Galar carrying **Eternatus**; its energy is the Galar particle that
+- In the distant past a meteorite fell on Galar carrying **Eternatus**; its energy is the Galar particle that
   makes Dynamax possible.
-- Much later, Eternatus caused the Darkest Day: giant, uncontrolled Pokémon all over the region.
+- 3,000 years ago, Eternatus caused the Darkest Day: giant, uncontrolled Pokémon all over the region.
 - The official history says two young heroes with a sword and a shield saved Galar.
 - The truth, found in the tapestries and in Circhester's statues: the heroes were **Zacian** and **Zamazenta**; the
   humans (the two princes) took the credit.
@@ -20,7 +20,7 @@
   Towers of Two Fists.
 - **Crown Tundra:** Calyrex, the ancient "King of Bountiful Harvests", lost the faith of Freezington's people; it
   regains its power with its steed (Glastrier or Spectrier).
-- **Crown Tundra:** the Galarian birds roam the region; the Regis return with Regieleki and Regidrago; the Max Lair holds
+- **Crown Tundra:** the Galarian birds start roaming (one in the Crown Tundra, one in the Wild Area, one on the Isle of Armor); the Regis return with Regieleki and Regidrago; the Max Lair holds
   older legendaries.
 
 ## Legendaries and mythicals
@@ -36,7 +36,7 @@
 | Glastrier | Ice steed | Crown Tundra (choose between it and Spectrier) |
 | Spectrier | Ghost steed | Crown Tundra (choice) |
 | Regieleki / Regidrago | New Regis | Split-Decision Ruins (choose one) |
-| Galarian Articuno / Zapdos / Moltres | Galarian birds | Roaming the Crown Tundra and the Wild Area |
+| Galarian Articuno / Zapdos / Moltres | Galarian birds | Articuno in the Crown Tundra, Zapdos in the Wild Area, Moltres on the Isle of Armor (roaming) |
 | Zygarde, Mewtwo, Hoopa etc. | Older ones | Dynamax Adventures (Max Lair) and gifts |
 
 ## Trios and duos
@@ -50,7 +50,7 @@
 | Group | Leader | Goal |
 | --- | --- | --- |
 | Macro Cosmos | Chairman Rose | Awaken Eternatus to solve Galar's energy crisis 1,000 years ahead |
-| Team Yell | Marnie (fans, not villains) | Cheer for Marnie, getting in the player's way |
+| Team Yell | Piers (fans, not villains) | Cheer for Marnie, Piers's sister, getting in the player's way |
 
 - Helpers: Oleana (Rose's secretary). Sordward and Shielbert (postgame) want to prove the heroes were their
   ancestors and force Dynamax across the country.

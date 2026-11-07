@@ -64,7 +64,7 @@
 
 ## Real-world parallels
 
-- Paldea = Iberian Peninsula; the Academy recalls the University of Salamanca.
+- Paldea = Iberian Peninsula.
 - Kitakami recalls rural Japan (festival, rice fields).
 - Blueberry Academy is in Unova, in a dome under the sea.
 

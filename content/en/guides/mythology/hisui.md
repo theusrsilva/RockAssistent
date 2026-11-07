@@ -41,7 +41,7 @@
 | Manaphy / Phione | Sea | Seaside Hollow, Cobalt Coastlands (request) |
 | Shaymin | Flowers | Floaro Gardens (request; needs SwSh save data) |
 | Darkrai | Nightmares | Coronet Highlands, at night (request; needs BDSP save data) |
-| Giratina | Antimatter | Temple of Sinnoh, after Volo (postgame) |
+| Giratina | Antimatter | Turnback Cave (Spring Path, Cobalt Coastlands), after Volo (request 91) |
 | Arceus | Creator | Temple of Sinnoh, with all Plates and the Azure Flute (postgame) |
 
 ## Trios and quartets

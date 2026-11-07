@@ -57,7 +57,7 @@
 
 ## Real-world parallels
 
-- Hoenn = Kyūshū; Mt. Chimney recalls the Sakurajima volcano.
+- Hoenn = Kyūshū, a region with many volcanoes, like Mt. Chimney in the game.
 - The Mossdeep Space Center recalls the Tanegashima space center.
 
 <!-- fontes: Bulbapedia (Hoenn, Weather trio, Legendary titans, Draconid, Team Magma, Team Aqua), Serebii; docs/superpowers/sources/rs-, e-, oras-pokemythology-notes.md -->

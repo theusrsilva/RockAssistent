@@ -12,7 +12,7 @@
   Eternal Flower.
 - Com raiva da guerra, AZ transformou a máquina na **arma final** e acabou com o conflito, matando os dois lados.
 - O Floette o abandonou ao saber; AZ ficou imortal e vagou por 3.000 anos procurando por ele.
-- As pedras de Geosenge Town marcam o túmulo dos Pokémon usados na máquina.
+- A arma final está escondida sob Geosenge Town, cidade das pedras em pé.
 
 ## Mega Evolução
 

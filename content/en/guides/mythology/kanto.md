@@ -25,7 +25,7 @@
 | Mewtwo | Mew's clone | Cerulean Cave, postgame (RBY, FRLG, LGPE) |
 | Mew | Ancestor of all | Event (RBY, FRLG); Poké Ball Plus (LGPE) |
 | Deoxys | Virus from space | Birth Island with the Aurora Ticket (FRLG) |
-| Lugia, Ho-Oh | Johto legendaries | Navel Rock with the Mystery Ticket (FRLG) |
+| Lugia, Ho-Oh | Johto legendaries | Navel Rock with the MysticTicket (FRLG) |
 | Raikou, Entei, Suicune | Johto beasts | Roaming Kanto in the postgame (FRLG; depends on the starter) |
 
 ## Trios
@@ -41,7 +41,7 @@
 
 - Places: Rocket Hideout (Celadon Game Corner), Pokémon Tower, Silph Co. (Saffron City).
 - FRLG: Team Rocket carries on in the Sevii Islands (Rocket Warehouse, Five Island).
-- After the defeat at Silph Co., Giovanni disbands the team; he returns as a Gym Leader.
+- After his defeat at the Viridian Gym, Giovanni disbands Team Rocket and disappears.
 
 ## Real-world parallels
 

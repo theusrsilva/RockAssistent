@@ -32,7 +32,7 @@ and the counter shows the right odds.
 - Some Pokémon can never be shiny in the game's own encounter (the game locks the odds).
 - Examples: Victini, Reshiram and Zekrom (BW), Xerneas and Yveltal (XY), Cosmog, Solgaleo, Lunala and the Tapus (SM),
   Zacian, Zamazenta and Eternatus (SwSh), Koraidon, Miraidon and the legendary Paradox Pokémon (SV).
-- Starters and gifts are usually locked since Gen 5 (unless the game says otherwise).
+- Starters are locked since LGPE and SwSh (Gen 8+), also in SV and Z-A.
 - Some are released later through events or in another game (e.g. shiny Zacian and Zamazenta by event).
 
 ## Tips

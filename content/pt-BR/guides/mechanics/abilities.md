@@ -45,7 +45,7 @@
 
 | Habilidade | Efeito |
 | --- | --- |
-| Synchronize | Selvagem com a mesma natureza (ver [Naturezas](/guias/mechanics/natures/natures)) |
+| Synchronize | Selvagem com a mesma natureza: 50% do Emerald à Gen 7, 100% no SwSh, sem efeito no SV (ver [Naturezas](/guias/mechanics/natures/natures)) |
 | Cute Charm | 2/3 de chance de selvagem do gênero oposto |
 | Static / Magnet Pull | Mais encontros de Electric / Steel |
 | Flash Fire, Storm Drain, Lightning Rod etc. | Mais encontros do tipo ligado (SwSh) |

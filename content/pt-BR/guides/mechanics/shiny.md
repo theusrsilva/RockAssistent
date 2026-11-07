@@ -32,7 +32,7 @@ contador já mostra a chance certa.
 - Alguns Pokémon nunca vêm shiny no encontro do jogo (o jogo trava a chance).
 - Exemplos: Victini, Reshiram e Zekrom (BW), Xerneas e Yveltal (XY), Cosmog, Solgaleo, Lunala e os Tapus (SM),
   Zacian, Zamazenta e Eternatus (SwSh), Koraidon, Miraidon e os Paradox lendários (SV).
-- Iniciais e presentes costumam ser travados desde a Gen 5 (exceto quando o jogo diz o contrário).
+- Iniciais são travados desde LGPE e SwSh (Gen 8+), também em SV e Z-A.
 - Alguns são liberados depois por evento ou em outro jogo (ex.: Zacian e Zamazenta shiny por evento).
 
 ## Dicas

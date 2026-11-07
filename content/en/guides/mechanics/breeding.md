@@ -20,7 +20,7 @@
 - Ditto breeds with anything except Ditto and Undiscovered. It is the only way for genderless ones (Magnemite, Bronzor...).
 - Undiscovered cannot breed: legendaries, most mythicals and babies (Pichu, Togepi...).
 - The baby is the most basic form of the mother's species (or of the non-Ditto parent).
-- Incense babies: Wynaut, Munchlax, Mantyke etc. only hatch if a parent holds the incense (Gen 3–7; SwSh drops this).
+- Incense babies: Wynaut, Munchlax, Mantyke etc. only hatch if a parent holds the incense (Gen 3–8; SV drops this).
 
 ## What is inherited
 
@@ -28,7 +28,7 @@
 | --- | --- |
 | IVs | Gen 3+: 3 IVs come from the parents; Destiny Knot (Gen 6+): 5 IVs |
 | Power items | Gen 4+: guarantee that the item's stat comes from that parent |
-| Nature | Everstone: 50% (Emerald, Gen 4), 100% (Gen 5+) |
+| Nature | Everstone: 50% (Emerald, Gen 4, BW; DPPt mother or Ditto only), 100% (B2W2+) |
 | Hidden Ability | Gen 5: mother only; Gen 6+: also a male with Ditto (60%) |
 | Poké Ball | Gen 6: mother; Gen 7+: either parent of the same species (Ditto does not pass it) |
 | Egg Moves | Gen 2–5: from the father; Gen 6+: from either parent |

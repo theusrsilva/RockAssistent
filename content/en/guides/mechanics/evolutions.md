@@ -73,7 +73,7 @@ Buneary, Munchlax, Riolu (day), Woobat, Swadloon, Type: Null, Snom (night). See 
 
 - Nincada → Ninjask + Shedinja (free slot and a Poké Ball, Gen 4+).
 - Tyrogue → Hitmonlee/Hitmonchan/Hitmontop depending on Attack × Defense.
-- Inkay → Malamar with the console upside down (Gen 6–7).
+- Inkay → Malamar with the console upside down (Gen 6+; on Switch, in handheld mode).
 - Pancham → Pangoro with a Dark-type Pokémon in the party.
 - Gimmighoul → Gholdengo with 999 Gimmighoul Coins (SV).
 

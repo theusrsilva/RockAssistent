@@ -11,7 +11,7 @@
 | Caught (most species, up to Gen 7) | 70 |
 | Caught (most species, Gen 8+) | 50 |
 | Hatched | 120 |
-| Friend Ball | 200 |
+| Friend Ball | 200 (Gen 2–7), 150 (Gen 8+) |
 | Some legendaries and hard species | 0 or 35 |
 
 ## What raises it

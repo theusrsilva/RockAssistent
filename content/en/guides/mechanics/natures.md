@@ -58,8 +58,8 @@
 
 | Way | Games | Effect |
 | --- | --- | --- |
-| Synchronize in the lead | Gen 3–7: 50%; SwSh: 100%; SV: from update 3.0.0 | Wild Pokémon get the lead's nature |
-| Everstone on a parent | Emerald and Gen 4: 50%; Gen 5+: 100% | The baby inherits the nature |
+| Synchronize in the lead | Emerald–Gen 7: 50%; SwSh: 100%; SV: no effect | Wild Pokémon get the lead's nature |
+| Everstone on a parent | Emerald, Gen 4 and BW: 50% (DPPt: mother or Ditto only); B2W2+: 100% | The baby inherits the nature |
 | Mints | SwSh and SV | Change the stat effect; the original nature stays recorded |
 
 <!-- fontes: Bulbapedia (Nature, Synchronize, Mint), Serebii (natures), pokemondb (natures) -->

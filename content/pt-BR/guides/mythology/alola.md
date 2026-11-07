@@ -30,7 +30,7 @@
 | Solgaleo | Sol | Altar of the Sunne (Sun); Plank Bridge (Ultra Sun) |
 | Lunala | Lua | Altar of the Moone (Moon); Plank Bridge (Ultra Moon) |
 | Necrozma | Prisma, luz roubada | Ten Carat Hill (SM, pós-jogo); Mount Lanakila depois da Megalo Tower (USUM) |
-| Type: Null / Silvally | Quimera artificial (RKS System) | Presente na Aether Paradise (SM) ou da Wicke em Poni Grove (USUM), no pós-jogo |
+| Type: Null / Silvally | Quimera artificial (RKS System) | Presente na Aether Paradise (SM) ou no Ancient Poni Path (USUM), depois do título |
 | Magearna | Máquina feita há 500 anos | Evento por QR Code |
 | Marshadow | Sombra | Evento |
 | Zeraora | Raio | Evento |

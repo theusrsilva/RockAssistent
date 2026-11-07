@@ -5,7 +5,7 @@
 | Gen 1–2 | 0–15 (DVs) | The HP DV comes from the other four; in Gen 2 DVs also set shininess and gender |
 | Gen 3+ | 0–31 per stat | Fixed from the encounter; add up to +31 to the stat at level 100 |
 
-- Legendaries and Pokémon that cannot breed (Undiscovered group): at least 3 IVs of 31 since Gen 6.
+- Legendaries and mythicals (and Ultra Beasts in Gen 7+): at least 3 IVs of 31 since Gen 6; in XY it applies to the whole Undiscovered group.
 - Breeding passes IVs from the parents (see [Breeding](/guias/mechanics/breeding/breeding)).
 
 ## EVs (training)
@@ -36,8 +36,8 @@
 
 ## Removing EVs
 
-- Pomeg, Kelpsy, Qualot, Hondew, Grepa and Tamato Berries: −10 EVs per Berry (Gen 4+) and they raise friendship.
-- SV: Fresh-Start Mochi (The Indigo Disk DLC) resets all EVs at once.
+- Pomeg, Kelpsy, Qualot, Hondew, Grepa and Tamato Berries: Emerald: drops the stat to 100 if above it; Gen 4: same, then −10; Gen 5+: −10 per Berry. They also raise friendship.
+- SV: Fresh-Start Mochi (The Teal Mask DLC, Ogre Oustin' prize) resets all EVs at once.
 
 ## Hyper Training
 
@@ -48,7 +48,7 @@
 
 ## IV checker (Judge)
 
-- Gen 5+: an NPC rates the IVs with phrases.
+- Gen 4+ (Platinum, HGSS): an NPC rates the IVs with phrases; Emerald has a forerunner at the Battle Frontier.
 - Gen 7+: Judge function in the PC, unlocked in the postgame (Battle Tree, Battle Tower or equivalent).
 - The scale goes from "No Good" (0) to "Best" (31).
 

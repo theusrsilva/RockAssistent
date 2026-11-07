@@ -5,7 +5,7 @@
 | Gen 1–2 | 0–15 (DVs) | O DV de HP sai dos outros quatro; DVs também definem shiny e gênero na Gen 2 |
 | Gen 3+ | 0–31 por stat | Fixos desde o encontro; somam até +31 no stat no nível 100 |
 
-- Lendários e Pokémon sem ovo (grupo Undiscovered): pelo menos 3 IVs 31 desde a Gen 6.
+- Lendários e míticos (e Ultra Beasts na Gen 7+): pelo menos 3 IVs 31 desde a Gen 6; em XY vale para todo o grupo Undiscovered.
 - Breeding passa IVs dos pais (ver [Breeding](/guias/mechanics/breeding/breeding)).
 
 ## EVs (treino)
@@ -36,8 +36,8 @@
 
 ## Tirando EVs
 
-- Berries Pomeg, Kelpsy, Qualot, Hondew, Grepa e Tamato: −10 EVs por berry (Gen 4+) e sobem a felicidade.
-- SV: Fresh-Start Mochi (DLC The Indigo Disk) zera todos os EVs de uma vez.
+- Berries Pomeg, Kelpsy, Qualot, Hondew, Grepa e Tamato: Emerald: baixa o stat para 100 se estiver acima; Gen 4: idem, depois −10; Gen 5+: −10 por berry. Também sobem a felicidade.
+- SV: Fresh-Start Mochi (DLC The Teal Mask, prêmio do Ogre Oustin') zera todos os EVs de uma vez.
 
 ## Hyper Training
 
@@ -48,7 +48,7 @@
 
 ## IV checker (Judge)
 
-- Gen 5+: um NPC avalia os IVs com frases.
+- Gen 4+ (Platinum, HGSS): um NPC avalia os IVs com frases; o Emerald tem um precursor no Battle Frontier.
 - Gen 7+: função Judge no PC, liberada no pós-jogo (Battle Tree, Battle Tower ou equivalente).
 - A escala vai de "No Good" (0) a "Best" (31).
 

@@ -20,7 +20,7 @@
 - Ditto cruza com qualquer um, menos Ditto e Undiscovered. É o único jeito para assexuados (Magnemite, Bronzor...).
 - Undiscovered não cruza: lendários, a maioria dos míticos e os bebês (Pichu, Togepi...).
 - O filhote é da forma mais básica da espécie da mãe (ou do não-Ditto).
-- Bebês com incenso: Wynaut, Munchlax, Mantyke etc. só nascem se um dos pais segurar o incenso (Gen 3–7; SwSh dispensa).
+- Bebês com incenso: Wynaut, Munchlax, Mantyke etc. só nascem se um dos pais segurar o incenso (Gen 3–8; SV dispensa).
 
 ## O que é herdado
 
@@ -28,7 +28,7 @@
 | --- | --- |
 | IVs | Gen 3+: 3 IVs vêm dos pais; Destiny Knot (Gen 6+): 5 IVs |
 | Power items | Gen 4+: garantem que o stat do item venha daquele pai |
-| Natureza | Everstone: 50% (Emerald, Gen 4), 100% (Gen 5+) |
+| Natureza | Everstone: 50% (Emerald, Gen 4, BW; DPPt só mãe ou Ditto), 100% (B2W2+) |
 | Habilidade oculta | Gen 5: só da mãe; Gen 6+: também do macho com Ditto (60%) |
 | Poké Ball | Gen 6: da mãe; Gen 7+: de qualquer pai da mesma espécie (Ditto não passa) |
 | Egg Moves | Gen 2–5: do pai; Gen 6+: de qualquer pai |

@@ -2,7 +2,7 @@
 
 | Games | Name | Place |
 | --- | --- | --- |
-| RS | Pokémon Contests | Verdanturf, Fallarbor, Slateport and Lilycove (higher ranks are in the later ones) |
+| RS | Pokémon Contests | Verdanturf (Normal), Fallarbor (Super), Slateport (Hyper), Lilycove (Master) |
 | Emerald | Pokémon Contests | All ranks in Lilycove City |
 | DPPt | Super Contests | Hearthome City |
 | ORAS | Contest Spectaculars | Verdanturf, Fallarbor, Slateport and Lilycove |

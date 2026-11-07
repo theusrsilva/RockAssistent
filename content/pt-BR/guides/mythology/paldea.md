@@ -64,7 +64,7 @@
 
 ## Paralelos com o mundo real
 
-- Paldea = Península Ibérica; a Academy lembra a Universidade de Salamanca.
+- Paldea = Península Ibérica.
 - Kitakami lembra o interior rural do Japão (festival, arrozais).
 - Blueberry Academy fica em Unova, num domo debaixo do mar.
 

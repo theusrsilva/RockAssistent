@@ -25,7 +25,7 @@
 | Mewtwo | Clone de Mew | Cerulean Cave, pós-jogo (RBY, FRLG, LGPE) |
 | Mew | Ancestral de todos | Evento (RBY, FRLG); Poké Ball Plus (LGPE) |
 | Deoxys | Vírus do espaço | Birth Island com o Aurora Ticket (FRLG) |
-| Lugia, Ho-Oh | Lendários de Johto | Navel Rock com o Mystery Ticket (FRLG) |
+| Lugia, Ho-Oh | Lendários de Johto | Navel Rock com o MysticTicket (FRLG) |
 | Raikou, Entei, Suicune | Cães de Johto | Errantes em Kanto no pós-jogo (FRLG; conforme o inicial) |
 
 ## Trios
@@ -41,7 +41,7 @@
 
 - Locais: Rocket Hideout (Celadon Game Corner), Pokémon Tower, Silph Co. (Saffron City).
 - FRLG: a Team Rocket continua nas Ilhas Sevii (Rocket Warehouse, Five Island).
-- Depois da derrota em Silph Co., Giovanni dissolve o grupo; volta como líder de ginásio.
+- Depois da derrota no ginásio de Viridian, Giovanni dissolve a Team Rocket e desaparece.
 
 ## Paralelos com o mundo real
 

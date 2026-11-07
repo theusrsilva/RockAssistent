@@ -24,7 +24,7 @@
 | Weakness Policy | — | +2 Attack and Sp. Atk when hit super effectively (Gen 6+) |
 | Heavy-Duty Boots | — | Ignores Stealth Rock and spikes (Gen 8+) |
 | Booster Energy | — | Activates Protosynthesis/Quark Drive (Gen 9) |
-| Type items | Charcoal, Mystic Water, plates | +20% to moves of the type |
+| Type items | Charcoal, Mystic Water, plates | +10% (Gen 2–3) or +20% (Gen 4+) to moves of the type |
 | Signature items | Light Ball (Pikachu), Thick Club (Cubone/Marowak) | Double stats |
 | Mega Stones and Z-Crystals | Charizardite X, Firium Z | Enable Mega and Z-Moves |
 | Evolution items | Metal Coat, King's Rock, Dragon Scale | Trade evolutions (see [Evolutions](/guias/mechanics/evolutions/evolutions)) |
