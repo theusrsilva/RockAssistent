@@ -19,7 +19,7 @@ export default function MovePage() {
   const move = useMove(valid ? id : 0, game)
   const english = dexLang(i18n.language) === 'pt-BR' ? t('dex.move.effectInEnglish') : null
 
-  const back = <BackLink>{t('dex.back')}</BackLink>
+  const back = <BackLink history>{t('dex.back')}</BackLink>
   if (!valid || (move.error instanceof ApiError && move.error.status === 404))
     return (
       <div className="flex flex-col gap-4">

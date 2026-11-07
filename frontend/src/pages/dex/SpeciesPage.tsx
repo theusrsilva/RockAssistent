@@ -45,7 +45,7 @@ export default function SpeciesPage() {
       { replace: true },
     )
 
-  const back = <BackLink>{t('dex.back')}</BackLink>
+  const back = <BackLink history>{t('dex.back')}</BackLink>
 
   if (!valid || (species.error instanceof ApiError && species.error.status === 404))
     return (

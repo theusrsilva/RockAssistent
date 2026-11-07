@@ -13,7 +13,7 @@ export default function AbilityPage() {
   const ability = useAbility(valid ? id : 0)
   const english = dexLang(i18n.language) === 'pt-BR' ? t('dex.ability.effectInEnglish') : null
 
-  const back = <BackLink>{t('dex.back')}</BackLink>
+  const back = <BackLink history>{t('dex.back')}</BackLink>
   if (!valid || (ability.error instanceof ApiError && ability.error.status === 404))
     return (
       <div className="flex flex-col gap-4">

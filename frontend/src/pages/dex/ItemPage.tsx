@@ -13,7 +13,7 @@ export default function ItemPage() {
   const item = useItem(valid ? id : 0)
   const english = dexLang(i18n.language) === 'pt-BR' ? t('dex.item.effectInEnglish') : null
 
-  const back = <BackLink>{t('dex.back')}</BackLink>
+  const back = <BackLink history>{t('dex.back')}</BackLink>
   if (!valid || (item.error instanceof ApiError && item.error.status === 404))
     return (
       <div className="flex flex-col gap-4">

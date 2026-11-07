@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
-import { Link } from 'react-router'
+import { useTranslation } from 'react-i18next'
+import { Link, useLocation, useNavigate } from 'react-router'
 import { spriteUrl } from '../../../lib/api'
 import { dexHref } from '../../../lib/dex'
 import { Icon } from '../../../components/ui'
@@ -27,12 +28,28 @@ export function Fact({ label, children }: { label: ReactNode; children: ReactNod
   )
 }
 
-/** Volta para a lista da Pokédex (ou outro endereço). */
-export function BackLink({ to = '/pokedex', children }: { to?: string; children: ReactNode }) {
+/**
+ * Volta para a lista da Pokédex (ou outro endereço). Com <history>, volta à tela anterior do app (um guia, por
+ * exemplo, no mesmo ponto) quando houver uma; aberta direto, vai para <to>.
+ */
+export function BackLink({ to = '/pokedex', history = false, children }: { to?: string; history?: boolean; children: ReactNode }) {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  // A primeira entrada do app tem a chave "default": antes dela não há tela do app para voltar.
+  const location = useLocation()
+  const canGoBack = history && location.key !== 'default'
   return (
-    <Link to={to} className="inline-flex items-center gap-1 text-sm font-semibold text-muted hover:text-ink">
+    <Link
+      to={to}
+      onClick={(e) => {
+        if (!canGoBack || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return
+        e.preventDefault()
+        navigate(-1)
+      }}
+      className="inline-flex items-center gap-1 text-sm font-semibold text-muted hover:text-ink"
+    >
       <Icon name="arrow_back" className="text-[18px]" />
-      {children}
+      {canGoBack ? t('common.back') : children}
     </Link>
   )
 }
