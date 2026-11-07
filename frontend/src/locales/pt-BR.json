@@ -2060,6 +2060,12 @@
     "newInInbox": "Salvo no cofre, mas a posição escolhida já estava ocupada: ele ficou na Caixa de entrada.",
     "savesTitle": "Saves",
     "refresh": "Procurar de novo",
+    "sync": {
+      "label": "Sincronizar anexos: confere se os Pokémon anexados do cofre ainda estão na mesma posição dos saves e atualiza a cópia do cofre",
+      "none": "Nenhum Pokémon do cofre está anexado a um save.",
+      "done_one": "1 anexo conferido: {{updated}} atualizado, {{lost}} perdido.",
+      "done_other": "{{count}} anexos conferidos: {{updated}} atualizados, {{lost}} perdidos."
+    },
     "folders": "Pastas de saves",
     "noFolders": "Escolha as pastas onde o seu emulador guarda os saves. O RockAssistent procura os arquivos lá e mostra as caixas aqui.",
     "addFolder": "Escolher pastas nas Configurações",

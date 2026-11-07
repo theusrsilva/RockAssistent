@@ -2060,6 +2060,12 @@
     "newInInbox": "Saved to the vault, but the chosen slot was already taken: it went to the Inbox.",
     "savesTitle": "Saves",
     "refresh": "Look again",
+    "sync": {
+      "label": "Sync attachments: checks whether the vault Pokémon attached to saves are still in the same slot and updates the vault copy",
+      "none": "No vault Pokémon is attached to a save.",
+      "done_one": "1 attachment checked: {{updated}} updated, {{lost}} lost.",
+      "done_other": "{{count}} attachments checked: {{updated}} updated, {{lost}} lost."
+    },
     "folders": "Save folders",
     "noFolders": "Choose the folders where your emulator keeps its saves. RockAssistent looks for the files there and shows their boxes here.",
     "addFolder": "Choose folders in Settings",

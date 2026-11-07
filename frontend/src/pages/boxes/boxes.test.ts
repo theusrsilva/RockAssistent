@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { ApiError } from '../../lib/api'
-import { backupsOf, cloneBody, errorKey, evolveBody, firstFreeSlot, initialTab, planDrop, tabReducer, type DragSource, type SaveBoxes, type SaveSlot } from './boxes'
+import { backupsOf, cloneBody, errorKey, evolveBody, firstFreeSlot, initialTab, planDrop, syncSummary, tabReducer, type SyncResult, type DragSource, type SaveBoxes, type SaveSlot } from './boxes'
 
 const fromSave: DragSource = { kind: 'save', saveId: 'a1b2c3d4', box: 0, slot: 3, data: 'AAA', family: 'frlg' }
 const fromVault: DragSource = { kind: 'vault', pokemonId: 'p1' }
@@ -134,5 +134,17 @@ describe('evoluir e clonar', () => {
   it('erros novos da evolução têm texto', () => {
     expect(errorKey(new ApiError(400, 'evolve_not_available', []))).toBe('boxes.errors.evolve_not_available')
     expect(errorKey(new ApiError(400, 'evolve_wrong_target', []))).toBe('boxes.errors.evolve_wrong_target')
+  })
+})
+
+describe('syncSummary', () => {
+  it('conta conferidos, atualizados e perdidos', () => {
+    const r = (status: SyncResult['status']): SyncResult => ({ attachmentId: 'a', pokemonId: 'p', saveId: 's', status })
+    expect(syncSummary([])).toEqual({ checked: 0, updated: 0, lost: 0 })
+    expect(syncSummary([r('unchanged'), r('updated'), r('updated'), r('slot_changed'), r('missing'), r('pokemon_missing')])).toEqual({
+      checked: 6,
+      updated: 2,
+      lost: 3,
+    })
   })
 })

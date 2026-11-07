@@ -289,3 +289,23 @@ export function cloneBody(saveId: string, entry: Pick<SaveSlot, 'box' | 'slot'>,
     mode: 'copy',
   }
 }
+
+/** Um anexo conferido pelo POST /api/boxes/sync-attachments. */
+export interface SyncResult {
+  attachmentId: string
+  pokemonId: string
+  saveId: string
+  status: 'unchanged' | 'updated' | 'slot_changed' | 'missing' | 'pokemon_missing'
+}
+
+/**
+ * Resumo para a tela: quantos anexos foram conferidos, quantos tiveram a cópia do cofre atualizada e quantos se
+ * perderam (outro Pokémon na posição, save sumido ou o Pokémon do cofre apagado).
+ */
+export function syncSummary(results: SyncResult[]): { checked: number; updated: number; lost: number } {
+  return {
+    checked: results.length,
+    updated: results.filter((r) => r.status === 'updated').length,
+    lost: results.filter((r) => r.status === 'slot_changed' || r.status === 'missing' || r.status === 'pokemon_missing').length,
+  }
+}

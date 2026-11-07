@@ -26,6 +26,8 @@ import {
   type SaveEntry,
   type SaveFolder,
   type SaveSlot,
+  syncSummary,
+  type SyncResult,
 } from './boxes'
 import { ComingSoonActions } from './ComingSoonActions'
 import { EvolveDialog } from './EvolveDialog'
@@ -45,6 +47,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
   const [folders, setFolders] = useState<SaveFolder[] | null>(null)
   const [saves, setSaves] = useState<SaveEntry[] | null>(null)
   const [refreshing, setRefreshing] = useState(false)
+  const [syncing, setSyncing] = useState(false)
   const [saveId, setSaveId] = useState<string | null>(null)
   const [save, setSave] = useState<SaveBoxes | null>(null)
   const [box, setBox] = useState(0)
@@ -124,6 +127,21 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
     window.addEventListener(VAULT_CHANGED, loadVault)
     return () => window.removeEventListener(VAULT_CHANGED, loadVault)
   }, [loadVault])
+
+  /** Confere os Pokémon do cofre anexados aos saves e atualiza a cópia do cofre dos que mudaram no jogo. */
+  async function syncAttachments() {
+    setSyncing(true)
+    try {
+      const { checked, updated, lost } = syncSummary(await api.post<SyncResult[]>('/api/boxes/sync-attachments', {}))
+      toast(checked === 0 ? t('boxes.sync.none') : t('boxes.sync.done', { count: checked, updated, lost }))
+      if (updated > 0) loadVault()
+      void loadList()
+    } catch (e) {
+      if (!forbidden(e)) toast(errorMessage(t, e))
+    } finally {
+      setSyncing(false)
+    }
+  }
 
   /** Depois de gravar: relê o save aberto (a Gen 1/2 compacta as caixas), a lista (SHA novo) e o cofre. */
   async function afterWrite(backups: string[]) {
@@ -250,6 +268,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
         <div className="flex items-center gap-1.5 px-1">
           <span className="flex-1 text-sm font-bold">{t('boxes.savesTitle')}</span>
           <IconButton name="refresh" label={t('boxes.refresh')} className="h-8 w-8 border-transparent" disabled={refreshing} onClick={() => void loadList(true)} />
+          <IconButton name="sync" label={t('boxes.sync.label')} className="h-8 w-8 border-transparent" disabled={syncing} onClick={() => void syncAttachments()} />
           <Link to="/configuracoes?aba=preferencias#pastas" title={t('boxes.folders')} aria-label={t('boxes.folders')} className="flex h-8 w-8 items-center justify-center rounded-lg text-muted hover:text-ink">
             <Icon name="folder" className="text-[19px]" />
           </Link>
