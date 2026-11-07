@@ -624,49 +624,6 @@
 :::encounters bdsp iron-island
 
 
-## Route 216
-
-**To do**
-- Before coming here: Canalave Library, then Lake Valor (Saturn) and Lake Verity (Mars); see Lake Valor below.
-- Snow; Snowbound Lodge to rest.
-
-**Items:** TM13 (Ice Beam).
-
-:::encounters bdsp route-216
-
-## Route 217
-
-**To do**
-- Blizzard; follow the trails to Snowpoint.
-
-**Items:** TM100 (Rock Climb), TM07 (Hail).
-
-:::encounters bdsp route-217
-
-## Lake Acuity
-
-**To do**
-- Only opens after Candice; Jupiter takes Uxie.
-- After Spear Pillar: Uxie lv 50 in Acuity Cavern.
-
-**Items:** TM14 (Blizzard).
-
-:::encounters bdsp lake-acuity
-
-## Snowpoint City
-
-**To do**
-- Candice (Ice).
-- Trade: give Medicham, get the Haunter "Gaspar".
-
-**Items:** TM72 (Avalanche).
-
-**Boss**
-
-:::boss bdsp candice
-
-- Tip: Fire, Fighting, Steel and Rock. Abomasnow (lv 42) brings snow.
-
 ## Lake Valor
 
 **To do**
@@ -685,6 +642,49 @@
 :::boss bdsp mars-2
 
 - Tip: Toxicroak (Saturn) falls to Psychic; Purugly (Mars) to Fighting.
+
+## Route 216
+
+**To do**
+- Before coming here: Canalave Library, then Lake Valor (Saturn) and Lake Verity (Mars); see Lake Valor above.
+- Snow; Snowbound Lodge to rest.
+
+**Items:** TM13 (Ice Beam).
+
+:::encounters bdsp route-216
+
+## Route 217
+
+**To do**
+- Blizzard; follow the trails to Snowpoint.
+
+**Items:** TM100 (Rock Climb), TM07 (Hail).
+
+:::encounters bdsp route-217
+
+## Snowpoint City
+
+**To do**
+- Candice (Ice).
+- Trade: give Medicham, get the Haunter "Gaspar".
+
+**Items:** TM72 (Avalanche).
+
+**Boss**
+
+:::boss bdsp candice
+
+- Tip: Fire, Fighting, Steel and Rock. Abomasnow (lv 42) brings snow.
+
+## Lake Acuity
+
+**To do**
+- Only opens after Candice; Jupiter takes Uxie.
+- After Spear Pillar: Uxie lv 50 in Acuity Cavern.
+
+**Items:** TM14 (Blizzard).
+
+:::encounters bdsp lake-acuity
 
 ## Galactic HQ
 

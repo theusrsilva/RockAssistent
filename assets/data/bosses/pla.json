@@ -12,7 +12,8 @@
     "https://www.pokewiki.de/Tsubaki",
     "https://www.pokewiki.de/Nessia",
     "https://www.pokewiki.de/Efelia",
-    "https://www.pokemythology.net/detonados/detonado-legends-arceus/"
+    "https://www.pokemythology.net/detonados/detonado-legends-arceus/",
+    "https://game8.co/games/Pokemon-Legends-Arceus/archives/356654"
   ],
   "items": [
     {
@@ -1040,7 +1041,7 @@
         {
           "species": 282,
           "form": 0,
-          "level": 59,
+          "level": 60,
           "moves": [
             "calm-mind",
             "dazzling-gleam",
@@ -1065,8 +1066,8 @@
         }
       ],
       "level_cap": 60,
-      "verified": false,
-      "notes": "o detonado dá Gardevoir 60",
+      "verified": true,
+      "notes": "Gardevoir 60 (game8 e detonado); a Pokéwiki dá 59",
       "versions": null
     },
     {

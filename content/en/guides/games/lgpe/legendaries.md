@@ -6,7 +6,7 @@
 | Articuno | Seafoam Islands (bottom) | 50 | Sea Skim + Strong Push; same rule | both |
 | Moltres | Victory Road | 50 | 8 badges; same rule | both |
 | Mewtwo | Cerulean Cave (back) | 70 | Post-game; 5 min, then catch | both |
-| Articuno, Zapdos, Moltres | Kanto sky | — | Post-game, flying high; very rare (condition to be confirmed) | both |
+| Articuno, Zapdos, Moltres | Kanto sky | — | After becoming Champion and catching all three; flying high, very rare | both |
 | Mew | Mystery Gift | 1 | Poké Ball Plus connected | both |
 | Meltan | GO Park | varies | Pokémon GO Mystery Box | both |
 | Melmetal | GO Park | varies | Evolved in Pokémon GO | both |

@@ -42,7 +42,7 @@
 ## Shiny Charm and challenges
 
 - **Shiny Charm:** with every Pokédex entry at research level 10, talk to Laventon (Galaxy Hall).
-- **Noble rematches:** Lv. 70, after Arceus; rewards are Exp. Candies.
+- **Noble rematches:** Lv. 70, after the main story (talk to the warden at the arena); rewards: 3–4 Exp. Candy M, plus an Exp. Candy L or Grit Pebbles if you take no damage.
 - **Ingo (Training Grounds):** rematches, Path of Tenacity (three trainers in a row) and Path of Solitude (one Pokémon only, Req108–122).
 - **Eternal Battle Reverie:** back-to-back battles with Arceus's challenges, Lv. 60 to 100.
 - **Rank 10★:** 50,000 research points (20 Rare Candy and 10 Grit Rock).

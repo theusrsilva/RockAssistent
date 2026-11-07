@@ -6,7 +6,8 @@
     "https://www.serebii.net/brilliantdiamondshiningpearl/dawnlucas.shtml",
     "https://www.serebii.net/brilliantdiamondshiningpearl/teamgalactic.shtml",
     "https://www.serebii.net/brilliantdiamondshiningpearl/gymrematch.shtml",
-    "https://www.pokemythology.net/detonados/detonado-brilliant-diamond-shining-pearl/"
+    "https://www.pokemythology.net/detonados/detonado-brilliant-diamond-shining-pearl/",
+    "https://hero.fandom.com/wiki/Dawn_(Pok%C3%A9mon)"
   ],
   "items": [
     {
@@ -30,7 +31,7 @@
       ],
       "level_cap": 5,
       "verified": false,
-      "notes": "golpes padrão do nível; time para quem escolheu Chimchar; com Piplup: Turtwig 5; com Turtwig: Chimchar 5",
+      "notes": "golpes padrão do nível; time para quem escolheu Chimchar; com Piplup: Turtwig 5; com Turtwig: Chimchar 5; só no detonado: a Serebii e o game8 não listam luta no Lake Verity (a 1ª luta do Barry seria na Route 203)",
       "versions": null
     },
     {
@@ -3334,7 +3335,7 @@
       ],
       "level_cap": 64,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Wormadam 58, Milotic 59, Froslass 60, Tangrowth 59, Clefable 60, Infernape 64; com Turtwig: Wormadam 58, Tangrowth 59, Froslass 60, Magmortar 59, Clefable 60, Empoleon 64; rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Mothim 58, Milotic 59, Gallade 63, Magmortar 59, Clefable 60, Torterra 64; pós-jogo: sábados e domingos, depois do Heatran; a forma da Wormadam muda com o seu inicial; as fontes discordam (ver dúvidas)",
+      "notes": "time para quem escolheu Chimchar; com Piplup: Wormadam 58, Milotic 59, Froslass 60, Tangrowth 59, Clefable 60, Infernape 64; com Turtwig: Wormadam 58, Tangrowth 59, Froslass 60, Magmortar 59, Clefable 60, Empoleon 64; rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Mothim 58, Milotic 59, Gallade 63, Magmortar 59, Clefable 60, Torterra 64; pós-jogo: sábados e domingos, depois do Heatran; a forma da Wormadam muda com o seu inicial; Trash com o Chimchar e Sandy com o Piplup conferidos numa 2ª fonte",
       "versions": null
     },
     {

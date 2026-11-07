@@ -16,7 +16,7 @@
 | Lysandre | Mega Gyarados; Xerneas (US) / Yveltal (UM) |
 | Ghetsis | Zekrom (US) / Reshiram (UM) |
 | Giovanni | Mega Mewtwo X (US) / Y (UM) lv 70 |
-| End | Wicke gives 55 Big Nuggets; B2F items (DNA Splicers, Prison Bottle, Soul Dew); Porygon at Aether House |
+| End | Wicke gives 55 Big Nuggets; then talk to Wicke on B2F and the employee in Secret Lab A gives the DNA Splicers, Prison Bottle and Soul Dew; Porygon at Aether House |
 
 ## Ultra Beasts and Ultra Wormhole
 
@@ -51,7 +51,7 @@
 
 ## Battle Agency
 
-- Festival Plaza: build a team of rental Pokémon and win 3 battles in a row.
+- Festival Plaza (after Sophocles's trial): pick 1 of 3 rental Pokémon; the other 2 come from visitors to your Plaza; win 3 battles in a row to raise your grade (grade 1 = level 51, +1 per grade).
 - Needed for the Team Rocket takeover of Festival Plaza.
 
 ## Island Scan

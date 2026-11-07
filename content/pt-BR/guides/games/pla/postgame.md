@@ -42,7 +42,7 @@
 ## Shiny Charm e desafios
 
 - **Shiny Charm:** com todas as entradas da Pokédex em nível 10 de pesquisa, fale com o Laventon (Galaxy Hall).
-- **Revanche dos Noble:** lv 70, depois do Arceus; prêmio em Exp. Candies.
+- **Revanche dos Noble:** lv 70, depois do fim da história (fale com o guardião na arena); prêmio: 3–4 Exp. Candy M, e Exp. Candy L ou Grit Pebbles se não levar dano.
 - **Ingo (Training Grounds):** revanches, Path of Tenacity (três treinadores seguidos) e Path of Solitude (um Pokémon só, Req108–122).
 - **Eternal Battle Reverie:** batalhas seguidas com desafios do Arceus, lv 60 a 100.
 - **Rank 10★:** 50.000 pontos de pesquisa (20 Rare Candy e 10 Grit Rock).
