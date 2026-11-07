@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router'
-import { Badge, Button, Callout, Card, PageTitle, useToast } from '../../../components/ui'
+import { Link, useSearchParams } from 'react-router'
+import { Badge, Button, Callout, Card, PageTitle, Segmented, useToast } from '../../../components/ui'
 import { spriteUrl } from '../../../lib/api'
 import { useApiGet } from '../../../lib/dex'
 import { importPasteToBoxes, localized, type VgcRegulation, type VgcTeam } from '../../../lib/vgc'
 import PasteDialog from './PasteDialog'
+import UsageView from './UsageView'
 
 /** "Copiar paste": área de transferência, com aviso. */
 export function CopyPasteButton({ paste }: { paste: string }) {
@@ -110,9 +111,13 @@ function TeamCard({ team, onAnalyze }: { team: VgcTeam; onAnalyze: () => void })
   )
 }
 
-/** /guias/vgc/times — os times sugeridos da regulamentação vigente. */
+type TeamsTab = 'teams' | 'usage'
+
+/** /guias/vgc/times — os times sugeridos da regulamentação vigente e, na outra aba, os mais usados (Smogon). */
 export default function TeamsPage() {
   const { t } = useTranslation()
+  const [params, setParams] = useSearchParams()
+  const tab: TeamsTab = params.get('aba') === 'usage' ? 'usage' : 'teams'
   const teams = useApiGet<VgcTeam[]>('/api/vgc/teams')
   const regulation = useApiGet<VgcRegulation>('/api/vgc/regulation')
   const [analyzing, setAnalyzing] = useState<VgcTeam | null>(null)
@@ -130,7 +135,18 @@ export default function TeamsPage() {
         </p>
         <p className="mt-1 text-[12.5px] text-muted">{t('vgc.importHint')}</p>
       </div>
-      {teams.loading ? (
+      <Segmented
+        value={tab}
+        onChange={(v) => setParams(v === 'usage' ? { aba: 'usage' } : {}, { replace: true })}
+        options={[
+          { value: 'teams', label: t('vgc.usage.tabTeams') },
+          { value: 'usage', label: t('vgc.usage.tab') },
+        ]}
+        className="max-w-[420px]"
+      />
+      {tab === 'usage' ? (
+        <UsageView />
+      ) : teams.loading ? (
         <p className="text-muted">{t('common.loading')}</p>
       ) : teams.error || !teams.data ? (
         <Callout tone="amber" icon="cloud_off">

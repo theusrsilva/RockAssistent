@@ -14,6 +14,7 @@ using TradeRock.Core.Pokemon;
 using TradeRock.Core.Storage;
 using TradeRock.Core.Trading;
 using TradeRock.Core.Updates;
+using TradeRock.Core.Vgc;
 using TradeRock.App.Api;
 
 namespace TradeRock.App;
@@ -112,6 +113,11 @@ public static class ServiceSetup
         services.AddSingleton(sp => ActivatorUtilities.CreateInstance<UpdateService>(sp,
             sp.GetRequiredService<IHttpClientFactory>().CreateClient(nameof(UpdateService))));
         services.AddHostedService<UpdateAutoCheck>();
+
+        // Internet opcional (D32): estatísticas do Smogon e links do pokepast.es, desligadas por padrão; só GET.
+        services.AddSingleton<SmogonUsageStore>();
+        services.AddHttpClient(InternetHttp.ClientName, http => InternetHttp.Configure(http, AppVersion.Current))
+            .ConfigurePrimaryHttpMessageHandler(InternetHttp.CreateHandler);
     }
 
     /// <summary>

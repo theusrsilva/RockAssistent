@@ -1132,3 +1132,26 @@ O autor pediu um parceiro mais efetivo na Dynamax Adventure e na Max Raid em que
   - o `--raid-move` automático com um PK8 de verdade;
   - testes do .NET (pedido "auto" com os tipos, chefe que não existe) e da tela.
 - **Não verificado:** em batalha com um Sword/Shield de verdade.
+
+## D32. Internet opcional: estatísticas do Smogon e links do pokepast.es
+
+A especificação do RockAssistent (4.10) pediu duas consultas à internet além da procura de atualizações (D29).
+
+- **Desligadas por padrão:** `internet.smogon` e `internet.pokepaste` em Configurações → Preferências → "Internet
+  opcional" (`GET/PUT /api/settings/internet`, valem para o PC todo). Mudar, só na janela do PC; pela rede o cartão só
+  mostra o estado.
+- **Nada do PC é enviado:** só GET, com o User-Agent do app, sem cookies, sem seguir redirecionamentos, tempo limite de
+  2 minutos (`InternetHttp`). Os Logs registram "download iniciado/concluído" e o código do erro; o endereço do paste
+  não entra.
+- **Smogon:** `https://www.smogon.com/stats/<aaaa-mm>/chaos/<formato>.json`, só quando a pessoa clica em Atualizar
+  (`POST /api/vgc/usage/refresh`, só na janela do PC). Formato `gen9championsvgc2026regmc-1760` (VGC do Champions,
+  Regulation M-C, 1760+; conferido na listagem de 2026-10), em `smogon_format` do `vgc/regulation.json`. Começa pelo mês
+  anterior (o Smogon publica o mês M no começo de M+1) e, num 404, tenta mais um mês para trás. Limite de 30 MB
+  (outubro/2026 tinha 14,3 MB); o arquivo só substitui o anterior se for um `chaos` válido. Fica em
+  `<DataDir>/vgc/<formato>-<aaaa-mm>.json`; `GET /api/vgc/usage` (também pela rede) lê o mais recente e devolve os
+  50 mais usados com golpes, itens, habilidades e parceiros. Percentuais normalizados pela soma das habilidades (o peso
+  do Pokémon).
+- **pokepast.es:** só `https://pokepast.es/<id>` (host exato, porta padrão, sem usuário); baixa `/<id>/raw` com limite de
+  20 KB (`POST /api/vgc/paste/fetch`, só na janela do PC). Outro endereço: `paste_host_not_allowed`, sem conexão.
+- **Verificado:** testes com uma internet falsa (parse da fixture, mês anterior no 404, arquivo inválido, hosts recusados,
+  endpoints desligados) e o parse do arquivo real de 2026-10 (50 espécies reconhecidas, 137 ms).

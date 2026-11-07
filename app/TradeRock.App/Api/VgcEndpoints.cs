@@ -1,19 +1,35 @@
 using System.Text;
 using TradeRock.Core.Builder;
 using TradeRock.Core.Dex;
+using TradeRock.Core.Storage;
 using TradeRock.Core.GameData;
 using TradeRock.Core.Trading;
 using TradeRock.Core.Vgc;
 
 namespace TradeRock.App.Api;
 
-/// <summary>Seção VGC dos guias: times sugeridos, regulamentação vigente e análise de um paste colado (sem internet).</summary>
+/// <summary>
+/// Seção VGC dos guias: times sugeridos, regulamentação vigente e análise de um paste colado (sem internet). Com a
+/// internet opcional ligada (D32): estatísticas do Smogon e links do pokepast.es. Os downloads só fazem GET.
+/// </summary>
 public static class VgcEndpoints
 {
     public sealed record AnalyzeDto(string? Paste, string? Game = TeamAnalysis.GameKey);
 
     /// <summary>Um Pokémon do paste que ficou fora da análise (espécie que não existe no SV ou além do 6º).</summary>
     public sealed record SkippedDto(string Text, IReadOnlyList<string> Problems);
+
+    public sealed record PasteFetchDto(string? Url);
+
+    /// <summary>Um download do Smogon por vez (o arquivo tem ~15 MB).</summary>
+    private static readonly SemaphoreSlim Refreshing = new(1, 1);
+
+    /// <summary>O formato do Smogon da regulamentação vigente (<c>smogon_format</c>), ou o padrão.</summary>
+    public static string SmogonFormat(GameDataStore store) =>
+        store.VgcRegulation?.SmogonFormat is { } f && SmogonStats.IsValidFormat(f) ? f : SmogonStats.DefaultFormat;
+
+    private static IResult NetworkError(InternetException e) =>
+        Results.Json(new { error = "network_error", reason = e.Code }, statusCode: StatusCodes.Status502BadGateway);
 
     public static void MapVgc(this IEndpointRouteBuilder api)
     {
@@ -38,6 +54,68 @@ public static class VgcEndpoints
 
         group.MapGet("/regulation", (GameDataStore store) =>
             store.VgcRegulation is { } r ? Results.Ok(r) : Results.NotFound());
+
+        group.MapGet("/usage", (GameDataStore store, SmogonUsageStore usage) =>
+            usage.Latest(SmogonFormat(store)) is { } report ? Results.Ok(report) : Results.NotFound(new { error = "no_usage" }));
+
+        group.MapPost("/usage/refresh", async (GameDataStore store, SmogonUsageStore usage, SettingsStore settings,
+            IHttpClientFactory factory, TimeProvider time, ILoggerFactory loggers, CancellationToken ct) =>
+        {
+            if (!(await settings.GetAsync(InternetSettings.Key, InternetSettings.Default, ct)).Smogon)
+                return Results.BadRequest(new { error = "internet_disabled" });
+            if (!await Refreshing.WaitAsync(0, ct))
+                return Results.Conflict(new { error = "busy" });
+            var logger = loggers.CreateLogger("TradeRock.Vgc");
+            try
+            {
+                var format = SmogonFormat(store);
+                var month = SmogonStats.LatestMonth(time.GetUtcNow());
+                logger.LogInformation("Smogon: download iniciado ({Format}, {Month:yyyy-MM}).", format, month);
+                var done = await SmogonStats.DownloadAsync(factory.CreateClient(InternetHttp.ClientName), format, month, usage.Dir, ct);
+                logger.LogInformation("Smogon: download concluído ({Month:yyyy-MM}).", done.Month);
+                return usage.Latest(format) is { } report ? Results.Ok(report) : Results.NotFound(new { error = "no_usage" });
+            }
+            catch (InternetException e)
+            {
+                logger.LogWarning("Smogon: download falhou ({Code}).", e.Code);
+                return NetworkError(e);
+            }
+            finally
+            {
+                Refreshing.Release();
+            }
+        });
+
+        group.MapPost("/paste/fetch", async (PasteFetchDto body, SettingsStore settings, IHttpClientFactory factory,
+            ILoggerFactory loggers, CancellationToken ct) =>
+        {
+            if (!(await settings.GetAsync(InternetSettings.Key, InternetSettings.Default, ct)).Pokepaste)
+                return Results.BadRequest(new { error = "internet_disabled" });
+            if (!Uri.TryCreate(body.Url?.Trim(), UriKind.Absolute, out var url) || PokePaste.RawUri(url) is null)
+                return Results.BadRequest(new { error = "paste_host_not_allowed" });
+            // O endereço do paste não vai para o log (pode ser o time de alguém).
+            var logger = loggers.CreateLogger("TradeRock.Vgc");
+            try
+            {
+                logger.LogInformation("pokepast.es: download iniciado.");
+                var paste = await PokePaste.FetchAsync(factory.CreateClient(InternetHttp.ClientName), url, ct);
+                logger.LogInformation("pokepast.es: download concluído.");
+                return Results.Ok(new { paste });
+            }
+            catch (InternetException e) when (e.Code is "paste_not_found")
+            {
+                return Results.NotFound(new { error = e.Code });
+            }
+            catch (InternetException e) when (e.Code is "paste_too_big")
+            {
+                return Results.BadRequest(new { error = e.Code });
+            }
+            catch (InternetException e)
+            {
+                logger.LogWarning("pokepast.es: download falhou ({Code}).", e.Code);
+                return NetworkError(e);
+            }
+        });
 
         group.MapPost("/analyze", async (AnalyzeDto body, DexService dex, CancellationToken ct) =>
         {

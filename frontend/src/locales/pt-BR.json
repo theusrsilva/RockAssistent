@@ -381,6 +381,20 @@
     "engineErrors": {
       "server_mode_on_radio": "O modo servidor está usando a placa Wi-Fi das trocas. Desligue o modo servidor ou escolha outra interface antes.",
       "busy": "Espere a troca e a fila terminarem para mudar o motor."
+    },
+    "internet": {
+      "title": "Internet opcional",
+      "sub": "Duas opções que baixam arquivos públicos. Começam desligadas; sem elas, tudo funciona sem internet.",
+      "smogon": {
+        "label": "Estatísticas de uso do Smogon",
+        "help": "Baixa, quando você clicar em Atualizar, o arquivo mensal do Smogon com os Pokémon, golpes, itens, habilidades e parceiros mais usados no VGC do Pokémon Champions (cerca de 15 MB). Aparece na aba Mais usados da seção VGC e fica guardado na pasta de dados."
+      },
+      "pokepaste": {
+        "label": "Abrir link do pokepast.es",
+        "help": "Deixa colar um link do pokepast.es em Minha equipe: o RockAssistent baixa o texto do time (até 20 KB). Sem isso, só dá para colar o texto."
+      },
+      "privacy": "Nenhuma das duas envia dados do seu computador: o RockAssistent só pede o arquivo e lê a resposta. Os downloads aparecem nos Logs sem o endereço do paste.",
+      "remote": "Só dá para ligar ou desligar na janela do PC."
     }
   },
   "close": {
@@ -2617,6 +2631,44 @@
       "bannedSpecies": "Pokémon banidos",
       "bannedMoves": "Golpes banidos",
       "none": "nenhum"
+    },
+    "usage": {
+      "tab": "Mais usados",
+      "tabTeams": "Times sugeridos",
+      "title": "Mais usados (Smogon)",
+      "sub": "Formato {{format}}, mês {{month}}, {{battles}} batalhas.",
+      "subEmpty": "Os 50 Pokémon mais usados no VGC do Pokémon Champions, pelas estatísticas mensais do Smogon (Pokémon Showdown).",
+      "refresh": "Atualizar",
+      "refreshing": "Baixando…",
+      "source": "Fonte: smogon.com/stats (batalhas do Pokémon Showdown, jogadores com 1760+). Toque num Pokémon para ver golpes, itens, habilidades e parceiros.",
+      "empty": "Ainda não há estatísticas. Para ver os mais usados, ligue \"Estatísticas de uso do Smogon\" em Configurações → Preferências → Internet opcional e clique em Atualizar.",
+      "emptyEnabled": "Ainda não há estatísticas. Clique em Atualizar para baixar o arquivo do mês.",
+      "emptyRemote": "Ainda não há estatísticas. Elas são baixadas na janela do PC.",
+      "howToEnable": "A opção está desligada. Ligue \"Estatísticas de uso do Smogon\" em Internet opcional para baixar.",
+      "disabledHint": "A opção está desligada: estes são os dados baixados da última vez.",
+      "openSettings": "Abrir Configurações",
+      "moves": "Golpes",
+      "items": "Itens",
+      "abilities": "Habilidades",
+      "teammates": "Parceiros",
+      "noItem": "Sem item",
+      "errors": {
+        "internet_disabled": "A opção está desligada em Configurações → Internet opcional.",
+        "paste_host_not_allowed": "Só links do pokepast.es (https://pokepast.es/...).",
+        "paste_not_found": "Esse paste não existe no pokepast.es.",
+        "paste_too_big": "O paste passa de 20 KB.",
+        "busy": "Já está baixando. Espere terminar.",
+        "local_only": "Só dá para baixar pela janela do PC.",
+        "network": "Não deu para baixar. Confira a internet e tente de novo.",
+        "networkCode": "Não deu para baixar ({{code}}). Confira a internet e tente de novo."
+      }
+    },
+    "paste": {
+      "linkLabel": "Link do pokepast.es (opcional)",
+      "open": "Abrir link",
+      "opening": "Abrindo…",
+      "disabled": "Para colar um link, ligue \"Abrir link do pokepast.es\" em Internet opcional.",
+      "remote": "Links do pokepast.es só abrem na janela do PC. Aqui, cole o texto."
     }
   }
 }

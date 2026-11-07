@@ -1,5 +1,18 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { importPasteToBoxes, isTeamWeakness, loadMyTeam, MY_TEAM_KEY, pasteBytes, saveMyTeam, uncovered, type TeamReport } from './vgc'
+import { ApiError } from './api'
+import {
+  formatPercent,
+  importPasteToBoxes,
+  internetErrorKey,
+  isPokepasteUrl,
+  isTeamWeakness,
+  loadMyTeam,
+  MY_TEAM_KEY,
+  pasteBytes,
+  saveMyTeam,
+  uncovered,
+  type TeamReport,
+} from './vgc'
 
 /** localStorage em memória (os testes rodam no Node). */
 function memoryStorage(): Storage {
@@ -73,5 +86,34 @@ describe('vgc', () => {
     const outcome = await importPasteToBoxes('...', 'pt-BR')
     expect(outcome).toEqual({ saved: 1, failed: ['Floette-Eternal @ Floettite'] })
     expect(calls).toEqual(['/api/builder/showdown', '/api/builder/generate', '/api/builder/save'])
+  })
+})
+
+describe('internet opcional', () => {
+  it('aceita só links https do pokepast.es', () => {
+    expect(isPokepasteUrl('https://pokepast.es/abc123')).toBe(true)
+    expect(isPokepasteUrl(' https://pokepast.es/abc123/raw ')).toBe(true)
+    expect(isPokepasteUrl('https://pokepast.es/abc123/')).toBe(true)
+    expect(isPokepasteUrl('http://pokepast.es/abc123')).toBe(false)
+    expect(isPokepasteUrl('https://evil.example/x')).toBe(false)
+    expect(isPokepasteUrl('https://pokepast.es.evil.example/abc')).toBe(false)
+    expect(isPokepasteUrl('https://pokepast.es:8443/abc')).toBe(false)
+    expect(isPokepasteUrl('https://u@pokepast.es/abc')).toBe(false)
+    expect(isPokepasteUrl('https://pokepast.es/')).toBe(false)
+    expect(isPokepasteUrl('https://pokepast.es/a/b')).toBe(false)
+    expect(isPokepasteUrl('pokepast.es/abc')).toBe(false)
+  })
+
+  it('traduz os erros pelo código e o resto vira erro de rede', () => {
+    expect(internetErrorKey(new ApiError(400, 'internet_disabled', []))).toBe('internet_disabled')
+    expect(internetErrorKey(new ApiError(400, 'paste_host_not_allowed', []))).toBe('paste_host_not_allowed')
+    expect(internetErrorKey(new ApiError(502, 'network_error', [], null, 'http_500'))).toBe('network')
+    expect(internetErrorKey(new Error('x'))).toBe('network')
+  })
+
+  it('formata o percentual', () => {
+    expect(formatPercent(49.95, 'en')).toBe('50%')
+    expect(formatPercent(9.876, 'en')).toBe('9.88%')
+    expect(formatPercent(12.34, 'pt-BR')).toBe('12,3%')
   })
 })

@@ -99,5 +99,6 @@
   ],
   "notes_pt": "Vale nas Ranked Battles do Pokémon Champions (temporadas M-6, M-7 e M-8) e na maior parte dos eventos do VGC no período. Não tira ninguém do M-A e do M-B: só adiciona. A lista completa de Pokémon fica no jogo (Recruit → Roster Info). A versão 1.2.0 mudou o PP de Wish e Strength Sap (12 → 8) e o poder de alguns golpes; calculadoras antigas podem errar.",
   "notes_en": "Used in Pokémon Champions Ranked Battles (seasons M-6, M-7 and M-8) and in most VGC events in this period. Nothing from M-A and M-B was removed: it only adds. The full Pokémon list is in the game (Recruit → Roster Info). Version 1.2.0 changed the PP of Wish and Strength Sap (12 → 8) and the power of some moves; older calculators can be off.",
-  "verified": true
+  "verified": true,
+  "smogon_format": "gen9championsvgc2026regmc-1760"
 }

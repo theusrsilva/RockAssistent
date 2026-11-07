@@ -21,6 +21,8 @@ internal static class VgcValidator
                 errors.Add("vgc/regulation: regras faltando ou diferentes entre pt e en");
             if (regulation.Source.Count == 0)
                 errors.Add("vgc/regulation: sem fontes");
+            if (regulation.SmogonFormat is { } format && !SmogonStats.IsValidFormat(format))
+                errors.Add("vgc/regulation: smogon_format fora do formato (ex.: gen9championsvgc2026regmc-1760)");
         }
         if (teams.Count > 0 && regulation is null)
             errors.Add("vgc/teams: falta vgc/regulation.json");

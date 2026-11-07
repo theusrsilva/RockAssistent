@@ -381,6 +381,20 @@
     "engineErrors": {
       "server_mode_on_radio": "Server mode is using the Wi-Fi card that does the trades. Turn server mode off or pick another interface first.",
       "busy": "Wait for the trade and the queue to finish before changing the engine."
+    },
+    "internet": {
+      "title": "Optional internet",
+      "sub": "Two options that download public files. They start off; without them everything works offline.",
+      "smogon": {
+        "label": "Smogon usage statistics",
+        "help": "When you click Refresh, downloads Smogon's monthly file with the most used Pokémon, moves, items, abilities and teammates in Pokémon Champions VGC (about 15 MB). It shows in the Most used tab of the VGC section and is kept in the data folder."
+      },
+      "pokepaste": {
+        "label": "Open pokepast.es links",
+        "help": "Lets you paste a pokepast.es link in My team: RockAssistent downloads the team text (up to 20 KB). Without it, you can only paste the text."
+      },
+      "privacy": "Neither sends any data from your computer: RockAssistent only asks for the file and reads the answer. Downloads show in the Logs without the paste address.",
+      "remote": "Can only be turned on or off in the PC window."
     }
   },
   "close": {
@@ -2617,6 +2631,44 @@
       "bannedSpecies": "Banned Pokémon",
       "bannedMoves": "Banned moves",
       "none": "none"
+    },
+    "usage": {
+      "tab": "Most used",
+      "tabTeams": "Suggested teams",
+      "title": "Most used (Smogon)",
+      "sub": "Format {{format}}, month {{month}}, {{battles}} battles.",
+      "subEmpty": "The 50 most used Pokémon in Pokémon Champions VGC, from Smogon's monthly statistics (Pokémon Showdown).",
+      "refresh": "Refresh",
+      "refreshing": "Downloading…",
+      "source": "Source: smogon.com/stats (Pokémon Showdown battles, players rated 1760+). Tap a Pokémon to see moves, items, abilities and teammates.",
+      "empty": "No statistics yet. To see the most used, turn on \"Smogon usage statistics\" in Settings → Preferences → Optional internet and click Refresh.",
+      "emptyEnabled": "No statistics yet. Click Refresh to download this month's file.",
+      "emptyRemote": "No statistics yet. They are downloaded in the PC window.",
+      "howToEnable": "The option is off. Turn on \"Smogon usage statistics\" in Optional internet to download.",
+      "disabledHint": "The option is off: this is the data from the last download.",
+      "openSettings": "Open Settings",
+      "moves": "Moves",
+      "items": "Items",
+      "abilities": "Abilities",
+      "teammates": "Teammates",
+      "noItem": "No item",
+      "errors": {
+        "internet_disabled": "The option is off in Settings → Optional internet.",
+        "paste_host_not_allowed": "Only pokepast.es links (https://pokepast.es/...).",
+        "paste_not_found": "That paste doesn't exist on pokepast.es.",
+        "paste_too_big": "The paste is over 20 KB.",
+        "busy": "Already downloading. Wait for it to finish.",
+        "local_only": "Downloads only work in the PC window.",
+        "network": "Couldn't download. Check the internet and try again.",
+        "networkCode": "Couldn't download ({{code}}). Check the internet and try again."
+      }
+    },
+    "paste": {
+      "linkLabel": "pokepast.es link (optional)",
+      "open": "Open link",
+      "opening": "Opening…",
+      "disabled": "To paste a link, turn on \"Open pokepast.es links\" in Optional internet.",
+      "remote": "pokepast.es links only open in the PC window. Here, paste the text."
     }
   }
 }

@@ -6,6 +6,7 @@ using TradeRock.Core.Engines;
 using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
 using TradeRock.Core.Trading;
+using TradeRock.Core.Vgc;
 
 namespace TradeRock.App.Api;
 
@@ -119,6 +120,17 @@ public static class SettingsEndpoints
             return Results.Ok(local
                 ? new HotkeySettingsDto(saved.Increment, saved.Decrement, saved.Global, global.Supported, global.Reason)
                 : new HotkeySettingsDto(saved.Increment, saved.Decrement, false, false, "remote"));
+        });
+
+        // Internet opcional (D32): as duas começam desligadas. Ler vale pela rede (a tela mostra o estado); mudar, só no PC.
+        api.MapGet("/settings/internet", async (SettingsStore settings, CancellationToken ct) =>
+            await settings.GetAsync(InternetSettings.Key, InternetSettings.Default, ct));
+
+        api.MapPut("/settings/internet", async (InternetSettings body, SettingsStore settings, CancellationToken ct) =>
+        {
+            var saved = new InternetSettings(body.Smogon, body.Pokepaste);
+            await settings.SetAsync(InternetSettings.Key, saved, ct);
+            return saved;
         });
 
         // Pastas de saves da tela Boxes (só na janela local: são caminhos do PC).

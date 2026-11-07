@@ -1,8 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Callout, Modal } from '../../../components/ui'
+import { Link } from 'react-router'
+import { Button, Callout, Modal, inputClass } from '../../../components/ui'
 import { ApiError, spriteUrl } from '../../../lib/api'
-import { analyzePaste, isTeamWeakness, uncovered, type AnalyzeResult } from '../../../lib/vgc'
+import { useIsRemote } from '../../../lib/auth'
+import { useApiGet } from '../../../lib/dex'
+import {
+  analyzePaste,
+  fetchPokepaste,
+  internetErrorKey,
+  isPokepasteUrl,
+  isTeamWeakness,
+  uncovered,
+  type AnalyzeResult,
+  type InternetSettings,
+} from '../../../lib/vgc'
 import { TypeBadge, TypeList } from '../../dex/TypeBadge'
 import { BlockTable, cell } from '../blocks/common'
 
@@ -127,6 +139,81 @@ export function TeamReportView({ result }: { result: AnalyzeResult }) {
       </section>
 
       <p className="text-[12px] text-muted">{t('vgc.report.limits')}</p>
+    </div>
+  )
+}
+
+/**
+ * Link do pokepast.es (Internet opcional, D32): baixa o texto do paste pelo servidor e entrega em <onPaste>. Fica
+ * desligado enquanto a opção estiver desligada nas Configurações, e pela rede (só a janela do PC baixa).
+ */
+export function PasteLinkField({ onPaste }: { onPaste: (paste: string) => void }) {
+  const { t } = useTranslation()
+  const remote = useIsRemote()
+  const settings = useApiGet<InternetSettings>('/api/settings/internet')
+  const [url, setUrl] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const enabled = !remote && !!settings.data?.pokepaste
+  const valid = isPokepasteUrl(url)
+
+  async function open() {
+    setBusy(true)
+    setError(null)
+    try {
+      const { paste } = await fetchPokepaste(url.trim())
+      onPaste(paste)
+      setUrl('')
+    } catch (e) {
+      setError(t(`vgc.usage.errors.${internetErrorKey(e)}`))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div className="flex flex-col gap-1.5">
+      <label htmlFor="vgc-paste-link" className="text-sm font-semibold">
+        {t('vgc.paste.linkLabel')}
+      </label>
+      <div className="flex flex-wrap gap-2">
+        <input
+          id="vgc-paste-link"
+          type="url"
+          inputMode="url"
+          value={url}
+          disabled={!enabled || busy}
+          placeholder="https://pokepast.es/…"
+          onChange={(e) => {
+            setUrl(e.target.value)
+            setError(null)
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' && valid && !busy) void open()
+          }}
+          className={`${inputClass} min-w-0 flex-1`}
+        />
+        <Button variant="secondary" size="sm" icon="link" disabled={!enabled || !valid || busy} onClick={() => void open()}>
+          {busy ? t('vgc.paste.opening') : t('vgc.paste.open')}
+        </Button>
+      </div>
+      {remote ? (
+        <p className="text-[12.5px] text-muted">{t('vgc.paste.remote')}</p>
+      ) : !enabled && !settings.loading ? (
+        <p className="text-[12.5px] text-muted">
+          {t('vgc.paste.disabled')}{' '}
+          <Link to="/configuracoes?aba=preferencias#internet" className="font-semibold text-accent">
+            {t('vgc.usage.openSettings')}
+          </Link>
+        </p>
+      ) : url.trim() && !valid ? (
+        <p className="text-[12.5px] text-bad">{t('vgc.usage.errors.paste_host_not_allowed')}</p>
+      ) : null}
+      {error && (
+        <Callout tone="amber" icon="error" className="text-[13px]">
+          {error}
+        </Callout>
+      )}
     </div>
   )
 }

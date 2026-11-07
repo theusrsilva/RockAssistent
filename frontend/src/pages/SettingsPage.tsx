@@ -14,6 +14,7 @@ import { ConnectionChecklist } from './settings/ConnectionChecklist'
 import { LogsTab } from './settings/LogsTab'
 import { SaveFoldersCard } from './settings/SaveFoldersCard'
 import { HotkeysCard } from './settings/HotkeysCard'
+import { InternetCard } from './settings/InternetCard'
 import { useAuth } from '../lib/auth'
 import { useConnection } from '../lib/connection'
 import { useConnectionSummary } from '../components/Layout'
@@ -55,10 +56,10 @@ export default function SettingsPage() {
   const asked = params.get('aba') as Tab | null
   const tab: Tab = tabs.some((x) => x.key === asked) ? asked! : 'conexao'
 
-  // Links antigos para o modo servidor (#servidor) caem na aba Avançado; o Boxes aponta para #pastas.
+  // Links antigos para o modo servidor (#servidor) caem na aba Avançado; o Boxes aponta para #pastas e a seção VGC para #internet.
   useEffect(() => {
     const anchor = window.location.hash.slice(1)
-    if (anchor === 'servidor' || anchor === 'pastas') document.getElementById(anchor)?.scrollIntoView()
+    if (anchor === 'servidor' || anchor === 'pastas' || anchor === 'internet') document.getElementById(anchor)?.scrollIntoView()
   }, [tab])
 
   async function saveSettings(next: TradeSettings) {
@@ -96,6 +97,8 @@ export default function SettingsPage() {
           {local && <SaveFoldersCard />}
           {/* Atalhos do Contador Hunt: no celular não há teclado, então o cartão some. */}
           {!mobile && <HotkeysCard />}
+          {/* Internet opcional (D32): mostra o estado para todos; ligar e desligar só na janela do PC. */}
+          <InternetCard />
         </div>
       )}
       {tab === 'avancado' && local && <AdvancedTab settings={settings} onSave={saveSettings} />}

@@ -1,7 +1,8 @@
 // Seção VGC dos guias: times sugeridos, regulamentação vigente, análise de um paste e "Minha equipe" (localStorage).
-// Tudo sem internet: o paste é colado à mão e analisado pelo servidor local.
+// Sem internet por padrão: o paste é colado à mão e analisado pelo servidor local. Com a "Internet opcional" (D32)
+// ligada nas Configurações, o servidor baixa as estatísticas do Smogon e abre links do pokepast.es (só GET).
 
-import { api } from './api'
+import { ApiError, api } from './api'
 import type { BuildResult, ShowdownImportItem } from './types'
 
 export interface PasteMember {
@@ -49,6 +50,7 @@ export interface VgcRegulation {
   notesEn: string
   verified: boolean
   source: string[]
+  smogonFormat?: string | null
 }
 
 export interface MoveReport {
@@ -168,4 +170,73 @@ export function saveMyTeam(paste: string): boolean {
   } catch {
     return false
   }
+}
+
+// ---- Internet opcional (D32) ----
+
+export interface InternetSettings {
+  smogon: boolean
+  pokepaste: boolean
+}
+
+export const INTERNET_OFF: InternetSettings = { smogon: false, pokepaste: false }
+
+/** Um golpe, item, habilidade ou parceiro e em quantos times daquele Pokémon ele aparece (%). */
+export interface UsageShare {
+  id: string
+  name: string
+  percent: number
+}
+
+export interface UsageEntry {
+  rank: number
+  /** Nome do Showdown, com a forma ("Rotom-Wash"). */
+  name: string
+  /** Espécie para o sprite (0 quando não reconhecida). */
+  species: number
+  /** % dos times com este Pokémon. */
+  usage: number
+  moves: UsageShare[]
+  items: UsageShare[]
+  abilities: UsageShare[]
+  teammates: UsageShare[]
+}
+
+export interface UsageReport {
+  format: string
+  /** "aaaa-mm" */
+  month: string
+  battles: number
+  pokemon: UsageEntry[]
+}
+
+export const getInternetSettings = () => api.get<InternetSettings>('/api/settings/internet')
+export const saveInternetSettings = (next: InternetSettings) => api.put<InternetSettings>('/api/settings/internet', next)
+export const refreshUsage = () => api.post<UsageReport>('/api/vgc/usage/refresh')
+export const fetchPokepaste = (url: string) => api.post<{ paste: string }>('/api/vgc/paste/fetch', { url })
+
+/** Mesma regra do servidor: só https://pokepast.es/<id> (ou /<id>/raw), sem porta nem usuário. */
+export function isPokepasteUrl(text: string): boolean {
+  let url: URL
+  try {
+    url = new URL(text.trim())
+  } catch {
+    return false
+  }
+  if (url.protocol !== 'https:' || url.hostname !== 'pokepast.es' || url.port !== '' || url.username || url.password) return false
+  const parts = url.pathname.replace(/^\/+|\/+$/g, '').split('/')
+  return /^[A-Za-z0-9]{1,64}$/.test(parts[0]) && (parts.length === 1 || (parts.length === 2 && parts[1] === 'raw'))
+}
+
+/** Percentual curto: "49,9%" / "49.9%". */
+export const formatPercent = (value: number, lang: string) =>
+  `${value.toLocaleString(lang, { maximumFractionDigits: value >= 10 ? 1 : 2 })}%`
+
+const INTERNET_ERRORS = ['internet_disabled', 'paste_host_not_allowed', 'paste_not_found', 'paste_too_big', 'busy', 'local_only']
+
+/** Chave de tradução (vgc.usage.errors.*) para um erro dos downloads; erro de rede vira "network". */
+export function internetErrorKey(error: unknown): string {
+  if (!(error instanceof ApiError)) return 'network'
+  if (error.code && INTERNET_ERRORS.includes(error.code)) return error.code
+  return 'network'
 }

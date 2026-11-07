@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Button, Callout, Card, PageTitle, inputClass, useToast } from '../../../components/ui'
 import { analyzePaste, loadMyTeam, MAX_PASTE_BYTES, pasteBytes, saveMyTeam, type AnalyzeResult } from '../../../lib/vgc'
-import { analyzeErrorText, TeamReportView } from './PasteDialog'
+import { analyzeErrorText, PasteLinkField, TeamReportView } from './PasteDialog'
 import { CopyPasteButton, ImportButton } from './TeamsPage'
 
 /** /guias/vgc/minha-equipe — cola um paste do Showdown, analisa e guarda neste computador. Sem internet. */
@@ -52,6 +52,13 @@ export default function MyTeamPage() {
         <p className="mt-1 text-sm text-muted">{t('vgc.myTeam.sub')}</p>
       </div>
       <Card className="flex flex-col gap-3">
+        <PasteLinkField
+          onPaste={(text) => {
+            setPaste(text)
+            setResult(null)
+            setError(null)
+          }}
+        />
         <label htmlFor="vgc-paste" className="text-sm font-semibold">
           {t('vgc.myTeam.label')}
         </label>
