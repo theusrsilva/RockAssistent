@@ -27,7 +27,11 @@
     "https://serebii.net/pokearth/lumiosecity/quasarticoinc..shtml",
     "https://serebii.net/legendsz-a/mainmissions/reachingrankx.shtml",
     "https://www.serebii.net/legendsz-a/mainmissions/reachingrankd.shtml",
-    "https://www.pokewiki.de/Gwynn"
+    "https://www.pokewiki.de/Gwynn",
+    "https://www.serebii.net/legendsz-a/mainmissions/anewlifeinlumiosecity.shtml",
+    "https://www.serebii.net/legendsz-a/mainmissions/thesecretsofmegaevolution.shtml",
+    "https://www.serebii.net/legendsz-a/mainmissions/prismtower'sdarkturn.shtml",
+    "https://www.serebii.net/legendsz-a/mainmissions/theinfinitez-aroyale.shtml"
   ],
   "items": [
     {
@@ -92,8 +96,103 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); ficam com os dois iniciais que você não escolheu; time para quem escolheu Tepig; com Chikorita: Totodile 5, Tepig 5; com Totodile: Tepig 5, Chikorita 5",
-      "versions": null
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); ficam com os dois iniciais que você não escolheu",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 158,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 498,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 152,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 158,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 498,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 152,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "zach-z",
@@ -596,8 +695,157 @@
       ],
       "level_cap": 26,
       "verified": true,
-      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); time para quem escolheu Tepig; com Chikorita: Croconaw 25, Pignite 25, Manectric 26; com Totodile: Pignite 25, Bayleef 25, Manectric 26; Manectric megaevolui",
-      "versions": null
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); Manectric megaevolui",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 159,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "aqua-jet",
+                "tackle",
+                "slash",
+                "bite"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 499,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "power-up-punch",
+                "rollout",
+                "flame-wheel",
+                "tackle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "thunder-fang",
+                "bite",
+                "spark",
+                "fire-fang"
+              ],
+              "ability": null,
+              "item": "manectite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 153,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "giga-drain",
+                "leech-seed",
+                "body-slam",
+                "disarming-voice"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 159,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "aqua-jet",
+                "tackle",
+                "slash",
+                "bite"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "thunder-fang",
+                "spark",
+                "bite",
+                "fire-fang"
+              ],
+              "ability": null,
+              "item": "manectite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 499,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "power-up-punch",
+                "rollout",
+                "flame-wheel",
+                "tackle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 153,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "giga-drain",
+                "leech-seed",
+                "body-slam",
+                "disarming-voice"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "thunder-fang",
+                "bite",
+                "spark",
+                "fire-fang"
+              ],
+              "ability": null,
+              "item": "manectite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 26,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "vinnie-v",
@@ -2689,8 +2937,283 @@
       ],
       "level_cap": 64,
       "verified": true,
-      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); time para quem escolheu Tepig; com Chikorita: Meowstic 62, Goodra 62, Avalugg 62, Feraligatr 63, Manectric 63, Emboar 64; com Totodile: Meowstic 62, Goodra 62, Avalugg 62, Emboar 63, Manectric 63, Meganium 64; Feraligatr megaevolui",
-      "versions": null
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); o último (um inicial) megaevolui",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 713,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "icicle-crash",
+                "crunch",
+                "stone-edge",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "breaking-swipe",
+                "liquidation",
+                "ice-fang",
+                "bulldoze"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "flare-blitz",
+                "stone-edge",
+                "thunder-punch",
+                "bulk-up"
+              ],
+              "ability": null,
+              "item": "emboarite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 713,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "icicle-crash",
+                "crunch",
+                "stone-edge",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "leech-seed",
+                "earth-power",
+                "dazzling-gleam",
+                "giga-drain"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "breaking-swipe",
+                "liquidation",
+                "ice-fang",
+                "bulldoze"
+              ],
+              "ability": null,
+              "item": "feraligite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 713,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "icicle-crash",
+                "crunch",
+                "stone-edge",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "flare-blitz",
+                "stone-edge",
+                "thunder-punch",
+                "bulk-up"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "leech-seed",
+                "earth-power",
+                "dazzling-gleam",
+                "giga-drain"
+              ],
+              "ability": null,
+              "item": "meganiumite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rogue-gengar-heracross",
@@ -4306,8 +4829,283 @@
       ],
       "level_cap": 72,
       "verified": true,
-      "notes": "pós-jogo: partida de recompensa 15 do Infinite Z-A Royale (Quasartico Inc.); Floette megaevolui",
-      "versions": null
+      "notes": "pós-jogo: partida de recompensa 15 do Infinite Z-A Royale (Quasartico Inc.); usa os dois iniciais que você não escolheu; Floette megaevolui",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chikorita",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "breaking-swipe",
+                "liquidation",
+                "ice-fang",
+                "bulldoze"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "flare-blitz",
+                "stone-edge",
+                "thunder-punch",
+                "bulk-up"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 670,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "light-of-ruin",
+                "energy-ball",
+                "giga-drain",
+                "synthesis"
+              ],
+              "ability": null,
+              "item": "floettite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 72,
+          "verified": true
+        },
+        {
+          "starter": "tepig",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "leech-seed",
+                "earth-power",
+                "dazzling-gleam",
+                "giga-drain"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 160,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "breaking-swipe",
+                "liquidation",
+                "ice-fang",
+                "bulldoze"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 670,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "light-of-ruin",
+                "energy-ball",
+                "giga-drain",
+                "synthesis"
+              ],
+              "ability": null,
+              "item": "floettite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 72,
+          "verified": true
+        },
+        {
+          "starter": "totodile",
+          "party": [
+            {
+              "species": 678,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "light-screen",
+                "reflect",
+                "psychic",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "surf",
+                "toxic",
+                "draco-meteor",
+                "blizzard"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 500,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "flare-blitz",
+                "stone-edge",
+                "thunder-punch",
+                "bulk-up"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 310,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "snarl",
+                "thunder",
+                "overheat",
+                "protect"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 154,
+              "form": 0,
+              "level": 71,
+              "moves": [
+                "leech-seed",
+                "earth-power",
+                "dazzling-gleam",
+                "giga-drain"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 670,
+              "form": 0,
+              "level": 72,
+              "moves": [
+                "light-of-ruin",
+                "energy-ball",
+                "giga-drain",
+                "synthesis"
+              ],
+              "ability": null,
+              "item": "floettite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 72,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "ivor-reward",
