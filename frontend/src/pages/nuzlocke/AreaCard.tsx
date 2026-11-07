@@ -208,7 +208,7 @@ function EncounterRow({ e, showVersions, readOnly, onCatch }: { e: SpeciesEncoun
         )}
       </div>
       {!readOnly && (
-        <Button size="sm" icon="catching_pokemon" onClick={onCatch}>
+        <Button size="sm" icon="radio_button_checked" onClick={onCatch}>
           {t('nuzlocke.area.caught')}
         </Button>
       )}

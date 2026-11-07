@@ -239,7 +239,7 @@ function Stats({ view }: { view: RunView }) {
   const { t } = useTranslation()
   const s = runStats(view)
   const tiles: [string, number, string][] = [
-    ['caught', s.caught, 'catching_pokemon'],
+    ['caught', s.caught, 'radio_button_checked'],
     ['deaths', s.deaths, 'skull'],
     ['bosses', s.bosses, 'emoji_events'],
     ['areas', s.areas, 'map'],

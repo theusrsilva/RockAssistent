@@ -52,7 +52,7 @@ export default function TeamCard({
 
   return (
     <Card className="flex flex-col gap-3">
-      <CardTitle icon="catching_pokemon" extra={<Badge>{view.party.length}/6</Badge>}>
+      <CardTitle icon="radio_button_checked" extra={<Badge>{view.party.length}/6</Badge>}>
         {t('nuzlocke.team.title')}
       </CardTitle>
       {error && (
