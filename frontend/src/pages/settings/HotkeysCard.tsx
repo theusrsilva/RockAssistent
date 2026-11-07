@@ -2,15 +2,23 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Callout, Toggle, useToast } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
-import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, isTextKey, type HotkeySettings } from '../../lib/hotkeys'
+import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, globalTextKeyProblem, type HotkeySettings } from '../../lib/hotkeys'
 
 type Which = 'increment' | 'decrement'
 
 /** Erros do PUT com texto próprio (hunt.hotkeys.errors.*). */
-const KNOWN_ERRORS = ['hotkeys_same', 'hotkey_invalid', 'hotkey_unsupported', 'hotkey_in_use', 'hotkey_global_unsupported', 'local_only']
+const KNOWN_ERRORS = [
+  'hotkeys_same',
+  'hotkey_invalid',
+  'hotkey_unsupported',
+  'hotkey_in_use',
+  'hotkey_global_unsupported',
+  'hotkey_text_key',
+  'local_only',
+]
 
 /** Motivos do atalho global com texto (hunt.hotkeys.global.reasons.*). */
-const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'remote']
+const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'remote', 'text_key']
 
 /**
  * Atalhos do Contador Hunt (Configurações → Preferências). "Gravar" pega a próxima tecla apertada; Esc cancela.
@@ -34,6 +42,11 @@ export function HotkeysCard() {
     setError(null)
     if (next.increment.toLowerCase() === next.decrement.toLowerCase()) {
       setError(t('hunt.hotkeys.errors.hotkeys_same'))
+      return
+    }
+    // Global com tecla de texto (Espaço, Backspace, letras...): pede outra tecla antes de ligar ou gravar.
+    if (globalTextKeyProblem(next)) {
+      setError(t(keys?.global ? 'hunt.hotkeys.errors.hotkey_text_key' : 'hunt.hotkeys.global.textKeyBlocked'))
       return
     }
     setBusy(true)
@@ -133,10 +146,10 @@ export function HotkeysCard() {
                 label={t('hunt.hotkeys.global.label')}
               />
               <p className="text-[12.5px] text-muted">{t('hunt.hotkeys.global.help')}</p>
-              {keys.global && (isTextKey(keys.increment) || isTextKey(keys.decrement)) && (
-                <Callout tone="amber" icon="warning" className="text-[13px]">
-                  {t('hunt.hotkeys.global.textKeyWarning')}
-                </Callout>
+              {keys.global && !keys.reason && (
+                <p className={`text-[12.5px] font-semibold ${keys.active ? 'text-ok' : 'text-muted'}`}>
+                  {t(keys.active ? 'hunt.hotkeys.global.activeNow' : 'hunt.hotkeys.global.idle')}
+                </p>
               )}
             </>
           ) : (

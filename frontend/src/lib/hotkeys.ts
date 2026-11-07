@@ -34,12 +34,14 @@ export interface HotkeySettings {
   global?: boolean
   /** O sistema deixa ter atalho global (vem do GET; não vai no PUT). */
   supported?: boolean
-  /** Por que não: wayland, no_x11, in_use, unsupported_os, remote. */
+  /** Por que não: wayland, no_x11, in_use, unsupported_os, remote, text_key. */
   reason?: string | null
+  /** O sistema está com as teclas agora (só com um contador aberto; vem do GET). */
+  active?: boolean
 }
 
 /** Teclas que escrevem ou apagam texto (o atalho global as tira também dos campos de texto do app). */
-const TEXT_CODES = /^(Space|Backspace|Delete|Equal|Minus|Key[A-Z]|Digit\d|Numpad\w+)$/
+const TEXT_CODES = /^(Space|Backspace|Enter|Tab|Delete|Equal|Minus|Key[A-Z]|Digit\d|Numpad\w+)$/
 
 /**
  * O combo é uma tecla de texto sem Ctrl, Alt ou Meta (Shift+letra também escreve). Com o atalho global, ela some de
@@ -48,6 +50,14 @@ const TEXT_CODES = /^(Space|Backspace|Delete|Equal|Minus|Key[A-Z]|Digit\d|Numpad
 export function isTextKey(text: string): boolean {
   const combo = parseCombo(text)
   return !!combo && !combo.ctrl && !combo.alt && !combo.meta && TEXT_CODES.test(combo.code)
+}
+
+/**
+ * O atalho global não aceita tecla de texto (o servidor responde hotkey_text_key). Devolve true quando a configuração
+ * pedida tem o global ligado com uma delas: a tela recusa antes de mandar.
+ */
+export function globalTextKeyProblem(keys: Pick<HotkeySettings, 'increment' | 'decrement' | 'global'>): boolean {
+  return !!keys.global && (isTextKey(keys.increment) || isTextKey(keys.decrement))
 }
 
 /** O atalho global está valendo (ligado, o sistema deixa e o registro deu certo). */

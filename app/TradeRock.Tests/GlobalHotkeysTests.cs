@@ -103,6 +103,7 @@ public sealed class GlobalHotkeysTests
     {
         var hotkeys = new ThreadedFakeHotkeys { Taken = "F9", NoKey = "Semicolon" };
         var service = new GlobalHotkeyService(hotkeys, null!, NullLogger<GlobalHotkeyService>.Instance);
+        using var listener = service.Subscribe(); // um contador aberto: as teclas ficam pegas
         var previous = new TradeRock.App.Api.SettingsEndpoints.HotkeySettings("F7", "F8", true);
         service.Apply(previous);
         Assert.Equal("F7", hotkeys.Registered["increment"]);
@@ -258,40 +259,124 @@ public sealed class GlobalHotkeysApiTests : IAsyncLifetime
         var wayland = await _client.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct);
         Assert.False(wayland.GetProperty("supported").GetBoolean());
         Assert.Equal("wayland", wayland.GetProperty("reason").GetString());
-        var (status, body) = await PutAsync(new { increment = "Space", decrement = "Backspace", global = true });
+        var (status, body) = await PutAsync(new { increment = "F7", decrement = "F8", global = true });
         Assert.Equal(HttpStatusCode.Conflict, status);
         Assert.Equal("hotkey_global_unsupported", body.GetProperty("error").GetString());
         Assert.Empty(_fake.Registered);
     }
 
-    [Fact]
-    public async Task Ligar_registra_trocar_regista_de_novo_e_desligar_solta()
+    private async Task<(HttpResponseMessage Response, StreamReader Reader)> OpenEventsAsync(CancellationToken ct)
     {
+        var request = new HttpRequestMessage(HttpMethod.Get, "/api/hunts/events");
+        request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("text/event-stream"));
+        var response = await _client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, ct);
+        var reader = new StreamReader(await response.Content.ReadAsStreamAsync(ct));
+        Assert.Equal(": ok", await reader.ReadLineAsync(ct)); // inscrito
+        return (response, reader);
+    }
+
+    private async Task WaitReleasedAsync()
+    {
+        for (var i = 0; i < 200 && _fake.Registered.Count > 0; i++)
+            await Task.Delay(25, Ct);
+        Assert.Empty(_fake.Registered);
+    }
+
+    [Fact]
+    public async Task Ligar_so_confere_trocar_e_desligar_sem_contador_aberto()
+    {
+        // Ligar a opção não pega as teclas: só confere se dá (registra e solta).
         var (status, body) = await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F8", global = true });
         Assert.Equal(HttpStatusCode.OK, status);
         Assert.True(body.GetProperty("global").GetBoolean());
-        Assert.Equal("Ctrl+Shift+F7", _fake.Registered["increment"]);
-        Assert.Equal("F8", _fake.Registered["decrement"]);
+        Assert.False(body.GetProperty("active").GetBoolean());
+        Assert.Empty(_fake.Registered);
 
         // Tecla sem atalho global: 400 e nada muda.
         (status, body) = await PutAsync(new { increment = "Semicolon", decrement = "F8", global = true });
         Assert.Equal(HttpStatusCode.BadRequest, status);
         Assert.Equal("hotkey_unsupported", body.GetProperty("error").GetString());
-        Assert.Equal("Ctrl+Shift+F7", _fake.Registered["increment"]);
 
-        // Outro programa já usa: 409, volta o que valia.
+        // Outro programa já usa: 409, fica o que valia.
         _fake.TakenCombos.Add("F9");
         (status, body) = await PutAsync(new { increment = "F9", decrement = "F8", global = true });
         Assert.Equal(HttpStatusCode.Conflict, status);
         Assert.Equal("hotkey_in_use", body.GetProperty("error").GetString());
-        Assert.Equal("Ctrl+Shift+F7", _fake.Registered["increment"]);
+        Assert.Empty(_fake.Registered);
         var saved = await _client.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct);
         Assert.Equal("Ctrl+Shift+F7", saved.GetProperty("increment").GetString());
 
-        (status, _) = await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F8", global = false });
+        // Tecla de texto (sem Ctrl/Alt) no global: recusada.
+        foreach (var text in new[] { "Space", "KeyA", "Shift+KeyA", "Digit1", "Numpad1", "Equal" })
+        {
+            (status, body) = await PutAsync(new { increment = text, decrement = "F8", global = true });
+            Assert.Equal(HttpStatusCode.BadRequest, status);
+            Assert.Equal("hotkey_text_key", body.GetProperty("error").GetString());
+        }
+        (status, _) = await PutAsync(new { increment = "Ctrl+KeyA", decrement = "Alt+Digit1", global = true });
+        Assert.Equal(HttpStatusCode.OK, status);
+        // Só na janela (sem o global) a tecla de texto vale.
+        (status, _) = await PutAsync(new { increment = "Space", decrement = "Backspace", global = false });
         Assert.Equal(HttpStatusCode.OK, status);
         Assert.Empty(_fake.Registered);
-        Assert.False((await _client.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct)).GetProperty("global").GetBoolean());
+    }
+
+    [Fact]
+    public async Task Teclas_ficam_pegas_so_com_um_contador_aberto()
+    {
+        using var timeout = CancellationTokenSource.CreateLinkedTokenSource(Ct);
+        timeout.CancelAfter(TimeSpan.FromSeconds(20));
+        await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F8", global = true });
+        Assert.Empty(_fake.Registered);
+
+        // Primeiro contador: registra.
+        var (first, firstReader) = await OpenEventsAsync(timeout.Token);
+        Assert.Equal("Ctrl+Shift+F7", _fake.Registered["increment"]);
+        Assert.Equal("F8", _fake.Registered["decrement"]);
+        Assert.True((await _client.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct)).GetProperty("active").GetBoolean());
+
+        // Segundo contador; o primeiro fecha: continua pego.
+        var (second, secondReader) = await OpenEventsAsync(timeout.Token);
+        firstReader.Dispose();
+        first.Dispose();
+        await Task.Delay(200, Ct);
+        Assert.Equal("F8", _fake.Registered["decrement"]);
+
+        // Trocar a tecla com o contador aberto registra a nova na hora.
+        await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F10", global = true });
+        Assert.Equal("F10", _fake.Registered["decrement"]);
+
+        // O último fecha: solta.
+        secondReader.Dispose();
+        second.Dispose();
+        await WaitReleasedAsync();
+        Assert.False((await _client.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct)).GetProperty("active").GetBoolean());
+
+        // Abrir de novo pega de novo; desligar a opção solta mesmo com o contador aberto.
+        var (third, thirdReader) = await OpenEventsAsync(timeout.Token);
+        Assert.Equal("F10", _fake.Registered["decrement"]);
+        await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F10", global = false });
+        Assert.Empty(_fake.Registered);
+        thirdReader.Dispose();
+        third.Dispose();
+
+        // Fechar o app solta tudo.
+        await PutAsync(new { increment = "Ctrl+Shift+F7", decrement = "F10", global = true });
+        var (fourth, fourthReader) = await OpenEventsAsync(timeout.Token);
+        Assert.NotEmpty(_fake.Registered);
+        await _app.Services.GetRequiredService<GlobalHotkeyService>().StopAsync(Ct);
+        Assert.Empty(_fake.Registered);
+        fourthReader.Dispose();
+        fourth.Dispose();
+    }
+
+    [Fact]
+    public void Teclas_de_texto()
+    {
+        foreach (var text in new[] { "Space", "Backspace", "Enter", "Tab", "Delete", "KeyQ", "Shift+KeyQ", "Digit0", "Equal", "Minus", "NumpadAdd", "Numpad5" })
+            Assert.True(TradeRock.App.Api.SettingsEndpoints.IsTextKey(text), text);
+        foreach (var combo in new[] { "F7", "Ctrl+KeyQ", "Alt+Space", "Meta+Digit1", "ArrowUp", "PageDown", "Shift+F2" })
+            Assert.False(TradeRock.App.Api.SettingsEndpoints.IsTextKey(combo), combo);
     }
 
     [Fact]

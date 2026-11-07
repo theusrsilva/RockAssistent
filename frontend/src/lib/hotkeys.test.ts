@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest'
-import { comboFromEvent, formatCombo, globalActive, isTextKey, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
+import { comboFromEvent, formatCombo, globalActive, globalTextKeyProblem, isTextKey, handleHotkey, matchesCombo, parseCombo, shouldIgnore, type KeyLike } from './hotkeys'
 
 const key = (code: string, extra: Partial<KeyLike> = {}): KeyLike => ({
   code,
@@ -101,6 +101,14 @@ describe('atalho global', () => {
     expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: false, supported: true })).toBe(false)
     expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: false, reason: 'wayland' })).toBe(false)
     expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: true, reason: 'in_use' })).toBe(false)
+    expect(globalActive({ increment: 'Space', decrement: 'Backspace', global: true, supported: true, reason: 'text_key' })).toBe(false)
+  })
+
+  it('global recusa tecla de texto antes de mandar', () => {
+    expect(globalTextKeyProblem({ increment: 'Space', decrement: 'Backspace', global: true })).toBe(true)
+    expect(globalTextKeyProblem({ increment: 'F7', decrement: 'Shift+KeyA', global: true })).toBe(true)
+    expect(globalTextKeyProblem({ increment: 'F7', decrement: 'Ctrl+KeyA', global: true })).toBe(false)
+    expect(globalTextKeyProblem({ increment: 'Space', decrement: 'Backspace', global: false })).toBe(false)
   })
 })
 

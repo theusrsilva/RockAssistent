@@ -2522,22 +2522,26 @@
       "reset": "Voltar ao padrão",
       "global": {
         "label": "Atalho global (funciona com o app em segundo plano)",
-        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Enquanto o RockAssistent estiver aberto, elas deixam de funcionar nos outros programas e também nos campos de texto do próprio app.",
-        "textKeyWarning": "Esta tecla escreve ou apaga texto: com o atalho global ligado, ela some de todos os programas (não dá para digitar espaço nem apagar, nem aqui). Prefira F1–F12 ou um combo com Ctrl ou Alt.",
+        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Só enquanto um contador estiver aberto, elas deixam de funcionar nos outros programas.",
+        "textKeyBlocked": "O atalho global não aceita teclas que escrevem ou apagam texto (Espaço, Backspace, letras, números). Grave outras teclas antes de ligar, por exemplo F7 e F8 ou Ctrl + uma tecla.",
+        "activeNow": "Ativo agora: as teclas estão com o RockAssistent.",
+        "idle": "Ligado. As teclas só ficam com o RockAssistent enquanto um contador estiver aberto.",
         "reasons": {
           "wayland": "No Wayland o sistema não permite atalho global; use o atalho da janela.",
           "no_x11": "Não foi possível falar com o X11 (sem tela gráfica X); use o atalho da janela.",
           "in_use": "Outro programa já usa uma dessas teclas. Escolha outra e ligue de novo.",
           "unsupported_os": "Este sistema não tem atalho global; use o atalho da janela.",
-          "remote": "O atalho global só pode ser ligado na janela do PC."
+          "remote": "O atalho global só pode ser ligado na janela do PC.",
+          "text_key": "Uma das teclas escreve ou apaga texto e não vale como atalho global. Grave F1–F12 ou Ctrl/Alt + uma tecla; por enquanto vale o atalho da janela."
         }
       },
       "errors": {
         "hotkeys_same": "Os dois atalhos não podem ser iguais.",
         "hotkey_invalid": "Essa tecla não serve de atalho.",
-        "hotkey_unsupported": "Essa tecla não serve de atalho global. Escolha letras, números, F1–F12, setas ou o teclado numérico.",
+        "hotkey_unsupported": "Essa tecla não serve de atalho global. Escolha F1–F12, setas ou Ctrl/Alt + uma tecla.",
         "hotkey_in_use": "Outro programa já usa essa tecla. Escolha outra.",
         "hotkey_global_unsupported": "O atalho global não funciona neste sistema.",
+        "hotkey_text_key": "Com o atalho global ligado, essa tecla não serve: ela escreve ou apaga texto. Use F1–F12 ou Ctrl/Alt + uma tecla.",
         "local_only": "O atalho global só pode ser ligado na janela do PC."
       },
       "keyNames": {

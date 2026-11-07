@@ -2522,22 +2522,26 @@
       "reset": "Back to default",
       "global": {
         "label": "Global shortcut (works with the app in the background)",
-        "help": "For emulator players: the keys count even with another window in front. While RockAssistent is open, other programs stop receiving them, and so do the app's own text fields.",
-        "textKeyWarning": "This key types or deletes text: with the global shortcut on, it disappears from every program (you can't type a space or delete, not even here). Prefer F1–F12 or a combo with Ctrl or Alt.",
+        "help": "For emulator players: the keys count even with another window in front. Only while a counter is open, they stop working in other programs.",
+        "textKeyBlocked": "The global shortcut does not accept keys that type or delete text (Space, Backspace, letters, digits). Record other keys before turning it on, such as F7 and F8 or Ctrl + a key.",
+        "activeNow": "Active now: RockAssistent has the keys.",
+        "idle": "On. RockAssistent only takes the keys while a counter is open.",
         "reasons": {
           "wayland": "Wayland doesn't allow global shortcuts; use the window shortcut.",
           "no_x11": "Couldn't talk to X11 (no X display); use the window shortcut.",
           "in_use": "Another program already uses one of these keys. Pick another and turn it on again.",
           "unsupported_os": "This system has no global shortcuts; use the window shortcut.",
-          "remote": "The global shortcut can only be turned on in the PC window."
+          "remote": "The global shortcut can only be turned on in the PC window.",
+          "text_key": "One of the keys types or deletes text and cannot be a global shortcut. Record F1–F12 or Ctrl/Alt + a key; for now the window shortcut applies."
         }
       },
       "errors": {
         "hotkeys_same": "The two shortcuts can't be the same.",
         "hotkey_invalid": "That key can't be a shortcut.",
-        "hotkey_unsupported": "That key can't be a global shortcut. Use letters, digits, F1–F12, arrows or the numeric keypad.",
+        "hotkey_unsupported": "This key cannot be a global shortcut. Pick F1–F12, arrows or Ctrl/Alt + a key.",
         "hotkey_in_use": "Another program already uses that key. Pick another.",
         "hotkey_global_unsupported": "The global shortcut doesn't work on this system.",
+        "hotkey_text_key": "With the global shortcut on, this key does not work: it types or deletes text. Use F1–F12 or Ctrl/Alt + a key.",
         "local_only": "The global shortcut can only be turned on in the PC window."
       },
       "keyNames": {

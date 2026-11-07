@@ -28,13 +28,42 @@ public static class SettingsEndpoints
     }
 
     /// <summary>O que o GET devolve: os atalhos e se o atalho global funciona aqui (<c>reason</c> quando não).</summary>
-    public sealed record HotkeySettingsDto(string Increment, string Decrement, bool Global, bool Supported, string? Reason);
+    /// <param name="Active">O sistema está com as teclas agora (só com um contador aberto).</param>
+    public sealed record HotkeySettingsDto(string Increment, string Decrement, bool Global, bool Supported, string? Reason, bool Active = false)
+    {
+        public static HotkeySettingsDto Local(HotkeySettings s, GlobalHotkeyService global)
+        {
+            // Configuração antiga com tecla de texto no global: não pega as teclas (vale o atalho da janela).
+            var reason = global.Reason ?? (s.Global && (IsTextKey(s.Increment) || IsTextKey(s.Decrement)) ? "text_key" : null);
+            return new(s.Increment, s.Decrement, s.Global, global.Supported, reason, global.Active);
+        }
+
+        public static HotkeySettingsDto Remote(HotkeySettings s) => new(s.Increment, s.Decrement, false, false, "remote");
+    }
 
     /// <summary>Teclas que não viram atalho: Tab e Enter navegam e clicam, Esc fecha e cancela.</summary>
     private static readonly HashSet<string> ReservedKeys = new(StringComparer.OrdinalIgnoreCase) { "Tab", "Enter", "Escape" };
 
     private static readonly System.Text.RegularExpressions.Regex ComboPattern =
         new(@"^((Ctrl|Alt|Shift|Meta)\+){0,4}[A-Za-z][A-Za-z0-9]{0,24}$", System.Text.RegularExpressions.RegexOptions.CultureInvariant);
+
+    private static readonly System.Text.RegularExpressions.Regex TextKeyPattern =
+        new(@"^(Space|Backspace|Enter|Tab|Delete|Key[A-Z]|Digit[0-9]|Equal|Minus|Numpad\w+)$", System.Text.RegularExpressions.RegexOptions.CultureInvariant);
+
+    /// <summary>
+    /// Tecla de texto sem Ctrl/Alt/Meta (Espaço, Backspace, letras, dígitos, =, -, teclado numérico; Shift+letra também).
+    /// No atalho global ela sumiria de todos os programas enquanto o contador estiver aberto: o PUT recusa
+    /// (<c>hotkey_text_key</c>).
+    /// </summary>
+    public static bool IsTextKey(string? combo)
+    {
+        if (string.IsNullOrEmpty(combo))
+            return false;
+        var parts = combo.Split('+');
+        if (parts[..^1].Any(m => m is "Ctrl" or "Alt" or "Meta"))
+            return false;
+        return TextKeyPattern.IsMatch(parts[^1]);
+    }
 
     /// <summary>Combo válido: tecla (código do navegador) depois de no máximo quatro modificadores, sem modificador sozinho.</summary>
     public static bool IsValidCombo(string? combo)
@@ -79,9 +108,7 @@ public static class SettingsEndpoints
             CancellationToken ct) =>
         {
             var saved = await settings.GetAsync(UserSettings.Key(HotkeysKey), HotkeySettings.Default, ct);
-            return Caller.Of(context).IsLocal
-                ? new HotkeySettingsDto(saved.Increment, saved.Decrement, saved.Global, global.Supported, global.Reason)
-                : new HotkeySettingsDto(saved.Increment, saved.Decrement, false, false, "remote");
+            return Caller.Of(context).IsLocal ? HotkeySettingsDto.Local(saved, global) : HotkeySettingsDto.Remote(saved);
         });
 
         api.MapPut("/settings/hotkeys", async (HotkeySettings body, HttpContext context, SettingsStore settings,
@@ -94,6 +121,8 @@ public static class SettingsEndpoints
             var local = Caller.Of(context).IsLocal;
             if (body.Global && !local)
                 return Results.Json(new { error = "local_only" }, statusCode: StatusCodes.Status403Forbidden);
+            if (body.Global && (IsTextKey(body.Increment) || IsTextKey(body.Decrement)))
+                return Results.BadRequest(new { error = "hotkey_text_key" });
 
             var saved = new HotkeySettings(body.Increment, body.Decrement, body.Global);
             if (local)
@@ -117,9 +146,7 @@ public static class SettingsEndpoints
                 }
             }
             await settings.SetAsync(UserSettings.Key(HotkeysKey), saved, ct);
-            return Results.Ok(local
-                ? new HotkeySettingsDto(saved.Increment, saved.Decrement, saved.Global, global.Supported, global.Reason)
-                : new HotkeySettingsDto(saved.Increment, saved.Decrement, false, false, "remote"));
+            return Results.Ok(local ? HotkeySettingsDto.Local(saved, global) : HotkeySettingsDto.Remote(saved));
         });
 
         // Internet opcional (D32): as duas começam desligadas. Ler vale pela rede (a tela mostra o estado); mudar, só no PC.
