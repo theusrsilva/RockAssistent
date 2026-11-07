@@ -40,7 +40,7 @@
 
 - Vença a Elite Four de novo (lv 66): um desafiante aleatório aparece no fim.
 - Desafiantes: Hau, Gladion, Lusamine, Guzma, Plumeria, Sophocles, Hapu, Ryuki, Tristan e Kukui.
-- Gladion e Lusamine têm condição especial de data (a confirmar).
+- Lusamine só no dia 1 de cada mês; Gladion só 1 mês depois de vencer o Necrozma.
 
 ## Battle Tree
 

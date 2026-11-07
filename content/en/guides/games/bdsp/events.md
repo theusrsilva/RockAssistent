@@ -17,4 +17,4 @@ Mystery Gift unlocks after the 3rd badge, or early at Jubilife TV (3F). All dist
 | Jirachi lv 5 | Sword/Shield save on the Switch |
 | Azure Flute → Arceus lv 80 | Legends: Arceus save with the main story cleared; version 1.3.0; National Pokédex |
 
-<!-- fontes: Serebii, notas pokemythology -->
+<!-- sources: Serebii, notas pokemythology -->

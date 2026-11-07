@@ -22,4 +22,4 @@
 - **Trace (Champion):** Mega Pidgeot and a mixed team; bring Electric, Rock, Ice and Ground.
 - **Rematches, Blue, Green and Red:** lv 56–85, with Megas; Red bans items.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

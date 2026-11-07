@@ -11,6 +11,7 @@
 | Circhester (sorveteria) | Vanillish | Throh (Sword) / Sawk (Shield) | Lv 37 |
 | Spikemuth (Team Yell) | Obstagoon | Mr. Mime (Kanto) | "Mymo", Lv 40 |
 | Wyndon (casa a leste do estádio) | Frosmoth | Duraludon | "Linear", Lv 50 |
+| Isle of Armor | Exeggutor / Marowak | Alolan Exeggutor / Alolan Marowak | trocas com NPCs da ilha |
 | Isle of Armor (varia) | Forma de Galar | Forma original com habilidade oculta | Lv 15; Meowth, Farfetch'd, Corsola, Ponyta, Mr. Mime, Darumaka, Zigzagoon, Stunfisk, Weezing |
 
 ## Presentes
@@ -25,7 +26,7 @@
 | Type: Null | — | Battle Tower (pós-jogo) |
 | Bulbasaur ou Squirtle com Gigantamax | — | Master Dojo, 2ª prova (Isle of Armor) |
 | Kubfu | 10 | Master Dojo, fim da 3ª prova |
-| Porygon | 10 | Hyde, Master Dojo, após o Mustard final |
+| Porygon | 25 | Hyde, Master Dojo, após o Mustard final |
 | Formas de Alola | 5–30 | Dono dos Alolan Diglett (5 a 150 achados) |
 | Rowlet, Litten ou Popplio | 5 | 100 Alolan Diglett (segue o seu inicial) |
 | Cosmog | 5 | Freezington, depois do Calyrex |
@@ -33,7 +34,7 @@
 
 ## Fósseis
 
-- Metades: vendedor em Stow-on-Side, Digging Duo (Bridge Field) e itens no chão.
+- Metades: NPC do Centro Pokémon de Stow-on-Side (Sword: Bird; Shield: Drake; 2×), Route 6 (Sword: Dino; Shield: Fish) e Digging Duo (Bridge Field; os outros dois, raros).
 - Cara Liss (Route 6) junta duas metades.
 
 | Combinação | Pokémon |

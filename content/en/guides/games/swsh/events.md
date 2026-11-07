@@ -23,4 +23,4 @@ Official distributions have ended; only what is already on a save still counts.
 - To update: Y-Comm → Mystery Gift → Wild Area News.
 - Dynamax Crystals gave special raids (Larvitar, Jangmo-o and others).
 
-<!-- fontes: Serebii (eventos e códigos), notas pokemythology -->
+<!-- sources: Serebii (eventos e códigos), notas pokemythology -->

@@ -30,7 +30,7 @@ The game has 229 TMs: 001–171 in the base game, 172–200 in The Teal Mask and
 | Ortega (Fairy Crew) | TM079 Dazzling Gleam |
 | Eri (Fighting Crew) | TM167 Close Combat |
 | Penny (end of Starfall Street) | TM169 Draco Meteor |
-| Nemona (Inleth Grotto) | TM032 Swift |
+| Nemona (Inlet Grotto) | TM032 Swift |
 | Jacq (30 in the Pokédex) | TM057 False Swipe |
 | Raifort (4 Treasures of Ruin) | TM140 Nasty Plot |
 
@@ -53,7 +53,7 @@ The game has 229 TMs: 001–171 in the base game, 172–200 in The Teal Mask and
 | --- | --- | --- |
 | TM007 | Protect | South Province (Areas One, Two, Four), Alfornada Cavern |
 | TM088 | Swords Dance | West Province (Area One), North Province (Areas One and Two), Casseroya Lake |
-| TM100 | Dragon Dance | Inleth Grotto, West Province (Area One) |
+| TM100 | Dragon Dance | Inlet Grotto, West Province (Area One) |
 | TM115 | Dragon Pulse | Dalizapa Passage, North Province (Areas One and Two) |
 | TM123 | Surf | Levincia, South Paldean Sea |
 | TM126 | Thunderbolt | East Province (Area Three), West Province (Area Two), Glaseado Mountain |
@@ -71,4 +71,4 @@ The game has 229 TMs: 001–171 in the base game, 172–200 in The Teal Mask and
 
 - DLCs: TMs 172–200 appear in Kitakami (several also in the Terarium); 201–229 only in the Terarium (rest area attendants hand out some too).
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

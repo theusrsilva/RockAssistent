@@ -115,4 +115,4 @@ TMs are reusable; TRs (TR00–TR99) are used up.
 - **Watt Traders:** sellers in the Wild Area trade TRs for Watts; stock changes every day.
 - **Cram-o-matic:** at the Master Dojo (Isle of Armor), some item combinations give TRs.
 
-<!-- fontes: Serebii, pokemondb, notas pokemythology -->
+<!-- sources: Serebii, pokemondb, notas pokemythology -->

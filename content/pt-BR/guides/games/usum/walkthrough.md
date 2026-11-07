@@ -220,7 +220,7 @@
 ## Pikachu Valley
 
 **Faça**
-- Pikachu de boné (do filme) via QR Code (a confirmar).
+- Pikachu de boné (do filme) via QR Code (o QR não expira).
 
 ## Paniola Town
 

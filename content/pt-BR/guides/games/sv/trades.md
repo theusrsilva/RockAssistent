@@ -46,7 +46,7 @@ O jogo base não tem trocas com NPCs. No pós-jogo do The Indigo Disk, cada Spec
 | Koraidon (Scarlet) / Miraidon (Violet) | Poco Path Lighthouse | Montaria; não vai ao Box nem troca |
 | Galarian Meowth | Naranja/Uva Academy | Salvatore, ao fim da amizade |
 | Hisuian Growlithe lv 15 | Timeless Woods | Perrin, após o Bloodmoon Ursaluna; vem com Choice Scarf |
-| Ovo de Turtwig, Chimchar ou Piplup | Reveler's Road (Kitakami) | Jacq; espécie aleatória (a confirmar) |
+| Ovo de Turtwig, Chimchar ou Piplup | Reveler's Road (Kitakami) | Jacq; 1 ovo, espécie aleatória |
 | Ogerpon lv 70 | Dreaded Den | Captura garantida após o teste |
 | Terapagos lv 85 | Area Zero Underdepths | Captura garantida |
 

@@ -21,6 +21,6 @@
 - **Totem Kommo-o:** Fairy is 4x; Flying, Psychic, Ice.
 - **Elite Four:** Hala (Fighting), Olivia (Rock), Acerola (Ghost), Kahili (Flying).
 - **Kukui (Champion):** mixed team with the starter strong against yours; fast Lycanroc.
-- **Title defense:** random challenger; Faba only on the 1st of each month.
+- **Title defense:** random challenger (Faba is drawn like the others).
 
 <!-- sources: TradeRock data (bosses/sm.json), pokemythology notes, Bulbapedia -->

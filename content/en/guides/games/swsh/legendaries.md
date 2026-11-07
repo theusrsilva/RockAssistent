@@ -40,4 +40,4 @@ Lv 70; you keep the legendary if you win.
 
 Zarude, Celebi, Marshadow, Volcanion, Genesect, Victini and others (see Events and Pokémon HOME).
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

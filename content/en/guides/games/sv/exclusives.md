@@ -42,4 +42,4 @@
 | Arven's book | Scarlet Book | Violet Book |
 | Charcadet's armor | Auspicious Armor (Armarouge) | Malicious Armor (Ceruledge) |
 
-<!-- fontes: notas pokemythology, Serebii, Thonky -->
+<!-- sources: notas pokemythology, Serebii, Thonky -->

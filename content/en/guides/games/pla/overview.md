@@ -21,4 +21,4 @@
 - Hisuian forms and new species: Wyrdeer, Kleavor, Ursaluna, Basculegion, Sneasler, Overqwil, Enamorus.
 - Free 1.1.0 Daybreak update (February 2022): Massive Mass Outbreaks and more postgame challenges.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

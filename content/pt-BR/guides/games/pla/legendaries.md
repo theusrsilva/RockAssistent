@@ -12,7 +12,7 @@
 | Regigigas | Snowpoint Temple | 70 | M24; Stone, Iron e Icicle Plates | Única |
 | Giratina (Origin) | Turnback Cave | 70 | Req91, depois de vencer Volo | Única |
 | Landorus | Ramanas Island | 70 | Req94 | Única |
-| Thundurus | Tranquility Cove | 70 | Req94, com tempestade | Única |
+| Thundurus | Sand's Reach (Cobalt Coastlands) | 70 | Req94, com tempestade | Única |
 | Tornadus | Bonechill Wastes | 70 | Req94, com nevasca | Única |
 | Enamorus | Scarlet Bog | 70 | Req94 | Única |
 | Manaphy | Seaside Hollow | 50 | Req66 | Única |

@@ -457,6 +457,7 @@
 ## Sand's Reach
 
 **Do**
+- Postgame: Thundurus 70 during a thunderstorm (Req94).
 - Beach between the lagoon and the east tip.
 
 :::encounters pla sands-reach
@@ -493,7 +494,6 @@
 
 **Do**
 - Alphas: Mantine 50, Gyarados.
-- Postgame: Thundurus 70 during a thunderstorm (Req94).
 
 :::encounters pla tranquility-cove
 
@@ -996,4 +996,4 @@
 
 - Tip: Ingo's team covers many types; bring Ice for Gliscor and Ground for Magnezone.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

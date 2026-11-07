@@ -30,7 +30,7 @@ O jogo tem 229 TMs: 001–171 no jogo base, 172–200 no The Teal Mask e 201–2
 | Ortega (Fairy Crew) | TM079 Dazzling Gleam |
 | Eri (Fighting Crew) | TM167 Close Combat |
 | Penny (fim da Starfall Street) | TM169 Draco Meteor |
-| Nemona (Inleth Grotto) | TM032 Swift |
+| Nemona (Inlet Grotto) | TM032 Swift |
 | Jacq (30 na Pokédex) | TM057 False Swipe |
 | Raifort (4 Treasures of Ruin) | TM140 Nasty Plot |
 
@@ -53,7 +53,7 @@ O jogo tem 229 TMs: 001–171 no jogo base, 172–200 no The Teal Mask e 201–2
 | --- | --- | --- |
 | TM007 | Protect | South Province (Areas One, Two, Four), Alfornada Cavern |
 | TM088 | Swords Dance | West Province (Area One), North Province (Areas One e Two), Casseroya Lake |
-| TM100 | Dragon Dance | Inleth Grotto, West Province (Area One) |
+| TM100 | Dragon Dance | Inlet Grotto, West Province (Area One) |
 | TM115 | Dragon Pulse | Dalizapa Passage, North Province (Areas One e Two) |
 | TM123 | Surf | Levincia, South Paldean Sea |
 | TM126 | Thunderbolt | East Province (Area Three), West Province (Area Two), Glaseado Mountain |

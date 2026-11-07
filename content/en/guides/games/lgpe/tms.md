@@ -69,4 +69,4 @@ No HMs: Chop Down, Light Up, Sky Dash, Strong Push and Sea Skim are partner Secr
 | TM59 | Dream Eater | Route 12 |
 | TM60 | Megahorn | Cerulean City |
 
-<!-- fontes: notas pokemythology, Serebii, PokeAPI -->
+<!-- sources: notas pokemythology, Serebii, PokeAPI -->

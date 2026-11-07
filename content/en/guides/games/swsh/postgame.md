@@ -34,10 +34,10 @@
 | Regis | Regirock, Regice, Registeel; Regieleki or Regidrago; Regigigas |
 | Galarian birds | Articuno (Crown Tundra), Zapdos (Wild Area), Moltres (Isle of Armor) |
 | Swords of Justice | Cobalion, Terrakion, Virizion (50 footprints each); Keldeo at Ballimere Lake |
-| Dynamax Adventures | Max Lair: 4 battles with rentals and a legendary at the end |
+| Dynamax Adventures | Max Lair: up to 4 battles with rentals; the last one is the legendary |
 | Spiritomb | Ballimere Lake gravestone; talk to 32 online players |
 | Galarian Star Tournament | Doubles at Wyndon Stadium; prize on the 1st win |
 | Ultra Beasts and Necrozma | Max Lair quest; then Poipole and a Beast Ball |
 | Galarian Slowking | Galarian Slowpoke + Galarica Wreath |
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

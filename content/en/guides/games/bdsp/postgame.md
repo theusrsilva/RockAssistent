@@ -5,7 +5,7 @@
 3. Ramanas Park, Turnback Cave (Giratina), Fullmoon Island (Cresselia), Snowpoint Temple (Regigigas).
 4. New Victory Road section (with Marley), Morimoto at Hotel Grand Lake, Elite Four rematch 1.
 5. Battle Zone by ship from Snowpoint: Fight Area → Survival Area → Stark Mountain (Heatran) → Resort Area → Battle Park.
-6. After Heatran: Barry (Fight Area) and Dawn/Lucas (Sandgem) on weekends; Elite Four rematch 2.
+6. After the National Dex: Barry (Battle Tower, Saturday and Sunday) and Dawn/Lucas (once a week). After Heatran: Elite Four rematch 2.
 
 ## National Pokédex
 
@@ -63,4 +63,4 @@
 | Darkrai | Member Card (event ended) |
 | Arceus | Azure Flute (Legends: Arceus save) |
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

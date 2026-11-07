@@ -8,7 +8,7 @@ BDSP has no HMs: the old HMs are TM93–TM100 and the field move comes from the 
 | TM02 | Dragon Claw | Dragon | Mt. Coronet (after Spear Pillar) |
 | TM03 | Water Pulse | Water | Ravaged Path |
 | TM04 | Calm Mind | Psychic | Grand Underground; Battle Park (BP) |
-| TM05 | Roar | Normal | Route 212 |
+| TM05 | Roar | Normal | Route 213 (northwest, Rock Climb) |
 | TM06 | Toxic | Poison | Route 212, Grand Underground |
 | TM07 | Hail | Ice | Route 212 (weather house), Route 217 |
 | TM08 | Bulk Up | Fighting | Battle Park (BP), Grand Underground seller |
@@ -124,4 +124,4 @@ BDSP has no HMs: the old HMs are TM93–TM100 and the field move comes from the 
 - Frenzy Plant, Blast Burn, Hydro Cannon: Route 228 (Battle Zone desert).
 - Move Reminder: Pastoria City (Heart Scale). Move Deleter: Canalave City.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

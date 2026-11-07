@@ -555,7 +555,7 @@
 
 :::boss swsh leon
 
-**Postgame**
+## Postgame (Wyndon and Slumbering Weald)
 
 :::boss swsh hop-postgame-1
 
@@ -793,7 +793,7 @@
 ## Max Lair
 
 **Do**
-- Dynamax Adventures: 4 battles with rental Pokémon and a legendary at the end.
+- Dynamax Adventures: up to 4 battles with rental Pokémon; the last one is the legendary.
 - Dynite Ore shop at the entrance.
 - Poipole Lv 20 after 5 Ultra Beasts.
 
@@ -959,4 +959,4 @@
 
 - Tip: Marnie is in Spikemuth; Klara, Avery and Honey at the Master Dojo; Peony at the Max Lair.
 
-<!-- fontes: notas pokemythology, Serebii, pokemondb, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, pokemondb, Bulbapedia -->

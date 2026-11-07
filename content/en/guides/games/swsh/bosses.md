@@ -25,4 +25,4 @@
 - **Mustard:** G-Max Urshifu of the opposite style; Fairy and Flying against both.
 - **Honey and Peony:** Lv 60–75 teams; Peony uses Steel.
 
-<!-- fontes: dados do app (bosses/swsh.json), notas pokemythology, Serebii -->
+<!-- sources: dados do app (bosses/swsh.json), notas pokemythology, Serebii -->

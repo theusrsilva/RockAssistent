@@ -19,4 +19,4 @@
 - **Dialga/Palkia Origin:** same balm fight; then Dragon does the job.
 - **Arceus:** Lv. 75; bring Fighting and plenty of balms.
 
-<!-- fontes: notas pokemythology, Serebii -->
+<!-- sources: notas pokemythology, Serebii -->

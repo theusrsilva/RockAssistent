@@ -37,4 +37,4 @@ The game has no TMs or HMs. Moves come from three sources:
 
 - Each species only learns the moves on its own tutor list.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

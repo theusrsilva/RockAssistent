@@ -350,7 +350,7 @@
 
 **Faça**
 - Acesso pela Eterna Forest com Cut.
-- Pokédex Nacional: Rotom lv 15 na TV, 22:00–04:00.
+- Pokédex Nacional: Rotom lv 15 na TV, 20:00–04:00.
 
 **Itens:** TM90 (Substitute).
 
@@ -469,7 +469,7 @@
 - Norte: Pokémon Mansion e Trophy Garden.
 - Sul: chuva e lama; casa troca TMs de clima por Shards.
 
-**Itens:** TM84 (Poison Jab), TM05 (Roar, Rock Climb), TM62 (Bug Buzz), TM87 (Swagger).
+**Itens:** TM84 (Poison Jab), TM62 (Bug Buzz), TM87 (Swagger).
 
 :::encounters bdsp route-212
 
@@ -520,7 +520,7 @@
 **Faça**
 - Praia; casa do Dr. Footstep.
 
-**Itens:** TM40 (Aerial Ace), TM92 (Trick Room).
+**Itens:** TM05 (Roar; noroeste, com Rock Climb), TM40 (Aerial Ace), TM92 (Trick Room).
 
 :::encounters bdsp route-213
 
@@ -596,7 +596,7 @@
 
 **Faça**
 - Barry na ponte.
-- Byron está na Iron Island; vá de barco.
+- Byron está no ginásio de Canalave (na Iron Island só depois da Pokédex Nacional, quando dá o Metal Coat).
 - Move Deleter.
 
 **Itens:** TM48 (Skill Swap), TM89 (U-turn), TM91 (Flash Cannon).
@@ -609,22 +609,20 @@
 
 - Dica: 5 Pokémon, inicial lv 37; Heracross pede Flying ou Fire.
 
+:::boss bdsp byron
+
+- Dica: Steel; Fire, Fighting e Ground. Bronzor tem Levitate.
+
 ## Iron Island
 
 **Faça**
 - Dupla com o Riley contra os Grunts.
 - Riley dá o ovo de Riolu.
-- Volte e vença o Byron no ginásio.
 
 **Itens:** TM23 (Iron Tail).
 
 :::encounters bdsp iron-island
 
-**Chefe**
-
-:::boss bdsp byron
-
-- Dica: Steel; Fire, Fighting e Ground. Bronzor tem Levitate.
 
 ## Route 216
 
@@ -861,7 +859,7 @@
 **Faça**
 - Barco em Snowpoint depois da Pokédex Nacional.
 - Super Rod.
-- Barry nos fins de semana depois do Heatran (e de novo após 20 vitórias na Elite Four).
+- Depois da Pokédex Nacional: Barry na Battle Tower aos sábados e domingos (time final após 20 vitórias na Elite Four).
 
 **Itens:** Super Rod.
 
@@ -944,7 +942,7 @@
 **Faça**
 - Revanches 1×/dia com Pokédex Nacional; Elite Four em 3 níveis (história, pós-Pokédex Nacional e pós-Heatran).
 - Morimoto no Hotel Grand Lake.
-- Dawn (ou Lucas) em Sandgem Town nos fins de semana.
+- Dawn (ou Lucas) em Sandgem Town, 1× por semana, depois da Pokédex Nacional.
 
 **Chefes**
 

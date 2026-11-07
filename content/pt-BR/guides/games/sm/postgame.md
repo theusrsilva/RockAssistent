@@ -40,7 +40,7 @@ Começa no Akala Motel (Route 8). Wicke e Looker dão 10 Beast Balls por missão
 ## Defesa do título
 
 - A cada volta à Liga: Elite Four (lv 63) e um desafiante aleatório.
-- Desafiantes: Hau, Gladion, Plumeria, Sophocles, Molayne, Hapu, Ryuki, Tristan, Kukui; Faba só no dia 1 de cada mês.
+- Desafiantes: Hau, Gladion, Plumeria, Sophocles, Molayne, Hapu, Ryuki, Tristan, Kukui, Faba (sorteados).
 
 ## Poni Island no pós-jogo
 
@@ -56,7 +56,7 @@ Começa no Akala Motel (Route 8). Wicke e Looker dão 10 Beast Balls por missão
 
 ## Island Scan
 
-- O QR Scanner dá 20 pontos por código; com 100 pontos, o Island Scan mostra um Pokémon raro por 1 minuto na ilha onde você está.
+- O QR Scanner dá 10 pontos por código comum (20 nos especiais); com 100 pontos, o Island Scan mostra um Pokémon raro por 1 hora na ilha onde você está.
 - O Pokémon muda por ilha e dia da semana (ex.: Cyndaquil em Melemele no domingo, Totodile em Melemele na segunda).
 
 ## Outros

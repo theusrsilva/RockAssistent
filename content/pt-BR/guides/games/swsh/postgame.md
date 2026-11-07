@@ -34,7 +34,7 @@
 | Regis | Regirock, Regice, Registeel; Regieleki ou Regidrago; Regigigas |
 | Aves de Galar | Articuno (Crown Tundra), Zapdos (Wild Area), Moltres (Isle of Armor) |
 | Swords of Justice | Cobalion, Terrakion, Virizion (50 pegadas cada); Keldeo no Ballimere Lake |
-| Dynamax Adventures | Max Lair: 4 batalhas com aluguel e lendário no fim |
+| Dynamax Adventures | Max Lair: até 4 batalhas com aluguel; a última é o lendário |
 | Spiritomb | Lápide do Ballimere Lake; fale com 32 jogadores online |
 | Galarian Star Tournament | Duplas no Wyndon Stadium; prêmio na 1ª vitória |
 | Ultra Beasts e Necrozma | Missão no Max Lair; depois Poipole e Beast Ball |

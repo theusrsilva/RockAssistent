@@ -22,7 +22,7 @@
 | Groudon | Ramanas Park | 70 | Tectonic Slate | Ambas |
 | Rayquaza | Ramanas Park | 70 | Stratospheric Slate | Ambas |
 | Mewtwo | Ramanas Park | 70 | Genome Slate | Ambas |
-| Rotom | Old Chateau | 15 | Pokédex Nacional; TV, 22:00–04:00 | Ambas |
+| Rotom | Old Chateau | 15 | Pokédex Nacional; TV, 20:00–04:00 | Ambas |
 | Spiritomb | Route 209 (Hallowed Tower) | 25 | Odd Keystone + 32 pessoas no Grand Underground | Ambas |
 | Mew | Floaroma Town | 1 | Save de Let's Go | Ambas |
 | Jirachi | Floaroma Town | 5 | Save de Sword/Shield | Ambas |

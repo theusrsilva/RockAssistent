@@ -40,7 +40,7 @@ Starts at the Akala Motel (Route 8). Wicke and Looker give 10 Beast Balls per mi
 ## Title defense
 
 - Each return to the League: Elite Four (lv 63) and a random challenger.
-- Challengers: Hau, Gladion, Plumeria, Sophocles, Molayne, Hapu, Ryuki, Tristan, Kukui; Faba only on the 1st of each month.
+- Challengers: Hau, Gladion, Plumeria, Sophocles, Molayne, Hapu, Ryuki, Tristan, Kukui, Faba (picked at random).
 
 ## Poni Island in the postgame
 
@@ -56,7 +56,7 @@ Starts at the Akala Motel (Route 8). Wicke and Looker give 10 Beast Balls per mi
 
 ## Island Scan
 
-- The QR Scanner gives 20 points per code; at 100 points, Island Scan reveals a rare Pokémon for 1 minute on the island you are on.
+- The QR Scanner gives 10 points per regular code (20 for special ones); at 100 points, Island Scan reveals a rare Pokémon for 1 hour on the island you are on.
 - The Pokémon changes by island and weekday (e.g. Cyndaquil on Melemele on Sunday, Totodile on Melemele on Monday).
 
 ## Other

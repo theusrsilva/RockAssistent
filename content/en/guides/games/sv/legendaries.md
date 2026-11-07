@@ -9,9 +9,9 @@
 | Wo-Chien | Grasswither Shrine (South Province, Area One) | 60 | 8 purple stakes | Both |
 | Chi-Yu | Firescourge Shrine (above Fury Falls) | 60 | 8 blue stakes | Both |
 | Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks | Area Zero | ~55–65 | Wild during and after The Way Home | Scarlet |
-| Roaring Moon | Area Zero | ~60–65 | Only after the credits | Scarlet |
+| Roaring Moon | Area Zero | ~60–65 | Secret cave in Area Zero (behind rocks, near Research Station 4); easier in the postgame | Scarlet |
 | Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns | Area Zero | ~55–65 | Wild during and after The Way Home | Violet |
-| Iron Valiant | Area Zero | ~60–65 | Only after the credits | Violet |
+| Iron Valiant | Area Zero | ~60–65 | Secret cave in Area Zero (behind rocks, near Research Station 4); easier in the postgame | Violet |
 
 ## The Teal Mask (DLC)
 
@@ -76,4 +76,4 @@ Gives snacks for BBQs; each snack makes a legendary appear in Paldea, Lv. 70 (Ku
 | Mewtwo | Event 7★ Tera Raid | 100 | 2023 event (ended) | Both |
 | Mew | Mystery Gift | 5 | 2023 code (ended) | Both |
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

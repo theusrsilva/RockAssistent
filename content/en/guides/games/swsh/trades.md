@@ -11,6 +11,7 @@
 | Circhester (ice cream stand) | Vanillish | Throh (Sword) / Sawk (Shield) | Lv 37 |
 | Spikemuth (Team Yell) | Obstagoon | Mr. Mime (Kanto) | "Mymo", Lv 40 |
 | Wyndon (house east of the stadium) | Frosmoth | Duraludon | "Linear", Lv 50 |
+| Isle of Armor | Exeggutor / Marowak | Alolan Exeggutor / Alolan Marowak | NPC trades on the island |
 | Isle of Armor (varies) | Galarian form | Original form with Hidden Ability | Lv 15; Meowth, Farfetch'd, Corsola, Ponyta, Mr. Mime, Darumaka, Zigzagoon, Stunfisk, Weezing |
 
 ## Gifts
@@ -25,7 +26,7 @@
 | Type: Null | — | Battle Tower (postgame) |
 | Bulbasaur or Squirtle with Gigantamax | — | Master Dojo, 2nd trial (Isle of Armor) |
 | Kubfu | 10 | Master Dojo, end of the 3rd trial |
-| Porygon | 10 | Hyde, Master Dojo, after the final Mustard battle |
+| Porygon | 25 | Hyde, Master Dojo, after the final Mustard battle |
 | Alolan forms | 5–30 | Alolan Diglett owner (5 to 150 found) |
 | Rowlet, Litten or Popplio | 5 | 100 Alolan Diglett (matches your starter) |
 | Cosmog | 5 | Freezington, after Calyrex |
@@ -33,7 +34,7 @@
 
 ## Fossils
 
-- Halves: seller in Stow-on-Side, Digging Duo (Bridge Field) and items on the ground.
+- Halves: NPC in the Stow-on-Side Pokémon Center (Sword: Bird; Shield: Drake; 2×), Route 6 (Sword: Dino; Shield: Fish) and Digging Duo (Bridge Field; the other two, rare).
 - Cara Liss (Route 6) joins two halves.
 
 | Combination | Pokémon |
@@ -43,4 +44,4 @@
 | Fish + Drake | Dracovish |
 | Fish + Dino | Arctovish |
 
-<!-- fontes: Serebii, notas pokemythology -->
+<!-- sources: Serebii, notas pokemythology -->

@@ -8,7 +8,7 @@ O BDSP não tem HMs: os antigos HMs são as TM93–TM100 e a função de campo v
 | TM02 | Dragon Claw | Dragon | Mt. Coronet (depois do Spear Pillar) |
 | TM03 | Water Pulse | Water | Ravaged Path |
 | TM04 | Calm Mind | Psychic | Grand Underground; Battle Park (BP) |
-| TM05 | Roar | Normal | Route 212 |
+| TM05 | Roar | Normal | Route 213 (noroeste, Rock Climb) |
 | TM06 | Toxic | Poison | Route 212, Grand Underground |
 | TM07 | Hail | Ice | Route 212 (casa dos climas), Route 217 |
 | TM08 | Bulk Up | Fighting | Battle Park (BP), vendedor do Grand Underground |

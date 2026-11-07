@@ -8,6 +8,7 @@
 | Growlithe, Arcanine | Ekans, Arbok |
 | Grimer, Muk | Koffing, Weezing |
 | Scyther | Pinsir |
+| Butterfree | Beedrill |
 | Alolan Sandshrew, Alolan Sandslash | Alolan Vulpix, Alolan Ninetales |
 | Alolan Grimer, Alolan Muk | Alolan Meowth, Alolan Persian |
 
@@ -23,6 +24,5 @@ The other version's species come via trade or the GO Park.
 | Celadon trade | Sandshrew → Alolan Sandshrew | Vulpix → Alolan Vulpix |
 | Cinnabar trade | Grimer → Alolan Grimer | Meowth → Alolan Meowth |
 | Exclusive partner moves | Zippy Zap, Floaty Fall, Splishy Splash, Pika Papow | Bouncy Bubble, Buzzy Buzz, Sizzly Slide, Baddy Bad, Glitzy Glow, Freezy Frost, Sappy Seed, Sparkly Swirl, Veevee Volley |
-| Rare in Viridian Forest | Butterfree | Beedrill |
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

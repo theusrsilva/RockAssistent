@@ -46,11 +46,11 @@ The base game has no NPC trades. In The Indigo Disk post-game, each Special Coac
 | Koraidon (Scarlet) / Miraidon (Violet) | Poco Path Lighthouse | Ride Pokémon; cannot go to the Box or be traded |
 | Galarian Meowth | Naranja/Uva Academy | Salvatore, at the end of his friendship events |
 | Hisuian Growlithe Lv. 15 | Timeless Woods | Perrin, after Bloodmoon Ursaluna; holds a Choice Scarf |
-| Turtwig, Chimchar or Piplup Egg | Reveler's Road (Kitakami) | Jacq; random species (to be confirmed) |
+| Turtwig, Chimchar or Piplup Egg | Reveler's Road (Kitakami) | Jacq; 1 Egg, random species |
 | Ogerpon Lv. 70 | Dreaded Den | Guaranteed catch after the test |
 | Terapagos Lv. 85 | Area Zero Underdepths | Guaranteed catch |
 
 - Fossils: no revival. Cranidos and Shieldon appear in the wild in the Canyon Biome (The Indigo Disk).
 - Trade items: Auspicious Armor (Scarlet) for 10 Bronzor Fragments and Malicious Armor (Violet) for 10 Sinistea Chips, in Zapapico.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

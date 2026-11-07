@@ -555,7 +555,7 @@
 
 :::boss swsh leon
 
-**Pós-jogo**
+## Pós-jogo (Wyndon e Slumbering Weald)
 
 :::boss swsh hop-postgame-1
 
@@ -793,7 +793,7 @@
 ## Max Lair
 
 **Faça**
-- Dynamax Adventures: 4 batalhas com Pokémon de aluguel e um lendário no fim.
+- Dynamax Adventures: até 4 batalhas com Pokémon de aluguel; a última é o lendário.
 - Loja de Dynite Ore na entrada.
 - Poipole Lv 20 depois de 5 Ultra Beasts.
 

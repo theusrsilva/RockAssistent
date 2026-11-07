@@ -22,7 +22,7 @@
 | Groudon | Ramanas Park | 70 | Tectonic Slate | Both |
 | Rayquaza | Ramanas Park | 70 | Stratospheric Slate | Both |
 | Mewtwo | Ramanas Park | 70 | Genome Slate | Both |
-| Rotom | Old Chateau | 15 | National Dex; TV, 22:00–04:00 | Both |
+| Rotom | Old Chateau | 15 | National Dex; TV, 20:00–04:00 | Both |
 | Spiritomb | Route 209 (Hallowed Tower) | 25 | Odd Keystone + 32 people in the Grand Underground | Both |
 | Mew | Floaroma Town | 1 | Let's Go save | Both |
 | Jirachi | Floaroma Town | 5 | Sword/Shield save | Both |
@@ -34,4 +34,4 @@
 - Slates: traded for Mysterious Shards at Ramanas Park.
 - Ramanas Park order: the Regis first (Discovery Slate); then birds/beasts, Latias/Latios and Giratina Origin; last Ho-Oh/Lugia, Kyogre, Groudon, Rayquaza and Mewtwo.
 
-<!-- fontes: notas pokemythology, Serebii, dados do app -->
+<!-- sources: notas pokemythology, Serebii, dados do app -->

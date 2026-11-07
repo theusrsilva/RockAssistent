@@ -22,4 +22,4 @@
 - **Cynthia:** Garchomp (lv 66) takes 4× from Ice and also falls to Fairy; Spiritomb has no weakness (Fairy works).
 - **Rematches:** leaders once a day with the National Dex; Elite Four and Cynthia in 3 tiers (up to lv 88).
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

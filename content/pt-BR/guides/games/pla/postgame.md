@@ -17,7 +17,7 @@
 | Heatran | Lava Dome Sanctum | M22 (Iron Plate) |
 | Cresselia | Moonview Arena | M23 (Dread Plate) |
 | Regigigas | Snowpoint Temple | M24, com as Plates Stone, Iron e Icicle |
-| Landorus, Thundurus, Tornadus, Enamorus | Ramanas Island, Tranquility Cove, Bonechill Wastes, Scarlet Bog | Req94 (Forces of Nature); clima certo para Thundurus e Tornadus |
+| Landorus, Thundurus, Tornadus, Enamorus | Ramanas Island, Sand's Reach, Bonechill Wastes, Scarlet Bog | Req94 (Forces of Nature); clima certo para Thundurus e Tornadus |
 | Shaymin | Floaro Gardens | Req92, save de SwSh |
 | Darkrai | Clamberclaw Cliffs | Req93, save de BDSP |
 | Manaphy, Phione | Seaside Hollow | Req66 |
@@ -44,7 +44,7 @@
 - **Shiny Charm:** com todas as entradas da Pokédex em nível 10 de pesquisa, fale com o Laventon (Galaxy Hall).
 - **Revanche dos Noble:** lv 70, depois do Arceus; prêmio em Exp. Candies.
 - **Ingo (Training Grounds):** revanches, Path of Tenacity (três treinadores seguidos) e Path of Solitude (um Pokémon só, Req108–122).
-- **Eternal Battle Reverie:** batalhas seguidas com desafios do Arceus, lv 80 a 100.
-- **Rank 10★:** 60.000 pontos de pesquisa (20 Rare Candy e 10 Grit Rock).
+- **Eternal Battle Reverie:** batalhas seguidas com desafios do Arceus, lv 60 a 100.
+- **Rank 10★:** 50.000 pontos de pesquisa (20 Rare Candy e 10 Grit Rock).
 
 <!-- fontes: notas pokemythology, Serebii, Bulbapedia -->

@@ -47,7 +47,7 @@
 | Gouging Fire / Raging Bolt (Scarlet) | Area Zero, after Perrin (Lv. 75) |
 | Iron Boulder / Iron Crown (Violet) | Area Zero, after Perrin (Lv. 75) |
 | Meloetta | Coastal Biome, spin in the leaf whirlwind + sepia filter (Lv. 70) |
-| Tera Stellar Garchomp | Underdepths Crystal Cave (Lv. 80) |
+| Tera Stellar Garganacl | Underdepths Crystal Cave (Lv. 80) |
 | Kanto to Galar starters | Terarium, Terry's request in the League Club (3,000 BP per biome) |
 
 ## Mochi Mayhem epilogue
@@ -57,4 +57,4 @@
 - Pecharunt Lv. 88 (guaranteed catch) at Loyalty Plaza.
 - Afterwards: Carmine, Kieran, Nemona, Arven and Penny become Special Coaches.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

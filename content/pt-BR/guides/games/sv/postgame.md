@@ -47,7 +47,7 @@
 | Gouging Fire / Raging Bolt (Scarlet) | Area Zero, após Perrin (lv 75) |
 | Iron Boulder / Iron Crown (Violet) | Area Zero, após Perrin (lv 75) |
 | Meloetta | Coastal Biome, girar no redemoinho de folhas + filtro sépia (lv 70) |
-| Garchomp Tera Stellar | Underdepths Crystal Cave (lv 80) |
+| Garganacl Tera Stellar | Underdepths Crystal Cave (lv 80) |
 | Iniciais de Kanto a Galar | Terarium, pedido do Terry no League Club (3.000 BP por bioma) |
 
 ## Epílogo Mochi Mayhem

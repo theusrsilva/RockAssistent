@@ -39,4 +39,4 @@ All in the town's Pokémon Center, repeatable, random Nature.
 
 Extra fossils show up in Cerulean Cave after the credits.
 
-<!-- fontes: notas pokemythology, Serebii -->
+<!-- sources: notas pokemythology, Serebii -->

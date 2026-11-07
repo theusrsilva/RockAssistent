@@ -21,4 +21,4 @@
 - Let's Go/Auto Battle, Picnics with sandwiches (Meal Powers) and the TM Machine (TMs crafted with materials + LP).
 - Union Circle: explore with up to 3 friends; online or local trades and battles.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

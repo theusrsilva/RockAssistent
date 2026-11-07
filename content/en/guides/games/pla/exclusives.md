@@ -29,4 +29,4 @@ Growlithe, Arcanine, Voltorb, Electrode, Typhlosion, Qwilfish, Sneasel, Samurott
 - No eggs, no abilities in battle and no held items.
 - To bring Pokémon to other games, use Pokémon HOME.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

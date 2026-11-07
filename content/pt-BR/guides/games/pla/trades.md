@@ -78,7 +78,16 @@ Ficam sempre no mesmo lugar e voltam depois de capturados.
 | Alabaster Icelands | Froslass | Ice Column Chamber | 72 |
 | Alabaster Icelands | Garchomp | Avalanche Slopes | 85 |
 
-- Outros Alphas fixos citados nas fontes, sem nível confirmado: Snorlax, Blissey, Scyther, Golbat, Lopunny, Graveler, Floatzel, Kricketune, Magikarp (Obsidian); Raichu, Onix, Pachirisu, Carnivine, Vespiquen (Mirelands); Ambipom, Drapion, Tentacruel, Hisuian Qwilfish (Coastlands); Gligar, Gliscor, Probopass, Gabite, Bronzong, Rhyperior, Hisuian Goodra (Highlands); Hisuian Sneasel, Swinub (Icelands).
+**Outros Alphas fixos**
+
+| Região | Alphas (nível) |
+| --- | --- |
+| Obsidian Fieldlands | Snorlax 45, Blissey 62, Scyther 42, Golbat 35, Lopunny 40, Graveler 30, Floatzel 31, Kricketune 30, Magikarp 55 |
+| Crimson Mirelands | Raichu 52, Onix 50, Pachirisu 40, Carnivine 40, Vespiquen 61 |
+| Cobalt Coastlands | Ambipom 50, Drapion 45, Tentacruel 50, Hisuian Qwilfish 55, Gyarados 58 |
+| Coronet Highlands | Gligar 52, Gliscor 77, Probopass 73, Gabite 56, Bronzong 55, Rhyperior 74, Hisuian Goodra 70 |
+| Alabaster Icelands | Hisuian Sneasel 61, Swinub 62 |
+
 - Alphas de missão (Kricketune, Hisuian Goodra, Overqwil, Hisuian Zoroark, Vespiquen, Onix) estão no detonado e na lista de chefes.
 
 <!-- fontes: dados do TradeRock (encounters/pla.json), notas pokemythology, Serebii -->

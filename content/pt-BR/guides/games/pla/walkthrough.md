@@ -457,6 +457,7 @@
 ## Sand's Reach
 
 **Faça**
+- Pós-jogo: Thundurus 70 com tempestade (Req94).
 - Praia entre a lagoa e a ponta leste.
 
 :::encounters pla sands-reach
@@ -493,7 +494,6 @@
 
 **Faça**
 - Alphas: Mantine 50, Gyarados.
-- Pós-jogo: Thundurus 70 com tempestade (Req94).
 
 :::encounters pla tranquility-cove
 

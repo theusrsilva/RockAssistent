@@ -21,11 +21,11 @@
 
 **Faça**
 - Primeiras capturas (Lechonk, Pawmi, Fletchling, Tarountula).
-- Siga para o farol e o Inleth Grotto.
+- Siga para o farol e o Inlet Grotto.
 
 :::encounters sv poco-path
 
-## Inleth Grotto
+## Inlet Grotto
 
 **Faça**
 - Caverna da praia; o Koraidon/Miraidon ajuda você a sair.
@@ -1046,7 +1046,7 @@
 ## Underdepths Crystal Cave
 
 **Faça**
-- Caverna secreta (pós-Indigo Disk): Garchomp Tera Stellar lv 80.
+- Caverna secreta (pós-Indigo Disk): Garganacl Tera Stellar lv 80.
 
 :::encounters sv underdepths-crystal-cave
 

@@ -40,7 +40,7 @@
 
 - Beat the Elite Four again (lv 66): a random challenger shows up at the end.
 - Challengers: Hau, Gladion, Lusamine, Guzma, Plumeria, Sophocles, Hapu, Ryuki, Tristan and Kukui.
-- Gladion and Lusamine have special date conditions (to be confirmed).
+- Lusamine only on the 1st of each month; Gladion only 1 month after beating Necrozma.
 
 ## Battle Tree
 

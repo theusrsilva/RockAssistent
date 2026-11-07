@@ -10,7 +10,7 @@
 | Tapu Bulu | Ruins of Abundance | 60 | postgame | both |
 | Tapu Fini | Ruins of Hope | 60 | postgame | both |
 | Type: Null | Aether Paradise (gift) | 40 | postgame, Gladion | both |
-| Zygarde 10% / 50% | Reassembly Unit, Route 16 | 50 | 10 / 50 Zygarde Cells | both |
+| Zygarde 10% / 50% | Reassembly Unit, Route 16 | 30 before becoming Champion, 50 after | 10 / 50 Zygarde Cells | both |
 | Nihilego | Wela Volcano Park or Diglett's Tunnel | 55 | mission UB-01 | both |
 | Buzzwole | Melemele Meadow | 65 | mission UB-02 | Sun |
 | Pheromosa | Verdant Cavern | 60 | mission UB-02 | Moon |

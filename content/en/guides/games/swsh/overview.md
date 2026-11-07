@@ -23,4 +23,4 @@
 - TRs (single-use moves) alongside TMs; Exp. Share always on.
 - Pokémon Camp and curry; Rotom Bike to ride on water.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

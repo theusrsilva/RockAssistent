@@ -220,7 +220,7 @@
 ## Pikachu Valley
 
 **To do**
-- Capped Pikachu via QR (to be confirmed).
+- Capped Pikachu via QR (the QR code does not expire).
 
 ## Paniola Town
 

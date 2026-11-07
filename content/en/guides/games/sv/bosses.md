@@ -30,4 +30,4 @@
 - **Mochi Mayhem:** Yukito/Hideko, Arven/Penny and Nemona at Lv. 80–87; then Pecharunt (Poison/Ghost: Ground, Psychic, Ghost, Dark).
 - **Ogre Clan:** eight themed bosses (weather, Electric, Fairy, Rock/Ice, Normal, Fighting, Ghost/Dark); Lv. 75–80.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

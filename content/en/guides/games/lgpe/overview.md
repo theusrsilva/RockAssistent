@@ -23,4 +23,4 @@
 - No Abilities, no held items, no eggs and no fishing.
 - Links with Pokémon GO (GO Park) and the Poké Ball Plus; 2 players on the same screen.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

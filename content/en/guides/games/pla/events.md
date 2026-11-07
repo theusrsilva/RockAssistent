@@ -22,4 +22,4 @@ Unlocks after you join the Galaxy Team (game menu). The distributions below have
 
 - 1.1.0 Daybreak (February 2022): Massive Mass Outbreaks, Requests 95–122, new Ingo challenges and the Eternal Battle Reverie.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

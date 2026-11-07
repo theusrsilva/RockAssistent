@@ -29,4 +29,4 @@ Dig them up in the Grand Underground and revive them at the Oreburgh City museum
 | Skull Fossil [BD] / Armor Fossil [SP] | Cranidos / Shieldon | From the start |
 | Helix, Dome, Old Amber, Root, Claw | Omanyte, Kabuto, Aerodactyl, Lileep, Anorith | National Pokédex |
 
-<!-- fontes: Serebii, notas pokemythology -->
+<!-- sources: Serebii, notas pokemythology -->

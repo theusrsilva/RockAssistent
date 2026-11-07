@@ -20,7 +20,7 @@
 | Porygon | 30 | Aether House, Route 15 | pós-jogo |
 | Type: Null | 40 | Aether Paradise | Gladion, pós-jogo; vem com as Memories do Silvally |
 | Cosmog | 5 | Lake of the Sunne / Moone | pós-jogo, com Solgaleo/Lunala na equipe |
-| Zygarde 10% / 50% | 50 | Reassembly Unit, Route 16 | 10 / 50 Zygarde Cells |
+| Zygarde 10% / 50% | 30 antes de ser Campeão, 50 depois | Reassembly Unit, Route 16 | 10 / 50 Zygarde Cells |
 
 ## Fósseis
 

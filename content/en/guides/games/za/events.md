@@ -5,7 +5,7 @@ Claimed in Menu → Mystery Gift (via internet or code). Past distributions have
 | Gift | Period | How it was given |
 | --- | --- | --- |
 | Ralts with Gardevoirite | Oct 16, 2025 to Feb 28, 2026 | Early purchase bonus |
-| Diancite | since Nov 6, 2025 | Internet; unlocks the Diancie mission |
+| Diancite | since Oct 27, 2025 | Internet; unlocks the Diancie mission |
 | Mewtwonite X and Y | since Dec 2, 2025 | Internet; unlocks the Project M mission (Mewtwo) |
 | Alpha Charizard lv 36 | Dec 9, 2025 to Jan 19, 2026 | Code for everyone (DLC launch) |
 | Garchompite Z | since Feb 27, 2026 | 1-star Hyperspace portal (DLC), beating a lv 110 Mega Garchomp Z |

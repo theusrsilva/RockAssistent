@@ -13,4 +13,4 @@
 
 Snorlax (Route 12 and Route 16) follows the same 5-minute rule but is not a Legendary.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

@@ -722,4 +722,4 @@
 
 - Tip: Red is lv 85 with Mega Venusaur; no items in the battle.
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

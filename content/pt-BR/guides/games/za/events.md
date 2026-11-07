@@ -5,7 +5,7 @@ Recebido em Menu → Mystery Gift (pela internet ou por código). Distribuiçõe
 | Presente | Período | Como recebia |
 | --- | --- | --- |
 | Ralts com Gardevoirite | 16/10/2025 a 28/02/2026 | Bônus de compra antecipada |
-| Diancite | desde 06/11/2025 | Internet; libera a missão do Diancie |
+| Diancite | desde 27/10/2025 | Internet; libera a missão do Diancie |
 | Mewtwonite X e Y | desde 02/12/2025 | Internet; libera a missão Project M (Mewtwo) |
 | Alpha Charizard lv 36 | 09/12/2025 a 19/01/2026 | Código para todos (lançamento do DLC) |
 | Garchompite Z | desde 27/02/2026 | Portal 1 estrela no Hyperspace (DLC), vencendo Mega Garchomp Z lv 110 |

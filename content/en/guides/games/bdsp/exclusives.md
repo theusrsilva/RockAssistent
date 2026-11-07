@@ -33,4 +33,4 @@
 - A Sinnoh fossil traded from the other version revives normally.
 - Some time-based encounters change: Murkrow [BD] / Misdreavus [SP] at night in Eterna Forest and Lost Tower; Mime Jr. [BD] / Bonsly [SP] on Route 209.
 
-<!-- fontes: Serebii, notas pokemythology -->
+<!-- sources: Serebii, notas pokemythology -->

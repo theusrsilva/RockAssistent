@@ -37,4 +37,4 @@
 | Mew | Poké Ball Plus |
 | Meltan / Melmetal | Pokémon GO |
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

@@ -5,7 +5,7 @@
 3. Ramanas Park, Turnback Cave (Giratina), Fullmoon Island (Cresselia), Snowpoint Temple (Regigigas).
 4. Victory Road nova (com a Marley), Morimoto no Hotel Grand Lake, Elite Four revanche 1.
 5. Battle Zone pelo barco de Snowpoint: Fight Area → Survival Area → Stark Mountain (Heatran) → Resort Area → Battle Park.
-6. Depois do Heatran: Barry (Fight Area) e Dawn/Lucas (Sandgem) nos fins de semana; Elite Four revanche 2.
+6. Depois da Pokédex Nacional: Barry (Battle Tower, sábado e domingo) e Dawn/Lucas (1× por semana). Depois do Heatran: Elite Four revanche 2.
 
 ## Pokédex Nacional
 

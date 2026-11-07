@@ -21,4 +21,4 @@
 - A 7★ raid Pokémon can only be caught once per save file and comes with the Mightiest Mark.
 - There were also gifts for linking Pokémon HOME and Pokémon GO (Gimmighoul in Roaming Form).
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia, pokemon.com -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia, pokemon.com -->

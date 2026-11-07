@@ -42,8 +42,8 @@
 | Apple for Applin | Tart Apple (Flapple) | Sweet Apple (Appletun) |
 | Isle of Armor rival | Klara (Poison) | Avery (Psychic) |
 | Brother in the solo postgame battles | Sordward | Shielbert |
-| Fossils sold in Stow-on-Side | Fossilized Bird and Drake | Fossilized Fish and Dino |
+| Fossils (Stow-on-Side Pokémon Center NPC, 2×, + Route 6) | Fossilized Bird (NPC) and Fossilized Dino (Route 6) | Fossilized Drake (NPC) and Fossilized Fish (Route 6) |
 | Stow-on-Side trade | Hatenna | Impidimp |
 | Circhester trade | Throh | Sawk |
 
-<!-- fontes: Serebii, notas pokemythology -->
+<!-- sources: Serebii, notas pokemythology -->

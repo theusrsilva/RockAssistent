@@ -24,4 +24,4 @@
 - Super Contest Show and Poffins; Ball Capsules with stickers.
 - Hyper Training (Bottle Caps) and the Judge in the Battle Tower.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

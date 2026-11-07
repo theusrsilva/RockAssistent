@@ -4,7 +4,7 @@ Mystery Gift distributions (code, internet, QR). The 3DS online service shut dow
 
 | Event | Year | How it was received |
 | --- | --- | --- |
-| Munchlax with Snorlium Z | 2016 | early purchase code |
+| Munchlax with Snorlium Z | 2016 | Mystery Gift via internet, until Jan 11, 2017 |
 | Magearna | 2016–2017 | special QR Code, after the credits |
 | Lycanroc | 2017 | code (Guardians Rising cards) |
 | Shiny Tapu Koko | 2017 | internet (Mystery Gift) |

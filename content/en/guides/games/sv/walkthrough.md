@@ -21,11 +21,11 @@
 
 **To do**
 - First catches (Lechonk, Pawmi, Fletchling, Tarountula).
-- Head to the lighthouse and Inleth Grotto.
+- Head to the lighthouse and Inlet Grotto.
 
 :::encounters sv poco-path
 
-## Inleth Grotto
+## Inlet Grotto
 
 **To do**
 - Beach cave; Koraidon/Miraidon helps you get out.
@@ -1046,7 +1046,7 @@
 ## Underdepths Crystal Cave
 
 **To do**
-- Secret cave (post-Indigo Disk): Tera Stellar Garchomp Lv. 80.
+- Secret cave (post-Indigo Disk): Tera Stellar Garganacl Lv. 80.
 
 :::encounters sv underdepths-crystal-cave
 
@@ -1068,4 +1068,4 @@ Geeta's Gym inspection, in any order; final reward: King's Rock.
 
 :::boss sv tulip-rematch
 
-<!-- fontes: notas pokemythology, Bulbapedia, Serebii -->
+<!-- sources: notas pokemythology, Bulbapedia, Serebii -->

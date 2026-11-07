@@ -42,7 +42,7 @@
 | Maçã para Applin | Tart Apple (Flapple) | Sweet Apple (Appletun) |
 | Rival da Isle of Armor | Klara (Poison) | Avery (Psychic) |
 | Irmão nas batalhas solo do pós-jogo | Sordward | Shielbert |
-| Fósseis vendidos em Stow-on-Side | Fossilized Bird e Drake | Fossilized Fish e Dino |
+| Fósseis (NPC do Centro Pokémon de Stow-on-Side, 2× + Route 6) | Fossilized Bird (NPC) e Fossilized Dino (Route 6) | Fossilized Drake (NPC) e Fossilized Fish (Route 6) |
 | Troca em Stow-on-Side | Hatenna | Impidimp |
 | Troca em Circhester | Throh | Sawk |
 

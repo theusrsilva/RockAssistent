@@ -350,7 +350,7 @@
 
 **To do**
 - Reached from Eterna Forest with Cut.
-- National Dex: Rotom lv 15 in the TV, 22:00–04:00.
+- National Dex: Rotom lv 15 in the TV, 20:00–04:00.
 
 **Items:** TM90 (Substitute).
 
@@ -469,7 +469,7 @@
 - North: Pokémon Mansion and Trophy Garden.
 - South: rain and mud; a house trades weather TMs for Shards.
 
-**Items:** TM84 (Poison Jab), TM05 (Roar, Rock Climb), TM62 (Bug Buzz), TM87 (Swagger).
+**Items:** TM84 (Poison Jab), TM62 (Bug Buzz), TM87 (Swagger).
 
 :::encounters bdsp route-212
 
@@ -520,7 +520,7 @@
 **To do**
 - Beach; Dr. Footstep's house.
 
-**Items:** TM40 (Aerial Ace), TM92 (Trick Room).
+**Items:** TM05 (Roar; northwest, with Rock Climb), TM40 (Aerial Ace), TM92 (Trick Room).
 
 :::encounters bdsp route-213
 
@@ -596,7 +596,7 @@
 
 **To do**
 - Barry on the bridge.
-- Byron is on Iron Island; take the boat.
+- Byron is at the Canalave Gym (on Iron Island only after the National Dex, when he gives the Metal Coat).
 - Move Deleter.
 
 **Items:** TM48 (Skill Swap), TM89 (U-turn), TM91 (Flash Cannon).
@@ -609,22 +609,20 @@
 
 - Tip: 5 Pokémon, starter lv 37; use Flying or Fire on Heracross.
 
+:::boss bdsp byron
+
+- Tip: Steel; Fire, Fighting and Ground. Bronzor has Levitate.
+
 ## Iron Island
 
 **To do**
 - Team up with Riley against the Grunts.
 - Riley gives you the Riolu Egg.
-- Go back and beat Byron at the gym.
 
 **Items:** TM23 (Iron Tail).
 
 :::encounters bdsp iron-island
 
-**Boss**
-
-:::boss bdsp byron
-
-- Tip: Steel; Fire, Fighting and Ground. Bronzor has Levitate.
 
 ## Route 216
 
@@ -861,7 +859,7 @@
 **To do**
 - Ship from Snowpoint after the National Dex.
 - Super Rod.
-- Barry on weekends after Heatran (and again after 20 Elite Four wins).
+- After the National Dex: Barry at the Battle Tower on Saturdays and Sundays (final team after 20 Elite Four wins).
 
 **Items:** Super Rod.
 
@@ -944,7 +942,7 @@
 **To do**
 - Rematches once a day with the National Dex; Elite Four in 3 tiers (story, post-National Dex, post-Heatran).
 - Morimoto at Hotel Grand Lake.
-- Dawn (or Lucas) in Sandgem Town on weekends.
+- Dawn (or Lucas) in Sandgem Town, once a week, after the National Dex.
 
 **Bosses**
 
@@ -992,4 +990,4 @@
 
 - Tip: final rematches reach lv 88 (Cynthia's Garchomp); train with a Lucky Egg and Chansey/Blissey.
 
-<!-- fontes: notas pokemythology, Serebii, Bulbapedia -->
+<!-- sources: notas pokemythology, Serebii, Bulbapedia -->

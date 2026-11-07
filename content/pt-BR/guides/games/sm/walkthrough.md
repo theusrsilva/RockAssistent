@@ -71,7 +71,7 @@
 
 :::boss sm ilima-1
 
-- Dica: o Smeargle do Ilima é o mais forte; golpes de Lutador ajudam.
+- Dica: o Smeargle do Ilima é o mais forte; golpes de Fighting ajudam.
 
 ## Route 2
 
@@ -113,7 +113,7 @@
 
 :::boss sm totem-raticate
 
-- Dica: o Totem chama aliado; derrube o aliado ou use golpes de Lutador no Totem.
+- Dica: o Totem chama aliado; derrube o aliado ou use golpes de Fighting no Totem.
 
 ## Route 3
 
@@ -150,7 +150,7 @@
 
 :::boss sm ilima-2
 
-- Dica: o time do Hala é todo Lutador; leve Voador ou Psíquico (Rowlet/Dartrix vai bem).
+- Dica: o time do Hala é todo Fighting; leve Flying ou Psychic (Rowlet/Dartrix vai bem).
 
 ## Seaward Cave
 
@@ -234,7 +234,7 @@
 
 :::boss sm gladion-1
 
-- Dica: Type: Null é Normal; golpes de Lutador.
+- Dica: Type: Null é Normal; golpes de Fighting.
 
 ## Brooklet Hill
 
@@ -250,7 +250,7 @@
 
 :::boss sm totem-wishiwashi
 
-- Dica: Grama ou Elétrico; o School Form some com pouca HP.
+- Dica: Grass ou Electric; o School Form some com pouca HP.
 
 ## Route 6
 
@@ -293,7 +293,7 @@
 
 :::boss sm totem-salazzle
 
-- Dica: Salazzle é Veneno/Fogo; Terra causa 4x.
+- Dica: Salazzle é Poison/Fire; Ground causa 4x.
 
 ## Route 8
 
@@ -320,7 +320,7 @@
 
 :::boss sm totem-lurantis
 
-- Dica: Fogo e Voador; Trumbeak aliado cobre Inseto.
+- Dica: Fire e Flying; Trumbeak aliado cobre Bug.
 
 ## Dimensional Research Lab
 
@@ -346,7 +346,7 @@
 
 :::boss sm plumeria-1
 
-- Dica: Golbat e Salandit; Psíquico e Terra (Terra não pega no Golbat).
+- Dica: Golbat e Salandit; Psychic e Ground (Ground não pega no Golbat).
 
 ## Akala Outskirts
 
@@ -362,7 +362,7 @@
 
 :::boss sm olivia-1
 
-- Dica: Pedra; Água, Grama e Lutador. Lycanroc é o mais rápido.
+- Dica: Rock; Water, Grass e Fighting. Lycanroc é o mais rápido.
 
 ## Ruins of Life
 
@@ -472,7 +472,7 @@
 
 :::boss sm guzma-1
 
-- Dica: Vikavolt é Inseto/Elétrico; Fogo e Pedra. Golisopod é fraco a Elétrico, Voador e Pedra.
+- Dica: Vikavolt é Bug/Electric; Fire e Rock. Golisopod é fraco a Electric, Flying e Rock.
 
 ## Route 11
 
@@ -536,7 +536,7 @@
 
 :::boss sm totem-mimikyu
 
-- Dica: o Disguise bloqueia o 1º golpe; use um fraco antes. Fantasma e Aço.
+- Dica: o Disguise bloqueia o 1º golpe; use um fraco antes. Ghost e Steel.
 
 ## Route 15
 
@@ -552,7 +552,7 @@
 
 :::boss sm plumeria-2
 
-- Dica: Salazzle e Golbat; Terra e Psíquico.
+- Dica: Salazzle e Golbat; Ground e Psychic.
 
 ## Haina Desert
 
@@ -636,7 +636,7 @@
 
 :::boss sm lusamine-1
 
-- Dica: o time do Nanu é Sombrio (Lutador, Inseto, Fada); Lusamine é variado, Bewear é o mais perigoso.
+- Dica: o time do Nanu é Dark (Fighting, Bug, Fairy); Lusamine é variado, Bewear é o mais perigoso.
 
 ## Seafolk Village
 
@@ -702,7 +702,7 @@
 
 :::boss sm totem-kommo-o
 
-- Dica: Hapu é Terra (Água, Grama, Gelo). Kommo-o é Dragão/Lutador: Fada e Voador; Fada causa 4x.
+- Dica: Hapu é Ground (Water, Grass, Ice). Kommo-o é Dragon/Fighting: Fairy e Flying; Fairy causa 4x.
 
 ## Altar of the Sunne
 
@@ -817,7 +817,7 @@
 
 :::boss sm defense-kukui
 
-- Dica: Kukui tem Lycanroc rápido e o inicial forte ao seu; leve Água/Lutador para o Lycanroc.
+- Dica: Kukui tem Lycanroc rápido e o inicial forte ao seu; leve Water/Fighting para o Lycanroc.
 
 ## Poni Grove
 
