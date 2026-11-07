@@ -2043,6 +2043,11 @@
     "notFoundHint": "The address may be wrong or the guide may have moved.",
     "backToGuides": "See all guides",
     "pageError": "Couldn't open this guide page.",
+    "encounters": {
+      "total_one": "{{count}} Pokémon",
+      "total_other": "{{count}} Pokémon",
+      "showAll": "See all encounters ({{count}})"
+    },
     "block": {
       "error": "Couldn't load this data.",
       "empty": "No data to show here.",

@@ -2043,6 +2043,11 @@
     "notFoundHint": "Talvez o endereço esteja errado ou o guia tenha mudado de lugar.",
     "backToGuides": "Ver todos os guias",
     "pageError": "Não deu para abrir esta página do guia.",
+    "encounters": {
+      "total_one": "{{count}} Pokémon",
+      "total_other": "{{count}} Pokémon",
+      "showAll": "Ver todos os encontros ({{count}})"
+    },
     "block": {
       "error": "Não deu para carregar estes dados.",
       "empty": "Sem dados para mostrar aqui.",
