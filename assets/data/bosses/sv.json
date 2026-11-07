@@ -19,7 +19,9 @@
     "https://www.pokewiki.de/Tara",
     "https://www.pokewiki.de/Tulia",
     "https://www.pokewiki.de/Sagaria",
-    "https://www.pokemythology.net/detonados/detonado-scarlet-violet/"
+    "https://www.pokemythology.net/detonados/detonado-scarlet-violet/",
+    "https://www.serebii.net/scarletviolet/legendary.shtml",
+    "https://www.escapistmagazine.com/?p=201851"
   ],
   "items": [
     {
@@ -2689,10 +2691,10 @@
           "form": 0,
           "level": 70,
           "moves": [
-            "bite",
-            "poison-fang",
-            "low-kick",
-            "brutal-swing"
+            "poison-jab",
+            "brutal-swing",
+            "crunch",
+            "superpower"
           ],
           "ability": "toxic-chain",
           "item": null,
@@ -2700,8 +2702,8 @@
         }
       ],
       "level_cap": 70,
-      "verified": false,
-      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; nível 70 depois do fim da história de Kitakami (dupla com a Carmine do seu lado); golpes da Serebii, iguais aos últimos do learnset no nível 70",
       "versions": null
     },
     {
@@ -2718,10 +2720,10 @@
           "form": 0,
           "level": 70,
           "moves": [
-            "bite",
-            "clear-smog",
-            "psybeam",
-            "spite"
+            "psychic",
+            "sludge-wave",
+            "nasty-plot",
+            "future-sight"
           ],
           "ability": "toxic-chain",
           "item": null,
@@ -2729,8 +2731,8 @@
         }
       ],
       "level_cap": 70,
-      "verified": false,
-      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; nível 70 depois do fim da história de Kitakami (dupla com a Carmine do seu lado); golpes da Serebii, iguais aos últimos do learnset no nível 70",
       "versions": null
     },
     {
@@ -2738,7 +2740,7 @@
       "kind": "other",
       "name": "Fezandipiti",
       "title": "Loyal Three",
-      "location": "Oni Mountain",
+      "location": "Oni Mountain (leste)",
       "order": 46,
       "badge": null,
       "party": [
@@ -2747,10 +2749,10 @@
           "form": 0,
           "level": 70,
           "moves": [
-            "quick-attack",
-            "wing-attack",
-            "poison-jab",
-            "dazzling-gleam"
+            "beat-up",
+            "swagger",
+            "flatter",
+            "roost"
           ],
           "ability": "toxic-chain",
           "item": null,
@@ -2758,8 +2760,8 @@
         }
       ],
       "level_cap": 70,
-      "verified": false,
-      "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
+      "verified": true,
+      "notes": "The Teal Mask; um dos Loyal Three; nível 70 depois do fim da história de Kitakami (dupla com a Carmine do seu lado); golpes da Serebii, iguais aos últimos do learnset no nível 70",
       "versions": null
     },
     {

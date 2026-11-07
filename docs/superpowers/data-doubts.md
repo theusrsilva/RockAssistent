@@ -101,75 +101,62 @@ outra fonte.
 
 ### Sun / Moon (`sm`)
 
-| item | dúvida | fontes tentadas |
-| --- | --- | --- |
-| bosses/battle-royal, nihilego-1 | Battle Royal: o Rockruff do Royal só no detonado. Nihilego 27 só na Serebii. | serebii.net/sunmoon; notas |
-| guias/diferenças de versão | "Treinador em Heahea: Dexio (Sun)/Sina (Moon)" e "pedra do Haina Desert: Sun Stone/Moon Stone". | serebii.net/sunmoon/versionmisc |
+Nenhuma pendente (Battle Royal, Nihilego 27 e as diferenças de versão de Heahea e do Haina Desert foram conferidos).
 
 ### Ultra Sun / Ultra Moon (`usum`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| shiny-methods/ultra_wormhole_* | Efeito do Amuleto Brilhante desconhecido. As faixas min/max entre os pontos de 500 anos-luz são interpolação nossa. | pokestats.gg/shiny-hunting-hub/methods/ultra-wormhole |
-| bosses/necrozma-1, gladion-3, defense-tristan | Nível 50 do Necrozma (Dusk Mane/Dawn Wings) só no detonado. Gladion no Mount Lanakila: Lucario 53 (Pokéwiki, detonado) contra 55 (Serebii). Tristan: time só da Serebii. | serebii.net; pokewiki.de; notas |
-| bosses/aristo-1 | Aristo (Mount Lanakila, 5 × nível 65) só no detonado. | notas |
-| guias/Episode RR | Mega Mewtwo X (US)/Y (UM) do Giovanni; o que libera os itens do B2F; regras da Battle Agency. | thonky episode-rr; serebii |
+| shiny-methods/ultra_wormhole_* | Efeito do Amuleto Brilhante desconhecido. As faixas min/max entre os pontos de 500 anos-luz são interpolação nossa. | pokestats.gg/shiny-hunting-hub/methods/ultra-wormhole; pokemon.fandom.com/wiki/Shiny (diz que o Amuleto não muda a chance do Wormhole; wiki de fãs, sem 2ª fonte); gamewith.net/pokemon-usum/59673 e rotomlabs.net (sem linha do Wormhole) |
 
 ### Let's Go Pikachu / Eevee (`lgpe`)
 
-| item | dúvida | fontes tentadas |
-| --- | --- | --- |
-| guias/aves lendárias no céu | Aves voando no céu de Kanto: depois de virar Campeão (Bulbapedia) ou depois de capturar as 3 (rankedboost). | bulbapedia; rankedboost |
+Nenhuma pendente (a condição das aves no céu foi conferida na Serebii: depois de virar Campeão e capturar as três).
 
 ### Sword / Shield (`swsh`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
 | bosses (Champion Cup) | O Sword/Shield não tem Elite 4: a final da Champion Cup (Nessa, Bea/Allister, Raihan) é `other` com title "Champion Cup"; as semifinais (Marnie, Hop) e o Bede são `rival`. | serebii.net/swordshield/championcup.shtml |
-| bosses/eternatus-1, peony-rematch | Eternatus 60 só no detonado (a Peony foi conferida à parte). | pokewiki.de/Peony; notas |
-| bosses/honey-1, honey-rematch | Honey (Battle Court) só no detonado; o Venusaur/Blastoise Gigantamax depende do inicial de Kanto escolhido. | notas |
 | areas | `wild-area` virou as 17 sub-áreas do PokeAPI + Meetup Spot; sub-áreas do Isle of Armor e da Crown Tundra acrescentadas (ordem dentro de cada DLC aproximada). Tower of Darkness / Tower of Waters numa área só, apontando para `tower-of-darkness`. | pokeapi.co |
-| guias/Champion Cup | Rare League Card para convidar no Champion Cup; ordem dos 4 últimos estádios do pós-jogo. | serebii championcuprematch; gamerguides |
 
 ### Brilliant Diamond / Shining Pearl (`bdsp`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| bosses/dawn-postgame | A forma da Wormadam da Dawn com cada inicial: a Serebii dá Sandy (Chimchar), Trash (Piplup) e Plant (Turtwig); o detonado troca Sandy e Trash; a Pokéwiki usa a mesma forma nas três. Ficou a da Serebii; as variantes por inicial continuam sem confirmação independente. | serebii.net/brilliantdiamondshiningpearl/dawnlucas.shtml; pokewiki.de/Lucia; notas |
 | areas/bdsp | Grand Underground e Ramanas Park sem location no PokeAPI nem nó no mapa; o PokeAPI não tem encontros do BDSP (ids só pelo nome do local). | pokeapi.co |
-| guias/pós-jogo | Slates do Ramanas Park liberadas em etapas; nível dos fósseis (1 ou 20); TM42 na Survival Area; banidos da Battle Tower; tutores (Draco Meteor etc.). | game8; gamerguides; gosunoob |
+| guias/pós-jogo (fósseis) | Nível dos fósseis revividos no museu de Oreburgh: 1 (gamerguides e o guia) ou 20 (Bulbapedia e rankedboost). O resto da linha antiga foi conferido: Slates em etapas (Discovery → Kanto/Johto → Soul → as demais; Distortion depois do Giratina), TM42 na casa ao sul da Survival Area (3 unidades), banidos da Battle Tower (lendários de capa e míticos) e tutores (Draco Meteor com a Wilma na Route 210; Frenzy Plant/Blast Burn/Hydro Cannon na Route 228). | gamerguides fossils; rankedboost fossils; bulbapedia Fossil (por busca); gosunoob ramanas-park-slates; gfinityesports; game8 348133; gamerant battle-tower; sportskeeda move-tutors |
 
 ### Legends: Arceus (`pla`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
 | bosses (estrutura) | Sem ginásios: Nobres são `other` (title "Noble"), guardiões `other` (title "Warden"), Miss Fortune Sisters `evil`. O "campeão" é o Palkia Origem (lado do Adaman; Dialga Origem do lado da Irida), como nas notas; nível só no detonado. | notas; serebii.net/legendsarceus/noblepokemon.shtml |
-| bosses/alpha-*, ursaluna-1, braviary-1, charm-*, arceus, origin-palkia | Lutas só no detonado (sem golpes): Alphas das missões, Ursaluna e teste do Braviary (Charm, Arceus e Palkia Origem foram conferidos à parte). Beni: a Pokéwiki dá Gardevoir 59 e o detonado, 60. | notas; pokewiki.de |
-| bosses/ress-1 | Ress (pedido 104, Alphas nível 62) só no detonado; a revanche no Training Grounds da Serebii tem nível 63. | notas; serebii.net/legendsarceus/ingobattles.shtml |
+| bosses/alpha-*, ursaluna-1, braviary-1, charm-*, arceus, origin-palkia | Lutas só no detonado (sem golpes): Alphas das missões, Ursaluna e teste do Braviary (Charm, Arceus e Palkia Origem foram conferidos à parte). | notas; pokewiki.de; game8 (Beni conferido: Gardevoir 60) |
+| bosses/ress-1 | Ress (pedido 104, Alphas nível 62) só no detonado; a revanche no Training Grounds da Serebii tem nível 63. | notas; serebii.net/legendsarceus/ingobattles.shtml; serebii.net/legendsarceus/requests.shtml e busca (o pedido 104 não aparece; só o Request 48 com o mesmo nome) |
 | bosses/adaman-3, irida-3 | Times do pedido 89/90 (Leafeon/Glaceon 64 com eeveelutions 32) só na Pokéwiki e nas notas, sem golpes conferidos. | pokewiki.de; notas |
 | areas | Jubilife Village foi para o primeiro lugar (as notas começam na Prelude Beach); Tidal Passage e Turnback Cave (esta no fim, pós-jogo) acrescentadas. Regiões e acampamentos não têm location no PokeAPI. | pokeapi.co |
 | encounters/pla.json | Chance pela maior porcentagem do Serebii. Clima só quando a espécie aparece em parte dos climas daquele horário (`conditions` = horário,clima). Serebii tem Psyduck em Mass Outbreak de Golden Lowlands como 24–22 (invertido na fonte; ficou 22–24). | serebii.net/pokearth/hisui |
 | encounters/pla.json (Celestica Ruins) | Espécies das notas que a Serebii não lista na sub-área entraram como `walk` `verified: false`, com a faixa de nível da área. Darkrai 70 (noite) e Thundurus 70 (rainstorm) também só das notas. Alphas da seção "Alpha Spawn" da Serebii viraram `fixed` com nível único (ex.: Luxray 55, Glalie 62, Abomasnow 68). | pla-pokemythology-notes.md; serebii.net |
-| guias/pós-jogo | Níveis do Spiritomb (60, Req22) e do Alolan Vulpix (40, Req83): recompensas confirmadas, níveis não. Quais Plates abrem o Snowpoint Temple. Revanches dos Nobres "depois do Arceus". | gamerguides; thonky; gamewith |
+| guias/pós-jogo (Vulpix) | Nível do Alolan Vulpix dado pela Keaka no Req83 (o guia diz 40): a recompensa está confirmada (Exp. Candy L + um dos Vulpix), o nível não. Spiritomb 60 (Shrouded Ruins, à noite), Plates do Snowpoint Temple (Iron, Icicle e Stone) e revanches dos Nobles (lv 70, depois do fim da história) foram conferidos. | gamerguides request-83; gamesradar alolan-vulpix; thonky; game8 354476 (Spiritomb 60); serebii theplateofsnowpointtemple, noblepokemon |
 
 ### Scarlet / Violet (`sv`)
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
 | bosses (ordem e rotas) | `order` segue o nível recomendado do detonado, intercalando as três rotas. Starmobile entra no time do chefe da Team Star (Revavroom com a forma da equipe). Titans ficam com um Pokémon (as duas fases são o mesmo). Os golpes do Teal Mask são os do pós-jogo (o DLC antes do fim da história usa times mais fracos, na nota). | serebii.net/scarletviolet; pokewiki.de |
-| bosses/tulip | O detonado dá Tulip 41/42; a Serebii e a Pokéwiki dão 44/45 (ficou 44/45). | serebii.net/scarletviolet/gyms.shtml; pokewiki.de/Tulia |
 | bosses (Tera de Carmine e Kieran) | O Tera Type de cada Pokémon da Carmine (Terarium) e do Kieran campeão vem da revisão/Serebii; falta uma 2ª fonte por Pokémon. | serebii.net |
 | bosses/titan-* | O 4º golpe de alguns Titans não aparece nas fontes. | serebii.net/scarletviolet/pathoflegends.shtml |
-| bosses/larry-rematch | Forma do Dudunsparce (duas ou três partes) na revanche do Larry não confirmada. | serebii.net |
-| bosses/loyal-*, mochi-* | Loyal Three (nível 35 na história) e as duplas do Mochi Mayhem vêm só da Serebii (as notas confirmam Arven/Penny e os avós). | serebii.net/scarletviolet/kitakamimaskfestival.shtml, mochimayhem.shtml |
+| bosses/larry-rematch | Forma do Dudunsparce (duas ou três partes) na revanche do Larry não confirmada. | serebii.net; gamerguides larry-rematch (Dudunsparce 65, sem a forma); charlieintel e game8 397599 põem Komala no lugar |
+| bosses/mochi-* | As duplas do Mochi Mayhem vêm só da Serebii (as notas confirmam Arven/Penny e os avós). Os Loyal Three de nível 70 já foram conferidos (golpes da Serebii, iguais ao learnset). | serebii.net/scarletviolet/mochimayhem.shtml, legendary.shtml |
 | encounters/sv.json (regra de nível) | Regra para o Nuzlocke: uma linha por bioma do pokemondb (`conditions` com o bioma: grass, flower_patch, lake...), com a faixa daquele bioma; teto da área = maior nível dos Tera selvagens fixos da área (serebii.net/scarletviolet/wildteratypepokemon.shtml; no Kitakami vale o 1º nível, o de antes do fim da história) ou, sem Tera, o maior nível dos treinadores da página da área no Serebii; sem treinadores, o maior nível dos Pokémon fixos da página (1º nível no Kitakami; ex.: Oni's Maw 19); a Inleth Grotto, sem nada disso, usa o teto da South Province (Area One), por onde se entra (12); `max_level` <= teto + 5 (e `min_level` <= `max_level`). Linhas sem o pokemondb (só Serebii ou só notas, sem chance) ficam com min = max = teto e `verified: false`. Linhas do pokemondb sem a espécie na área no Serebii ou nas notas foram tiradas (1775). Tera Raid não entrou (as notas não dizem quais espécies só aparecem em raid). | pokemondb.net; serebii.net |
 | encounters/sv.json (fixed) | Lendários e Titans vêm só das notas (nível e lugar); os do Snacksworth estão todos em lv 70 e nas áreas descritas (Kubfu 30). | sv-pokemythology-notes.md |
 | encounters/sv.json (Spiritomb, Eiscue) | Spiritomb (Glaseado Mountain) e Eiscue [Violet] (North Province Area One) só nas notas: linhas `verified: false` com o nível do teto da área. | sv-pokemythology-notes.md |
 | encounters/sv.json (polar-biome) | A lista de filtros da Serebii do Polar Biome traz Chespin, que não é desse bioma (iniciais: Cyndaquil, Torchic, Chimchar, Piplup, Oshawott, Scorbunny): tirado. | serebii.net/pokearth/terarium/polarbiome.shtml |
 | encounters/sv.json (Kitakami e Terarium) | Só a Serebii: espécie confirmada só por ela e nível = teto da área (Tera fixo ou treinadores); no Kitakami o nível muda com o progresso (o teto usa o nível de antes do fim da história). | serebii.net |
 | encounters/sv.json (presentes e trocas) | Meowth de Galar (Naranja/Uva, Salvatore), Growlithe de Hisui (Timeless Woods, Perrin), ovos de Turtwig/Chimchar/Piplup lv 1 (Reveler's Road) e as 30 trocas dos Special Coaches (Blueberry Academy) só das notas. Terrakion foi para a West Province (Area One) e Cobalion e Kubfu para a North Province (Area Two). | sv-pokemythology-notes.md |
-| guias/Paradox de Area Zero | Níveis dos Paradox selvagens em Area Zero (~55–65; Iron Valiant 58?). | serebii.net areazero; marriland; gamerant |
-| guias/raids | Raids de shiny garantido de 2024 (lista e estrelas) e nível das raids "Titanic" dos Loyal Three (notas: 85). | bulbapedia; ggrecon |
+| guias/Paradox de Area Zero | Níveis dos Paradox selvagens em Area Zero (~55–65; Iron Valiant 58?). | serebii.net areazero; marriland; gamerant; rankedboost (Iron Valiant 75, depois do pedido da Perrin; sem 2ª fonte); rpgsite; marriland secret cave (sem nível) |
+| guias/raids | Raids de shiny garantido de 2024 (lista e estrelas) e nível das raids "Titanic" dos Loyal Three (notas: 85). | bulbapedia; ggrecon; bulbapedia Loyal Three (por busca: formas "titânicas", sem nível); serebii kitakami |
 
 ### Legends: Z-A (`za`)
 
@@ -177,7 +164,7 @@ outra fonte.
 | --- | --- | --- |
 | shiny-methods/za_hyperspace | A Serebii lista com o Amuleto 1/638,08 (nível 2) e 1/585,37 (nível 3), que parecem erros de digitação de 1/683,08 e 1/585,57 (conta de rolagens e Pokestats). Usamos a conta. | serebii.net/legendsz-a/shinypokemon.shtml; pokestats.gg/shiny-hunting-hub/methods/za-dlc-sparkling-power |
 | bosses (estrutura) | As partidas de promoção são `gym` (title "Promotion Match", badge = rank alcançado; o Vinnie leva do V direto ao F, então são 10). Não há campeão: a luta final contra a Floette Hyperrogue não tem nível em nenhuma fonte (a Serebii só dá 25.000 de HP) e ficou de fora. Partidas de recompensa 2–20 do Infinite Z-A Royale entraram como `other`. | serebii.net/legendsz-a/mainmissions; pokewiki.de; notas |
-| bosses/rogue-* | Rogue Megas: os níveis 34, 41 (Beedrill) e 48 (Mawile, Barbaracle, Ampharos; o detonado dá 41 ao Ampharos) foram conferidos por fora; os de 41 (Hawlucha, Banette), 53, 59 e 62 seguem só no detonado. A Serebii só dá o nível da revanche (70). | notas; serebii.net/legendsz-a/roguerematch.shtml |
+| bosses/rogue-* | Rogue Megas: os níveis 34, 41 (Beedrill) e 48 (Mawile, Barbaracle, Ampharos; o detonado dá 41 ao Ampharos) foram conferidos por fora; os de 41 (Hawlucha, Banette), 53, 59 e 62 seguem só no detonado. A Serebii só dá o nível da revanche (70). | notas; serebii.net/legendsz-a/roguerematch.shtml; serebii mainmissions (as páginas das missões 17–34 e 36 não dão nível; a 36 lista Taunie/Urbain 62–64 e Lida 58–59, sem Gengar/Heracross); game8 572028 (só faixas por rank: E 39–47, B 59–63) |
 | bosses/josee-1 | O detonado dá Machop 15 e Meditite 15; a Serebii e a Pokéwiki, 10 e 11 (ficou 10/11). | serebii.net; pokewiki.de |
 | areas | As notas não têm tabela de áreas: a lista (distritos, Wild Zones, esgotos, prédios) e a ordem por missão foram montadas aqui. Distritos, avenidas e bulevares apontam para `lumiose-city`, a estação para `lumiose-station`; as Wild Zones não têm location. A posição de cada Wild Zone no mapa segue o distrito citado nas notas. | serebii.net/pokearth/lumiosecity |
 | encounters/za.json (cidade) | Os raros da cidade estão agregados por distrito: a Serebii lista os setores, mas as páginas de distrito juntam tudo, e a lista "raros por setor" das notas também foi somada no distrito. Só os Alphas garantidos têm `alpha: true`; dia/noite vem das notas. Hyperspace (DLC) e Diancie (Mystery Gift) ficaram de fora. | serebii.net/pokearth/lumiosecity |
@@ -186,8 +173,8 @@ outra fonte.
 | encounters/za.json (lysandre-labs) | As notas citam Alpha Aegislash fixo; a Serebii mostra Alpha Arbok. Os dois ficaram; o Aegislash com `verified: false` e o nível dos Alphas da Serebii no Labs (59–60). | za-pokemythology-notes.md; serebii.net |
 | encounters/za.json (Flabébé/Floette/Florges) | Formas pelas cores da Serebii (sufixos r/y/o/b/w = 0–4); as notas só citam algumas cores por zona. Florges da WZ16 nas formas 0/3/4 e Pumpkaboo da WZ15 nos 4 tamanhos (0 Average e 1 Small de dia, 2 Large e 3 Super à noite) pelas notas. | za-pokemythology-notes.md |
 | encounters/za.json (fixos) | Klefki 40 (esgotos), Sableye (WZ4, nível = faixa da zona: as notas não dizem) e Mareep shiny 11 (WZ1) só das notas (`verified: false`). | za-pokemythology-notes.md |
-| guias/Zygarde | Zygarde 10% (lv 33) e 50% (lv 57) "durante a história" pelas notas; a web fala em luta final em 3 fases, lv 84. | nintendolife; VGC; dittobase; notas da Pokémon Mythology |
-| guias/Floette e Absol | Floette Eternal Flower lv 72 (do rival, na 15ª partida do Infinite Z-A Royale) e Absol lv 30 (selvagem após o Rogue Mega Absol): níveis não confirmados. | deltiasgaming; rpgsite |
+| guias/Zygarde | Zygarde 10% (lv 33) e 50% (lv 57) "durante a história" pelas notas; a web fala em luta final em 3 fases, lv 84. | nintendolife; VGC; dittobase; notas da Pokémon Mythology; videogameschronicle, deltiasgaming, fragster (lv 84 nas 3 fases, 10%/50%/Complete, na WZ20; nenhuma fonte da web cita 33/57 na história); serebii tokeeptheworldinbalance |
+| guias/Absol | Absol lv 30 (selvagem/recebido depois do Rogue Mega Absol, MM09) tem uma fonte só (deltiasgaming); a GameTrek dá o Rogue Mega Absol lv 25 e lista o Absol como Alpha da WZ20. A Floette Eternal Flower 72 (rival na 15ª partida de recompensa, com Floettite) foi conferida na Serebii. | deltiasgaming; gmtreks mission 10; serebii theinfinitez-aroyale |
 | guias/Mega Stones do Mega Dimension | Origem das Mega Stones da DLC (SM139/141/189/197) e a contagem "22 novas Megas" (a Serebii lista 22 entradas de 18 espécies). | serebii.net/legendsz-a/dlc-megaevolutions |
 
 ## Dúvidas que valem para vários jogos
@@ -219,13 +206,12 @@ outra fonte.
 | rb, y | trainers/rb.json, y.json | A Gen 1 não dá nome aos treinadores: `name` = classe (o id fica `<classe>-<área>`). Jr. Trainer ♂/♀ e Swimmer ♂/♀ ficam com a classe sem o símbolo (em todos os jogos). | pokered / pokeyellow |
 | gs, c | trainers/gs.json, c.json (itens) | `BERRY` da Gen 2 virou `oran-berry` e `PINK_BOW` virou `silk-scarf` (o PokeAPI não tem os itens da Gen 2; mesmo efeito). | pokegold / pokecrystal |
 | rb, y, gs, c, rs, e, frlg | guides `events.md` | Eventos e distribuições da Gen 1–3 (Mew, Surfing Pikachu, Mystery Gift do Stadium, Virtual Console, Jirachi, Old Sea Map só no Japão) escritos de memória ou com uma fonte só; não conferidos. | serebii.net, pokemondb.net (Bulbapedia deu 403) |
-| sm, usum | guias/Battle Tree | Red e Blue na 20ª e na 50ª batalha da Battle Tree. | serebii battletree; thonky |
 
 ## VGC Champions
 
 | item | dúvida | fontes tentadas |
 | --- | --- | --- |
-| vgc/regulation.json | Regulation Set M-C conferido (09/09 a 02/12/2026; Victory Road e Serebii; a Pokémon Zone dá 04/12). A lista completa de Pokémon permitidos só aparece em imagens ou dentro do jogo (Recruit → Roster Info): o JSON guarda as adições do M-C, não o roster inteiro (~229 Pokémon, MetaVGC). Lendários restritos: nenhuma fonte diz explicitamente que estão fora. Custo em VP dos Stat Points diverge (2 ou 5 VP por SP); não usado. | victoryroad.pro/champions-regulations; serebii.net/pokemonchampions/rankedbattle/regulationm-c; gamewith.ai/pokemon-champions/en/articles/regulation-mc; metavgc.com/regulations; champdex.com/guides/stat-points |
+| vgc/regulation.json | Regulation Set M-C conferido (09/09 a 02/12/2026; Victory Road e Serebii; a Pokémon Zone dá 04/12). A lista completa de Pokémon permitidos só aparece em imagens ou dentro do jogo (Recruit → Roster Info): o JSON guarda as adições do M-C, não o roster inteiro (~229 Pokémon, MetaVGC). Lendários restritos: nenhuma fonte diz explicitamente que estão fora. Custo em VP dos Stat Points diverge (2 ou 5 VP por SP); não usado. | victoryroad.pro/champions-regulations; serebii.net/pokemonchampions/rankedbattle/regulationm-c; gamewith.ai/pokemon-champions/en/articles/regulation-mc; metavgc.com/regulations; champdex.com/guides/stat-points; serebii regulationm-c (09/09–02/12/2026; lista 26 espécies novas, sem falar dos restritos) |
 | vgc/teams.json | Times nossos com os Pokémon e os sets mais usados no M-C (Pikalytics, sem data na página). Os pastes usam EVs (252 ≈ 32 SP) e espécies/itens que o PKHeX conhece; ficaram de fora Mega Raichu, Mega Garchomp Z, Floette Eternal e Mega Golisopod (fortes no M-C) para os 6 existirem no SV, que é onde a análise e a importação rodam (o GameDataTests confere). Poder e PP de alguns golpes mudam no Champions (ex.: Wish e Strength Sap com 8 PP); a análise usa os valores do SV. | pikalytics.com/pokedex/championstournaments |
 
 ## Mecânicas e Mitologia (guias)
@@ -250,11 +236,7 @@ listas longas sem time nas fontes ou de decisão do autor.
 
 Novos `verified: false` da Tarefa 35:
 
-- bosses/sv.json `loyal-okidogi`, `loyal-munkidori`, `loyal-fezandipiti`: nível 70 e locais corrigidos, mas os golpes
-  continuam os do nível 35 (nenhuma fonte com os golpes da luta).
-- bosses/bdsp.json `barry-route-201`: Piplup 5 com os golpes padrão do nível, sem fonte com o time exato.
-- guias/bdsp (detonado): as seções ainda seguem a ordem antiga (Lake Acuity antes de Snowpoint, Lake Valor depois);
-  o JSON já tem a ordem certa.
+- bosses/bdsp.json `barry-route-201`: Piplup 5 com os golpes padrão do nível, só no detonado. A Serebii (página do Barry) e o game8 não listam luta no Lake Verity: para eles a 1ª luta do Barry é na Route 203. O autor confirma se a luta existe.
 
 Ainda a corrigir:
 

@@ -22,7 +22,7 @@
 | Optional captain (Akala) | Kiawe, at night | Mallow, by day |
 | Cosmoem evolves into | Solgaleo | Lunala |
 | Altar and lake | Altar / Lake of the Sunne | Altar / Lake of the Moone |
-| Haina Desert stone | Sun Stone | Moon Stone |
+| Stone from the man by the palm tree in Haina Desert (show him a Solrock / Lunatone, each version-exclusive) | Sun Stone | Moon Stone |
 | Fossils for sale (Konikoni) | Skull, Cover | Armor, Plume |
 
 <!-- sources: pokemythology notes, Serebii, Bulbapedia -->

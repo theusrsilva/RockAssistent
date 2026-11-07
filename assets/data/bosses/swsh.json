@@ -13,7 +13,9 @@
     "https://www.pokewiki.de/Peony",
     "https://www.pokewiki.de/Sophora",
     "https://www.pokewiki.de/Saverio",
-    "https://www.pokemythology.net/detonados/detonado-sword-shield/"
+    "https://www.pokemythology.net/detonados/detonado-sword-shield/",
+    "https://www.serebii.net/pokedex-swsh/eternatus/locations.shtml",
+    "https://samurai-gamers.com/pokemon-sword-and-shield/dojo-matron-honey-battle-court-guide"
   ],
   "items": [
     {
@@ -2186,8 +2188,8 @@
         }
       ],
       "level_cap": 60,
-      "verified": false,
-      "notes": "não capturável nesta luta; depois vem a Max Raid do Eternamax Eternatus; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "não capturável nesta luta; depois vem a Max Raid do Eternamax Eternatus; nível 60 (Serebii e detonado); golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -3947,8 +3949,8 @@
         }
       ],
       "level_cap": 60,
-      "verified": false,
-      "notes": "Isle of Armor: depois do 1.000.000 de watts; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Isle of Armor: depois do 1.000.000 de watts; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); níveis conferidos na samurai-gamers; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -4016,8 +4018,8 @@
         }
       ],
       "level_cap": 75,
-      "verified": false,
-      "notes": "Isle of Armor: revanche uma vez por dia; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Isle of Armor: revanche uma vez por dia; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); níveis conferidos na samurai-gamers; golpes não listados nas fontes",
       "versions": null
     },
     {

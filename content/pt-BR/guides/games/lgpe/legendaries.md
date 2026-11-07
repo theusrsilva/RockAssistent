@@ -6,7 +6,7 @@
 | Articuno | Seafoam Islands (fundo) | 50 | Sea Skim + Strong Push; mesma regra | ambas |
 | Moltres | Victory Road | 50 | 8 insígnias; mesma regra | ambas |
 | Mewtwo | Cerulean Cave (fundo) | 70 | Pós-jogo; 5 min, depois captura | ambas |
-| Articuno, Zapdos, Moltres | Céu de Kanto | — | Pós-jogo, voando alto; muito raros (a confirmar a condição) | ambas |
+| Articuno, Zapdos, Moltres | Céu de Kanto | — | Depois de virar Campeão e capturar as três; voando alto, muito raros | ambas |
 | Mew | Mystery Gift | 1 | Poké Ball Plus conectada | ambas |
 | Meltan | GO Park | varia | Mystery Box do Pokémon GO | ambas |
 | Melmetal | GO Park | varia | Evoluído no Pokémon GO | ambas |

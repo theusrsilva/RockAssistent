@@ -15,7 +15,9 @@
     "https://www.pokewiki.de/Anabel",
     "https://www.pokewiki.de/Yasu",
     "https://www.pokewiki.de/Shigeki_Morimoto",
-    "https://www.pokemythology.net/detonados/detonado-sun-moon/"
+    "https://www.pokemythology.net/detonados/detonado-sun-moon/",
+    "https://www.supercheats.com/pokemon-sun/walkthrough/team-skull-battle-battle-royal-matchup",
+    "https://www.serebii.net/sunmoon/ultrabeasts.shtml"
   ],
   "items": [
     {
@@ -618,8 +620,8 @@
         }
       ],
       "level_cap": 19,
-      "verified": false,
-      "notes": "todos contra todos: The Royal (Rockruff), Hau (Dartrix, para quem escolheu Litten) e Gladion (Type: Null); o Rockruff só no detonado",
+      "verified": true,
+      "notes": "todos contra todos: The Masked Royal (Rockruff 19), Hau (Dartrix 19, para quem escolheu Litten; Brionne com Rowlet, Torracat com Popplio) e Gladion (Type: Null 19)",
       "versions": null
     },
     {
@@ -1009,8 +1011,8 @@
         }
       ],
       "level_cap": 27,
-      "verified": false,
-      "notes": "só derrotar (não dá para capturar aqui)",
+      "verified": true,
+      "notes": "só derrotar (não dá para capturar aqui); Defesa aumentada",
       "versions": null
     },
     {

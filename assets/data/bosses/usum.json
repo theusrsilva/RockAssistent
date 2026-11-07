@@ -22,7 +22,13 @@
     "https://www.pokewiki.de/Yasu",
     "https://www.pokewiki.de/Fabian",
     "https://www.pokewiki.de/Hala",
-    "https://www.pokemythology.net/detonados/detonado-ultra-sun-ultra-moon/"
+    "https://www.pokemythology.net/detonados/detonado-ultra-sun-ultra-moon/",
+    "https://www.gamerguides.com/pokemon-ultra-sun-moon/guide/walkthrough/poni-island/altar-of-the-sunnemoone",
+    "https://www.supercheats.com/pokemon-ultra-sun/walkthrough/dusk-mane-necrozma-battle",
+    "https://www.supercheats.com/pokemon-ultra-moon/walkthrough/dawn-wings-necrozma-battle",
+    "https://www.supercheats.com/pokemon-ultra-moon/walkthrough/mount-lanakila",
+    "https://www.serebii.net/pokearth/alola/mountlanakila.shtml",
+    "https://strategywiki.org/wiki/Pok%C3%A9mon_Ultra_Sun_and_Ultra_Moon/Champion_Title_Defense"
   ],
   "items": [
     {
@@ -1826,15 +1832,20 @@
           "species": 800,
           "form": 1,
           "level": 50,
-          "moves": [],
+          "moves": [
+            "sunsteel-strike",
+            "morning-sun",
+            "psycho-cut",
+            "night-slash"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 50,
-      "verified": false,
-      "notes": "não capturável; nível só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "não capturável; nível 50 (gamerguides, supercheats e detonado); golpes da supercheats",
       "versions": [
         "ultra-sun"
       ]
@@ -1852,15 +1863,20 @@
           "species": 800,
           "form": 2,
           "level": 50,
-          "moves": [],
+          "moves": [
+            "moongeist-beam",
+            "moonlight",
+            "psychic",
+            "power-gem"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
         }
       ],
       "level_cap": 50,
-      "verified": false,
-      "notes": "não capturável; nível só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "não capturável; nível 50 (gamerguides, supercheats e detonado); golpes da supercheats",
       "versions": [
         "ultra-moon"
       ]
@@ -4506,7 +4522,7 @@
       "id": "aristo-1",
       "kind": "other",
       "name": "Aristo",
-      "title": "Pokémon Trainer",
+      "title": "Veteran",
       "location": "Mount Lanakila",
       "order": 78,
       "badge": null,
@@ -4517,7 +4533,7 @@
           "level": 65,
           "moves": [],
           "ability": null,
-          "item": null,
+          "item": "light-clay",
           "tera_type": null
         },
         {
@@ -4526,7 +4542,7 @@
           "level": 65,
           "moves": [],
           "ability": null,
-          "item": null,
+          "item": "heat-rock",
           "tera_type": null
         },
         {
@@ -4535,7 +4551,7 @@
           "level": 65,
           "moves": [],
           "ability": null,
-          "item": null,
+          "item": "damp-rock",
           "tera_type": null
         },
         {
@@ -4544,7 +4560,7 @@
           "level": 65,
           "moves": [],
           "ability": null,
-          "item": null,
+          "item": "icy-rock",
           "tera_type": null
         },
         {
@@ -4553,13 +4569,13 @@
           "level": 65,
           "moves": [],
           "ability": null,
-          "item": null,
+          "item": "smooth-rock",
           "tera_type": null
         }
       ],
       "level_cap": 65,
-      "verified": false,
-      "notes": "pós-jogo: depois de vencer os treinadores mais fortes de Alola; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "pós-jogo: só depois de vencer os treinadores mais fortes de Alola (perto do Centro Pokémon do Mount Lanakila); 5 × 65 (supercheats, Serebii e detonado); itens que prolongam clima e telas; golpes não listados nas fontes; dá a Life Orb",
       "versions": null
     },
     {

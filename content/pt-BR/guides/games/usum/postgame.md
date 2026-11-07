@@ -16,7 +16,7 @@
 | Lysandre | Mega Gyarados; Xerneas (US) / Yveltal (UM) |
 | Ghetsis | Zekrom (US) / Reshiram (UM) |
 | Giovanni | Mega Mewtwo X (US) / Y (UM) lv 70 |
-| Fim | Wicke dá 55 Big Nuggets; itens no B2F (DNA Splicers, Prison Bottle, Soul Dew); Porygon na Aether House |
+| Fim | Wicke dá 55 Big Nuggets; depois fale com a Wicke no B2F e a funcionária do Secret Lab A dá DNA Splicers, Prison Bottle e Soul Dew; Porygon na Aether House |
 
 ## Ultra Beasts e Ultra Wormhole
 
@@ -51,7 +51,7 @@
 
 ## Battle Agency
 
-- Festival Plaza: monte um time com Pokémon alugados e vença 3 lutas seguidas.
+- Festival Plaza (depois do trial do Sophocles): escolha 1 de 3 Pokémon alugados; os outros 2 vêm dos visitantes do seu Plaza; vença 3 lutas seguidas para subir de grau (grau 1 = nível 51, e sobe 1 por grau).
 - Necessária para a invasão da Team Rocket no Festival Plaza.
 
 ## Island Scan
