@@ -48,8 +48,106 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Starly 7, Turtwig 9; com Turtwig: Starly 7, Chimchar 9",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "quick-attack",
+                "growl"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 390,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "scratch",
+                "leer"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "quick-attack",
+                "growl"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 393,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "pound",
+                "growl"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "tackle",
+                "quick-attack",
+                "growl"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 387,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "withdraw"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "roark",
@@ -316,8 +414,199 @@
       ],
       "level_cap": 21,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Starly 19, Buizel 20, Ponyta 20, Grotle 21; com Turtwig: Starly 19, Buizel 20, Roselia 20, Monferno 21",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "tail-whip",
+                "quick-attack",
+                "water-gun",
+                "bite"
+              ],
+              "ability": "swift-swim",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "poison-sting",
+                "mega-drain",
+                "leech-seed",
+                "grass-knot"
+              ],
+              "ability": "poison-point",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "mach-punch",
+                "leer",
+                "flame-wheel",
+                "stealth-rock"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "growth",
+                "stun-spore",
+                "leech-seed",
+                "magical-leaf"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "tackle",
+                "growl",
+                "flame-charge",
+                "agility"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "metal-claw",
+                "bubble-beam",
+                "stealth-rock",
+                "grass-knot"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 19,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "tail-whip",
+                "quick-attack",
+                "water-gun",
+                "bite"
+              ],
+              "ability": "swift-swim",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 20,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "flame-charge",
+                "agility"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "absorb",
+                "razor-leaf",
+                "curse",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 21,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "maylene",
@@ -501,8 +790,199 @@
       ],
       "level_cap": 31,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Starly 26, Buizel 26, Ponyta 27, Grotle 31; com Turtwig: Starly 26, Buizel 26, Roselia 27, Monferno 31",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "tail-whip",
+                "bite",
+                "swift",
+                "aqua-jet"
+              ],
+              "ability": "swift-swim",
+              "item": "sea-incense",
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "poison-sting",
+                "mega-drain",
+                "sweet-scent",
+                "grass-knot"
+              ],
+              "ability": "poison-point",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "mach-punch",
+                "leer",
+                "power-up-punch",
+                "flame-wheel"
+              ],
+              "ability": "blaze",
+              "item": "shell-bell",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "growth",
+                "stun-spore",
+                "leech-seed",
+                "magical-leaf"
+              ],
+              "ability": "natural-cure",
+              "item": "miracle-seed",
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "tackle",
+                "growl",
+                "agility",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "shell-bell",
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "metal-claw",
+                "charm",
+                "bubble-beam",
+                "grass-knot"
+              ],
+              "ability": "torrent",
+              "item": "sea-incense",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "keen-eye",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 26,
+              "moves": [
+                "tail-whip",
+                "bite",
+                "swift",
+                "aqua-jet"
+              ],
+              "ability": "swift-swim",
+              "item": "sea-incense",
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "tackle",
+                "tail-whip",
+                "agility",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "shell-bell",
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "razor-leaf",
+                "bite",
+                "mega-drain",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": "miracle-seed",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 31,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "fantina",
@@ -643,8 +1123,241 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staravia 32, Buizel 33, Heracross 32, Ponyta 34, Grotle 37; com Turtwig: Staravia 32, Buizel 33, Heracross 32, Roselia 34, Monferno 37; com Piplup Battle Partner: Munchlax 42, Staraptor 41, Buizel 42, Heracross 43, Ponyta 42, Torterra 45; com Turtwig Battle Partner: Munchlax 42, Staraptor 41, Buizel 42, Heracross 43, Roselia 42, Infernape 45; com Chimchar Battle Partner: Munchlax 42, Staraptor 41, Roselia 42, Heracross 43, Ponyta 42, Empoleon 45",
-      "versions": null
+      "notes": "com Piplup Battle Partner: Munchlax 42, Staraptor 41, Buizel 42, Heracross 43, Ponyta 42, Torterra 45; com Turtwig Battle Partner: Munchlax 42, Staraptor 41, Buizel 42, Heracross 43, Roselia 42, Infernape 45; com Chimchar Battle Partner: Munchlax 42, Staraptor 41, Roselia 42, Heracross 43, Ponyta 42, Empoleon 45",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "intimidate",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "tail-whip",
+                "bite",
+                "swift",
+                "brine"
+              ],
+              "ability": "swift-swim",
+              "item": "sea-incense",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "aerial-ace",
+                "brick-break",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "poison-sting",
+                "sweet-scent",
+                "giga-drain",
+                "grass-knot"
+              ],
+              "ability": "poison-point",
+              "item": "big-root",
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "mach-punch",
+                "power-up-punch",
+                "flame-wheel",
+                "shadow-claw"
+              ],
+              "ability": "blaze",
+              "item": "shell-bell",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "intimidate",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "growth",
+                "stun-spore",
+                "leech-seed",
+                "giga-drain"
+              ],
+              "ability": "natural-cure",
+              "item": "big-root",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "aerial-ace",
+                "brick-break",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "growl",
+                "agility",
+                "flame-wheel",
+                "stomp"
+              ],
+              "ability": "flash-fire",
+              "item": "shell-bell",
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "metal-claw",
+                "charm",
+                "grass-knot",
+                "brine"
+              ],
+              "ability": "torrent",
+              "item": "sea-incense",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "quick-attack",
+                "double-team",
+                "endeavor",
+                "pluck"
+              ],
+              "ability": "intimidate",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "tail-whip",
+                "bite",
+                "swift",
+                "brine"
+              ],
+              "ability": "swift-swim",
+              "item": "sea-incense",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "leer",
+                "aerial-ace",
+                "brick-break",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "tail-whip",
+                "agility",
+                "flame-wheel",
+                "stomp"
+              ],
+              "ability": "flash-fire",
+              "item": "shell-bell",
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "razor-leaf",
+                "bite",
+                "leech-seed",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": "big-root",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "byron",
@@ -1354,8 +2067,283 @@
       ],
       "level_cap": 55,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 49, Floatzel 49, Heracross 51, Rapidash 49, Snorlax 52, Torterra 55; com Turtwig: Staraptor 49, Floatzel 49, Heracross 51, Roserade 49, Snorlax 52, Infernape 55",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "brine"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "pin-missile",
+                "swords-dance",
+                "rock-slide",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "grassy-terrain",
+                "giga-drain",
+                "toxic",
+                "grass-knot"
+              ],
+              "ability": "poison-point",
+              "item": "big-root",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "hammer-arm"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 55,
+              "moves": [
+                "close-combat",
+                "flame-wheel",
+                "u-turn",
+                "shadow-claw"
+              ],
+              "ability": "blaze",
+              "item": "expert-belt",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 55,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "rain-dance",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "grassy-terrain",
+                "petal-blizzard",
+                "stun-spore",
+                "shadow-ball"
+              ],
+              "ability": "natural-cure",
+              "item": "black-sludge",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "pin-missile",
+                "swords-dance",
+                "rock-slide",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 55,
+              "moves": [
+                "charm",
+                "grass-knot",
+                "brine",
+                "flash-cannon"
+              ],
+              "ability": "torrent",
+              "item": "quick-claw",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 55,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "sunny-day",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "brine"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "pin-missile",
+                "swords-dance",
+                "rock-slide",
+                "thief"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 52,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 55,
+              "moves": [
+                "earthquake",
+                "wood-hammer",
+                "roar",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 55,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "aaron",
@@ -3213,8 +4201,283 @@
       ],
       "level_cap": 64,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 58, Floatzel 59, Heracross 60, Rapidash 59, Snorlax 60, Torterra 64; com Turtwig: Staraptor 58, Floatzel 59, Heracross 60, Roserade 59, Snorlax 60, Infernape 64; pós-jogo: sábados e domingos, depois do Heatran",
-      "versions": null
+      "notes": "pós-jogo: sábados e domingos, depois do Heatran",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "waterfall"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "grassy-terrain",
+                "giga-drain",
+                "toxic",
+                "sludge-bomb"
+              ],
+              "ability": "poison-point",
+              "item": "black-sludge",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "hammer-arm"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "close-combat",
+                "flare-blitz",
+                "u-turn",
+                "shadow-claw"
+              ],
+              "ability": "blaze",
+              "item": "expert-belt",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "rain-dance",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "sludge-bomb",
+                "giga-drain",
+                "stun-spore",
+                "shadow-ball"
+              ],
+              "ability": "natural-cure",
+              "item": "black-sludge",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "charm",
+                "grass-knot",
+                "surf",
+                "flash-cannon"
+              ],
+              "ability": "torrent",
+              "item": "quick-claw",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "sunny-day",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "waterfall"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": "swarm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flame-wheel"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "earthquake",
+                "wood-hammer",
+                "roar",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "dawn-postgame",
@@ -3227,7 +4490,7 @@
       "party": [
         {
           "species": 413,
-          "form": 1,
+          "form": 2,
           "level": 58,
           "moves": [
             "gyro-ball",
@@ -3312,8 +4575,283 @@
       ],
       "level_cap": 64,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Wormadam 58, Milotic 59, Froslass 60, Tangrowth 59, Clefable 60, Infernape 64; com Turtwig: Wormadam 58, Tangrowth 59, Froslass 60, Magmortar 59, Clefable 60, Empoleon 64; rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Mothim 58, Milotic 59, Gallade 63, Magmortar 59, Clefable 60, Torterra 64; pós-jogo: sábados e domingos, depois do Heatran; a forma da Wormadam muda com o seu inicial; Trash com o Chimchar e Sandy com o Piplup conferidos numa 2ª fonte",
-      "versions": null
+      "notes": "rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Mothim 58, Milotic 59, Gallade 63, Magmortar 59, Clefable 60, Torterra 64; pós-jogo: sábados e domingos, depois do Heatran",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 413,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "leaf-storm",
+                "bug-buzz",
+                "psychic",
+                "quiver-dance"
+              ],
+              "ability": "overcoat",
+              "item": "white-herb",
+              "tera_type": null
+            },
+            {
+              "species": 465,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "energy-ball",
+                "sludge-bomb",
+                "focus-blast",
+                "hyper-beam"
+              ],
+              "ability": "regenerator",
+              "item": "choice-specs",
+              "tera_type": null
+            },
+            {
+              "species": 478,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "hex",
+                "frost-breath",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "cursed-body",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 467,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "fire-blast",
+                "focus-blast",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "vital-spirit",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "moonblast",
+                "calm-mind",
+                "moonlight",
+                "minimize"
+              ],
+              "ability": "unaware",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "hydro-pump",
+                "flash-cannon",
+                "ice-beam",
+                "grass-knot"
+              ],
+              "ability": "torrent",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 413,
+              "form": 2,
+              "level": 58,
+              "moves": [
+                "gyro-ball",
+                "sucker-punch",
+                "metal-burst",
+                "stealth-rock"
+              ],
+              "ability": "anticipation",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 467,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "fire-blast",
+                "focus-blast",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "vital-spirit",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 478,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "hex",
+                "frost-breath",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "cursed-body",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 350,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "hydro-pump",
+                "ice-beam",
+                "hyper-beam",
+                "recover"
+              ],
+              "ability": "competitive",
+              "item": "life-orb",
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "moonblast",
+                "calm-mind",
+                "moonlight",
+                "minimize"
+              ],
+              "ability": "unaware",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "wood-hammer",
+                "earthquake",
+                "stone-edge",
+                "curse"
+              ],
+              "ability": "overgrow",
+              "item": "yache-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 413,
+              "form": 1,
+              "level": 58,
+              "moves": [
+                "bug-bite",
+                "fissure",
+                "earthquake",
+                "double-team"
+              ],
+              "ability": "anticipation",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 350,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "hydro-pump",
+                "ice-beam",
+                "hyper-beam",
+                "recover"
+              ],
+              "ability": "competitive",
+              "item": "life-orb",
+              "tera_type": null
+            },
+            {
+              "species": 478,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "hex",
+                "frost-breath",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "cursed-body",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 465,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "energy-ball",
+                "sludge-bomb",
+                "focus-blast",
+                "hyper-beam"
+              ],
+              "ability": "regenerator",
+              "item": "choice-specs",
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "moonblast",
+                "calm-mind",
+                "moonlight",
+                "minimize"
+              ],
+              "ability": "unaware",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 64,
+              "moves": [
+                "overheat",
+                "focus-blast",
+                "grass-knot",
+                "u-turn"
+              ],
+              "ability": "blaze",
+              "item": "expert-belt",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 64,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "aaron-final",
@@ -3906,8 +5444,280 @@
       ],
       "level_cap": 74,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Honchkrow 68, Gorebyss 69, Froslass 70, Sceptile 69, Ambipom 70, Infernape 74; com Turtwig: Togekiss 68, Bellossom 69, Mamoswine 70, Typhlosion 69, Lopunny 70, Empoleon 74; rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Dusknoir 68, Flareon 69, Rampardos 70, Rotom 69, Dunsparce 70, Torterra 74; pós-jogo: depois de vencer a Elite Four 10 vezes",
-      "versions": null
+      "notes": "rival: Dawn se você joga com o Lucas; com a Dawn, o rival é o Lucas: Dusknoir 68, Flareon 69, Rampardos 70, Rotom 69, Dunsparce 70, Torterra 74; pós-jogo: depois de vencer a Elite Four 10 vezes",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 468,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "dazzling-gleam",
+                "air-slash",
+                "aura-sphere",
+                "thunder-wave"
+              ],
+              "ability": "serene-grace",
+              "item": "lum-berry",
+              "tera_type": null
+            },
+            {
+              "species": 182,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "moonblast",
+                "petal-dance",
+                "toxic",
+                "quiver-dance"
+              ],
+              "ability": "chlorophyll",
+              "item": "persim-berry",
+              "tera_type": null
+            },
+            {
+              "species": 473,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "ice-shard",
+                "earthquake",
+                "stone-edge",
+                "avalanche"
+              ],
+              "ability": "thick-fat",
+              "item": "life-orb",
+              "tera_type": null
+            },
+            {
+              "species": 157,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "eruption"
+              ],
+              "ability": "flash-fire",
+              "item": "choice-scarf",
+              "tera_type": null
+            },
+            {
+              "species": 428,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "high-jump-kick",
+                "thunder-wave",
+                "sweet-kiss",
+                "switcheroo"
+              ],
+              "ability": "klutz",
+              "item": "lagging-tail",
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "hydro-pump",
+                "flash-cannon",
+                "ice-beam",
+                "grass-knot"
+              ],
+              "ability": "torrent",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 169,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "cross-poison",
+                "u-turn",
+                "super-fang",
+                "tailwind"
+              ],
+              "ability": "inner-focus",
+              "item": "sitrus-berry",
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "flare-blitz",
+                "play-rough",
+                "extreme-speed",
+                "reversal"
+              ],
+              "ability": "intimidate",
+              "item": "life-orb",
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "psychic",
+                "power-whip",
+                "reflect",
+                "light-screen"
+              ],
+              "ability": "filter",
+              "item": "leftovers",
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "hydro-pump",
+                "ice-beam",
+                "focus-blast",
+                "shell-smash"
+              ],
+              "ability": "torrent",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 463,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "focus-blast",
+                "ice-beam",
+                "fire-blast",
+                "shadow-ball"
+              ],
+              "ability": "own-tempo",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "wood-hammer",
+                "earthquake",
+                "stone-edge",
+                "curse"
+              ],
+              "ability": "overgrow",
+              "item": "yache-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 430,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "sucker-punch",
+                "night-slash",
+                "taunt",
+                "roost"
+              ],
+              "ability": "super-luck",
+              "item": "scope-lens",
+              "tera_type": null
+            },
+            {
+              "species": 368,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "hydro-pump",
+                "ice-beam",
+                "baton-pass",
+                "shell-smash"
+              ],
+              "ability": "swift-swim",
+              "item": "wiki-berry",
+              "tera_type": null
+            },
+            {
+              "species": 478,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "hex",
+                "frost-breath",
+                "thunderbolt",
+                "will-o-wisp"
+              ],
+              "ability": "cursed-body",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 254,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "leaf-blade",
+                "earthquake",
+                "leaf-storm",
+                "brick-break"
+              ],
+              "ability": "unburden",
+              "item": "white-herb",
+              "tera_type": null
+            },
+            {
+              "species": 424,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "double-hit",
+                "fake-out",
+                "dual-chop",
+                "u-turn"
+              ],
+              "ability": "technician",
+              "item": "life-orb",
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "overheat",
+                "focus-blast",
+                "grass-knot",
+                "u-turn"
+              ],
+              "ability": "blaze",
+              "item": "expert-belt",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "barry-final",
@@ -4005,8 +5815,283 @@
       ],
       "level_cap": 74,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 68, Floatzel 69, Heracross 70, Rapidash 69, Snorlax 70, Torterra 74; com Turtwig: Staraptor 68, Floatzel 69, Heracross 70, Roserade 69, Snorlax 70, Infernape 74; pós-jogo: depois de vencer a Elite Four 20 vezes; sábados e domingos",
-      "versions": null
+      "notes": "pós-jogo: depois de vencer a Elite Four 20 vezes; sábados e domingos",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "waterfall"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "grassy-terrain",
+                "giga-drain",
+                "toxic",
+                "sludge-bomb"
+              ],
+              "ability": "poison-point",
+              "item": "black-sludge",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "hammer-arm"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "close-combat",
+                "flare-blitz",
+                "u-turn",
+                "shadow-claw"
+              ],
+              "ability": "blaze",
+              "item": "expert-belt",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "endeavor",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "sludge-bomb",
+                "giga-drain",
+                "stun-spore",
+                "shadow-ball"
+              ],
+              "ability": "poison-point",
+              "item": "black-sludge",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flare-blitz"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "aqua-jet",
+                "grass-knot",
+                "surf",
+                "flash-cannon"
+              ],
+              "ability": "torrent",
+              "item": "quick-claw",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "close-combat",
+                "pluck",
+                "endeavor",
+                "u-turn"
+              ],
+              "ability": "intimidate",
+              "item": "focus-sash",
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "ice-fang",
+                "crunch",
+                "swift",
+                "waterfall"
+              ],
+              "ability": "swift-swim",
+              "item": "quick-claw",
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "megahorn",
+                "swords-dance",
+                "rock-slide",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 69,
+              "moves": [
+                "smart-strike",
+                "megahorn",
+                "poison-jab",
+                "flare-blitz"
+              ],
+              "ability": "flash-fire",
+              "item": "expert-belt",
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "covet",
+                "yawn",
+                "crunch",
+                "high-horsepower"
+              ],
+              "ability": "thick-fat",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 74,
+              "moves": [
+                "earthquake",
+                "wood-hammer",
+                "roar",
+                "stealth-rock"
+              ],
+              "ability": "overgrow",
+              "item": "leftovers",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 74,
+          "verified": true
+        }
+      ]
     }
   ]
 }

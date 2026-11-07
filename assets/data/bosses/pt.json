@@ -28,8 +28,58 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Chimchar; com Piplup: Turtwig 5; com Turtwig: Chimchar 5",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 390,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 393,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 387,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-2",
@@ -67,8 +117,103 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Starly 7, Turtwig 9; com Turtwig: Starly 7, Chimchar 9",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "quick-attack",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 390,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "scratch",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "quick-attack",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 393,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "pound",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 396,
+              "form": 0,
+              "level": 7,
+              "moves": [
+                "quick-attack",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 387,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "tackle",
+                "withdraw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "roark",
@@ -388,8 +533,199 @@
       ],
       "level_cap": 27,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staravia 25, Buizel 23, Ponyta 23, Grotle 27; com Turtwig: Staravia 25, Buizel 23, Roselia 23, Monferno 27",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "water-gun",
+                "quick-attack",
+                "pursuit",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "mega-drain",
+                "poison-sting",
+                "leech-seed",
+                "stun-spore"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "flame-wheel",
+                "mach-punch",
+                "fury-swipes",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 27,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "mega-drain",
+                "poison-sting",
+                "leech-seed",
+                "stun-spore"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "ember",
+                "tackle",
+                "tail-whip",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "bubble-beam",
+                "peck",
+                "metal-claw",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 27,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 25,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "water-gun",
+                "quick-attack",
+                "pursuit",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 23,
+              "moves": [
+                "ember",
+                "tackle",
+                "tail-whip",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 27,
+              "moves": [
+                "razor-leaf",
+                "tackle",
+                "absorb",
+                "withdraw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 27,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "maylene",
@@ -516,8 +852,199 @@
       ],
       "level_cap": 36,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staravia 34, Buizel 32, Ponyta 32, Grotle 36; com Turtwig: Staravia 34, Buizel 32, Roselia 32, Monferno 36",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "aqua-jet",
+                "quick-attack",
+                "pursuit",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "mega-drain",
+                "poison-sting",
+                "leech-seed",
+                "magical-leaf"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "flame-wheel",
+                "mach-punch",
+                "fury-swipes",
+                "leer"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 36,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 315,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "mega-drain",
+                "poison-sting",
+                "leech-seed",
+                "magical-leaf"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "ember",
+                "stomp",
+                "tail-whip",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "bubble-beam",
+                "peck",
+                "metal-claw",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 36,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 397,
+              "form": 0,
+              "level": 34,
+              "moves": [
+                "wing-attack",
+                "quick-attack",
+                "endeavor",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 418,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "aqua-jet",
+                "quick-attack",
+                "pursuit",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 77,
+              "form": 0,
+              "level": 32,
+              "moves": [
+                "ember",
+                "stomp",
+                "tail-whip",
+                "growl"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "razor-leaf",
+                "bite",
+                "mega-drain",
+                "withdraw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 36,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "crasher-wake",
@@ -715,8 +1242,241 @@
       ],
       "level_cap": 38,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 36, Floatzel 35, Heracross 37, Rapidash 35, Torterra 38; com Turtwig: Staraptor 36, Floatzel 35, Heracross 37, Roserade 35, Infernape 38",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "aerial-ace",
+                "take-down",
+                "quick-attack",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "aqua-jet",
+                "pursuit",
+                "quick-attack",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "brick-break",
+                "aerial-ace",
+                "night-slash",
+                "horn-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "giga-drain",
+                "toxic-spikes",
+                "leech-seed",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "brick-break",
+                "flame-wheel",
+                "mach-punch",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "aerial-ace",
+                "take-down",
+                "quick-attack",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "giga-drain",
+                "toxic-spikes",
+                "leech-seed",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "brick-break",
+                "aerial-ace",
+                "night-slash",
+                "horn-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "fire-spin",
+                "take-down",
+                "stomp",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "bubble-beam",
+                "aerial-ace",
+                "metal-claw",
+                "fury-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "aerial-ace",
+                "take-down",
+                "quick-attack",
+                "double-team"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "aqua-jet",
+                "pursuit",
+                "quick-attack",
+                "swift"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "brick-break",
+                "aerial-ace",
+                "night-slash",
+                "horn-attack"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "fire-spin",
+                "take-down",
+                "stomp",
+                "tail-whip"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 38,
+              "moves": [
+                "razor-leaf",
+                "bite",
+                "mega-drain",
+                "leech-seed"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 38,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "byron",
@@ -1440,8 +2200,283 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 48, Floatzel 47, Heracross 48, Rapidash 47, Snorlax 49, Torterra 51; com Turtwig: Staraptor 48, Floatzel 47, Heracross 48, Roserade 47, Snorlax 49, Infernape 51",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "rock-slide",
+                "night-slash",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "poison-jab",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "flamethrower",
+                "focus-blast",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "poison-jab",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "rock-slide",
+                "night-slash",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "bounce",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "brine",
+                "aerial-ace",
+                "metal-claw",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 48,
+              "moves": [
+                "close-combat",
+                "rock-slide",
+                "night-slash",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 47,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "bounce",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "leaf-storm",
+                "earthquake",
+                "crunch",
+                "synthesis"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "aaron",
@@ -2206,8 +3241,283 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 61, Floatzel 59, Heracross 61, Rapidash 59, Snorlax 63, Torterra 65; com Turtwig: Staraptor 61, Floatzel 59, Heracross 61, Roserade 59, Snorlax 63, Infernape 65; revanche no pós-jogo",
-      "versions": null
+      "notes": "revanche no pós-jogo",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "rock-slide"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "poison-jab",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "flamethrower",
+                "focus-blast",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "poison-jab",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "rock-slide"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "bounce",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "hydro-pump",
+                "metal-claw",
+                "drill-peck",
+                "shadow-claw"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "close-combat",
+                "aerial-ace",
+                "steel-wing",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "rock-slide"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "bounce",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "body-slam",
+                "crunch",
+                "earthquake",
+                "rest"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "leaf-storm",
+                "earthquake",
+                "crunch",
+                "leech-seed"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-survival-area-2",
@@ -2305,8 +3615,283 @@
       ],
       "level_cap": 85,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 81, Floatzel 79, Heracross 81, Rapidash 79, Snorlax 83, Torterra 85; com Turtwig: Staraptor 81, Floatzel 79, Heracross 81, Roserade 79, Snorlax 83, Infernape 85; revanche no pós-jogo, só nos fins de semana, na porta do Battleground; o time sobe por etapas e chega a este (Lv 79–85) depois de 10 vitórias na Liga (Serebii)",
-      "versions": null
+      "notes": "revanche no pós-jogo, só nos fins de semana, na porta do Battleground; o time sobe por etapas e chega a este (Lv 79–85) depois de 10 vitórias na Liga (Serebii)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "turtwig",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "close-combat",
+                "brave-bird",
+                "quick-attack",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "stone-edge"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "sludge-bomb",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 83,
+              "moves": [
+                "giga-impact",
+                "crunch",
+                "earthquake",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 85,
+              "moves": [
+                "flare-blitz",
+                "focus-blast",
+                "shadow-claw",
+                "aerial-ace"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 85,
+          "verified": true
+        },
+        {
+          "starter": "chimchar",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "close-combat",
+                "brave-bird",
+                "quick-attack",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 407,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "sludge-bomb",
+                "giga-drain",
+                "shadow-ball",
+                "grass-whistle"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "stone-edge"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "megahorn",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 83,
+              "moves": [
+                "giga-impact",
+                "crunch",
+                "earthquake",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 85,
+              "moves": [
+                "hydro-pump",
+                "metal-claw",
+                "drill-peck",
+                "ice-beam"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 85,
+          "verified": true
+        },
+        {
+          "starter": "piplup",
+          "party": [
+            {
+              "species": 398,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "close-combat",
+                "brave-bird",
+                "quick-attack",
+                "u-turn"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 419,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "aqua-jet",
+                "crunch",
+                "ice-fang",
+                "brick-break"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 214,
+              "form": 0,
+              "level": 81,
+              "moves": [
+                "megahorn",
+                "close-combat",
+                "night-slash",
+                "stone-edge"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 78,
+              "form": 0,
+              "level": 79,
+              "moves": [
+                "fire-blast",
+                "sunny-day",
+                "megahorn",
+                "will-o-wisp"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 143,
+              "form": 0,
+              "level": 83,
+              "moves": [
+                "giga-impact",
+                "crunch",
+                "earthquake",
+                "zen-headbutt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 85,
+              "moves": [
+                "leaf-storm",
+                "earthquake",
+                "crunch",
+                "stone-edge"
+              ],
+              "ability": null,
+              "item": "sitrus-berry",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 85,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "aaron-rematch",
