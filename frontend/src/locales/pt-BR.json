@@ -1044,7 +1044,7 @@
   },
   "login": {
     "title": "Entrar no RockAssistent",
-    "intro": "Este RockAssistent está aberto na rede da casa. Entre com a sua conta para ver o seu cofre e trocar.",
+    "intro": "Assistente offline para os jogos principais de Pokémon: Pokédex, guias de todos os jogos, Boxes com os seus saves, Contador Hunt, Nuzlocke e VGC. Também troca Pokémon com o seu Switch pelo wireless local (o PC ou um ESP32 faz o papel de outro console).",
     "username": "Nome de usuário",
     "password": "Senha",
     "submit": "Entrar",
@@ -1482,7 +1482,7 @@
       "keysTitle": "Suas chaves ficam com você",
       "keysSub": "Nunca baixa, mostra ou envia o prod.keys.",
       "offlineTitle": "Sem telemetria",
-      "offlineSub": "Só consulta o GitHub para achar versões novas, e dá para desligar.",
+      "offlineSub": "Só consulta o GitHub para achar versões novas (dá para desligar). Smogon e pokepast.es só se você ligar nas Configurações; nada do seu PC é enviado.",
       "freeTitle": "Software livre",
       "freeSub": "AGPL-3.0: use, estude e modifique.",
       "license": "Licença, código-fonte e marcas",

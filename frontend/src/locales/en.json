@@ -1044,7 +1044,7 @@
   },
   "login": {
     "title": "Sign in to RockAssistent",
-    "intro": "This RockAssistent is open on the home network. Sign in with your account to see your vault and trade.",
+    "intro": "Offline assistant for the main Pokémon games: Pokédex, guides for every game, Boxes with your saves, Shiny Hunt counter, Nuzlocke and VGC. It also trades Pokémon with your Switch over local wireless (your PC or an ESP32 acts as another console).",
     "username": "Username",
     "password": "Password",
     "submit": "Sign in",
@@ -1482,7 +1482,7 @@
       "keysTitle": "Your keys stay with you",
       "keysSub": "Never downloads, shows or sends prod.keys.",
       "offlineTitle": "No telemetry",
-      "offlineSub": "It only checks GitHub for new versions, and you can turn that off.",
+      "offlineSub": "It only checks GitHub for new versions (you can turn that off). Smogon and pokepast.es only if you turn them on in Settings; nothing from your PC is sent.",
       "freeTitle": "Free software",
       "freeSub": "AGPL-3.0: use, study and modify it.",
       "license": "License, source code and trademarks",
