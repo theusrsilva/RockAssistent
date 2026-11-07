@@ -110,3 +110,15 @@ apague a linha.
 | b2w2 | guias/b2w2 (detonado) | Charles bloqueia a ponte até 4 insígnias; Pokéstar Studios; "Relic Passage (completo depois do PWT)"; Zoroark apontando para o N's Castle. | gamerguides, strategywiki |
 | xy | guias/xy (detonado) | Korrina em Geosenge em "batalha dupla"; Lucario emprestado; Sycamore "ao sul de Couriway"; revanche em Kiloude "diária"; fósseis Lv 20. | thonky, serebii |
 | oras | guias/oras (detonado) | Momento do inicial de Johto; HMs da Victory Road; Metagrossite na Liga ou no Battle Resort; Trick House "um por insígnia"; Magma/Aqua Suit; Glalitite no Shoal Cave; TM74/84/95 nas Mirage spots; TM60 Quash. | pokebase, gamerguides, serebii |
+| za | guias/Zygarde | Zygarde 10% (lv 33) e 50% (lv 57) "durante a história" pelas notas; a web fala em luta final em 3 fases, lv 84. | nintendolife; VGC; dittobase; notas da Pokémon Mythology |
+| za | guias/Floette e Absol | Floette Eternal Flower lv 72 (do rival, na 15ª partida do Infinite Z-A Royale) e Absol lv 30 (selvagem após o Rogue Mega Absol): níveis não confirmados. | deltiasgaming; rpgsite |
+| za | guias/Mega Stones do Mega Dimension | Origem das Mega Stones da DLC (SM139/141/189/197) e a contagem "22 novas Megas" (a Serebii lista 22 entradas de 18 espécies). | serebii.net/legendsz-a/dlc-megaevolutions |
+| sv | guias/Paradox de Area Zero | Níveis dos Paradox selvagens em Area Zero (~55–65; Iron Valiant 58?). | serebii.net areazero; marriland; gamerant |
+| sv | guias/raids | Raids de shiny garantido de 2024 (lista e estrelas) e nível das raids "Titanic" dos Loyal Three (notas: 85). | bulbapedia; ggrecon |
+| pla | guias/pós-jogo | Níveis do Spiritomb (60, Req22) e do Alolan Vulpix (40, Req83): recompensas confirmadas, níveis não. Quais Plates abrem o Snowpoint Temple. Revanches dos Nobres "depois do Arceus". | gamerguides; thonky; gamewith |
+| lgpe | guias/aves lendárias no céu | Aves voando no céu de Kanto: depois de virar Campeão (Bulbapedia) ou depois de capturar as 3 (rankedboost). | bulbapedia; rankedboost |
+| sm | guias/diferenças de versão | "Treinador em Heahea: Dexio (Sun)/Sina (Moon)" e "pedra do Haina Desert: Sun Stone/Moon Stone". | serebii.net/sunmoon/versionmisc |
+| sm, usum | guias/Battle Tree | Red e Blue na 20ª e na 50ª batalha da Battle Tree. | serebii battletree; thonky |
+| usum | guias/Episode RR | Mega Mewtwo X (US)/Y (UM) do Giovanni; o que libera os itens do B2F; regras da Battle Agency. | thonky episode-rr; serebii |
+| swsh | guias/Champion Cup | Rare League Card para convidar no Champion Cup; ordem dos 4 últimos estádios do pós-jogo. | serebii championcuprematch; gamerguides |
+| bdsp | guias/pós-jogo | Slates do Ramanas Park liberadas em etapas; nível dos fósseis (1 ou 20); TM42 na Survival Area; banidos da Battle Tower; tutores (Draco Meteor etc.). | game8; gamerguides; gosunoob |
