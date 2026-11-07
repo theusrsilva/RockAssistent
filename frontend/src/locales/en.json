@@ -298,7 +298,33 @@
     "received": "Received",
     "nothing": "nothing",
     "details": "Show events",
-    "hide": "Hide events"
+    "hide": "Hide events",
+    "kinds": {
+      "all": "All",
+      "trade": "Trade",
+      "raid": "Raid",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunt",
+      "nuzlocke": "Nuzlocke"
+    },
+    "kindsPlural": {
+      "trade": "Trades",
+      "raid": "Raids",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunts",
+      "nuzlocke": "Nuzlocke"
+    },
+    "feed": {
+      "empty": "Nothing here yet. Trades, finished hunts and finished Nuzlocke runs show up here.",
+      "huntFound": "{{name}}: shiny found",
+      "huntGaveUp": "{{name}}: gave up",
+      "runChampion": "{{name}}: champion",
+      "runWipe": "{{name}}: wipe",
+      "ok": "Succeeded",
+      "fail": "Did not succeed"
+    }
   },
   "settings": {
     "title": "Settings",

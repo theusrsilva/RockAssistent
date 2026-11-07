@@ -53,6 +53,7 @@ public static class ServiceSetup
         services.AddSingleton<TradeRock.Core.GameData.GameDataStore>();
         services.AddSingleton<TradeRock.Core.Hunts.HuntStore>();
         services.AddSingleton<TradeRock.Core.Nuzlocke.NuzlockeStore>();
+        services.AddSingleton<HistoryFeed>();
         // Atalho global do Contador Hunt (Windows e X11; só a janela local liga).
         services.AddSingleton(sp => Hotkeys.GlobalHotkeys.Create(sp.GetRequiredService<ILoggerFactory>()));
         services.AddSingleton<Hotkeys.GlobalHotkeyService>();

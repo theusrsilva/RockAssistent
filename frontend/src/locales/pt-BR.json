@@ -298,7 +298,33 @@
     "received": "Recebido",
     "nothing": "nada",
     "details": "Ver eventos",
-    "hide": "Esconder eventos"
+    "hide": "Esconder eventos",
+    "kinds": {
+      "all": "Tudo",
+      "trade": "Troca",
+      "raid": "Raid",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunt",
+      "nuzlocke": "Nuzlocke"
+    },
+    "kindsPlural": {
+      "trade": "Trocas",
+      "raid": "Raids",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunts",
+      "nuzlocke": "Nuzlocke"
+    },
+    "feed": {
+      "empty": "Nada por aqui ainda. Trocas, hunts terminadas e runs de Nuzlocke terminadas aparecem aqui.",
+      "huntFound": "{{name}}: shiny encontrado",
+      "huntGaveUp": "{{name}}: desistiu",
+      "runChampion": "{{name}}: campeão",
+      "runWipe": "{{name}}: wipe",
+      "ok": "Deu certo",
+      "fail": "Não deu certo"
+    }
   },
   "settings": {
     "title": "Configurações",

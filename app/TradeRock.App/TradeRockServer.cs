@@ -119,6 +119,7 @@ public static class TradeRockServer
         api.MapVgc();
         api.MapHunts();
         api.MapNuzlocke();
+        api.MapHistory();
     }
 
     /// <summary>Endereço real após o start (a porta 0 vira uma porta livre).</summary>
