@@ -2,8 +2,9 @@
   "source": [
     "https://pokemondb.net/location (Paldea: níveis, versões, horários e raridade por bioma)",
     "https://www.serebii.net/pokearth/paldea/, /kitakami/ e /terarium/ (espécies por área; níveis dos fixos no Kitakami e no Terarium)",
+    "https://www.serebii.net/pokearth/paldea/spawntable/<id>.txt (tabelas de spawn do mapa interativo da Serebii: faixa de nível da espécie e versão exclusiva; os marcadores cobrem Paldea inteira, então a faixa é a da espécie na região, não a da área)",
     "docs/superpowers/sources/sv-pokemythology-notes.md (espécies por área e lendários fixos)",
-    "Os níveis do pokemondb são a faixa da espécie no bioma (o jogo limita pela área). Áreas só do Serebii: faixa da espécie no pokemondb ou a dos fixos da página. verified = linha do pokemondb confirmada pelo Serebii ou pelas notas.",
+    "Os níveis do pokemondb são a faixa da espécie no bioma (o jogo limita pela área). Áreas só do Serebii: faixa da espécie no pokemondb ou a dos fixos da página. verified = linha do pokemondb confirmada pelo Serebii ou pelas notas. Em 07/11/2026 as linhas que faltavam conferir (espécies que só a Serebii lista na área) ganharam a faixa de nível das tabelas de spawn da Serebii.",
     "https://www.serebii.net/scarletviolet/legendary.shtml (lendários fixos)",
     "https://www.serebii.net/scarletviolet/pathoflegends.shtml (Titans)",
     "https://www.serebii.net/scarletviolet/paradoxperrin.shtml (Paradox do Indigo Disk, lv 75)",
@@ -116,8 +117,8 @@
       "species": 187,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 2,
+      "max_level": 8,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -125,15 +126,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poco-path",
       "species": 661,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 2,
+      "max_level": 14,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -141,15 +142,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poco-path",
       "species": 664,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 4,
+      "max_level": 6,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -157,15 +158,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poco-path",
       "species": 915,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -173,15 +174,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poco-path",
       "species": 917,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -189,15 +190,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poco-path",
       "species": 921,
       "form": 0,
       "method": "walk",
-      "min_level": 63,
-      "max_level": 63,
+      "min_level": 2,
+      "max_level": 12,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -205,15 +206,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 50,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 2,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -221,15 +222,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 54,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 5,
+      "max_level": 37,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -237,15 +238,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 228,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 2,
+      "max_level": 20,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -253,15 +254,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 624,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 22,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -269,15 +270,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 734,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 2,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -285,15 +286,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "inleth-grotto",
       "species": 735,
       "form": 0,
       "method": "cave",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 20,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -301,7 +302,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -356,8 +357,8 @@
       "species": 56,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 15,
+      "max_level": 19,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -365,15 +366,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
       "species": 79,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 23,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -381,7 +382,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -739,8 +740,8 @@
       "species": 234,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -748,7 +749,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -835,8 +836,8 @@
       "species": 284,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 23,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -844,15 +845,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
       "species": 287,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 7,
+      "max_level": 22,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -860,7 +861,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -930,8 +931,8 @@
       "species": 396,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 7,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -939,7 +940,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -962,8 +963,8 @@
       "species": 417,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 18,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -971,7 +972,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1169,8 +1170,8 @@
       "species": 627,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 21,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1178,7 +1179,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1201,8 +1202,8 @@
       "species": 662,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 17,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1210,7 +1211,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1249,8 +1250,8 @@
       "species": 667,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 18,
+      "max_level": 32,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1258,7 +1259,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1425,8 +1426,8 @@
       "species": 672,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 14,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1434,7 +1435,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1489,8 +1490,8 @@
       "species": 744,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 6,
+      "max_level": 17,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1498,15 +1499,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
       "species": 749,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 16,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1514,15 +1515,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
       "species": 753,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 16,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1530,7 +1531,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1585,8 +1586,8 @@
       "species": 821,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 5,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1594,15 +1595,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
       "species": 822,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 18,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1610,7 +1611,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1935,8 +1936,8 @@
       "species": 942,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 10,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1944,7 +1945,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -1999,8 +2000,8 @@
       "species": 955,
       "form": 0,
       "method": "walk",
-      "min_level": 12,
-      "max_level": 12,
+      "min_level": 17,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2008,7 +2009,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-one",
@@ -2143,8 +2144,8 @@
       "species": 51,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 26,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2152,7 +2153,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -2367,8 +2368,8 @@
       "species": 194,
       "form": 1,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 5,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2376,7 +2377,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -2478,8 +2479,8 @@
       "species": 231,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 11,
+      "max_level": 22,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2487,15 +2488,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
       "species": 283,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 8,
+      "max_level": 23,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2503,7 +2504,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -2542,8 +2543,8 @@
       "species": 339,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 16,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2551,7 +2552,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -2670,8 +2671,8 @@
       "species": 417,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 18,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2679,7 +2680,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -2796,8 +2797,8 @@
       "species": 447,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 12,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2805,15 +2806,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
       "species": 585,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 16,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -2821,7 +2822,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -3004,8 +3005,8 @@
       "species": 856,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 16,
+      "max_level": 36,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3013,15 +3014,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
       "species": 915,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3029,15 +3030,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
       "species": 917,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3045,15 +3046,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
       "species": 919,
       "form": 0,
       "method": "walk",
-      "min_level": 17,
-      "max_level": 17,
+      "min_level": 14,
+      "max_level": 22,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3061,7 +3062,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-two",
@@ -3356,8 +3357,8 @@
       "species": 129,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 2,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3365,15 +3366,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 188,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 27,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3381,7 +3382,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3436,15 +3437,15 @@
       "species": 200,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3467,8 +3468,8 @@
       "species": 234,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3476,15 +3477,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 285,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 9,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3492,7 +3493,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3515,8 +3516,8 @@
       "species": 288,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 22,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3524,7 +3525,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3609,8 +3610,8 @@
       "species": 333,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 32,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3618,15 +3619,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 335,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 20,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3634,15 +3635,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 336,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 20,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3650,7 +3651,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3674,14 +3675,14 @@
       "form": 0,
       "method": "walk",
       "min_level": 16,
-      "max_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3704,8 +3705,8 @@
       "species": 404,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 20,
+      "max_level": 30,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3713,15 +3714,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 417,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3729,7 +3730,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3751,15 +3752,15 @@
       "species": 434,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 20,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3798,8 +3799,8 @@
       "species": 550,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3807,7 +3808,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3815,7 +3816,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 16,
-      "max_level": 16,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3823,7 +3824,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3831,7 +3832,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 16,
-      "max_level": 16,
+      "max_level": 42,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3839,15 +3840,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 627,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 21,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3855,15 +3856,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 628,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 54,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3871,15 +3872,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 662,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 17,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3887,15 +3888,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 667,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 32,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3903,7 +3904,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -3926,8 +3927,8 @@
       "species": 704,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 15,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -3935,7 +3936,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -4022,8 +4023,8 @@
       "species": 822,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4031,15 +4032,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 915,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4047,15 +4048,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 916,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 18,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4063,15 +4064,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
       "species": 917,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4079,7 +4080,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -4246,8 +4247,8 @@
       "species": 938,
       "form": 0,
       "method": "walk",
-      "min_level": 16,
-      "max_level": 16,
+      "min_level": 12,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4255,7 +4256,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-three",
@@ -4406,8 +4407,8 @@
       "species": 58,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 17,
+      "max_level": 23,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4415,7 +4416,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -4582,8 +4583,8 @@
       "species": 133,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 11,
+      "max_level": 30,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -4591,7 +4592,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -5170,8 +5171,8 @@
       "species": 398,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 49,
+      "max_level": 53,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5179,15 +5180,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
       "species": 403,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 7,
+      "max_level": 12,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5195,7 +5196,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -5218,8 +5219,8 @@
       "species": 405,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 49,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5227,7 +5228,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -5599,8 +5600,8 @@
       "species": 661,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 2,
+      "max_level": 14,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5608,7 +5609,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -5631,8 +5632,8 @@
       "species": 663,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 17,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5640,15 +5641,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
       "species": 664,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 4,
+      "max_level": 6,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -5656,7 +5657,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -6508,8 +6509,8 @@
       "species": 950,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 15,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -6517,7 +6518,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-five",
@@ -6780,8 +6781,8 @@
       "species": 57,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 28,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -6789,7 +6790,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-one",
@@ -6828,8 +6829,8 @@
       "species": 93,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 25,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -6837,7 +6838,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-one",
@@ -6860,8 +6861,8 @@
       "species": 100,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 26,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -6869,7 +6870,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-one",
@@ -7736,8 +7737,8 @@
       "species": 931,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 12,
+      "max_level": 25,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -7745,7 +7746,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-one",
@@ -7976,8 +7977,8 @@
       "species": 967,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 20,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -7985,7 +7986,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8040,8 +8041,8 @@
       "species": 53,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 28,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8049,7 +8050,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8088,8 +8089,8 @@
       "species": 57,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 28,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8097,15 +8098,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
       "species": 59,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 47,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8113,7 +8114,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8264,8 +8265,8 @@
       "species": 180,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 37,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8273,7 +8274,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8502,8 +8503,8 @@
       "species": 229,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 24,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8511,7 +8512,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8550,8 +8551,8 @@
       "species": 232,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 25,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8559,7 +8560,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -8598,8 +8599,8 @@
       "species": 326,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 32,
+      "max_level": 51,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -8607,7 +8608,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -9333,8 +9334,8 @@
       "species": 758,
       "form": 0,
       "method": "walk",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -9342,7 +9343,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-four",
@@ -11816,8 +11817,8 @@
       "species": 662,
       "form": 0,
       "method": "walk",
-      "min_level": 37,
-      "max_level": 37,
+      "min_level": 17,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -11825,7 +11826,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-one",
@@ -12728,8 +12729,8 @@
       "species": 967,
       "form": 0,
       "method": "walk",
-      "min_level": 37,
-      "max_level": 37,
+      "min_level": 20,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -12737,15 +12738,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-one",
       "species": 976,
       "form": 0,
       "method": "walk",
-      "min_level": 37,
-      "max_level": 37,
+      "min_level": 25,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -12753,7 +12754,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13110,15 +13111,15 @@
       "species": 200,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13221,8 +13222,8 @@
       "species": 417,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 18,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13230,7 +13231,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13380,7 +13381,7 @@
       "species": 667,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
+      "min_level": 18,
       "max_level": 32,
       "chance": null,
       "conditions": null,
@@ -13389,7 +13390,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13460,8 +13461,8 @@
       "species": 757,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13469,7 +13470,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13492,8 +13493,8 @@
       "species": 762,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 21,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13501,7 +13502,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -13795,8 +13796,8 @@
       "species": 915,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 2,
+      "max_level": 18,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13804,7 +13805,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -14179,8 +14180,8 @@
       "species": 955,
       "form": 0,
       "method": "walk",
-      "min_level": 32,
-      "max_level": 32,
+      "min_level": 17,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -14188,7 +14189,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "east-province-area-two",
@@ -14295,6 +14296,22 @@
       "max_level": 37,
       "chance": "rare",
       "conditions": "river",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "east-province-area-two",
+      "species": 740,
+      "form": 0,
+      "method": "walk",
+      "min_level": 38,
+      "max_level": 60,
+      "chance": null,
+      "conditions": null,
       "versions": [
         "scarlet",
         "violet"
@@ -16025,8 +16042,8 @@
       "species": 50,
       "form": 0,
       "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
+      "min_level": 2,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -16034,15 +16051,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "asado-desert",
       "species": 51,
       "form": 0,
       "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
+      "min_level": 26,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -16050,7 +16067,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "asado-desert",
@@ -16185,15 +16202,15 @@
       "species": 246,
       "form": 0,
       "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
+      "min_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "asado-desert",
@@ -16328,8 +16345,8 @@
       "species": 628,
       "form": 0,
       "method": "walk",
-      "min_level": 45,
-      "max_level": 45,
+      "min_level": 54,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -16337,7 +16354,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "asado-desert",
@@ -16997,15 +17014,15 @@
       "species": 425,
       "form": 0,
       "method": "walk",
-      "min_level": 48,
-      "max_level": 48,
+      "min_level": 14,
+      "max_level": 32,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tagtree-thicket",
@@ -17124,8 +17141,8 @@
       "species": 735,
       "form": 0,
       "method": "walk",
-      "min_level": 48,
-      "max_level": 48,
+      "min_level": 20,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17133,7 +17150,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tagtree-thicket",
@@ -17538,8 +17555,8 @@
       "species": 51,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 26,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17547,15 +17564,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 93,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 25,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17563,15 +17580,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 97,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 28,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17579,15 +17596,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 129,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 2,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17595,15 +17612,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 136,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17611,15 +17628,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 197,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17627,30 +17644,30 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 200,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 206,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 15,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17658,15 +17675,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 215,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 15,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17674,15 +17691,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 217,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 30,
+      "max_level": 59,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17690,15 +17707,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 231,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 11,
+      "max_level": 22,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17706,15 +17723,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 232,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 25,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17722,30 +17739,30 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 246,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 281,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 20,
+      "max_level": 36,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17753,15 +17770,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 288,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 22,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17769,15 +17786,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 297,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 27,
+      "max_level": 43,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17785,15 +17802,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 302,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 15,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17801,15 +17818,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 308,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 40,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17817,15 +17834,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 324,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 28,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17833,15 +17850,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 326,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 32,
+      "max_level": 51,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17849,15 +17866,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 361,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 15,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17865,60 +17882,60 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 371,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 425,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 14,
+      "max_level": 32,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 426,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 28,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 430,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17926,15 +17943,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 437,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17942,15 +17959,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 444,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 32,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17958,15 +17975,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 461,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 37,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17974,15 +17991,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 475,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -17990,15 +18007,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 478,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 39,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18006,15 +18023,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 585,
       "form": 3,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 16,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18022,15 +18039,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 586,
       "form": 3,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 34,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18038,15 +18055,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 610,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 16,
+      "max_level": 42,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18054,15 +18071,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 611,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 38,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18070,15 +18087,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 613,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 23,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18086,15 +18103,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 614,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 40,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18102,15 +18119,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 627,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 21,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18118,30 +18135,30 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 633,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 36,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 668,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18149,15 +18166,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 673,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 32,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18165,15 +18182,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 735,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 20,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18181,15 +18198,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 745,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 34,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18197,15 +18214,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 745,
       "form": 1,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 34,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18213,15 +18230,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 749,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 16,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18229,15 +18246,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 750,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 30,
+      "max_level": 49,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18245,15 +18262,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 757,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18261,15 +18278,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 758,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18277,15 +18294,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 820,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 24,
+      "max_level": 43,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18293,15 +18310,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 879,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 40,
+      "max_level": 53,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18309,15 +18326,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 920,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 24,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18325,15 +18342,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 933,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 31,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18341,15 +18358,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 952,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 30,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18357,15 +18374,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 955,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 17,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18373,15 +18390,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 956,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 35,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18389,15 +18406,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 958,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 34,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18405,15 +18422,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 966,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 40,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18421,15 +18438,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 967,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 20,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18437,15 +18454,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 971,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 25,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18453,15 +18470,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 972,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 42,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18469,15 +18486,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
       "species": 974,
       "form": 0,
       "method": "cave",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 20,
+      "max_level": 41,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -18485,7 +18502,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dalizapa-passage",
@@ -18511,6 +18528,54 @@
       "min_level": 70,
       "max_level": 70,
       "chance": "fixed",
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dalizapa-passage",
+      "species": 82,
+      "form": 0,
+      "method": "cave",
+      "min_level": 30,
+      "max_level": 60,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dalizapa-passage",
+      "species": 872,
+      "form": 0,
+      "method": "cave",
+      "min_level": 10,
+      "max_level": 40,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dalizapa-passage",
+      "species": 996,
+      "form": 0,
+      "method": "cave",
+      "min_level": 24,
+      "max_level": 39,
+      "chance": null,
       "conditions": null,
       "versions": [
         "scarlet",
@@ -19116,8 +19181,8 @@
       "species": 203,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 20,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19125,7 +19190,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -19213,7 +19278,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 30,
-      "max_level": 30,
+      "max_level": 59,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19221,7 +19286,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -19580,7 +19645,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 30,
-      "max_level": 30,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19588,7 +19653,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -19851,8 +19916,8 @@
       "species": 705,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 40,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19860,7 +19925,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -19899,8 +19964,8 @@
       "species": 762,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 21,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19908,7 +19973,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -19931,8 +19996,8 @@
       "species": 778,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 31,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -19940,7 +20005,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -20601,8 +20666,8 @@
       "species": 967,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 20,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -20610,7 +20675,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -20665,8 +20730,8 @@
       "species": 974,
       "form": 0,
       "method": "walk",
-      "min_level": 30,
-      "max_level": 30,
+      "min_level": 20,
+      "max_level": 41,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -20674,7 +20739,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-three",
@@ -20809,8 +20874,8 @@
       "species": 80,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 37,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -20818,7 +20883,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -21015,8 +21080,8 @@
       "species": 188,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 18,
+      "max_level": 27,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21024,7 +21089,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -21350,8 +21415,8 @@
       "species": 339,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 16,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21359,15 +21424,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
       "species": 357,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 20,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21375,7 +21440,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -21540,8 +21605,8 @@
       "species": 436,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 9,
+      "max_level": 25,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21549,7 +21614,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -21668,8 +21733,8 @@
       "species": 662,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 17,
+      "max_level": 35,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21677,7 +21742,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -21940,8 +22005,8 @@
       "species": 870,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 13,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -21949,7 +22014,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -22243,8 +22308,8 @@
       "species": 958,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 34,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22252,7 +22317,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "west-province-area-two",
@@ -22371,8 +22436,8 @@
       "species": 50,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 2,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22380,15 +22445,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 51,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 26,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22396,15 +22461,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 181,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 42,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22412,15 +22477,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 197,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22428,15 +22493,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 206,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 15,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22444,45 +22509,45 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 246,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 247,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 42,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 297,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 27,
+      "max_level": 43,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22490,15 +22555,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 302,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 15,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22506,15 +22571,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 307,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 20,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22522,15 +22587,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 308,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 40,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22538,15 +22603,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 334,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 40,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22554,14 +22619,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 354,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
+      "min_level": 37,
       "max_level": 50,
       "chance": null,
       "conditions": null,
@@ -22570,75 +22635,75 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 371,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 16,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 372,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 42,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 426,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 28,
+      "max_level": 47,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 429,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 40,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 443,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 10,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22646,15 +22711,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 444,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 32,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22662,15 +22727,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 475,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22678,30 +22743,30 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 633,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 36,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 735,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 20,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22709,15 +22774,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 745,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 34,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22725,15 +22790,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 745,
       "form": 1,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 34,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22741,15 +22806,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 749,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 16,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22757,15 +22822,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 750,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 30,
+      "max_level": 49,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22773,15 +22838,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 757,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22789,15 +22854,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 758,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22805,15 +22870,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 849,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 30,
+      "max_level": 49,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22821,15 +22886,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 920,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 24,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22837,15 +22902,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 933,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 31,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22853,15 +22918,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
       "species": 969,
       "form": 0,
       "method": "cave",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 23,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -22869,7 +22934,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "alfornada-cavern",
@@ -23020,8 +23085,8 @@
       "species": 123,
       "form": 0,
       "method": "walk",
-      "min_level": 54,
-      "max_level": 54,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -23029,7 +23094,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-six",
@@ -24308,8 +24373,8 @@
       "species": 919,
       "form": 0,
       "method": "walk",
-      "min_level": 54,
-      "max_level": 54,
+      "min_level": 14,
+      "max_level": 22,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24317,7 +24382,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "south-province-area-six",
@@ -24804,8 +24869,8 @@
       "species": 93,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 25,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24813,7 +24878,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -24882,8 +24947,8 @@
       "species": 215,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 15,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24891,15 +24956,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
       "species": 225,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24907,7 +24972,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -24962,8 +25027,8 @@
       "species": 354,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 37,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24971,15 +25036,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
       "species": 361,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 15,
+      "max_level": 39,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -24987,7 +25052,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -25196,8 +25261,8 @@
       "species": 461,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 37,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -25205,7 +25270,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -25324,8 +25389,8 @@
       "species": 585,
       "form": 3,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 16,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -25333,14 +25398,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
       "species": 586,
       "form": 3,
       "method": "walk",
-      "min_level": 55,
+      "min_level": 34,
       "max_level": 55,
       "chance": null,
       "conditions": null,
@@ -25349,7 +25414,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -25466,8 +25531,8 @@
       "species": 712,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 23,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -25475,15 +25540,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
       "species": 713,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 37,
+      "max_level": 59,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -25491,7 +25556,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -25690,8 +25755,8 @@
       "species": 871,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 20,
+      "max_level": 50,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -25699,7 +25764,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -26054,8 +26119,8 @@
       "species": 976,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 25,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -26063,7 +26128,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "glaseado-mountain",
@@ -26074,6 +26139,150 @@
       "max_level": 47,
       "chance": "uncommon",
       "conditions": "lake",
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 82,
+      "form": 0,
+      "method": "walk",
+      "min_level": 30,
+      "max_level": 60,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 282,
+      "form": 0,
+      "method": "walk",
+      "min_level": 36,
+      "max_level": 49,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 459,
+      "form": 0,
+      "method": "walk",
+      "min_level": 26,
+      "max_level": 39,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 460,
+      "form": 0,
+      "method": "walk",
+      "min_level": 40,
+      "max_level": 59,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 615,
+      "form": 0,
+      "method": "walk",
+      "min_level": 30,
+      "max_level": 65,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 740,
+      "form": 0,
+      "method": "walk",
+      "min_level": 38,
+      "max_level": 60,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 872,
+      "form": 0,
+      "method": "walk",
+      "min_level": 10,
+      "max_level": 40,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 996,
+      "form": 0,
+      "method": "walk",
+      "min_level": 24,
+      "max_level": 39,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "scarlet",
+        "violet"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "glaseado-mountain",
+      "species": 997,
+      "form": 0,
+      "method": "walk",
+      "min_level": 35,
+      "max_level": 52,
+      "chance": null,
+      "conditions": null,
       "versions": [
         "scarlet",
         "violet"
@@ -26118,8 +26327,8 @@
       "species": 97,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 28,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -26127,7 +26336,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-three",
@@ -26342,8 +26551,8 @@
       "species": 278,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 2,
+      "max_level": 29,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -26351,7 +26560,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-three",
@@ -26550,7 +26759,7 @@
       "species": 423,
       "form": 1,
       "method": "walk",
-      "min_level": 55,
+      "min_level": 30,
       "max_level": 55,
       "chance": null,
       "conditions": null,
@@ -26559,7 +26768,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-three",
@@ -27139,8 +27348,8 @@
       "species": 952,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 30,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -27148,15 +27357,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-three",
       "species": 958,
       "form": 0,
       "method": "walk",
-      "min_level": 55,
-      "max_level": 55,
+      "min_level": 34,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -27164,7 +27373,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-three",
@@ -27395,8 +27604,8 @@
       "species": 113,
       "form": 0,
       "method": "surf",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 25,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -27404,7 +27613,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "casseroya-lake",
@@ -28221,8 +28430,8 @@
       "species": 26,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 40,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28230,15 +28439,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 135,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28246,15 +28455,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 185,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 20,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28262,14 +28471,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 205,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 45,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28278,15 +28487,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 214,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 45,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28294,14 +28503,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 289,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 52,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28310,15 +28519,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 430,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28326,15 +28535,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 470,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28342,14 +28551,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 571,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 45,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28358,15 +28567,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 586,
       "form": 2,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 34,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28374,15 +28583,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 591,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 51,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28390,15 +28599,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 701,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 45,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28406,15 +28615,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 753,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 16,
+      "max_level": 38,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28422,14 +28631,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 754,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 34,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28438,15 +28647,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 918,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 20,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28454,15 +28663,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 945,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
-      "max_level": 56,
+      "min_level": 29,
+      "max_level": 51,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -28470,14 +28679,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 947,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 50,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28486,14 +28695,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 948,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 18,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28502,14 +28711,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 949,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 30,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28518,14 +28727,14 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "socarrat-trail",
       "species": 958,
       "form": 0,
       "method": "walk",
-      "min_level": 56,
+      "min_level": 34,
       "max_level": 56,
       "chance": null,
       "conditions": null,
@@ -28534,7 +28743,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-one",
@@ -29037,8 +29246,8 @@
       "species": 288,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 22,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -29046,7 +29255,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-one",
@@ -29627,8 +29836,8 @@
       "species": 668,
       "form": 0,
       "method": "walk",
-      "min_level": 65,
-      "max_level": 65,
+      "min_level": 35,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -29636,7 +29845,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-one",
@@ -31239,8 +31448,8 @@
       "species": 289,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 52,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -31248,7 +31457,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
@@ -31351,15 +31560,15 @@
       "species": 372,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 42,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
@@ -31525,8 +31734,8 @@
       "species": 437,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -31534,7 +31743,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
@@ -31701,8 +31910,8 @@
       "species": 627,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 21,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -31710,7 +31919,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
@@ -32254,8 +32463,8 @@
       "species": 943,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 33,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32263,15 +32472,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
       "species": 945,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 29,
+      "max_level": 51,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32279,15 +32488,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
       "species": 966,
       "form": 0,
       "method": "walk",
-      "min_level": 75,
-      "max_level": 75,
+      "min_level": 40,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32295,7 +32504,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "north-province-area-two",
@@ -32542,8 +32751,8 @@
       "species": 55,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 33,
+      "max_level": 56,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32551,15 +32760,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 97,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 28,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32567,15 +32776,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 113,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 25,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32583,15 +32792,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 134,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32599,7 +32808,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -32622,8 +32831,8 @@
       "species": 196,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32631,15 +32840,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 197,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32647,15 +32856,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 198,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 15,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32663,7 +32872,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -32878,8 +33087,8 @@
       "species": 418,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 2,
+      "max_level": 30,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32887,15 +33096,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 419,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 28,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32903,15 +33112,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 430,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 35,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -32919,7 +33128,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33038,15 +33247,15 @@
       "species": 633,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 36,
+      "max_level": 54,
       "chance": null,
       "conditions": null,
       "versions": [
         "scarlet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33116,8 +33325,8 @@
       "species": 673,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 32,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33125,15 +33334,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 701,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 45,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33141,7 +33350,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33180,8 +33389,8 @@
       "species": 757,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 10,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33189,15 +33398,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 758,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 33,
+      "max_level": 52,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33205,7 +33414,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33244,8 +33453,8 @@
       "species": 878,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 17,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33253,15 +33462,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 879,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 40,
+      "max_level": 53,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33269,7 +33478,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33306,8 +33515,8 @@
       "species": 920,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 24,
+      "max_level": 55,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33315,15 +33524,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 921,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 2,
+      "max_level": 12,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33331,15 +33540,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 922,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 18,
+      "max_level": 58,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33347,15 +33556,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 927,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 26,
+      "max_level": 44,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33363,15 +33572,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 932,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 10,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33379,15 +33588,15 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
       "species": 933,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 31,
+      "max_level": 60,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33395,7 +33604,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -33482,8 +33691,8 @@
       "species": 965,
       "form": 0,
       "method": "cave",
-      "min_level": 85,
-      "max_level": 85,
+      "min_level": 27,
+      "max_level": 44,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -33491,7 +33700,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "area-zero",
@@ -34437,8 +34646,8 @@
       "species": 976,
       "form": 0,
       "method": "surf",
-      "min_level": 60,
-      "max_level": 60,
+      "min_level": 25,
+      "max_level": 65,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -34446,7 +34655,7 @@
         "violet"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "kitakami-road",
