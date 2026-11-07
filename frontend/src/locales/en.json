@@ -2022,6 +2022,7 @@
       "unknownHint": "Check the directive name in the guide.",
       "notVerified": "not verified",
       "allVersions": "All",
+      "ifYouChose": "If you picked {{name}}",
       "level": "Lv. {{level}}",
       "levels": "Lv. {{min}}–{{max}}",
       "alpha": "Alpha",
@@ -2276,6 +2277,15 @@
       "versionHelp": "Bosses and encounters change from one version to the other.",
       "start": "Start the run"
     },
+    "starter": {
+      "label": "Your starter",
+      "help": "Optional, but recommended: the rival's team changes with the starter you picked.",
+      "none": "Not sure",
+      "yours": "Starter: {{name}}",
+      "unknown": "Starter not set",
+      "change": "Change",
+      "bossHint": "This boss's team depends on your starter. Set your starter at the top of the run to see the right team."
+    },
     "run": {
       "pause": "Pause",
       "resume": "Resume",
@@ -2408,6 +2418,7 @@
     "errors": {
       "unknown_game": "Unknown game.",
       "unknown_version": "This version isn't from this game.",
+      "invalid_starter": "This Pokémon isn't one of this game's starters.",
       "version_required": "Choose the game version.",
       "unknown_area": "Unknown area in this game.",
       "unknown_boss": "This boss isn't from this version.",

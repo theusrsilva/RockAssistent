@@ -44,10 +44,14 @@ public static class NuzlockeEvents
     public const string RunFinished = "run_finished";
 }
 
-public sealed record NewRun(string? Name, string GameKey, string? Version, NuzlockeRules? Rules);
+/// <summary><see cref="Starter"/>: inicial do jogador (<c>GameStarters</c>), opcional.</summary>
+public sealed record NewRun(string? Name, string GameKey, string? Version, NuzlockeRules? Rules, string? Starter = null);
 
-/// <summary>Campos nulos ficam como estão. <see cref="Status"/>: só <c>active</c> ou <c>paused</c> (o fim é pelo finish).</summary>
-public sealed record RunChanges(string? Name, string? Status, NuzlockeRules? Rules);
+/// <summary>
+/// Campos nulos ficam como estão. <see cref="Status"/>: só <c>active</c> ou <c>paused</c> (o fim é pelo finish).
+/// <see cref="Starter"/>: texto vazio apaga o inicial.
+/// </summary>
+public sealed record RunChanges(string? Name, string? Status, NuzlockeRules? Rules, string? Starter = null);
 
 /// <summary>Encontro registrado. <see cref="Species"/> 0 = sem encontro (só com <c>missed</c>/<c>failed</c>).</summary>
 public sealed record NewEncounter(string AreaId, int Species, int Form, string? Nickname, int Level, string Status, bool Shiny = false);
@@ -120,6 +124,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         if (name.Length > MaxNameLength)
             throw new NuzlockeException("invalid_name");
         var rules = (body.Rules ?? NuzlockeRules.Default).Normalize();
+        var starter = Starter(game.Key, body.Starter);
 
         var now = time.GetUtcNow();
         var run = new NuzlockeRun
@@ -128,6 +133,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             Name = name,
             GameKey = game.Key,
             Version = version,
+            Starter = starter,
             RulesJson = JsonSerializer.Serialize(rules, RunProgress.Json),
             Status = "active",
             StartedAt = now,
@@ -135,7 +141,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         };
         await using var db = await dbFactory.CreateDbContextAsync(ct);
         db.NuzlockeRuns.Add(run);
-        AddEvent(db, run, NuzlockeEvents.RunStarted, new { gameKey = run.GameKey, version, name });
+        AddEvent(db, run, NuzlockeEvents.RunStarted, new { gameKey = run.GameKey, version, name, starter });
         await db.SaveChangesAsync(ct);
         return await ViewAsync(db, run, ct);
     }
@@ -153,8 +159,17 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             run.Status = status is "active" or "paused" ? status : throw new NuzlockeException("invalid_status");
         if (changes.Rules is { } rules)
             run.RulesJson = JsonSerializer.Serialize(rules.Normalize(), RunProgress.Json);
+        if (changes.Starter is { } starter)
+            run.Starter = Starter(run.GameKey, starter);
         await db.SaveChangesAsync(ct);
         return await ViewAsync(db, run, ct);
+    }
+
+    /// <summary>O inicial normalizado (vazio = null); fora dos iniciais do jogo → <c>invalid_starter</c>.</summary>
+    private static string? Starter(string gameKey, string? starter)
+    {
+        var id = string.IsNullOrWhiteSpace(starter) ? null : starter.Trim().ToLowerInvariant();
+        return id is null || GameStarters.IsStarter(gameKey, id) ? id : throw new NuzlockeException("invalid_starter");
     }
 
     public async Task<RunView> SetAreaAsync(Guid id, string areaId, CancellationToken ct)

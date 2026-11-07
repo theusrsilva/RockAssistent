@@ -176,6 +176,77 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.DoesNotContain("not-a-move", noDex.Message);
     }
 
+    private static Dictionary<string, string> RivalWithVariants(string variants) => new()
+    {
+        ["bosses/hgss.json"] = $$"""
+            { {{Source}}, "items": [ { "id": "rival", "kind": "rival", "name": "Silver", "title": null, "location": null,
+              "order": 1, "badge": null, "party": [ { "species": 158, "form": 0, "level": 5, "moves": [], "ability": null,
+              "item": null, "tera_type": null } ], "level_cap": 5, "verified": true, "notes": null, "versions": null,
+              "variants": {{variants}} } ] }
+            """,
+    };
+
+    private static string Variant(string starter, int level, int cap, string moves = "") => $$"""
+        { "starter": "{{starter}}", "party": [ { "species": 155, "form": 0, "level": {{level}}, "moves": [{{moves}}],
+          "ability": null, "item": null, "tera_type": null } ], "level_cap": {{cap}}, "verified": true }
+        """;
+
+    [Fact]
+    public void Variantes_por_inicial_validas_carregam()
+    {
+        var store = FromFiles(RivalWithVariants($"[{Variant("chikorita", 6, 6)}, {Variant("totodile", 5, 5)}]"));
+        var rival = Assert.Single(store.Bosses("hgss"));
+        Assert.Equal(["chikorita", "totodile"], rival.Variants!.Select(v => v.Starter));
+        Assert.Equal(6, rival.ForStarter("chikorita").LevelCap);
+        // Sem o campo "variants" continua valendo (um time só).
+        Assert.Null(FromFiles(new Dictionary<string, string> { ["bosses/frlg.json"] = GameDataStore.EmbeddedFiles()["bosses/frlg.json"] }).Bosses("frlg")[0].Variants);
+    }
+
+    [Fact]
+    public void Validador_rejeita_variante_com_inicial_de_outro_jogo_repetida_ou_cap_errado()
+    {
+        var badMove = Variant("totodile", 5, 5, "\"not-a-move\"");
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(RivalWithVariants(
+            $"[{Variant("mudkip", 5, 5)}, {Variant("chikorita", 6, 9)}, {badMove}, {Variant("totodile", 5, 5)}]"),
+            m => m != "not-a-move"));
+        Assert.Contains("bosses/hgss/rival/variants/mudkip: mudkip não é inicial do hgss", ex.Message);
+        Assert.Contains("variants/chikorita: level_cap 9 diferente do maior nível do time (6)", ex.Message);
+        Assert.Contains("variante repetida para totodile", ex.Message);
+        Assert.Contains("variants/totodile: golpe not-a-move", ex.Message);
+        Assert.Contains("variants vazio", Assert.Throws<InvalidDataException>(() => FromFiles(RivalWithVariants("[]"))).Message);
+    }
+
+    [Fact]
+    public void Rivais_do_HGSS_tem_os_tres_times()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        var rivals = store.Bosses("hgss").Where(b => b.Id.StartsWith("rival-", StringComparison.Ordinal)).ToList();
+        Assert.Equal(7, rivals.Count);
+        Assert.All(rivals, r =>
+        {
+            Assert.Equal(["chikorita", "cyndaquil", "totodile"], r.Variants!.Select(v => v.Starter));
+            // O time padrão é o de quem escolheu Cyndaquil.
+            Assert.Equal(System.Text.Json.JsonSerializer.Serialize(r.Party),
+                System.Text.Json.JsonSerializer.Serialize(r.Variants!.Single(v => v.Starter == "cyndaquil").Party));
+            Assert.DoesNotContain("com Chikorita", r.Notes ?? "");
+        });
+        // O rival fica com o inicial que tem vantagem sobre o do jogador.
+        var first = rivals.Single(r => r.Id == "rival-cherrygrove");
+        Assert.Equal(155, first.ForStarter("chikorita").Party[0].Species);
+        Assert.Equal(158, first.ForStarter("cyndaquil").Party[0].Species);
+        Assert.Equal(152, first.ForStarter("totodile").Party[0].Species);
+    }
+
+    [Fact]
+    public void Iniciais_de_todos_os_jogos()
+    {
+        Assert.All(GameVersions.All, g => Assert.NotEmpty(GameStarters.For(g.Key)));
+        Assert.All(GameVersions.All.Where(g => g.Key is not ("y" or "lgpe")), g => Assert.Equal(3, GameStarters.For(g.Key).Count));
+        Assert.Equal(["pikachu"], GameStarters.For("y").Select(s => s.Id));
+        Assert.Equal(["chikorita", "tepig", "totodile"], GameStarters.For("za").Select(s => s.Id));
+        Assert.Empty(GameStarters.For("zz"));
+    }
+
     // Gen 1–5: os chefes da história (até o campeão) têm, em cada versão, 8 líderes com insígnias distintas, a Elite 4
     // (4 pessoas) e 1 campeão; o resto (Kanto no GSC/HGSS, revanches, Frontier Brains) vem depois, com Order maior.
     // No BW, o Alder só é enfrentado no pós-jogo, depois da revanche da Elite 4, por isso a Elite 4 aparece duas vezes

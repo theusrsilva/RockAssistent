@@ -5,23 +5,27 @@ import { api } from '../../lib/api'
 import { versionName } from '../../lib/dex'
 import { gameVersionByKey, gameVersionsByGeneration } from '../../lib/gameVersions'
 import { DEFAULT_RULES, RULE_KEYS, nuzlockeErrorMessage, type NuzlockeRules, type RunView } from './nuzlocke'
+import { StarterPicker, useStarters } from './StarterPicker'
 
-/** Nova run: nome, jogo (os 22 grupos), versão quando o grupo tem duas e as regras. */
+/** Nova run: nome, jogo (os 22 grupos), versão quando o grupo tem duas, o inicial (opcional) e as regras. */
 export default function NewRunDialog({ onClose, onCreated }: { onClose: () => void; onCreated: (id: string) => void }) {
   const { t } = useTranslation()
   const [name, setName] = useState('')
   const [gameKey, setGameKey] = useState('frlg')
   const [version, setVersion] = useState<string | null>(null)
+  const [starter, setStarter] = useState<string | null>(null)
   const [rules, setRules] = useState<NuzlockeRules>(DEFAULT_RULES)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const game = gameVersionByKey(gameKey)
   const needsVersion = game.pokeApiVersions.length > 1
+  const starters = useStarters(gameKey)
 
   const chooseGame = (key: string) => {
     setGameKey(key)
     setVersion(null)
+    setStarter(null)
     setError(null)
   }
 
@@ -33,6 +37,7 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
         name: name.trim() || null,
         gameKey,
         version: needsVersion ? version : null,
+        starter,
         rules: { ...rules, custom: rules.custom?.trim() || null },
       })
       onCreated(view.run.id)
@@ -84,6 +89,13 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
               className="w-full sm:w-fit"
             />
             <span className="text-[12.5px] text-muted">{t('nuzlocke.newRun.versionHelp')}</span>
+          </div>
+        )}
+        {starters.length > 1 && (
+          <div className="flex flex-col gap-1.5 text-sm">
+            <span className="font-bold">{t('nuzlocke.starter.label')}</span>
+            <StarterPicker starters={starters} value={starter} onChange={setStarter} allowNone />
+            <span className="text-[12.5px] text-muted">{t('nuzlocke.starter.help')}</span>
           </div>
         )}
         <div className="flex flex-col gap-2.5">

@@ -39,6 +39,7 @@ export default function BossCard({ view, names, readOnly, onDefeat }: { view: Ru
               <BattlePokemon key={i} p={p} names={names} />
             ))}
           </div>
+          {boss.variants && boss.variants.length > 0 && <p className="text-[12.5px] text-muted">{t('nuzlocke.starter.bossHint')}</p>}
           {boss.notes && <p className="text-[12.5px] text-muted">{boss.notes}</p>}
           {!readOnly && (
             <Button icon="emoji_events" onClick={() => onDefeat(boss.id)}>

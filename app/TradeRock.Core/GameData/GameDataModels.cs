@@ -49,7 +49,12 @@ public sealed record ShinyModifier(
 public sealed record ShinyStep(string Label, int Min, int? Max, double Odds, int? Rolls);
 
 /// <summary>Batalha importante (líder, rival, equipe do mal, Elite 4, campeão).</summary>
-/// <remarks><see cref="Versions"/>: versões do PokeAPI em que a batalha existe (ex.: <c>["ruby"]</c>); nulo = todas as do jogo.</remarks>
+/// <remarks>
+/// <para><see cref="Versions"/>: versões do PokeAPI em que a batalha existe (ex.: <c>["ruby"]</c>); nulo = todas as do jogo.</para>
+/// <para><see cref="Variants"/>: times que dependem do inicial escolhido pelo jogador (rivais, alguns amigos e campeões).
+/// <see cref="Party"/> e <see cref="LevelCap"/> continuam como o time padrão (o que aparece sem inicial escolhido).
+/// Nulo ou ausente no JSON = um time só. Use <see cref="ForStarter"/> para o time de uma run.</para>
+/// </remarks>
 public sealed record BossBattle(
     string Id,
     string Kind,
@@ -62,7 +67,26 @@ public sealed record BossBattle(
     int LevelCap,
     bool Verified,
     string? Notes,
-    IReadOnlyList<string>? Versions);
+    IReadOnlyList<string>? Versions,
+    IReadOnlyList<BossVariant>? Variants = null)
+{
+    /// <summary>A variante do inicial dado (identificador do PokeAPI); nula sem inicial ou sem variante dele.</summary>
+    public BossVariant? VariantFor(string? starter) =>
+        starter is null ? null : Variants?.FirstOrDefault(v => v.Starter == starter);
+
+    /// <summary>
+    /// A batalha com o time do inicial dado no lugar do padrão (e sem as variantes, que já foram escolhidas). Sem
+    /// variante do inicial, a batalha como está.
+    /// </summary>
+    public BossBattle ForStarter(string? starter) =>
+        VariantFor(starter) is { } v ? this with { Party = v.Party, LevelCap = v.LevelCap, Verified = v.Verified, Variants = null } : this;
+}
+
+/// <summary>
+/// Time de um chefe para quem escolheu o inicial <see cref="Starter"/> (identificador do PokeAPI do inicial do
+/// <b>jogador</b>, ex.: <c>chikorita</c>; ver <see cref="Games.GameStarters"/>). <see cref="LevelCap"/> = maior nível do time.
+/// </summary>
+public sealed record BossVariant(string Starter, IReadOnlyList<BossPokemon> Party, int LevelCap, bool Verified);
 
 /// <summary>Pokémon de um time. Golpes com os identificadores do PokeAPI.</summary>
 public sealed record BossPokemon(

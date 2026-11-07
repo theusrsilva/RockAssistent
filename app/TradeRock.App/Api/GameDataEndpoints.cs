@@ -29,6 +29,9 @@ public static class GameDataEndpoints
 
         group.MapGet("/{game}/bosses", (string game, GameDataStore store) =>
             KnownGame(game) ? Results.Ok(store.Bosses(game)) : UnknownGame());
+        // Iniciais que o jogador escolhe (seletor da run de Nuzlocke e das variantes dos chefes).
+        group.MapGet("/{game}/starters", (string game) =>
+            KnownGame(game) ? Results.Ok(GameStarters.For(game)) : UnknownGame());
         group.MapGet("/{game}/trainers", (string game, GameDataStore store) =>
             KnownGame(game) ? Results.Ok(store.Trainers(game)) : UnknownGame());
         group.MapGet("/{game}/areas", (string game, GameDataStore store) =>

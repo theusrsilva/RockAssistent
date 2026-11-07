@@ -49,6 +49,34 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         (await Assert.ThrowsAsync<NuzlockeException>(action)).Code;
 
     [Fact]
+    public async Task Inicial_da_run_escolhe_o_time_do_rival()
+    {
+        // HeartGold com Chikorita: o Silver pega o Cyndaquil (e não o Totodile do time padrão).
+        var chikorita = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, " Chikorita "), Ct);
+        Assert.Equal("chikorita", chikorita.Run.Starter);
+        Assert.Equal("rival-cherrygrove", chikorita.NextBoss!.Id);
+        Assert.Equal(155, Assert.Single(chikorita.NextBoss.Party).Species);
+        Assert.Null(chikorita.NextBoss.Variants);
+
+        var none = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null), Ct);
+        Assert.Null(none.Run.Starter);
+        Assert.Equal(158, Assert.Single(none.NextBoss!.Party).Species);
+
+        // Mais adiante o cap também é o da variante (Underground: 32 com Cyndaquil, 34 com Chikorita).
+        var underground = _data.Bosses("hgss").Single(b => b.Id == "rival-underground");
+        Assert.Equal(34, underground.ForStarter("chikorita").LevelCap);
+        Assert.Equal(32, underground.ForStarter("cyndaquil").LevelCap);
+
+        // Trocar o inicial muda o time; texto vazio apaga.
+        var totodile = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "totodile"), Ct);
+        Assert.Equal(152, Assert.Single(totodile.NextBoss!.Party).Species);
+        Assert.Null((await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, ""), Ct)).Run.Starter);
+
+        Assert.Equal("invalid_starter", await Fails(() => _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, "bulbasaur"), Ct)));
+        Assert.Equal("invalid_starter", await Fails(() => _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "piplup"), Ct)));
+    }
+
+    [Fact]
     public async Task Run_no_frlg_comeca_na_primeira_area_com_o_primeiro_chefe()
     {
         var view = await NewFrlg();
@@ -329,6 +357,36 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     }
 }
 
+public sealed class RunStarterMigrationTests
+{
+    [Fact]
+    public async Task Migracao_mantem_as_runs_antigas_sem_inicial()
+    {
+        using var dir = new TestDataDir();
+        var options = new DbContextOptionsBuilder<TradeRockDb>()
+            .UseSqlite($"Data Source={dir.Paths.DatabasePath};Pooling=False").Options;
+        var ct = TestContext.Current.CancellationToken;
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.GetService<IMigrator>().MigrateAsync("ActivityRecords", ct);
+            // A entidade já tem Starter; a tabela ainda não. Grava pela SQL, como uma run de antes.
+            await db.Database.ExecuteSqlRawAsync(
+                "INSERT INTO NuzlockeRuns (Id, OwnerId, Name, GameKey, Version, RulesJson, Status, StartedAt) " +
+                "VALUES ('0190a0a0-0000-7000-8000-000000000001', '00000000-0000-0000-0000-000000000000', 'Johto', 'hgss', " +
+                "'heartgold', '{{}}', 'active', 0)", ct);
+        }
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.Database.MigrateAsync(ct);
+            var run = await db.NuzlockeRuns.IgnoreQueryFilters().SingleAsync(ct);
+            Assert.Equal("Johto", run.Name);
+            Assert.Null(run.Starter);
+        }
+    }
+}
+
 public sealed class NuzlockeMigrationTests
 {
     [Fact]
@@ -377,8 +435,11 @@ public sealed class ActivityRecordMigrationTests
         await using (var db = new TradeRockDb(options))
         {
             await db.GetService<IMigrator>().MigrateAsync("Nuzlocke", ct);
-            db.NuzlockeRuns.Add(new NuzlockeRun { Name = "Kanto", GameKey = "frlg", RulesJson = "{}", Status = "wipe" });
-            await db.SaveChangesAsync(ct);
+            // Pela SQL: a entidade de hoje tem colunas que a tabela desta migração ainda não tem.
+            await db.Database.ExecuteSqlRawAsync(
+                "INSERT INTO NuzlockeRuns (Id, OwnerId, Name, GameKey, Version, RulesJson, Status, StartedAt) " +
+                "VALUES ('0190a0a0-0000-7000-8000-000000000002', '00000000-0000-0000-0000-000000000001', 'Kanto', 'frlg', " +
+                "NULL, '{{}}', 'wipe', 0)", ct);
         }
 
         await using (var db = new TradeRockDb(options))
@@ -485,7 +546,31 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
             HttpStatusCode.BadRequest));
         Assert.Equal("version_required", await Error(await _client.PostAsJsonAsync("/api/nuzlocke", new { gameKey = "swsh" }, Ct),
             HttpStatusCode.BadRequest));
+        Assert.Equal("invalid_starter", await Error(await _client.PostAsJsonAsync("/api/nuzlocke",
+            new { gameKey = "hgss", version = "soulsilver", starter = "mudkip" }, Ct), HttpStatusCode.BadRequest));
         Assert.Equal(HttpStatusCode.NoContent, (await _client.DeleteAsync($"/api/nuzlocke/{id}", Ct)).StatusCode);
         Assert.Equal("run_not_found", await Error(await _client.GetAsync($"/api/nuzlocke/{id}", Ct), HttpStatusCode.NotFound));
+    }
+
+    [Fact]
+    public async Task Inicial_pela_api()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
+        var starters = await Ok(await _client.GetAsync("/api/data/hgss/starters", Ct));
+        Assert.Equal(["chikorita", "cyndaquil", "totodile"], starters.EnumerateArray().Select(s => s.GetProperty("id").GetString()));
+        Assert.Equal(152, starters[0].GetProperty("species").GetInt32());
+
+        var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke",
+            new { gameKey = "hgss", version = "heartgold", starter = "chikorita" }, Ct));
+        var id = view.GetProperty("run").GetProperty("id").GetGuid();
+        Assert.Equal("chikorita", view.GetProperty("run").GetProperty("starter").GetString());
+        Assert.Equal(155, view.GetProperty("nextBoss").GetProperty("party")[0].GetProperty("species").GetInt32());
+
+        view = await Ok(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}", new { starter = "cyndaquil" }, Ct));
+        Assert.Equal(158, view.GetProperty("nextBoss").GetProperty("party")[0].GetProperty("species").GetInt32());
+        Assert.Equal("invalid_starter", await Error(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}", new { starter = "pikachu" }, Ct),
+            HttpStatusCode.BadRequest));
+        Assert.Equal("invalid_starter", await Error(await _client.PostAsJsonAsync("/api/nuzlocke",
+            new { gameKey = "hgss", version = "soulsilver", starter = "mudkip" }, Ct), HttpStatusCode.BadRequest));
     }
 }
