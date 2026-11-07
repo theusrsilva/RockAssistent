@@ -297,7 +297,7 @@ function Stats({ view }: { view: RunView }) {
             </span>
             {t(`nuzlocke.stats.${key}`)}
           </span>
-          <span className="font-display text-3xl leading-none font-bold tabular-nums">{value}</span>
+          <span className="font-display text-3xl leading-none font-extrabold tabular-nums">{value}</span>
         </Card>
       ))}
     </div>
