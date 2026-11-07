@@ -49,7 +49,19 @@
     "startTrade": "Make a trade",
     "seePokemon": "See my Pokémon",
     "running": "A trade is in progress.",
-    "follow": "Follow it"
+    "follow": "Follow it",
+    "inProgress": "In progress",
+    "inProgressEmpty": "No hunt or Nuzlocke run in progress. How about starting one?",
+    "newHunt": "Start a hunt",
+    "newRun": "Start a Nuzlocke",
+    "giftSub": "Get event gifts in FireRed / LeafGreen and Sword / Shield.",
+    "guideOfTheDay": "Guide of the day",
+    "readGuide": "Read the guide",
+    "dexSearch": "Search the Pokédex",
+    "dexSearchPlaceholder": "Name or number",
+    "search": "Search",
+    "dexSub": "Data on every Pokémon, move and type.",
+    "guidesSub": "Games, mechanics, VGC and mythology."
   },
   "pokemon": {
     "title": "My Pokémon",

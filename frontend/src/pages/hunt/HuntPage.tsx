@@ -70,7 +70,7 @@ function Section({ title, empty, children }: { title: string; empty: string; chi
   )
 }
 
-function HuntCard({ hunt, name }: { hunt: Hunt; name?: string }) {
+export function HuntCard({ hunt, name }: { hunt: Hunt; name?: string }) {
   const { t, i18n } = useTranslation()
   return (
     <Link

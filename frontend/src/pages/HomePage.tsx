@@ -1,11 +1,18 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router'
 import { useConnectionSummary } from '../components/Layout'
-import { Button, Callout, Icon } from '../components/ui'
+import { Badge, Button, Callout, Icon, inputClass } from '../components/ui'
 import { api, spriteUrl } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { connectionKeys, requiredKeys, useConnection } from '../lib/connection'
+import { useApiGet } from '../lib/dex'
+import { guideIndex } from '../lib/guides'
+import { guideOfTheDay } from '../lib/home'
+import { useSpeciesOptions, type Hunt } from '../lib/hunts'
+import { HuntCard } from './hunt/HuntPage'
+import { RunCard } from './nuzlocke/NuzlockePage'
+import { isFinished, type RunSummary } from './nuzlocke/nuzlocke'
 import type { Pokemon, TradeHistoryItem, TradeSession, VaultOverview } from '../lib/types'
 import { stateLook } from './settings/ConnectionChecklist'
 import { UpdateNotice } from './UpdateCard'
@@ -56,9 +63,10 @@ export default function HomePage() {
   const name = (p?: Pokemon) => (p ? (p.nickname || p.speciesName).toUpperCase() : '?')
 
   const tiles = [
-    { icon: 'swap_horiz', to: '/trocas/trocar', title: t('home.startTrade'), sub: t('ui.home.tradeSub') },
-    { icon: 'inventory_2', to: '/boxes', title: t('ui.home.vault'), sub: t('ui.home.vaultSub') },
-    { icon: 'add_circle', to: '/criar', title: t('nav.builder'), sub: t('ui.home.createSub') },
+    { icon: 'menu_book', to: '/pokedex', title: t('nav.dex'), sub: t('home.dexSub') },
+    { icon: 'inventory_2', to: '/boxes', title: t('nav.boxes'), sub: t('ui.home.vaultSub') },
+    { icon: 'swap_horiz', to: '/trocas', title: t('nav.trades'), sub: t('ui.home.tradeSub') },
+    { icon: 'school', to: '/guias', title: t('nav.guides'), sub: t('home.guidesSub') },
   ]
 
   return (
@@ -158,6 +166,24 @@ export default function HomePage() {
         </div>
       </div>
 
+      <InProgress />
+
+      <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))]">
+        <DexSearch />
+        <GuideOfTheDay />
+        {!remote && (
+          <Link to="/mystery-gift" className="flex items-start gap-3.5 rounded-xl border border-line bg-surface p-5 hover:border-accent">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
+              <Icon name="redeem" className="text-[26px]" />
+            </span>
+            <span className="flex min-w-0 flex-col gap-1">
+              <span className="font-bold">{t('nav.gifts')}</span>
+              <span className="text-sm text-muted">{t('home.giftSub')}</span>
+            </span>
+          </Link>
+        )}
+      </div>
+
       <div className="grid gap-3.5 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
         {tiles.map((tile) => (
           <Link
@@ -174,5 +200,109 @@ export default function HomePage() {
         ))}
       </div>
     </div>
+  )
+}
+
+/** "Em andamento": hunts sem fim e runs ativas ou pausadas. Um pedido para cada lista; se der erro (ex.: 403), o cartão some. */
+function InProgress() {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const hunts = useApiGet<Hunt[]>('/api/hunts')
+  const runs = useApiGet<RunSummary[]>('/api/nuzlocke')
+  if (hunts.error && runs.error) return null
+  const activeHunts = (hunts.data ?? []).filter((h) => !h.endedAt)
+  const activeRuns = (runs.data ?? []).filter((r) => !isFinished(r.status))
+  const loading = hunts.loading || runs.loading
+  const empty = !loading && activeHunts.length === 0 && activeRuns.length === 0
+  return (
+    <section className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-5">
+      <div className="font-bold">{t('home.inProgress')}</div>
+      {loading ? (
+        <p className="text-sm text-muted">{t('common.loading')}</p>
+      ) : empty ? (
+        <div className="flex flex-col gap-3">
+          <p className="text-sm text-muted">{t('home.inProgressEmpty')}</p>
+          <div className="flex flex-wrap gap-2.5">
+            {!hunts.error && (
+              <Button variant="secondary" icon="add" onClick={() => navigate('/hunt/nova')}>
+                {t('home.newHunt')}
+              </Button>
+            )}
+            {!runs.error && (
+              <Button variant="secondary" icon="add" onClick={() => navigate('/nuzlocke')}>
+                {t('home.newRun')}
+              </Button>
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+          {activeHunts.length > 0 && <ActiveHunts hunts={activeHunts} />}
+          {activeRuns.map((r) => (
+            <RunCard key={r.id} run={r} />
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+/** Separado para só buscar os nomes das espécies quando há hunt. */
+function ActiveHunts({ hunts }: { hunts: Hunt[] }) {
+  const species = useSpeciesOptions()
+  const names = useMemo(() => new Map((species ?? []).map((s) => [s.value, s.text])), [species])
+  return hunts.map((h) => <HuntCard key={h.id} hunt={h} name={names.get(h.species)} />)
+}
+
+/** Busca rápida: Enter abre a Pokédex já filtrada. */
+function DexSearch() {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const [text, setText] = useState('')
+  const submit = (e: FormEvent) => {
+    e.preventDefault()
+    const q = text.trim()
+    navigate(q ? `/pokedex?${new URLSearchParams({ q })}` : '/pokedex')
+  }
+  return (
+    <form onSubmit={submit} className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-5">
+      <label htmlFor="home-dex-search" className="font-bold">
+        {t('home.dexSearch')}
+      </label>
+      <div className="flex gap-2">
+        <input
+          id="home-dex-search"
+          type="search"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder={t('home.dexSearchPlaceholder')}
+          className={`${inputClass} min-w-0 flex-1`}
+        />
+        <Button type="submit" icon="search">
+          {t('home.search')}
+        </Button>
+      </div>
+    </form>
+  )
+}
+
+/** Guia do dia: o mesmo o dia todo, escolhido pela data entre todos os guias do índice. */
+function GuideOfTheDay() {
+  const { t, i18n } = useTranslation()
+  const pick = useMemo(() => guideOfTheDay(guideIndex(i18n.language), new Date()), [i18n.language])
+  if (!pick) return null
+  return (
+    <Link to={pick.to} className="flex flex-col gap-2 rounded-xl border border-line bg-surface p-5 hover:border-accent">
+      <div className="flex items-center justify-between gap-2">
+        <span className="font-bold">{t('home.guideOfTheDay')}</span>
+        <Badge tone="accent">{t(`guides.sections.${pick.section}`)}</Badge>
+      </div>
+      <span className="font-display text-lg leading-tight font-bold">{pick.title}</span>
+      {pick.description && <span className="line-clamp-2 text-sm text-muted">{pick.description}</span>}
+      <span className="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-accent">
+        {t('home.readGuide')}
+        <Icon name="arrow_forward" className="text-[18px]" />
+      </span>
+    </Link>
   )
 }

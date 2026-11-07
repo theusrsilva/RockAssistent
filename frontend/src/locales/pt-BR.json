@@ -49,7 +49,19 @@
     "startTrade": "Fazer uma troca",
     "seePokemon": "Ver meus Pokémon",
     "running": "Há uma troca em andamento.",
-    "follow": "Acompanhar"
+    "follow": "Acompanhar",
+    "inProgress": "Em andamento",
+    "inProgressEmpty": "Nenhuma hunt nem run de Nuzlocke em andamento. Que tal começar uma?",
+    "newHunt": "Começar uma hunt",
+    "newRun": "Começar um Nuzlocke",
+    "giftSub": "Receba presentes de evento no FireRed / LeafGreen e no Sword / Shield.",
+    "guideOfTheDay": "Guia do dia",
+    "readGuide": "Ler o guia",
+    "dexSearch": "Buscar na Pokédex",
+    "dexSearchPlaceholder": "Nome ou número",
+    "search": "Buscar",
+    "dexSub": "Dados de cada Pokémon, golpe e tipo.",
+    "guidesSub": "Jogos, mecânicas, VGC e mitologia."
   },
   "pokemon": {
     "title": "Meus Pokémon",

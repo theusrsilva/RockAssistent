@@ -78,7 +78,7 @@ function Section({ title, empty, children }: { title: string; empty: string; chi
 }
 
 /** Cartão da run. O resumo não traz a equipe: os sprites vêm da tela da run (poucas runs, um pedido cada). */
-function RunCard({ run }: { run: RunSummary }) {
+export function RunCard({ run }: { run: RunSummary }) {
   const { t } = useTranslation()
   const detail = useApiGet<RunView>(`/api/nuzlocke/${run.id}`)
   const team = detail.data?.party ?? []
