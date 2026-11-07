@@ -207,7 +207,7 @@ export default function HistoryPage() {
     <div className="flex flex-col gap-4">
       <h1 className="font-display text-[23px] font-bold md:text-[28px]">{t('nav.history')}</h1>
       {feed && filters.length > 2 && (
-        <div className="-mx-1 overflow-x-auto px-1">
+        <div className="-mx-1 scroll-x px-1">
           <Segmented
             value={filters.includes(filter) ? filter : 'all'}
             onChange={setFilter}

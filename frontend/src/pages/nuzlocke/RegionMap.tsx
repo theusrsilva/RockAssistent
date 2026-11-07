@@ -34,7 +34,7 @@ export default function RegionMap({
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="overflow-x-auto rounded-lg border border-line bg-bg">
+      <div className="scroll-x rounded-lg border border-line bg-bg">
         <svg
           viewBox={`${vb.x} ${vb.y} ${vb.width} ${vb.height}`}
           className="block h-auto max-h-[680px] w-full min-w-[560px]"

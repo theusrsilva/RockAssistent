@@ -278,7 +278,7 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
         ) : saves.length === 0 ? (
           <p className="px-1 text-[13px] text-muted">{t('boxes.noSaves')}</p>
         ) : (
-          <div className="flex gap-1.5 overflow-x-auto md:flex-col md:overflow-visible">
+          <div className="flex gap-1.5 scroll-x md:flex-col md:overflow-visible">
             {saves.map((s) => (
               <button
                 key={s.id}

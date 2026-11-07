@@ -80,7 +80,7 @@ export function Sidebar({
   if (horizontal)
     return (
       <div className="flex w-full flex-col gap-2">
-        <div className="flex w-full gap-1.5 overflow-x-auto pb-0.5">
+        <div className="flex w-full gap-1.5 scroll-x pb-0.5">
           {[...items, trash].map((it) => (
             <button
               key={it.key}

@@ -44,7 +44,7 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
       <Segmented
         value={group}
         onChange={chooseGroup}
-        className="overflow-x-auto"
+        className="scroll-x"
         options={groups.map((g) => ({ value: g, label: `${t(`dex.moves.${g}`)} (${detail.moves[g].length})` }))}
       />
       {moves.length === 0 && (
@@ -73,7 +73,7 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
       )}
 
       {moves.length > 0 && !mobile && (
-        <div className="overflow-x-auto rounded-xl border border-line bg-surface">
+        <div className="scroll-x rounded-xl border border-line bg-surface">
           <table className="w-full text-sm">
             <thead className="border-b border-line text-xs text-muted">
               <tr>

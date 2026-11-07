@@ -168,6 +168,16 @@ body {
   }
 }
 
+/*
+ * Faixa que rola só na horizontal (abas, formas, filtros, tabelas largas). overflow-x: auto sozinho deixa o
+ * overflow-y em auto também, e um pixel a mais (borda, indicador da aba) cria uma rolagem vertical com setas.
+ */
+@utility scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
 .pixelated {
   image-rendering: pixelated;
 }

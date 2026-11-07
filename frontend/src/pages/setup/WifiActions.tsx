@@ -146,7 +146,7 @@ function CardTestView({ test }: { test: CardTestResult }) {
         {test.simulated && ` · ${t('wizard.cardTest.simulated')}`}
       </p>
       {test.channels.length > 0 && (
-        <div className="overflow-x-auto">
+        <div className="scroll-x">
           <table className="text-xs">
             <thead>
               <tr className="text-left">

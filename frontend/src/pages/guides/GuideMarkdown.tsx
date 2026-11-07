@@ -12,7 +12,7 @@ const prose =
 // Tabelas do markdown com rolagem lateral no celular; links internos pelo roteador.
 const components: Components = {
   table: ({ children }) => (
-    <div className="my-3 overflow-x-auto rounded-lg border border-line">
+    <div className="my-3 scroll-x rounded-lg border border-line">
       <table className="w-full border-collapse text-left text-[13px]">{children}</table>
     </div>
   ),

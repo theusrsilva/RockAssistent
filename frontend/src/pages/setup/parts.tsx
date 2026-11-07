@@ -31,7 +31,7 @@ function CopyCommand({ command }: { command: string }) {
   const [copied, setCopied] = useState(false)
   return (
     <div className="mt-1 flex items-start gap-2">
-      <code className="block flex-1 overflow-x-auto whitespace-pre rounded bg-slate-900 px-2 py-1 text-xs text-slate-100">{command}</code>
+      <code className="block flex-1 scroll-x whitespace-pre rounded bg-slate-900 px-2 py-1 text-xs text-slate-100">{command}</code>
       <Button
         variant="secondary"
         className="px-2 py-1 text-xs"
@@ -102,7 +102,7 @@ export function CatalogNotice({ catalog }: { catalog: HardwareCatalog }) {
 export function WifiTable({ entries, highlight }: { entries: WifiEntry[]; highlight: string[] }) {
   const { t, i18n } = useTranslation()
   return (
-    <div className="overflow-x-auto">
+    <div className="scroll-x">
       <table className="w-full text-left text-sm">
         <thead className="text-xs uppercase text-muted">
           <tr>
@@ -143,7 +143,7 @@ export function WifiTable({ entries, highlight }: { entries: WifiEntry[]; highli
 export function Esp32Table({ entries, highlight }: { entries: Esp32Entry[]; highlight: string | null }) {
   const { t, i18n } = useTranslation()
   return (
-    <div className="overflow-x-auto">
+    <div className="scroll-x">
       <table className="w-full text-left text-sm">
         <thead className="text-xs uppercase text-muted">
           <tr>

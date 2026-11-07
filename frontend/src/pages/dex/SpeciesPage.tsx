@@ -111,7 +111,7 @@ export default function SpeciesPage() {
       </div>
 
       {detail && detail.forms.length > 1 && (
-        <div className="-mt-1 flex gap-1 overflow-x-auto pb-1" role="tablist" aria-label={t('dex.sprite.forms')}>
+        <div className="-mt-1 flex gap-1 scroll-x pb-1" role="tablist" aria-label={t('dex.sprite.forms')}>
           {detail.forms.map((f) => (
             <button
               key={f.id}
@@ -135,7 +135,7 @@ export default function SpeciesPage() {
         </div>
       )}
 
-      <div className="-mx-1 flex gap-1 overflow-x-auto border-b border-line px-1" role="tablist">
+      <div className="-mx-1 flex gap-1 scroll-x border-b border-line px-1" role="tablist">
         {tabs.map((tb) => (
           <button
             key={tb}

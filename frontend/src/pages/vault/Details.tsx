@@ -336,7 +336,7 @@ export function Details({
 
       {!draft ? (
         <>
-          <div className="flex gap-0.5 overflow-x-auto border-b border-line px-3" role="tablist">
+          <div className="flex gap-0.5 scroll-x border-b border-line px-3" role="tablist">
             {tabs.map((x) => (
               <button
                 key={x.key}
