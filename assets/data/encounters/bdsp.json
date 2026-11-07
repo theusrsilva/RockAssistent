@@ -2,7 +2,8 @@
   "source": [
     "https://www.serebii.net/pokearth/sinnoh/ (páginas por área, aba BDSP; Grand Underground por bioma)",
     "https://pokemondb.net/location (2ª fonte: Sinnoh, Geração 8)",
-    "Métodos: walk/cave (matinho ou caverna), surf, fish (conditions old_rod/good_rod/super_rod), honey, radar, outbreak (swarm), fixed, gift. No Grand Underground, conditions diz a etapa (after_strength, national_dex...). verified = a espécie também aparece na página da área no pokemondb."
+    "Métodos: walk/cave (matinho ou caverna), surf, fish (conditions old_rod/good_rod/super_rod), honey, radar, outbreak (swarm), fixed, gift. No Grand Underground, conditions diz a etapa (after_strength, national_dex...). verified = a espécie também aparece na página da área no pokemondb.",
+    "https://www.serebii.net/pokearth/sinnoh/oreburghcity.shtml"
   ],
   "items": [
     {
@@ -1855,7 +1856,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1871,7 +1872,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1887,7 +1888,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1903,7 +1904,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1919,7 +1920,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1934,7 +1935,7 @@
         "brilliant-diamond"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-city",
@@ -1949,7 +1950,7 @@
         "shining-pearl"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "oreburgh-mine",

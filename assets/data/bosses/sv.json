@@ -21,7 +21,13 @@
     "https://www.pokewiki.de/Sagaria",
     "https://www.pokemythology.net/detonados/detonado-scarlet-violet/",
     "https://www.serebii.net/scarletviolet/legendary.shtml",
-    "https://www.escapistmagazine.com/?p=201851"
+    "https://www.escapistmagazine.com/?p=201851",
+    "https://game8.co/games/Pokemon-Scarlet-Violet/archives/388356 (4º golpe dos Titans)",
+    "https://gamewith.net/pokemon-scarletviolet/article/show/36109 (golpes dos Titans)",
+    "https://marriland.com/scarlet-violet/walkthrough/path-of-legends/stony-cliff-titan/",
+    "https://www.serebii.net/pokearth/kitakami/mossuitown.shtml (Tera Types da Carmine e do Kieran)",
+    "https://www.serebii.net/scarletviolet/mochimayhem.shtml",
+    "https://game8.co/games/Pokemon-Scarlet-Violet/archives/397599 (revanche do Larry)"
   ],
   "items": [
     {
@@ -187,7 +193,8 @@
           "moves": [
             "vice-grip",
             "rock-smash",
-            "block"
+            "block",
+            "rock-tomb"
           ],
           "ability": "anger-shell",
           "item": null,
@@ -196,7 +203,7 @@
       ],
       "level_cap": 16,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": null
     },
     {
@@ -266,7 +273,8 @@
           "moves": [
             "rock-throw",
             "wing-attack",
-            "pluck"
+            "pluck",
+            "torment"
           ],
           "ability": "rocky-payload",
           "item": null,
@@ -275,7 +283,7 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": null
     },
     {
@@ -500,7 +508,8 @@
           "moves": [
             "iron-tail",
             "headbutt",
-            "wrap"
+            "wrap",
+            "sandstorm"
           ],
           "ability": "earth-eater",
           "item": null,
@@ -509,7 +518,7 @@
       ],
       "level_cap": 29,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": null
     },
     {
@@ -838,7 +847,8 @@
           "moves": [
             "rapid-spin",
             "brick-break",
-            "knock-off"
+            "knock-off",
+            "stomping-tantrum"
           ],
           "ability": "protosynthesis",
           "item": null,
@@ -847,7 +857,7 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": [
         "scarlet"
       ]
@@ -868,7 +878,8 @@
           "moves": [
             "rapid-spin",
             "iron-head",
-            "knock-off"
+            "knock-off",
+            "stomping-tantrum"
           ],
           "ability": "quark-drive",
           "item": null,
@@ -877,7 +888,7 @@
       ],
       "level_cap": 45,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": [
         "violet"
       ]
@@ -1173,7 +1184,8 @@
           "moves": [
             "aqua-tail",
             "body-slam",
-            "knock-off"
+            "knock-off",
+            "order-up"
           ],
           "ability": "oblivious",
           "item": null,
@@ -1186,7 +1198,8 @@
           "moves": [
             "muddy-water",
             "icy-wind",
-            "taunt"
+            "taunt",
+            "dragon-pulse"
           ],
           "ability": "commander",
           "item": null,
@@ -1195,7 +1208,7 @@
       ],
       "level_cap": 57,
       "verified": true,
-      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica",
+      "notes": "Titan: duas lutas seguidas (sozinho e depois com o Arven); dá um Herba Mystica; o 4º golpe só aparece na 2ª fase (depois da Herba Mystica)",
       "versions": null
     },
     {
@@ -4474,7 +4487,7 @@
       ],
       "level_cap": 66,
       "verified": true,
-      "notes": "pós-jogo: inspeção dos ginásios para a Geeta; Staraptor terastaliza",
+      "notes": "pós-jogo: inspeção dos ginásios para a Geeta; Staraptor terastaliza; Dudunsparce de duas partes",
       "versions": null
     },
     {

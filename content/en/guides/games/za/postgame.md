@@ -12,7 +12,7 @@
 
 | # | Trainer | Ace |
 | --- | --- | --- |
-| 1 | Zach | Pikachu |
+| 1 | Zach | Pikachu 10 |
 | 2 | Griselle | Mega Pyroar 71 |
 | 3 | Lida | Mega Starmie 70 |
 | 4 | Tarragon | Mega Excadrill 71 |
@@ -56,7 +56,7 @@
 - Starts in Lumiose when Hoopa's rings appear; donut chef Ansha leads the way to Hyperspace Lumiose, with Korrina.
 - Hyperspace wild Pokémon go above lv 100; Ansha's donuts (Flavor Powers) give boosts.
 - Hyperspace Missions, portals with Mega Pokémon and Legendaries from other regions (see Legendaries).
-- 22 new Mega forms: Raichu X/Y, Chimecho, Absol Z, Staraptor, Garchomp Z, Lucario Z, Heatran, Darkrai, Golurk, Meowstic, Crabominable, Golisopod, Magearna, Zeraora, Scovillain, Glimmora, Tatsugiri, Baxcalibur.
+- 22 new Mega forms from 18 species: Raichu X/Y, Chimecho, Absol Z, Staraptor, Garchomp Z, Lucario Z, Heatran, Darkrai, Golurk, Meowstic, Crabominable, Golisopod, Magearna (two colors), Zeraora, Scovillain, Glimmora, Tatsugiri (three forms), Baxcalibur.
 
 | Mega Stone (DLC) | Where |
 | --- | --- |
@@ -71,7 +71,7 @@
 | Staraptite | Hyperspace Hunting Grounds |
 | Tatsugirinite | Hyperspace Sushi Paradise |
 | Chimechite, Golurkite, Golisopite, Scovillainite, Glimmoranite, Zeraorite | Hyperspace Lumiose |
-| Magearnite | Together with Magearna |
+| Magearnite | Together with Magearna (Quasartico Inc.) |
 | Garchompite Z | Event (Hyperspace portal) |
 
 <!-- sources: pokemythology notes, Serebii -->

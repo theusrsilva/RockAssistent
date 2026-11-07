@@ -30,6 +30,7 @@
 - Champions replaces EVs and IVs with **Stat Points (SP)**: 66 points per Pokémon, at most 32 in one stat.
 - Each SP adds 1 point to the stat at level 50. 32 SP ≈ 252 EVs the old way (1 SP ≈ 8 EVs).
 - There are no IVs: every Pokémon has the maximum. Natures still apply (+10% to one stat, −10% to another).
+- Adding SP costs Victory Points (VP): 5 VP per point. Removing them is free.
 - More in [Reading a paste](/guias/vgc/champions/reading-a-team).
 
 ## How to start

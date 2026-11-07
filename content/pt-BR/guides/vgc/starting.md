@@ -31,6 +31,7 @@
 - O Champions troca EVs e IVs por **Stat Points (SP)**: 66 pontos por Pokémon, no máximo 32 num atributo.
 - Cada SP soma 1 ponto no atributo no nível 50. 32 SP ≈ 252 EVs do jeito antigo (1 SP ≈ 8 EVs).
 - Não há IVs: todo Pokémon tem o máximo. A natureza continua (+10% num atributo, −10% em outro).
+- Pôr SP custa Victory Points (VP): 5 VP por ponto. Tirar é de graça.
 - Mais em [Como ler um paste](/guias/vgc/champions/reading-a-team).
 
 ## Como começar

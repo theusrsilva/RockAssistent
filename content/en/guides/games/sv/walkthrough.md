@@ -500,10 +500,6 @@
 
 - Tip: Fire, Fighting, Rock or Steel; Altaria Tera Ice last.
 
-:::boss sv grusha-rematch
-
-- Rematch (post-game, Geeta's Gym inspection).
-
 ## Paldea's Highest Peak
 
 **To do**
@@ -1067,5 +1063,7 @@ Geeta's Gym inspection, in any order; final reward: King's Rock.
 :::boss sv ryme-rematch
 
 :::boss sv tulip-rematch
+
+:::boss sv grusha-rematch
 
 <!-- sources: notas pokemythology, Bulbapedia, Serebii -->

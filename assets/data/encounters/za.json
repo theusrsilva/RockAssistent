@@ -2,7 +2,14 @@
   "source": [
     "https://www.serebii.net/pokearth/lumiosecity/ (Wild Zones 1-20, distritos, esgotos, Lysandre Labs; níveis e Alphas)",
     "docs/superpowers/sources/za-pokemythology-notes.md (espécies por Wild Zone, dia/noite, cidade, raros por setor e lendários)",
-    "Distritos = method city (a Serebii agrupa os setores por distrito). Alpha = Alpha garantido; os outros Alphas (5%) não entram. verified = a espécie também está nas notas para a área."
+    "Distritos = method city (a Serebii agrupa os setores por distrito). Alpha = Alpha garantido; os outros Alphas (5%) não entram. verified = a espécie também está nas notas para a área.",
+    "https://www.serebii.net/legendsz-a/giftpokemon.shtml (presentes)",
+    "https://www.serebii.net/legendsz-a/ingametrades.shtml (trocas)",
+    "https://gmtreks.com/pokemon-z-a/main-missions/36 (Alpha Aegislash lv 50 no Lysandre Labs)",
+    "https://gmtreks.com/pokemon-z-a/side-missions/3 (Sableye lv 10)",
+    "https://serebii.net/legendsz-a/sidemissions/ashinymareep.shtml",
+    "https://www.powerpyx.com/pokemon-legends-z-a-klefki-location/",
+    "https://www.serebii.net/legendsz-a/mainmissions/tokeeptheworldinbalance.shtml (Zygarde lv 84)"
   ],
   "items": [
     {
@@ -1026,7 +1033,7 @@
       "verified": true
     },
     {
-      "area": "vert-district",
+      "area": "jaune-district",
       "species": 359,
       "form": 0,
       "method": "gift",
@@ -1173,7 +1180,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-1",
@@ -2313,7 +2320,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3348,7 +3355,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "rouge-district",
@@ -3655,15 +3662,15 @@
       "species": 302,
       "form": 0,
       "method": "fixed",
-      "min_level": 7,
-      "max_level": 11,
+      "min_level": 10,
+      "max_level": 10,
       "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-4",
@@ -7428,7 +7435,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sewers-canal-access",
@@ -8107,21 +8114,6 @@
     },
     {
       "area": "wild-zone-17",
-      "species": 663,
-      "form": 0,
-      "method": "walk",
-      "min_level": 20,
-      "max_level": 47,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "legends-za"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "wild-zone-17",
       "species": 668,
       "form": 0,
       "method": "walk",
@@ -8455,15 +8447,15 @@
       "species": 681,
       "form": 0,
       "method": "fixed",
-      "min_level": 59,
-      "max_level": 60,
+      "min_level": 50,
+      "max_level": 50,
       "chance": "fixed",
       "conditions": null,
       "versions": [
         "legends-za"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lysandre-labs",
@@ -8673,7 +8665,7 @@
         "legends-za"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wild-zone-20",

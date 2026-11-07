@@ -7,7 +7,13 @@
     "https://www.serebii.net/black2white2/strongtrainers.shtml",
     "https://www.serebii.net/black2white2/n.shtml",
     "https://www.serebii.net/black2white2/memorylink.shtml",
-    "https://www.pokemythology.net/detonados/detonado-black-2-white-2/"
+    "https://www.pokemythology.net/detonados/detonado-black-2-white-2/",
+    "https://www.dittobase.com/black-2-white-2/gym-leaders-elite-four",
+    "https://www.pokewiki.de/Cheren",
+    "https://www.pokewiki.de/Mica",
+    "https://www.pokewiki.de/Artie",
+    "https://www.pokewiki.de/Kamilla",
+    "https://rankedboost.com/pokemon/gym-leader/roxie/"
   ],
   "items": [
     {
@@ -118,7 +124,8 @@
           "moves": [
             "smog",
             "assurance",
-            "tackle"
+            "tackle",
+            "clear-smog"
           ],
           "ability": null,
           "item": null,
@@ -297,7 +304,8 @@
           "moves": [
             "volt-switch",
             "quick-attack",
-            "pursuit"
+            "pursuit",
+            "electro-ball"
           ],
           "ability": null,
           "item": null,
@@ -310,7 +318,8 @@
           "moves": [
             "volt-switch",
             "take-down",
-            "thunder-wave"
+            "thunder-wave",
+            "electro-ball"
           ],
           "ability": null,
           "item": null,

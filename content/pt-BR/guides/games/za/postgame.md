@@ -12,7 +12,7 @@
 
 | # | Treinador | Ás |
 | --- | --- | --- |
-| 1 | Zach | Pikachu |
+| 1 | Zach | Pikachu 10 |
 | 2 | Griselle | Mega Pyroar 71 |
 | 3 | Lida | Mega Starmie 70 |
 | 4 | Tarragon | Mega Excadrill 71 |
@@ -56,7 +56,7 @@
 - Começa em Lumiose quando aparecem os anéis do Hoopa; a chef de donuts Ansha guia a ida a Hyperspace Lumiose, com a Korrina.
 - Pokémon selvagens do Hyperspace passam do lv 100; os donuts da Ansha (Flavor Powers) dão bônus.
 - Hyperspace Missions, portais com Mega Pokémon e lendários de outras regiões (ver Lendários).
-- 22 formas Mega novas: Raichu X/Y, Chimecho, Absol Z, Staraptor, Garchomp Z, Lucario Z, Heatran, Darkrai, Golurk, Meowstic, Crabominable, Golisopod, Magearna, Zeraora, Scovillain, Glimmora, Tatsugiri, Baxcalibur.
+- 22 formas Mega novas de 18 espécies: Raichu X/Y, Chimecho, Absol Z, Staraptor, Garchomp Z, Lucario Z, Heatran, Darkrai, Golurk, Meowstic, Crabominable, Golisopod, Magearna (duas cores), Zeraora, Scovillain, Glimmora, Tatsugiri (três formas), Baxcalibur.
 
 | Mega Stone (DLC) | Onde |
 | --- | --- |
@@ -71,7 +71,7 @@
 | Staraptite | Hyperspace Hunting Grounds |
 | Tatsugirinite | Hyperspace Sushi Paradise |
 | Chimechite, Golurkite, Golisopite, Scovillainite, Glimmoranite, Zeraorite | Hyperspace Lumiose |
-| Magearnite | Junto com a Magearna |
+| Magearnite | Junto com a Magearna (Quasartico Inc.) |
 | Garchompite Z | Evento (portal do Hyperspace) |
 
 <!-- fontes: notas pokemythology, Serebii -->

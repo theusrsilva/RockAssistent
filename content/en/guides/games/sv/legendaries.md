@@ -8,10 +8,10 @@
 | Chien-Pao | Icerend Shrine (West Province, Area One) | 60 | 8 yellow stakes | Both |
 | Wo-Chien | Grasswither Shrine (South Province, Area One) | 60 | 8 purple stakes | Both |
 | Chi-Yu | Firescourge Shrine (above Fury Falls) | 60 | 8 blue stakes | Both |
-| Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks | Area Zero | ~55–65 | Wild during and after The Way Home | Scarlet |
-| Roaring Moon | Area Zero | ~60–65 | Secret cave in Area Zero (behind rocks, near Research Station 4); easier in the postgame | Scarlet |
-| Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns | Area Zero | ~55–65 | Wild during and after The Way Home | Violet |
-| Iron Valiant | Area Zero | ~60–65 | Secret cave in Area Zero (behind rocks, near Research Station 4); easier in the postgame | Violet |
+| Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks | Area Zero | 52–60 | Wild during and after The Way Home | Scarlet |
+| Roaring Moon | Area Zero | 52–60 | Secret cave in Area Zero (behind rocks, near Research Station 3); easier in the postgame | Scarlet |
+| Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns | Area Zero | 52–60 | Wild during and after The Way Home | Violet |
+| Iron Valiant | Area Zero | 52–60 | Secret cave in Area Zero (behind rocks, near Research Station 3); easier in the postgame | Violet |
 
 ## The Teal Mask (DLC)
 

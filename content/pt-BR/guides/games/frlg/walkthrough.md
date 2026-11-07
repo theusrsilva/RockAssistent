@@ -1013,126 +1013,6 @@ Ordem da história, de Pallet Town às Sevii Islands. Cada trecho: o que fazer, 
 
 :::encounters frlg icefall-cave
 
-## Seven Island (Quest Island)
-
-**Faça**
-
-- Trainer Tower: subida cronometrada.
-- Siga ao sul até o Sevault Canyon.
-
-## Trainer Tower
-
-**Faça**
-
-- Modos single, double, knockout e mixed.
-- Prêmios pelo tempo.
-
-**Encontros**
-
-:::encounters frlg trainer-tower
-
-## Canyon Entrance
-
-**Faça**
-
-- Entrada do Sevault Canyon.
-
-**Encontros**
-
-:::encounters frlg canyon-entrance
-
-## Sevault Canyon / Tanoby Key
-
-**Faça**
-
-- Treinadores fortes.
-- Tanoby Key: puzzle de pedras que abre as câmaras.
-
-**Encontros**
-
-:::encounters frlg sevault-canyon
-
-## Tanoby Ruins
-
-**Faça**
-
-- Sete câmaras com Unown.
-- Use Surf entre as ilhotas.
-
-**Encontros**
-
-:::encounters frlg tanoby-ruins
-
-## Tanoby Ruins (Monean Chamber)
-
-**Faça**
-
-- Unown ? e A.
-
-**Encontros**
-
-:::encounters frlg monean-chamber
-
-## Tanoby Ruins (Liptoo Chamber)
-
-**Faça**
-
-- Unown C, D, H, O, U.
-
-**Encontros**
-
-:::encounters frlg liptoo-chamber
-
-## Tanoby Ruins (Weepth Chamber)
-
-**Faça**
-
-- Unown E, I, N, S.
-
-**Encontros**
-
-:::encounters frlg weepth-chamber
-
-## Tanoby Ruins (Dilford Chamber)
-
-**Faça**
-
-- Unown J, L, P, Q, R.
-
-**Encontros**
-
-:::encounters frlg dilford-chamber
-
-## Tanoby Ruins (Scufib Chamber)
-
-**Faça**
-
-- Unown F, G, K, T, Y.
-
-**Encontros**
-
-:::encounters frlg scufib-chamber
-
-## Tanoby Ruins (Rixy Chamber)
-
-**Faça**
-
-- Unown B, M, V, W, X.
-
-**Encontros**
-
-:::encounters frlg rixy-chamber
-
-## Tanoby Ruins (Viapos Chamber)
-
-**Faça**
-
-- Unown ! e Z.
-
-**Encontros**
-
-:::encounters frlg viapos-chamber
-
 ## Six Island (Fortune Island)
 
 **Faça**
@@ -1305,6 +1185,126 @@ Ordem da história, de Pallet Town às Sevii Islands. Cada trecho: o que fazer, 
 **Encontros**
 
 :::encounters frlg lost-cave
+
+## Seven Island (Quest Island)
+
+**Faça**
+
+- Trainer Tower: subida cronometrada.
+- Siga ao sul até o Sevault Canyon.
+
+## Trainer Tower
+
+**Faça**
+
+- Modos single, double, knockout e mixed.
+- Prêmios pelo tempo.
+
+**Encontros**
+
+:::encounters frlg trainer-tower
+
+## Canyon Entrance
+
+**Faça**
+
+- Entrada do Sevault Canyon.
+
+**Encontros**
+
+:::encounters frlg canyon-entrance
+
+## Sevault Canyon / Tanoby Key
+
+**Faça**
+
+- Treinadores fortes.
+- Tanoby Key: puzzle de pedras que abre as câmaras.
+
+**Encontros**
+
+:::encounters frlg sevault-canyon
+
+## Tanoby Ruins
+
+**Faça**
+
+- Sete câmaras com Unown.
+- Use Surf entre as ilhotas.
+
+**Encontros**
+
+:::encounters frlg tanoby-ruins
+
+## Tanoby Ruins (Monean Chamber)
+
+**Faça**
+
+- Unown ? e A.
+
+**Encontros**
+
+:::encounters frlg monean-chamber
+
+## Tanoby Ruins (Liptoo Chamber)
+
+**Faça**
+
+- Unown C, D, H, O, U.
+
+**Encontros**
+
+:::encounters frlg liptoo-chamber
+
+## Tanoby Ruins (Weepth Chamber)
+
+**Faça**
+
+- Unown E, I, N, S.
+
+**Encontros**
+
+:::encounters frlg weepth-chamber
+
+## Tanoby Ruins (Dilford Chamber)
+
+**Faça**
+
+- Unown J, L, P, Q, R.
+
+**Encontros**
+
+:::encounters frlg dilford-chamber
+
+## Tanoby Ruins (Scufib Chamber)
+
+**Faça**
+
+- Unown F, G, K, T, Y.
+
+**Encontros**
+
+:::encounters frlg scufib-chamber
+
+## Tanoby Ruins (Rixy Chamber)
+
+**Faça**
+
+- Unown B, M, V, W, X.
+
+**Encontros**
+
+:::encounters frlg rixy-chamber
+
+## Tanoby Ruins (Viapos Chamber)
+
+**Faça**
+
+- Unown ! e Z.
+
+**Encontros**
+
+:::encounters frlg viapos-chamber
 
 ## Cerulean Cave (Unknown Dungeon)
 

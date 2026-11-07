@@ -500,10 +500,6 @@
 
 - Dica: Fire, Fighting, Rock ou Steel; Altaria Tera Ice no fim.
 
-:::boss sv grusha-rematch
-
-- Revanche (pós-jogo, inspeção da Geeta).
-
 ## Paldea's Highest Peak
 
 **Faça**
@@ -1067,5 +1063,7 @@ Inspeção dos ginásios para a Geeta, em qualquer ordem; prêmio final: King's 
 :::boss sv ryme-rematch
 
 :::boss sv tulip-rematch
+
+:::boss sv grusha-rematch
 
 <!-- fontes: notas pokemythology, Bulbapedia, Serebii -->

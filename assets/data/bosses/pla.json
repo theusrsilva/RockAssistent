@@ -13,7 +13,23 @@
     "https://www.pokewiki.de/Nessia",
     "https://www.pokewiki.de/Efelia",
     "https://www.pokemythology.net/detonados/detonado-legends-arceus/",
-    "https://game8.co/games/Pokemon-Legends-Arceus/archives/356654"
+    "https://game8.co/games/Pokemon-Legends-Arceus/archives/356654",
+    "https://www.serebii.net/legendsarceus/missfortune.shtml",
+    "https://www.serebii.net/legendsarceus/pathoftenacity.shtml",
+    "https://www.serebii.net/legendsarceus/missions/thedeifiedpokemon.shtml",
+    "https://www.serebii.net/legendsarceus/missions/thecounterpart.shtml",
+    "https://www.serebii.net/legendsarceus/missions/arezu'spredicament.shtml",
+    "https://www.serebii.net/legendsarceus/missions/theslumberinglordofthetundra.shtml",
+    "https://www.serebii.net/legendsarceus/requests/thediamondclan'streasure.shtml",
+    "https://www.serebii.net/legendsarceus/requests/thepearlclan'streasure.shtml",
+    "https://www.serebii.net/legendsarceus/requests/adaman'shope.shtml",
+    "https://www.serebii.net/legendsarceus/requests/irida'swish.shtml",
+    "https://www.dittobase.com/legends-arceus/trainers/akari",
+    "https://thonky.com/pokemon-legends-arceus/a-request-from-mai",
+    "https://game8.co/games/Pokemon-Legends-Arceus/archives/355605",
+    "https://game8.co/games/Pokemon-Legends-Arceus/archives/355775",
+    "https://game8.co/games/Pokemon-Legends-Arceus/archives/369239",
+    "https://playerassist.com/how-to-complete-the-battling-the-security-corps-secret-weapon-request-request-104-in-pokemon-legends-arceus/"
   ],
   "items": [
     {
@@ -67,7 +83,7 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu ; com Rowlet: Clefairy 61, Mr. Mime 62, Staraptor 62, Empoleon 63, Pikachu 63; com Cyndaquil: Clefairy 61, Mr. Mime 62, Staraptor 62, Torterra 63, Pikachu 63; com Oshawott: Clefairy 61, Mr. Mime 62, Staraptor 62, Infernape 63, Pikachu 63; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time)",
+      "notes": "rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time)",
       "versions": null
     },
     {
@@ -117,8 +133,8 @@
         }
       ],
       "level_cap": 12,
-      "verified": false,
-      "notes": "missão 5; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "missão 5; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -334,8 +350,8 @@
         }
       ],
       "level_cap": 26,
-      "verified": false,
-      "notes": "não capturável; dá a Earth Plate e a montaria; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "não capturável; dá a Earth Plate e a montaria; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -476,7 +492,11 @@
           "species": 112,
           "form": 0,
           "level": 34,
-          "moves": [],
+          "moves": [
+            "stealth-rock",
+            "bulldoze",
+            "rock-slide"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
@@ -485,7 +505,12 @@
           "species": 94,
           "form": 0,
           "level": 35,
-          "moves": [],
+          "moves": [
+            "dark-pulse",
+            "hypnosis",
+            "hex",
+            "venoshock"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
@@ -493,7 +518,7 @@
       ],
       "level_cap": 35,
       "verified": true,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "notes": null,
       "versions": null
     },
     {
@@ -897,8 +922,8 @@
         }
       ],
       "level_cap": 54,
-      "verified": false,
-      "notes": "teste da montaria; dá a Sky Plate; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "teste da montaria; dá a Sky Plate; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -950,8 +975,8 @@
         }
       ],
       "level_cap": 58,
-      "verified": false,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "missão 14; dá caminho ao Mesprit; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -974,8 +999,8 @@
         }
       ],
       "level_cap": 58,
-      "verified": false,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "missão 15; dá caminho ao Azelf; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -998,8 +1023,8 @@
         }
       ],
       "level_cap": 58,
-      "verified": false,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "missão 16; dá caminho ao Uxie; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1151,7 +1176,11 @@
           "species": 112,
           "form": 0,
           "level": 61,
-          "moves": [],
+          "moves": [
+            "stealth-rock",
+            "bulldoze",
+            "high-horsepower"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
@@ -1160,7 +1189,11 @@
           "species": 94,
           "form": 0,
           "level": 62,
-          "moves": [],
+          "moves": [
+            "dark-pulse",
+            "hypnosis",
+            "shadow-ball"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
@@ -1168,7 +1201,7 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "só no detonado; golpes não listados nas fontes",
+      "notes": null,
       "versions": null
     },
     {
@@ -1192,7 +1225,31 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "a luta final da história: acalme com balms e capture com a Origin Ball; Palkia Origem se você ficou do lado do Adaman; do lado da Irida é o Dialga Origem 65; só no detonado; golpes não listados nas fontes",
+      "notes": "a luta final da história: acalme com balms e capture com a Origin Ball; Palkia Origem se você ficou do lado do Adaman; do lado da Irida é o Dialga Origem 65; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "alpha-vespiquen",
+      "kind": "other",
+      "name": "Alpha Vespiquen",
+      "title": "Alpha",
+      "location": "Grueling Grove",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 416,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo (missão 20, com o Volo); dá a Stone Plate; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1201,7 +1258,7 @@
       "name": "Kamado",
       "title": "Galaxy Team",
       "location": "Prelude Beach",
-      "order": 35,
+      "order": 36,
       "badge": null,
       "party": [
         {
@@ -1285,7 +1342,7 @@
       "name": "Volo",
       "title": "Pokémon Wielder",
       "location": "Temple of Sinnoh",
-      "order": 36,
+      "order": 37,
       "badge": null,
       "party": [
         {
@@ -1382,7 +1439,7 @@
       "name": "Volo",
       "title": "Pokémon Wielder",
       "location": "Temple of Sinnoh",
-      "order": 37,
+      "order": 38,
       "badge": null,
       "party": [
         {
@@ -1425,7 +1482,7 @@
       "name": "Adaman",
       "title": "Clan Leader",
       "location": "Diamond Settlement",
-      "order": 38,
+      "order": 39,
       "badge": null,
       "party": [
         {
@@ -1479,7 +1536,7 @@
       "name": "Irida",
       "title": "Clan Leader",
       "location": "Pearl Settlement",
-      "order": 39,
+      "order": 40,
       "badge": null,
       "party": [
         {
@@ -1533,14 +1590,19 @@
       "name": "Arceus",
       "title": "Pokémon",
       "location": "Temple of Sinnoh (céu)",
-      "order": 40,
+      "order": 41,
       "badge": null,
       "party": [
         {
           "species": 493,
           "form": 0,
           "level": 75,
-          "moves": [],
+          "moves": [
+            "calm-mind",
+            "extrasensory",
+            "judgment",
+            "hyper-beam"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
@@ -1548,130 +1610,181 @@
       ],
       "level_cap": 75,
       "verified": true,
-      "notes": "pós-jogo (missão 27): acalme com balms; só no detonado; golpes não listados nas fontes",
+      "notes": "pós-jogo (missão 27): acalme com balms",
       "versions": null
     },
     {
-      "id": "akari-4",
-      "kind": "rival",
-      "name": "Akari",
-      "title": "Survey Corps",
-      "location": "Ginkgo Landing",
-      "order": 41,
+      "id": "wenton-1",
+      "kind": "other",
+      "name": "Wenton",
+      "title": "Security Corps",
+      "location": "Training Grounds",
+      "order": 42,
       "badge": null,
       "party": [
         {
-          "species": 35,
+          "species": 414,
           "form": 0,
-          "level": 60,
+          "level": 55,
           "moves": [
-            "psychic",
-            "moonblast",
-            "shadow-ball"
+            "air-slash",
+            "bug-buzz"
           ],
           "ability": null,
           "item": null,
           "tera_type": null
         },
         {
-          "species": 122,
+          "species": 135,
           "form": 0,
-          "level": 61,
+          "level": 55,
           "moves": [
-            "drain-punch",
-            "zen-headbutt",
-            "hypnosis"
+            "double-edge",
+            "thunderbolt"
           ],
           "ability": null,
           "item": null,
           "tera_type": null
         },
         {
-          "species": 398,
-          "form": 0,
-          "level": 61,
+          "species": 423,
+          "form": 1,
+          "level": 56,
           "moves": [
-            "quick-attack",
-            "brave-bird",
-            "close-combat"
+            "hydro-pump",
+            "earth-power",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "batalha do Ingo",
+      "versions": null
+    },
+    {
+      "id": "bren-1",
+      "kind": "other",
+      "name": "Bren",
+      "title": "Security Corps",
+      "location": "Training Grounds",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 413,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "energy-ball",
+            "bug-buzz"
           ],
           "ability": null,
           "item": null,
           "tera_type": null
         },
         {
-          "species": 388,
+          "species": 700,
           "form": 0,
-          "level": 62,
+          "level": 55,
           "moves": [
-            "bulldoze",
-            "leaf-blade",
-            "stealth-rock"
-          ],
-          "ability": null,
-          "item": null,
-          "tera_type": null
-        },
-        {
-          "species": 25,
-          "form": 0,
-          "level": 62,
-          "moves": [
-            "quick-attack",
-            "iron-tail",
-            "volt-tackle",
+            "double-edge",
             "play-rough"
           ],
           "ability": null,
           "item": null,
           "tera_type": null
+        },
+        {
+          "species": 423,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "hydro-pump",
+            "earth-power",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
         }
       ],
-      "level_cap": 62,
+      "level_cap": 56,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 60, Mr. Mime 61, Staraptor 61, Prinplup 62, Pikachu 62; com Oshawott: Clefairy 60, Mr. Mime 61, Staraptor 61, Monferno 62, Pikachu 62; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo (pedido 98, Daybreak)",
+      "notes": "batalha do Ingo",
       "versions": null
     },
     {
-      "id": "ress-1",
+      "id": "zisu-1",
       "kind": "other",
-      "name": "Ress",
+      "name": "Zisu",
       "title": "Security Corps",
-      "location": "Jubilife Village (saída)",
-      "order": 42,
+      "location": "Training Grounds",
+      "order": 44,
       "badge": null,
       "party": [
         {
-          "species": 399,
+          "species": 424,
           "form": 0,
-          "level": 62,
-          "moves": [],
+          "level": 57,
+          "moves": [
+            "quick-attack",
+            "fire-punch",
+            "thunder-punch",
+            "iron-tail"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
         },
         {
-          "species": 403,
+          "species": 430,
           "form": 0,
-          "level": 62,
-          "moves": [],
+          "level": 57,
+          "moves": [
+            "night-slash",
+            "aerial-ace",
+            "icy-wind"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
         },
         {
-          "species": 396,
+          "species": 405,
           "form": 0,
-          "level": 62,
-          "moves": [],
+          "level": 57,
+          "moves": [
+            "wild-charge",
+            "crunch",
+            "quick-attack",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 571,
+          "form": 1,
+          "level": 58,
+          "moves": [
+            "bitter-malice",
+            "shadow-sneak",
+            "dark-pulse",
+            "swift"
+          ],
           "ability": null,
           "item": null,
           "tera_type": null
         }
       ],
-      "level_cap": 62,
-      "verified": false,
-      "notes": "pós-jogo (pedido 104): só Alphas; só no detonado; na Serebii, a revanche no Training Grounds tem os três no nível 63; golpes não listados nas fontes",
+      "level_cap": 58,
+      "verified": true,
+      "notes": "batalha do Ingo",
       "versions": null
     },
     {
@@ -1680,7 +1793,7 @@
       "name": "Ingo",
       "title": "Warden",
       "location": "Training Grounds",
-      "order": 43,
+      "order": 45,
       "badge": null,
       "party": [
         {
@@ -1772,12 +1885,392 @@
       "versions": null
     },
     {
+      "id": "mai-2",
+      "kind": "other",
+      "name": "Mai",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 446,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "giga-impact",
+            "zen-headbutt",
+            "high-horsepower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 461,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "poison-jab",
+            "ice-shard",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "air-slash",
+            "cross-poison"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo, batalha do Ingo; os três Pokémon dela de uma vez",
+      "versions": null
+    },
+    {
+      "id": "sabi-2",
+      "kind": "other",
+      "name": "Sabi",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 464,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stone-edge",
+            "high-horsepower",
+            "rock-smash",
+            "megahorn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 467,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "poison-gas",
+            "flamethrower",
+            "rock-slide",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 466,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "thunder-wave",
+            "thunder-punch",
+            "ice-punch",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "pós-jogo, batalha do Ingo; os três Pokémon dela de uma vez",
+      "versions": null
+    },
+    {
+      "id": "akari-4",
+      "kind": "rival",
+      "name": "Akari",
+      "title": "Survey Corps",
+      "location": "Ginkgo Landing",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 35,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "psychic",
+            "moonblast",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "drain-punch",
+            "zen-headbutt",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 398,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "quick-attack",
+            "brave-bird",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 388,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "bulldoze",
+            "leaf-blade",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "quick-attack",
+            "iron-tail",
+            "volt-tackle",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 60, Mr. Mime 61, Staraptor 61, Prinplup 62, Pikachu 62; com Oshawott: Clefairy 60, Mr. Mime 61, Staraptor 61, Monferno 62, Pikachu 62; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo (pedido 102, Daybreak)",
+      "versions": null
+    },
+    {
+      "id": "alpha-onix",
+      "kind": "other",
+      "name": "Alpha Onix",
+      "title": "Alpha",
+      "location": "Oreburrow Tunnel",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo (pedido 103); não capturável; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "ress-1",
+      "kind": "other",
+      "name": "Ress",
+      "title": "Security Corps",
+      "location": "Jubilife Village (saída)",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 399,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "thunderbolt",
+            "ice-beam",
+            "shadow-ball",
+            "swift"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 403,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "fire-fang",
+            "play-rough",
+            "crunch",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 396,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "quick-attack",
+            "air-slash",
+            "roost",
+            "ominous-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "pós-jogo (pedido 104): só Alphas; golpes iguais aos da revanche no Training Grounds (lá os três têm nível 63)",
+      "versions": null
+    },
+    {
+      "id": "adaman-4",
+      "kind": "other",
+      "name": "Adaman",
+      "title": "Clan Leader",
+      "location": "Ginkgo Landing",
+      "order": 51,
+      "badge": null,
+      "party": [
+        {
+          "species": 470,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "leaf-blade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 197,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "dark-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 134,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "aqua-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "pós-jogo (pedido 106): só o Dialga Origem no seu time; os três Pokémon dele de uma vez",
+      "versions": null
+    },
+    {
+      "id": "irida-4",
+      "kind": "other",
+      "name": "Irida",
+      "title": "Clan Leader",
+      "location": "Diamond Settlement",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 196,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "pós-jogo (pedido 107): só o Palkia Origem no seu time; os três Pokémon dela de uma vez",
+      "versions": null
+    },
+    {
       "id": "ingo-3",
       "kind": "other",
       "name": "Ingo",
       "title": "Warden",
       "location": "Training Grounds",
-      "order": 44,
+      "order": 53,
       "badge": null,
       "party": [
         {
@@ -1876,7 +2369,7 @@
       "name": "Akari",
       "title": "Survey Corps",
       "location": "Training Grounds",
-      "order": 45,
+      "order": 54,
       "badge": null,
       "party": [
         {
@@ -1956,12 +2449,441 @@
       "versions": null
     },
     {
+      "id": "tenacity-galaxy-zisu",
+      "kind": "other",
+      "name": "Zisu",
+      "title": "Security Corps",
+      "location": "Training Grounds",
+      "order": 55,
+      "badge": null,
+      "party": [
+        {
+          "species": 78,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "flare-blitz",
+            "double-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 428,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "play-rough",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 392,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "nasty-plot",
+            "raging-fury",
+            "double-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória; Galaxy Team: Zisu, Beni e Kamado",
+      "versions": null
+    },
+    {
+      "id": "tenacity-galaxy-beni",
+      "kind": "other",
+      "name": "Beni",
+      "title": "Galaxy Team",
+      "location": "Training Grounds",
+      "order": 56,
+      "badge": null,
+      "party": [
+        {
+          "species": 429,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "shadow-ball",
+            "power-gem",
+            "extrasensory"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "dazzling-gleam",
+            "psychic",
+            "mystical-fire"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "drain-punch",
+            "psycho-cut",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
+      "id": "tenacity-galaxy-kamado",
+      "kind": "other",
+      "name": "Kamado",
+      "title": "Galaxy Team",
+      "location": "Training Grounds",
+      "order": 57,
+      "badge": null,
+      "party": [
+        {
+          "species": 76,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "iron-head",
+            "stone-edge",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 214,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "close-combat",
+            "pin-missile",
+            "aerial-ace"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "zen-headbutt",
+            "high-horsepower",
+            "giga-impact",
+            "fire-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
+      "id": "tenacity-diamond-arezu",
+      "kind": "other",
+      "name": "Arezu",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 58,
+      "badge": null,
+      "party": [
+        {
+          "species": 549,
+          "form": 1,
+          "level": 63,
+          "moves": [
+            "drain-punch",
+            "petal-dance",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 436,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "hex",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória; Diamond Clan (depois do pedido 106): Arezu, Melli e Adaman",
+      "versions": null
+    },
+    {
+      "id": "tenacity-diamond-melli",
+      "kind": "other",
+      "name": "Melli",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 59,
+      "badge": null,
+      "party": [
+        {
+          "species": 435,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "poison-jab",
+            "night-slash",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "hypnosis",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
+      "id": "tenacity-diamond-adaman",
+      "kind": "other",
+      "name": "Adaman",
+      "title": "Clan Leader",
+      "location": "Training Grounds",
+      "order": 60,
+      "badge": null,
+      "party": [
+        {
+          "species": 470,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "leaf-blade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 197,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "dark-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 134,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "aqua-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
+      "id": "tenacity-pearl-lian",
+      "kind": "other",
+      "name": "Lian",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 61,
+      "badge": null,
+      "party": [
+        {
+          "species": 705,
+          "form": 1,
+          "level": 63,
+          "moves": [
+            "iron-head",
+            "dragon-pulse",
+            "water-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 220,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "bulldoze",
+            "icicle-crash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória; Pearl Clan (depois do pedido 107): Lian, Gaeric e Irida",
+      "versions": null
+    },
+    {
+      "id": "tenacity-pearl-gaeric",
+      "kind": "other",
+      "name": "Gaeric",
+      "title": "Warden",
+      "location": "Training Grounds",
+      "order": 62,
+      "badge": null,
+      "party": [
+        {
+          "species": 362,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "ice-beam",
+            "crunch",
+            "icicle-crash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "ice-shard",
+            "hex"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
+      "id": "tenacity-pearl-irida",
+      "kind": "other",
+      "name": "Irida",
+      "title": "Clan Leader",
+      "location": "Training Grounds",
+      "order": 63,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 196,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 136,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "quick-attack",
+            "baby-doll-eyes",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "Path of Tenacity (1ª rodada): os três treinadores seguidos, sem cura; os times sobem a cada vitória",
+      "versions": null
+    },
+    {
       "id": "noble-kleavor-rematch",
       "kind": "other",
       "name": "Noble Kleavor",
       "title": "Noble",
       "location": "Grandtree Arena",
-      "order": 46,
+      "order": 64,
       "badge": null,
       "party": [
         {
@@ -1990,7 +2912,7 @@
       "name": "Noble Lilligant",
       "title": "Noble",
       "location": "Brava Arena",
-      "order": 47,
+      "order": 65,
       "badge": null,
       "party": [
         {
@@ -2019,7 +2941,7 @@
       "name": "Noble Arcanine",
       "title": "Noble",
       "location": "Molten Arena",
-      "order": 48,
+      "order": 66,
       "badge": null,
       "party": [
         {
@@ -2048,7 +2970,7 @@
       "name": "Noble Electrode",
       "title": "Noble",
       "location": "Moonview Arena",
-      "order": 49,
+      "order": 67,
       "badge": null,
       "party": [
         {
@@ -2077,7 +2999,7 @@
       "name": "Noble Avalugg",
       "title": "Noble",
       "location": "Icepeak Arena",
-      "order": 50,
+      "order": 68,
       "badge": null,
       "party": [
         {

@@ -17,7 +17,7 @@
 
 **Faça**
 - Ache a maleta do Rowan e escolha Turtwig, Chimchar ou Piplup (lv 5).
-- Vença o Starly selvagem; logo depois, primeira batalha com o Barry (sem chefe registrado).
+- Vença o Starly selvagem. Aqui não há luta com o Barry: a primeira é na Route 203.
 - Pós-Spear Pillar: Mesprit aparece na Verity Cavern e foge (vira errante).
 
 **Itens:** TM38 (Fire Blast, com Surf).
@@ -78,7 +78,7 @@
 
 **Faça**
 - Abra é captura boa (só tem Teleport).
-- Batalha com o Barry na entrada do Oreburgh Gate.
+- O Barry desafia você logo ao entrar na rota, vindo de Jubilife.
 
 :::encounters bdsp route-203
 
@@ -258,6 +258,12 @@
 
 :::encounters bdsp valley-windworks
 
+**Chefe**
+
+:::boss bdsp mars-1
+
+- Dica: Purugly é o ás; um golpe Fighting resolve.
+
 ## Floaroma Meadow
 
 **Faça**
@@ -272,12 +278,6 @@
 - Caminho para a Eterna Forest; a parte da Fuego Ironworks pede Surf.
 
 :::encounters bdsp route-205
-
-**Chefe**
-
-:::boss bdsp mars-1
-
-- Dica: Purugly é o ás; um golpe Fighting resolve.
 
 ## Eterna Forest
 
@@ -865,9 +865,9 @@
 
 **Chefe**
 
-:::boss bdsp barry-final
+:::boss bdsp barry-postgame
 
-- Dica: time final lv 68–74; mesmo time do pós-jogo, mais forte.
+- Dica: lv 58–64, aos sábados e domingos depois da Pokédex Nacional; o time final (lv 68–74) está no Pós-jogo.
 
 ## Route 225
 
@@ -925,12 +925,6 @@
 
 :::encounters bdsp route-230
 
-**Chefe**
-
-:::boss bdsp barry-postgame
-
-- Dica: aparece na Fight Area aos sábados/domingos depois do Heatran.
-
 ## Battle Park
 
 **Faça**
@@ -987,6 +981,8 @@
 :::boss bdsp cynthia-final
 
 :::boss bdsp dawn-final
+
+:::boss bdsp barry-final
 
 - Dica: as revanches finais chegam a lv 88 (Garchomp da Cynthia); treine com Lucky Egg e Chansey/Blissey.
 

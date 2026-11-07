@@ -2,7 +2,7 @@
 
 | Pokémon | Local | Nível | Condição | Versão |
 | --- | --- | --- | --- | --- |
-| Zygarde | Wild Zone 20 | 84 | Captura garantida; depois de Xerneas, Yveltal e L (MM42). Lutas de 10% (lv 33) e 50% (lv 57) na história | Jogo base |
+| Zygarde | Wild Zone 20 | 84 | Captura garantida; depois de Xerneas, Yveltal e L (MM42). Luta única em três fases (10%, 50% e Completo), todas no lv 84 | Jogo base |
 | Xerneas | Wild Zone 11 | 75 | Pós-jogo (MM40); vencer Alphas anômalos nas WZ 3, 5 e 9 | Jogo base |
 | Yveltal | Galerie de la Lune, Rouge Sector 2 (telhado) | 75 | Pós-jogo (MM41); vencer Rogues mais fortes (Victreebel, Hawlucha, Tyranitar) | Jogo base |
 | Diancie | Magenta Sector 8 | 70 | Diancite por Mystery Gift; seguir a Mimi a partir do Looker Bureau | Jogo base + evento |

@@ -4,13 +4,15 @@
     "https://www.serebii.net/pokemonchampions/rankedbattle/regulationm-c.shtml",
     "https://gamewith.ai/pokemon-champions/en/articles/regulation-mc",
     "https://www.pikalytics.com/pokedex/championstournaments",
-    "https://champdex.com/guides/stat-points"
+    "https://champdex.com/guides/stat-points",
+    "https://www.serebii.net/pokemonchampions/recruit/regularrosterm-c.shtml",
+    "https://game8.co/games/Pokemon-Champions/archives/538683"
   ],
   "name": "Regulation Set M-C",
   "game": "Pokémon Champions",
   "valid_from": "2026-09-09",
   "valid_to": "2026-12-02",
-  "checked_on": "2026-11-06",
+  "checked_on": "2026-11-07",
   "format": "doubles",
   "bring": 6,
   "pick": 4,
@@ -82,9 +84,10 @@
     "Leve 6 Pokémon e escolha 4 para cada batalha.",
     "Todos lutam no nível 50 (o jogo ajusta sozinho).",
     "Species Clause: sem dois Pokémon com o mesmo número da Pokédex Nacional (ex.: Heat Rotom e Wash Rotom juntos não).",
+    "Sem lendários nem míticos: nenhum está no roster do M-C.",
     "Item Clause: cada um pode segurar um item, mas sem itens repetidos.",
     "Mega Evolução vale (só nos Pokémon que têm Mega); não há Terastal.",
-    "Stat Points (SP) no lugar de EVs e IVs: 66 por Pokémon, no máximo 32 em um atributo.",
+    "Stat Points (SP) no lugar de EVs e IVs: 66 por Pokémon, no máximo 32 em um atributo. Cada SP custa 5 VP (tirar é de graça).",
     "Tempo: 7 minutos por jogador, 90 s para escolher os 4 e 45 s por turno."
   ],
   "rules_en": [
@@ -92,9 +95,10 @@
     "Bring 6 Pokémon and pick 4 for each battle.",
     "Everyone fights at level 50 (the game adjusts it).",
     "Species Clause: no two Pokémon with the same National Pokédex number (e.g. no Heat Rotom with Wash Rotom).",
+    "No legendary or mythical Pokémon: none are on the M-C roster.",
     "Item Clause: each one may hold an item, but no repeated items.",
     "Mega Evolution is allowed (only for Pokémon that have one); there is no Terastallization.",
-    "Stat Points (SP) replace EVs and IVs: 66 per Pokémon, at most 32 in one stat.",
+    "Stat Points (SP) replace EVs and IVs: 66 per Pokémon, at most 32 in one stat. Each SP costs 5 VP (removing is free).",
     "Clock: 7 minutes per player, 90 s to pick your 4 and 45 s per turn."
   ],
   "notes_pt": "Vale nas Ranked Battles do Pokémon Champions (temporadas M-6, M-7 e M-8) e na maior parte dos eventos do VGC no período. Não tira ninguém do M-A e do M-B: só adiciona. A lista completa de Pokémon fica no jogo (Recruit → Roster Info). A versão 1.2.0 mudou o PP de Wish e Strength Sap (12 → 8) e o poder de alguns golpes; calculadoras antigas podem errar.",

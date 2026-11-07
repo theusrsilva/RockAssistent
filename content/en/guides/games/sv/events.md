@@ -16,7 +16,8 @@
 | 7★ Mewtwo (Tera Psychic) | 2023 | Event Tera Raid |
 | Mythical Pecha Berry (unlocks Pecharunt) | 2024 | Mystery Gift via internet (Mochi Mayhem epilogue) |
 | World Championship (VGC) Pokémon | 2023–2024 | Mystery Gift by code |
-| Shiny Rayquaza, shiny Glimmora and other guaranteed-shiny raids | 2024 | Event 5★ Tera Raid (to be confirmed) |
+| Shiny Rayquaza (Dragon Tera Type) | Dec 2024–Jan 2025 | Event 5★ Tera Raid; the first one with a guaranteed shiny (catchable once per save) |
+| Shiny Chi-Yu, Ting-Lu, Chien-Pao and Wo-Chien | 2025 | Event Tera Raids with a guaranteed shiny, one at a time |
 
 - A 7★ raid Pokémon can only be caught once per save file and comes with the Mightiest Mark.
 - There were also gifts for linking Pokémon HOME and Pokémon GO (Gimmighoul in Roaming Form).

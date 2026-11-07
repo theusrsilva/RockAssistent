@@ -10,7 +10,24 @@
     "https://www.pokewiki.de/Cosette",
     "https://www.pokewiki.de/Anouk",
     "https://www.pokewiki.de/Asami",
-    "https://www.pokemythology.net/detonados/detonado-legends-z-a/"
+    "https://www.pokemythology.net/detonados/detonado-legends-z-a/",
+    "https://gmtreks.com/pokemon-z-a/main-missions/10",
+    "https://gmtreks.com/pokemon-z-a/main-missions/18",
+    "https://gmtreks.com/pokemon-z-a/main-missions/19",
+    "https://gmtreks.com/pokemon-z-a/main-missions/28",
+    "https://gmtreks.com/pokemon-z-a/main-missions/29",
+    "https://gmtreks.com/pokemon-z-a/main-missions/30",
+    "https://gmtreks.com/pokemon-z-a/main-missions/33",
+    "https://gmtreks.com/pokemon-z-a/main-missions/37",
+    "https://gmtreks.com/pokemon-z-a/main-missions/38",
+    "https://gmtreks.com/pokemon-z-a/main-missions/40",
+    "https://www.sportskeeda.com/pokemon/how-defeat-rogue-mega-tyranitar-pokemon-legends-z-a",
+    "https://www.sportskeeda.com/pokemon/how-defeat-rogue-mega-starmie-pokemon-legends-z-a",
+    "https://deltiasgaming.com/?p=373754",
+    "https://serebii.net/pokearth/lumiosecity/quasarticoinc..shtml",
+    "https://serebii.net/legendsz-a/mainmissions/reachingrankx.shtml",
+    "https://www.serebii.net/legendsz-a/mainmissions/reachingrankd.shtml",
+    "https://www.pokewiki.de/Gwynn"
   ],
   "items": [
     {
@@ -171,7 +188,7 @@
       ],
       "level_cap": 11,
       "verified": true,
-      "notes": "o detonado dá Machop 15 e Meditite 15",
+      "notes": null,
       "versions": null
     },
     {
@@ -241,7 +258,7 @@
         },
         {
           "species": 666,
-          "form": 6,
+          "form": 7,
           "level": 16,
           "moves": [
             "light-screen",
@@ -506,23 +523,23 @@
       "kind": "other",
       "name": "Rogue Mega Absol",
       "title": "Rogue Mega",
-      "location": "telhado (missão 9)",
+      "location": "Jaune District (telhado, missão 9)",
       "order": 11,
       "badge": null,
       "party": [
         {
           "species": 359,
           "form": 0,
-          "level": 34,
+          "level": 25,
           "moves": [],
           "ability": null,
           "item": null,
           "tera_type": null
         }
       ],
-      "level_cap": 34,
+      "level_cap": 25,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; você luta com um Lucario emprestado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; você luta com um Lucario emprestado; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -674,7 +691,7 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -698,7 +715,7 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -722,7 +739,7 @@
       ],
       "level_cap": 34,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -988,7 +1005,7 @@
       ],
       "level_cap": 41,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1011,8 +1028,8 @@
         }
       ],
       "level_cap": 41,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1035,8 +1052,8 @@
         }
       ],
       "level_cap": 41,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1178,7 +1195,7 @@
         },
         {
           "species": 711,
-          "form": 3,
+          "form": 1,
           "level": 44,
           "moves": [
             "trick-or-treat",
@@ -1359,7 +1376,7 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1383,7 +1400,7 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1411,7 +1428,7 @@
         },
         {
           "species": 711,
-          "form": 3,
+          "form": 1,
           "level": 46,
           "moves": [
             "trick-or-treat",
@@ -1478,7 +1495,7 @@
       ],
       "level_cap": 48,
       "verified": true,
-      "notes": "Mega Evolução descontrolada; só no detonado; o detonado diz nível 41; o walkthrough da Bulbapedia e o da Deltia's Gaming dão 48, como o Mawile e o Barbaracle; golpes não listados nas fontes",
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1743,8 +1760,8 @@
         }
       ],
       "level_cap": 53,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1767,8 +1784,8 @@
         }
       ],
       "level_cap": 53,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -1791,8 +1808,8 @@
         }
       ],
       "level_cap": 53,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2184,8 +2201,8 @@
         }
       ],
       "level_cap": 59,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2208,8 +2225,8 @@
         }
       ],
       "level_cap": 59,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2303,8 +2320,8 @@
         }
       ],
       "level_cap": 59,
-      "verified": false,
-      "notes": "Mega Evolução descontrolada; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2704,8 +2721,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2746,8 +2763,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; com Ivor e Gwynn; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com Ivor e Gwynn; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2779,8 +2796,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; com a Canari; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com a Canari; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2812,8 +2829,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; com a Lebanne; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com a Lebanne; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2845,8 +2862,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; com o Corbeau; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com o Corbeau; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2887,8 +2904,8 @@
         }
       ],
       "level_cap": 62,
-      "verified": false,
-      "notes": "vários Rogue Megas de uma vez; só no detonado; com o Grisham e a Griselle; golpes não listados nas fontes",
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com o Grisham e a Griselle; golpes não listados nas fontes",
       "versions": null
     },
     {
@@ -2991,12 +3008,68 @@
       "versions": null
     },
     {
+      "id": "zach-reward-1",
+      "kind": "other",
+      "name": "Zach",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 60,
+      "badge": null,
+      "party": [
+        {
+          "species": 79,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "water-gun",
+            "growl",
+            "tackle",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 16,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "quick-attack",
+            "growl",
+            "thunder-wave",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 10,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 1 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
       "id": "griselle-reward",
       "kind": "other",
       "name": "Griselle",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 60,
+      "order": 61,
       "badge": null,
       "party": [
         {
@@ -3081,7 +3154,7 @@
       "name": "Lida",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 61,
+      "order": 62,
       "badge": null,
       "party": [
         {
@@ -3166,7 +3239,7 @@
       "name": "Tarragon",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 62,
+      "order": 63,
       "badge": null,
       "party": [
         {
@@ -3251,7 +3324,7 @@
       "name": "Xavi",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 63,
+      "order": 64,
       "badge": null,
       "party": [
         {
@@ -3336,7 +3409,7 @@
       "name": "Gwynn",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 64,
+      "order": 65,
       "badge": null,
       "party": [
         {
@@ -3355,7 +3428,7 @@
         },
         {
           "species": 711,
-          "form": 3,
+          "form": 1,
           "level": 69,
           "moves": [
             "trick-or-treat",
@@ -3421,7 +3494,7 @@
       "name": "Lebanne",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 65,
+      "order": 66,
       "badge": null,
       "party": [
         {
@@ -3506,7 +3579,7 @@
       "name": "Naveen",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 66,
+      "order": 67,
       "badge": null,
       "party": [
         {
@@ -3591,7 +3664,7 @@
       "name": "Yvon",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 67,
+      "order": 68,
       "badge": null,
       "party": [
         {
@@ -3652,7 +3725,7 @@
         },
         {
           "species": 666,
-          "form": 6,
+          "form": 7,
           "level": 69,
           "moves": [
             "hurricane",
@@ -3676,7 +3749,7 @@
       "name": "Rintaro",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 68,
+      "order": 69,
       "badge": null,
       "party": [
         {
@@ -3761,7 +3834,7 @@
       "name": "Canari",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 69,
+      "order": 70,
       "badge": null,
       "party": [
         {
@@ -3860,7 +3933,7 @@
       "name": "Mani",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 70,
+      "order": 71,
       "badge": null,
       "party": [
         {
@@ -3945,7 +4018,7 @@
       "name": "Emma",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 71,
+      "order": 72,
       "badge": null,
       "party": [
         {
@@ -4044,7 +4117,7 @@
       "name": "Corbeau",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 72,
+      "order": 73,
       "badge": null,
       "party": [
         {
@@ -4143,7 +4216,7 @@
       "name": "Taunie",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 73,
+      "order": 74,
       "badge": null,
       "party": [
         {
@@ -4242,7 +4315,7 @@
       "name": "Ivor",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 74,
+      "order": 75,
       "badge": null,
       "party": [
         {
@@ -4341,7 +4414,7 @@
       "name": "Philippe",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 75,
+      "order": 76,
       "badge": null,
       "party": [
         {
@@ -4426,7 +4499,7 @@
       "name": "Jacinthe",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 76,
+      "order": 77,
       "badge": null,
       "party": [
         {
@@ -4525,7 +4598,7 @@
       "name": "Grisham",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 77,
+      "order": 78,
       "badge": null,
       "party": [
         {
@@ -4624,7 +4697,7 @@
       "name": "Vinnie",
       "title": "Z-A Royale",
       "location": "Quasartico Inc.",
-      "order": 78,
+      "order": 79,
       "badge": null,
       "party": [
         {

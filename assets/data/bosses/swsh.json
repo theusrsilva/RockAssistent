@@ -15,7 +15,8 @@
     "https://www.pokewiki.de/Saverio",
     "https://www.pokemythology.net/detonados/detonado-sword-shield/",
     "https://www.serebii.net/pokedex-swsh/eternatus/locations.shtml",
-    "https://samurai-gamers.com/pokemon-sword-and-shield/dojo-matron-honey-battle-court-guide"
+    "https://samurai-gamers.com/pokemon-sword-and-shield/dojo-matron-honey-battle-court-guide",
+    "https://www.pokewiki.de/Mastrich"
   ],
   "items": [
     {
@@ -2387,7 +2388,7 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Inteleon 60; com Sobble: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Cinderace 60; com Grookey Sword Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zamazenta 70; com Scorbunny Sword Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Rillaboom 70, Zamazenta 70; com Sobble Sword Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zamazenta 70; com Grookey Shield Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zacian 70; com Scorbunny Shield Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Rillaboom 70, Zacian 70; com Sobble Shield Only: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zacian 70; pós-jogo; Rillaboom usa Dynamax",
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Inteleon 60; com Sobble: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Cinderace 60; pós-jogo; Rillaboom usa Dynamax",
       "versions": null
     },
     {
@@ -2458,7 +2459,7 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": null,
+      "notes": "depois vêm as Max Raids nos estádios (lv 62): Dynamax Tsareena (Turffield), Gyarados (Hulbury) e Torkoal (Motostoke), com o líder de cada um do seu lado",
       "versions": [
         "sword"
       ]
@@ -2531,7 +2532,7 @@
       ],
       "level_cap": 60,
       "verified": true,
-      "notes": null,
+      "notes": "depois vêm as Max Raids nos estádios (lv 62): Dynamax Tsareena (Turffield), Gyarados (Hulbury) e Torkoal (Motostoke), com o líder de cada um do seu lado",
       "versions": [
         "shield"
       ]
@@ -2590,7 +2591,7 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado",
+      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado; depois, Max Raids lv 62 em Stow-on-Side (Dynamax Conkeldurr no Sword, Dusknoir no Shield), Circhester (Gigalith no Sword, Froslass no Shield) e Hammerlocke (Haxorus)",
       "versions": null
     },
     {
@@ -2647,7 +2648,7 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado",
+      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado; depois, Max Raids lv 62 em Stow-on-Side (Dynamax Conkeldurr no Sword, Dusknoir no Shield), Circhester (Gigalith no Sword, Froslass no Shield) e Hammerlocke (Haxorus)",
       "versions": null
     },
     {
@@ -4408,6 +4409,105 @@
       "versions": [
         "shield"
       ]
+    },
+    {
+      "id": "mustard-ultimate",
+      "kind": "other",
+      "name": "Mustard",
+      "title": "Dojo Master",
+      "location": "Master Dojo",
+      "order": 64,
+      "badge": null,
+      "party": [
+        {
+          "species": 620,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "fake-out",
+            "u-turn",
+            "blaze-kick",
+            "close-combat"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 405,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "psychic-fangs",
+            "wild-charge",
+            "crunch",
+            "play-rough"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 745,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "accelerock",
+            "stealth-rock",
+            "stone-edge",
+            "play-rough"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "iron-head",
+            "brave-bird",
+            "body-press",
+            "light-screen"
+          ],
+          "ability": "unnerve",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 784,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "clanging-scales",
+            "aura-sphere",
+            "flash-cannon",
+            "clangorous-soul"
+          ],
+          "ability": "soundproof",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 892,
+          "form": 1,
+          "level": 80,
+          "moves": [
+            "surging-strikes",
+            "close-combat",
+            "poison-jab",
+            "iron-head"
+          ],
+          "ability": "unseen-fist",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 80,
+      "verified": true,
+      "notes": "depois do Galarian Star Tournament, uma vez por dia; o Urshifu dele é o oposto do seu (Rapid Strike se você subiu a Tower of Darkness; com a Tower of Waters, Single Strike com wicked-blow no lugar de surging-strikes); Urshifu usa Gigantamax",
+      "versions": null
     }
   ]
 }

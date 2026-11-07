@@ -1,5 +1,7 @@
 {
   "source": [
+    "https://www.serebii.net/pokedex-xy/666.shtml",
+    "https://serebii.net/pokearth/kalos/geosengetown.shtml",
     "https://www.serebii.net/xy/gyms.shtml",
     "https://www.serebii.net/xy/elitefour.shtml",
     "https://www.serebii.net/xy/teamflare.shtml",
@@ -74,7 +76,7 @@
         },
         {
           "species": 666,
-          "form": 0,
+          "form": 6,
           "level": 12,
           "moves": [
             "harden",
@@ -88,7 +90,7 @@
       ],
       "level_cap": 12,
       "verified": true,
-      "notes": null,
+      "notes": "Vivillon no padrão Meadow (forma 6)",
       "versions": null
     },
     {
@@ -308,7 +310,7 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "dupla: dois Lucario, com a Serena/Calem do seu lado",
+      "notes": "luta simples: dois Lucario, um de cada vez",
       "versions": null
     },
     {

@@ -8,10 +8,10 @@
 | Chien-Pao | Icerend Shrine (West Province, Area One) | 60 | 8 estacas amarelas | Ambas |
 | Wo-Chien | Grasswither Shrine (South Province, Area One) | 60 | 8 estacas roxas | Ambas |
 | Chi-Yu | Firescourge Shrine (acima da Fury Falls) | 60 | 8 estacas azuis | Ambas |
-| Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks | Area Zero | ~55–65 | Selvagens durante e após The Way Home | Scarlet |
-| Roaring Moon | Area Zero | ~60–65 | Caverna secreta de Area Zero (atrás de pedras, perto da Research Station 4); mais fácil no pós-jogo | Scarlet |
-| Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns | Area Zero | ~55–65 | Selvagens durante e após The Way Home | Violet |
-| Iron Valiant | Area Zero | ~60–65 | Caverna secreta de Area Zero (atrás de pedras, perto da Research Station 4); mais fácil no pós-jogo | Violet |
+| Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks | Area Zero | 52–60 | Selvagens durante e após The Way Home | Scarlet |
+| Roaring Moon | Area Zero | 52–60 | Caverna secreta de Area Zero (atrás de pedras, perto da Research Station 3); mais fácil no pós-jogo | Scarlet |
+| Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns | Area Zero | 52–60 | Selvagens durante e após The Way Home | Violet |
+| Iron Valiant | Area Zero | 52–60 | Caverna secreta de Area Zero (atrás de pedras, perto da Research Station 3); mais fácil no pós-jogo | Violet |
 
 ## The Teal Mask (DLC)
 

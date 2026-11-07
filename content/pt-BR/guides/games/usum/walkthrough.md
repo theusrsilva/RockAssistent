@@ -896,6 +896,8 @@
 
 - Dica: o Silvally dele tem tipo forte contra o seu inicial.
 
+:::boss usum necrozma-capture
+
 ## Plank Bridge
 
 **Faça**
@@ -915,6 +917,7 @@
 **Faça**
 - Elite Four em qualquer ordem e Hau pelo título.
 - Depois: revanches dos kahunas, capitães e Totem.
+- Pós-jogo: os 8 treinadores das evoluções do Eevee e o Kagetora (Eevium Z); Tapus nível 60 nas ruínas.
 
 :::encounters usum pokemon-league
 
@@ -944,7 +947,31 @@
 
 :::boss usum kiawe-3
 
-:::boss usum faba-rr
+:::boss usum eevee-user-polly
+
+:::boss usum eevee-user-braiden
+
+:::boss usum eevee-user-rea
+
+:::boss usum eevee-user-chad
+
+:::boss usum eevee-user-linnea
+
+:::boss usum eevee-user-jane
+
+:::boss usum eevee-user-ishaan
+
+:::boss usum eevee-user-kira
+
+:::boss usum kagetora
+
+:::boss usum tapu-koko
+
+:::boss usum tapu-lele
+
+:::boss usum tapu-bulu
+
+:::boss usum tapu-fini
 
 - Dica: Molayne (Steel) cai para Fire/Ground; Olivia (Rock) para Water/Grass; Acerola (Ghost) para Dark; Kahili (Flying) para Electric/Ice/Rock.
 
@@ -1030,6 +1057,8 @@
 
 **Chefe**
 
+:::boss usum faba-rr
+
 :::boss usum archie-rr
 
 :::boss usum maxie-rr
@@ -1096,5 +1125,11 @@
 - Batalhe contra Red ou Blue para entrar; Single, Double e Multi no nível 50.
 
 :::encounters usum battle-tree
+
+**Chefe**
+
+:::boss usum red-entry
+
+:::boss usum blue-entry
 
 <!-- fontes: notas pokemythology, pokemondb, Serebii -->

@@ -614,7 +614,7 @@
       "name": "Firescourge Shrine",
       "kind": "building",
       "order": 63,
-      "map_node": "north-province-area-one",
+      "map_node": "north-province-area-two",
       "poke_api_location_id": 862,
       "bosses_before": []
     },

@@ -161,7 +161,7 @@
 
 **Faça**
 - Promotion Match do Rintaro (Rank W para V), com os três macacos.
-- Missão 9: Rogue Mega Absol num telhado do Vert District, só com o Lucario emprestado; depois o Absol vira seu.
+- Missão 9: Rogue Mega Absol (lv 25) num telhado do Jaune District, só com o Lucario emprestado; depois o Absol (lv 30) vira seu.
 - Missão 10: AZ dá a Mega Stone do seu inicial; revanche do rival com Mega Manectric.
 
 :::boss za rintaro-w
@@ -199,10 +199,23 @@
 
 **Faça**
 - Justice Dojo no Jaune Sector 2; Pansage/Pansear/Panpour nas árvores do Jaune Sector 4.
+- Missões 11–14: Rogue Megas Slowbro (Aymlis Park), Camerupt (Jaune Sector 3) e Victreebel (Magenta Sector 9), todos no lv 34; revanche do Naveen no Hotel Z.
 
 **Itens:** TM086 Wild Charge (Jaune Sector 2), TM035 Endure (Sector 4), TM060 Future Sight (Sector 6), TM044 Hyper Beam (Sector 7).
 
 :::encounters za jaune-district
+
+**Chefes**
+
+:::boss za rogue-slowbro
+
+:::boss za rogue-camerupt
+
+:::boss za rogue-victreebel
+
+:::boss za naveen-2
+
+- Dica: cada Rogue Mega dá a Mega Stone dele ao ser vencido.
 
 ## Wild Zone 7
 
@@ -253,7 +266,7 @@
 
 **Faça**
 - Tarragon na garagem; depois Promotion Match da Canari (Rank F para E).
-- No caso da Gwynn, revanche opcional com a Canari.
+- No caso da Gwynn, revanche opcional com a Canari (ver The Sewers).
 
 **Itens:** TM066 Volt Switch.
 
@@ -261,22 +274,14 @@
 
 :::boss za canari-f
 
-:::boss za canari-rematch
-
 - Dica: Canari é Electric: Ground pega quase todos (o Eelektross costuma ter Levitate). Tarragon cai com Water e Grass.
 
 ## Justice Dojo
 
 **Faça**
-- Revanche com a Josée; Promotion Match do Ivor (Rank E para D) acontece aqui depois.
+- Revanche com a Josée e Promotion Match do Ivor (Rank E para D), depois do caso da Gwynn (ver The Sewers).
 
 **Itens:** TM011 Bulk Up.
-
-:::boss za josee-2
-
-:::boss za ivor-e
-
-- Dica: Ivor é Fighting (Mega Falinks): Flying, Psychic e Fairy.
 
 ## Académie Étoile
 
@@ -307,22 +312,13 @@
 
 **Faça**
 - Aymlis Park com neve (nível ~34).
-- Missões 11–18: Rogue Megas Slowbro (Aymlis Park), Camerupt (Jaune Sector 3), Victreebel (Magenta Sector 9), Beedrill (Vert Sector 5), Hawlucha (Magenta Sector 3) e Banette (Jaune Sector 9).
-- Zygarde 10% no Hotel Z (lv 33) e revanche do Naveen.
+- Missões 15–18: Rogue Megas Beedrill (Vert Sector 5), Hawlucha (Magenta Sector 3) e Banette (Jaune Sector 9), todos no lv 41.
 
 **Itens:** TM013 Ice Beam.
 
 :::encounters za wild-zone-12
 
 **Chefes**
-
-:::boss za rogue-slowbro
-
-:::boss za rogue-camerupt
-
-:::boss za rogue-victreebel
-
-:::boss za naveen-2
 
 :::boss za rogue-beedrill
 
@@ -351,9 +347,17 @@
 
 :::encounters za sewers-main-access
 
+**Chefes**
+
+:::boss za josee-2
+
+:::boss za canari-rematch
+
 :::boss za gwynn-1
 
-- Dica: Gwynn é Ghost (Mega Chandelure): Dark, Water e Ground.
+:::boss za ivor-e
+
+- Dica: Gwynn é Ghost (Mega Chandelure): Dark, Water e Ground. Ivor é Fighting (Mega Falinks): Flying, Psychic e Fairy.
 
 ## The Sewers (Canal Access)
 
@@ -472,7 +476,7 @@
 ## Hotel Richissime
 
 **Faça**
-- Super-Tournoi: Canari, Ivor e Corbeau seguidos; depois Zygarde 50% (lv 57).
+- Super-Tournoi: Canari, Ivor e Corbeau seguidos.
 - Promotion Match da Jacinthe (Rank C para B).
 - Rogues Dragonite (Vert Sector 3), Tyranitar (Jaune Sector 4) e Starmie (Bleu Sector 9); revanche do Philippe; Emma no Looker Bureau.
 
@@ -571,7 +575,7 @@
 ## Lysandre Labs
 
 **Faça**
-- Pós-jogo; Alpha Aegislash fixo; Mewtwo no B3F (precisa das Mewtwonites X e Y).
+- Pós-jogo; Alpha Aegislash fixo (lv 50); Mewtwo no B3F (precisa das Mewtwonites X e Y).
 
 **Itens:** TM090 Dark Pulse (B1F).
 
@@ -581,7 +585,7 @@
 
 **Faça**
 - Ruínas da Prism Tower (nível ~55, MM39); os 6 iniciais e dezenas de Alphas.
-- Zygarde lv 84 com captura garantida (MM42).
+- Zygarde lv 84 com captura garantida (MM42): uma luta só, em três fases (10%, 50% e Completo).
 
 **Itens:** TM054 Draco Meteor.
 
@@ -594,6 +598,8 @@
 - L, o treinador mais forte, no caminho do Hotel Z (MM42).
 
 :::boss za l-final
+
+:::boss za zach-reward-1
 
 :::boss za griselle-reward
 

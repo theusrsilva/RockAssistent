@@ -161,7 +161,7 @@
 
 **To do**
 - Rintaro's Promotion Match (Rank W to V), with the three monkeys.
-- Mission 9: Rogue Mega Absol on a Vert District rooftop, using only the borrowed Lucario; then Absol joins you.
+- Mission 9: Rogue Mega Absol (lv 25) on a Jaune District rooftop, using only the borrowed Lucario; then Absol (lv 30) joins you.
 - Mission 10: AZ gives your starter's Mega Stone; rival rematch with Mega Manectric.
 
 :::boss za rintaro-w
@@ -199,10 +199,23 @@
 
 **To do**
 - Justice Dojo in Jaune Sector 2; Pansage/Pansear/Panpour in the Jaune Sector 4 trees.
+- Missions 11–14: Rogue Megas Slowbro (Aymlis Park), Camerupt (Jaune Sector 3) and Victreebel (Magenta Sector 9), all at lv 34; Naveen rematch at Hotel Z.
 
 **Items:** TM086 Wild Charge (Jaune Sector 2), TM035 Endure (Sector 4), TM060 Future Sight (Sector 6), TM044 Hyper Beam (Sector 7).
 
 :::encounters za jaune-district
+
+**Bosses**
+
+:::boss za rogue-slowbro
+
+:::boss za rogue-camerupt
+
+:::boss za rogue-victreebel
+
+:::boss za naveen-2
+
+- Tip: each Rogue Mega drops its Mega Stone when defeated.
 
 ## Wild Zone 7
 
@@ -253,7 +266,7 @@
 
 **To do**
 - Tarragon in the garage; then Canari's Promotion Match (Rank F to E).
-- During Gwynn's case, optional rematch with Canari.
+- During Gwynn's case, optional rematch with Canari (see The Sewers).
 
 **Items:** TM066 Volt Switch.
 
@@ -261,22 +274,14 @@
 
 :::boss za canari-f
 
-:::boss za canari-rematch
-
 - Tip: Canari uses Electric: Ground hits almost all (Eelektross usually has Levitate). Tarragon falls to Water and Grass.
 
 ## Justice Dojo
 
 **To do**
-- Rematch with Josée; Ivor's Promotion Match (Rank E to D) happens here later.
+- Rematch with Josée and Ivor's Promotion Match (Rank E to D), after Gwynn's case (see The Sewers).
 
 **Items:** TM011 Bulk Up.
-
-:::boss za josee-2
-
-:::boss za ivor-e
-
-- Tip: Ivor uses Fighting (Mega Falinks): Flying, Psychic and Fairy.
 
 ## Académie Étoile
 
@@ -307,22 +312,13 @@
 
 **To do**
 - Snowy Aymlis Park (level ~34).
-- Missions 11–18: Rogue Megas Slowbro (Aymlis Park), Camerupt (Jaune Sector 3), Victreebel (Magenta Sector 9), Beedrill (Vert Sector 5), Hawlucha (Magenta Sector 3) and Banette (Jaune Sector 9).
-- Zygarde 10% at Hotel Z (lv 33) and Naveen rematch.
+- Missions 15–18: Rogue Megas Beedrill (Vert Sector 5), Hawlucha (Magenta Sector 3) and Banette (Jaune Sector 9), all at lv 41.
 
 **Items:** TM013 Ice Beam.
 
 :::encounters za wild-zone-12
 
 **Bosses**
-
-:::boss za rogue-slowbro
-
-:::boss za rogue-camerupt
-
-:::boss za rogue-victreebel
-
-:::boss za naveen-2
 
 :::boss za rogue-beedrill
 
@@ -351,9 +347,17 @@
 
 :::encounters za sewers-main-access
 
+**Bosses**
+
+:::boss za josee-2
+
+:::boss za canari-rematch
+
 :::boss za gwynn-1
 
-- Tip: Gwynn uses Ghost (Mega Chandelure): Dark, Water and Ground.
+:::boss za ivor-e
+
+- Tip: Gwynn uses Ghost (Mega Chandelure): Dark, Water and Ground. Ivor uses Fighting (Mega Falinks): Flying, Psychic and Fairy.
 
 ## The Sewers (Canal Access)
 
@@ -472,7 +476,7 @@
 ## Hotel Richissime
 
 **To do**
-- Super-Tournoi: Canari, Ivor and Corbeau back to back; then Zygarde 50% (lv 57).
+- Super-Tournoi: Canari, Ivor and Corbeau back to back.
 - Jacinthe's Promotion Match (Rank C to B).
 - Rogues Dragonite (Vert Sector 3), Tyranitar (Jaune Sector 4) and Starmie (Bleu Sector 9); Philippe rematch; Emma at the Looker Bureau.
 
@@ -571,7 +575,7 @@
 ## Lysandre Labs
 
 **To do**
-- Postgame; fixed Alpha Aegislash; Mewtwo on B3F (needs Mewtwonite X and Y).
+- Postgame; fixed Alpha Aegislash (lv 50); Mewtwo on B3F (needs Mewtwonite X and Y).
 
 **Items:** TM090 Dark Pulse (B1F).
 
@@ -581,7 +585,7 @@
 
 **To do**
 - Prism Tower ruins (level ~55, MM39); all 6 starters and dozens of Alphas.
-- Zygarde lv 84, guaranteed catch (MM42).
+- Zygarde lv 84, guaranteed catch (MM42): a single fight in three phases (10%, 50% and Complete).
 
 **Items:** TM054 Draco Meteor.
 
@@ -594,6 +598,8 @@
 - L, the strongest trainer, on the way to Hotel Z (MM42).
 
 :::boss za l-final
+
+:::boss za zach-reward-1
 
 :::boss za griselle-reward
 

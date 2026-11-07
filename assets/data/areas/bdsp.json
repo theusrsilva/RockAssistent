@@ -40,9 +40,7 @@
       "order": 4,
       "map_node": "sandgem-town",
       "poke_api_location_id": 163,
-      "bosses_before": [
-        "barry-route-201"
-      ]
+      "bosses_before": []
     },
     {
       "id": "route-202",

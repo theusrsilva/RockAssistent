@@ -2,6 +2,8 @@
   "source": [
     "https://www.serebii.net/pokearth/hisui/ (sub-áreas, horários, Alphas, árvores, minérios, Mass Outbreaks, distorções)",
     "https://pokemondb.net/location (2ª fonte: Hisui) e docs/superpowers/sources/pla-pokemythology-notes.md",
+    "https://www.serebii.net/legendsarceus/legendary.shtml",
+    "https://pokemondb.net/location/hisui-celestica-ruins",
     "Distorção do espaço-tempo = walk com conditions space_time_distortion. Chance pela maior porcentagem do Serebii (>= 20% common, >= 5% uncommon). verified = a espécie também aparece na área no pokemondb ou nas notas."
   ],
   "items": [
@@ -1638,7 +1640,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "windswept-run",
@@ -4923,7 +4925,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-verity",
@@ -13713,7 +13715,7 @@
         "legends-arceus"
       ],
       "alpha": true,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lake-valor",
@@ -18846,7 +18848,7 @@
       "verified": true
     },
     {
-      "area": "tranquility-cove",
+      "area": "sands-reach",
       "species": 642,
       "form": 0,
       "method": "fixed",
@@ -18858,7 +18860,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "tranquility-cove",
@@ -20958,7 +20960,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "heavenward-lookout",
@@ -22773,7 +22775,7 @@
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "clamberclaw-cliffs",
@@ -23257,36 +23259,6 @@
     },
     {
       "area": "celestica-ruins",
-      "species": 66,
-      "form": 0,
-      "method": "walk",
-      "min_level": 21,
-      "max_level": 63,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "celestica-ruins",
-      "species": 67,
-      "form": 0,
-      "method": "walk",
-      "min_level": 21,
-      "max_level": 63,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "legends-arceus"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "celestica-ruins",
       "species": 74,
       "form": 0,
       "method": "walk",
@@ -23577,13 +23549,13 @@
       "method": "walk",
       "min_level": 21,
       "max_level": 63,
-      "chance": null,
+      "chance": "uncommon",
       "conditions": null,
       "versions": [
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",
@@ -23592,13 +23564,13 @@
       "method": "walk",
       "min_level": 21,
       "max_level": 63,
-      "chance": null,
+      "chance": "uncommon",
       "conditions": null,
       "versions": [
         "legends-arceus"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "celestica-ruins",

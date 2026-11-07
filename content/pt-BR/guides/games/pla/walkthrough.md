@@ -132,6 +132,10 @@
 
 :::encounters pla grueling-grove
 
+**Chefe**
+
+:::boss pla alpha-vespiquen
+
 ## Oreburrow Tunnel
 
 **Faça**
@@ -139,6 +143,10 @@
 - Daybreak: Alpha Onix 60 (Req103).
 
 :::encounters pla oreburrow-tunnel
+
+**Chefe**
+
+:::boss pla alpha-onix
 
 ## The Heartwood
 
@@ -294,13 +302,15 @@
 
 **Faça**
 - Vila do Diamond Clan (Adaman).
-- Pós-jogo: Adaman (Req89) dá o Adamant Crystal.
+- Pós-jogo: Adaman (Req89) dá o Adamant Crystal; depois do Daybreak, Irida (Req107) pede uma luta só contra o seu Palkia Origem.
 
 :::encounters pla diamond-settlement
 
-**Chefe**
+**Chefes**
 
 :::boss pla adaman-3
+
+:::boss pla irida-4
 
 - Dica: Leafeon 64 perde para Fire, Ice, Flying, Bug e Poison.
 
@@ -404,13 +414,15 @@
 
 **Faça**
 - Alphas: Machoke 40, Walrein 50, Drapion.
-- Daybreak: Akari/Rei desafia você aqui (Req98).
+- Daybreak: Akari/Rei desafia você aqui (Req102); depois, Adaman (Req106) pede uma luta só contra o seu Dialga Origem.
 
 :::encounters pla ginkgo-landing
 
-**Chefe**
+**Chefes**
 
 :::boss pla akari-4
+
+:::boss pla adaman-4
 
 - Dica: Staraptor perde para Electric/Ice/Rock; Pikachu para Ground.
 
@@ -971,10 +983,21 @@
 
 **Faça**
 - Ress (Req104) usa só Alphas.
-- Ingo no Training Grounds: revanches mais fortes depois do Daybreak.
+- Ingo no Training Grounds: Wenton, Bren e Zisu, Mai e Sabi, o próprio Ingo e revanches mais fortes depois do Daybreak.
+- Path of Tenacity (Ingo, depois do Daybreak): três treinadores seguidos, sem cura; os times crescem a cada vitória. Abaixo, a 1ª rodada de cada grupo.
 - Revanche dos Noble em lv 70 (depois do Arceus).
 
 **Chefes**
+
+:::boss pla wenton-1
+
+:::boss pla bren-1
+
+:::boss pla zisu-1
+
+:::boss pla mai-2
+
+:::boss pla sabi-2
 
 :::boss pla ress-1
 
@@ -983,6 +1006,24 @@
 :::boss pla ingo-3
 
 :::boss pla akari-5
+
+:::boss pla tenacity-galaxy-zisu
+
+:::boss pla tenacity-galaxy-beni
+
+:::boss pla tenacity-galaxy-kamado
+
+:::boss pla tenacity-diamond-arezu
+
+:::boss pla tenacity-diamond-melli
+
+:::boss pla tenacity-diamond-adaman
+
+:::boss pla tenacity-pearl-lian
+
+:::boss pla tenacity-pearl-gaeric
+
+:::boss pla tenacity-pearl-irida
 
 :::boss pla noble-kleavor-rematch
 

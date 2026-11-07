@@ -896,6 +896,8 @@
 
 - Tip: his Silvally has a type that beats your starter.
 
+:::boss usum necrozma-capture
+
 ## Plank Bridge
 
 **To do**
@@ -915,6 +917,7 @@
 **To do**
 - Elite Four in any order, then Hau for the title.
 - Afterwards: kahuna, captain and Totem rematches.
+- Post-game: the 8 Eevee-evolution trainers and Kagetora (Eevium Z); level 60 Tapus at the ruins.
 
 :::encounters usum pokemon-league
 
@@ -944,7 +947,31 @@
 
 :::boss usum kiawe-3
 
-:::boss usum faba-rr
+:::boss usum eevee-user-polly
+
+:::boss usum eevee-user-braiden
+
+:::boss usum eevee-user-rea
+
+:::boss usum eevee-user-chad
+
+:::boss usum eevee-user-linnea
+
+:::boss usum eevee-user-jane
+
+:::boss usum eevee-user-ishaan
+
+:::boss usum eevee-user-kira
+
+:::boss usum kagetora
+
+:::boss usum tapu-koko
+
+:::boss usum tapu-lele
+
+:::boss usum tapu-bulu
+
+:::boss usum tapu-fini
 
 - Tip: Molayne (Steel) falls to Fire/Ground; Olivia (Rock) to Water/Grass; Acerola (Ghost) to Dark; Kahili (Flying) to Electric/Ice/Rock.
 
@@ -1030,6 +1057,8 @@
 
 **Boss**
 
+:::boss usum faba-rr
+
 :::boss usum archie-rr
 
 :::boss usum maxie-rr
@@ -1096,5 +1125,11 @@
 - Beat Red or Blue to get in; Single, Double and Multi at level 50.
 
 :::encounters usum battle-tree
+
+**Boss**
+
+:::boss usum red-entry
+
+:::boss usum blue-entry
 
 <!-- sources: pokemythology notes, pokemondb, Serebii -->

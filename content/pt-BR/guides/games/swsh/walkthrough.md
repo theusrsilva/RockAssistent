@@ -788,7 +788,9 @@
 
 :::boss swsh avery-final
 
-- Dica: Peony usa Steel; Fire e Ground. Marnie, Klara e Avery finais só depois do Galarian Star Tournament.
+:::boss swsh mustard-ultimate
+
+- Dica: Peony usa Steel; Fire e Ground. Marnie, Klara, Avery e Mustard finais só depois do Galarian Star Tournament (o Mustard no Master Dojo).
 
 ## Max Lair
 

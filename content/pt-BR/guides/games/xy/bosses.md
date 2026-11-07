@@ -10,7 +10,7 @@ Todos os chefes da história e do pós-jogo, em ordem. O detonado mostra cada um
 - **Tierno** (Rival, Route 5): Planta ou Elétrico vencem o Corphish dele.
 - **Tierno & Trevor** (Rival, Route 7): Batalha dupla na Route 7: derrube primeiro o Corphish com Planta/Elétrico.
 - **Grant** (Gym Leader, Cyllage Gym): Escale a parede; Água, Planta, Lutador ou Aço resolvem Tyrunt e Amaura.
-- **Korrina** (Gym Leader, Geosenge Town): Dois Lucario com um parceiro: golpes de Fogo, Lutador e Terra batem forte.
+- **Korrina** (Gym Leader, Geosenge Town): Dois Lucario, um de cada vez: golpes de Fogo, Lutador e Terra batem forte.
 - **Serena** (Rival, Tower of Mastery, Shalour City): Rival: o Absol é fraco a Lutador e Fada.
 - **Korrina** (Gym Leader, Shalour Gym): Voador e Psíquico vencem o time; o Hawlucha é rápido, ataque-o primeiro.
 - **Korrina** (Gym Leader, Tower of Mastery, Shalour City): Você usa o Lucario que ela acabou de dar; megaevolua logo no começo (sem megaevoluir, a luta recomeça).

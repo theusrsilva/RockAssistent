@@ -2,7 +2,7 @@
 
 | Pokémon | Location | Level | Condition | Version |
 | --- | --- | --- | --- | --- |
-| Zygarde | Wild Zone 20 | 84 | Guaranteed catch; after Xerneas, Yveltal and L (MM42). 10% (lv 33) and 50% (lv 57) fights during the story | Base game |
+| Zygarde | Wild Zone 20 | 84 | Guaranteed catch; after Xerneas, Yveltal and L (MM42). single fight in three phases (10%, 50% and Complete), all at lv 84 | Base game |
 | Xerneas | Wild Zone 11 | 75 | Postgame (MM40); beat the anomalous Alphas in WZ 3, 5 and 9 | Base game |
 | Yveltal | Galerie de la Lune, Rouge Sector 2 (rooftop) | 75 | Postgame (MM41); beat stronger Rogues (Victreebel, Hawlucha, Tyranitar) | Base game |
 | Diancie | Magenta Sector 8 | 70 | Diancite via Mystery Gift; follow Mimi from the Looker Bureau | Base game + event |

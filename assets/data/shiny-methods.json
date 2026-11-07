@@ -37,7 +37,11 @@
     "https://www.serebii.net/scarletviolet/shinypokemon.shtml",
     "https://www.serebii.net/swordshield/shinypokemon.shtml",
     "https://www.serebii.net/xy/pokeradar.shtml",
-    "https://www.smogon.com/ingame/guides/dpp_pokeradar"
+    "https://www.smogon.com/ingame/guides/dpp_pokeradar",
+    "https://www.serebii.net/omegarubyalphasapphire/dexnav.shtml",
+    "https://pokemon.fandom.com/wiki/Shiny",
+    "https://pokemondb.net/pokebase/434759/what-the-highest-theoretically-possible-shiny-chance-game",
+    "https://www.serebii.net/ultrasunultramoon/ultrawormholes.shtml"
   ],
   "items": [
     {
@@ -548,24 +552,122 @@
           "kind": "steps",
           "steps": [
             {
-              "label": "100–199",
-              "min": 100,
-              "max": 199,
-              "odds": 1064.03,
+              "label": "0",
+              "min": 0,
+              "max": 0,
+              "odds": 4096.0,
               "rolls": null
             },
             {
-              "label": "200–998",
-              "min": 200,
-              "max": 998,
-              "odds": 853.49,
+              "label": "1–16",
+              "min": 1,
+              "max": 16,
+              "odds": 2906.0,
               "rolls": null
             },
             {
-              "label": "999",
-              "min": 999,
+              "label": "17–33",
+              "min": 17,
+              "max": 33,
+              "odds": 2251.79,
+              "rolls": null
+            },
+            {
+              "label": "34–50",
+              "min": 34,
+              "max": 50,
+              "odds": 1838.01,
+              "rolls": null
+            },
+            {
+              "label": "51–66",
+              "min": 51,
+              "max": 66,
+              "odds": 1552.69,
+              "rolls": null
+            },
+            {
+              "label": "67–83",
+              "min": 67,
+              "max": 83,
+              "odds": 1344.05,
+              "rolls": null
+            },
+            {
+              "label": "84–100",
+              "min": 84,
+              "max": 100,
+              "odds": 1184.84,
+              "rolls": null
+            },
+            {
+              "label": "101–150",
+              "min": 101,
+              "max": 150,
+              "odds": 1059.36,
+              "rolls": null
+            },
+            {
+              "label": "151–200",
+              "min": 151,
+              "max": 200,
+              "odds": 957.9,
+              "rolls": null
+            },
+            {
+              "label": "201–300",
+              "min": 201,
+              "max": 300,
+              "odds": 874.19,
+              "rolls": null
+            },
+            {
+              "label": "301–400",
+              "min": 301,
+              "max": 400,
+              "odds": 803.93,
+              "rolls": null
+            },
+            {
+              "label": "401–500",
+              "min": 401,
+              "max": 500,
+              "odds": 744.12,
+              "rolls": null
+            },
+            {
+              "label": "501–600",
+              "min": 501,
+              "max": 600,
+              "odds": 692.59,
+              "rolls": null
+            },
+            {
+              "label": "601–700",
+              "min": 601,
+              "max": 700,
+              "odds": 647.74,
+              "rolls": null
+            },
+            {
+              "label": "701–800",
+              "min": 701,
+              "max": 800,
+              "odds": 608.35,
+              "rolls": null
+            },
+            {
+              "label": "801–900",
+              "min": 801,
+              "max": 900,
+              "odds": 573.47,
+              "rolls": null
+            },
+            {
+              "label": "901–999",
+              "min": 901,
               "max": 999,
-              "odds": 476.49,
+              "odds": 542.37,
               "rolls": null
             }
           ],
@@ -578,8 +680,8 @@
       "games": [
         "oras"
       ],
-      "notes": "Não segue a conta de rolagens. Com o Amuleto: 1/380,88 (100), 1/307,12 (200), 1/173,16 (999). Abaixo do nível 100 a fonte não dá número. O contador da hunt só bate com o nível de busca se a espécie começou do zero.",
-      "verified": false
+      "notes": "Não segue a conta de rolagens. Faixas e odds da Serebii (busca comum). Com o Amuleto: 1/1365,67 (0), 1/395,28 (84–100), 1/291,73 (201–300), 1/181,12 (901–999). Os encontros em sequência (50 e 100) e o bônus de 4% sobem mais a chance. O contador da hunt só bate com o nível de busca se a espécie começou do zero.",
+      "verified": true
     },
     {
       "id": "sos_chain",
@@ -737,7 +839,7 @@
       "games": [
         "usum"
       ],
-      "notes": "Por viagem. 2% a 1000 anos-luz, +1% a cada 500, até 10% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. Efeito do Amuleto desconhecido. As faixas entre os pontos de 500 anos-luz são nossas.",
+      "notes": "Por viagem. 2% a 1000 anos-luz, +1% a cada 500, até 10% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. O Amuleto Brilhante não muda essa chance. As faixas entre os pontos de 500 anos-luz são nossas.",
       "verified": true
     },
     {
@@ -828,7 +930,7 @@
       "games": [
         "usum"
       ],
-      "notes": "Por viagem. 3% a 1000 anos-luz, +2% a cada 500, até 19% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. Efeito do Amuleto desconhecido. As faixas entre os pontos de 500 anos-luz são nossas.",
+      "notes": "Por viagem. 3% a 1000 anos-luz, +2% a cada 500, até 19% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. O Amuleto Brilhante não muda essa chance. As faixas entre os pontos de 500 anos-luz são nossas.",
       "verified": true
     },
     {
@@ -898,7 +1000,7 @@
       "games": [
         "usum"
       ],
-      "notes": "Por viagem. 16% a 2500 anos-luz, +4% a cada 500, até 36% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. Efeito do Amuleto desconhecido. As faixas entre os pontos de 500 anos-luz são nossas.",
+      "notes": "Por viagem. 16% a 2500 anos-luz, +4% a cada 500, até 36% em 5000+. Sem anéis (tipo 1): 1% a qualquer distância. O Amuleto Brilhante não muda essa chance. As faixas entre os pontos de 500 anos-luz são nossas.",
       "verified": true
     },
     {

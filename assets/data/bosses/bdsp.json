@@ -7,40 +7,17 @@
     "https://www.serebii.net/brilliantdiamondshiningpearl/teamgalactic.shtml",
     "https://www.serebii.net/brilliantdiamondshiningpearl/gymrematch.shtml",
     "https://www.pokemythology.net/detonados/detonado-brilliant-diamond-shining-pearl/",
-    "https://hero.fandom.com/wiki/Dawn_(Pok%C3%A9mon)"
+    "https://hero.fandom.com/wiki/Dawn_(Pok%C3%A9mon)",
+    "https://www.serebii.net/pokearth/sinnoh/route201.shtml"
   ],
   "items": [
-    {
-      "id": "barry-route-201",
-      "kind": "rival",
-      "name": "Barry",
-      "title": "Rival",
-      "location": "Route 201 (Lake Verity)",
-      "order": 1,
-      "badge": null,
-      "party": [
-        {
-          "species": 393,
-          "form": 0,
-          "level": 5,
-          "moves": [],
-          "ability": null,
-          "item": null,
-          "tera_type": null
-        }
-      ],
-      "level_cap": 5,
-      "verified": false,
-      "notes": "golpes padrão do nível; time para quem escolheu Chimchar; com Piplup: Turtwig 5; com Turtwig: Chimchar 5; só no detonado: a Serebii e o game8 não listam luta no Lake Verity (a 1ª luta do Barry seria na Route 203)",
-      "versions": null
-    },
     {
       "id": "barry-1",
       "kind": "rival",
       "name": "Barry",
       "title": "Rival",
       "location": "Route 203",
-      "order": 2,
+      "order": 1,
       "badge": null,
       "party": [
         {
@@ -80,7 +57,7 @@
       "name": "Roark",
       "title": "Gym Leader",
       "location": "Oreburgh Gym",
-      "order": 3,
+      "order": 2,
       "badge": "Coal Badge",
       "party": [
         {
@@ -134,7 +111,7 @@
       "name": "Mars",
       "title": "Team Galactic",
       "location": "Valley Windworks",
-      "order": 4,
+      "order": 3,
       "badge": null,
       "party": [
         {
@@ -177,7 +154,7 @@
       "name": "Gardenia",
       "title": "Gym Leader",
       "location": "Eterna Gym",
-      "order": 5,
+      "order": 4,
       "badge": "Forest Badge",
       "party": [
         {
@@ -234,7 +211,7 @@
       "name": "Jupiter",
       "title": "Team Galactic",
       "location": "Team Galactic Eterna Building",
-      "order": 6,
+      "order": 5,
       "badge": null,
       "party": [
         {
@@ -277,7 +254,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Hearthome City",
-      "order": 7,
+      "order": 6,
       "badge": null,
       "party": [
         {
@@ -348,7 +325,7 @@
       "name": "Maylene",
       "title": "Gym Leader",
       "location": "Veilstone Gym",
-      "order": 8,
+      "order": 7,
       "badge": "Cobble Badge",
       "party": [
         {
@@ -405,7 +382,7 @@
       "name": "Crasher Wake",
       "title": "Gym Leader",
       "location": "Pastoria Gym",
-      "order": 9,
+      "order": 8,
       "badge": "Fen Badge",
       "party": [
         {
@@ -462,7 +439,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Pastoria City (Great Marsh)",
-      "order": 10,
+      "order": 9,
       "badge": null,
       "party": [
         {
@@ -533,7 +510,7 @@
       "name": "Fantina",
       "title": "Gym Leader",
       "location": "Hearthome Gym",
-      "order": 11,
+      "order": 10,
       "badge": "Relic Badge",
       "party": [
         {
@@ -590,7 +567,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Canalave City",
-      "order": 12,
+      "order": 11,
       "badge": null,
       "party": [
         {
@@ -675,7 +652,7 @@
       "name": "Byron",
       "title": "Gym Leader",
       "location": "Canalave Gym",
-      "order": 13,
+      "order": 12,
       "badge": "Mine Badge",
       "party": [
         {
@@ -732,7 +709,7 @@
       "name": "Saturn",
       "title": "Team Galactic",
       "location": "Lake Valor",
-      "order": 14,
+      "order": 13,
       "badge": null,
       "party": [
         {
@@ -789,7 +766,7 @@
       "name": "Mars",
       "title": "Team Galactic",
       "location": "Lake Verity",
-      "order": 15,
+      "order": 14,
       "badge": null,
       "party": [
         {
@@ -846,7 +823,7 @@
       "name": "Candice",
       "title": "Gym Leader",
       "location": "Snowpoint Gym",
-      "order": 16,
+      "order": 15,
       "badge": "Icicle Badge",
       "party": [
         {
@@ -917,7 +894,7 @@
       "name": "Cyrus",
       "title": "Team Galactic",
       "location": "Team Galactic HQ, Veilstone City",
-      "order": 17,
+      "order": 16,
       "badge": null,
       "party": [
         {
@@ -974,7 +951,7 @@
       "name": "Saturn",
       "title": "Team Galactic",
       "location": "Team Galactic HQ, Veilstone City",
-      "order": 18,
+      "order": 17,
       "badge": null,
       "party": [
         {
@@ -1031,7 +1008,7 @@
       "name": "Mars",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 19,
+      "order": 18,
       "badge": null,
       "party": [
         {
@@ -1088,7 +1065,7 @@
       "name": "Jupiter",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 20,
+      "order": 19,
       "badge": null,
       "party": [
         {
@@ -1145,7 +1122,7 @@
       "name": "Cyrus",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 21,
+      "order": 20,
       "badge": null,
       "party": [
         {
@@ -1216,7 +1193,7 @@
       "name": "Volkner",
       "title": "Gym Leader",
       "location": "Sunyshore Gym",
-      "order": 22,
+      "order": 21,
       "badge": "Beacon Badge",
       "party": [
         {
@@ -1287,7 +1264,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Pokémon League (entrada)",
-      "order": 23,
+      "order": 22,
       "badge": null,
       "party": [
         {
@@ -1386,7 +1363,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 24,
+      "order": 23,
       "badge": null,
       "party": [
         {
@@ -1471,7 +1448,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 25,
+      "order": 24,
       "badge": null,
       "party": [
         {
@@ -1556,7 +1533,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 26,
+      "order": 25,
       "badge": null,
       "party": [
         {
@@ -1641,7 +1618,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 27,
+      "order": 26,
       "badge": null,
       "party": [
         {
@@ -1726,7 +1703,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 28,
+      "order": 27,
       "badge": null,
       "party": [
         {
@@ -1825,7 +1802,7 @@
       "name": "Morimoto",
       "title": "Game Freak",
       "location": "Hotel Grand Lake",
-      "order": 29,
+      "order": 28,
       "badge": null,
       "party": [
         {
@@ -1924,7 +1901,7 @@
       "name": "Roark",
       "title": "Gym Leader",
       "location": "Oreburgh Gym",
-      "order": 30,
+      "order": 29,
       "badge": "Coal Badge",
       "party": [
         {
@@ -2020,7 +1997,7 @@
       "name": "Gardenia",
       "title": "Gym Leader",
       "location": "Eterna Gym",
-      "order": 31,
+      "order": 30,
       "badge": "Forest Badge",
       "party": [
         {
@@ -2116,7 +2093,7 @@
       "name": "Maylene",
       "title": "Gym Leader",
       "location": "Veilstone Gym",
-      "order": 32,
+      "order": 31,
       "badge": "Cobble Badge",
       "party": [
         {
@@ -2215,7 +2192,7 @@
       "name": "Crasher Wake",
       "title": "Gym Leader",
       "location": "Pastoria Gym",
-      "order": 33,
+      "order": 32,
       "badge": "Fen Badge",
       "party": [
         {
@@ -2314,7 +2291,7 @@
       "name": "Fantina",
       "title": "Gym Leader",
       "location": "Hearthome Gym",
-      "order": 34,
+      "order": 33,
       "badge": "Relic Badge",
       "party": [
         {
@@ -2413,7 +2390,7 @@
       "name": "Byron",
       "title": "Gym Leader",
       "location": "Canalave Gym",
-      "order": 35,
+      "order": 34,
       "badge": "Mine Badge",
       "party": [
         {
@@ -2509,7 +2486,7 @@
       "name": "Candice",
       "title": "Gym Leader",
       "location": "Snowpoint Gym",
-      "order": 36,
+      "order": 35,
       "badge": "Icicle Badge",
       "party": [
         {
@@ -2608,7 +2585,7 @@
       "name": "Volkner",
       "title": "Gym Leader",
       "location": "Sunyshore Gym",
-      "order": 37,
+      "order": 36,
       "badge": "Beacon Badge",
       "party": [
         {
@@ -2707,7 +2684,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 38,
+      "order": 37,
       "badge": null,
       "party": [
         {
@@ -2792,7 +2769,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 39,
+      "order": 38,
       "badge": null,
       "party": [
         {
@@ -2877,7 +2854,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 40,
+      "order": 39,
       "badge": null,
       "party": [
         {
@@ -2962,7 +2939,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 41,
+      "order": 40,
       "badge": null,
       "party": [
         {
@@ -3047,7 +3024,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 42,
+      "order": 41,
       "badge": null,
       "party": [
         {
@@ -3146,7 +3123,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Fight Area",
-      "order": 43,
+      "order": 42,
       "badge": null,
       "party": [
         {
@@ -3245,7 +3222,7 @@
       "name": "Dawn",
       "title": "Rival",
       "location": "Sandgem Town",
-      "order": 44,
+      "order": 43,
       "badge": null,
       "party": [
         {
@@ -3344,7 +3321,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 45,
+      "order": 44,
       "badge": null,
       "party": [
         {
@@ -3443,7 +3420,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 46,
+      "order": 45,
       "badge": null,
       "party": [
         {
@@ -3542,7 +3519,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 47,
+      "order": 46,
       "badge": null,
       "party": [
         {
@@ -3641,7 +3618,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 48,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -3740,7 +3717,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 49,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -3839,7 +3816,7 @@
       "name": "Dawn",
       "title": "Rival",
       "location": "Sandgem Town",
-      "order": 50,
+      "order": 49,
       "badge": null,
       "party": [
         {
@@ -3938,7 +3915,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Fight Area",
-      "order": 51,
+      "order": 50,
       "badge": null,
       "party": [
         {

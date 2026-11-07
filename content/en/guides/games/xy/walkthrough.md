@@ -170,7 +170,7 @@ _Story order. [X]/[Y] = only in that version._
 
 - Route 10 is lined with menhirs; Eevee and Hawlucha appear here.
 - Team Flare shows up in Geosenge Town.
-- Korrina challenges you to a double battle at the east exit.
+- Korrina challenges you to a single battle at the east exit.
 
 **Items**
 
@@ -184,7 +184,7 @@ _Story order. [X]/[Y] = only in that version._
 
 :::boss xy korrina-geosenge
 
-- Tip: Two Lucario with a partner: Fire, Fighting and Ground moves hit hard.
+- Tip: Two Lucario, one at a time: Fire, Fighting and Ground moves hit hard.
 
 ## Route 11 → Tower of Mastery
 
@@ -624,7 +624,7 @@ _Story order. [X]/[Y] = only in that version._
 
 **Do**
 
-- Take the TMV from Lumiose Station to Kiloude City.
+- Sycamore gives you the TMV Pass at Lumiose Station; ride the TMV to Kiloude City.
 - Battle Maison (level 50) and Friend Safari (types from your 3DS friends).
 - Looker Bureau missions in Lumiose (Rouge Plaza).
 - Legendary bird at Sea Spirit's Den; Mewtwo in the Unknown Dungeon.

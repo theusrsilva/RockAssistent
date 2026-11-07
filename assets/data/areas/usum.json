@@ -858,7 +858,8 @@
       "map_node": "plank-bridge",
       "poke_api_location_id": 721,
       "bosses_before": [
-        "gladion-3"
+        "gladion-3",
+        "necrozma-capture"
       ]
     },
     {
@@ -899,7 +900,19 @@
         "mallow-3",
         "lana-3",
         "kiawe-3",
-        "faba-rr"
+        "eevee-user-polly",
+        "eevee-user-braiden",
+        "eevee-user-rea",
+        "eevee-user-chad",
+        "eevee-user-linnea",
+        "eevee-user-jane",
+        "eevee-user-ishaan",
+        "eevee-user-kira",
+        "kagetora",
+        "tapu-koko",
+        "tapu-lele",
+        "tapu-bulu",
+        "tapu-fini"
       ]
     },
     {
@@ -1000,6 +1013,7 @@
       "map_node": "poni-gauntlet",
       "poke_api_location_id": 795,
       "bosses_before": [
+        "faba-rr",
         "archie-rr",
         "maxie-rr",
         "cyrus-rr-us",
@@ -1015,6 +1029,8 @@
         "morimoto-iwao",
         "aristo-1",
         "dexio-3",
+        "red-entry",
+        "blue-entry",
         "molayne-2",
         "olivia-e4-2",
         "acerola-2",

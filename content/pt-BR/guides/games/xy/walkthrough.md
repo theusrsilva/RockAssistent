@@ -170,7 +170,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 - A Route 10 tem os menires; Eevee e Hawlucha aparecem aqui.
 - A Team Flare aparece em Geosenge Town.
-- A Korrina chama para uma dupla na saída leste.
+- A Korrina desafia você para uma luta simples na saída leste.
 
 **Itens**
 
@@ -184,7 +184,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 :::boss xy korrina-geosenge
 
-- Dica: Dois Lucario com um parceiro: golpes de Fogo, Lutador e Terra batem forte.
+- Dica: Dois Lucario, um de cada vez: golpes de Fogo, Lutador e Terra batem forte.
 
 ## Route 11 → Tower of Mastery
 
@@ -624,7 +624,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 **Faça**
 
-- Pegue o TMV na Lumiose Station até Kiloude City.
+- O Sycamore dá o TMV Pass na Lumiose Station; pegue o TMV até Kiloude City.
 - Battle Maison (nível 50) e Friend Safari (tipos dos seus amigos do 3DS).
 - Missões do Looker Bureau em Lumiose (Rouge Plaza).
 - Ave lendária na Sea Spirit's Den; Mewtwo no Unknown Dungeon.

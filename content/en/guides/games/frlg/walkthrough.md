@@ -1013,126 +1013,6 @@ Story order, from Pallet Town to the Sevii Islands. Each stop: what to do, items
 
 :::encounters frlg icefall-cave
 
-## Seven Island (Quest Island)
-
-**Do**
-
-- Trainer Tower: timed climb.
-- Head south to Sevault Canyon.
-
-## Trainer Tower
-
-**Do**
-
-- Single, double, knockout and mixed modes.
-- Prizes based on time.
-
-**Encounters**
-
-:::encounters frlg trainer-tower
-
-## Canyon Entrance
-
-**Do**
-
-- Gateway to Sevault Canyon.
-
-**Encounters**
-
-:::encounters frlg canyon-entrance
-
-## Sevault Canyon / Tanoby Key
-
-**Do**
-
-- Strong trainers.
-- Tanoby Key: boulder puzzle that opens the chambers.
-
-**Encounters**
-
-:::encounters frlg sevault-canyon
-
-## Tanoby Ruins
-
-**Do**
-
-- Seven chambers with Unown.
-- Surf between the islets.
-
-**Encounters**
-
-:::encounters frlg tanoby-ruins
-
-## Tanoby Ruins (Monean Chamber)
-
-**Do**
-
-- Unown ? and A.
-
-**Encounters**
-
-:::encounters frlg monean-chamber
-
-## Tanoby Ruins (Liptoo Chamber)
-
-**Do**
-
-- Unown C, D, H, O, U.
-
-**Encounters**
-
-:::encounters frlg liptoo-chamber
-
-## Tanoby Ruins (Weepth Chamber)
-
-**Do**
-
-- Unown E, I, N, S.
-
-**Encounters**
-
-:::encounters frlg weepth-chamber
-
-## Tanoby Ruins (Dilford Chamber)
-
-**Do**
-
-- Unown J, L, P, Q, R.
-
-**Encounters**
-
-:::encounters frlg dilford-chamber
-
-## Tanoby Ruins (Scufib Chamber)
-
-**Do**
-
-- Unown F, G, K, T, Y.
-
-**Encounters**
-
-:::encounters frlg scufib-chamber
-
-## Tanoby Ruins (Rixy Chamber)
-
-**Do**
-
-- Unown B, M, V, W, X.
-
-**Encounters**
-
-:::encounters frlg rixy-chamber
-
-## Tanoby Ruins (Viapos Chamber)
-
-**Do**
-
-- Unown ! and Z.
-
-**Encounters**
-
-:::encounters frlg viapos-chamber
-
 ## Six Island (Fortune Island)
 
 **Do**
@@ -1305,6 +1185,126 @@ Story order, from Pallet Town to the Sevii Islands. Each stop: what to do, items
 **Encounters**
 
 :::encounters frlg lost-cave
+
+## Seven Island (Quest Island)
+
+**Do**
+
+- Trainer Tower: timed climb.
+- Head south to Sevault Canyon.
+
+## Trainer Tower
+
+**Do**
+
+- Single, double, knockout and mixed modes.
+- Prizes based on time.
+
+**Encounters**
+
+:::encounters frlg trainer-tower
+
+## Canyon Entrance
+
+**Do**
+
+- Gateway to Sevault Canyon.
+
+**Encounters**
+
+:::encounters frlg canyon-entrance
+
+## Sevault Canyon / Tanoby Key
+
+**Do**
+
+- Strong trainers.
+- Tanoby Key: boulder puzzle that opens the chambers.
+
+**Encounters**
+
+:::encounters frlg sevault-canyon
+
+## Tanoby Ruins
+
+**Do**
+
+- Seven chambers with Unown.
+- Surf between the islets.
+
+**Encounters**
+
+:::encounters frlg tanoby-ruins
+
+## Tanoby Ruins (Monean Chamber)
+
+**Do**
+
+- Unown ? and A.
+
+**Encounters**
+
+:::encounters frlg monean-chamber
+
+## Tanoby Ruins (Liptoo Chamber)
+
+**Do**
+
+- Unown C, D, H, O, U.
+
+**Encounters**
+
+:::encounters frlg liptoo-chamber
+
+## Tanoby Ruins (Weepth Chamber)
+
+**Do**
+
+- Unown E, I, N, S.
+
+**Encounters**
+
+:::encounters frlg weepth-chamber
+
+## Tanoby Ruins (Dilford Chamber)
+
+**Do**
+
+- Unown J, L, P, Q, R.
+
+**Encounters**
+
+:::encounters frlg dilford-chamber
+
+## Tanoby Ruins (Scufib Chamber)
+
+**Do**
+
+- Unown F, G, K, T, Y.
+
+**Encounters**
+
+:::encounters frlg scufib-chamber
+
+## Tanoby Ruins (Rixy Chamber)
+
+**Do**
+
+- Unown B, M, V, W, X.
+
+**Encounters**
+
+:::encounters frlg rixy-chamber
+
+## Tanoby Ruins (Viapos Chamber)
+
+**Do**
+
+- Unown ! and Z.
+
+**Encounters**
+
+:::encounters frlg viapos-chamber
 
 ## Cerulean Cave (Unknown Dungeon)
 

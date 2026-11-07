@@ -28,7 +28,22 @@
     "https://www.supercheats.com/pokemon-ultra-moon/walkthrough/dawn-wings-necrozma-battle",
     "https://www.supercheats.com/pokemon-ultra-moon/walkthrough/mount-lanakila",
     "https://www.serebii.net/pokearth/alola/mountlanakila.shtml",
-    "https://strategywiki.org/wiki/Pok%C3%A9mon_Ultra_Sun_and_Ultra_Moon/Champion_Title_Defense"
+    "https://strategywiki.org/wiki/Pok%C3%A9mon_Ultra_Sun_and_Ultra_Moon/Champion_Title_Defense",
+    "https://serebii.net/pokearth/alola/battletree.shtml",
+    "https://www.serebii.net/pokearth/alola/ruinsofconflict.shtml",
+    "https://www.serebii.net/pokearth/alola/ruinsoflife.shtml",
+    "https://www.serebii.net/pokearth/alola/ruinsofabundance.shtml",
+    "https://www.serebii.net/pokearth/alola/ruinsofhope.shtml",
+    "https://serebii.net/pokearth/alola/royalavenue.shtml",
+    "https://serebii.net/pokedex-sm/trainers/134.shtml",
+    "https://serebii.net/pokearth/alola/ikitown.shtml",
+    "https://serebii.net/pokearth/alola/seafolkvillage.shtml",
+    "https://serebii.net/pokearth/alola/hanobeach.shtml",
+    "https://serebii.net/pokearth/alola/maliecity.shtml",
+    "https://serebii.net/pokearth/alola/heaheacity.shtml",
+    "https://serebii.net/pokearth/alola/blushmountain.shtml",
+    "https://serebii.net/pokearth/alola/hau'olicemetery.shtml",
+    "https://www.thonky.com/pokemon-sun-moon/eeveelution-users"
   ],
   "items": [
     {
@@ -2490,12 +2505,36 @@
       "versions": null
     },
     {
+      "id": "necrozma-capture",
+      "kind": "other",
+      "name": "Necrozma",
+      "title": "Pokémon",
+      "location": "Mount Lanakila (cratera)",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 800,
+          "form": 0,
+          "level": 65,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "captura; golpes padrão do nível",
+      "versions": null
+    },
+    {
       "id": "molayne-1",
       "kind": "elite",
       "name": "Molayne",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 52,
+      "order": 53,
       "badge": null,
       "party": [
         {
@@ -2580,7 +2619,7 @@
       "name": "Olivia",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 53,
+      "order": 54,
       "badge": null,
       "party": [
         {
@@ -2662,7 +2701,7 @@
       "name": "Acerola",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 54,
+      "order": 55,
       "badge": null,
       "party": [
         {
@@ -2747,7 +2786,7 @@
       "name": "Kahili",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 55,
+      "order": 56,
       "badge": null,
       "party": [
         {
@@ -2832,7 +2871,7 @@
       "name": "Hau",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 56,
+      "order": 57,
       "badge": null,
       "party": [
         {
@@ -2930,7 +2969,7 @@
       "name": "Hala",
       "title": "Kahuna",
       "location": "Iki Town",
-      "order": 57,
+      "order": 58,
       "badge": null,
       "party": [
         {
@@ -3015,7 +3054,7 @@
       "name": "Ilima",
       "title": "Captain",
       "location": "Trainers' School",
-      "order": 58,
+      "order": 59,
       "badge": null,
       "party": [
         {
@@ -3071,7 +3110,7 @@
       "name": "Totem Gumshoos",
       "title": "Totem",
       "location": "Verdant Cavern",
-      "order": 59,
+      "order": 60,
       "badge": null,
       "party": [
         {
@@ -3116,7 +3155,7 @@
       "name": "Totem Alolan Raticate",
       "title": "Totem",
       "location": "Verdant Cavern",
-      "order": 60,
+      "order": 61,
       "badge": null,
       "party": [
         {
@@ -3161,7 +3200,7 @@
       "name": "Mallow",
       "title": "Captain",
       "location": "Lush Jungle",
-      "order": 61,
+      "order": 62,
       "badge": null,
       "party": [
         {
@@ -3219,7 +3258,7 @@
       "name": "Lana",
       "title": "Captain",
       "location": "Brooklet Hill",
-      "order": 62,
+      "order": 63,
       "badge": null,
       "party": [
         {
@@ -3276,7 +3315,7 @@
       "name": "Kiawe",
       "title": "Captain",
       "location": "Thrifty Megamart, Royal Avenue",
-      "order": 63,
+      "order": 64,
       "badge": null,
       "party": [
         {
@@ -3327,12 +3366,369 @@
       ]
     },
     {
+      "id": "eevee-user-polly",
+      "kind": "other",
+      "name": "Polly",
+      "title": "Vaporeon User",
+      "location": "Trainers' School, Hau'oli City",
+      "order": 65,
+      "badge": null,
+      "party": [
+        {
+          "species": 134,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "haze",
+            "muddy-water",
+            "last-resort",
+            "hydro-pump"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-braiden",
+      "kind": "other",
+      "name": "Braiden",
+      "title": "Umbreon User",
+      "location": "Hau'oli Cemetery",
+      "order": 66,
+      "badge": null,
+      "party": [
+        {
+          "species": 197,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "moonlight",
+            "mean-look",
+            "last-resort",
+            "guard-swap"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-rea",
+      "kind": "other",
+      "name": "Rea",
+      "title": "Glaceon User",
+      "location": "Iki Town",
+      "order": 67,
+      "badge": null,
+      "party": [
+        {
+          "species": 471,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "mirror-coat",
+            "hail",
+            "last-resort",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-chad",
+      "kind": "other",
+      "name": "Chad",
+      "title": "Flareon User",
+      "location": "Tide Song Hotel, Heahea City",
+      "order": 68,
+      "badge": null,
+      "party": [
+        {
+          "species": 136,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "smog",
+            "lava-plume",
+            "last-resort",
+            "flare-blitz"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-linnea",
+      "kind": "other",
+      "name": "Linnea",
+      "title": "Leafeon User",
+      "location": "Hano Beach",
+      "order": 69,
+      "badge": null,
+      "party": [
+        {
+          "species": 470,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "synthesis",
+            "sunny-day",
+            "last-resort",
+            "leaf-blade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-jane",
+      "kind": "other",
+      "name": "Jane",
+      "title": "Jolteon User",
+      "location": "Malie City (Community Center)",
+      "order": 70,
+      "badge": null,
+      "party": [
+        {
+          "species": 135,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "thunder-wave",
+            "discharge",
+            "last-resort",
+            "thunder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-ishaan",
+      "kind": "other",
+      "name": "Ishaan",
+      "title": "Espeon User",
+      "location": "Blush Mountain (Geothermal Power Plant)",
+      "order": 71,
+      "badge": null,
+      "party": [
+        {
+          "species": 196,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "morning-sun",
+            "psychic",
+            "last-resort",
+            "power-swap"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "eevee-user-kira",
+      "kind": "other",
+      "name": "Kira",
+      "title": "Sylveon User",
+      "location": "Seafolk Village",
+      "order": 72,
+      "badge": null,
+      "party": [
+        {
+          "species": 700,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "light-screen",
+            "moonblast",
+            "last-resort",
+            "psych-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "pós-jogo: missão do Eevium Z (Kagetora)",
+      "versions": null
+    },
+    {
+      "id": "kagetora",
+      "kind": "other",
+      "name": "Kagetora",
+      "title": "Eevee User",
+      "location": "Thrifty Megamart, Royal Avenue",
+      "order": 73,
+      "badge": null,
+      "party": [
+        {
+          "species": 133,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "baton-pass",
+            "double-edge",
+            "last-resort",
+            "trump-card"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "pós-jogo: depois dos 8 treinadores das evoluções do Eevee; dá o Eevium Z",
+      "versions": null
+    },
+    {
+      "id": "tapu-koko",
+      "kind": "other",
+      "name": "Tapu Koko",
+      "title": "Pokémon",
+      "location": "Ruins of Conflict",
+      "order": 74,
+      "badge": null,
+      "party": [
+        {
+          "species": 785,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo: captura; golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "tapu-lele",
+      "kind": "other",
+      "name": "Tapu Lele",
+      "title": "Pokémon",
+      "location": "Ruins of Life",
+      "order": 75,
+      "badge": null,
+      "party": [
+        {
+          "species": 786,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo: captura; golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "tapu-bulu",
+      "kind": "other",
+      "name": "Tapu Bulu",
+      "title": "Pokémon",
+      "location": "Ruins of Abundance",
+      "order": 76,
+      "badge": null,
+      "party": [
+        {
+          "species": 787,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo: captura; golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "tapu-fini",
+      "kind": "other",
+      "name": "Tapu Fini",
+      "title": "Pokémon",
+      "location": "Ruins of Hope",
+      "order": 77,
+      "badge": null,
+      "party": [
+        {
+          "species": 788,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo: captura; golpes padrão do nível",
+      "versions": null
+    },
+    {
       "id": "faba-rr",
       "kind": "evil",
       "name": "Faba",
       "title": "Team Rainbow Rocket",
       "location": "Aether Paradise (Episode RR)",
-      "order": 64,
+      "order": 78,
       "badge": null,
       "party": [
         {
@@ -3389,7 +3785,7 @@
       "name": "Archie",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 65,
+      "order": 79,
       "badge": null,
       "party": [
         {
@@ -3474,7 +3870,7 @@
       "name": "Maxie",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 66,
+      "order": 80,
       "badge": null,
       "party": [
         {
@@ -3559,7 +3955,7 @@
       "name": "Cyrus",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 67,
+      "order": 81,
       "badge": null,
       "party": [
         {
@@ -3646,7 +4042,7 @@
       "name": "Cyrus",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 68,
+      "order": 82,
       "badge": null,
       "party": [
         {
@@ -3733,7 +4129,7 @@
       "name": "Lysandre",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 69,
+      "order": 83,
       "badge": null,
       "party": [
         {
@@ -3820,7 +4216,7 @@
       "name": "Lysandre",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 70,
+      "order": 84,
       "badge": null,
       "party": [
         {
@@ -3907,7 +4303,7 @@
       "name": "Ghetsis",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 71,
+      "order": 85,
       "badge": null,
       "party": [
         {
@@ -3994,7 +4390,7 @@
       "name": "Ghetsis",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 72,
+      "order": 86,
       "badge": null,
       "party": [
         {
@@ -4081,7 +4477,7 @@
       "name": "Giovanni",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 73,
+      "order": 87,
       "badge": null,
       "party": [
         {
@@ -4168,7 +4564,7 @@
       "name": "Giovanni",
       "title": "Team Rainbow Rocket",
       "location": "Rainbow Rocket Castle",
-      "order": 74,
+      "order": 88,
       "badge": null,
       "party": [
         {
@@ -4255,7 +4651,7 @@
       "name": "Faba",
       "title": "Aether Foundation",
       "location": "Aether Paradise",
-      "order": 75,
+      "order": 89,
       "badge": null,
       "party": [
         {
@@ -4340,7 +4736,7 @@
       "name": "Dexio",
       "title": "Pokémon Trainer",
       "location": "Poni Meadow",
-      "order": 76,
+      "order": 90,
       "badge": null,
       "party": [
         {
@@ -4425,7 +4821,7 @@
       "name": "Morimoto & Iwao",
       "title": "Game Freak",
       "location": "Game Freak building, Heahea City",
-      "order": 77,
+      "order": 91,
       "badge": null,
       "party": [
         {
@@ -4524,7 +4920,7 @@
       "name": "Aristo",
       "title": "Veteran",
       "location": "Mount Lanakila",
-      "order": 78,
+      "order": 92,
       "badge": null,
       "party": [
         {
@@ -4584,7 +4980,7 @@
       "name": "Dexio",
       "title": "Pokémon Trainer",
       "location": "Route 16",
-      "order": 79,
+      "order": 93,
       "badge": null,
       "party": [
         {
@@ -4678,12 +5074,210 @@
       "versions": null
     },
     {
+      "id": "red-entry",
+      "kind": "other",
+      "name": "Red",
+      "title": "Pokémon Trainer",
+      "location": "Battle Tree (entrada)",
+      "order": 94,
+      "badge": null,
+      "party": [
+        {
+          "species": 25,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "volt-tackle",
+            "quick-attack",
+            "light-screen",
+            "nuzzle"
+          ],
+          "ability": null,
+          "item": "light-ball",
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "surf",
+            "blizzard",
+            "ice-shard",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "body-slam",
+            "heavy-slam",
+            "crunch",
+            "high-horsepower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "leaf-storm",
+            "leech-seed",
+            "sludge-bomb",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "fire-blast",
+            "air-slash",
+            "focus-blast",
+            "will-o-wisp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "hydro-pump",
+            "flash-cannon",
+            "dark-pulse",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "pós-jogo: na chegada à Battle Tree você escolhe lutar com o Red ou com o Blue",
+      "versions": null
+    },
+    {
+      "id": "blue-entry",
+      "kind": "other",
+      "name": "Blue",
+      "title": "Pokémon Trainer",
+      "location": "Battle Tree (entrada)",
+      "order": 95,
+      "badge": null,
+      "party": [
+        {
+          "species": 65,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "psychic",
+            "future-sight",
+            "shadow-ball",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "cross-chop",
+            "bulk-up",
+            "knock-off",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "rock-slide",
+            "crunch",
+            "iron-head",
+            "sky-drop"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "leaf-storm",
+            "psychic",
+            "sludge-bomb",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "extreme-speed",
+            "flare-blitz",
+            "thunder-fang",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "aqua-tail",
+            "crunch",
+            "ice-fang",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 69,
+      "verified": true,
+      "notes": "pós-jogo: na chegada à Battle Tree você escolhe lutar com o Red ou com o Blue",
+      "versions": null
+    },
+    {
       "id": "molayne-2",
       "kind": "elite",
       "name": "Molayne",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 80,
+      "order": 96,
       "badge": null,
       "party": [
         {
@@ -4768,7 +5362,7 @@
       "name": "Olivia",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 81,
+      "order": 97,
       "badge": null,
       "party": [
         {
@@ -4853,7 +5447,7 @@
       "name": "Acerola",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 82,
+      "order": 98,
       "badge": null,
       "party": [
         {
@@ -4938,7 +5532,7 @@
       "name": "Kahili",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 83,
+      "order": 99,
       "badge": null,
       "party": [
         {
@@ -5023,7 +5617,7 @@
       "name": "Hau",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 84,
+      "order": 100,
       "badge": null,
       "party": [
         {
@@ -5121,7 +5715,7 @@
       "name": "Gladion",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 85,
+      "order": 101,
       "badge": null,
       "party": [
         {
@@ -5220,7 +5814,7 @@
       "name": "Lusamine",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 86,
+      "order": 102,
       "badge": null,
       "party": [
         {
@@ -5304,7 +5898,7 @@
       "name": "Guzma",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 87,
+      "order": 103,
       "badge": null,
       "party": [
         {
@@ -5389,7 +5983,7 @@
       "name": "Plumeria",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 88,
+      "order": 104,
       "badge": null,
       "party": [
         {
@@ -5474,7 +6068,7 @@
       "name": "Sophocles",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 89,
+      "order": 105,
       "badge": null,
       "party": [
         {
@@ -5559,7 +6153,7 @@
       "name": "Hapu",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 90,
+      "order": 106,
       "badge": null,
       "party": [
         {
@@ -5644,7 +6238,7 @@
       "name": "Ryuki",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 91,
+      "order": 107,
       "badge": null,
       "party": [
         {
@@ -5729,7 +6323,7 @@
       "name": "Tristan",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 92,
+      "order": 108,
       "badge": null,
       "party": [
         {
@@ -5814,7 +6408,7 @@
       "name": "Professor Kukui",
       "title": "Title Defense",
       "location": "Pokémon League",
-      "order": 93,
+      "order": 109,
       "badge": null,
       "party": [
         {

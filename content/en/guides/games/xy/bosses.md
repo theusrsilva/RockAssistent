@@ -10,7 +10,7 @@ All story and postgame bosses, in order. The walkthrough shows each one with its
 - **Tierno** (Rival, Route 5): Grass or Electric beat his Corphish.
 - **Tierno & Trevor** (Rival, Route 7): Double battle on Route 7: hit Corphish with Grass/Electric first.
 - **Grant** (Gym Leader, Cyllage Gym): Climb the wall; Water, Grass, Fighting or Steel handle Tyrunt and Amaura.
-- **Korrina** (Gym Leader, Geosenge Town): Two Lucario with a partner: Fire, Fighting and Ground moves hit hard.
+- **Korrina** (Gym Leader, Geosenge Town): Two Lucario, one at a time: Fire, Fighting and Ground moves hit hard.
 - **Serena** (Rival, Tower of Mastery, Shalour City): Rival: Absol is weak to Fighting and Fairy.
 - **Korrina** (Gym Leader, Shalour Gym): Flying and Psychic beat her team; Hawlucha is fast, hit it first.
 - **Korrina** (Gym Leader, Tower of Mastery, Shalour City): You use the Lucario she just gave you; Mega Evolve it at once (the battle restarts if you don't).

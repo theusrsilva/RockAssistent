@@ -17,7 +17,7 @@
 
 **To do**
 - Find Rowan's briefcase and pick Turtwig, Chimchar or Piplup (lv 5).
-- Beat the wild Starly; right after, first battle with Barry (no boss entry).
+- Beat the wild Starly. There is no battle with Barry here: the first one is on Route 203.
 - After Spear Pillar: Mesprit shows up in Verity Cavern and flees (becomes a roamer).
 
 **Items:** TM38 (Fire Blast, needs Surf).
@@ -78,7 +78,7 @@
 
 **To do**
 - Abra is a good catch (only knows Teleport).
-- Battle Barry at the Oreburgh Gate entrance.
+- Barry challenges you as soon as you enter the route from Jubilife.
 
 :::encounters bdsp route-203
 
@@ -258,6 +258,12 @@
 
 :::encounters bdsp valley-windworks
 
+**Boss**
+
+:::boss bdsp mars-1
+
+- Tip: Purugly is the ace; one Fighting move does it.
+
 ## Floaroma Meadow
 
 **To do**
@@ -272,12 +278,6 @@
 - Path to Eterna Forest; the Fuego Ironworks side needs Surf.
 
 :::encounters bdsp route-205
-
-**Boss**
-
-:::boss bdsp mars-1
-
-- Tip: Purugly is the ace; one Fighting move does it.
 
 ## Eterna Forest
 
@@ -865,9 +865,9 @@
 
 **Boss**
 
-:::boss bdsp barry-final
+:::boss bdsp barry-postgame
 
-- Tip: final team lv 68–74; same team as postgame, stronger.
+- Tip: lv 58–64, on Saturdays and Sundays after the National Dex; his final team (lv 68–74) is under Postgame.
 
 ## Route 225
 
@@ -925,12 +925,6 @@
 
 :::encounters bdsp route-230
 
-**Boss**
-
-:::boss bdsp barry-postgame
-
-- Tip: shows up in the Fight Area on Saturdays/Sundays after Heatran.
-
 ## Battle Park
 
 **To do**
@@ -987,6 +981,8 @@
 :::boss bdsp cynthia-final
 
 :::boss bdsp dawn-final
+
+:::boss bdsp barry-final
 
 - Tip: final rematches reach lv 88 (Cynthia's Garchomp); train with a Lucky Egg and Chansey/Blissey.
 
