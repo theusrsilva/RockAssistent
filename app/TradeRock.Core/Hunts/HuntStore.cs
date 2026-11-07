@@ -23,6 +23,7 @@ public sealed record HuntView(
     string GameKey,
     string MethodId,
     string MethodName,
+    string MethodNameEn,
     IReadOnlyDictionary<string, string> Modifiers,
     int Count,
     long ElapsedSeconds,
@@ -39,7 +40,7 @@ public sealed record NewHunt(int Species, int Form, string GameKey, string Metho
 public sealed record HuntChanges(int? Count, IReadOnlyDictionary<string, string>? Modifiers, string? Notes, long? ElapsedSeconds);
 
 /// <summary>Método de shiny que vale para a espécie num jogo (modificadores só os do jogo).</summary>
-public sealed record HuntMethodOption(string Id, string Name, double BaseOdds, IReadOnlyList<ShinyModifier> Modifiers);
+public sealed record HuntMethodOption(string Id, string Name, string NameEn, double BaseOdds, IReadOnlyList<ShinyModifier> Modifiers);
 
 /// <summary>Jogo em que dá para caçar a espécie: como se obtém (<c>encounter</c>, <c>gift</c>, <c>egg</c>, <c>evolution</c>) e os métodos.</summary>
 public sealed record HuntGame(string GameKey, string Name, IReadOnlyList<string> Kinds, IReadOnlyList<HuntMethodOption> Methods);
@@ -211,7 +212,7 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
 
             var methods = data.ShinyMethods
                 .Where(m => m.Games.Contains(game.Key) && Fits(m.Id, species, kinds))
-                .Select(m => new HuntMethodOption(m.Id, m.Name, m.BaseOdds,
+                .Select(m => new HuntMethodOption(m.Id, m.Name, m.NameEn, m.BaseOdds,
                     m.Modifiers.Where(x => x.Games is null || x.Games.Contains(game.Key)).ToList()))
                 .ToList();
             string[] order = ["encounter", "gift", "egg", "evolution"];
@@ -273,7 +274,8 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
         var method = data.ShinyMethods.FirstOrDefault(m => m.Id == h.MethodId);
         // Método que sumiu dos dados (não deveria): mostra 1/4096 em vez de quebrar a lista.
         var odds = method is null ? 4096 : ShinyOdds.Current(method, modifiers, h.Count, h.GameKey);
-        return new HuntView(h.Id, h.Species, h.Form, h.GameKey, h.MethodId, method?.Name ?? h.MethodId, modifiers, h.Count,
+        return new HuntView(h.Id, h.Species, h.Form, h.GameKey, h.MethodId, method?.Name ?? h.MethodId,
+            method?.NameEn ?? h.MethodId, modifiers, h.Count,
             h.ElapsedSeconds, h.StartedAt, h.EndedAt, h.Found, h.Notes, odds, ShinyOdds.Cumulative(odds, h.Count));
     }
 

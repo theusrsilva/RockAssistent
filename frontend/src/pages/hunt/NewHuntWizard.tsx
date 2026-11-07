@@ -5,7 +5,7 @@ import { SearchSelect } from '../../components/SearchSelect'
 import { Badge, Button, Callout, Card, Field, PageTitle, Segmented, Toggle, selectClass } from '../../components/ui'
 import { api, spriteUrl } from '../../lib/api'
 import { useApiGet } from '../../lib/dex'
-import { formatOdds, huntErrorMessage, useSpeciesOptions, type Hunt, type HuntGame, type HuntMethod, type ShinyModifier } from '../../lib/hunts'
+import { formatOdds, huntErrorMessage, shinyName, useSpeciesOptions, type Hunt, type HuntGame, type HuntMethod, type ShinyModifier } from '../../lib/hunts'
 import { BackLink } from '../dex/tabs/parts'
 
 /** Valor inicial de cada modificador que é campo (os guiados pelo contador ficam de fora). */
@@ -119,7 +119,7 @@ export default function NewHuntWizard() {
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
             {game.methods.map((m) => (
               <Choice key={m.id} selected={m.id === methodId} onClick={() => chooseMethod(m)}>
-                <div className="font-semibold">{m.name}</div>
+                <div className="font-semibold">{shinyName(m, i18n.language)}</div>
                 <div className="text-[12.5px] text-muted">{t('hunt.wizard.baseOdds', { odds: formatOdds(m.baseOdds, i18n.language) })}</div>
               </Choice>
             ))}
@@ -179,19 +179,20 @@ function Choice({ selected, onClick, children }: { selected: boolean; onClick: (
 
 /** Toggle vira interruptor; degraus viram seletor (o valor enviado é o "min" do degrau, em texto). */
 function ModifierField({ modifier, value, onChange }: { modifier: ShinyModifier; value: string | undefined; onChange: (v: string) => void }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const name = shinyName(modifier, i18n.language)
   if (modifier.counter)
     return (
       <p className="flex items-center gap-2 text-sm text-muted">
-        {t('hunt.wizard.counterStep', { name: modifier.name })}
+        {t('hunt.wizard.counterStep', { name })}
       </p>
     )
-  if (modifier.kind === 'toggle') return <Toggle on={value === 'true'} onChange={(on) => onChange(on ? 'true' : 'false')} label={modifier.name} />
+  if (modifier.kind === 'toggle') return <Toggle on={value === 'true'} onChange={(on) => onChange(on ? 'true' : 'false')} label={name} />
   const steps = modifier.steps ?? []
   if (steps.length <= 4)
     return (
       <div className="flex flex-col gap-1.5 text-sm">
-        <span className="font-semibold">{modifier.name}</span>
+        <span className="font-semibold">{name}</span>
         <Segmented
           value={value ?? ''}
           onChange={onChange}
@@ -201,7 +202,7 @@ function ModifierField({ modifier, value, onChange }: { modifier: ShinyModifier;
       </div>
     )
   return (
-    <Field label={modifier.name}>
+    <Field label={name}>
       <select className={selectClass} value={value ?? ''} onChange={(e) => onChange(e.target.value)}>
         {steps.map((s) => (
           <option key={s.min} value={String(s.min)}>

@@ -79,8 +79,8 @@ public sealed class DexService(DexDatabase db)
 
     /// <summary>
     /// Encontros de um local do PokeAPI (<c>locations.id</c>, todas as sub-áreas) nas versões do jogo, juntados por
-    /// versão, espécie, forma e método (níveis de/até; chance = a maior entre as sub-áreas, somada dentro de cada uma e
-    /// limitada a 100). Local sem encontros = lista vazia.
+    /// versão, espécie, forma e método (níveis de/até; chance = a maior entre as sub-áreas e, dentro de cada uma, a maior
+    /// entre as condições, com os slots da mesma condição somados e o total limitado a 100). Local sem encontros = lista vazia.
     /// </summary>
     public Task<IReadOnlyList<LocationEncounter>> LocationEncountersAsync(int locationId, string gameKey, CancellationToken ct)
     {
@@ -91,16 +91,22 @@ public sealed class DexService(DexDatabase db)
             WITH forms AS (
                 SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
                 FROM pokemon),
-            -- A raridade do PokeAPI é por sub-área: soma dentro de cada uma e fica com a maior (somar entre sub-áreas passa de 100%).
-            -- Linhas com condições diferentes (Moltres estático: 2 × 100) também passam de 100 na soma: limita em 100.
-            per_area AS (
+            -- A raridade do PokeAPI é por sub-área e por condição. Dentro de uma condição, os slots somam.
+            per_condition AS (
                 SELECT f.species_id, f.form, e.version_id, e.method, e.location_area_id,
-                       min(e.min_level) AS min_level, max(e.max_level) AS max_level, min(sum(coalesce(e.rarity, 0)), 100) AS chance
+                       min(e.min_level) AS min_level, max(e.max_level) AS max_level, sum(coalesce(e.rarity, 0)) AS chance
                 FROM encounters e
                 JOIN forms f ON f.id = e.pokemon_id
                 JOIN location_areas a ON a.id = e.location_area_id
                 WHERE a.location_id = $l AND e.version_id IN ({game.VersionIdList})
-                GROUP BY f.species_id, f.form, e.version_id, e.method, e.location_area_id)
+                GROUP BY f.species_id, f.form, e.version_id, e.method, e.location_area_id, e.condition_values),
+            -- Condições diferentes (manhã/dia/noite, com/sem horda, Moltres estático 2 × 100) são alternativas: fica a maior,
+            -- limitada a 100. Entre sub-áreas também fica a maior (somar entre sub-áreas passa de 100%).
+            per_area AS (
+                SELECT species_id, form, version_id, method, location_area_id,
+                       min(min_level) AS min_level, max(max_level) AS max_level, min(max(chance), 100) AS chance
+                FROM per_condition
+                GROUP BY species_id, form, version_id, method, location_area_id)
             SELECT p.species_id, p.form, v.identifier, p.method, min(p.min_level), max(p.max_level), max(p.chance)
             FROM per_area p
             JOIN versions v ON v.id = p.version_id

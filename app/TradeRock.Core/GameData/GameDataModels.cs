@@ -16,6 +16,7 @@ namespace TradeRock.Core.GameData;
 public sealed record ShinyMethod(
     string Id,
     string Name,
+    string NameEn,
     string Description,
     double BaseOdds,
     int? BaseRolls,
@@ -33,6 +34,7 @@ public sealed record ShinyMethod(
 public sealed record ShinyModifier(
     string Id,
     string Name,
+    string NameEn,
     string Kind,
     IReadOnlyList<ShinyStep>? Steps,
     double? Odds,

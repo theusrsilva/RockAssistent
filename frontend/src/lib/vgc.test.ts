@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { ApiError } from './api'
 import {
+  formatIsoDate,
   formatPercent,
   importPasteToBoxes,
   internetErrorKey,
@@ -116,5 +117,13 @@ describe('internet opcional', () => {
     expect(formatPercent(49.95, 'en')).toBe('50%')
     expect(formatPercent(9.876, 'en')).toBe('9.88%')
     expect(formatPercent(12.34, 'pt-BR')).toBe('12,3%')
+  })
+})
+
+describe('formatIsoDate', () => {
+  it('mostra a data ISO no formato do idioma sem voltar um dia', () => {
+    expect(formatIsoDate('2026-09-01', 'pt-BR')).toBe('01/09/2026')
+    expect(formatIsoDate('2026-09-01', 'en-US')).toBe('9/1/2026')
+    expect(formatIsoDate('sem data', 'pt-BR')).toBe('sem data')
   })
 })

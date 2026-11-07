@@ -81,9 +81,23 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
             Assert.All(rows, e => Assert.InRange(e.Chance, 0, 100));
         }
         var ember = await Dex.LocationEncountersAsync(500, "frlg", Ct);
-        Assert.Contains(ember, e => e.Species == 74 && e.Method == "rock-smash" && e.Chance <= 100);
+        // Geodude quebrando pedra: 3 slots somam 95 em cada sub-área; a maior, não a soma das sub-áreas.
+        Assert.All(ember.Where(e => e.Species == 74 && e.Method == "rock-smash"), e => Assert.Equal(95, e.Chance));
         var tower = await Dex.LocationEncountersAsync(160, "frlg", Ct);
         Assert.Contains(tower, e => e.Species == 92 && e.Chance is > 0 and <= 100);
+    }
+
+    [Fact]
+    public async Task Chance_do_local_fica_com_a_maior_condicao()
+    {
+        // Wurmple na Eterna Forest (8): no Platinum, manhã 10 e dia 10 (alternativas, não 20); no Diamond, sem enxame 20,
+        // manhã 10 e dia 10 (fica 20, não 40). Na árvore de mel, grupo A 40 e grupo B 5 (fica 40).
+        var pt = await Dex.LocationEncountersAsync(8, "pt", Ct);
+        Assert.Equal(10, Assert.Single(pt, e => e.Species == 265 && e.Method == "walk").Chance);
+        var dp = await Dex.LocationEncountersAsync(8, "dp", Ct);
+        Assert.All(dp.Where(e => e.Species == 265 && e.Method == "walk"), e => Assert.Equal(20, e.Chance));
+        Assert.All(dp.Where(e => e.Species == 265 && e.Method == "honey-tree"), e => Assert.Equal(40, e.Chance));
+        Assert.Contains(dp, e => e.Species == 265 && e.Method == "honey-tree");
     }
 
     [Fact]

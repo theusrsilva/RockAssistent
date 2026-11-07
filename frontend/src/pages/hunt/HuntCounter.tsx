@@ -11,7 +11,9 @@ import {
   formatOdds,
   formatPercent,
   huntErrorMessage,
+  huntMethodName,
   saveElapsedOnExit,
+  shinyName,
   stepFor,
   useGlobalHotkeyEvents,
   useHuntIncrements,
@@ -227,9 +229,9 @@ export default function HuntCounter() {
     .filter((m) => !m.counter)
     .flatMap((m) => {
       const v = hunt.modifiers[m.id]
-      if (m.kind === 'toggle') return v === 'true' ? [m.name] : []
+      if (m.kind === 'toggle') return v === 'true' ? [shinyName(m, lang)] : []
       const step = v !== undefined ? stepFor(m, Number(v)) : null
-      return step && step.min > 0 ? [`${m.name}: ${step.label}`] : []
+      return step && step.min > 0 ? [`${shinyName(m, lang)}: ${step.label}`] : []
     })
   const counterSteps = (method?.modifiers ?? []).filter((m) => m.counter && m.kind === 'steps')
 
@@ -242,7 +244,7 @@ export default function HuntCounter() {
         <div className="min-w-0 flex-1">
           <h1 className="truncate font-display text-[23px] leading-tight font-bold md:text-[28px]">{name}</h1>
           <div className="text-sm text-muted">
-            {gameName(hunt.gameKey)} · {hunt.methodName}
+            {gameName(hunt.gameKey)} · {huntMethodName(hunt, i18n.language)}
           </div>
           {modifierBadges.length > 0 && (
             <div className="mt-1.5 flex flex-wrap gap-1.5">
@@ -273,8 +275,8 @@ export default function HuntCounter() {
           return (
             <Badge key={m.id} tone={step ? 'emerald' : 'slate'} icon="trending_up">
               {step
-                ? t('hunt.counter.step', { name: m.name, value: count, odds: formatOdds(step.odds, lang) })
-                : t('hunt.counter.stepNone', { name: m.name, value: count })}
+                ? t('hunt.counter.step', { name: shinyName(m, lang), value: count, odds: formatOdds(step.odds, lang) })
+                : t('hunt.counter.stepNone', { name: shinyName(m, lang), value: count })}
             </Badge>
           )
         })}

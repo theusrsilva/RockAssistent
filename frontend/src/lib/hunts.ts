@@ -13,6 +13,7 @@ export interface Hunt {
   gameKey: string
   methodId: string
   methodName: string
+  methodNameEn: string
   modifiers: Record<string, string>
   count: number
   elapsedSeconds: number
@@ -37,6 +38,7 @@ export interface ShinyStep {
 export interface ShinyModifier {
   id: string
   name: string
+  nameEn: string
   kind: 'toggle' | 'steps'
   steps: ShinyStep[] | null
   odds: number | null
@@ -49,8 +51,19 @@ export interface ShinyModifier {
 export interface HuntMethod {
   id: string
   name: string
+  nameEn: string
   baseOdds: number
   modifiers: ShinyModifier[]
+}
+
+/** Nome do método ou modificador de shiny no idioma da interface (os dados têm só pt e en). */
+export function shinyName(item: { name: string; nameEn: string }, language: string): string {
+  return language.startsWith('en') ? item.nameEn : item.name
+}
+
+/** Nome do método da hunt no idioma da interface. */
+export function huntMethodName(hunt: Pick<Hunt, 'methodName' | 'methodNameEn'>, language: string): string {
+  return language.startsWith('en') ? hunt.methodNameEn : hunt.methodName
 }
 
 export type HuntKind = 'encounter' | 'gift' | 'egg' | 'evolution'

@@ -40,6 +40,8 @@ public static class GameDataValidator
         foreach (var m in methods)
         {
             var at = $"shiny-methods/{m.Id}";
+            if (string.IsNullOrWhiteSpace(m.Name) || string.IsNullOrWhiteSpace(m.NameEn))
+                errors.Add($"{at}: name e name_en são obrigatórios");
             if (m.BaseOdds < 1)
                 errors.Add($"{at}: base_odds {m.BaseOdds} (o denominador tem de ser >= 1)");
             if (m.Games.Count == 0)
@@ -60,6 +62,8 @@ public static class GameDataValidator
             foreach (var mod in m.Modifiers)
             {
                 var mat = $"{at}/{mod.Id}";
+                if (string.IsNullOrWhiteSpace(mod.Name) || string.IsNullOrWhiteSpace(mod.NameEn))
+                    errors.Add($"{mat}: name e name_en são obrigatórios");
                 if (!ModifierKinds.Contains(mod.Kind))
                     errors.Add($"{mat}: kind {mod.Kind} (toggle ou steps)");
                 else if (mod.Kind == "toggle" && (mod.Odds is not >= 1 || mod.Steps is not null || mod.Counter))

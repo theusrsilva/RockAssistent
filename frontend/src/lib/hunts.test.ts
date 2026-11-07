@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { createIncrementQueue, cumulative, formatElapsed, stepFor, subscribeHotkeyEvents, type HotkeyEventSource, type ShinyModifier } from './hunts'
+import { createIncrementQueue, cumulative, formatElapsed, huntMethodName, shinyName, stepFor, subscribeHotkeyEvents, type HotkeyEventSource, type ShinyModifier } from './hunts'
 
 /** Servidor falso: cada pedido fica parado até o teste resolver. */
 function fakeServer() {
@@ -75,7 +75,7 @@ describe('contas', () => {
 
   it('degrau do contador', () => {
     const chain: ShinyModifier = {
-      id: 'chain', name: 'Corrente', kind: 'steps', odds: null, rolls: null, counter: true, games: null,
+      id: 'chain', name: 'Corrente', nameEn: 'Chain', kind: 'steps', odds: null, rolls: null, counter: true, games: null,
       steps: [
         { label: '0–10', min: 0, max: 10, odds: 4096, rolls: 0 },
         { label: '40+', min: 40, max: null, odds: 200, rolls: null },
@@ -127,5 +127,16 @@ describe('atalho global (SSE)', () => {
 
     stop()
     expect(source.closed).toBe(true)
+  })
+})
+
+describe('shinyName', () => {
+  it('escolhe o nome em inglês só quando o idioma é inglês', () => {
+    const charm = { name: 'Amuleto Brilhante', nameEn: 'Shiny Charm' }
+    expect(shinyName(charm, 'en')).toBe('Shiny Charm')
+    expect(shinyName(charm, 'en-US')).toBe('Shiny Charm')
+    expect(shinyName(charm, 'pt-BR')).toBe('Amuleto Brilhante')
+    expect(huntMethodName({ methodName: 'Método Masuda', methodNameEn: 'Masuda Method' }, 'en')).toBe('Masuda Method')
+    expect(huntMethodName({ methodName: 'Método Masuda', methodNameEn: 'Masuda Method' }, 'pt-BR')).toBe('Método Masuda')
   })
 })

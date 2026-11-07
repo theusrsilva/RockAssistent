@@ -4,7 +4,7 @@ import { Link, useSearchParams } from 'react-router'
 import { Badge, Button, Callout, Card, PageTitle, Segmented, useToast } from '../../../components/ui'
 import { spriteUrl } from '../../../lib/api'
 import { useApiGet } from '../../../lib/dex'
-import { importPasteToBoxes, localized, type VgcRegulation, type VgcTeam } from '../../../lib/vgc'
+import { formatIsoDate, importPasteToBoxes, localized, type VgcRegulation, type VgcTeam } from '../../../lib/vgc'
 import PasteDialog from './PasteDialog'
 import UsageView from './UsageView'
 
@@ -115,7 +115,7 @@ type TeamsTab = 'teams' | 'usage'
 
 /** /guias/vgc/times — os times sugeridos da regulamentação vigente e, na outra aba, os mais usados (Smogon). */
 export default function TeamsPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [params, setParams] = useSearchParams()
   const tab: TeamsTab = params.get('aba') === 'usage' ? 'usage' : 'teams'
   const teams = useApiGet<VgcTeam[]>('/api/vgc/teams')
@@ -130,7 +130,9 @@ export default function TeamsPage() {
         <PageTitle>{t('vgc.teamsTitle')}</PageTitle>
         <p className="mt-1 text-sm text-muted">
           {regulation.data
-            ? t('vgc.teamsSub', { regulation: regulation.data.name, from: regulation.data.validFrom, to: regulation.data.validTo ?? '…' })
+            ? t('vgc.teamsSub', { regulation: regulation.data.name, from: formatIsoDate(regulation.data.validFrom, i18n.language),
+                to: regulation.data.validTo ? formatIsoDate(regulation.data.validTo, i18n.language) : '…',
+              })
             : t('vgc.teamsSubShort')}
         </p>
         <p className="mt-1 text-[12.5px] text-muted">{t('vgc.importHint')}</p>

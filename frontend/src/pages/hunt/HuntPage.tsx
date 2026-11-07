@@ -5,7 +5,7 @@ import { Badge, Button, Callout, PageTitle } from '../../components/ui'
 import { spriteUrl } from '../../lib/api'
 import { useApiGet } from '../../lib/dex'
 import { GAME_VERSIONS } from '../../lib/gameVersions'
-import { formatOdds, useSpeciesOptions, type Hunt } from '../../lib/hunts'
+import { formatOdds, huntMethodName, useSpeciesOptions, type Hunt } from '../../lib/hunts'
 
 export const gameName = (key: string) => GAME_VERSIONS.find((g) => g.key === key)?.name ?? key
 
@@ -81,7 +81,7 @@ export function HuntCard({ hunt, name }: { hunt: Hunt; name?: string }) {
       <div className="min-w-0 flex-1">
         <div className="truncate font-bold">{name ?? `#${hunt.species}`}</div>
         <div className="truncate text-[12.5px] text-muted">
-          {gameName(hunt.gameKey)} · {hunt.methodName}
+          {gameName(hunt.gameKey)} · {huntMethodName(hunt, i18n.language)}
         </div>
         <div className="mt-1 flex flex-wrap gap-1.5">
           {hunt.endedAt ? (

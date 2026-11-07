@@ -40,6 +40,7 @@
     {
       "id": "full_odds_gen2_5",
       "name": "Encontro ou reset (Gen 2–5)",
+      "name_en": "Encounter or soft reset (Gen 2–5)",
       "description": "Encontro selvagem, reset de lendário ou presente, sem bônus.",
       "base_odds": 8192.0,
       "base_rolls": 1,
@@ -48,6 +49,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 2731.0,
@@ -76,6 +78,7 @@
     {
       "id": "full_odds",
       "name": "Encontro ou reset",
+      "name_en": "Encounter or soft reset",
       "description": "Encontro selvagem, reset de lendário ou presente, sem bônus.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -84,6 +87,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1365.67,
@@ -106,6 +110,7 @@
     {
       "id": "full_odds_bdsp",
       "name": "Encontro ou reset (BDSP)",
+      "name_en": "Encounter or soft reset (BDSP)",
       "description": "Encontro selvagem ou reset no BDSP.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -120,6 +125,7 @@
     {
       "id": "breeding_shiny_parent_gen2",
       "name": "Ovo com pai shiny (Gen 2)",
+      "name_en": "Egg with a shiny parent (Gen 2)",
       "description": "Cruzar um shiny (de preferência um Ditto shiny) com outro Pokémon.",
       "base_odds": 64,
       "base_rolls": null,
@@ -135,6 +141,7 @@
     {
       "id": "odd_egg",
       "name": "Ovo Estranho (Crystal)",
+      "name_en": "Odd Egg (Crystal)",
       "description": "O ovo dado pelo homem da Creche.",
       "base_odds": 7.14,
       "base_rolls": null,
@@ -149,6 +156,7 @@
     {
       "id": "masuda_gen4",
       "name": "Método Masuda (Gen 4)",
+      "name_en": "Masuda Method (Gen 4)",
       "description": "Ovo de pais de idiomas diferentes.",
       "base_odds": 1638.8,
       "base_rolls": 5,
@@ -165,6 +173,7 @@
     {
       "id": "masuda_gen5",
       "name": "Método Masuda (Gen 5)",
+      "name_en": "Masuda Method (Gen 5)",
       "description": "Ovo de pais de idiomas diferentes.",
       "base_odds": 1365.75,
       "base_rolls": 6,
@@ -173,6 +182,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.44,
@@ -193,6 +203,7 @@
     {
       "id": "masuda",
       "name": "Método Masuda",
+      "name_en": "Masuda Method",
       "description": "Ovo de pais de idiomas diferentes.",
       "base_odds": 683.08,
       "base_rolls": 6,
@@ -201,6 +212,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 512.44,
@@ -223,6 +235,7 @@
     {
       "id": "masuda_bdsp",
       "name": "Método Masuda (BDSP)",
+      "name_en": "Masuda Method (BDSP)",
       "description": "Ovo de pais de idiomas diferentes no BDSP.",
       "base_odds": 683.08,
       "base_rolls": 6,
@@ -231,6 +244,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 512.44,
@@ -248,6 +262,7 @@
     {
       "id": "egg_bdsp",
       "name": "Ovo (BDSP)",
+      "name_en": "Egg (BDSP)",
       "description": "Ovo de pais do mesmo idioma no BDSP.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -256,6 +271,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 2048.25,
@@ -273,6 +289,7 @@
     {
       "id": "poke_radar_dppt",
       "name": "Poké Radar (DPPt)",
+      "name_en": "Poké Radar chain (DPPt)",
       "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
       "base_odds": 8192,
       "base_rolls": null,
@@ -281,6 +298,7 @@
         {
           "id": "chain",
           "name": "Corrente",
+          "name_en": "Chain",
           "kind": "steps",
           "steps": [
             {
@@ -307,6 +325,7 @@
     {
       "id": "poke_radar_xy",
       "name": "Poké Radar (XY)",
+      "name_en": "Poké Radar chain (XY)",
       "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
       "base_odds": 4096,
       "base_rolls": null,
@@ -315,6 +334,7 @@
         {
           "id": "chain",
           "name": "Corrente",
+          "name_en": "Chain",
           "kind": "steps",
           "steps": [
             {
@@ -340,6 +360,7 @@
     {
       "id": "poke_radar_bdsp",
       "name": "Poké Radar (BDSP)",
+      "name_en": "Poké Radar chain (BDSP)",
       "description": "Corrente do Poké Radar; a chance sobe até a corrente 40.",
       "base_odds": 4096,
       "base_rolls": null,
@@ -348,6 +369,7 @@
         {
           "id": "chain",
           "name": "Corrente",
+          "name_en": "Chain",
           "kind": "steps",
           "steps": [
             {
@@ -373,6 +395,7 @@
     {
       "id": "chain_fishing",
       "name": "Pesca em sequência",
+      "name_en": "Chain fishing",
       "description": "Pescar seguido no mesmo lugar sem sair dali.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -381,6 +404,7 @@
         {
           "id": "chain",
           "name": "Sequência",
+          "name_en": "Chain length",
           "kind": "steps",
           "steps": [
             {
@@ -434,6 +458,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1365.67,
@@ -452,6 +477,7 @@
     {
       "id": "friend_safari",
       "name": "Safári dos Amigos",
+      "name_en": "Friend Safari",
       "description": "Encontros no Friend Safari.",
       "base_odds": 819.6,
       "base_rolls": 5,
@@ -460,6 +486,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 585.57,
@@ -477,6 +504,7 @@
     {
       "id": "horde",
       "name": "Horda",
+      "name_en": "Horde Encounter",
       "description": "Encontro em horda de 5; odd de pelo menos um shiny na horda.",
       "base_odds": 819.6,
       "base_rolls": 5,
@@ -485,6 +513,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 273.53,
@@ -503,6 +532,7 @@
     {
       "id": "dexnav",
       "name": "DexNav",
+      "name_en": "DexNav",
       "description": "Busca com o DexNav; a chance sobe com o nível de busca da espécie.",
       "base_odds": 4096,
       "base_rolls": null,
@@ -511,6 +541,7 @@
         {
           "id": "search_level",
           "name": "Nível de busca",
+          "name_en": "Search level",
           "kind": "steps",
           "steps": [
             {
@@ -550,6 +581,7 @@
     {
       "id": "sos_chain",
       "name": "Corrente SOS",
+      "name_en": "SOS chain",
       "description": "Pokémon chamados por ajuda na batalha.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -558,6 +590,7 @@
         {
           "id": "chain",
           "name": "Corrente",
+          "name_en": "Chain",
           "kind": "steps",
           "steps": [
             {
@@ -597,6 +630,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1365.67,
@@ -615,6 +649,7 @@
     {
       "id": "ultra_wormhole_type2",
       "name": "Ultra Wormhole tipo 2",
+      "name_en": "Ultra Wormhole type 2",
       "description": "Pokémon do outro lado do Ultra Wormhole (tipo 2).",
       "base_odds": 50.0,
       "base_rolls": null,
@@ -623,6 +658,7 @@
         {
           "id": "distance",
           "name": "Distância (anos-luz)",
+          "name_en": "Distance (light-years)",
           "kind": "steps",
           "steps": [
             {
@@ -704,6 +740,7 @@
     {
       "id": "ultra_wormhole_type3",
       "name": "Ultra Wormhole tipo 3",
+      "name_en": "Ultra Wormhole type 3",
       "description": "Pokémon do outro lado do Ultra Wormhole (tipo 3).",
       "base_odds": 33.33,
       "base_rolls": null,
@@ -712,6 +749,7 @@
         {
           "id": "distance",
           "name": "Distância (anos-luz)",
+          "name_en": "Distance (light-years)",
           "kind": "steps",
           "steps": [
             {
@@ -793,6 +831,7 @@
     {
       "id": "ultra_wormhole_type4",
       "name": "Ultra Wormhole tipo 4",
+      "name_en": "Ultra Wormhole type 4",
       "description": "Pokémon do outro lado do Ultra Wormhole (tipo 4).",
       "base_odds": 6.25,
       "base_rolls": null,
@@ -801,6 +840,7 @@
         {
           "id": "distance",
           "name": "Distância (anos-luz)",
+          "name_en": "Distance (light-years)",
           "kind": "steps",
           "steps": [
             {
@@ -861,6 +901,7 @@
     {
       "id": "catch_combo",
       "name": "Combo de captura",
+      "name_en": "Catch Combo",
       "description": "Capturar a mesma espécie seguidas vezes.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -869,6 +910,7 @@
         {
           "id": "combo",
           "name": "Combo",
+          "name_en": "Combo",
           "kind": "steps",
           "steps": [
             {
@@ -908,6 +950,7 @@
         {
           "id": "lure",
           "name": "Lure",
+          "name_en": "Lure",
           "kind": "toggle",
           "steps": null,
           "odds": 2048.25,
@@ -918,6 +961,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1365.67,
@@ -935,6 +979,7 @@
     {
       "id": "brilliant",
       "name": "Pokémon com brilho (número de batalhas)",
+      "name_en": "Brilliant Pokémon (battle count)",
       "description": "Pokémon com aura brilhante; a chance sobe com o número de batalhas da espécie.",
       "base_odds": 2048.25,
       "base_rolls": 2,
@@ -943,6 +988,7 @@
         {
           "id": "battled",
           "name": "Batalhas contra a espécie",
+          "name_en": "Battles against the species",
           "kind": "steps",
           "steps": [
             {
@@ -996,6 +1042,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.38,
@@ -1013,6 +1060,7 @@
     {
       "id": "max_raid",
       "name": "Max Raid",
+      "name_en": "Max Raid Battle",
       "description": "Pokémon de uma toca de Max Raid.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -1027,6 +1075,7 @@
     {
       "id": "dynamax_adventure",
       "name": "Dynamax Adventure",
+      "name_en": "Dynamax Adventure",
       "description": "Pokémon capturados na Dynamax Adventure.",
       "base_odds": 300,
       "base_rolls": null,
@@ -1035,6 +1084,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 100,
@@ -1052,6 +1102,7 @@
     {
       "id": "grand_underground",
       "name": "Grande Subterrâneo",
+      "name_en": "Grand Underground",
       "description": "Pokémon dos esconderijos do Grande Subterrâneo.",
       "base_odds": 4096,
       "base_rolls": null,
@@ -1060,6 +1111,7 @@
         {
           "id": "diglett_bonus",
           "name": "Bônus do Diglett",
+          "name_en": "Diglett bonus",
           "kind": "toggle",
           "steps": null,
           "odds": 2048.25,
@@ -1077,6 +1129,7 @@
     {
       "id": "pla_wild",
       "name": "Encontro (Arceus)",
+      "name_en": "Encounter (Legends: Arceus)",
       "description": "Pokémon no mapa do Legends: Arceus.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -1085,6 +1138,7 @@
         {
           "id": "research_10",
           "name": "Pesquisa nível 10",
+          "name_en": "Research level 10",
           "kind": "toggle",
           "steps": null,
           "odds": 2048.25,
@@ -1095,6 +1149,7 @@
         {
           "id": "research_perfect",
           "name": "Pesquisa perfeita",
+          "name_en": "Perfect research",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.38,
@@ -1105,6 +1160,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.38,
@@ -1122,6 +1178,7 @@
     {
       "id": "pla_outbreak",
       "name": "Surto (Arceus)",
+      "name_en": "Mass Outbreak (Legends: Arceus)",
       "description": "Pokémon de um surto (mass outbreak).",
       "base_odds": 158.02,
       "base_rolls": 26,
@@ -1130,6 +1187,7 @@
         {
           "id": "research_10",
           "name": "Pesquisa nível 10",
+          "name_en": "Research level 10",
           "kind": "toggle",
           "steps": null,
           "odds": 152.19,
@@ -1140,6 +1198,7 @@
         {
           "id": "research_perfect",
           "name": "Pesquisa perfeita",
+          "name_en": "Perfect research",
           "kind": "toggle",
           "steps": null,
           "odds": 141.72,
@@ -1150,6 +1209,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 141.72,
@@ -1167,6 +1227,7 @@
     {
       "id": "pla_massive_outbreak",
       "name": "Surto massivo (Arceus)",
+      "name_en": "Massive Mass Outbreak (Legends: Arceus)",
       "description": "Pokémon de um surto massivo (massive mass outbreak).",
       "base_odds": 315.54,
       "base_rolls": 13,
@@ -1175,6 +1236,7 @@
         {
           "id": "research_10",
           "name": "Pesquisa nível 10",
+          "name_en": "Research level 10",
           "kind": "toggle",
           "steps": null,
           "odds": 293.04,
@@ -1185,6 +1247,7 @@
         {
           "id": "research_perfect",
           "name": "Pesquisa perfeita",
+          "name_en": "Perfect research",
           "kind": "toggle",
           "steps": null,
           "odds": 256.47,
@@ -1195,6 +1258,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 256.47,
@@ -1212,6 +1276,7 @@
     {
       "id": "sv_wild",
       "name": "Encontro (Scarlet / Violet)",
+      "name_en": "Encounter (Scarlet / Violet)",
       "description": "Pokémon no mapa, com sanduíche e surto.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -1220,6 +1285,7 @@
         {
           "id": "sparkling_power",
           "name": "Poder Brilhante (sanduíche)",
+          "name_en": "Sparkling Power (sandwich)",
           "kind": "steps",
           "steps": [
             {
@@ -1259,6 +1325,7 @@
         {
           "id": "outbreak",
           "name": "Surto: Pokémon derrotados",
+          "name_en": "Mass Outbreak: Pokémon defeated",
           "kind": "steps",
           "steps": [
             {
@@ -1291,6 +1358,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1365.67,
@@ -1308,6 +1376,7 @@
     {
       "id": "tera_raid",
       "name": "Tera Raid",
+      "name_en": "Tera Raid Battle",
       "description": "Pokémon de uma Tera Raid.",
       "base_odds": 4103.05,
       "base_rolls": null,
@@ -1322,6 +1391,7 @@
     {
       "id": "za_wild",
       "name": "Encontro (Z-A)",
+      "name_en": "Encounter (Z-A)",
       "description": "Pokémon em Lumiose.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -1330,6 +1400,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.38,
@@ -1347,6 +1418,7 @@
     {
       "id": "za_hyperspace",
       "name": "Lumiose do Hiperespaço (Mega Dimension)",
+      "name_en": "Hyperspace Lumiose (Mega Dimension)",
       "description": "Pokémon das zonas do Hiperespaço com Poder Brilhante de um donut.",
       "base_odds": 4096.0,
       "base_rolls": 1,
@@ -1355,6 +1427,7 @@
         {
           "id": "sparkling_power",
           "name": "Poder Brilhante (donut)",
+          "name_en": "Sparkling Power (donut)",
           "kind": "steps",
           "steps": [
             {
@@ -1394,6 +1467,7 @@
         {
           "id": "shiny_charm",
           "name": "Amuleto Brilhante",
+          "name_en": "Shiny Charm",
           "kind": "toggle",
           "steps": null,
           "odds": 1024.38,

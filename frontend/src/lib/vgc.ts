@@ -154,6 +154,13 @@ export async function importPasteToBoxes(paste: string, language: string): Promi
 
 export const MY_TEAM_KEY = 'traderock.vgc.myteam'
 
+/** Data ISO sem hora ("2026-09-01") no formato do idioma. Lida como data local para não voltar um dia no fuso do Brasil. */
+export function formatIsoDate(iso: string, language: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso)
+  if (!m) return iso
+  return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])).toLocaleDateString(language)
+}
+
 export function loadMyTeam(): string {
   try {
     return localStorage.getItem(MY_TEAM_KEY) ?? ''

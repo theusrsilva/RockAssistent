@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Badge } from '../../../components/ui'
 import { useApiGet } from '../../../lib/dex'
-import { localized, type VgcRegulation } from '../../../lib/vgc'
+import { formatIsoDate, localized, type VgcRegulation } from '../../../lib/vgc'
 import { BlockState } from './common'
 
 /** :::vgc-regulation — a regulamentação vigente (assets/data/vgc/regulation.json): datas, regras e novidades. */
@@ -19,13 +19,13 @@ export default function VgcRegulationBlock() {
           </div>
           <dl className="grid gap-x-4 gap-y-1 sm:grid-cols-[auto_1fr]">
             <dt className="font-semibold">{t('vgc.regulation.period')}</dt>
-            <dd>{t('vgc.regulation.dates', { from: r.validFrom, to: r.validTo ?? '…' })}</dd>
+            <dd>{t('vgc.regulation.dates', { from: formatIsoDate(r.validFrom, i18n.language), to: r.validTo ? formatIsoDate(r.validTo, i18n.language) : '…' })}</dd>
             <dt className="font-semibold">{t('vgc.regulation.format')}</dt>
             <dd>{t('vgc.regulation.formatValue', { bring: r.bring, pick: r.pick, level: r.level })}</dd>
             <dt className="font-semibold">{t('vgc.regulation.pool')}</dt>
             <dd>{r.allowedDexes.join('; ')}</dd>
             <dt className="font-semibold">{t('vgc.regulation.checkedOn')}</dt>
-            <dd>{r.checkedOn}</dd>
+            <dd>{formatIsoDate(r.checkedOn, i18n.language)}</dd>
           </dl>
           <div>
             <div className="font-semibold">{t('vgc.regulation.rules')}</div>

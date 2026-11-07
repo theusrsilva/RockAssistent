@@ -295,5 +295,7 @@ public sealed class HuntApiTests : IAsyncLifetime
         var masuda = sv.GetProperty("methods").EnumerateArray().Single(m => m.GetProperty("id").GetString() == "masuda");
         Assert.Equal(683.08, masuda.GetProperty("baseOdds").GetDouble(), 0.01);
         Assert.Equal("shiny_charm", masuda.GetProperty("modifiers")[0].GetProperty("id").GetString());
+        Assert.Equal("Masuda Method", masuda.GetProperty("nameEn").GetString());
+        Assert.Equal("Shiny Charm", masuda.GetProperty("modifiers")[0].GetProperty("nameEn").GetString());
     }
 }

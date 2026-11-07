@@ -41,6 +41,28 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public void Metodos_e_modificadores_tem_nome_em_ingles()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        Assert.All(store.ShinyMethods, m =>
+        {
+            Assert.False(string.IsNullOrWhiteSpace(m.NameEn), m.Id);
+            Assert.All(m.Modifiers, x => Assert.False(string.IsNullOrWhiteSpace(x.NameEn), $"{m.Id}/{x.Id}"));
+        });
+        Assert.Equal("Masuda Method", store.ShinyMethods.Single(m => m.Id == "masuda").NameEn);
+        Assert.Equal("Shiny Charm", store.ShinyMethods.Single(m => m.Id == "masuda").Modifiers.Single(x => x.Id == "shiny_charm").NameEn);
+    }
+
+    [Fact]
+    public void Validador_rejeita_nome_em_ingles_vazio()
+    {
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(Shiny(
+            """{ "id": "a", "name": "A", "name_en": " ", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "name_en": "", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": null } ] }""")));
+        Assert.Contains("shiny-methods/a: name e name_en", ex.Message);
+        Assert.Contains("shiny-methods/a/c: name e name_en", ex.Message);
+    }
+
+    [Fact]
     public void Cada_arquivo_de_dados_desserializa()
     {
         var files = GameDataStore.EmbeddedFiles();
@@ -318,7 +340,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         var files = new Dictionary<string, string>
         {
             ["shiny-methods.json"] = $$"""
-                { {{Source}}, "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096,
+                { {{Source}}, "items": [ { "id": "x", "name": "X", "name_en": "X", "description": "d", "base_odds": 4096,
                   "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["zz"], "notes": null, "verified": false } ] }
                 """,
         };
@@ -368,25 +390,25 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     {
         {
             """
-            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 1000, "rolls": 2, "counter": false, "games": null } ] }
+            { "id": "a", "name": "A", "name_en": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "name_en": "C", "kind": "toggle", "steps": null, "odds": 1000, "rolls": 2, "counter": false, "games": null } ] }
             """,
             "não batem"
         },
         {
             """
-            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "x", "name": "X", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null }, { "id": "y", "name": "Y", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null } ] }
+            { "id": "a", "name": "A", "name_en": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "x", "name": "X", "name_en": "X", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null }, { "id": "y", "name": "Y", "name_en": "Y", "kind": "steps", "steps": [ { "label": "1", "min": 0, "max": null, "odds": 10, "rolls": null } ], "odds": null, "rolls": null, "counter": true, "games": null } ] }
             """,
             "counter"
         },
         {
             """
-            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": ["swsh"] } ] }
+            { "id": "a", "name": "A", "name_en": "A", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "name_en": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": ["swsh"] } ] }
             """,
             "swsh"
         },
         {
             """
-            { "id": "a", "name": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": null } ] }
+            { "id": "a", "name": "A", "name_en": "A", "description": "d", "base_odds": 4096, "base_rolls": 1, "roll_odds": 4096, "games": ["sv"], "notes": null, "verified": true, "modifiers": [ { "id": "c", "name": "C", "name_en": "C", "kind": "toggle", "steps": null, "odds": 100, "rolls": null, "counter": false, "games": null } ] }
             """,
             "rolls"
         },
@@ -401,9 +423,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Theory]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null } ] }""")]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true, "extra": 1 } ] }""")]
-    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": null, "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true } ] }""")]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "name_en": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null } ] }""")]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": "X", "name_en": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true, "extra": 1 } ] }""")]
+    [InlineData("""{ "source": [], "items": [ { "id": "x", "name": null, "name_en": "X", "description": "d", "base_odds": 4096, "base_rolls": null, "roll_odds": null, "modifiers": [], "games": ["sv"], "notes": null, "verified": true } ] }""")]
     [InlineData("""{ "items": [] }""")]
     public void Arquivo_fora_do_esquema_falha(string json)
     {
@@ -585,6 +607,8 @@ public sealed class GameDataApiTests : IAsyncLifetime
         Assert.True(all.GetArrayLength() > sv.GetArrayLength());
         var masuda = sv.EnumerateArray().Single(m => m.GetProperty("id").GetString() == "masuda");
         Assert.Equal(683.08, masuda.GetProperty("baseOdds").GetDouble(), 2);
+        Assert.Equal("Masuda Method", masuda.GetProperty("nameEn").GetString());
+        Assert.Equal("Shiny Charm", masuda.GetProperty("modifiers")[0].GetProperty("nameEn").GetString());
         Assert.All(sv.EnumerateArray(), m =>
             Assert.Contains("sv", m.GetProperty("games").EnumerateArray().Select(g => g.GetString())));
 
