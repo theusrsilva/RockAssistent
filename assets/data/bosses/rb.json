@@ -27,8 +27,58 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Bulbasaur 5; com Bulbasaur: Charmander 5",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 4,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 7,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 1,
+              "form": 0,
+              "level": 5,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-2",
@@ -60,8 +110,85 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgey 9, Bulbasaur 8; com Bulbasaur: Pidgey 9, Charmander 8; luta opcional",
-      "versions": null
+      "notes": "golpes padrão do nível; luta opcional",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 4,
+              "form": 0,
+              "level": 8,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 7,
+              "form": 0,
+              "level": 8,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 16,
+              "form": 0,
+              "level": 9,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 1,
+              "form": 0,
+              "level": 8,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "brock",
@@ -144,8 +271,139 @@
       ],
       "level_cap": 18,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 18, Abra 15, Rattata 15, Bulbasaur 17; com Bulbasaur: Pidgeotto 18, Abra 15, Rattata 15, Charmander 17",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 4,
+              "form": 0,
+              "level": 17,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 7,
+              "form": 0,
+              "level": 17,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 63,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 19,
+              "form": 0,
+              "level": 15,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 1,
+              "form": 0,
+              "level": 17,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 18,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "misty",
@@ -228,8 +486,139 @@
       ],
       "level_cap": 20,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 19, Raticate 16, Kadabra 18, Ivysaur 20; com Bulbasaur: Pidgeotto 19, Raticate 16, Kadabra 18, Charmeleon 20",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 5,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 8,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 19,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 20,
+              "form": 0,
+              "level": 16,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 18,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 2,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 20,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "lt-surge",
@@ -414,8 +803,166 @@
       ],
       "level_cap": 25,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeotto 25, Gyarados 23, Growlithe 22, Kadabra 20, Ivysaur 25; com Bulbasaur: Pidgeotto 25, Exeggcute 23, Gyarados 22, Kadabra 20, Charmeleon 25",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 5,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 8,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 17,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 23,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 22,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 64,
+              "form": 0,
+              "level": 20,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 2,
+              "form": 0,
+              "level": 25,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 25,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "rival-6",
@@ -474,8 +1021,166 @@
       ],
       "level_cap": 40,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 37, Gyarados 38, Growlithe 35, Alakazam 35, Venusaur 40; com Bulbasaur: Pidgeot 37, Exeggcute 38, Gyarados 35, Alakazam 35, Charizard 40",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 37,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 38,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 35,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 40,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 40,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "giovanni-silph",
@@ -807,8 +1512,193 @@
       ],
       "level_cap": 53,
       "verified": true,
-      "notes": "golpes padrão do nível; time para quem escolheu Charmander; com Squirtle: Pidgeot 47, Rhyhorn 45, Gyarados 45, Growlithe 47, Alakazam 50, Venusaur 53; com Bulbasaur: Pidgeot 47, Rhyhorn 45, Exeggcute 45, Gyarados 47, Alakazam 50, Charizard 53",
-      "versions": null
+      "notes": "golpes padrão do nível",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 50,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 53,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 102,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 50,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 53,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 111,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 45,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 58,
+              "form": 0,
+              "level": 47,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 50,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 53,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 53,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "lorelei",
@@ -1116,8 +2006,193 @@
       ],
       "level_cap": 65,
       "verified": true,
-      "notes": "golpes padrão do nível, mas o Pidgeot tem Sky Attack e o inicial tem um golpe forte no 3º golpe (Blastoise: Blizzard; Venusaur: Mega Drain; Charizard: Fire Blast); time para quem escolheu Charmander; com Squirtle: Pidgeot 61, Alakazam 59, Rhydon 61, Gyarados 61, Arcanine 63, Venusaur 65; com Bulbasaur: Pidgeot 61, Alakazam 59, Rhydon 61, Exeggutor 61, Gyarados 63, Charizard 65",
-      "versions": null
+      "notes": "golpes padrão do nível, mas o Pidgeot tem Sky Attack e o inicial tem um golpe forte no 3º golpe (Blastoise: Blizzard; Venusaur: Mega Drain; Charizard: Fire Blast)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "bulbasaur",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 59,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 63,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 6,
+              "form": 0,
+              "level": 65,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "charmander",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 59,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 103,
+              "form": 0,
+              "level": 63,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 9,
+              "form": 0,
+              "level": 65,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        },
+        {
+          "starter": "squirtle",
+          "party": [
+            {
+              "species": 18,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 65,
+              "form": 0,
+              "level": 59,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 112,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 61,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 59,
+              "form": 0,
+              "level": 63,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 3,
+              "form": 0,
+              "level": 65,
+              "moves": [],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 65,
+          "verified": true
+        }
+      ]
     }
   ]
 }
