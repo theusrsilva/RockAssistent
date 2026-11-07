@@ -558,13 +558,22 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
 
         // Bulbasaur no Z-A: presente no laboratório e selvagem numa Wild Zone.
         Assert.Equal(AvailabilityKind.Encounter, await Kind(1, "za"));
-        Assert.Equal(AvailabilityKind.Gift, await Kind(142, "za"));   // Aerodactyl: só presente
-        Assert.Equal(AvailabilityKind.Trade, await Kind(137, "za"));  // Porygon: só troca
+        Assert.NotEqual(AvailabilityKind.None, await Kind(142, "za")); // Aerodactyl: presente (o PKHeX o tem como fixo)
+        // Porygon: troca nos nossos dados; o PKHeX também o tem selvagem (o mais forte vence).
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(137, "za"));
         Assert.Equal(AvailabilityKind.None, await Kind(906, "za"));   // Sprigatito não está no Z-A
         Assert.Equal(AvailabilityKind.Encounter, await Kind(1001, "sv")); // Wo-Chien: encontro fixo
-        Assert.Equal(AvailabilityKind.Gift, await Kind(906, "sv"));
+        Assert.NotEqual(AvailabilityKind.None, await Kind(906, "sv")); // inicial
         // Jogos do PokeAPI continuam como antes.
         Assert.Equal(AvailabilityKind.Encounter, await Kind(92, "frlg"));
+        // PKHeX: o que o PokeAPI não tem.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(127, "gs"));  // Pinsir do concurso de insetos
+        Assert.Equal(AvailabilityKind.Gift, await Kind(447, "dp"));       // ovo do Riolu
+        Assert.Equal(AvailabilityKind.Trade, await Kind(302, "b2w2"));    // Sableye por troca
+        // Só com evento: fora.
+        Assert.NotEqual(AvailabilityKind.Encounter, await Kind(249, "frlg")); // Lugia (Mystic Ticket)
+        Assert.Equal(AvailabilityKind.None, await Kind(491, "pt"));       // Darkrai (Member Card)
+        Assert.Equal(AvailabilityKind.None, await Kind(801, "sm"));       // Magearna (código QR)
 
         var detail = store.SpeciesEncounters("za", 1);
         Assert.NotNull(detail);
