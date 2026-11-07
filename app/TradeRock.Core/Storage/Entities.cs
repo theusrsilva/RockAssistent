@@ -197,6 +197,43 @@ public sealed class ShinyHunt : IOwned
 }
 
 /// <summary>
+/// Registro de uma atividade terminada (raid, Mystery Gift ou Union Circle) para o Histórico. Gravado pelo
+/// <c>ActivityService</c> no fim da sessão (sucesso, cancelamento ou erro). Nunca guarda o arquivo do presente.
+/// </summary>
+public sealed class ActivityRecord : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+
+    /// <summary><c>raid</c>, <c>gift</c> ou <c>circle</c>.</summary>
+    public required string Kind { get; set; }
+
+    /// <summary>Tipo da raid (<c>max-raid-host</c>...) ou do Union Circle (<c>quests</c>, <c>encounters</c>).</summary>
+    public string? SubKind { get; set; }
+
+    public TradeGame Game { get; set; }
+    public required string EngineId { get; set; }
+    public bool IsSimulation { get; set; }
+    public DateTimeOffset StartedAt { get; set; }
+    public DateTimeOffset EndedAt { get; set; }
+
+    /// <summary><c>completed</c>, <c>failed</c> ou <c>cancelled</c>.</summary>
+    public required string Status { get; set; }
+
+    public bool Ok { get; set; }
+    public string? ErrorCode { get; set; }
+
+    /// <summary>Nome do presente ou título do evento da raid.</summary>
+    public string? Label { get; set; }
+
+    /// <summary>Espécie do encontro do Union Circle ou o lendário da Dynamax Adventure.</summary>
+    public int? Species { get; set; }
+
+    /// <summary>Resumo em JSON (raid: evento, chefe, jogadores, Gigantamax; circle: missão, BP, nível, shiny, tera; gift: modo, chave, extensão).</summary>
+    public required string SummaryJson { get; set; }
+}
+
+/// <summary>
 /// Run de Nuzlocke: jogo (e versão, se a pessoa escolheu), regras, estado e a área em que está. Os Pokémon
 /// (<see cref="NuzlockeMon"/>) e os eventos (<see cref="NuzlockeEvent"/>) pertencem à run e só se chega a eles por ela.
 /// </summary>

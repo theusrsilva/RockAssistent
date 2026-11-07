@@ -64,6 +64,12 @@ public sealed class HistoryFeedTests(DexFixture fx) : IClassFixture<DexFixture>,
         {
             Id = Guid.NewGuid(), Name = "Run 2", GameKey = "frlg", RulesJson = "{}", Status = "active", StartedAt = T0,
         });
+        db.ActivityRecords.Add(new ActivityRecord
+        {
+            Id = Guid.NewGuid(), Kind = "raid", SubKind = "lair-host", Game = TradeGame.Shield, EngineId = "fake",
+            StartedAt = T0.AddHours(1), EndedAt = T0.AddHours(2), Status = "cancelled", Ok = false, Species = 150,
+            SummaryJson = "{}",
+        });
         await db.SaveChangesAsync(Ct);
     }
 
@@ -73,7 +79,7 @@ public sealed class HistoryFeedTests(DexFixture fx) : IClassFixture<DexFixture>,
         await SeedAsync();
         var items = await _feed.ListAsync(null, HistoryFeed.DefaultLimit, Ct);
 
-        Assert.Equal(["hunt", "nuzlocke", "trade"], items.Select(i => i.Kind));
+        Assert.Equal(["hunt", "nuzlocke", "raid", "trade"], items.Select(i => i.Kind));
         var hunt = items[0];
         Assert.Equal("Sprigatito", hunt.Title);
         Assert.Equal(906, hunt.Species);
@@ -81,9 +87,12 @@ public sealed class HistoryFeedTests(DexFixture fx) : IClassFixture<DexFixture>,
         Assert.Equal("sv", hunt.GameKey);
         Assert.False(items[1].Ok); // wipe
         Assert.Equal("Run 1", items[1].Title);
-        Assert.Equal("swsh", items[2].GameKey);
-        Assert.Equal("completed", items[2].Subtitle);
-        Assert.True(items[2].Ok);
+        var raid = items[2];
+        Assert.Equal(("lair-host", "lair-host", "swsh", 150, false), (raid.Title, raid.Subtitle, raid.GameKey, raid.Species, raid.Ok));
+        Assert.Equal(T0.AddHours(2), raid.At);
+        Assert.Equal("swsh", items[3].GameKey);
+        Assert.Equal("completed", items[3].Subtitle);
+        Assert.True(items[3].Ok);
     }
 
     [Fact]
@@ -91,7 +100,8 @@ public sealed class HistoryFeedTests(DexFixture fx) : IClassFixture<DexFixture>,
     {
         await SeedAsync();
         Assert.Equal(["hunt"], (await _feed.ListAsync("hunt", 50, Ct)).Select(i => i.Kind));
-        Assert.Empty(await _feed.ListAsync("raid", 50, Ct));
+        Assert.Equal(["raid"], (await _feed.ListAsync("raid", 50, Ct)).Select(i => i.Kind));
+        Assert.Empty(await _feed.ListAsync("gift", 50, Ct));
         Assert.Equal(["hunt"], (await _feed.ListAsync(null, 1, Ct)).Select(i => i.Kind));
         await Assert.ThrowsAsync<ArgumentException>(() => _feed.ListAsync("x", 50, Ct));
     }
@@ -102,7 +112,7 @@ public sealed class HistoryFeedTests(DexFixture fx) : IClassFixture<DexFixture>,
         await SeedAsync();
         using (OwnerScope.Use(Guid.NewGuid()))
             Assert.Empty(await _feed.ListAsync(null, 50, Ct));
-        Assert.Equal(3, (await _feed.ListAsync(null, 50, Ct)).Count);
+        Assert.Equal(4, (await _feed.ListAsync(null, 50, Ct)).Count);
     }
 }
 
@@ -143,5 +153,32 @@ public sealed class HistoryApiTests : IAsyncLifetime
         var ok = await _client.GetAsync("/api/history?kind=hunt&limit=10", ct);
         Assert.Equal(HttpStatusCode.OK, ok.StatusCode);
         Assert.Equal(JsonValueKind.Array, (await ok.Content.ReadFromJsonAsync<JsonElement>(ct)).ValueKind);
+    }
+
+    [Fact]
+    public async Task Raid_cancelada_vai_para_o_historico_sem_sucesso()
+    {
+        // Velocidade normal do FakeEngine: a raid ainda está rodando quando a cancelamos.
+        var ct = TestContext.Current.CancellationToken;
+        var start = await _client.PostAsJsonAsync("/api/activities",
+            new { game = "sword", kind = "raid", raid = new { kind = "lair-host", legendary = 150 } }, ct);
+        Assert.Equal(HttpStatusCode.Accepted, start.StatusCode);
+        Assert.Equal(HttpStatusCode.Accepted, (await _client.PostAsync("/api/activities/current/cancel", null, ct)).StatusCode);
+        for (var i = 0; i < 200; i++)
+        {
+            var current = await _client.GetFromJsonAsync<JsonElement>("/api/activities/current", ct);
+            if (current.GetProperty("status").GetString() != "running")
+                break;
+            await Task.Delay(20, ct);
+        }
+
+        var items = await _client.GetFromJsonAsync<JsonElement>("/api/history?kind=raid", ct);
+        var item = Assert.Single(items.EnumerateArray());
+        Assert.False(item.GetProperty("ok").GetBoolean());
+        Assert.Equal("lair-host", item.GetProperty("subtitle").GetString());
+        Assert.Equal(150, item.GetProperty("species").GetInt32());
+        Assert.Equal("swsh", item.GetProperty("gameKey").GetString());
+        var all = await _client.GetFromJsonAsync<JsonElement>("/api/history", ct);
+        Assert.Contains(all.EnumerateArray(), i => i.GetProperty("kind").GetString() == "raid");
     }
 }

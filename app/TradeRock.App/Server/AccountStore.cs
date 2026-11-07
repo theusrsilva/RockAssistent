@@ -133,6 +133,7 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
             var ids = mine.Select(p => p.Id).ToList();
             await vault.SaveAttachments.ExecuteDeleteAsync(ct);
             await vault.Hunts.ExecuteDeleteAsync(ct);
+            await vault.ActivityRecords.ExecuteDeleteAsync(ct);
             var runs = await vault.NuzlockeRuns.Select(r => r.Id).ToListAsync(ct);
             await vault.NuzlockeMons.Where(m => runs.Contains(m.RunId)).ExecuteDeleteAsync(ct);
             await vault.NuzlockeEvents.Where(e => runs.Contains(e.RunId)).ExecuteDeleteAsync(ct);

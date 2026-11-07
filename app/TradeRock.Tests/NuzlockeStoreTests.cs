@@ -364,6 +364,37 @@ public sealed class NuzlockeMigrationTests
     }
 }
 
+public sealed class ActivityRecordMigrationTests
+{
+    [Fact]
+    public async Task Migracao_sobre_banco_antigo_mantem_as_runs()
+    {
+        using var dir = new TestDataDir();
+        var options = new DbContextOptionsBuilder<TradeRockDb>()
+            .UseSqlite($"Data Source={dir.Paths.DatabasePath};Pooling=False").Options;
+        var ct = TestContext.Current.CancellationToken;
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.GetService<IMigrator>().MigrateAsync("Nuzlocke", ct);
+            db.NuzlockeRuns.Add(new NuzlockeRun { Name = "Kanto", GameKey = "frlg", RulesJson = "{}", Status = "wipe" });
+            await db.SaveChangesAsync(ct);
+        }
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.Database.MigrateAsync(ct);
+            Assert.Equal(1, await db.NuzlockeRuns.CountAsync(ct));
+            db.ActivityRecords.Add(new ActivityRecord
+            {
+                Kind = "gift", Game = TradeRock.Core.Trading.TradeGame.FireRed, EngineId = "fake", Status = "completed", SummaryJson = "{}",
+            });
+            await db.SaveChangesAsync(ct);
+            Assert.Equal(OwnerScope.LocalOwner, (await db.ActivityRecords.SingleAsync(ct)).OwnerId);
+        }
+    }
+}
+
 public sealed class NuzlockeApiTests : IAsyncLifetime
 {
     private readonly SessionToken _token = SessionToken.Generate();

@@ -8,15 +8,15 @@ namespace TradeRock.Core.Storage;
 /// <summary>
 /// Um item do Histórico unificado. <see cref="Kind"/>: <c>trade</c>, <c>raid</c>, <c>gift</c>, <c>circle</c>,
 /// <c>hunt</c> ou <c>nuzlocke</c>. Título e subtítulo são dados neutros (a interface monta o texto traduzido):
-/// troca = treinador e status; hunt = espécie (inglês) e método; run = nome e status.
+/// troca = treinador e status; hunt = espécie (inglês) e método; run = nome e status; atividade = nome do presente
+/// ou do evento (senão o tipo) e o tipo da raid/círculo (senão o status).
 /// </summary>
 public sealed record HistoryItem(
     string Kind, Guid Id, DateTimeOffset At, string Title, string Subtitle, string? GameKey, int? Species, bool Ok);
 
 /// <summary>
-/// Junta trocas, hunts terminadas e runs de Nuzlocke terminadas numa lista só, da mais nova para a mais velha.
-/// Raids, Mystery Gift e Union Circle não deixam registro hoje (o <c>ActivityService</c> só guarda a sessão
-/// em memória); os tipos existem para o filtro, mas ainda não trazem itens.
+/// Junta trocas, atividades (raids, Mystery Gift, Union Circle: <see cref="ActivityRecord"/>), hunts terminadas e
+/// runs de Nuzlocke terminadas numa lista só, da mais nova para a mais velha.
 /// O dono vem dos filtros globais do <see cref="TradeRockDb"/> (cada conta vê só o seu).
 /// </summary>
 public sealed class HistoryFeed(IDbContextFactory<TradeRockDb> dbFactory, DexService dex)
@@ -43,6 +43,8 @@ public sealed class HistoryFeed(IDbContextFactory<TradeRockDb> dbFactory, DexSer
             items.AddRange(await HuntsAsync(db, limit, ct));
         if (kind is null or "nuzlocke")
             items.AddRange(await RunsAsync(db, limit, ct));
+        if (kind is null or "raid" or "gift" or "circle")
+            items.AddRange(await ActivitiesAsync(db, kind, limit, ct));
 
         return items.OrderByDescending(i => i.At).Take(limit).ToList();
     }
@@ -50,7 +52,7 @@ public sealed class HistoryFeed(IDbContextFactory<TradeRockDb> dbFactory, DexSer
     private static async Task<IEnumerable<HistoryItem>> TradesAsync(TradeRockDb db, int limit, CancellationToken ct)
     {
         var trades = await db.Trades.AsNoTracking().Include(t => t.Entries)
-            .OrderByDescending(t => t.StartedAt).Take(limit).ToListAsync(ct);
+            .OrderByDescending(t => t.EndedAt ?? t.StartedAt).Take(limit).ToListAsync(ct);
 
         // Sprite: o primeiro recebido; sem recebido, o primeiro enviado (os da lixeira também contam).
         var first = trades.ToDictionary(t => t.Id, t =>
@@ -85,6 +87,17 @@ public sealed class HistoryFeed(IDbContextFactory<TradeRockDb> dbFactory, DexSer
             .OrderByDescending(r => r.EndedAt).ThenByDescending(r => r.StartedAt).Take(limit).ToListAsync(ct);
         return runs.Select(r => new HistoryItem(
             "nuzlocke", r.Id, r.EndedAt ?? r.StartedAt, r.Name, r.Status, r.GameKey, null, r.Status == "champion"));
+    }
+
+    private static async Task<IEnumerable<HistoryItem>> ActivitiesAsync(TradeRockDb db, string? kind, int limit, CancellationToken ct)
+    {
+        var query = db.ActivityRecords.AsNoTracking();
+        if (kind is not null)
+            query = query.Where(a => a.Kind == kind);
+        var records = await query.OrderByDescending(a => a.EndedAt).Take(limit).ToListAsync(ct);
+        return records.Select(a => new HistoryItem(
+            a.Kind, a.Id, a.EndedAt, a.Label ?? a.SubKind ?? a.Kind, a.SubKind ?? a.Status,
+            GameVersions.ByFamily(GameCatalog.Of(a.Game).Family)?.Key, a.Species, a.Ok));
     }
 
     /// <summary>PartiallyCompleted → partially_completed (como o JSON dos enums).</summary>

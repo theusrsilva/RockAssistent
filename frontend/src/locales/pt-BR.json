@@ -289,7 +289,7 @@
     "received_missing": "A troca terminou, mas o Pokémon recebido não apareceu."
   },
   "history": {
-    "title": "Histórico de trocas",
+    "title": "Histórico",
     "empty": "Nenhuma troca ainda.",
     "trades": "{{done}} de {{planned}} troca(s)",
     "attempts": "{{count}} tentativa(s)",
@@ -323,7 +323,10 @@
       "runChampion": "{{name}}: campeão",
       "runWipe": "{{name}}: wipe",
       "ok": "Deu certo",
-      "fail": "Não deu certo"
+      "fail": "Não deu certo",
+      "raid": "Raid",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle"
     }
   },
   "settings": {

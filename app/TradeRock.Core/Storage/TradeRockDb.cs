@@ -27,6 +27,7 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<NuzlockeRun> NuzlockeRuns => Set<NuzlockeRun>();
     public DbSet<NuzlockeMon> NuzlockeMons => Set<NuzlockeMon>();
     public DbSet<NuzlockeEvent> NuzlockeEvents => Set<NuzlockeEvent>();
+    public DbSet<ActivityRecord> ActivityRecords => Set<ActivityRecord>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -149,6 +150,13 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
         {
             e.HasIndex(x => new { x.RunId, x.At });
             e.HasOne<NuzlockeRun>().WithMany().HasForeignKey(x => x.RunId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<ActivityRecord>(e =>
+        {
+            e.HasQueryFilter(a => a.OwnerId == Owner);
+            e.HasIndex(a => new { a.OwnerId, a.StartedAt });
+            e.Property(a => a.Game).HasConversion<string>();
         });
 
         model.Entity<SettingEntry>(e => e.HasKey(s => s.Key));

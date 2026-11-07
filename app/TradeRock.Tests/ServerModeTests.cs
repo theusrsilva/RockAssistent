@@ -299,6 +299,11 @@ public sealed class ServerModeTests : IAsyncLifetime
                 Id = Guid.NewGuid(), PokemonId = mon.Id, SavePath = "/tmp/x.sav", SaveSha256 = "ab", Box = 0, Slot = 0,
                 AttachedAt = DateTimeOffset.UtcNow,
             });
+            db.ActivityRecords.Add(new ActivityRecord
+            {
+                Id = Guid.NewGuid(), Kind = "gift", Game = TradeRock.Core.Trading.TradeGame.FireRed, EngineId = "fake",
+                Status = "completed", Ok = true, SummaryJson = "{}",
+            });
             await db.SaveChangesAsync(Ct);
         }
 
@@ -308,6 +313,7 @@ public sealed class ServerModeTests : IAsyncLifetime
             Assert.Equal(0, await db.Hunts.IgnoreQueryFilters().CountAsync(h => h.OwnerId == owner, Ct));
             Assert.Equal(0, await db.SaveAttachments.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
             Assert.Equal(0, await db.NuzlockeRuns.IgnoreQueryFilters().CountAsync(r => r.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.ActivityRecords.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
             Assert.Equal(0, await db.NuzlockeMons.CountAsync(Ct));
             Assert.Equal(0, await db.NuzlockeEvents.CountAsync(Ct));
         }
