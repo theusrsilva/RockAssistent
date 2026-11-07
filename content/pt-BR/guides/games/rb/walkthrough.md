@@ -567,7 +567,6 @@ Ordem da história. Cada trecho: o que fazer, itens importantes, encontros e che
 
 - TM29 Psychic
 - TM31 Mimic
-- TM09 Take Down
 
 **Encontros**
 
@@ -587,6 +586,7 @@ Ordem da história. Cada trecho: o que fazer, itens importantes, encontros e che
 - Lapras
 - Master Ball
 - TM03 Swords Dance
+- TM09 Take Down
 - TM26 Earthquake
 - TM36 Self-Destruct
 

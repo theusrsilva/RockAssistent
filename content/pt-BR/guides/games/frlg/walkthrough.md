@@ -463,7 +463,7 @@ Ordem da história, de Pallet Town às Sevii Islands. Cada trecho: o que fazer, 
 
 :::boss frlg giovanni-hideout
 
-- Dica: Onix, Rhyhorn e Kangaskhan 29: Water/Grass/Fighting.
+- Dica: Onix 25, Rhyhorn 24 e Kangaskhan 29: Water/Grass/Fighting.
 
 ## Route 16
 

@@ -463,7 +463,7 @@ Story order, from Pallet Town to the Sevii Islands. Each stop: what to do, items
 
 :::boss frlg giovanni-hideout
 
-- Tip: Onix, Rhyhorn and Kangaskhan 29: Water/Grass/Fighting.
+- Tip: Onix 25, Rhyhorn 24 and Kangaskhan 29: Water/Grass/Fighting.
 
 ## Route 16
 

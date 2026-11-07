@@ -360,7 +360,7 @@ Story order: Johto (8 badges and the League), then Kanto (8 more). Same as Gold/
 **Do**
 
 - Buy TMs, vitamins and battle items.
-- 5F: trade Drowzee → Machop (great against Whitney).
+- 5F: trade Abra → Machop (great against Whitney).
 - 5F on Sundays: TM27 Return or TM21 Frustration depending on friendship.
 - 5F: the woman unlocks Mystery Gift.
 
@@ -849,7 +849,7 @@ Story order: Johto (8 badges and the League), then Kanto (8 more). Same as Gold/
 
 - With the Clear Bell, beat the three sages (Wise Trio) at the entrance.
 - Suicune Lv. 40 on 1F (static, won't flee).
-- After catching Raikou, Entei and Suicune, the elder gives the Rainbow Wing.
+- After the Hall of Fame and with Raikou, Entei and Suicune caught, the elder gives the Rainbow Wing.
 - Ho-Oh Lv. 60 at the top.
 
 **Items**

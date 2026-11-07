@@ -33,7 +33,7 @@
 - TM29 Psychic: Victory Road (B1F); Mauville Game Corner (3,500 coins)
 - TM30 Shadow Ball: Mt. Pyre (6F)
 - TM31 Brick Break: Sootopolis City (house)
-- TM32 Double Team: Mauville Game Corner (1,500 coins)
+- TM32 Double Team: Mauville Game Corner (1,500 coins); hidden on Route 113
 - TM33 Reflect: Lilycove Dept. Store (₽3,000)
 - TM34 Shock Wave: Wattson (Mauville Gym)
 - TM35 Flamethrower: Mauville Game Corner (4,000 coins)

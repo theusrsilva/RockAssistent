@@ -567,7 +567,6 @@ Story order. Each stop: what to do, key items, encounters and boss.
 
 - TM29 Psychic
 - TM31 Mimic
-- TM09 Take Down
 
 **Encounters**
 
@@ -587,6 +586,7 @@ Story order. Each stop: what to do, key items, encounters and boss.
 - Lapras
 - Master Ball
 - TM03 Swords Dance
+- TM09 Take Down
 - TM26 Earthquake
 - TM36 Self-Destruct
 

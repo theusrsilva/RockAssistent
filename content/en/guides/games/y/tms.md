@@ -10,7 +10,7 @@
 - TM06 Toxic: Koga (Fuchsia Gym)
 - TM07 Horn Drill: Rocket Hideout B2F; Celadon Dept. Store (₽2,000)
 - TM08 Body Slam: S.S. Anne
-- TM09 Take Down: Saffron City; Celadon Dept. Store (₽3,000)
+- TM09 Take Down: Silph Co. 5F; Celadon Dept. Store 2F (₽3,000)
 - TM10 Double-Edge: Rocket Hideout B3F
 - TM11 BubbleBeam: Misty (Cerulean Gym)
 - TM12 Water Gun: Mt. Moon
@@ -33,15 +33,15 @@
 - TM29 Psychic: Mr. Psychic, Saffron City
 - TM30 Teleport: Route 9
 - TM31 Mimic: Copycat, Saffron City (Poké Doll)
-- TM32 Double Team: Fuchsia City/Safari Zone; Celadon Dept. Store (₽1,000)
+- TM32 Double Team: Safari Zone (west area); Celadon Dept. Store (₽1,000)
 - TM33 Reflect: Power Plant; Celadon Dept. Store (₽1,000)
 - TM34 Bide: Brock (Pewter Gym)
 - TM35 Metronome: Cinnabar Lab
 - TM36 Self-Destruct: Silph Co.
-- TM37 Egg Bomb: Fuchsia City/Safari Zone; Celadon Dept. Store (₽2,000)
+- TM37 Egg Bomb: Safari Zone (east area); Celadon Dept. Store (₽2,000)
 - TM38 Fire Blast: Blaine (Cinnabar Gym)
 - TM39 Swift: Route 12 (lookout station)
-- TM40 Skull Bash: Safari Zone
+- TM40 Skull Bash: Safari Zone (north area)
 - TM41 Soft-Boiled: Celadon City
 - TM42 Dream Eater: Viridian City
 - TM43 Sky Attack: Victory Road

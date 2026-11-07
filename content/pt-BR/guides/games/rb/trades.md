@@ -28,8 +28,8 @@
 
 ## Game Corner (Celadon)
 
-- Red: Abra, Clefairy, Nidorina, Dratini, Scyther, Porygon.
-- Blue: Abra, Clefairy, Nidorino, Pinsir, Dratini, Porygon.
+- Red: Abra 9, Clefairy 8, Nidorina 17, Dratini 18, Scyther 25, Porygon 26.
+- Blue: Abra 6, Clefairy 12, Nidorino 17, Pinsir 20, Dratini 24, Porygon 18.
 
 Ovos e criação não existem na Gen 1.
 

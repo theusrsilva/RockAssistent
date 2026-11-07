@@ -3,7 +3,7 @@
 | Local | Você dá | Recebe |
 | --- | --- | --- |
 | Violet City | Bellsprout | Onix |
-| Goldenrod Dept. Store 5F | Drowzee | Machop |
+| Goldenrod Dept. Store 5F | Abra | Machop |
 | Olivine City | Krabby | Voltorb |
 | Blackthorn City | Dragonair (fêmea) | Dodrio |
 | Pewter City | Haunter | Xatu |

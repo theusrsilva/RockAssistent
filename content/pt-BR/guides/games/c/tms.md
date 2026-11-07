@@ -10,22 +10,22 @@
 - TM06 Toxic: Janine (Fuchsia Gym)
 - TM07 Zap Cannon: Power Plant (devolver o Machine Part)
 - TM08 Rock Smash: Route 36 (depois do Sudowoodo); Goldenrod Dept. Store (₽2.000)
-- TM09 Psych Up: Só pela Time Capsule (Gen 1)
+- TM09 Psych Up: Não disponível em GSC (só evento ou troca de item)
 - TM10 Hidden Power: Lake of Rage (casa); Celadon Dept. Store (₽3.000)
 - TM11 Sunny Day: Radio Tower 3F (depois dos Rockets); Celadon Dept. Store (₽2.000)
 - TM12 Sweet Scent: Ilex Forest (saída norte)
-- TM13 Snore: Moomoo Farm, Route 39
+- TM13 Snore: Moomoo Farm, Route 39; Dark Cave (entrada de Blackthorn)
 - TM14 Blizzard: Goldenrod Game Corner (5.500 fichas)
 - TM15 Hyper Beam: Celadon Game Corner (7.500 fichas)
 - TM16 Icy Wind: Pryce (Mahogany Gym)
 - TM17 Protect: Celadon Dept. Store (₽3.000)
-- TM18 Rain Dance: Slowpoke Well (Strength)
+- TM18 Rain Dance: Slowpoke Well (Strength); Celadon Dept. Store 3F
 - TM19 Giga Drain: Erika (Celadon Gym)
 - TM20 Endure: Burned Tower
 - TM21 Frustration: Goldenrod Dept. Store 5F, domingo (Pokémon pouco amigo)
 - TM22 SolarBeam: Route 27
 - TM23 Iron Tail: Jasmine (Olivine Gym)
-- TM24 DragonBreath: Clair (Blackthorn Gym)
+- TM24 DragonBreath: Clair (Blackthorn Gym), depois do teste do Dragon's Den
 - TM25 Thunder: Goldenrod Game Corner (5.500 fichas)
 - TM26 Earthquake: Victory Road
 - TM27 Return: Goldenrod Dept. Store 5F, domingo (Pokémon amigo)
@@ -38,7 +38,7 @@
 - TM34 Swagger: Olivine Lighthouse
 - TM35 Sleep Talk: Goldenrod Dept. Store (subsolo)
 - TM36 Sludge Bomb: Route 43
-- TM37 Sandstorm: Casa na saída de Tohjo Falls (Route 27)
+- TM37 Sandstorm: Casa na saída de Tohjo Falls (Route 27); Celadon Dept. Store 3F
 - TM38 Fire Blast: Goldenrod Game Corner (5.500 fichas)
 - TM39 Swift: Union Cave B1F
 - TM40 Defense Curl: Mt. Mortar

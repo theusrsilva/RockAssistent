@@ -10,7 +10,7 @@
 - **Blue** (Rival, S.S. Anne 2F): No 2F. Raticate, Kadabra e o inicial nv. 20.
 - **Lt. Surge** (Líder de Ginásio, Vermilion Gym): Ache os 2 interruptores nas lixeiras. Raichu 24: Ground (Diglett).
 - **Erika** (Líder de Ginásio, Celadon Gym): Vileplume e Victreebel 29: Fire/Flying/Psychic e Awakening.
-- **Giovanni** (Chefe da Equipe Rocket, Rocket Hideout B4F): Onix, Rhyhorn e Kangaskhan 29: Water/Grass/Fighting.
+- **Giovanni** (Chefe da Equipe Rocket, Rocket Hideout B4F): Onix 25, Rhyhorn 24 e Kangaskhan 29: Water/Grass/Fighting.
 - **Blue** (Rival, Pokémon Tower 2F): No 2F. Time de 5 até nv. 25.
 - **Blue** (Rival, Silph Co. 7F): Inicial nv. 40: cure antes.
 - **Giovanni** (Chefe da Equipe Rocket, Silph Co. 11F): Nidoqueen 41: Water/Ground/Psychic.

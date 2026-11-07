@@ -3,7 +3,7 @@
 | Raikou | Roams Johto | 40 | After the Burned Tower |
 | Entei | Roams Johto | 40 | After the Burned Tower |
 | Suicune | Tin Tower 1F | 40 | Clear Bell + Wise Trio (after the Radio Tower) |
-| Ho-Oh | Tin Tower (top) | 60 | Rainbow Wing (catch all three beasts) |
+| Ho-Oh | Tin Tower (top) | 60 | Rainbow Wing (Hall of Fame + all three beasts caught) |
 | Lugia | Whirl Islands (bottom) | 60 | Silver Wing (postgame) + Whirlpool |
 | Celebi | Ilex Forest (shrine) | 30 | GS Ball (event / Virtual Console) |
 | Mew | — | — | Gen 1 only (Time Capsule) |

@@ -10,7 +10,7 @@
 - **Blue** (Rival, S.S. Anne 2F): On 2F. Raticate, Kadabra and starter Lv. 20.
 - **Lt. Surge** (Gym Leader, Vermilion Gym): Find the 2 switches in the trash cans. Raichu 24: Ground (Diglett).
 - **Erika** (Gym Leader, Celadon Gym): Vileplume and Victreebel 29: Fire/Flying/Psychic and Awakenings.
-- **Giovanni** (Team Rocket Boss, Rocket Hideout B4F): Onix, Rhyhorn and Kangaskhan 29: Water/Grass/Fighting.
+- **Giovanni** (Team Rocket Boss, Rocket Hideout B4F): Onix 25, Rhyhorn 24 and Kangaskhan 29: Water/Grass/Fighting.
 - **Blue** (Rival, Pokémon Tower 2F): On 2F. Five Pokémon up to Lv. 25.
 - **Blue** (Rival, Silph Co. 7F): Starter Lv. 40: heal first.
 - **Giovanni** (Team Rocket Boss, Silph Co. 11F): Nidoqueen 41: Water/Ground/Psychic.

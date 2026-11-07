@@ -584,7 +584,6 @@ Story order. Same as Red/Blue, with Yellow's changes noted.
 
 - TM29 Psychic
 - TM31 Mimic
-- TM09 Take Down
 
 **Encounters**
 
@@ -604,6 +603,7 @@ Story order. Same as Red/Blue, with Yellow's changes noted.
 - Lapras
 - Master Ball
 - TM03 Swords Dance
+- TM09 Take Down
 - TM26 Earthquake
 - TM36 Self-Destruct
 

@@ -6,8 +6,8 @@
 - TM02 Dragon Claw: Meteor Falls (Waterfall)
 - TM03 Water Pulse: Juan (Sootopolis Gym)
 - TM04 Calm Mind: Tate & Liza (Mossdeep Gym)
-- TM05 Roar: Route 114
-- TM06 Toxic: Fiery Path (Strength)
+- TM05 Roar: Route 114; Trainer Hill
+- TM06 Toxic: Fiery Path (Strength); Trainer Hill
 - TM07 Hail: Shoal Cave (ice area)
 - TM08 Bulk Up: Brawly (Dewford Gym)
 - TM09 Bullet Seed: Route 104
@@ -27,29 +27,29 @@
 - TM23 Iron Tail: Meteor Falls
 - TM24 Thunderbolt: Wattson (New Mauville generator); Mauville Game Corner (4,000 coins)
 - TM25 Thunder: Lilycove Dept. Store (₽5,500)
-- TM26 Earthquake: Seafloor Cavern (last room)
+- TM26 Earthquake: Seafloor Cavern (last room); Trainer Hill
 - TM27 Return: Pacifidlog Town (high friendship); Prof. Cozmo, Fallarbor (Meteorite)
 - TM28 Dig: Route 114 (Fossil Maniac's house)
 - TM29 Psychic: Victory Road (B1F); Mauville Game Corner (3,500 coins)
 - TM30 Shadow Ball: Mt. Pyre (6F)
 - TM31 Brick Break: Sootopolis City (house); Trainer Hill
-- TM32 Double Team: Mauville Game Corner (1,500 coins)
+- TM32 Double Team: Mauville Game Corner (1,500 coins); hidden on Route 113
 - TM33 Reflect: Lilycove Dept. Store (₽3,000)
 - TM34 Shock Wave: Wattson (Mauville Gym)
 - TM35 Flamethrower: Mauville Game Corner (4,000 coins)
-- TM36 Sludge Bomb: Dewford Town
+- TM36 Sludge Bomb: Dewford Town; Trainer Hill
 - TM37 Sandstorm: Route 111 (south)
 - TM38 Fire Blast: Lilycove Dept. Store (₽5,500)
 - TM39 Rock Tomb: Roxanne (Rustboro Gym)
 - TM40 Aerial Ace: Winona (Fortree Gym)
-- TM41 Torment: Slateport City
+- TM41 Torment: Slateport City; Trainer Hill
 - TM42 Facade: Norman (Petalburg Gym)
 - TM43 Secret Power: Route 111 (north, boy by the tree); Slateport Market (₽3,000)
 - TM44 Rest: Lilycove City (house to the east)
-- TM45 Attract: Verdanturf Town
+- TM45 Attract: Verdanturf Town; Trainer Hill
 - TM46 Thief: Aqua Grunt, Oceanic Museum (Slateport)
 - TM47 Steel Wing: Steven, Granite Cave (Letter)
-- TM48 Skill Swap: Mt. Pyre (outside)
+- TM48 Skill Swap: Mt. Pyre (outside); Trainer Hill
 - TM49 Snatch: S.S. Tidal
 - TM50 Overheat: Flannery (Lavaridge Gym)
 - HM01 Cut: House next to the Rustboro Pokémon Center

@@ -3,7 +3,7 @@
 | Raikou | Errante em Johto | 40 | Depois da Burned Tower |
 | Entei | Errante em Johto | 40 | Depois da Burned Tower |
 | Suicune | Tin Tower 1F | 40 | Clear Bell + Wise Trio (depois da Radio Tower) |
-| Ho-Oh | Tin Tower (topo) | 60 | Rainbow Wing (capturar os três cães) |
+| Ho-Oh | Tin Tower (topo) | 60 | Rainbow Wing (Hall da Fama + os três cães capturados) |
 | Lugia | Whirl Islands (fundo) | 60 | Silver Wing (pós-jogo) + Whirlpool |
 | Celebi | Ilex Forest (santuário) | 30 | GS Ball (evento / Virtual Console) |
 | Mew | — | — | Só da Gen 1 (Time Capsule) |

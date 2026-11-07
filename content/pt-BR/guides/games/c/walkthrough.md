@@ -360,7 +360,7 @@ Ordem da história: Johto (8 insígnias e Liga) e depois Kanto (mais 8). Igual a
 **Faça**
 
 - Compre TMs, Vitamins e itens de batalha.
-- 5F: troca Drowzee → Machop (bom contra a Whitney).
+- 5F: troca Abra → Machop (bom contra a Whitney).
 - 5F aos domingos: TM27 Return ou TM21 Frustration conforme a amizade.
 - 5F: a moça libera o Mystery Gift.
 
@@ -849,7 +849,7 @@ Ordem da história: Johto (8 insígnias e Liga) e depois Kanto (mais 8). Igual a
 
 - Com o Clear Bell, vença os três sábios (Wise Trio) na entrada.
 - Suicune nv. 40 no 1F (encontro fixo, não foge).
-- Depois de capturar Raikou, Entei e Suicune, o ancião dá a Rainbow Wing.
+- Depois do Hall da Fama e com Raikou, Entei e Suicune capturados, o ancião dá a Rainbow Wing.
 - Ho-Oh nv. 60 no topo.
 
 **Itens**

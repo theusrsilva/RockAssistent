@@ -584,7 +584,6 @@ Ordem da história. Igual ao Red/Blue, com as mudanças do Yellow marcadas.
 
 - TM29 Psychic
 - TM31 Mimic
-- TM09 Take Down
 
 **Encontros**
 
@@ -604,6 +603,7 @@ Ordem da história. Igual ao Red/Blue, com as mudanças do Yellow marcadas.
 - Lapras
 - Master Ball
 - TM03 Swords Dance
+- TM09 Take Down
 - TM26 Earthquake
 - TM36 Self-Destruct
 
