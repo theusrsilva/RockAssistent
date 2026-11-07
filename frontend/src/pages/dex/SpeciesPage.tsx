@@ -104,6 +104,7 @@ export default function SpeciesPage() {
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:justify-start">
             {types && <TypeList types={types} />}
             {kind && <Badge tone={kind === 'none' ? 'slate' : 'emerald'}>{t(`dex.availability.${kind}`)}</Badge>}
+            {gameAvailability?.requires && <Badge tone="amber">{t(`dex.requires.${gameAvailability.requires}`)}</Badge>}
             {gameAvailability?.shinyLocked && <Badge tone="amber">{t('dex.shinyLocked')}</Badge>}
           </div>
         </div>

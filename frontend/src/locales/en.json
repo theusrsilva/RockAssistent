@@ -1756,6 +1756,10 @@
       "trade": "In-game trade",
       "none": "Can't be caught"
     },
+    "requires": {
+      "pokewalker": "Needs the Pokéwalker",
+      "event_item": "Needs an event item (Mystery Gift)"
+    },
     "shinyLocked": "Shiny locked in this game",
     "notInGame": "This Pokémon doesn't exist in {{game}}. General data still shows; moves, locations and texts stay empty.",
     "flavorFrom": "This game has no Pokédex entry for this Pokémon; this one is from {{game}}.",

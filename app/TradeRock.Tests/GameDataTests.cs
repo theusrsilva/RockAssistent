@@ -649,6 +649,25 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(AvailabilityKind.None, await Kind(801, "sm"));       // Magearna (código QR)
         Assert.Equal(AvailabilityKind.None, await Kind(385, "rs"));       // Jirachi (disco bônus do Colosseum)
 
+        // Requisitos: só pelo Pokéwalker ou por item de evento (com aviso); havendo jeito normal, nenhum.
+        async Task<GameAvailability> Full(int species, string game) =>
+            (await fx.Service.AvailabilityAsync(species, store.Encounters, TestContext.Current.CancellationToken))
+            .Single(a => a.GameKey == game);
+        var kecleon = await Full(352, "hgss");
+        Assert.NotEqual(AvailabilityKind.None, kecleon.Kind);
+        Assert.Equal(Requires.Pokewalker, kecleon.Requires);
+        var octillery = await Full(224, "hgss");
+        Assert.Equal(AvailabilityKind.Evolution, octillery.Kind);
+        Assert.Null(octillery.Requires);
+        var pecharunt = await Full(1025, "sv");
+        Assert.NotEqual(AvailabilityKind.None, pecharunt.Kind);
+        Assert.Equal(Requires.EventItem, pecharunt.Requires);
+        Assert.Equal(Requires.EventItem, (await Full(151, "e")).Requires);
+        Assert.Equal(Requires.EventItem, (await Full(491, "pt")).Requires);
+        var zigzagoon = await Full(263, "e");
+        Assert.Equal(AvailabilityKind.Encounter, zigzagoon.Kind);
+        Assert.Null(zigzagoon.Requires);
+
         var detail = store.SpeciesEncounters("za", 1);
         Assert.NotNull(detail);
         Assert.Contains(detail, e => e.Method == "gift" && e.Version == "legends-za");

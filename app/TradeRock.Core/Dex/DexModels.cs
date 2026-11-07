@@ -113,7 +113,22 @@ public enum AvailabilityKind
 }
 
 /// <param name="ShinyLocked">Dá para conseguir, mas todo encontro é travado para shiny (tabelas do PKHeX) e não dá para chocar.</param>
-public sealed record GameAvailability(string GameKey, string Name, AvailabilityKind Kind, bool ShinyLocked = false);
+/// <param name="Requires">
+/// Nulo, ou o que todo jeito de conseguir a espécie no jogo precisa: <see cref="Dex.Requires.Pokewalker"/> ou
+/// <see cref="Dex.Requires.EventItem"/>.
+/// </param>
+public sealed record GameAvailability(string GameKey, string Name, AvailabilityKind Kind, bool ShinyLocked = false,
+    string? Requires = null);
+
+/// <summary>Requisitos de <see cref="GameAvailability.Requires"/>.</summary>
+public static class Requires
+{
+    /// <summary>Só pelo Pokéwalker (acessório do HeartGold/SoulSilver).</summary>
+    public const string Pokewalker = "pokewalker";
+
+    /// <summary>Só num lugar ou evento aberto por item de evento recebido por Mystery Gift.</summary>
+    public const string EventItem = "event_item";
+}
 
 /// <summary>O essencial de um golpe para análise de time: tipo, categoria (physical/special/status) e poder.</summary>
 public sealed record MoveBattleInfo(int Id, string Identifier, string Name, string Type, string? Class, int? Power);

@@ -46,7 +46,9 @@ public sealed record HuntMethodOption(string Id, string Name, string NameEn, dou
 /// Jogo em que dá para caçar a espécie: como se obtém (<c>encounter</c>, <c>static</c> = só encontro fixo, <c>gift</c>,
 /// <c>egg</c>, <c>evolution</c>) e os métodos.
 /// </summary>
-public sealed record HuntGame(string GameKey, string Name, IReadOnlyList<string> Kinds, IReadOnlyList<HuntMethodOption> Methods);
+/// <param name="Requires">Nulo, ou o requisito de todo jeito de conseguir a espécie no jogo (<see cref="Dex.Requires"/>).</param>
+public sealed record HuntGame(string GameKey, string Name, IReadOnlyList<string> Kinds, IReadOnlyList<HuntMethodOption> Methods,
+    string? Requires = null);
 
 /// <summary>
 /// Hunts de shiny (Contador Hunt), por conta como o cofre. Guarda a escolha (espécie, jogo, método e modificadores),
@@ -194,7 +196,8 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
         foreach (var game in GameVersions.All)
         {
             var kinds = new HashSet<string>();
-            switch (availability.FirstOrDefault(a => a.GameKey == game.Key)?.Kind)
+            var available = availability.FirstOrDefault(a => a.GameKey == game.Key);
+            switch (available?.Kind)
             {
                 case AvailabilityKind.Encounter: kinds.Add("encounter"); break;
                 case AvailabilityKind.Evolution: kinds.Add("evolution"); break;
@@ -222,7 +225,7 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
                     m.Modifiers.Where(x => x.Games is null || x.Games.Contains(game.Key)).ToList()))
                 .ToList();
             string[] order = ["encounter", "static", "gift", "egg", "evolution"];
-            result.Add(new HuntGame(game.Key, game.Name, order.Where(kinds.Contains).ToList(), methods));
+            result.Add(new HuntGame(game.Key, game.Name, order.Where(kinds.Contains).ToList(), methods, available?.Requires));
         }
         return result;
     }

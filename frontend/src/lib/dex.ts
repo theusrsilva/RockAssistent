@@ -190,7 +190,11 @@ export interface GameAvailability {
   kind: AvailabilityKind
   /** Dá para conseguir, mas sempre travado para shiny (e não dá para chocar). */
   shinyLocked: boolean
+  /** O que todo jeito de conseguir precisa: Pokéwalker ou item de evento (Mystery Gift); null = nada. */
+  requires: Requirement | null
 }
+
+export type Requirement = 'pokewalker' | 'event_item'
 
 /** As 18 identidades de tipo do PokeAPI, na ordem da tabela de tipos. */
 export const TYPES = [

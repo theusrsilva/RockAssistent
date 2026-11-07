@@ -57,6 +57,7 @@ public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<Dex
         var lost = GameVersions.All.ToDictionary(g => g.Key, _ => new List<string>());
         var locked = GameVersions.All.ToDictionary(g => g.Key, _ => new List<string>());
         var giftToWild = new List<string>();
+        var requires = new Dictionary<(string Game, string Tag), List<string>>();
         for (var species = 1; species <= 1025; species++)
         {
             var before = dex.Availability(species, null, pkhex: false, ct);
@@ -82,6 +83,8 @@ public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<Dex
                 if (old is AvailabilityKind.Gift or AvailabilityKind.Trade && now == AvailabilityKind.Encounter
                     && pk != AvailabilityKind.Encounter && own.All(m => m is "gift" or "trade"))
                     giftToWild.Add($"{g.Key} {name}");
+                if (after.Single(a => a.GameKey == g.Key).Requires is { } tag)
+                    (requires.TryGetValue((g.Key, tag), out var list) ? list : requires[(g.Key, tag)] = []).Add(name);
                 if (after.Single(a => a.GameKey == g.Key).ShinyLocked)
                     locked[g.Key].Add(name);
             }
@@ -91,6 +94,9 @@ public sealed class DexAvailabilityAuditTests(DexFixture fx) : IClassFixture<Dex
         summary.Append("\nShiny travado (todos os encontros travados e sem ovo):\n");
         foreach (var g in GameVersions.All)
             summary.Append($"{g.Key}: {locked[g.Key].Count} ({string.Join(", ", locked[g.Key])})\n");
+        summary.Append("\nCom requisito (Pokéwalker ou item de evento):\n");
+        foreach (var ((game, tag), names) in requires.OrderBy(r => r.Key.Game).ThenBy(r => r.Key.Tag))
+            summary.Append($"{game} {tag}: {names.Count} ({string.Join(", ", names)})\n");
         File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "dex-availability-audit.csv"), csv.ToString());
         File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "dex-availability-summary.txt"), summary.ToString());
         File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "dex-availability-full.csv"), full.ToString());

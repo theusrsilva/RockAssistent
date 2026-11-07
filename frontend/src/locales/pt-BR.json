@@ -1756,6 +1756,10 @@
       "trade": "Troca no jogo",
       "none": "Não dá para pegar"
     },
+    "requires": {
+      "pokewalker": "Precisa do Pokéwalker",
+      "event_item": "Precisa de um item de evento (Mystery Gift)"
+    },
     "shinyLocked": "Shiny travado neste jogo",
     "notInGame": "Este Pokémon não existe em {{game}}. Os dados gerais aparecem mesmo assim; golpes, locais e textos ficam vazios.",
     "flavorFrom": "Este jogo não tem texto da Pokédex para este Pokémon; este é o de {{game}}.",

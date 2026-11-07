@@ -105,6 +105,7 @@ export default function NewHuntWizard() {
                     {g.kinds.map((k) => (
                       <Badge key={k}>{t(`hunt.wizard.kinds.${k}`)}</Badge>
                     ))}
+                    {g.requires && <Badge tone="amber">{t(`dex.requires.${g.requires}`)}</Badge>}
                   </div>
                 </Choice>
               ))}

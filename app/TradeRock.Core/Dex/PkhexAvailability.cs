@@ -14,10 +14,12 @@ namespace TradeRock.Core.Dex;
 /// <remarks>
 /// Fica de fora o que não se consegue só jogando: Mystery Gift (<see cref="MysteryGift"/>), raids e surtos de
 /// distribuição do SwSh e do SV, Dream World e Dream Radar (Gen 5), My Pokémon Ranch, presentes de evento da Gen 1 e
-/// da Gen 3 (<c>EncounterGift1</c>/<c>EncounterGift3*</c>), bônus do Colosseum, Pokémon GO, o Pokéwalker (acessório do
-/// HGSS), a Magearna (código QR) e o Pecharunt do SV (só com o item do Mystery Gift).
-/// Lendários de um lugar do jogo aberto por item de evento (Mew da Faraway Island, Deoxys, Darkrai, Shaymin, Arceus...)
-/// contam: o encontro existe no jogo. Encontro de uma forma anterior conta como <see cref="AvailabilityKind.Evolution"/>.
+/// da Gen 3 (<c>EncounterGift1</c>/<c>EncounterGift3*</c>), bônus do Colosseum, Pokémon GO e a Magearna (código QR).
+/// <para>Contam, mas com requisito (<see cref="Required"/>, só usado quando não há outro jeito): o Pokéwalker
+/// (<c>EncounterStatic4Pokewalker</c>, acessório do HGSS) e o que só abre com item de evento do Mystery Gift (os
+/// encontros "fatídicos" da Gen 3 e da Gen 4: Mew da Faraway Island, Lugia/Ho-Oh da Navel Rock, Deoxys, Latios/Latias da
+/// Southern Island...; Darkrai, Shaymin e Arceus da Gen 4 e do BDSP; o Pecharunt do SV).</para>
+/// Encontro de uma forma anterior conta como <see cref="AvailabilityKind.Evolution"/>.
 /// <para>O PKHeX quase nunca marca presente: só o <c>EncounterStatic8</c> tem <c>Gift</c>. Por isso um encontro fixo que não é
 /// selvagem nem raid (inicial, presente, lendário parado) fica em <see cref="Statics"/>, abaixo de Gift e Trade: vira
 /// Encounter só quando nenhuma outra fonte diz presente ou troca. Encounter direto do PKHeX = há slot selvagem ou raid.</para>
@@ -60,10 +62,10 @@ public static class PkhexAvailability
         new(Build, LazyThreadSafetyMode.ExecutionAndPublication);
 
     internal sealed record GameTable(FrozenDictionary<int, AvailabilityKind> Kinds, FrozenSet<int> Statics,
-        FrozenDictionary<int, ShinyInfo> Shiny)
+        FrozenDictionary<int, ShinyInfo> Shiny, FrozenDictionary<int, (AvailabilityKind Kind, string Requires)> Required)
     {
         public static GameTable Empty { get; } = new(FrozenDictionary<int, AvailabilityKind>.Empty, FrozenSet<int>.Empty,
-            FrozenDictionary<int, ShinyInfo>.Empty);
+            FrozenDictionary<int, ShinyInfo>.Empty, FrozenDictionary<int, (AvailabilityKind, string)>.Empty);
     }
 
     /// <summary>Log dos jogos cujo cálculo falhou (o app define na abertura; sem ele, nada é registrado).</summary>
@@ -83,6 +85,10 @@ public static class PkhexAvailability
     /// <summary>Espécies com encontro fixo do PKHeX no jogo que não é selvagem, presente nem troca (veja a classe).</summary>
     public static IReadOnlySet<int> Statics(string gameKey) =>
         Table.Value.TryGetValue(gameKey, out var game) ? game.Statics : FrozenSet<int>.Empty;
+
+    /// <summary>Jeito mais forte de conseguir a espécie com requisito (Pokéwalker ou item de evento), por espécie.</summary>
+    public static IReadOnlyDictionary<int, (AvailabilityKind Kind, string Requires)> Required(string gameKey) =>
+        Table.Value.TryGetValue(gameKey, out var game) ? game.Required : FrozenDictionary<int, (AvailabilityKind, string)>.Empty;
 
     /// <summary>Encontros da espécie no jogo quanto a shiny; nulo quando o PKHeX não tem encontro nenhum dela lá.</summary>
     public static ShinyInfo? Shiny(string gameKey, int species) =>
@@ -124,6 +130,7 @@ public static class PkhexAvailability
         var personal = PKHeX.Core.GameData.GetPersonal(versions[0]);
         var result = new Dictionary<int, AvailabilityKind>();
         var statics = new HashSet<int>();
+        var required = new Dictionary<int, (AvailabilityKind Kind, string Requires)>();
         var shiny = new Dictionary<int, ShinyInfo>();
         for (ushort species = 1; species <= personal.MaxSpeciesID; species++)
         {
@@ -142,7 +149,12 @@ public static class PkhexAvailability
                     var kind = Classify(enc, species);
                     if (kind == AvailabilityKind.None)
                         continue;
-                    if (kind == AvailabilityKind.Encounter && !IsWild(enc))
+                    if (Requirement(enc) is { } tag)
+                    {
+                        if (!required.TryGetValue(species, out var had) || Strength(kind) > Strength(had.Kind))
+                            required[species] = (kind, tag);
+                    }
+                    else if (kind == AvailabilityKind.Encounter && !IsWild(enc))
                         statics.Add(species);
                     else
                         result[species] = Strongest(result.GetValueOrDefault(species), kind);
@@ -155,7 +167,8 @@ public static class PkhexAvailability
                 }
             }
         }
-        return new GameTable(result.ToFrozenDictionary(), statics.ToFrozenSet(), shiny.ToFrozenDictionary());
+        return new GameTable(result.ToFrozenDictionary(), statics.ToFrozenSet(), shiny.ToFrozenDictionary(),
+            required.ToFrozenDictionary());
     }
 
     /// <summary>
@@ -199,13 +212,28 @@ public static class PkhexAvailability
         if (name is "EncounterGift1" or "EncounterGift2" or "EncounterStatic5Entree" or "EncounterStatic5Radar"
             or "EncounterTrade4RanchGift" or "EncounterStatic8NC" or "EncounterStatic8ND" or "EncounterDist9"
             or "EncounterMight9" or "EncounterOutbreak9" or "EncounterSlot7GO" or "EncounterSlot8GO" or "EncounterInvalid"
-            or "EncounterStatic4Pokewalker"
             || name.StartsWith("EncounterGift3", StringComparison.Ordinal) || name.Contains("Colo", StringComparison.Ordinal)
             || name.Contains("XD", StringComparison.Ordinal) || name.StartsWith("EncounterTransfer", StringComparison.Ordinal))
             return false;
-        // A Magearna da Gen 7 só sai pelo código QR do evento; o Pecharunt do SV, só com o item do Mystery Gift.
-        return !(enc.Generation == 7 && enc.Species == (ushort)PKHeX.Core.Species.Magearna)
-            && !(enc.Context == EntityContext.Gen9 && enc.Species == (ushort)PKHeX.Core.Species.Pecharunt);
+        // A Magearna da Gen 7 só sai pelo código QR do evento.
+        return !(enc.Generation == 7 && enc.Species == (ushort)PKHeX.Core.Species.Magearna);
+    }
+
+    /// <summary>Requisito do encontro (veja a classe): Pokéwalker, item de evento ou nenhum.</summary>
+    internal static string? Requirement(IEncounterable enc)
+    {
+        if (enc.GetType().Name == "EncounterStatic4Pokewalker")
+            return Requires.Pokewalker;
+        var fateful = enc is IFatefulEncounterReadOnly { FatefulEncounter: true };
+        var species = (PKHeX.Core.Species)enc.Species;
+        var sinnohEvent = species is PKHeX.Core.Species.Darkrai or PKHeX.Core.Species.Shaymin or PKHeX.Core.Species.Arceus;
+        return enc.Context switch
+        {
+            EntityContext.Gen3 or EntityContext.Gen4 when fateful => Requires.EventItem,
+            EntityContext.Gen4 or EntityContext.Gen8b when sinnohEvent => Requires.EventItem,
+            EntityContext.Gen9 when species == PKHeX.Core.Species.Pecharunt => Requires.EventItem,
+            _ => null,
+        };
     }
 }
 

@@ -1,4 +1,5 @@
 // Contador Hunt: tipos espelho de /api/hunts (TradeRock.Core/Hunts/HuntStore.cs), a fila de incrementos e contas puras.
+import type { Requirement } from './dex'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { TFunction } from 'i18next'
@@ -73,6 +74,8 @@ export interface HuntGame {
   name: string
   kinds: HuntKind[]
   methods: HuntMethod[]
+  /** Pokéwalker ou item de evento (Mystery Gift): todo jeito de conseguir no jogo precisa disso; null = nada. */
+  requires: Requirement | null
 }
 
 /** Erros com texto próprio (o resto vira "common.error"). */
