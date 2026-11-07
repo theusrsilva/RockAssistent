@@ -6,7 +6,8 @@ Official distributions (Wi-Fi, local wireless and Global Link) have ended; Ninte
 | Keldeo | Keldeo | Learns Secret Sword with Cobalion, Terrakion and Virizion at the Moor of Icirrus |
 | Meloetta | Meloetta | Learns Relic Song in the Narrow Street bar (Castelia) |
 | Genesect | Genesect | Drives in the P2 Laboratory (Burn and Shock in Black, Douse and Chill in White) |
-| Shiny Raikou, Entei, Suicune (movie promo) | Shiny legendary dogs | Bring one to Castelia to meet Zorua or Zoroark |
+| Celebi (movie promo) | Celebi | Bring it to the GAME FREAK building in Castelia to get a Zorua |
+| Shiny Raikou, Entei, Suicune (movie promo) | Shiny legendary dogs | Bring one to the Lostlorn Forest (Route 16) to meet Zoroark |
 | Shaymin | Shaymin | Gracidea in Lacunosa Town (Sky Forme) |
 | Lock Capsule | TM95 Snarl | Never distributed |
 | Pokémon Dream World (Global Link) | Pokémon with Hidden Abilities | Entree Forest via the C-Gear; closed in 2014 |

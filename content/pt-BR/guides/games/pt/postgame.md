@@ -1,5 +1,5 @@
 1. Veja os 210 (foto do Manaphy na Pokémon Mansion) → Dex Nacional com o Oak (Sandgem) → Poké Radar.
-2. Turnback Cave: Griseous Orb. Fullmoon Island: Cresselia. Snowpoint Temple: Regigigas.
+2. Distortion World (pela Turnback Cave): Griseous Orb. Fullmoon Island: Cresselia. Snowpoint Temple: Regigigas.
 3. Oak em Eterna/Pal Park: Articuno, Zapdos e Moltres passam a vaguear.
 4. Avó da Cynthia (Celestic) → Spear Pillar: Dialga e Palkia Lv 70.
 5. Barco de Snowpoint → Fight Area: dupla Flint + Volkner → Battle Frontier.

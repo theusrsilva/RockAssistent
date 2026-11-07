@@ -9,10 +9,10 @@
 ## Gifts
 
 - Treecko, Torchic or Mudkip (Lv. 5): Prof. Birch, Route 101.
-- Wynaut Egg: hot-spring lady, Lavaridge Town. Togepi Egg: same lady, after Wallace.
+- Wynaut Egg: hot-spring lady, Lavaridge Town. Togepi Egg: same lady, after the battle with the Primal (Groudon/Kyogre).
 - Latios (OR) / Latias (AS), Lv. 30: Southern Island (story).
 - Castform: Weather Institute.
-- Cosplay Pikachu (Lv. 20): Lisia, after your first contest.
+- Cosplay Pikachu (Lv. 20): Pokémon Breeder in the Slateport Contest Hall, after your first contest.
 - Johto starters (Delta Episode), Unova starters (after it), Sinnoh starters (after the League rematch): Prof. Birch.
 - Beldum (Lv. 1): Steven's house, Mossdeep, after the Delta Episode.
 - Camerupt and Sharpedo (Lv. 40): former admins, Battle Resort.

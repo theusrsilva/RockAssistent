@@ -21,7 +21,7 @@
 ## Other differences
 
 - Story Eon: Latios (OR) / Latias (AS); the other comes with the Eon Ticket.
-- Hideout: Team Magma near Jagged Pass (OR); Team Aqua in Lilycove (AS).
+- Villain hideout: Team Magma (OR) / Team Aqua (AS); same place in both, east of Lilycove City.
 - Suits for the Cave of Origin: Magma Suit (OR) / Aqua Suit (AS). Bells for Sea Mauville: Clear Bell (OR) / Tidal Bell (AS).
 
 <!-- fontes: Serebii (exclusivos de ORAS), notas pokemythology (oras) -->

@@ -24,6 +24,6 @@
 | Opelucid City | Modern; leader Drayden | Traditional; leader Iris |
 | 3-on-3 format | Rotation Battles | Triple Battles |
 | N's dragon | Zekrom | Reshiram |
-| Stone in Relic Castle | Light Stone | Dark Stone |
+| Stone (Lenora, Nacrene Museum) | Light Stone | Dark Stone |
 
 <!-- fontes: Serebii (exclusivos), notas pokemythology -->

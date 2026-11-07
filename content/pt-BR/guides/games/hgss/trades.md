@@ -8,15 +8,15 @@
 | Dragonair (fêmea) | Dodrio "Doris" | Blackthorn City (casa a leste) | Segura uma Smoke Ball |
 | Haunter | Xatu "Paul" | Pokémon Center de Pewter City | Segura uma Wacan Berry |
 | Dugtrio | Magneton "Maggie" | Power Plant (Route 10) | Segura um Metal Coat |
-| Pikachu (da Viridian Forest) | Pikachu "Volty" | Estação do Magnet Train em Saffron | Depois da revanche do Lt. Surge |
-| Forretress | Beldum "Iron" | Silph Co., Saffron (Steven) | Depois do Red; segura uma Dawn Stone |
-| Bonsly | Rhyhorn "Hornlette" | Entrada da Diglett's Cave | Aos sábados, depois do Brock |
-| Qualquer Pokémon | Steelix "Rusty" | Ginásio de Olivine | Depois da revanche da Jasmine |
+| Pikachu (da Viridian Forest) | Pikachu "Volty" | Estação do Magnet Train em Saffron | Depois da revanche do Lt. Surge; segura um Yellow Shard |
+| Forretress | Beldum "Iron" | Silph Co., Saffron (Steven) | Depois de pegar o inicial de Hoenn do Steven e falar com ele no museu de Pewter; segura uma Dawn Stone |
+| Bonsly | Rhyhorn "Hornlette" | Entrada da Diglett's Cave | Só aos sábados, das 17h às 20h; segura uma Passho Berry |
+| Qualquer Pokémon | Steelix "Rusty" | Ginásio de Olivine | Depois da revanche da Jasmine; segura um Soothe Bell |
 
 ## Presentes
 
 - Chikorita, Cyndaquil ou Totodile (nível 5): Prof. Elm, New Bark Town.
-- Eevee (nível 5): Bill, Goldenrod City.
+- Eevee (nível 5): Bill, Goldenrod City, depois de encontrá-lo no Pokémon Center de Ecruteak.
 - Spearow (carta): guarda ao norte de Goldenrod; entregue ao homem da Route 31.
 - Shuckle (nível 20): casa ao lado da Pharmacy de Cianwood.
 - Tyrogue (nível 10): Karate King Kiyo, Mt. Mortar.
@@ -27,8 +27,8 @@
 
 ## Fósseis
 
-- Fósseis de Kanto (Helix, Dome, Old Amber): quebre pedras nas Ruins of Alph.
-- Fósseis de Hoenn (Root, Claw): quebre pedras na Cliff Cave.
+- Quebre pedras nas Ruins of Alph / Cliff Cave: Helix e Claw Fossil só no HeartGold; Dome e Root Fossil só no SoulSilver.
+- Old Amber: Ruins of Alph (as duas versões).
 - Todos revivem no museu de Pewter (nível 20).
 
 ## Ovos

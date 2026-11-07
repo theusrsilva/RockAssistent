@@ -132,6 +132,8 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 - Explorer Kit (Eterna)
 - TM86 Grass Knot (Gardenia)
 - HM01 Cut (Cynthia)
+- TM78 Captivate (Route 204, Cut)
+- TM12 Taunt (Route 211 oeste, Rock Smash)
 - Forest Badge
 
 **Encontros**
@@ -154,7 +156,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 - Invada o prédio da Galactic, vença a Jupiter e solte o Clefairy.
 - Pegue a Bicycle e o ovo de Togepi (Cynthia) na loja de bicicletas.
-- Opcional: Old Chateau (Cut, Route 205) para o Gastly; Rotom no pós-jogo, à noite.
+- Opcional: Old Chateau (Cut, Route 205) para o Gastly; Rotom à noite (Lv 20, não precisa da Dex Nacional).
 
 **Itens**
 
@@ -229,7 +231,6 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 - TM19 Giga Drain e TM47 Steel Wing (Route 209)
 - TM27 Return (Lost Tower)
 - HM05 Defog (Solaceon Ruins)
-- TM42 Facade (Solaceon)
 - TM34 Shock Wave, TM66 Payback (Route 215)
 - Porygon (casa em Veilstone)
 - TM60 Drain Punch (Maylene)
@@ -311,7 +312,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 - SecretPotion (Cynthia)
 - TM30 Shadow Ball e TM51 Roost (Route 210)
 - HM03 Surf (Celestic)
-- TM12 Taunt e TM77 Psych Up (Route 211)
+- TM29 Psychic e TM77 Psych Up (Route 211 leste)
 
 **Encontros**
 
@@ -512,10 +513,6 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 - Vença o Cyrus e enfrente o Giratina (Origin Forme) Lv 47.
 - Você sai na Sendoff Spring (Spring Path).
 
-**Itens**
-
-- Griseous Orb (Turnback Cave, pós-jogo)
-
 **Encontros**
 
 :::encounters pt distortion-world
@@ -565,7 +562,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 **Itens**
 
-- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM78 Captivate, TM79 Dark Pulse (Victory Road)
+- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM79 Dark Pulse (Victory Road)
 
 **Encontros**
 
@@ -606,14 +603,14 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 **Faça**
 
 - Pokédex Nacional (ver 210) com o Oak em Sandgem; Poké Radar.
-- Turnback Cave: Griseous Orb.
+- Turnback Cave: portal para o Distortion World, onde fica a Griseous Orb.
 - Fullmoon Island: Cresselia (depois vagueia).
 - Snowpoint Temple: Regigigas (veja Lendários).
 
 **Itens**
 
 - Poké Radar (Rowan)
-- Griseous Orb (Turnback Cave)
+- Griseous Orb (Distortion World, pela Turnback Cave)
 - Lunar Wing (Fullmoon Island)
 
 **Encontros**
@@ -660,6 +657,7 @@ Caminho da história por Sinnoh (ordem do Platinum). Níveis e times nos cartõe
 
 - TM04 Calm Mind, TM06 Toxic, TM08 Bulk Up e outros (BP, Battle Frontier)
 - TM53 Energy Ball (Route 226)
+- TM42 Facade (Survival Area)
 - TM37 Sandstorm (Route 228)
 - Rare Candy (Route 230)
 

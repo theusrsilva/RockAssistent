@@ -10,6 +10,7 @@
 | Phanpy, Donphan | Skarmory |
 | Sableye | Mawile |
 | Baltoy, Claydol | Gulpin, Swalot |
+| Omanyte, Omastar, Anorith, Armaldo (fossils) | Kabuto, Kabutops, Lileep, Cradily (fossils) |
 | Kyogre | Groudon |
 
 ## Other differences

@@ -24,6 +24,6 @@
 | Opelucid City | Moderna; líder Drayden | Tradicional; líder Iris |
 | Formato 3 contra 3 | Batalhas rotativas | Batalhas triplas |
 | Dragão do N | Zekrom | Reshiram |
-| Pedra do Relic Castle | Light Stone | Dark Stone |
+| Pedra (Lenora, museu de Nacrene) | Light Stone | Dark Stone |
 
 <!-- fontes: Serebii (exclusivos), notas pokemythology -->

@@ -37,14 +37,14 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM31 Brick Break: 12 BP.
 - TM32 Double Team: 6 BP.
 - TM33 Reflect: Nimbasa City (shop), $30,000.
-- TM34 Sludge Wave: 18 BP.
+- TM34 Sludge Wave: 24 BP.
 - TM35 Flamethrower: Route 23 (house, Surf).
 - TM36 Sludge Bomb: Route 8.
 - TM37 Sandstorm: Mistralton City (shop), $50,000.
 - TM38 Fire Blast: Lacunosa Town (Pokémon Center), $70,000.
 - TM39 Rock Tomb: Relic Castle.
 - TM40 Aerial Ace: Mistralton City (boy at the runway).
-- TM41 Torment: Castelia Sewers.
+- TM41 Torment: Castelia Sewers (spring/summer only).
 - TM42 Facade: Marine Tube.
 - TM43 Flame Charge: Tubeline Bridge.
 - TM44 Rest: Castelia City (Castelia Street house).
@@ -54,7 +54,7 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM48 Round: 18 BP.
 - TM49 Echoed Voice: Nimbasa City (Musical).
 - TM50 Overheat: N's Castle.
-- TM51 Ally Switch: 18 BP.
+- TM51 Ally Switch: 24 BP.
 - TM52 Focus Blast: Wellspring Cave.
 - TM53 Energy Ball: Aspertia City (Surf).
 - TM54 False Swipe: Reversal Mountain.
@@ -62,8 +62,8 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM56 Fling: Route 6 (Surf).
 - TM57 Charge Beam: Lentimas Town (woman in a house).
 - TM58 Sky Drop: Mistralton City (runway).
-- TM59 Incinerate: 18 BP.
-- TM60 Quash: 18 BP.
+- TM59 Incinerate: 6 BP.
+- TM60 Quash: 24 BP.
 - TM61 Will-O-Wisp: Celestial Tower.
 - TM62 Acrobatics: Skyla (Mistralton Gym).
 - TM63 Embargo: Driftveil City (shop).
@@ -82,7 +82,7 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM76 Struggle Bug: Burgh (Castelia Gym).
 - TM77 Psych Up: 24 BP.
 - TM78 Bulldoze: Clay (Driftveil Gym).
-- TM79 Frost Breath: 18 BP.
+- TM79 Frost Breath: 12 BP.
 - TM80 Rock Slide: Mistralton Cave.
 - TM81 X-Scissor: Route 7.
 - TM82 Dragon Tail: Drayden (Opelucid Gym).
@@ -92,13 +92,13 @@ TMs are reusable. BP = Battle Points, spent at the PWT or Battle Subway counter.
 - TM86 Grass Knot: Pinwheel Forest (inner part).
 - TM87 Swagger: 18 BP.
 - TM88 Pluck: 18 BP.
-- TM89 U-turn: 18 BP.
+- TM89 U-turn: 12 BP.
 - TM90 Substitute: Twist Mountain.
 - TM91 Flash Cannon: Twist Mountain.
 - TM92 Trick Room: Abundant Shrine.
 - TM93 Wild Charge: Victory Road (Surf and Waterfall).
 - TM94 Rock Smash: Virbank Complex.
-- TM95 Snarl: Lostlorn Forest (hiker).
+- TM95 Snarl: Lostlorn Forest, from the trainer dressed as Zoroark in the trailer.
 - HM01 Cut: Roxie (Virbank).
 - HM02 Fly: Bianca (Route 5, Nimbasa west gate).
 - HM03 Surf: Cheren (Route 6).

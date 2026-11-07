@@ -10,7 +10,7 @@
 ## Gifts
 
 - Turtwig, Chimchar or Piplup (Lake Verity).
-- Happiny Egg (Hiker, Route 209 near Hearthome).
+- Happiny Egg (Hiker in Hearthome City, at the exit to Route 209).
 - Riolu Egg (Riley, Iron Island).
 - Eevee (Bebe, Hearthome City; after the National Dex).
 

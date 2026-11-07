@@ -3,7 +3,8 @@
 | Você dá | Você recebe | Onde | Notas |
 | --- | --- | --- | --- |
 | Cottonee (Black) / Petilil (White) | Petilil / Cottonee | Nacrene City (casa à direita do Pokémon Center) | Traz o exclusivo da outra versão |
-| Minccino | Basculin | Driftveil City | |
+| Minccino | Basculin | Driftveil City | Red-Striped no Black / Blue-Striped no White |
+| Boldore | Emolga | Route 7 (Hiker) | |
 | Ditto | Rotom | Route 15 (trailer) | Pós-jogo; único Rotom do jogo |
 
 ## Presentes

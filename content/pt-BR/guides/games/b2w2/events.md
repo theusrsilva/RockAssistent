@@ -3,7 +3,7 @@ As distribuições oficiais (Wi-Fi, sem fio local e Global Link) acabaram; a Nin
 | Evento | Dá | Libera / onde |
 | --- | --- | --- |
 | Liberty Pass | Bilhete | Liberty Garden (Castelia): Victini |
-| Keldeo | Keldeo | Aprende Secret Sword na casa do Alder (Floccesy) |
+| Keldeo | Keldeo | Aprende Secret Sword no Pledge Grove (ao norte de Floccesy Town) |
 | Meloetta | Meloetta | Aprende Relic Song no Café Sonata (Castelia) |
 | Genesect | Genesect | Drives no P2 Laboratory (Burn e Shock no Black 2, Douse e Chill no White 2) |
 | Shaymin | Shaymin | Gracidea em Striaton City (Sky Forme) |

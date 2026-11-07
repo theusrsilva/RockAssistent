@@ -3,7 +3,7 @@ Official distributions (Wi-Fi, local wireless and Global Link) have ended; Ninte
 | Event | Gives | Unlocks / where |
 | --- | --- | --- |
 | Liberty Pass | Ticket | Liberty Garden (Castelia): Victini |
-| Keldeo | Keldeo | Learns Secret Sword at Alder's house (Floccesy) |
+| Keldeo | Keldeo | Learns Secret Sword at the Pledge Grove (north of Floccesy Town) |
 | Meloetta | Meloetta | Learns Relic Song at Café Sonata (Castelia) |
 | Genesect | Genesect | Drives in the P2 Laboratory (Burn and Shock in Black 2, Douse and Chill in White 2) |
 | Shaymin | Shaymin | Gracidea in Striaton City (Sky Forme) |

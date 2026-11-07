@@ -7,21 +7,21 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM01 Focus Punch: Oreburgh Gate B1F (Rock Smash).
 - TM02 Dragon Claw: Mt. Coronet (Rock Climb).
 - TM03 Water Pulse: Ravaged Path (Surf).
-- TM04 Calm Mind: troca por BP (Battle Tower).
+- TM04 Calm Mind: Battle Park (BP).
 - TM05 Roar: Route 213 (Rock Climb).
-- TM06 Toxic: troca por BP (Battle Tower).
+- TM06 Toxic: Route 212 (no chão); Battle Park (BP).
 - TM07 Hail: Route 217.
-- TM08 Bulk Up: troca por BP (Battle Tower).
+- TM08 Bulk Up: Battle Park (BP).
 - TM09 Bullet Seed: Route 204.
 - TM10 Hidden Power: Jubilife City.
 - TM11 Sunny Day: Route 212.
-- TM12 Taunt: Route 211 (leste).
-- TM13 Ice Beam: Route 216 (Rock Climb).
+- TM12 Taunt: Route 211 (oeste, Rock Smash).
+- TM13 Ice Beam: Route 216 (nordeste).
 - TM14 Blizzard: Veilstone Dept. Store.
 - TM15 Hyper Beam: Veilstone Dept. Store.
 - TM16 Light Screen: Veilstone Dept. Store.
 - TM17 Protect: Veilstone Dept. Store.
-- TM18 Rain Dance: Route 213 (Surf).
+- TM18 Rain Dance: Route 223 (Surf); casa da Route 212 por 10 Blue Shards.
 - TM19 Giga Drain: Route 209.
 - TM20 Safeguard: Veilstone Dept. Store.
 - TM21 Frustration: Galactic Warehouse.
@@ -31,9 +31,9 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM25 Thunder: Veilstone Dept. Store.
 - TM26 Earthquake: Wayward Cave (entrada escondida).
 - TM27 Return: Lost Tower.
-- TM28 Dig: Route 214.
+- TM28 Dig: Ruin Maniac Cave (Route 214).
 - TM29 Psychic: Veilstone Game Corner (fichas).
-- TM30 Shadow Ball: Route 210 (norte).
+- TM30 Shadow Ball: Route 210 (sul).
 - TM31 Brick Break: Oreburgh Gate (rampa de bicicleta); troca por BP.
 - TM32 Double Team: Veilstone Game Corner (fichas).
 - TM33 Reflect: Veilstone Dept. Store.
@@ -45,7 +45,7 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM39 Rock Tomb: Ravaged Path.
 - TM40 Aerial Ace: Route 213.
 - TM41 Torment: Victory Road.
-- TM42 Facade: Solaceon Town.
+- TM42 Facade: Survival Area (casa ao sul; pós-jogo).
 - TM43 Secret Power: Amity Square.
 - TM44 Rest: Veilstone Game Corner (fichas).
 - TM45 Attract: Amity Square; troca por BP.
@@ -54,9 +54,9 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM48 Skill Swap: Canalave City (morador).
 - TM49 Snatch: Galactic Warehouse.
 - TM50 Overheat: Stark Mountain.
-- TM51 Roost: Route 210 (norte).
+- TM51 Roost: Route 210 (sul).
 - TM52 Focus Blast: Veilstone Dept. Store.
-- TM53 Energy Ball: troca por BP (Battle Tower).
+- TM53 Energy Ball: Route 226 (no chão); Battle Park (64 BP).
 - TM54 False Swipe: Veilstone Dept. Store.
 - TM55 Brine: Crasher Wake (Pastoria Gym).
 - TM56 Fling: Route 222.
@@ -64,10 +64,10 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM58 Endure: Veilstone Game Corner (fichas).
 - TM59 Dragon Pulse: Victory Road.
 - TM60 Drain Punch: Maylene (Veilstone Gym).
-- TM61 Will-O-Wisp: troca por BP (Battle Tower).
+- TM61 Will-O-Wisp: Battle Park (BP).
 - TM62 Silver Wind: Route 212.
 - TM63 Embargo: Veilstone City.
-- TM64 Explosion: Veilstone Game Corner (fichas).
+- TM64 Explosion: Veilstone Game Corner (prêmio por 10 rodadas bônus seguidas, não está à venda).
 - TM65 Shadow Claw: Fantina (Hearthome Gym).
 - TM66 Payback: Route 215.
 - TM67 Recycle: Eterna City (Eterna Condominiums).
@@ -76,23 +76,23 @@ TMs e HMs do Diamond/Pearl. HM só sai com o Move Deleter (Canalave City).
 - TM70 Flash: Oreburgh Gate; Veilstone Dept. Store.
 - TM71 Stone Edge: Victory Road; troca por BP.
 - TM72 Avalanche: Candice (Snowpoint Gym).
-- TM73 Thunder Wave: troca por BP (Battle Tower).
+- TM73 Thunder Wave: Battle Park (BP).
 - TM74 Gyro Ball: Veilstone Game Corner (fichas).
 - TM75 Swords Dance: Veilstone Game Corner (fichas).
 - TM76 Stealth Rock: Roark (Oreburgh Gym).
 - TM77 Psych Up: Route 211.
-- TM78 Captivate: Victory Road.
+- TM78 Captivate: Route 204 (nordeste, Cut).
 - TM79 Dark Pulse: Victory Road.
 - TM80 Rock Slide: Mt. Coronet.
 - TM81 X-Scissor: Route 221; troca por BP.
 - TM82 Sleep Talk: Eterna Forest.
 - TM83 Natural Gift: Veilstone Dept. Store.
 - TM84 Poison Jab: Route 212.
-- TM85 Dream Eater: Lake Valor (Rock Climb).
+- TM85 Dream Eater: Valor Lakefront (nordeste, Rock Climb).
 - TM86 Grass Knot: Gardenia (Eterna Gym).
 - TM87 Swagger: Pokémon Mansion.
 - TM88 Pluck: Floaroma Town.
-- TM89 U-turn: Veilstone Game Corner (fichas).
+- TM89 U-turn: Canalave City (sudoeste, Surf), grátis; Veilstone Game Corner (6.000 fichas).
 - TM90 Substitute: Old Chateau.
 - TM91 Flash Cannon: Byron (Canalave Gym).
 - TM92 Trick Room: Route 213.

@@ -8,15 +8,15 @@
 | Dragonair (female) | Dodrio "Doris" | Blackthorn City (east house) | Holds a Smoke Ball |
 | Haunter | Xatu "Paul" | Pewter City Pokémon Center | Holds a Wacan Berry |
 | Dugtrio | Magneton "Maggie" | Power Plant (Route 10) | Holds a Metal Coat |
-| Pikachu (from Viridian Forest) | Pikachu "Volty" | Saffron Magnet Train station | After the Lt. Surge rematch |
-| Forretress | Beldum "Iron" | Silph Co., Saffron (Steven) | After Red; holds a Dawn Stone |
-| Bonsly | Rhyhorn "Hornlette" | Diglett's Cave entrance | Saturdays, after Brock |
-| Any Pokémon | Steelix "Rusty" | Olivine Gym | After the Jasmine rematch |
+| Pikachu (from Viridian Forest) | Pikachu "Volty" | Saffron Magnet Train station | After the Lt. Surge rematch; holds a Yellow Shard |
+| Forretress | Beldum "Iron" | Silph Co., Saffron (Steven) | After getting the Hoenn starter from Steven and talking to him at the Pewter Museum; holds a Dawn Stone |
+| Bonsly | Rhyhorn "Hornlette" | Diglett's Cave entrance | Saturdays only, 5–8 PM; holds a Passho Berry |
+| Any Pokémon | Steelix "Rusty" | Olivine Gym | After the Jasmine rematch; holds a Soothe Bell |
 
 ## Gifts
 
 - Chikorita, Cyndaquil or Totodile (Lv 5): Prof. Elm, New Bark Town.
-- Eevee (Lv 5): Bill, Goldenrod City.
+- Eevee (Lv 5): Bill, Goldenrod City, after meeting him at the Ecruteak Pokémon Center.
 - Spearow (mail): guard north of Goldenrod; deliver it to the man on Route 31.
 - Shuckle (Lv 20): house next to the Cianwood Pharmacy.
 - Tyrogue (Lv 10): Karate King Kiyo, Mt. Mortar.
@@ -27,8 +27,8 @@
 
 ## Fossils
 
-- Kanto fossils (Helix, Dome, Old Amber): smash rocks in the Ruins of Alph.
-- Hoenn fossils (Root, Claw): smash rocks in Cliff Cave.
+- Smash rocks in the Ruins of Alph / Cliff Cave: Helix and Claw Fossils only in HeartGold; Dome and Root Fossils only in SoulSilver.
+- Old Amber: Ruins of Alph (both versions).
 - All are revived at the Pewter Museum (Lv 20).
 
 ## Eggs

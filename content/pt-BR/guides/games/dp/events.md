@@ -6,7 +6,6 @@ As distribuições oficiais acabaram; a Nintendo Wi-Fi Connection fechou em 2014
 | Oak's Letter | Shaymin Lv 30 | Route 224 → Seabreak Path → Flower Paradise |
 | Azure Flute | Arceus Lv 80 | Hall of Origin, Spear Pillar (nunca distribuída oficialmente) |
 | Ovo de Manaphy | Manaphy | Missão do Pokémon Ranger (DS) |
-| Secret Key | Formas do Rotom | Pokémon Ranger: Shadows of Almia; quarto na casa do Rotom |
 | Presentes por Wi-Fi | Míticos (Jirachi, Deoxys, Mew, Celebi...) | Mystery Gift → entregador no Pokémon Center |
 
 <!-- fontes: assets/data (areas, bosses), notas pokemythology, Bulbapedia, Serebii -->

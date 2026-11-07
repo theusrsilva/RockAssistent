@@ -21,7 +21,7 @@
 ## Outras diferenças
 
 - Eon da história: Latios (OR) / Latias (AS); o outro vem com o Eon Ticket.
-- Esconderijo: Team Magma perto do Jagged Pass (OR); Team Aqua em Lilycove (AS).
+- Esconderijo da equipe: Team Magma (OR) / Team Aqua (AS); mesmo lugar nos dois, a leste de Lilycove City.
 - Traje da Cave of Origin: Magma Suit (OR) / Aqua Suit (AS). Sino da Sea Mauville: Clear Bell (OR) / Tidal Bell (AS).
 
 <!-- fontes: Serebii (exclusivos de ORAS), notas pokemythology (oras) -->

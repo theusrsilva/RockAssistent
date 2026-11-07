@@ -132,7 +132,7 @@
 
 - Find the Farfetch'd in Ilex Forest and get HM01 Cut.
 - Route 34: Day Care.
-- Goldenrod City: Bicycle (Bike Shop), Eevee from Bill, Radio Card quiz.
+- Goldenrod City: Bicycle (Bike Shop), Radio Card quiz.
 - Beat Whitney.
 
 **Items**
@@ -140,7 +140,7 @@
 - HM01 Cut (Ilex Forest)
 - TM63 Embargo (Route 34)
 - Bicycle (Goldenrod Bike Shop)
-- Coin Case (Game Corner)
+- Coin Case (Goldenrod Underground)
 
 **Encounters**
 
@@ -164,13 +164,15 @@
 - National Park: Bug-Catching Contest (Tue, Thu, Sat).
 - Pokéathlon Dome on Route 35.
 - Ecruteak City: Burnt Tower releases Raikou, Entei and Suicune.
+- Dance Theater: beat the Rocket Grunt to get HM03 Surf.
+- Meet Bill at the Ecruteak Pokémon Center; back in Goldenrod he gives you an Eevee.
 
 **Items**
 
 - TM66 Payback (Route 35)
 - TM28 Dig (National Park)
 - TM12 Taunt (Burnt Tower)
-- HM03 Surf (Dance Theater, after Morty)
+- HM03 Surf (Dance Theater, after the Rocket Grunt)
 
 **Encounters**
 
@@ -769,7 +771,7 @@
 **Do**
 
 - Cerulean Cave: Mewtwo (Lv 70) at the bottom.
-- Route 28 to Mt. Silver; Moltres near the entrance.
+- Route 28 to Mt. Silver; Moltres in a chamber reached from 2F (Rock Climb).
 - Climb Mt. Silver and beat Red at the summit.
 - After Red: Kanto starters (Oak), Hoenn starters (Steven, Silph Co.).
 - Embedded Tower: Kyogre (HG) / Groudon (SS), then Rayquaza with the Jade Orb.

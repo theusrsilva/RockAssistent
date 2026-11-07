@@ -2,8 +2,12 @@
 
 | You give | You get | Where | Notes |
 | --- | --- | --- | --- |
-| Cottonee (Black 2) / Petilil (White 2) | Petilil / Cottonee | Route 4 (girl) | Gets the other version's exclusive |
-| Ditto | Rotom | Route 15 (trailer) | Postgame; only Rotom in the game |
+| Cottonee (Black 2) / Petilil (White 2) | Petilil / Cottonee (Lv 20) | Route 4 (girl) | Gets the other version's exclusive |
+| Emolga | Gigalith | Route 7 | |
+| Excadrill | Ambipom | Accumula Town | |
+| Hippowdon | Alakazam | Accumula Town | |
+| Mantine | Tangrowth | Humilau City | |
+| Ditto | Rotom (Lv 60) | Route 15 (trailer) | Postgame; only Rotom in the game |
 | Various | Various | Curtis or Yancy (Xtransceiver) | After many calls |
 
 ## Gifts
@@ -16,7 +20,6 @@
 | Eevee (Lv 10, Hidden Ability) | Castelia City (Amanita, Fennel's lab) | Postgame |
 | Gible (Black 2) / Dratini (White 2), shiny, Lv 1 | Floccesy Town (Alder) | After beating Benga |
 | Magikarp | Marvelous Bridge | Buy for $500 |
-| Pansage | Anville Town | Return the lost Pansage (found via a Nimbasa worker) |
 
 ## Fossils
 

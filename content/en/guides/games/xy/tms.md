@@ -13,7 +13,7 @@ TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
 - TM07 Hail: Shalour City Poké Mart.
 - TM08 Bulk Up: Snowbelle City.
 - TM09 Venoshock: Route 6.
-- TM10 Hidden Power: Anistar City.
+- TM10 Hidden Power: Anistar City (man in the house to the southeast).
 - TM11 Sunny Day: Lumiose City Poké Mart.
 - TM12 Taunt: Lysandre Labs.
 - TM13 Ice Beam: Wulfric, Snowbelle Gym.
@@ -44,7 +44,7 @@ TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
 - TM38 Fire Blast: Anistar City Poké Mart.
 - TM39 Rock Tomb: Grant, Cyllage Gym.
 - TM40 Aerial Ace: Connecting Cave.
-- TM41 Torment: Laverre City.
+- TM41 Torment: Laverre City (Youngster).
 - TM42 Facade: Dendemille Town.
 - TM43 Flame Charge: Kalos Power Plant.
 - TM44 Rest: Cyllage City.
@@ -80,7 +80,7 @@ TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
 - TM74 Gyro Ball: Reflection Cave.
 - TM75 Swords Dance: Lumiose City Poké Mart.
 - TM76 Struggle Bug: Lumiose City Poké Mart.
-- TM77 Psych Up: Anistar City Poké Mart (evening).
+- TM77 Psych Up: Anistar City Pokémon Center, Hex Maniac (18:00–20:00).
 - TM78 Bulldoze: Lumiose City Poké Mart.
 - TM79 Frost Breath: Frost Cavern.
 - TM80 Rock Slide: Couriway Town.
@@ -91,7 +91,7 @@ TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
 - TM85 Dream Eater: Battle Maison prize (BP, postgame).
 - TM86 Grass Knot: Ramos, Coumarine Gym.
 - TM87 Swagger: Battle Maison prize (BP, postgame).
-- TM88 Sleep Talk: random guest in a Lumiose City hotel.
+- TM88 Sleep Talk: Hotel Cyllage (1F), Cyllage City.
 - TM89 U-turn: Couriway Town.
 - TM90 Substitute: Anistar City Pokémon Center.
 - TM91 Flash Cannon: Kiloude City.
@@ -100,7 +100,7 @@ TMs are reusable from Gen 5 on. HMs can be deleted only by the Move Deleter.
 - TM94 Rock Smash: girl in Ambrette Town.
 - TM95 Snarl: Lost Hotel.
 - TM96 Nature Power: Ambrette Town hotel.
-- TM97 Dark Pulse: Route 16.
+- TM97 Dark Pulse: Route 15 (via Route 16, Surf + Waterfall).
 - TM98 Power-Up Punch: Korrina, Shalour Gym.
 - TM99 Dazzling Gleam: Valerie, Laverre Gym.
 - TM100 Confide: Coumarine City.

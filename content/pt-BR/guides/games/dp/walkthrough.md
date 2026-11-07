@@ -128,6 +128,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 **Itens**
 
 - HM01 Cut (Cynthia)
+- TM78 Captivate (Route 204 nordeste, Cut)
 - TM82 Sleep Talk (Eterna Forest)
 - Explorer Kit (Underground Man, Eterna)
 - TM86 Grass Knot (Gardenia)
@@ -220,7 +221,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 - Good Rod (Route 209)
 - TM19 Giga Drain e TM47 Steel Wing (Route 209)
 - HM04 Strength (Lost Tower)
-- TM42 Facade (Solaceon)
+- TM30 Shadow Ball e TM51 Roost (Route 210 sul)
 - TM34 Shock Wave e TM66 Payback (Route 215)
 - Coin Case (Veilstone)
 
@@ -290,9 +291,9 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 
 **Itens**
 
-- TM05 Roar, TM40 Aerial Ace, TM92 Trick Room, TM18 Rain Dance (Route 213)
+- TM05 Roar, TM40 Aerial Ace, TM92 Trick Room, TM18 Rain Dance (Route 223, Surf, mais tarde)
 - SecretPotion (Cynthia, Valor Lakefront)
-- TM28 Dig (Route 214 / Ruin Maniac Cave)
+- TM28 Dig (Ruin Maniac Cave)
 - TM65 Shadow Claw (Fantina)
 - Relic Badge
 
@@ -327,9 +328,8 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 
 - HM03 Surf (anciã de Celestic)
 - Old Charm (Cynthia, Route 210)
-- TM30 Shadow Ball e TM51 Roost (Route 210)
 - TM81 X-Scissor (Route 221)
-- TM35 Flamethrower (Fuego Ironworks, Mr. Fuego)
+- TM35 Flamethrower (Fuego Ironworks, no chão); Fire Stone (Mr. Fuego)
 - TM24 Thunderbolt (Valley Windworks, por Surf)
 - TM48 Skill Swap (Canalave)
 
@@ -397,7 +397,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 **Itens**
 
 - HM08 Rock Climb (Route 217)
-- TM13 Ice Beam (Route 216, Rock Climb)
+- TM13 Ice Beam (Route 216 nordeste)
 - TM07 Hail (Route 217)
 - TM72 Avalanche (Candice)
 - Icicle Badge
@@ -535,12 +535,12 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 **Faça**
 
 - Surfe e use Waterfall na Route 223.
-- A Victory Road pede Strength, Rock Smash e Rock Climb.
+- A Victory Road pede Surf, Strength, Rock Smash, Waterfall e Rock Climb (sem neblina).
 - O Barry espera antes da Elite Four. Cure e compre itens: não há pausa entre as lutas.
 
 **Itens**
 
-- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM78 Captivate, TM79 Dark Pulse (Victory Road)
+- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM79 Dark Pulse (Victory Road)
 
 **Encontros**
 
@@ -631,6 +631,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 
 - Point Card e Razor Fang (Battle Park)
 - TM53 Energy Ball (troca por BP, Battle Park)
+- TM42 Facade (Survival Area, casa ao sul)
 - TM50 Overheat (Stark Mountain)
 
 **Encontros**
@@ -648,7 +649,7 @@ Caminho da história por Sinnoh, em ordem. Níveis e times nos cartões dos chef
 **Faça**
 
 - Route 228: tutor de Frenzy Plant, Blast Burn e Hydro Cannon; tempestade de areia.
-- Resort Area: Ribbon Syndicate e a sua Villa.
+- Resort Area: Ribbon Syndicate.
 - Newmoon Island, Flower Paradise e Hall of Origin pedem itens de evento (Member Card, Oak's Letter, Azure Flute).
 
 **Itens**

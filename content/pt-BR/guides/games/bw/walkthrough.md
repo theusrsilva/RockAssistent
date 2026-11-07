@@ -64,7 +64,7 @@
 **Itens**
 
 - HM01 Cut (Fennel), Dusk Ball e Great Ball (Striaton)
-- TM83 Work Up e TM85 Dream Eater (Dreamyard)
+- TM83 Work Up (prêmio do ginásio de Striaton), TM85 Dream Eater (Dreamyard)
 
 **Encontros**
 
@@ -190,7 +190,7 @@
 **Faça**
 
 - Anville Town fica no fim de uma linha do Battle Subway; Rare Candy e um item semanal ali.
-- Route 16 e Lostlorn Forest (Strength) são opcionais.
+- Route 16 e Lostlorn Forest são opcionais (a parte funda pede Surf e Waterfall).
 - Route 5: o Cheren luta com você antes da Driftveil Drawbridge.
 
 **Itens**
@@ -218,11 +218,12 @@
 - Atravesse a ponte levadiça até Driftveil City.
 - O Clay manda você ao Cold Storage para parar o Team Plasma.
 - Vença o Clay. Quake Badge.
+- A Bianca luta com você em Driftveil e depois dá o HM02 Fly.
 
 **Itens**
 
 - TM55 Scald (Cold Storage), TM78 Bulldoze (Clay)
-- Shell Bell (50 vistos), Repeat Ball (Driftveil)
+- HM02 Fly (Bianca), Shell Bell (50 vistos), Repeat Ball (Driftveil)
 
 **Encontros**
 
@@ -243,13 +244,12 @@
 **Faça**
 
 - Season Research Lab na Route 6 (formas do Deerling).
-- A Bianca luta com você e depois dá o HM02 Fly.
 - Chargestone Cave: o N luta com você; o Clay tira a teia.
 - Vença a Skyla em Mistralton. Jet Badge.
 
 **Itens**
 
-- HM02 Fly (Bianca), TM84 Poison Jab (Route 6), Shiny Stone (casa da Route 6)
+- TM84 Poison Jab (Route 6), Shiny Stone (casa da Route 6)
 - Lucky Egg (Juniper, Chargestone Cave)
 - TM40 Aerial Ace (embaixo da pista), TM58 Sky Drop (Mistralton), TM62 Acrobatics (Skyla)
 
@@ -308,7 +308,7 @@
 
 - Opcional: surfe a oeste da Route 1 pelas correntezas da Route 17.
 - Route 18: um homem dá um Ovo de Larvesta; o HM05 Waterfall fica aqui.
-- O P2 Laboratory fica vazio na história (só o Genesect de evento).
+- P2 Laboratory: Dubious Disc e TM24 Thunderbolt (o Genesect só por evento Wi-Fi).
 
 **Itens**
 
@@ -354,7 +354,7 @@
 
 **Faça**
 
-- Fundo do Relic Castle: pegue a Light Stone (Black) ou a Dark Stone (White) com a Juniper e o Cedric.
+- Fundo do Relic Castle: Ghetsis e Alder; depois a Lenora dá a Light Stone (Black) ou a Dark Stone (White) no museu de Nacrene.
 - Route 8 e Moor of Icirrus: a Bianca luta com você.
 - Tubeline Bridge, Route 9 e Shopping Mall Nine.
 - Opelucid: Master Ball da Juniper; vença o Drayden (Black) ou a Iris (White). Legend Badge.
@@ -362,7 +362,7 @@
 **Itens**
 
 - TM42 Facade (Route 8, moça do guarda-chuva), TM36 Sludge Bomb (Route 8, Surf), TM43 Flame Charge (Tubeline Bridge)
-- TM56 Fling (Route 9), TM15 Hyper Beam e TM68 Giga Impact (Shopping Mall Nine)
+- TM56 Fling (Tubeline Bridge), TM15 Hyper Beam e TM68 Giga Impact (Shopping Mall Nine)
 - Master Ball (Juniper), TM82 Dragon Tail (ginásio)
 
 **Encontros**

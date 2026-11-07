@@ -4,11 +4,11 @@
 | Uxie | Lake Acuity (cavern) | 50 | After the Galactic HQ | Platinum |
 | Azelf | Lake Valor (cavern) | 50 | After the Galactic HQ | Platinum |
 | Mesprit | Roams Sinnoh | 50 | Meet it at Lake Verity | Platinum |
-| Dialga | Spear Pillar | 70 | Postgame, Adamant Orb (Celestic) | Platinum |
-| Palkia | Spear Pillar | 70 | Postgame, Lustrous Orb (Celestic) | Platinum |
+| Dialga | Spear Pillar | 70 | Postgame, Adamant Orb (room in Mt. Coronet; talk to Cynthia's grandmother in Celestic first) | Platinum |
+| Palkia | Spear Pillar | 70 | Postgame, Lustrous Orb (room in Mt. Coronet; talk to Cynthia's grandmother in Celestic first) | Platinum |
 | Cresselia | Fullmoon Island, then roams | 50 | National Dex | Platinum |
 | Heatran | Stark Mountain | 50 | After Buck's event | Platinum |
-| Regigigas | Snowpoint Temple | 1 | National Dex | Platinum |
+| Regigigas | Snowpoint Temple | 1 | National Dex; Regirock, Regice and Registeel in party | Platinum |
 | Regirock | Rock Peak Ruins (Route 228) | 30 | Regigigas in party | Platinum |
 | Regice | Iceberg Ruins (Route 217) | 30 | Regigigas in party | Platinum |
 | Registeel | Iron Ruins (Iron Island) | 30 | Regigigas in party | Platinum |

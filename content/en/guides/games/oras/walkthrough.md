@@ -139,9 +139,9 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Items**
 
-- Manectite (Cycling Road), Mawilite (Route 117).
-- TM45 Attract (Verdanturf); HM04 Strength (rival).
-- TM06 Toxic, TM96 Nature Power, Charizardite X (Fiery Path).
+- Manectite (Cycling Road).
+- TM45 Attract, Mawilite (Verdanturf); HM04 Strength (rival).
+- TM06 Toxic, Charizardite X (Fiery Path).
 
 **Encounters**
 
@@ -167,7 +167,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Items**
 
-- TM32 Double Team (Route 113); TM23 Smack Down, Houndoominite (Fallarbor).
+- TM32 Double Team (Route 113); TM23 Smack Down (Fallarbor).
 - TM05 Roar, TM28 Dig (Route 114); TM02 Dragon Claw (Meteor Falls).
 
 **Encounters**
@@ -231,7 +231,8 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Items**
 
-- TM43 Flame Charge, TM69 Rock Polish, Tyranitarite (Jagged Pass).
+- TM43 Flame Charge, TM69 Rock Polish, Tyranitarite (Jagged Pass); TM96 Nature Power (Aarune, Fiery Path, after Mt. Chimney).
+- Houndoominite (Lavaridge Town).
 - Go-Goggles, Wynaut Egg, TM75 Swords Dance; TM50 Overheat (Flannery).
 - TM67 Retaliate (Norman), HM03 Surf.
 
@@ -256,7 +257,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 **Do**
 
 - Desert (Go-Goggles): pick the Root (Lileep) or Claw (Anorith) Fossil.
-- Surf the western sea routes; Sea Mauville holds items and the Scanner (postgame).
+- Surf the western sea routes; Sea Mauville holds items; the Scanner inside needs Dive.
 - Steven takes you to Southern Island: Latios [OR] / Latias [AS] joins you and you get the Mega Bracelet.
 
 **Items**
@@ -397,7 +398,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Do**
 
-- Hideout is in Lilycove [AS] or near Jagged Pass [OR].
+- In both games the hideout is east of Lilycove City (Surf).
 - Warp-tile maze; the Master Ball is in a side room with Electrode.
 - The leader escapes with the submarine.
 
@@ -522,7 +523,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 
 **Items**
 
-- TM29 Psychic (Ever Grande); TM35 Flamethrower, TM81 X-Scissor, Dawn Stone, Mewtwonite Y (Victory Road).
+- TM29 Psychic (Ever Grande); TM35 Flamethrower, TM81 X-Scissor, Dawn Stone (Victory Road); Mewtwonite Y in front of the League (Ever Grande City).
 
 **Encounters**
 
@@ -622,7 +623,7 @@ _Story order. [OR] = Omega Ruby, [AS] = Alpha Sapphire._
 **Do**
 
 - Defend the Mossdeep Space Center in a double with Steven.
-- Climb the Sky Pillar, beat Wallace, catch Rayquaza (Lv. 70).
+- Wallace blocks the Sky Pillar entrance (Route 131): beat him, then climb and catch Rayquaza (Lv. 70).
 - Beat Zinnia with Mega Rayquaza, then catch Deoxys (Lv. 80) in space.
 
 **Items**

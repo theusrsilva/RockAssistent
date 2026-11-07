@@ -47,7 +47,7 @@ All 92 TMs and 8 HMs. Locations are the same in both versions.
 - TM41 Torment: Celadon Dept. Store.
 - TM42 Facade: Goldenrod lottery (Friday).
 - TM43 Secret Power: Lake of Rage.
-- TM44 Rest: Goldenrod Game Corner.
+- TM44 Rest: free from the sleeping man on Route 31 when you deliver the Spearow "Kenya" (from the Goldenrod → Route 35 gate guard); also Goldenrod Game Corner.
 - TM45 Attract: Whitney (Goldenrod Gym); Battle Frontier.
 - TM46 Thief: Team Rocket Hideout.
 - TM47 Steel Wing: Route 28 (house).
@@ -98,7 +98,7 @@ All 92 TMs and 8 HMs. Locations are the same in both versions.
 - TM92 Trick Room: Blue (Viridian Gym).
 - HM01 Cut: Ilex Forest (charcoal maker's boss).
 - HM02 Fly: Chuck's wife (Cianwood).
-- HM03 Surf: Dance Theater, Ecruteak (after Morty).
+- HM03 Surf: Dance Theater, Ecruteak, right after you beat the Rocket Grunt there (Morty not required).
 - HM04 Strength: hiker on Route 42.
 - HM05 Whirlpool: Lance (Team Rocket Hideout).
 - HM06 Rock Smash: man on Route 36.

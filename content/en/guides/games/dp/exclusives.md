@@ -10,6 +10,7 @@
 | Aron, Lairon, Aggron | Spheal, Sealeo, Walrein |
 | Cranidos, Rampardos (Skull Fossil) | Shieldon, Bastiodon (Armor Fossil) |
 | Stunky, Skuntank | Glameow, Purugly |
+| Kecleon | Stantler |
 | Dialga | Palkia |
 
 ## Other differences

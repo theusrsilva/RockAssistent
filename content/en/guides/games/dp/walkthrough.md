@@ -128,6 +128,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 **Items**
 
 - HM01 Cut (Cynthia)
+- TM78 Captivate (Route 204 northeast, Cut)
 - TM82 Sleep Talk (Eterna Forest)
 - Explorer Kit (Underground Man, Eterna)
 - TM86 Grass Knot (Gardenia)
@@ -220,7 +221,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 - Good Rod (Route 209)
 - TM19 Giga Drain and TM47 Steel Wing (Route 209)
 - HM04 Strength (Lost Tower)
-- TM42 Facade (Solaceon)
+- TM30 Shadow Ball and TM51 Roost (Route 210 south)
 - TM34 Shock Wave and TM66 Payback (Route 215)
 - Coin Case (Veilstone)
 
@@ -290,9 +291,9 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 
 **Items**
 
-- TM05 Roar, TM40 Aerial Ace, TM92 Trick Room, TM18 Rain Dance (Route 213)
+- TM05 Roar, TM40 Aerial Ace, TM92 Trick Room, TM18 Rain Dance (Route 223, Surf, later)
 - SecretPotion (Cynthia, Valor Lakefront)
-- TM28 Dig (Route 214 / Ruin Maniac Cave)
+- TM28 Dig (Ruin Maniac Cave)
 - TM65 Shadow Claw (Fantina)
 - Relic Badge
 
@@ -327,9 +328,8 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 
 - HM03 Surf (Celestic elder)
 - Old Charm (Cynthia, Route 210)
-- TM30 Shadow Ball and TM51 Roost (Route 210)
 - TM81 X-Scissor (Route 221)
-- TM35 Flamethrower (Fuego Ironworks, Mr. Fuego)
+- TM35 Flamethrower (Fuego Ironworks, on the ground); Fire Stone (Mr. Fuego)
 - TM24 Thunderbolt (Valley Windworks, by Surf)
 - TM48 Skill Swap (Canalave)
 
@@ -397,7 +397,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 **Items**
 
 - HM08 Rock Climb (Route 217)
-- TM13 Ice Beam (Route 216, Rock Climb)
+- TM13 Ice Beam (Route 216 northeast)
 - TM07 Hail (Route 217)
 - TM72 Avalanche (Candice)
 - Icicle Badge
@@ -535,12 +535,12 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 **Do**
 
 - Surf and Waterfall up Route 223.
-- Victory Road needs Strength, Rock Smash, Rock Climb and Defog-free routing.
+- Victory Road needs Surf, Strength, Rock Smash, Waterfall and Rock Climb (no fog).
 - Barry waits before the Elite Four. Heal and stock up: no breaks between battles.
 
 **Items**
 
-- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM78 Captivate, TM79 Dark Pulse (Victory Road)
+- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM79 Dark Pulse (Victory Road)
 
 **Encounters**
 
@@ -631,6 +631,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 
 - Point Card and Razor Fang (Battle Park)
 - TM53 Energy Ball (BP exchange, Battle Park)
+- TM42 Facade (Survival Area, house to the south)
 - TM50 Overheat (Stark Mountain)
 
 **Encounters**
@@ -648,7 +649,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 **Do**
 
 - Route 228: tutor for Frenzy Plant, Blast Burn, Hydro Cannon; sandstorm.
-- Resort Area: Ribbon Syndicate and your Villa.
+- Resort Area: Ribbon Syndicate.
 - Newmoon Island, Flower Paradise and Hall of Origin need event items (Member Card, Oak's Letter, Azure Flute).
 
 **Items**

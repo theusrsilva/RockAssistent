@@ -10,7 +10,7 @@
 ## Presentes
 
 - Turtwig, Chimchar ou Piplup (Lake Verity).
-- Ovo de Happiny (Hiker, Route 209 perto de Hearthome).
+- Ovo de Happiny (Hiker em Hearthome City, na saída para a Route 209).
 - Ovo de Riolu (Riley, Iron Island).
 - Eevee (Bebe, Hearthome City; depois da Dex Nacional).
 

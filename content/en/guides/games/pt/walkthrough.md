@@ -132,6 +132,8 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 - Explorer Kit (Eterna)
 - TM86 Grass Knot (Gardenia)
 - HM01 Cut (Cynthia)
+- TM78 Captivate (Route 204, Cut)
+- TM12 Taunt (Route 211 west, Rock Smash)
 - Forest Badge
 
 **Encounters**
@@ -154,7 +156,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 - Raid the Galactic building, beat Jupiter, free the Clefairy.
 - Get the Bicycle and the Togepi Egg (Cynthia) at the cycle shop.
-- Optional: Old Chateau (Cut, Route 205) for Gastly; Rotom postgame at night.
+- Optional: Old Chateau (Cut, Route 205) for Gastly; Rotom at night (Lv 20, no National Dex needed).
 
 **Items**
 
@@ -229,7 +231,6 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 - TM19 Giga Drain and TM47 Steel Wing (Route 209)
 - TM27 Return (Lost Tower)
 - HM05 Defog (Solaceon Ruins)
-- TM42 Facade (Solaceon)
 - TM34 Shock Wave, TM66 Payback (Route 215)
 - Porygon (Veilstone house)
 - TM60 Drain Punch (Maylene)
@@ -311,7 +312,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 - SecretPotion (Cynthia)
 - TM30 Shadow Ball and TM51 Roost (Route 210)
 - HM03 Surf (Celestic)
-- TM12 Taunt and TM77 Psych Up (Route 211)
+- TM29 Psychic and TM77 Psych Up (Route 211 east)
 
 **Encounters**
 
@@ -512,10 +513,6 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 - Beat Cyrus, then face Giratina (Origin Forme) Lv 47.
 - You exit at Sendoff Spring (Spring Path).
 
-**Items**
-
-- Griseous Orb (Turnback Cave, postgame)
-
 **Encounters**
 
 :::encounters pt distortion-world
@@ -565,7 +562,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 **Items**
 
-- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM78 Captivate, TM79 Dark Pulse (Victory Road)
+- TM41 Torment, TM59 Dragon Pulse, TM71 Stone Edge, TM79 Dark Pulse (Victory Road)
 
 **Encounters**
 
@@ -606,14 +603,14 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 **Do**
 
 - National Dex (see 210) from Oak in Sandgem; Poké Radar.
-- Turnback Cave: Griseous Orb.
+- Turnback Cave: portal to the Distortion World, where the Griseous Orb is.
 - Fullmoon Island: Cresselia (then roams).
 - Snowpoint Temple: Regigigas (see Legendaries).
 
 **Items**
 
 - Poké Radar (Rowan)
-- Griseous Orb (Turnback Cave)
+- Griseous Orb (Distortion World, via Turnback Cave)
 - Lunar Wing (Fullmoon Island)
 
 **Encounters**
@@ -660,6 +657,7 @@ Story path through Sinnoh (Platinum order). Levels and teams in the boss cards.
 
 - TM04 Calm Mind, TM06 Toxic, TM08 Bulk Up and more (BP, Battle Frontier)
 - TM53 Energy Ball (Route 226)
+- TM42 Facade (Survival Area)
 - TM37 Sandstorm (Route 228)
 - Rare Candy (Route 230)
 

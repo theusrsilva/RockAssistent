@@ -132,7 +132,7 @@
 
 - Ache o Farfetch'd na Ilex Forest e ganhe a HM01 Cut.
 - Route 34: Day Care.
-- Goldenrod City: Bicycle (Bike Shop), Eevee do Bill, quiz do Radio Card.
+- Goldenrod City: Bicycle (Bike Shop), quiz do Radio Card.
 - Vença a Whitney.
 
 **Itens**
@@ -140,7 +140,7 @@
 - HM01 Cut (Ilex Forest)
 - TM63 Embargo (Route 34)
 - Bicycle (Bike Shop de Goldenrod)
-- Coin Case (Game Corner)
+- Coin Case (Goldenrod Underground)
 
 **Encontros**
 
@@ -164,13 +164,15 @@
 - National Park: Bug-Catching Contest (ter, qui, sáb).
 - Pokéathlon Dome na Route 35.
 - Ecruteak City: a Burnt Tower solta Raikou, Entei e Suicune.
+- Dance Theater: vença o Rocket Grunt e ganhe o HM03 Surf.
+- Encontre o Bill no Pokémon Center de Ecruteak; de volta a Goldenrod, ele dá um Eevee.
 
 **Itens**
 
 - TM66 Payback (Route 35)
 - TM28 Dig (National Park)
 - TM12 Taunt (Burnt Tower)
-- HM03 Surf (Dance Theater, depois do Morty)
+- HM03 Surf (Dance Theater, depois do Rocket Grunt)
 
 **Encontros**
 
@@ -769,7 +771,7 @@
 **Faça**
 
 - Cerulean Cave: Mewtwo (nível 70) no fundo.
-- Route 28 até o Mt. Silver; Moltres perto da entrada.
+- Route 28 até o Mt. Silver; Moltres numa câmara pelo 2F (Rock Climb).
 - Suba o Mt. Silver e vença o Red no topo.
 - Depois do Red: iniciais de Kanto (Oak) e de Hoenn (Steven, Silph Co.).
 - Embedded Tower: Kyogre (HG) / Groudon (SS) e depois Rayquaza com a Jade Orb.

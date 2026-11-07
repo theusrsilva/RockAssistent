@@ -6,7 +6,8 @@ As distribuições oficiais (Wi-Fi, sem fio local e Global Link) acabaram; a Nin
 | Keldeo | Keldeo | Aprende Secret Sword com Cobalion, Terrakion e Virizion na Moor of Icirrus |
 | Meloetta | Meloetta | Aprende Relic Song no bar da Narrow Street (Castelia) |
 | Genesect | Genesect | Drives no P2 Laboratory (Burn e Shock no Black, Douse e Chill no White) |
-| Raikou, Entei e Suicune shiny (promoção do filme) | Cães lendários shiny | Leve um a Castelia para encontrar o Zorua ou o Zoroark |
+| Celebi (promoção do filme) | Celebi | Leve-o ao prédio da GAME FREAK em Castelia para ganhar um Zorua |
+| Raikou, Entei e Suicune shiny (promoção do filme) | Cães lendários shiny | Leve um à Lostlorn Forest (Route 16) para encontrar o Zoroark |
 | Shaymin | Shaymin | Gracidea em Lacunosa Town (Sky Forme) |
 | Lock Capsule | TM95 Snarl | Nunca foi distribuída |
 | Pokémon Dream World (Global Link) | Pokémon com Hidden Ability | Entree Forest pelo C-Gear; fechou em 2014 |

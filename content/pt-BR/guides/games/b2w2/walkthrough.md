@@ -9,7 +9,7 @@
 
 **Itens**
 
-- Running Shoes e Town Maps (mãe), C-Gear (Bianca), Medal Box (Floccesy)
+- Running Shoes (mãe), Town Maps (irmã do Hugh), C-Gear (Bianca), Medal Box (Floccesy)
 - TM21 Frustration (Floccesy Ranch), TM83 Work Up (Cheren), TM27 Return (Bianca, depois do Cheren)
 
 **Encontros**
@@ -75,9 +75,9 @@
 
 **Itens**
 
-- HM04 Strength (Hugh), TM41 Torment (Castelia Sewers)
+- HM04 Strength (Hugh), TM41 Torment (Castelia Sewers, primavera/verão)
 - TM70 Flash (Narrow Street), TM44 Rest (Castelia Street), TM45 Attract (norte de Castelia)
-- TM76 Struggle Bug (Burgh), Rare Candy (5 arlequins)
+- TM76 Struggle Bug (Burgh), Rare Candy (4 arlequins)
 
 **Encontros**
 
@@ -137,7 +137,7 @@
 
 **Faça**
 
-- Anville Town pelo metrô: devolva o Pansage perdido (opcional).
+- Anville Town pelo metrô (opcional).
 - Route 16 e Lostlorn Forest são opcionais.
 - A Bianca dá o HM02 Fly na Route 5; o Charles bloqueia a ponte até 4 insígnias.
 - Driftveil: o Rood dá um Zorua; depois vença o Clay. Quake Badge.
@@ -173,7 +173,7 @@
 
 **Faça**
 
-- Pokémon World Tournament (PWT): Driftveil Tournament, tutores e loja de BP.
+- Pokémon World Tournament (PWT): Driftveil Tournament e loja de BP; os tutores de golpes ficam numa casa de Driftveil.
 - Entre no Plasma Frigate com o Hugh e o Cheren.
 - Route 6: o Cheren dá o HM03 Surf; Deerling no Season Research Lab.
 - Chargestone Cave: encontre o Colress. Mistralton: vença a Skyla. Jet Badge.
@@ -246,6 +246,7 @@
 **Itens**
 
 - TM29 Psychic (Route 13)
+- TM14 Blizzard, TM25 Thunder, TM38 Fire Blast (Pokémon Center de Lacunosa)
 
 **Encontros**
 
@@ -271,7 +272,6 @@
 
 **Itens**
 
-- TM14 Blizzard, TM25 Thunder, TM38 Fire Blast (Pokémon Center de Lacunosa)
 - TM82 Dragon Tail (Drayden)
 
 **Encontros**
@@ -328,12 +328,11 @@
 - Route 22: o Colress dá a Colress MCHN; Terrakion Lv 45.
 - Route 21 e Seaside Cave: pare o Zinzolin no Plasma Frigate.
 - Giant Chasm: entre de novo no navio (Colress, Zinzolin, Shadow Triad).
-- O Kyurem se funde com o dragão do N; vença o Ghetsis. Pegue os DNA Splicers.
+- O Kyurem se funde com o dragão do N; vença o Ghetsis.
 
 **Itens**
 
 - TM06 Toxic (Seaside Cave), TM03 Psyshock, TM13 Ice Beam (Giant Chasm), Moon Stone (Giant Chasm)
-- DNA Splicers (Giant Chasm)
 
 **Encontros**
 
@@ -488,6 +487,7 @@
 
 **Faça**
 
+- Giant Chasm: capture o Kyurem (Lv 70) e depois pegue os DNA Splicers.
 - Marvelous Bridge: Cresselia Lv 68 (depois da Lunar Wing); Magikarp por $500.
 - Route 15: Ditto pelo Rotom; Poké Transfer Lab.
 - Black City (Black 2) ou White Forest (White 2); Skyarrow Bridge; Pinwheel Forest.
@@ -498,6 +498,7 @@
 
 - TM26 Earthquake (Route 15, Strength), TM22 Solar Beam, TM86 Grass Knot (Pinwheel Forest)
 - TM47 Low Sweep, TM52 Focus Blast (Wellspring Cave), TM85 Dream Eater, Soul Dew (Dreamyard)
+- DNA Splicers (Giant Chasm, depois do Kyurem)
 
 **Encontros**
 

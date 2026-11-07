@@ -64,7 +64,7 @@
 **Items**
 
 - HM01 Cut (Fennel), Dusk Ball and Great Ball (Striaton)
-- TM83 Work Up and TM85 Dream Eater (Dreamyard)
+- TM83 Work Up (Striaton Gym prize), TM85 Dream Eater (Dreamyard)
 
 **Encounters**
 
@@ -190,7 +190,7 @@
 **Do**
 
 - Anville Town is reached by the Battle Subway; Rare Candy and a weekly item there.
-- Route 16 and Lostlorn Forest (Strength) are optional side areas.
+- Route 16 and Lostlorn Forest are optional side areas (the deep part needs Surf and Waterfall).
 - Route 5: Cheren fights you before the Driftveil Drawbridge.
 
 **Items**
@@ -218,11 +218,12 @@
 - Cross the drawbridge into Driftveil City.
 - Clay sends you to the Cold Storage to stop Team Plasma.
 - Beat Clay. Quake Badge.
+- Bianca fights you in Driftveil, then gives HM02 Fly.
 
 **Items**
 
 - TM55 Scald (Cold Storage), TM78 Bulldoze (Clay)
-- Shell Bell (50 seen), Repeat Ball (Driftveil)
+- HM02 Fly (Bianca), Shell Bell (50 seen), Repeat Ball (Driftveil)
 
 **Encounters**
 
@@ -243,13 +244,12 @@
 **Do**
 
 - Season Research Lab on Route 6 (Deerling forms).
-- Bianca fights you, then gives HM02 Fly.
 - Chargestone Cave: N fights you; Clay clears the web.
 - Beat Skyla in Mistralton. Jet Badge.
 
 **Items**
 
-- HM02 Fly (Bianca), TM84 Poison Jab (Route 6), Shiny Stone (Route 6 house)
+- TM84 Poison Jab (Route 6), Shiny Stone (Route 6 house)
 - Lucky Egg (Juniper, Chargestone Cave)
 - TM40 Aerial Ace (under the runway), TM58 Sky Drop (Mistralton), TM62 Acrobatics (Skyla)
 
@@ -308,7 +308,7 @@
 
 - Optional: Surf west from Route 1 across the currents of Route 17.
 - Route 18: a man gives a Larvesta Egg; HM05 Waterfall is here.
-- P2 Laboratory is empty in the story (event Genesect only).
+- P2 Laboratory: Dubious Disc and TM24 Thunderbolt (Genesect only by Wi-Fi event).
 
 **Items**
 
@@ -354,7 +354,7 @@
 
 **Do**
 
-- Relic Castle bottom: get the Light Stone (Black) or Dark Stone (White) with Juniper and Cedric.
+- Relic Castle bottom: Ghetsis and Alder; then Lenora gives the Light Stone (Black) or Dark Stone (White) at the Nacrene Museum.
 - Route 8 and Moor of Icirrus: Bianca fights you.
 - Tubeline Bridge, Route 9 and Shopping Mall Nine.
 - Opelucid: Master Ball from Juniper; beat Drayden (Black) or Iris (White). Legend Badge.
@@ -362,7 +362,7 @@
 **Items**
 
 - TM42 Facade (Route 8, umbrella lady), TM36 Sludge Bomb (Route 8, Surf), TM43 Flame Charge (Tubeline Bridge)
-- TM56 Fling (Route 9), TM15 Hyper Beam and TM68 Giga Impact (Shopping Mall Nine)
+- TM56 Fling (Tubeline Bridge), TM15 Hyper Beam and TM68 Giga Impact (Shopping Mall Nine)
 - Master Ball (Juniper), TM82 Dragon Tail (Gym)
 
 **Encounters**

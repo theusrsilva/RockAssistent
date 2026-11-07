@@ -9,10 +9,10 @@
 ## Presentes
 
 - Treecko, Torchic ou Mudkip (nv. 5): Prof. Birch, Route 101.
-- Ovo de Wynaut: senhora da fonte termal, Lavaridge Town. Ovo de Togepi: a mesma senhora, depois do Wallace.
+- Ovo de Wynaut: senhora da fonte termal, Lavaridge Town. Ovo de Togepi: a mesma senhora, depois da batalha com o Primal (Groudon/Kyogre).
 - Latios (OR) / Latias (AS), nv. 30: Southern Island (história).
 - Castform: Weather Institute.
-- Pikachu Cosplay (nv. 20): Lisia, depois do primeiro concurso.
+- Pikachu Cosplay (nv. 20): Pokémon Breeder no Contest Hall de Slateport, depois do primeiro concurso.
 - Iniciais de Johto (Delta Episode), de Unova (depois dele) e de Sinnoh (depois da revanche da Liga): Prof. Birch.
 - Beldum (nv. 1): casa do Steven, Mossdeep, depois do Delta Episode.
 - Camerupt e Sharpedo (nv. 40): ex-admins, Battle Resort.

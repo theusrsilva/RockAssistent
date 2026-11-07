@@ -3,7 +3,8 @@
 | You give | You get | Where | Notes |
 | --- | --- | --- | --- |
 | Cottonee (Black) / Petilil (White) | Petilil / Cottonee | Nacrene City (house right of the Pokémon Center) | Gets the other version's exclusive |
-| Minccino | Basculin | Driftveil City | |
+| Minccino | Basculin | Driftveil City | Red-Striped in Black / Blue-Striped in White |
+| Boldore | Emolga | Route 7 (Hiker) | |
 | Ditto | Rotom | Route 15 (trailer) | Postgame; only Rotom in the game |
 
 ## Gifts

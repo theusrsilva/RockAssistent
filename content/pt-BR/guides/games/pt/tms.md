@@ -9,33 +9,33 @@ TMs e HMs do Platinum. HM só sai com o Move Deleter (Canalave City).
 - TM03 Water Pulse: Ravaged Path (Surf).
 - TM04 Calm Mind: troca por BP (Battle Frontier).
 - TM05 Roar: Route 213 (Rock Climb).
-- TM06 Toxic: troca por BP (Battle Frontier).
+- TM06 Toxic: Route 212; Battle Frontier (BP).
 - TM07 Hail: Route 217.
 - TM08 Bulk Up: troca por BP (Battle Frontier).
 - TM09 Bullet Seed: Route 204.
 - TM10 Hidden Power: Veilstone Game Corner (fichas).
 - TM11 Sunny Day: Route 212.
-- TM12 Taunt: Route 211 (leste).
+- TM12 Taunt: Route 211 (oeste).
 - TM13 Ice Beam: Route 216; Veilstone Game Corner (fichas).
 - TM14 Blizzard: Veilstone Dept. Store; Lake Acuity.
 - TM15 Hyper Beam: Veilstone Dept. Store.
 - TM16 Light Screen: Veilstone Dept. Store.
 - TM17 Protect: Veilstone Dept. Store.
-- TM18 Rain Dance: Route 213 (Surf).
+- TM18 Rain Dance: Route 223 (Surf).
 - TM19 Giga Drain: Route 209.
 - TM20 Safeguard: Veilstone Dept. Store.
-- TM21 Frustration: Galactic Warehouse; Veilstone Game Corner (fichas).
+- TM21 Frustration: Team Galactic HQ (3F); Veilstone Game Corner (fichas).
 - TM22 Solar Beam: Veilstone Dept. Store.
 - TM23 Iron Tail: Iron Island.
 - TM24 Thunderbolt: Valley Windworks (Surf); Veilstone Game Corner (fichas).
 - TM25 Thunder: Veilstone Dept. Store; Lake Valor.
 - TM26 Earthquake: Wayward Cave; troca por BP.
-- TM27 Return: Lost Tower; Prof. Rowan (Sandgem).
+- TM27 Return: Lost Tower; Prof. Rowan (Sandgem); Veilstone Game Corner (8.000 fichas).
 - TM28 Dig: Route 214.
-- TM29 Psychic: Veilstone Game Corner (fichas).
+- TM29 Psychic: Route 211 (leste); Veilstone Game Corner (fichas).
 - TM30 Shadow Ball: Route 210 (norte); troca por BP.
 - TM31 Brick Break: Oreburgh Gate (rampa de bicicleta); troca por BP.
-- TM32 Double Team: Veilstone Game Corner (fichas).
+- TM32 Double Team: Wayward Cave (1F); Veilstone Game Corner (fichas).
 - TM33 Reflect: Veilstone Dept. Store.
 - TM34 Shock Wave: Route 215.
 - TM35 Flamethrower: Fuego Ironworks; Veilstone Game Corner (fichas).
@@ -45,14 +45,14 @@ TMs e HMs do Platinum. HM só sai com o Move Deleter (Canalave City).
 - TM39 Rock Tomb: Ravaged Path.
 - TM40 Aerial Ace: Route 213; troca por BP.
 - TM41 Torment: Victory Road.
-- TM42 Facade: Solaceon Town.
+- TM42 Facade: Survival Area.
 - TM43 Secret Power: Amity Square.
 - TM44 Rest: Veilstone Game Corner (fichas).
 - TM45 Attract: Amity Square; troca por BP.
 - TM46 Thief: Eterna City (prédio da Galactic).
 - TM47 Steel Wing: Route 209.
 - TM48 Skill Swap: Canalave City (morador).
-- TM49 Snatch: Galactic Warehouse.
+- TM49 Snatch: Team Galactic HQ (1F).
 - TM50 Overheat: Stark Mountain.
 - TM51 Roost: Route 210 (norte).
 - TM52 Focus Blast: Veilstone Dept. Store.
@@ -67,7 +67,7 @@ TMs e HMs do Platinum. HM só sai com o Move Deleter (Canalave City).
 - TM61 Will-O-Wisp: troca por BP (Battle Frontier).
 - TM62 Silver Wind: Route 212.
 - TM63 Embargo: Veilstone City.
-- TM64 Explosion: Veilstone Game Corner (fichas).
+- TM64 Explosion: Veilstone Game Corner (prêmio por 10 rodadas bônus seguidas).
 - TM65 Shadow Claw: Fantina (Hearthome Gym).
 - TM66 Payback: Route 215.
 - TM67 Recycle: Eterna City (Eterna Condominiums).
@@ -81,18 +81,18 @@ TMs e HMs do Platinum. HM só sai com o Move Deleter (Canalave City).
 - TM75 Swords Dance: Veilstone Game Corner (fichas).
 - TM76 Stealth Rock: Roark (Oreburgh Gym).
 - TM77 Psych Up: Route 211.
-- TM78 Captivate: Victory Road.
+- TM78 Captivate: Route 204 (Cut).
 - TM79 Dark Pulse: Victory Road.
 - TM80 Rock Slide: Mt. Coronet.
 - TM81 X-Scissor: Route 221; troca por BP.
 - TM82 Sleep Talk: Eterna Forest.
 - TM83 Natural Gift: Veilstone Dept. Store.
 - TM84 Poison Jab: Route 212.
-- TM85 Dream Eater: Lake Valor (Rock Climb).
+- TM85 Dream Eater: Valor Lakefront (Rock Climb).
 - TM86 Grass Knot: Gardenia (Eterna Gym).
 - TM87 Swagger: Pokémon Mansion.
 - TM88 Pluck: Floaroma Town.
-- TM89 U-turn: Veilstone Game Corner (fichas).
+- TM89 U-turn: Canalave City (Surf); Veilstone Game Corner (fichas).
 - TM90 Substitute: Old Chateau; Veilstone Game Corner (fichas).
 - TM91 Flash Cannon: Byron (Canalave Gym).
 - TM92 Trick Room: Route 213.

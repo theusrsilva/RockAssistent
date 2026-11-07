@@ -35,7 +35,7 @@ TMs are reusable in Gen 5. HMs cannot be forgotten without the Move Deleter (Mis
 - TM29 Psychic: Route 13.
 - TM30 Shadow Ball: Relic Castle.
 - TM31 Brick Break: Icirrus City (lady in the Pokémon Center).
-- TM32 Double Team: Seven Sages, Rood (Route 17 area, postgame).
+- TM32 Double Team: Seven Sages, Rood (Route 18, postgame).
 - TM33 Reflect: Nimbasa City (shop).
 - TM34 Sludge Wave: Battle Subway (BP).
 - TM35 Flamethrower: Abundant Shrine.
@@ -59,7 +59,7 @@ TMs are reusable in Gen 5. HMs cannot be forgotten without the Move Deleter (Mis
 - TM53 Energy Ball: Route 12.
 - TM54 False Swipe: Professor Juniper (30 seen).
 - TM55 Scald: Cold Storage.
-- TM56 Fling: Route 9.
+- TM56 Fling: Tubeline Bridge.
 - TM57 Charge Beam: Route 7.
 - TM58 Sky Drop: Mistralton City.
 - TM59 Incinerate: Battle Subway (BP).
@@ -86,21 +86,21 @@ TMs are reusable in Gen 5. HMs cannot be forgotten without the Move Deleter (Mis
 - TM80 Rock Slide: Mistralton Cave.
 - TM81 X-Scissor: Route 7.
 - TM82 Dragon Tail: Drayden or Iris (Opelucid Gym).
-- TM83 Work Up: Dreamyard.
+- TM83 Work Up: prize from the Striaton Gym.
 - TM84 Poison Jab: Route 6.
 - TM85 Dream Eater: Dreamyard.
 - TM86 Grass Knot: Pinwheel Forest.
 - TM87 Swagger: Battle Subway (BP).
 - TM88 Pluck: Battle Subway (BP).
-- TM89 U-turn: Route 13.
-- TM90 Substitute: Twist Mountain.
+- TM89 U-turn: Route 13 (needs the three Grams).
+- TM90 Substitute: Twist Mountain (winter only).
 - TM91 Flash Cannon: Twist Mountain.
 - TM92 Trick Room: Abundant Shrine.
 - TM93 Wild Charge: Victory Road.
 - TM94 Rock Smash: Pinwheel Forest (lady outside the forest).
 - TM95 Snarl: Castelia City, only with the Lock Capsule (never distributed).
 - HM01 Cut: Fennel (Striaton City).
-- HM02 Fly: Bianca (Route 6, after Driftveil).
+- HM02 Fly: Bianca, Driftveil City.
 - HM03 Surf: Alder (Twist Mountain entrance, Route 7).
 - HM04 Strength: Nimbasa City (boy in a house).
 - HM05 Waterfall: Route 18.

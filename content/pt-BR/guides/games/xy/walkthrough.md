@@ -29,10 +29,11 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 - Aprenda a capturar na Route 2 (Poké Balls com o Tierno e o Trevor).
 - O Pikachu fica na Santalune Forest.
 - Pegue os patins em Santalune City e desafie a Viola.
+- Depois da Bug Badge, a Alexa dá a Exp. Share (Santalune City).
 
 **Itens**
 
-- Patins (menina na porta do ginásio, Santalune City).
+- Patins (menina na porta do ginásio, Santalune City); Exp. Share (Alexa).
 - Pinsirite [X] / Heracronite [Y]: Santalune Forest, pós-jogo (sundial).
 
 **Encontros**
@@ -53,13 +54,11 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 **Faça**
 
-- A Alexa dá a Exp. Share depois da Bug Badge.
 - As flores da Route 4 definem a cor da Flabébé.
 - Vá ao laboratório do Sycamore (3º andar) e batalhe; só a South Boulevard está aberta por enquanto.
 
 **Itens**
 
-- Exp. Share (Alexa).
 - Bulbasaur/Charmander/Squirtle com a Mega Stone (Sycamore).
 - TM27 Return (Route 4).
 
@@ -192,8 +191,8 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 **Faça**
 
 - A Reflection Cave leva a Shalour City; o Tierno dá a TM70 Flash lá dentro.
-- Na Tower of Mastery, enfrente Calem/Serena pelo Mega Ring.
-- Vença a Korrina no ginásio e depois o duelo de Lucario no topo da torre.
+- Vença a Korrina no ginásio e depois o duelo de Lucario no topo da Tower of Mastery.
+- A Korrina dá o Mega Ring no topo da torre.
 - Ganhe o Lucario com a Lucarionite; Calem/Serena dá a HM03 Surf na saída leste.
 
 **Itens**
@@ -329,7 +328,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 **Itens**
 
-- TM41 Torment, Gengarite (menina em Laverre City).
+- TM41 Torment (Youngster), Gengarite (Hex Maniac), Laverre City.
 - TM99 Dazzling Gleam (Valerie).
 
 **Encontros**
@@ -377,7 +376,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 **Itens**
 
-- TM42 Facade (Dendemille); TM97 Dark Pulse, Super Rod (Route 16).
+- TM42 Facade (Dendemille); Super Rod (Route 16); TM97 Dark Pulse (Route 15, pela Route 16 com Surf + Waterfall).
 - TM56 Fling, TM95 Snarl (Lost Hotel).
 - TM71 Stone Edge, TM79 Frost Breath, Abomasite (Frost Cavern).
 
@@ -407,7 +406,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 **Itens**
 
-- TM10 Hidden Power, TM35, TM90 (Centro Pokémon de Anistar); 10 Repeat Balls.
+- TM10 Hidden Power (homem na casa a sudeste de Anistar); TM35, TM90 (Centro Pokémon de Anistar); 10 Repeat Balls.
 - TM04 Calm Mind (Olympia).
 
 **Encontros**
@@ -546,6 +545,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 - O ginásio de Snowbelle tem chão que gira.
 - O tutor dos golpes finais (Frenzy Plant / Blast Burn / Hydro Cannon) mora aqui.
+- No começo o Wulfric não está: vá ao Pokémon Village pela Route 20 e volte ao ginásio.
 
 **Itens**
 
@@ -563,7 +563,7 @@ _Ordem da história. [X]/[Y] = só nessa versão._
 
 - A Route 20 (Winding Woods) é um labirinto; a pedra com musgo do Leafeon fica aqui.
 - Pokémon Village: Ditto; a caverna do Mewtwo abre no pós-jogo.
-- A Victory Road pede Surf, Strength, Waterfall e Rock Smash.
+- A Victory Road só pede Surf e Strength.
 
 **Itens**
 
