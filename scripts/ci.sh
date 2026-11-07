@@ -8,8 +8,8 @@ python3 -m unittest discover -s scripts/tests -t scripts
 python3 -I scripts/build-dex.py
 echo "::endgroup::"
 
-echo "::group::Guias (scripts/check-guides.py)"
-python3 -I scripts/check-guides.py
+echo "::group::Guias (scripts/check-guides.py --strict)"
+python3 -I scripts/check-guides.py --strict
 echo "::endgroup::"
 
 echo "::group::Frontend"
