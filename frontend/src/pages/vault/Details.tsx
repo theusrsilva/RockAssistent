@@ -25,7 +25,7 @@ import { tagClass, tagColors } from './tagColors'
 import { TransferDialog } from './TransferDialog'
 import { ComingSoonActions } from '../boxes/ComingSoonActions'
 import { EvolveDialog } from '../boxes/EvolveDialog'
-import { evolveBody, type EvolveLegality } from '../boxes/boxes'
+import { errorMessage, evolveBody, type EvolveLegality } from '../boxes/boxes'
 
 type TabKey = 'resumo' | 'golpes' | 'status' | 'origem'
 const STAT_KEYS = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const
@@ -80,6 +80,23 @@ export function Details({
   const [editError, setEditError] = useState<string | null>(null)
   const [transferOpen, setTransferOpen] = useState(false)
   const [evolveOpen, setEvolveOpen] = useState(false)
+  const [cloning, setCloning] = useState(false)
+
+  async function cloneInVault() {
+    setCloning(true)
+    try {
+      const r = await api.post<{ pokemon: VaultPokemon; legality: EvolveLegality }>(
+        `/api/vault/pokemon/${pokemon.id}/clone`,
+        { language: i18n.language },
+      )
+      onChanged()
+      toast(r.legality.valid ? t('boxes.clonedVault') : t('boxes.clonedVaultIllegal'))
+    } catch (e) {
+      toast(errorMessage(t, e))
+    } finally {
+      setCloning(false)
+    }
+  }
 
   // Dados completos (golpes, IVs, EVs, local) vêm do arquivo do Pokémon.
   useEffect(() => {
@@ -483,9 +500,10 @@ export function Details({
                     {t('boxes.moveToSave')}
                   </Button>
                 )}
-                {/* Clonar não existe no cofre: ele guarda um arquivo de cada (para ter cópias, copie para um save). */}
+                {/* Clonar no cofre: cópia com PID novo na Caixa de entrada. */}
                 <ComingSoonActions
-                  cloneHint={t('boxes.cloneVaultHint')}
+                  onClone={pokemon.isEgg || cloning ? undefined : () => void cloneInVault()}
+                  cloneHint={t('boxes.evolveDialog.egg')}
                   evolveHint={t('boxes.evolveDialog.egg')}
                   onEvolve={pokemon.isEgg ? undefined : () => setEvolveOpen(true)}
                 />

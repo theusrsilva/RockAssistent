@@ -211,6 +211,8 @@ export const KNOWN_ERRORS = [
   'no_window',
   'evolve_not_available',
   'evolve_wrong_target',
+  'clone_exists',
+  'clone_not_available',
 ] as const
 
 export function codeKey(code: string | null | undefined): string {

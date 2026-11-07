@@ -23,6 +23,8 @@ public static class VaultEndpoints
     /// <param name="Language">Idioma das mensagens de legalidade ("pt-BR" ou "en").</param>
     public sealed record EvolveDto(ushort Species, byte Form, string? Sha256 = null, string? Language = null);
 
+    public sealed record CloneDto(string? Language = null);
+
     /// <summary>Jogo de destino (chave do catálogo: sv, swsh, za...).</summary>
     public sealed record TransferDto(string? Game);
     public sealed record ExportDto(IReadOnlyList<Guid> Ids, string Format = "pk3", int Size = 100);
@@ -127,6 +129,36 @@ public static class VaultEndpoints
                 });
             }
             catch (TradeEvolutionException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
+            catch (VaultException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
+        });
+
+        // Clonar no cofre: cópia com PID novo (EC novo na Gen 6+) na Caixa de entrada; a legalidade só avisa.
+        vault.MapPost("/pokemon/{id:guid}/clone", async (Guid id, CloneDto? body, PokemonStore store, SettingsStore settings,
+            CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            var original = await store.ReadDataAsync(p, ct);
+            try
+            {
+                var clone = PokemonClone.Clone(PokemonReader.ToEntity(original, p.Family));
+                var result = await store.ImportAsync(SameSize(clone, original.Length), p.Origin, p.SourceFileName, ct, p.Family);
+                if (!result.Created)
+                    return Results.Conflict(new { error = "clone_exists" });
+                var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
+                return Results.Ok(new
+                {
+                    pokemon = PokemonEndpoints.PokemonDto.From(result.Pokemon, me),
+                    legality = LegalityDto(clone, body?.Language),
+                });
+            }
+            catch (PokemonCloneException ex)
             {
                 return Results.BadRequest(new { error = ex.Code });
             }

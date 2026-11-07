@@ -2143,6 +2143,8 @@
       "box_not_found": "A caixa do cofre não existe mais. Escolha outra.",
       "box_full": "Essa caixa do cofre está cheia. Escolha outra ou a Caixa de entrada.",
       "evolve_not_available": "Este Pokémon não evolui por troca.",
+      "clone_exists": "Já existe uma cópia igual no cofre. Tente de novo.",
+      "clone_not_available": "Não deu para clonar este Pokémon.",
       "evolve_wrong_target": "Essa evolução não vale para este Pokémon. Abra a lista de novo."
     },
     "foldersCard": {
@@ -2165,7 +2167,8 @@
       },
       "whereNote": "Pode escolher uma pasta acima: o RockAssistent procura também nas subpastas."
     },
-    "cloneVaultHint": "O cofre guarda uma cópia de cada Pokémon. Para ter cópias, use \"Mover ou copiar para um save\".",
+    "clonedVault": "Clone feito, com PID novo. Ele foi para a Caixa de entrada.",
+    "clonedVaultIllegal": "Clone feito, com PID novo, e foi para a Caixa de entrada. O PKHeX aponta problemas de legalidade nele (é só um aviso).",
     "cloneNoSpace": "Não há posição livre neste save para a cópia.",
     "cloned": "Cópia feita em {{box}}, posição {{slot}}.",
     "readOnlyHint": "Este save é só de leitura.",

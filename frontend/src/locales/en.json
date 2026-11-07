@@ -2143,6 +2143,8 @@
       "box_not_found": "That vault box doesn't exist anymore. Pick another.",
       "box_full": "That vault box is full. Pick another one or the Inbox.",
       "evolve_not_available": "This Pokémon does not evolve by trade.",
+      "clone_exists": "An identical copy is already in the vault. Try again.",
+      "clone_not_available": "This Pokémon cannot be cloned.",
       "evolve_wrong_target": "That evolution does not apply to this Pokémon. Open the list again."
     },
     "foldersCard": {
@@ -2165,7 +2167,8 @@
       },
       "whereNote": "You can pick a parent folder: RockAssistent also looks in subfolders."
     },
-    "cloneVaultHint": "The vault keeps one copy of each Pokémon. To have copies, use \"Move or copy to a save\".",
+    "clonedVault": "Cloned with a new PID. It went to the Inbox.",
+    "clonedVaultIllegal": "Cloned with a new PID and sent to the Inbox. PKHeX flags legality problems in it (just a warning).",
     "cloneNoSpace": "There is no free slot in this save for the copy.",
     "cloned": "Copied to {{box}}, slot {{slot}}.",
     "readOnlyHint": "This save is read-only.",

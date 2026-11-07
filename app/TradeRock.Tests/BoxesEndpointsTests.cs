@@ -150,6 +150,32 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Clonar_no_cofre_cria_uma_entrada_nova_na_caixa_de_entrada()
+    {
+        var gengar = await TradeEvolutionPkhexTests.LegalAsync(TradeGame.FireRed, 94);
+        gengar.SetShiny();
+        var store = _app.Services.GetRequiredService<PokemonStore>();
+        var stored = (await store.ImportAsync(StoredBytes(gengar), PokemonOrigin.Created, "gengar.pk3", default, GameFamily.Frlg)).Pokemon;
+
+        var result = await Post($"/api/vault/pokemon/{stored.Id}/clone", new { language = "en" });
+        var cloneId = result.GetProperty("pokemon").GetProperty("id").GetGuid();
+        Assert.NotEqual(stored.Id, cloneId);
+        Assert.True(result.GetProperty("legality").TryGetProperty("valid", out _));
+        var clone = await store.GetAsync(cloneId, default);
+        Assert.NotNull(clone);
+        Assert.Null(clone!.BoxId);
+        Assert.Null(clone.DeletedAt);
+        Assert.Equal(Gengar, clone.Species);
+        Assert.True(clone.IsShiny);
+        Assert.NotEqual(stored.Pid, clone.Pid);
+        Assert.NotEqual(stored.Sha256, clone.Sha256);
+        Assert.Null((await store.GetAsync(stored.Id, default))!.DeletedAt);
+
+        var missing = await _client.PostAsJsonAsync($"/api/vault/pokemon/{Guid.NewGuid()}/clone", new { });
+        Assert.Equal(HttpStatusCode.NotFound, missing.StatusCode);
+    }
+
+    [Fact]
     public async Task Pastas_e_lista_de_saves_com_arquivo_ruim()
     {
         Assert.Equal(0, (await Get("/api/settings/save-folders")).GetArrayLength());
