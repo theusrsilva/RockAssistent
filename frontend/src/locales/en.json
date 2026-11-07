@@ -2660,7 +2660,8 @@
         "busy": "Already downloading. Wait for it to finish.",
         "local_only": "Downloads only work in the PC window.",
         "network": "Couldn't download. Check the internet and try again.",
-        "networkCode": "Couldn't download ({{code}}). Check the internet and try again."
+        "networkCode": "Couldn't download ({{code}}). Check the internet and try again.",
+        "write_failed": "Downloaded, but couldn't save it in the data folder. Check free space and the folder's permissions."
       }
     },
     "paste": {

@@ -59,31 +59,47 @@ public static class InternetHttp
         }
     }
 
-    /// <summary>Copia o corpo para <paramref name="target"/> com limite de tamanho (<c>too_big</c> se passar).</summary>
-    internal static async Task CopyLimitedAsync(HttpResponseMessage response, Stream target, long maxBytes, CancellationToken ct)
+    /// <summary>
+    /// Copia o corpo para <paramref name="target"/> com limite de tamanho (<c>too_big</c>) e de tempo: com
+    /// <c>ResponseHeadersRead</c> o <see cref="HttpClient.Timeout"/> só cobre os cabeçalhos, então o corpo ganha o seu
+    /// (<paramref name="timeout"/>, normalmente o do cliente). Falha ao gravar vira <c>write_failed</c>.
+    /// </summary>
+    internal static async Task CopyLimitedAsync(HttpResponseMessage response, Stream target, long maxBytes, TimeSpan timeout,
+        CancellationToken ct)
     {
         if (response.Content.Headers.ContentLength is > 0 and var length && length > maxBytes)
             throw new InternetException("too_big");
+        using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        if (timeout > TimeSpan.Zero && timeout != System.Threading.Timeout.InfiniteTimeSpan)
+            cts.CancelAfter(timeout);
         try
         {
-            await using var source = await response.Content.ReadAsStreamAsync(ct);
+            await using var source = await response.Content.ReadAsStreamAsync(cts.Token);
             var buffer = new byte[81920];
             long total = 0;
             int read;
-            while ((read = await source.ReadAsync(buffer, ct)) > 0)
+            while ((read = await source.ReadAsync(buffer, cts.Token)) > 0)
             {
                 total += read;
                 if (total > maxBytes)
                     throw new InternetException("too_big");
-                await target.WriteAsync(buffer.AsMemory(0, read), ct);
+                try
+                {
+                    await target.WriteAsync(buffer.AsMemory(0, read), cts.Token);
+                }
+                catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+                {
+                    throw new InternetException("write_failed");
+                }
             }
         }
-        catch (TaskCanceledException) when (!ct.IsCancellationRequested)
+        catch (OperationCanceledException) when (!ct.IsCancellationRequested)
         {
             throw new InternetException("timeout");
         }
-        catch (HttpRequestException)
+        catch (Exception e) when (e is HttpRequestException or IOException)
         {
+            // Inclui o HttpIOException (conexão caiu no meio do corpo).
             throw new InternetException("unreachable");
         }
     }

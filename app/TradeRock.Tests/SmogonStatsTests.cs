@@ -42,6 +42,44 @@ internal sealed class FakeInternet : HttpMessageHandler
     }
 }
 
+/// <summary>Responde 200 na hora, mas o corpo nunca termina (servidor travado no meio do download).</summary>
+internal sealed class HangingBody : HttpMessageHandler
+{
+    private sealed class NeverEnds : Stream
+    {
+        public override bool CanRead => true;
+        public override bool CanSeek => false;
+        public override bool CanWrite => false;
+        public override long Length => throw new NotSupportedException();
+        public override long Position { get => 0; set => throw new NotSupportedException(); }
+        public override void Flush() { }
+        public override int Read(byte[] buffer, int offset, int count) => throw new NotSupportedException();
+        public override long Seek(long offset, SeekOrigin origin) => throw new NotSupportedException();
+        public override void SetLength(long value) => throw new NotSupportedException();
+        public override void Write(byte[] buffer, int offset, int count) => throw new NotSupportedException();
+
+        public override async ValueTask<int> ReadAsync(Memory<byte> buffer, CancellationToken cancellationToken = default)
+        {
+            await Task.Delay(Timeout.Infinite, cancellationToken);
+            return 0;
+        }
+
+        public override Task<int> ReadAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken) =>
+            ReadAsync(buffer.AsMemory(offset, count), cancellationToken).AsTask();
+    }
+
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) =>
+        Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK) { Content = new StreamContent(new NeverEnds()) });
+
+    public HttpClient Client(TimeSpan timeout)
+    {
+        var http = new HttpClient(this, disposeHandler: false);
+        InternetHttp.Configure(http, "1.0.0");
+        http.Timeout = timeout;
+        return http;
+    }
+}
+
 public sealed class SmogonStatsTests : IDisposable
 {
     private static readonly string FixturePath = Path.Combine(AppContext.BaseDirectory, "Fixtures", "chaos-sample.json");
@@ -145,6 +183,44 @@ public sealed class SmogonStatsTests : IDisposable
             SmogonStats.DownloadAsync(_net.Client(), format, new DateOnly(2026, 10, 1), _dir, CancellationToken.None));
         Assert.Equal("invalid_file", e.Code);
         Assert.Empty(Directory.GetFiles(_dir));
+    }
+
+    [Fact]
+    public async Task Corpo_que_nao_termina_vira_timeout()
+    {
+        var hanging = new HangingBody();
+        var smogon = await Assert.ThrowsAsync<InternetException>(() =>
+            SmogonStats.DownloadAsync(hanging.Client(TimeSpan.FromMilliseconds(300)), SmogonStats.DefaultFormat, new DateOnly(2026, 10, 1), _dir,
+                CancellationToken.None)).WaitAsync(TimeSpan.FromSeconds(10));
+        Assert.Equal("timeout", smogon.Code);
+        Assert.Empty(Directory.GetFiles(_dir));
+
+        var paste = await Assert.ThrowsAsync<InternetException>(() =>
+            PokePaste.FetchAsync(hanging.Client(TimeSpan.FromMilliseconds(300)), new Uri("https://pokepast.es/abc123"), CancellationToken.None))
+            .WaitAsync(TimeSpan.FromSeconds(10));
+        Assert.Equal("timeout", paste.Code);
+    }
+
+    [Fact]
+    public async Task Cancelar_nao_vira_timeout()
+    {
+        using var cts = new CancellationTokenSource(TimeSpan.FromMilliseconds(200));
+        await Assert.ThrowsAnyAsync<OperationCanceledException>(() =>
+            SmogonStats.DownloadAsync(new HangingBody().Client(TimeSpan.FromMinutes(1)), SmogonStats.DefaultFormat, new DateOnly(2026, 10, 1), _dir,
+                cts.Token)).WaitAsync(TimeSpan.FromSeconds(10));
+    }
+
+    [Fact]
+    public async Task Pasta_que_nao_aceita_gravar_vira_write_failed()
+    {
+        var format = SmogonStats.DefaultFormat;
+        _net.Routes[SmogonStats.Url(format, new DateOnly(2026, 10, 1)).ToString()] = (HttpStatusCode.OK, File.ReadAllBytes(FixturePath));
+        // Um arquivo no lugar da pasta: não dá para criar a pasta nem o .part.
+        var blocked = Path.Combine(_dir, "vgc");
+        File.WriteAllText(blocked, "");
+        var e = await Assert.ThrowsAsync<InternetException>(() =>
+            SmogonStats.DownloadAsync(_net.Client(), format, new DateOnly(2026, 10, 1), blocked, CancellationToken.None));
+        Assert.Equal("write_failed", e.Code);
     }
 
     [Theory]
@@ -284,6 +360,26 @@ public sealed class InternetApiTests : IAsyncLifetime
         Assert.Equal("http_500", body.GetProperty("reason").GetString());
         // O arquivo anterior continua valendo.
         Assert.Equal(HttpStatusCode.OK, (await _client.GetAsync("/api/vgc/usage")).StatusCode);
+    }
+
+    [Fact]
+    public async Task Falha_ao_gravar_e_502_com_codigo()
+    {
+        (await _client.PutAsJsonAsync("/api/settings/internet", new { smogon = true, pokepaste = false })).EnsureSuccessStatusCode();
+        var regulation = await _client.GetFromJsonAsync<JsonElement>("/api/vgc/regulation");
+        var format = regulation.GetProperty("smogonFormat").GetString()!;
+        var month = SmogonStats.LatestMonth(DateTimeOffset.UtcNow);
+        _net.Routes[SmogonStats.Url(format, month).ToString()] =
+            (HttpStatusCode.OK, File.ReadAllBytes(Path.Combine(AppContext.BaseDirectory, "Fixtures", "chaos-sample.json")));
+        File.WriteAllText(Path.Combine(_dir, "vgc"), ""); // um arquivo no lugar da pasta
+
+        var failed = await _client.PostAsync("/api/vgc/usage/refresh", null);
+        Assert.Equal(HttpStatusCode.BadGateway, failed.StatusCode);
+        var body = await failed.Content.ReadFromJsonAsync<JsonElement>();
+        Assert.Equal("network_error", body.GetProperty("error").GetString());
+        Assert.Equal("write_failed", body.GetProperty("reason").GetString());
+        // O semáforo foi liberado: o próximo pedido não dá busy.
+        Assert.Equal(HttpStatusCode.BadGateway, (await _client.PostAsync("/api/vgc/usage/refresh", null)).StatusCode);
     }
 
     [Fact]

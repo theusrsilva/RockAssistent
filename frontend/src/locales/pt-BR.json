@@ -2660,7 +2660,8 @@
         "busy": "Já está baixando. Espere terminar.",
         "local_only": "Só dá para baixar pela janela do PC.",
         "network": "Não deu para baixar. Confira a internet e tente de novo.",
-        "networkCode": "Não deu para baixar ({{code}}). Confira a internet e tente de novo."
+        "networkCode": "Não deu para baixar ({{code}}). Confira a internet e tente de novo.",
+        "write_failed": "Baixou, mas não deu para gravar na pasta de dados. Confira o espaço livre e as permissões da pasta."
       }
     },
     "paste": {

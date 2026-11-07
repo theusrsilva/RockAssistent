@@ -238,5 +238,7 @@ const INTERNET_ERRORS = ['internet_disabled', 'paste_host_not_allowed', 'paste_n
 export function internetErrorKey(error: unknown): string {
   if (!(error instanceof ApiError)) return 'network'
   if (error.code && INTERNET_ERRORS.includes(error.code)) return error.code
+  // 502 network_error com reason write_failed: baixou, mas não deu para gravar na pasta de dados.
+  if (error.code === 'network_error' && error.reason === 'write_failed') return 'write_failed'
   return 'network'
 }

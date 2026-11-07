@@ -68,7 +68,14 @@ public static class SmogonStats
         if (!IsValidFormat(format))
             throw new InternetException("format_invalid");
         month = new DateOnly(month.Year, month.Month, 1);
-        Directory.CreateDirectory(dir);
+        try
+        {
+            Directory.CreateDirectory(dir);
+        }
+        catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+        {
+            throw new InternetException("write_failed");
+        }
         for (var attempt = 0; ; attempt++)
         {
             using var response = await InternetHttp.GetAsync(http, Url(format, month), ct);
@@ -85,7 +92,7 @@ public static class SmogonStats
             try
             {
                 await using (var file = File.Create(part))
-                    await InternetHttp.CopyLimitedAsync(response, file, MaxBytes, ct);
+                    await InternetHttp.CopyLimitedAsync(response, file, MaxBytes, http.Timeout, ct);
                 // Só troca o arquivo se for mesmo um chaos válido.
                 await using (var check = File.OpenRead(part))
                     Parse(check);
@@ -95,9 +102,14 @@ public static class SmogonStats
             {
                 throw new InternetException("invalid_file");
             }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+            {
+                // Pasta de dados cheia, sem permissão ou arquivo preso: não é erro de rede.
+                throw new InternetException("write_failed");
+            }
             finally
             {
-                try { File.Delete(part); } catch (IOException) { }
+                try { File.Delete(part); } catch (Exception e) when (e is IOException or UnauthorizedAccessException) { }
             }
             return new SmogonDownload(target, month);
         }

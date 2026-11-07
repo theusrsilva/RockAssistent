@@ -108,6 +108,7 @@ describe('internet opcional', () => {
     expect(internetErrorKey(new ApiError(400, 'internet_disabled', []))).toBe('internet_disabled')
     expect(internetErrorKey(new ApiError(400, 'paste_host_not_allowed', []))).toBe('paste_host_not_allowed')
     expect(internetErrorKey(new ApiError(502, 'network_error', [], null, 'http_500'))).toBe('network')
+    expect(internetErrorKey(new ApiError(502, 'network_error', [], null, 'write_failed'))).toBe('write_failed')
     expect(internetErrorKey(new Error('x'))).toBe('network')
   })
 

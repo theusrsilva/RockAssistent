@@ -40,7 +40,7 @@ public static class PokePaste
         using var buffer = new MemoryStream();
         try
         {
-            await InternetHttp.CopyLimitedAsync(response, buffer, VgcPaste.MaxBytes, ct);
+            await InternetHttp.CopyLimitedAsync(response, buffer, VgcPaste.MaxBytes, http.Timeout, ct);
         }
         catch (InternetException e) when (e.Code == "too_big")
         {
