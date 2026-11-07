@@ -1,9 +1,361 @@
 {
   "games": [
     {
+      "key": "rb",
+      "title": "Red / Blue",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/rb/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/rb/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/rb/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/rb/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/rb/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/rb/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/rb/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/rb/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/rb/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "y",
+      "title": "Yellow",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/y/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/y/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/y/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/y/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/y/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/y/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/y/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/y/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/y/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "gs",
+      "title": "Gold / Silver",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/gs/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/gs/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/gs/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/gs/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/gs/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/gs/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/gs/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/gs/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/gs/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "title": "Crystal",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/c/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/c/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/c/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/c/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/c/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/c/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/c/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/c/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/c/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "rs",
+      "title": "Ruby / Sapphire",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/rs/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/rs/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/rs/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/rs/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/rs/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/rs/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/rs/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/rs/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/rs/legendaries.md"
+        }
+      ]
+    },
+    {
+      "key": "e",
+      "title": "Emerald",
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/e/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/e/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/e/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/e/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/e/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/e/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/e/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/e/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/e/legendaries.md"
+        }
+      ]
+    },
+    {
       "key": "frlg",
       "title": "FireRed / LeafGreen",
-      "sections": [{ "id": "overview", "title": "Overview", "file": "games/frlg/overview.md" }]
+      "sections": [
+        {
+          "id": "overview",
+          "title": "Overview",
+          "file": "games/frlg/overview.md"
+        },
+        {
+          "id": "walkthrough",
+          "title": "Walkthrough",
+          "file": "games/frlg/walkthrough.md"
+        },
+        {
+          "id": "bosses",
+          "title": "Bosses",
+          "file": "games/frlg/bosses.md"
+        },
+        {
+          "id": "tms",
+          "title": "TMs and HMs",
+          "file": "games/frlg/tms.md"
+        },
+        {
+          "id": "exclusives",
+          "title": "Exclusives",
+          "file": "games/frlg/exclusives.md"
+        },
+        {
+          "id": "trades",
+          "title": "Trades and gifts",
+          "file": "games/frlg/trades.md"
+        },
+        {
+          "id": "events",
+          "title": "Events",
+          "file": "games/frlg/events.md"
+        },
+        {
+          "id": "postgame",
+          "title": "Postgame",
+          "file": "games/frlg/postgame.md"
+        },
+        {
+          "id": "legendaries",
+          "title": "Legendaries",
+          "file": "games/frlg/legendaries.md"
+        }
+      ]
     }
   ],
   "mechanics": [
@@ -11,7 +363,13 @@
       "key": "types",
       "title": "Types",
       "description": "Strengths, weaknesses and immunities.",
-      "sections": [{ "id": "types", "title": "Types", "file": "mechanics/types.md" }]
+      "sections": [
+        {
+          "id": "types",
+          "title": "Types",
+          "file": "mechanics/types.md"
+        }
+      ]
     }
   ],
   "vgc": [
@@ -19,7 +377,13 @@
       "key": "intro",
       "title": "What is VGC",
       "description": "The official tournament format.",
-      "sections": [{ "id": "intro", "title": "What is VGC", "file": "vgc/intro.md" }]
+      "sections": [
+        {
+          "id": "intro",
+          "title": "What is VGC",
+          "file": "vgc/intro.md"
+        }
+      ]
     }
   ],
   "mythology": [
@@ -27,7 +391,13 @@
       "key": "kanto",
       "title": "Kanto",
       "description": "Mew, Mewtwo and the legendary birds.",
-      "sections": [{ "id": "kanto", "title": "Kanto", "file": "mythology/kanto.md" }]
+      "sections": [
+        {
+          "id": "kanto",
+          "title": "Kanto",
+          "file": "mythology/kanto.md"
+        }
+      ]
     }
   ]
 }
