@@ -55,8 +55,70 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Fuecoco; com Sprigatito: Quaxly 5; com Quaxly: Fuecoco 5; a Nemona fica com o inicial fraco ao seu",
-      "versions": null
+      "notes": "a Nemona fica com o inicial fraco ao seu",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 912,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "pound",
+                "growl",
+                "water-gun"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 906,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "scratch",
+                "tail-whip",
+                "leafage"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 909,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "leer",
+                "ember"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "arven-1",
@@ -123,8 +185,106 @@
       ],
       "level_cap": 9,
       "verified": true,
-      "notes": "time para quem escolheu Fuecoco; com Sprigatito: Quaxly 8, Pawmi 9; com Quaxly: Fuecoco 8, Pawmi 9; Pawmi terastaliza",
-      "versions": null
+      "notes": "Pawmi terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 912,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "pound",
+                "growl",
+                "water-gun",
+                "work-up"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "thunder-shock"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": "electric"
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 906,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "scratch",
+                "tail-whip",
+                "leafage",
+                "bite"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "thunder-shock"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": "electric"
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 909,
+              "form": 0,
+              "level": 8,
+              "moves": [
+                "tackle",
+                "leer",
+                "ember",
+                "round"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 9,
+              "moves": [
+                "thunder-shock"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": "electric"
+            }
+          ],
+          "level_cap": 9,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "katy",
@@ -383,8 +543,157 @@
       ],
       "level_cap": 22,
       "verified": true,
-      "notes": "a Nemona fica com o inicial fraco ao seu; com Sprigatito: Rockruff 21, Pawmi 21, Quaxwell 22; com Quaxly: Rockruff 21, Pawmi 21, Crocalor 22; Floragato terastaliza",
-      "versions": null
+      "notes": "a Nemona fica com o inicial fraco ao seu; o inicial dela terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "double-team",
+                "rock-throw",
+                "howl",
+                "bite"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "charge",
+                "nuzzle",
+                "dig",
+                "bite"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 913,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "double-hit",
+                "water-pulse",
+                "wing-attack",
+                "work-up"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "water"
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "double-team",
+                "rock-throw",
+                "howl",
+                "bite"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "charge",
+                "nuzzle",
+                "dig",
+                "bite"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 907,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "quick-attack",
+                "magical-leaf",
+                "hone-claws",
+                "bite"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "grass"
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 744,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "double-team",
+                "rock-throw",
+                "howl",
+                "bite"
+              ],
+              "ability": "vital-spirit",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 921,
+              "form": 0,
+              "level": 21,
+              "moves": [
+                "charge",
+                "nuzzle",
+                "dig",
+                "bite"
+              ],
+              "ability": "static",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 910,
+              "form": 0,
+              "level": 22,
+              "moves": [
+                "incinerate",
+                "yawn",
+                "bite",
+                "round"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "fire"
+            }
+          ],
+          "level_cap": 22,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "iono",
@@ -761,8 +1070,190 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "a Nemona fica com o inicial fraco ao seu; com Sprigatito: Lycanroc 36, Goomy 36, Pawmo 36, Quaquaval 37; com Quaxly: Lycanroc 36, Goomy 36, Pawmo 36, Skeledirge 37; Meowscarada terastaliza",
-      "versions": null
+      "notes": "a Nemona fica com o inicial fraco ao seu; o inicial dela terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "quick-attack",
+                "accelerock",
+                "bite"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 704,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 922,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 914,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "air-slash",
+                "aqua-step",
+                "aqua-jet"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "water"
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "quick-attack",
+                "accelerock",
+                "bite"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 704,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 922,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 908,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "slash",
+                "flower-trick",
+                "quick-attack"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "grass"
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "quick-attack",
+                "accelerock",
+                "bite"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 704,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 922,
+              "form": 0,
+              "level": 36,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 911,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "snarl",
+                "torch-song",
+                "lick"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "fire"
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "ryme",
@@ -959,8 +1450,193 @@
       ],
       "level_cap": 43,
       "verified": true,
-      "notes": "a Nemona fica com o inicial fraco ao seu; com Sprigatito: Lycanroc 42, Sliggoo 42, Pawmot 42, Quaquaval 43; com Quaxly: Lycanroc 42, Sliggoo 42, Pawmot 42, Skeledirge 43; Meowscarada terastaliza",
-      "versions": null
+      "notes": "a Nemona fica com o inicial fraco ao seu; o inicial dela terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "accelerock",
+                "crunch",
+                "rock-slide",
+                "sand-attack"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 705,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 914,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "air-slash",
+                "aqua-step",
+                "aqua-jet"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "water"
+            }
+          ],
+          "level_cap": 43,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "accelerock",
+                "crunch",
+                "rock-slide",
+                "sand-attack"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 705,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 908,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "slash",
+                "flower-trick",
+                "quick-attack"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "grass"
+            }
+          ],
+          "level_cap": 43,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "accelerock",
+                "crunch",
+                "rock-slide",
+                "sand-attack"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 705,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "dragon-pulse",
+                "water-pulse",
+                "flail"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 42,
+              "moves": [
+                "spark",
+                "arm-thrust",
+                "thunder-wave",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 911,
+              "form": 0,
+              "level": 43,
+              "moves": [
+                "snarl",
+                "torch-song",
+                "lick"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "fire"
+            }
+          ],
+          "level_cap": 43,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "tulip",
@@ -1488,8 +2164,283 @@
       ],
       "level_cap": 61,
       "verified": true,
-      "notes": "o Clavell (Clive) fica com o inicial forte contra o seu; time para quem escolheu Fuecoco; com Sprigatito: Oranguru 60, Abomasnow 60, Polteageist 60, Amoonguss 60, Gyarados 60, Skeledirge 61; com Quaxly: Oranguru 60, Abomasnow 60, Polteageist 60, Gyarados 60, Houndoom 60, Meowscarada 61; Quaquaval terastaliza",
-      "versions": null
+      "notes": "o Clavell (Clive) fica com o inicial que nem você nem a Nemona escolheram; o inicial dele terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 765,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "yawn",
+                "dream-eater",
+                "reflect",
+                "foul-play"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 460,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "aurora-veil",
+                "blizzard",
+                "wood-hammer",
+                "ice-shard"
+              ],
+              "ability": "snow-warning",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 855,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "shell-smash",
+                "shadow-ball",
+                "sucker-punch",
+                "will-o-wisp"
+              ],
+              "ability": "weak-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 591,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "spore",
+                "toxic",
+                "giga-drain",
+                "hex"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "aqua-tail",
+                "crunch",
+                "stone-edge",
+                "earthquake"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 911,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "shadow-ball",
+                "torch-song",
+                "earth-power",
+                "snarl"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "fire"
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 765,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "yawn",
+                "dream-eater",
+                "reflect",
+                "foul-play"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 460,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "aurora-veil",
+                "blizzard",
+                "wood-hammer",
+                "ice-shard"
+              ],
+              "ability": "snow-warning",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 855,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "shell-smash",
+                "shadow-ball",
+                "sucker-punch",
+                "will-o-wisp"
+              ],
+              "ability": "weak-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 229,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "dark-pulse",
+                "fire-blast",
+                "sludge-bomb",
+                "thunder-fang"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 591,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "spore",
+                "toxic",
+                "giga-drain",
+                "hex"
+              ],
+              "ability": "effect-spore",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 914,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "brick-break",
+                "aqua-step",
+                "aerial-ace",
+                "ice-spinner"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "water"
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 765,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "yawn",
+                "dream-eater",
+                "reflect",
+                "foul-play"
+              ],
+              "ability": "inner-focus",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 460,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "aurora-veil",
+                "blizzard",
+                "wood-hammer",
+                "ice-shard"
+              ],
+              "ability": "snow-warning",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 855,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "shell-smash",
+                "shadow-ball",
+                "sucker-punch",
+                "will-o-wisp"
+              ],
+              "ability": "weak-armor",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 130,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "aqua-tail",
+                "crunch",
+                "stone-edge",
+                "earthquake"
+              ],
+              "ability": "intimidate",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 229,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "dark-pulse",
+                "fire-blast",
+                "sludge-bomb",
+                "thunder-fang"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 908,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "shadow-claw",
+                "flower-trick",
+                "thunder-punch",
+                "play-rough"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "grass"
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "penny-1",
@@ -2124,8 +3075,283 @@
       ],
       "level_cap": 66,
       "verified": true,
-      "notes": "a Nemona fica com o inicial fraco ao seu; luta final do Victory Road, depois de virar campeão; com Sprigatito: Lycanroc 65, Goodra 65, Dudunsparce 65, Orthworm 65, Pawmot 65, Quaquaval 66; com Quaxly: Lycanroc 65, Goodra 65, Dudunsparce 65, Orthworm 65, Pawmot 65, Skeledirge 66; Meowscarada terastaliza",
-      "versions": null
+      "notes": "a Nemona fica com o inicial fraco ao seu; luta final do Victory Road, depois de virar campeão; o inicial dela terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 982,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "hyper-drill",
+                "drill-run",
+                "dragon-rush",
+                "coil"
+              ],
+              "ability": "serene-grace",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 968,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "iron-tail",
+                "body-press",
+                "earthquake",
+                "rock-blast"
+              ],
+              "ability": "earth-eater",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 914,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "aqua-step",
+                "brick-break",
+                "aerial-ace",
+                "ice-spinner"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "water"
+            }
+          ],
+          "level_cap": 66,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 982,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "hyper-drill",
+                "drill-run",
+                "dragon-rush",
+                "coil"
+              ],
+              "ability": "serene-grace",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 968,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "iron-tail",
+                "body-press",
+                "earthquake",
+                "rock-blast"
+              ],
+              "ability": "earth-eater",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 908,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "flower-trick",
+                "thunder-punch",
+                "shadow-claw",
+                "play-rough"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "grass"
+            }
+          ],
+          "level_cap": 66,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 982,
+              "form": 1,
+              "level": 65,
+              "moves": [
+                "hyper-drill",
+                "drill-run",
+                "dragon-rush",
+                "coil"
+              ],
+              "ability": "serene-grace",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 968,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "iron-tail",
+                "body-press",
+                "earthquake",
+                "rock-blast"
+              ],
+              "ability": "earth-eater",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 65,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 911,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "torch-song",
+                "earth-power",
+                "shadow-ball",
+                "snarl"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "fire"
+            }
+          ],
+          "level_cap": 66,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "ai-sada",
@@ -4062,8 +5288,283 @@
       ],
       "level_cap": 87,
       "verified": true,
-      "notes": "Mochi Mayhem (epílogo do DLC): Nemona sob o efeito dos Mochi; time para quem escolheu Fuecoco; com Sprigatito: Lycanroc 86, Kommo-o 86, Goodra 86, Ribombee 86, Pawmot 86, Quaquaval 87; com Quaxly: Lycanroc 86, Kommo-o 86, Goodra 86, Dusknoir 86, Pawmot 86, Skeledirge 87; Meowscarada terastaliza",
-      "versions": null
+      "notes": "Mochi Mayhem (epílogo do DLC): Nemona sob o efeito dos Mochi; o inicial dela terastaliza",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "sprigatito",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 784,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "clangorous-soul",
+                "drain-punch",
+                "thunder-punch",
+                "earthquake"
+              ],
+              "ability": "soundproof",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 743,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "bug-buzz",
+                "moonblast",
+                "energy-ball",
+                "psychic"
+              ],
+              "ability": "shield-dust",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 914,
+              "form": 0,
+              "level": 87,
+              "moves": [
+                "aqua-step",
+                "brick-break",
+                "aerial-ace",
+                "ice-spinner"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": "fighting"
+            }
+          ],
+          "level_cap": 87,
+          "verified": true
+        },
+        {
+          "starter": "fuecoco",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 784,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "clangorous-soul",
+                "drain-punch",
+                "thunder-punch",
+                "earthquake"
+              ],
+              "ability": "soundproof",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 350,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "draining-kiss",
+                "surf",
+                "ice-beam",
+                "mud-shot"
+              ],
+              "ability": "competitive",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 908,
+              "form": 0,
+              "level": 87,
+              "moves": [
+                "flower-trick",
+                "thunder-punch",
+                "shadow-claw",
+                "play-rough"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": "dark"
+            }
+          ],
+          "level_cap": 87,
+          "verified": true
+        },
+        {
+          "starter": "quaxly",
+          "party": [
+            {
+              "species": 745,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "accelerock",
+                "drill-run",
+                "stone-edge",
+                "stealth-rock"
+              ],
+              "ability": "sand-rush",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 784,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "clangorous-soul",
+                "drain-punch",
+                "thunder-punch",
+                "earthquake"
+              ],
+              "ability": "soundproof",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "dragon-pulse",
+                "muddy-water",
+                "ice-beam",
+                "sludge-bomb"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 477,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "earthquake",
+                "thunder-punch",
+                "shadow-sneak",
+                "ice-punch"
+              ],
+              "ability": "pressure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 923,
+              "form": 0,
+              "level": 86,
+              "moves": [
+                "double-shock",
+                "close-combat",
+                "ice-punch",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 911,
+              "form": 0,
+              "level": 87,
+              "moves": [
+                "torch-song",
+                "earth-power",
+                "shadow-ball",
+                "snarl"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": "ghost"
+            }
+          ],
+          "level_cap": 87,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "katy-rematch",

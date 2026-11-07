@@ -2072,8 +2072,229 @@
       ],
       "level_cap": 62,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 60, Mr. Mime 61, Staraptor 61, Prinplup 62, Pikachu 62; com Oshawott: Clefairy 60, Mr. Mime 61, Staraptor 61, Monferno 62, Pikachu 62; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo (pedido 102, Daybreak)",
-      "versions": null
+      "notes": "rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo (pedido 102, Daybreak)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "psychic",
+                "moonblast",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "drain-punch",
+                "zen-headbutt",
+                "hypnosis"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 394,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "baby-doll-eyes",
+                "liquidation",
+                "ice-beam"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 62,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "psychic",
+                "moonblast",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "drain-punch",
+                "zen-headbutt",
+                "hypnosis"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 388,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "bulldoze",
+                "leaf-blade",
+                "stealth-rock"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 62,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 60,
+              "moves": [
+                "psychic",
+                "moonblast",
+                "shadow-ball"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "drain-punch",
+                "zen-headbutt",
+                "hypnosis"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 391,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "flame-wheel",
+                "nasty-plot",
+                "thunder-punch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 62,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "alpha-onix",
@@ -2445,8 +2666,241 @@
       ],
       "level_cap": 63,
       "verified": true,
-      "notes": "time para quem escolheu Cyndaquil; com Rowlet: Clefairy 61, Mr. Mime 62, Staraptor 62, Empoleon 63, Pikachu 63; com Oshawott: Clefairy 61, Mr. Mime 62, Staraptor 62, Infernape 63, Pikachu 63; rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo: batalha comum depois do Daybreak",
-      "versions": null
+      "notes": "rival: Akari se você joga com o menino; com a menina, o rival é o Rei (mesmo time); pós-jogo: batalha comum depois do Daybreak",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "rowlet",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "flamethrower",
+                "moonblast",
+                "shadow-ball",
+                "calm-mind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "energy-ball",
+                "psychic",
+                "hypnosis",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat",
+                "roost"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 395,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "flash-cannon",
+                "hydro-pump",
+                "ice-beam",
+                "baby-doll-eyes"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "cyndaquil",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "flamethrower",
+                "moonblast",
+                "shadow-ball",
+                "calm-mind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "energy-ball",
+                "psychic",
+                "hypnosis",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat",
+                "roost"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 389,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "headlong-rush",
+                "leaf-blade",
+                "iron-head",
+                "stone-edge"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        },
+        {
+          "starter": "oshawott",
+          "party": [
+            {
+              "species": 35,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "flamethrower",
+                "moonblast",
+                "shadow-ball",
+                "calm-mind"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 122,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "energy-ball",
+                "psychic",
+                "hypnosis",
+                "thunderbolt"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 398,
+              "form": 0,
+              "level": 62,
+              "moves": [
+                "quick-attack",
+                "brave-bird",
+                "close-combat",
+                "roost"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 392,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "raging-fury",
+                "bulk-up",
+                "close-combat",
+                "thunder-punch"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 25,
+              "form": 0,
+              "level": 63,
+              "moves": [
+                "quick-attack",
+                "iron-tail",
+                "volt-tackle",
+                "play-rough"
+              ],
+              "ability": null,
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 63,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "tenacity-galaxy-zisu",
