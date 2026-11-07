@@ -40,7 +40,9 @@
       "order": 4,
       "map_node": "sandgem-town",
       "poke_api_location_id": 163,
-      "bosses_before": []
+      "bosses_before": [
+        "barry-route-201"
+      ]
     },
     {
       "id": "route-202",
@@ -640,32 +642,35 @@
       ]
     },
     {
+      "id": "lake-valor",
+      "name": "Lake Valor",
+      "kind": "route",
+      "order": 69,
+      "map_node": "lake-valor",
+      "poke_api_location_id": 27,
+      "bosses_before": [
+        "byron"
+      ]
+    },
+    {
       "id": "route-216",
       "name": "Route 216",
       "kind": "route",
-      "order": 69,
+      "order": 70,
       "map_node": "route-216",
       "poke_api_location_id": 47,
       "bosses_before": [
-        "byron"
+        "saturn-1",
+        "mars-2"
       ]
     },
     {
       "id": "route-217",
       "name": "Route 217",
       "kind": "route",
-      "order": 70,
+      "order": 71,
       "map_node": "route-217",
       "poke_api_location_id": 48,
-      "bosses_before": []
-    },
-    {
-      "id": "lake-acuity",
-      "name": "Lake Acuity",
-      "kind": "route",
-      "order": 71,
-      "map_node": "acuity-lakefront",
-      "poke_api_location_id": 28,
       "bosses_before": []
     },
     {
@@ -678,12 +683,12 @@
       "bosses_before": []
     },
     {
-      "id": "lake-valor",
-      "name": "Lake Valor",
+      "id": "lake-acuity",
+      "name": "Lake Acuity",
       "kind": "route",
       "order": 73,
-      "map_node": "lake-valor",
-      "poke_api_location_id": 27,
+      "map_node": "acuity-lakefront",
+      "poke_api_location_id": 28,
       "bosses_before": [
         "candice"
       ]
@@ -695,10 +700,7 @@
       "order": 74,
       "map_node": "veilstone-city",
       "poke_api_location_id": 181,
-      "bosses_before": [
-        "saturn-1",
-        "mars-2"
-      ]
+      "bosses_before": []
     },
     {
       "id": "spear-pillar",

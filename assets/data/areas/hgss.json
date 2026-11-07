@@ -251,6 +251,7 @@
       "poke_api_location_id": 118,
       "bosses_before": [
         "rival-burned-tower",
+        "rocket-grunt-dance-theater",
         "morty"
       ]
     },
@@ -786,7 +787,9 @@
       "order": 81,
       "map_node": "route-25",
       "poke_api_location_id": 104,
-      "bosses_before": []
+      "bosses_before": [
+        "rocket-grunt-route-24"
+      ]
     },
     {
       "id": "underground-path",

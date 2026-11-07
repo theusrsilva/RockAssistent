@@ -10,12 +10,36 @@
   ],
   "items": [
     {
+      "id": "barry-route-201",
+      "kind": "rival",
+      "name": "Barry",
+      "title": "Rival",
+      "location": "Route 201 (Lake Verity)",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 393,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": false,
+      "notes": "golpes padrão do nível; time para quem escolheu Chimchar; com Piplup: Turtwig 5; com Turtwig: Chimchar 5",
+      "versions": null
+    },
+    {
       "id": "barry-1",
       "kind": "rival",
       "name": "Barry",
       "title": "Rival",
       "location": "Route 203",
-      "order": 1,
+      "order": 2,
       "badge": null,
       "party": [
         {
@@ -55,7 +79,7 @@
       "name": "Roark",
       "title": "Gym Leader",
       "location": "Oreburgh Gym",
-      "order": 2,
+      "order": 3,
       "badge": "Coal Badge",
       "party": [
         {
@@ -109,7 +133,7 @@
       "name": "Mars",
       "title": "Team Galactic",
       "location": "Valley Windworks",
-      "order": 3,
+      "order": 4,
       "badge": null,
       "party": [
         {
@@ -152,7 +176,7 @@
       "name": "Gardenia",
       "title": "Gym Leader",
       "location": "Eterna Gym",
-      "order": 4,
+      "order": 5,
       "badge": "Forest Badge",
       "party": [
         {
@@ -209,7 +233,7 @@
       "name": "Jupiter",
       "title": "Team Galactic",
       "location": "Team Galactic Eterna Building",
-      "order": 5,
+      "order": 6,
       "badge": null,
       "party": [
         {
@@ -252,7 +276,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Hearthome City",
-      "order": 6,
+      "order": 7,
       "badge": null,
       "party": [
         {
@@ -323,7 +347,7 @@
       "name": "Maylene",
       "title": "Gym Leader",
       "location": "Veilstone Gym",
-      "order": 7,
+      "order": 8,
       "badge": "Cobble Badge",
       "party": [
         {
@@ -380,7 +404,7 @@
       "name": "Crasher Wake",
       "title": "Gym Leader",
       "location": "Pastoria Gym",
-      "order": 8,
+      "order": 9,
       "badge": "Fen Badge",
       "party": [
         {
@@ -437,7 +461,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Pastoria City (Great Marsh)",
-      "order": 9,
+      "order": 10,
       "badge": null,
       "party": [
         {
@@ -508,7 +532,7 @@
       "name": "Fantina",
       "title": "Gym Leader",
       "location": "Hearthome Gym",
-      "order": 10,
+      "order": 11,
       "badge": "Relic Badge",
       "party": [
         {
@@ -565,7 +589,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Canalave City",
-      "order": 11,
+      "order": 12,
       "badge": null,
       "party": [
         {
@@ -650,7 +674,7 @@
       "name": "Byron",
       "title": "Gym Leader",
       "location": "Canalave Gym",
-      "order": 12,
+      "order": 13,
       "badge": "Mine Badge",
       "party": [
         {
@@ -697,77 +721,6 @@
         }
       ],
       "level_cap": 39,
-      "verified": true,
-      "notes": null,
-      "versions": null
-    },
-    {
-      "id": "candice",
-      "kind": "gym",
-      "name": "Candice",
-      "title": "Gym Leader",
-      "location": "Snowpoint Gym",
-      "order": 13,
-      "badge": "Icicle Badge",
-      "party": [
-        {
-          "species": 459,
-          "form": 0,
-          "level": 38,
-          "moves": [
-            "mist",
-            "razor-leaf",
-            "water-pulse",
-            "avalanche"
-          ],
-          "ability": "snow-warning",
-          "item": "icy-rock",
-          "tera_type": null
-        },
-        {
-          "species": 215,
-          "form": 0,
-          "level": 38,
-          "moves": [
-            "metal-claw",
-            "hone-claws",
-            "dig",
-            "avalanche"
-          ],
-          "ability": "pickpocket",
-          "item": "chople-berry",
-          "tera_type": null
-        },
-        {
-          "species": 308,
-          "form": 0,
-          "level": 40,
-          "moves": [
-            "ice-punch",
-            "bulk-up",
-            "brick-break",
-            "rock-slide"
-          ],
-          "ability": "pure-power",
-          "item": "expert-belt",
-          "tera_type": null
-        },
-        {
-          "species": 460,
-          "form": 0,
-          "level": 42,
-          "moves": [
-            "aurora-veil",
-            "giga-drain",
-            "earthquake",
-            "blizzard"
-          ],
-          "ability": "snow-warning",
-          "item": "sitrus-berry",
-          "tera_type": null
-        }
-      ],
-      "level_cap": 42,
       "verified": true,
       "notes": null,
       "versions": null
@@ -887,12 +840,83 @@
       "versions": null
     },
     {
+      "id": "candice",
+      "kind": "gym",
+      "name": "Candice",
+      "title": "Gym Leader",
+      "location": "Snowpoint Gym",
+      "order": 16,
+      "badge": "Icicle Badge",
+      "party": [
+        {
+          "species": 459,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "mist",
+            "razor-leaf",
+            "water-pulse",
+            "avalanche"
+          ],
+          "ability": "snow-warning",
+          "item": "icy-rock",
+          "tera_type": null
+        },
+        {
+          "species": 215,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "metal-claw",
+            "hone-claws",
+            "dig",
+            "avalanche"
+          ],
+          "ability": "pickpocket",
+          "item": "chople-berry",
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "ice-punch",
+            "bulk-up",
+            "brick-break",
+            "rock-slide"
+          ],
+          "ability": "pure-power",
+          "item": "expert-belt",
+          "tera_type": null
+        },
+        {
+          "species": 460,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "aurora-veil",
+            "giga-drain",
+            "earthquake",
+            "blizzard"
+          ],
+          "ability": "snow-warning",
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
       "id": "cyrus-1",
       "kind": "evil",
       "name": "Cyrus",
       "title": "Team Galactic",
       "location": "Team Galactic HQ, Veilstone City",
-      "order": 16,
+      "order": 17,
       "badge": null,
       "party": [
         {
@@ -949,7 +973,7 @@
       "name": "Saturn",
       "title": "Team Galactic",
       "location": "Team Galactic HQ, Veilstone City",
-      "order": 17,
+      "order": 18,
       "badge": null,
       "party": [
         {
@@ -1006,7 +1030,7 @@
       "name": "Mars",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 18,
+      "order": 19,
       "badge": null,
       "party": [
         {
@@ -1063,7 +1087,7 @@
       "name": "Jupiter",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 19,
+      "order": 20,
       "badge": null,
       "party": [
         {
@@ -1120,7 +1144,7 @@
       "name": "Cyrus",
       "title": "Team Galactic",
       "location": "Spear Pillar",
-      "order": 20,
+      "order": 21,
       "badge": null,
       "party": [
         {
@@ -1191,7 +1215,7 @@
       "name": "Volkner",
       "title": "Gym Leader",
       "location": "Sunyshore Gym",
-      "order": 21,
+      "order": 22,
       "badge": "Beacon Badge",
       "party": [
         {
@@ -1262,7 +1286,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Pokémon League (entrada)",
-      "order": 22,
+      "order": 23,
       "badge": null,
       "party": [
         {
@@ -1361,7 +1385,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 23,
+      "order": 24,
       "badge": null,
       "party": [
         {
@@ -1446,7 +1470,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 24,
+      "order": 25,
       "badge": null,
       "party": [
         {
@@ -1531,7 +1555,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 25,
+      "order": 26,
       "badge": null,
       "party": [
         {
@@ -1616,7 +1640,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 26,
+      "order": 27,
       "badge": null,
       "party": [
         {
@@ -1701,7 +1725,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 27,
+      "order": 28,
       "badge": null,
       "party": [
         {
@@ -1800,7 +1824,7 @@
       "name": "Morimoto",
       "title": "Game Freak",
       "location": "Hotel Grand Lake",
-      "order": 28,
+      "order": 29,
       "badge": null,
       "party": [
         {
@@ -1899,7 +1923,7 @@
       "name": "Roark",
       "title": "Gym Leader",
       "location": "Oreburgh Gym",
-      "order": 29,
+      "order": 30,
       "badge": "Coal Badge",
       "party": [
         {
@@ -1995,7 +2019,7 @@
       "name": "Gardenia",
       "title": "Gym Leader",
       "location": "Eterna Gym",
-      "order": 30,
+      "order": 31,
       "badge": "Forest Badge",
       "party": [
         {
@@ -2091,7 +2115,7 @@
       "name": "Maylene",
       "title": "Gym Leader",
       "location": "Veilstone Gym",
-      "order": 31,
+      "order": 32,
       "badge": "Cobble Badge",
       "party": [
         {
@@ -2190,7 +2214,7 @@
       "name": "Crasher Wake",
       "title": "Gym Leader",
       "location": "Pastoria Gym",
-      "order": 32,
+      "order": 33,
       "badge": "Fen Badge",
       "party": [
         {
@@ -2289,7 +2313,7 @@
       "name": "Fantina",
       "title": "Gym Leader",
       "location": "Hearthome Gym",
-      "order": 33,
+      "order": 34,
       "badge": "Relic Badge",
       "party": [
         {
@@ -2388,7 +2412,7 @@
       "name": "Byron",
       "title": "Gym Leader",
       "location": "Canalave Gym",
-      "order": 34,
+      "order": 35,
       "badge": "Mine Badge",
       "party": [
         {
@@ -2484,7 +2508,7 @@
       "name": "Candice",
       "title": "Gym Leader",
       "location": "Snowpoint Gym",
-      "order": 35,
+      "order": 36,
       "badge": "Icicle Badge",
       "party": [
         {
@@ -2583,7 +2607,7 @@
       "name": "Volkner",
       "title": "Gym Leader",
       "location": "Sunyshore Gym",
-      "order": 36,
+      "order": 37,
       "badge": "Beacon Badge",
       "party": [
         {
@@ -2682,7 +2706,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 37,
+      "order": 38,
       "badge": null,
       "party": [
         {
@@ -2767,7 +2791,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 38,
+      "order": 39,
       "badge": null,
       "party": [
         {
@@ -2852,7 +2876,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 39,
+      "order": 40,
       "badge": null,
       "party": [
         {
@@ -2937,7 +2961,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 40,
+      "order": 41,
       "badge": null,
       "party": [
         {
@@ -3022,7 +3046,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 41,
+      "order": 42,
       "badge": null,
       "party": [
         {
@@ -3121,7 +3145,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Fight Area",
-      "order": 42,
+      "order": 43,
       "badge": null,
       "party": [
         {
@@ -3220,7 +3244,7 @@
       "name": "Dawn",
       "title": "Rival",
       "location": "Sandgem Town",
-      "order": 43,
+      "order": 44,
       "badge": null,
       "party": [
         {
@@ -3319,7 +3343,7 @@
       "name": "Aaron",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 44,
+      "order": 45,
       "badge": null,
       "party": [
         {
@@ -3418,7 +3442,7 @@
       "name": "Bertha",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 45,
+      "order": 46,
       "badge": null,
       "party": [
         {
@@ -3517,7 +3541,7 @@
       "name": "Flint",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 46,
+      "order": 47,
       "badge": null,
       "party": [
         {
@@ -3616,7 +3640,7 @@
       "name": "Lucian",
       "title": "Elite Four",
       "location": "Pokémon League",
-      "order": 47,
+      "order": 48,
       "badge": null,
       "party": [
         {
@@ -3715,7 +3739,7 @@
       "name": "Cynthia",
       "title": "Champion",
       "location": "Pokémon League",
-      "order": 48,
+      "order": 49,
       "badge": null,
       "party": [
         {
@@ -3814,7 +3838,7 @@
       "name": "Dawn",
       "title": "Rival",
       "location": "Sandgem Town",
-      "order": 49,
+      "order": 50,
       "badge": null,
       "party": [
         {
@@ -3913,7 +3937,7 @@
       "name": "Barry",
       "title": "Rival",
       "location": "Fight Area",
-      "order": 50,
+      "order": 51,
       "badge": null,
       "party": [
         {

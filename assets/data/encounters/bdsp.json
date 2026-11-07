@@ -1931,8 +1931,7 @@
       "chance": "fixed",
       "conditions": null,
       "versions": [
-        "brilliant-diamond",
-        "shining-pearl"
+        "brilliant-diamond"
       ],
       "alpha": false,
       "verified": false
@@ -1947,7 +1946,6 @@
       "chance": "fixed",
       "conditions": null,
       "versions": [
-        "brilliant-diamond",
         "shining-pearl"
       ],
       "alpha": false,

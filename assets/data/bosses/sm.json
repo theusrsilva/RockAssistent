@@ -1689,7 +1689,7 @@
       "kind": "gym",
       "name": "Hapu",
       "title": "Kahuna",
-      "location": "Ancient Poni Path",
+      "location": "Vast Poni Canyon",
       "order": 36,
       "badge": "Groundium Z",
       "party": [
@@ -2805,7 +2805,7 @@
       "kind": "other",
       "name": "Dexio",
       "title": "Pokémon Trainer",
-      "location": "Ancient Poni Path",
+      "location": "Poni Grove",
       "order": 50,
       "badge": null,
       "party": [

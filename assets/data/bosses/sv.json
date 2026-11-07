@@ -2680,14 +2680,14 @@
       "kind": "other",
       "name": "Okidogi",
       "title": "Loyal Three",
-      "location": "Kitakami",
+      "location": "Paradise Barrens",
       "order": 44,
       "badge": null,
       "party": [
         {
           "species": 1014,
           "form": 0,
-          "level": 35,
+          "level": 70,
           "moves": [
             "bite",
             "poison-fang",
@@ -2699,8 +2699,8 @@
           "tera_type": null
         }
       ],
-      "level_cap": 35,
-      "verified": true,
+      "level_cap": 70,
+      "verified": false,
       "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
       "versions": null
     },
@@ -2709,14 +2709,14 @@
       "kind": "other",
       "name": "Munkidori",
       "title": "Loyal Three",
-      "location": "Kitakami",
+      "location": "Wisteria Pond (Wistful Fields)",
       "order": 45,
       "badge": null,
       "party": [
         {
           "species": 1015,
           "form": 0,
-          "level": 35,
+          "level": 70,
           "moves": [
             "bite",
             "clear-smog",
@@ -2728,8 +2728,8 @@
           "tera_type": null
         }
       ],
-      "level_cap": 35,
-      "verified": true,
+      "level_cap": 70,
+      "verified": false,
       "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
       "versions": null
     },
@@ -2738,14 +2738,14 @@
       "kind": "other",
       "name": "Fezandipiti",
       "title": "Loyal Three",
-      "location": "Kitakami",
+      "location": "Oni Mountain",
       "order": 46,
       "badge": null,
       "party": [
         {
           "species": 1016,
           "form": 0,
-          "level": 35,
+          "level": 70,
           "moves": [
             "quick-attack",
             "wing-attack",
@@ -2757,8 +2757,8 @@
           "tera_type": null
         }
       ],
-      "level_cap": 35,
-      "verified": true,
+      "level_cap": 70,
+      "verified": false,
       "notes": "The Teal Mask; um dos Loyal Three; dupla com a Carmine do seu lado",
       "versions": null
     },

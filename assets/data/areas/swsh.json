@@ -110,7 +110,7 @@
     },
     {
       "id": "axews-eye",
-      "name": "Axews Eye",
+      "name": "Axew's Eye",
       "kind": "route",
       "order": 12,
       "map_node": "axews-eye",
@@ -128,7 +128,7 @@
     },
     {
       "id": "giants-seat",
-      "name": "Giants Seat",
+      "name": "Giant's Seat",
       "kind": "route",
       "order": 14,
       "map_node": "giants-seat",
@@ -182,7 +182,7 @@
     },
     {
       "id": "giants-mirror",
-      "name": "Giants Mirror",
+      "name": "Giant's Mirror",
       "kind": "route",
       "order": 20,
       "map_node": "giants-mirror",
@@ -200,7 +200,7 @@
     },
     {
       "id": "giants-cap",
-      "name": "Giants Cap",
+      "name": "Giant's Cap",
       "kind": "route",
       "order": 22,
       "map_node": "giants-cap",
@@ -209,7 +209,7 @@
     },
     {
       "id": "lake-of-outrage",
-      "name": "Lake Of Outrage",
+      "name": "Lake of Outrage",
       "kind": "route",
       "order": 23,
       "map_node": "lake-of-outrage",
@@ -544,7 +544,7 @@
     },
     {
       "id": "fields-of-honor",
-      "name": "Fields Of Honor",
+      "name": "Fields of Honor",
       "kind": "route",
       "order": 53,
       "map_node": "fields-of-honor",
@@ -571,7 +571,7 @@
     },
     {
       "id": "brawlers-cave",
-      "name": "Brawlers Cave",
+      "name": "Brawlers' Cave",
       "kind": "dungeon",
       "order": 56,
       "map_node": "brawlers-cave",

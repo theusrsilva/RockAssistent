@@ -137,8 +137,6 @@ outra fonte.
 | --- | --- | --- |
 | bosses/dawn-postgame | A forma da Wormadam da Dawn com cada inicial: a Serebii dá Sandy (Chimchar), Trash (Piplup) e Plant (Turtwig); o detonado troca Sandy e Trash; a Pokéwiki usa a mesma forma nas três. Ficou a da Serebii; as variantes por inicial continuam sem confirmação independente. | serebii.net/brilliantdiamondshiningpearl/dawnlucas.shtml; pokewiki.de/Lucia; notas |
 | areas/bdsp | Grand Underground e Ramanas Park sem location no PokeAPI nem nó no mapa; o PokeAPI não tem encontros do BDSP (ids só pelo nome do local). | pokeapi.co |
-| encounters/bdsp.json | Grand Underground: 18 biomas viraram áreas (sem location nem nó); as etapas (Strength, Defog, National Dex...) ficam em `conditions`. Flower Paradise (Shaymin, evento) não tem área. | serebii.net/pokearth/sinnoh |
-| encounters/bdsp.json | Dazzling Cave: página do bioma na Serebii lida pelo gerador, mas não conferida à mão. Mesprit e Cresselia como `roaming` lv 50 em Lake Verity e Fullmoon Island (onde começam). Trophy Garden virou área própria: Pichu/Pikachu e os outros `walk`; os 16 do Mr. Backlot `walk` com `national_dex`. | serebii.net/pokearth/sinnoh |
 | guias/pós-jogo | Slates do Ramanas Park liberadas em etapas; nível dos fósseis (1 ou 20); TM42 na Survival Area; banidos da Battle Tower; tutores (Draco Meteor etc.). | game8; gamerguides; gosunoob |
 
 ### Legends: Arceus (`pla`)
@@ -245,21 +243,25 @@ outra fonte.
 ## Dados a corrigir nos JSON
 
 Achados pelos analistas de dados nas Tarefas 27 e 28 (guias), conferidos em fonte; os guias já estão certos, os JSON
-ainda não.
+ainda não. A Tarefa 35 aplicou os que tinham fonte clara (parceiro da Tabitha/Shelly no ORAS, Alder no BW, Loyal
+Three do SV, Hapu e Dexio do SM, ordem dos lagos do BDSP, fósseis do BDSP, 1ª luta do Barry no BDSP, nomes do SwSh e
+os dois Rocket Grunts do HGSS; o Raichu de Alola do mani-reward já estava certo). Ficaram abaixo os que dependem de
+listas longas sem time nas fontes ou de decisão do autor.
+
+Novos `verified: false` da Tarefa 35:
+
+- bosses/sv.json `loyal-okidogi`, `loyal-munkidori`, `loyal-fezandipiti`: nível 70 e locais corrigidos, mas os golpes
+  continuam os do nível 35 (nenhuma fonte com os golpes da luta).
+- bosses/bdsp.json `barry-route-201`: Piplup 5 com os golpes padrão do nível, sem fonte com o time exato.
+- guias/bdsp (detonado): as seções ainda seguem a ordem antiga (Lake Acuity antes de Snowpoint, Lake Valor depois);
+  o JSON já tem a ordem certa.
+
+Ainda a corrigir:
 
 | arquivo | item | problema | fonte |
 | --- | --- | --- | --- |
-| bosses/oras.json | tabitha-meteor-falls, shelly-meteor-falls | A nota diz "com o Steven": o parceiro é o rival (May/Brendan); o Steven só luta junto na Southern Island e no Space Center. | revisão da Tarefa 27 |
-| areas/bw.json | challengers-cave | `bosses_before` errado: o Alder é no último trecho. | revisão da Tarefa 27 |
-| bosses/hgss.json (ou trainers) | Rocket Grunts | Faltam dois Rocket Grunts (relatado pelo escritor do guia). | revisão da Tarefa 27 |
-| bosses/sv.json | loyal-okidogi, loyal-munkidori, loyal-fezandipiti | Nível 35 → 70; local Kitakami → Paradise Barrens, Wistful Fields e Oni Mountain. | serebii sv legendary |
-| bosses/sm.json | hapu-1, dexio-2 | Hapu: "Ancient Poni Path" → Vast Poni Canyon; Dexio 2 → Poni Grove. | bulbapedia; thonky |
-| bosses/za.json | mani-reward, lida-reward, faltando | Mani: dois Raichu, um deve ser o de Alola (form 1) nível 68. Lida: Vanilluxe ou Vanillish (notas), não resolvido. Faltam zygarde-1 (33), zygarde-50 (57), zygarde-complete (84), hyperrogue-ange-floette, zach-reward-1 e urbain-*. | notas |
+| bosses/za.json | lida-reward, faltando | Lida: Vanilluxe ou Vanillish (notas), não resolvido. Faltam zygarde-1 (33), zygarde-50 (57), zygarde-complete (84), hyperrogue-ange-floette, zach-reward-1 e urbain-*. | notas |
 | bosses/lgpe.json | Megas, archer-2 | As Megas não têm marcação (o esquema não tem campo); falta a parceira Rocket no archer-2. | serebii lgpe elitefour; notas |
-| areas/bdsp.json | lake-valor, lake-verity | Estão depois de Snowpoint. Ordem real: Canalave Library → Lake Valor → Lake Verity → Routes 216/217 → Snowpoint → Lake Acuity. | bulbapedia (detonado do BDSP, partes 16–17) |
-| encounters/bdsp.json | Cranidos, Shieldon | Skull Fossil só no Brilliant Diamond, Armor Fossil só no Shining Pearl. | gamerguides fossils |
-| bosses/bdsp.json | barry-1 | Falta a 1ª batalha do Barry (Lake Verity/Route 201, inicial nível 5). | notas |
-| areas/swsh.json | nomes | Sem apóstrofo: Axew's Eye, Giant's Seat/Mirror/Cap, Lake of Outrage, Fields of Honor, Brawlers' Cave. | serebii pokearth galar |
 | bosses/swsh.json | faltando | yell-motostoke, eternatus-max, Dynamax dos estádios, leon-tower, star-tournament, calyrex/steed, dmax-vespiquen/greedent, mustard-ultimate; só uma variante de inicial em leon e hop-*. | notas |
 | bosses/usum.json | faltando | red-entry/blue-entry, Tapus, eevee-trainers, Necrozma nível 65; só uma variante em hau-5, hau-champion e defense-*. | notas |
 | bosses/pla.json | faltando | alpha-* das missões, Dialga/Palkia de captura, adaman-4, irida-4, Mai/Sabi, Wenton/Bren/Zisu, Path of Tenacity; akari-4 "Grotle 62" incerto. | notas |

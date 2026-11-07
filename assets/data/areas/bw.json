@@ -496,8 +496,7 @@
       "bosses_before": [
         "n-castle-black",
         "n-castle-white",
-        "ghetsis",
-        "alder"
+        "ghetsis"
       ]
     },
     {
@@ -645,7 +644,9 @@
       "order": 65,
       "map_node": "liberty-garden",
       "poke_api_location_id": 404,
-      "bosses_before": []
+      "bosses_before": [
+        "alder"
+      ]
     }
   ]
 }
