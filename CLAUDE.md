@@ -64,6 +64,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D33).
 | Worker | Em Python (runtime embutido). Canal por stdin/stdout em vez de socket Unix. Polkit `auth_admin_keep`. Patches do FRLG-LDN-Trade-Console aplicados. `iw` e `ip` estáticos embutidos (o autor não quer mandar a pessoa instalar pré-requisitos) |
 | Pacotes | .deb e AppImage. Tag `v*` publica o Release direto. Tela Sobre com créditos e oferta do código-fonte |
 | Atualização | Procura no GitHub ao abrir (1×/dia, desligável), sem pré-lançamentos. Baixa, confere o SHA256SUMS e instala: Windows pelo instalador silencioso (UAC), AppImage troca o arquivo, .deb pelo pkexec (D29) |
+| Nomes no Release | Só `RockAssistent-*` (decisão do autor de 07/11/2026): sem cópias `TradeRock-*`. As instalações antigas baixam o RockAssistent uma vez pelo GitHub; o app continua aceitando os dois nomes (D33) |
 | Teste com o Switch | Até 30 s. Sessão de outro jogo decifrada não aprova. Vale até mudar a placa ou o prod.keys (não expira). Opcional desde a D28: a troca libera sem ele |
 | Modo servidor | HTTP (só rede de casa, com aviso). Argon2id (Konscious). Fila começa a troca sozinha. Conta nova com os Pokémon de demonstração. Porta 8337. Começa desligado a cada abertura |
 | Windows | Só ESP32. Instalador Inno Setup com administrador (regra do firewall só em redes privadas). Sem assinatura digital por enquanto. Dados em `%LOCALAPPDATA%` com ACL só do usuário. Sem WebView2: abre no navegador |

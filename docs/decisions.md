@@ -1168,8 +1168,8 @@ servidor não mudaram de comportamento, só de lugar no menu.
   instalador, no AppImage (`RockAssistent-<versão>-x86_64.AppImage`), no `RockAssistent-Setup-<versão>.exe`, no Release e
   no ícone novo (Poké Bola com um "R"). Namespaces, pastas, scripts, pacotes NuGet, binário `traderock`, pacote `.deb`
   `traderock`, AppId do Inno Setup, worker e **pasta de dados** continuam TradeRock (sem migração).
-  - Atualização das instalações antigas: o app aceita os nomes novos e os antigos, e o CI publica também cópias
-    `TradeRock-*` no Release (`scripts/release-legacy-names.sh`), com o SHA256SUMS. Quando parar é do autor.
+  - Atualização das instalações antigas: o app aceita os nomes novos e os antigos, mas o Release só publica os
+    `RockAssistent-*` (decisão do autor de 07/11/2026): quem tem o TradeRock baixa o RockAssistent uma vez pelo GitHub.
   - Regras antigas do firewall "TradeRock (...)" são apagadas pelo instalador.
 - **Menu:** Início, Pokédex, Guias, Boxes, Trocas, Mystery Gift, Nuzlocke, Contador Hunt, Histórico, Configurações,
   Sobre. Rotas antigas redirecionam (`/pokemon` → Boxes, `/atividades` → Mystery Gift/Trocas). No celular, as abas de

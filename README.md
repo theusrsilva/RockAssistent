@@ -35,7 +35,8 @@ extraídas do seu próprio console.
 Baixe o pacote da versão mais recente na página de
 [Releases](https://github.com/theusrsilva/TradeRock/releases). O app procura versões novas
 sozinho (dá para desligar) e se atualiza pela tela **Sobre**. Também dá para baixar o
-pacote novo e instalar por cima.
+pacote novo e instalar por cima. Quem tem uma versão de antes da troca de nome (TradeRock) precisa
+baixar o RockAssistent uma vez por essa página: as versões antigas não acham mais a atualização sozinhas.
 
 **Debian, Ubuntu e derivados (.deb).** Ubuntu 22.04 ou mais novo, Debian 12 ou mais novo:
 

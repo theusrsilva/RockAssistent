@@ -221,9 +221,6 @@ jobs:
         run: |
           cd dist && sha256sum -c SHA256SUMS
           sha256sum -- RockAssistent-Setup-*.exe >> SHA256SUMS
-      # Transição do rebranding: cópias TradeRock-* (e no SHA256SUMS) para as versões instaladas antes dele.
-      - name: Nomes antigos
-        run: bash scripts/release-legacy-names.sh dist
       # Texto do Release: as novidades (mensagem da tag anotada), o "qual arquivo baixar"
       # (packaging/release-notes.md) e, no fim, a lista automática de mudanças do GitHub.
       - name: Notas

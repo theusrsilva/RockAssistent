@@ -26,8 +26,9 @@ local.
   protegeu o computador". Clique em **Mais informações → Executar assim mesmo**. No Windows, o rádio é
   sempre um **ESP32** ligado no USB.
 - **Linux:** o rádio pode ser a placa Wi-Fi do próprio PC ou um ESP32.
-- **Arquivos `TradeRock-*`:** são cópias idênticas dos `RockAssistent-*`, com o nome antigo, para as versões
-  instaladas antes da troca de nome se atualizarem sozinhas. Para instalar, baixe o `RockAssistent-*`.
+- **Tem o TradeRock instalado?** As versões antigas, de antes da troca de nome, não acham mais a atualização sozinhas.
+  Baixe o RockAssistent uma vez por esta página e instale por cima: seus Pokémon, contas e chaves continuam. Depois
+  disso, ele volta a se atualizar sozinho.
 - **Para atualizar,** use a tela **Sobre** do app (ele também avisa no Início quando há versão nova), ou baixe a versão nova e instale por cima. Seus Pokémon, contas e chaves continuam.
 - **Conferir o download (opcional):** compare com o `SHA256SUMS`. No Linux, rode
   `sha256sum -c SHA256SUMS --ignore-missing`. No Windows, rode
