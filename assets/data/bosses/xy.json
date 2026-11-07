@@ -21,7 +21,8 @@
     "https://www.pokewiki.de/Begonia",
     "https://www.pokewiki.de/Magnolia",
     "https://www.pokewiki.de/Xeros",
-    "https://www.pokemythology.net/detonados/detonado-x-y/"
+    "https://www.pokemythology.net/detonados/detonado-x-y/",
+    "https://www.pokebip.com/page/jeux-video/pokemon-x-y/combats-kalem-serena"
   ],
   "items": [
     {
@@ -49,8 +50,70 @@
       ],
       "level_cap": 5,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Froakie 5; com Froakie: Fennekin 5; o detonado confirma: o inicial fraco ao seu, nível 5",
-      "versions": null
+      "notes": "o detonado confirma: o inicial fraco ao seu, nível 5",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 656,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "pound",
+                "growl",
+                "bubble"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 650,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "tackle",
+                "growl",
+                "vine-whip"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 653,
+              "form": 0,
+              "level": 5,
+              "moves": [
+                "scratch",
+                "tail-whip",
+                "ember"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 5,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "viola",
@@ -364,8 +427,148 @@
       ],
       "level_cap": 30,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 28, Absol 28, Braixen 30; com Froakie: Meowstic 28, Absol 28, Quilladin 30; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); disputa do Mega Ring",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); disputa do Mega Ring",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "fake-out",
+                "psybeam",
+                "light-screen",
+                "disarming-voice"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "bite",
+                "quick-attack",
+                "slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 654,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "fire-spin",
+                "psybeam"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 30,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "fake-out",
+                "psybeam",
+                "light-screen",
+                "disarming-voice"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "bite",
+                "quick-attack",
+                "slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 657,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "water-pulse",
+                "quick-attack"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 30,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 28,
+              "moves": [
+                "fake-out",
+                "psybeam",
+                "light-screen",
+                "disarming-voice"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 28,
+              "moves": [
+                "bite",
+                "quick-attack",
+                "slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 651,
+              "form": 0,
+              "level": 30,
+              "moves": [
+                "bite",
+                "needle-arm"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 30,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "korrina",
@@ -501,8 +704,148 @@
       ],
       "level_cap": 33,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 31, Absol 31, Braixen 33; com Froakie: Meowstic 31, Absol 31, Quilladin 33; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 31,
+              "moves": [
+                "psybeam",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "slash",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 654,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "fire-spin",
+                "psybeam"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 31,
+              "moves": [
+                "psybeam",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "slash",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 657,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "water-pulse",
+                "quick-attack"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 31,
+              "moves": [
+                "psybeam",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 31,
+              "moves": [
+                "slash",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 651,
+              "form": 0,
+              "level": 33,
+              "moves": [
+                "needle-arm",
+                "bite"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 33,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "ramos",
@@ -718,8 +1061,151 @@
       ],
       "level_cap": 37,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 35, Absol 35, Delphox 37; com Froakie: Meowstic 35, Absol 35, Chesnaught 37; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 35,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "bite"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 655,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "mystical-fire",
+                "psybeam"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 35,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "bite"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 658,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "water-shuriken",
+                "quick-attack"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 35,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "light-screen"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 35,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "bite"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 652,
+              "form": 0,
+              "level": 37,
+              "moves": [
+                "bite",
+                "seed-bomb"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 37,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "valerie",
@@ -962,8 +1448,190 @@
       ],
       "level_cap": 46,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 44, Jolteon 44, Delphox 46, Absol 44; com Froakie: Meowstic 44, Vaporeon 44, Chesnaught 46, Absol 44; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 44,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 135,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "discharge",
+                "double-kick",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 655,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "flamethrower",
+                "psychic"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 46,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 44,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "lava-plume",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 658,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "water-shuriken",
+                "dark-pulse"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 46,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 44,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "aurora-beam",
+                "muddy-water",
+                "double-kick"
+              ],
+              "ability": "water-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 652,
+              "form": 0,
+              "level": 46,
+              "moves": [
+                "seed-bomb",
+                "brick-break"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 44,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 46,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "olympia",
@@ -1554,8 +2222,154 @@
       ],
       "level_cap": 51,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Delcatty 49, Goodra 49, Greninja 51; com Froakie: Delcatty 49, Goodra 49, Delphox 51",
-      "versions": null
+      "notes": null,
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 301,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "charm",
+                "play-rough",
+                "feint-attack",
+                "return"
+              ],
+              "ability": "cute-charm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "dragon-pulse",
+                "sludge-wave",
+                "body-slam",
+                "earthquake"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 658,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "water-shuriken",
+                "extrasensory",
+                "double-team"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 301,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "charm",
+                "play-rough",
+                "feint-attack",
+                "return"
+              ],
+              "ability": "cute-charm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "dragon-pulse",
+                "sludge-wave",
+                "body-slam",
+                "earthquake"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 652,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "brick-break",
+                "seed-bomb",
+                "spiky-shield"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 301,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "charm",
+                "play-rough",
+                "feint-attack",
+                "return"
+              ],
+              "ability": "cute-charm",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 706,
+              "form": 0,
+              "level": 49,
+              "moves": [
+                "dragon-pulse",
+                "sludge-wave",
+                "body-slam",
+                "earthquake"
+              ],
+              "ability": "sap-sipper",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 655,
+              "form": 0,
+              "level": 51,
+              "moves": [
+                "mystical-fire",
+                "psychic",
+                "calm-mind"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 51,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "tierno-2",
@@ -1801,8 +2615,232 @@
       ],
       "level_cap": 61,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 57, Absol 59, Altaria 58, Jolteon 57, Delphox 61; com Froakie: Meowstic 57, Absol 59, Altaria 58, Vaporeon 57, Chesnaught 61; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho)",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 135,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "quick-attack",
+                "discharge",
+                "double-kick"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 655,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "flamethrower",
+                "psychic",
+                "shadow-ball"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "lava-plume",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 658,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "water-shuriken",
+                "dark-pulse",
+                "ice-beam"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 57,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 59,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 58,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 57,
+              "moves": [
+                "aurora-beam",
+                "muddy-water",
+                "double-kick"
+              ],
+              "ability": "water-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 652,
+              "form": 0,
+              "level": 61,
+              "moves": [
+                "brick-break",
+                "seed-bomb",
+                "body-slam"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            }
+          ],
+          "level_cap": 61,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "malva",
@@ -2337,8 +3375,274 @@
       ],
       "level_cap": 70,
       "verified": true,
-      "notes": "time para quem escolheu Fennekin; com Chespin: Meowstic 66, Jolteon 66, Delphox 70, Altaria 67, Clefable 68, Absol 68; com Froakie: Meowstic 66, Vaporeon 66, Chesnaught 70, Altaria 67, Clefable 68, Absol 68; rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); pós-jogo: depois de uma batalha na Battle Maison; depois, uma vez por dia; o Absol megaevolui",
-      "versions": null
+      "notes": "rival: Serena se você joga com o Calem; com a Serena, o rival é o Calem (mesmo time, Meowstic macho); pós-jogo: depois de uma batalha na Battle Maison; depois, uma vez por dia; o Absol megaevolui",
+      "versions": null,
+      "variants": [
+        {
+          "starter": "chespin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 66,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 135,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "thunder",
+                "double-kick",
+                "quick-attack"
+              ],
+              "ability": "volt-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 655,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "fire-blast",
+                "psychic",
+                "shadow-ball"
+              ],
+              "ability": "blaze",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "moonblast",
+                "meteor-mash",
+                "focus-blast",
+                "sing"
+              ],
+              "ability": "magic-guard",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": "absolite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "fennekin",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 66,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 136,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "fire-blast",
+                "bite",
+                "quick-attack"
+              ],
+              "ability": "flash-fire",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 658,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "hydro-pump",
+                "dark-pulse",
+                "ice-beam"
+              ],
+              "ability": "torrent",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "moonblast",
+                "meteor-mash",
+                "focus-blast",
+                "sing"
+              ],
+              "ability": "magic-guard",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": "absolite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        },
+        {
+          "starter": "froakie",
+          "party": [
+            {
+              "species": 678,
+              "form": 1,
+              "level": 66,
+              "moves": [
+                "psychic",
+                "fake-out",
+                "disarming-voice",
+                "shadow-ball"
+              ],
+              "ability": "keen-eye",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 134,
+              "form": 0,
+              "level": 66,
+              "moves": [
+                "hydro-pump",
+                "aurora-beam",
+                "quick-attack"
+              ],
+              "ability": "water-absorb",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 652,
+              "form": 0,
+              "level": 70,
+              "moves": [
+                "wood-hammer",
+                "brick-break",
+                "body-slam"
+              ],
+              "ability": "overgrow",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 334,
+              "form": 0,
+              "level": 67,
+              "moves": [
+                "dragon-pulse",
+                "dazzling-gleam",
+                "confide"
+              ],
+              "ability": "natural-cure",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 36,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "moonblast",
+                "meteor-mash",
+                "focus-blast",
+                "sing"
+              ],
+              "ability": "magic-guard",
+              "item": null,
+              "tera_type": null
+            },
+            {
+              "species": 359,
+              "form": 0,
+              "level": 68,
+              "moves": [
+                "slash",
+                "swords-dance",
+                "quick-attack",
+                "night-slash"
+              ],
+              "ability": "super-luck",
+              "item": "absolite",
+              "tera_type": null
+            }
+          ],
+          "level_cap": 70,
+          "verified": true
+        }
+      ]
     },
     {
       "id": "essentia-final",
