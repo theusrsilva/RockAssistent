@@ -2,7 +2,9 @@
   "source": [
     "https://github.com/pret/pokeplatinum/tree/main/res/trainers/data",
     "https://github.com/pret/pokeplatinum/blob/main/generated/trainers.txt",
-    "https://www.pokemythology.net/detonados/detonado-platinum/"
+    "https://www.pokemythology.net/detonados/detonado-platinum/",
+    "https://www.serebii.net/platinum/rival.shtml",
+    "https://www.serebii.net/platinum/toptrainercafe.shtml"
   ],
   "items": [
     {
@@ -2303,7 +2305,7 @@
       ],
       "level_cap": 85,
       "verified": true,
-      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 81, Floatzel 79, Heracross 81, Rapidash 79, Snorlax 83, Torterra 85; com Turtwig: Staraptor 81, Floatzel 79, Heracross 81, Roserade 79, Snorlax 83, Infernape 85; revanche no pós-jogo; segundo as notas, depois de vencer a Liga 20 vezes (ver dúvidas)",
+      "notes": "time para quem escolheu Chimchar; com Piplup: Staraptor 81, Floatzel 79, Heracross 81, Rapidash 79, Snorlax 83, Torterra 85; com Turtwig: Staraptor 81, Floatzel 79, Heracross 81, Roserade 79, Snorlax 83, Infernape 85; revanche no pós-jogo, só nos fins de semana, na porta do Battleground; o time sobe por etapas e chega a este (Lv 79–85) depois de 10 vitórias na Liga (Serebii)",
       "versions": null
     },
     {
@@ -3166,8 +3168,8 @@
         }
       ],
       "level_cap": 65,
-      "verified": false,
-      "notes": "revanche no Battleground (Survival Area), pós-jogo, depois de completar o Pokédex Nacional; níveis da decompilação (ver dúvidas)",
+      "verified": true,
+      "notes": "revanche no Battleground (Survival Area), pós-jogo, depois de completar o Pokédex Nacional; níveis da decompilação (leader_wake_rematch.json: Quagsire 61, Gyarados 62, Floatzel 63); a Serebii e a pokemondb dão 63/66/63",
       "versions": null
     },
     {
@@ -3591,8 +3593,8 @@
         }
       ],
       "level_cap": 65,
-      "verified": false,
-      "notes": "luta no Battleground (Survival Area), pós-jogo; níveis da decompilação (ver dúvidas)",
+      "verified": true,
+      "notes": "luta no Battleground (Survival Area), pós-jogo; níveis da decompilação (buck_battleground.json: Umbreon 62); a Serebii e a pokemondb dão 63",
       "versions": null
     },
     {

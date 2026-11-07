@@ -38,8 +38,8 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 - Town Map (Barry)
 - Pokétch (Pokétch Company)
 - TM10 Hidden Power (Jubilife)
-- Old Rod (west Jubilife, after the Pokétch)
-- Quick Claw (Jubilife)
+- Old Rod (Fisherman in the west gate of Jubilife, towards Route 218)
+- Quick Claw (Jubilife Condominiums, 1F)
 
 **Encounters**
 
@@ -183,9 +183,9 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 
 **Items**
 
-- Exp. Share (Route 206 gate, 35 seen)
+- Exp. Share (Rowan's assistant in the Route 206 gate, 35 seen)
 - TM26 Earthquake (Wayward Cave hidden part)
-- Odd Keystone (Route 208)
+- Odd Keystone (Route 208, Black Belt hidden in the trees)
 - Poffin Case (Hearthome Fan Club)
 - TM43 Secret Power and TM45 Attract (Amity Square)
 
@@ -452,7 +452,7 @@ Story path through Sinnoh in order. Levels and teams in the boss cards.
 
 **Do**
 
-- Use the Storage Key on the Galactic Warehouse in Veilstone.
+- A Grunt drops the Storage Key in front of the Galactic building (after Lake Acuity); use it on the Galactic Warehouse in Veilstone.
 - Get HM02 Fly in the warehouse; take the Galactic Key.
 - Beat Cyrus (he gives you the Master Ball) and then Saturn to free the lake trio.
 

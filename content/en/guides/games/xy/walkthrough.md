@@ -223,7 +223,7 @@ _Story order. [X]/[Y] = only in that version._
 
 :::boss xy korrina-lucario
 
-- Tip: You use her loaned Lucario; Mega Evolve it at once.
+- Tip: You use the Lucario she just gave you; Mega Evolve it at once (the battle restarts if you don't).
 
 ## Route 12 → Coumarine City
 

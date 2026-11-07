@@ -1,6 +1,8 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Masuda_method",
+    "https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9_Radar",
+    "https://bulbapedia.bulbagarden.net/wiki/Shiny_Charm",
     "https://pokestats.gg/shiny-hunting-hub/methods/arceus-massive-outbreak",
     "https://pokestats.gg/shiny-hunting-hub/methods/arceus-outbreak",
     "https://pokestats.gg/shiny-hunting-hub/methods/catch-combo",
@@ -79,7 +81,7 @@
       "id": "full_odds",
       "name": "Encontro ou reset",
       "name_en": "Encounter or soft reset",
-      "description": "Encontro selvagem, reset de lendário ou presente, sem bônus.",
+      "description": "Encontro selvagem, reset de lendário presente ou ovo sem o Método Masuda, sem bônus.",
       "base_odds": 4096.0,
       "base_rolls": 1,
       "roll_odds": 4096,
@@ -104,7 +106,7 @@
         "swsh",
         "sv"
       ],
-      "notes": "O Amuleto soma 2 rolagens. No Sword/Shield, presentes, trocas e Pokémon do curry ficam em 1/4096 mesmo com o Amuleto. No Let's Go (método catch_combo), presentes e trocas das formas de Alola são 1/4096 fixo.",
+      "notes": "O Amuleto soma 2 rolagens (3 no total: 1/1365,67), também no ovo de pais do mesmo idioma; o 1/2048,25 da Rotom Labs é só o bug do BDSP (egg_bdsp). No Sword/Shield, presentes, trocas e Pokémon do curry ficam em 1/4096 mesmo com o Amuleto. No Let's Go (método catch_combo), presentes e trocas das formas de Alola são 1/4096 fixo.",
       "verified": true
     },
     {
@@ -319,7 +321,7 @@
         "dp",
         "pt"
       ],
-      "notes": "1/200 na corrente 40+ (Smogon). Variantes: 1/199,4 pela fórmula da Serebii, 1/195,07 na Pokestats. Entre 1 e 39 a chance sobe aos poucos (sem tabela). Não segue a conta de rolagens.",
+      "notes": "1/200 na corrente 40+ (Smogon e Bulbapedia). Variantes: 1/199,4 pela fórmula da Serebii, 1/195,07 na Pokestats. Entre 1 e 39 a chance sobe aos poucos (sem tabela). Não segue a conta de rolagens.",
       "verified": true
     },
     {

@@ -26,7 +26,7 @@ Todos os chefes na ordem da história, com times e níveis.
 - **Mars (Spear Pillar, Mt. Coronet)**: Golpes em área ajudam; derrube o Purugly com Fighting.
 - **Jupiter (Spear Pillar, Mt. Coronet)**: Ground no Skuntank (o Bronzor é imune: cuidado com Levitate).
 - **Cyrus (Distortion World)**: Weavile (4× Fighting) e Gyarados (4× Electric): tenha resposta; o Houndoom cai com Water/Ground.
-- **Volkner (Sunyshore Gym)**: Tipos Ground vencem; o Electivire tem Fire Punch e Ice Punch.
+- **Volkner (Sunyshore Gym)**: Tipos Ground vencem; o Electivire tem Thunder Punch e Fire Punch.
 - **Barry (Pokémon League (before the Elite Four))**: Seis Pokémon com Snorlax: Fighting nele, counter no inicial.
 - **Aaron (Pokémon League)**: Fire e Rock varrem; o Drapion pede Ground.
 - **Bertha (Pokémon League)**: Water e Grass; o Gliscor pede Ice (4×).
@@ -34,11 +34,11 @@ Todos os chefes na ordem da história, com times e níveis.
 - **Lucian (Pokémon League)**: Dark, Ghost e Bug; o Bronzong apanha de Fire.
 - **Cynthia (Pokémon League)**: Ice (4×) no Garchomp; o Spiritomb não tem fraqueza; o Togekiss é novo aqui.
 - **Flint (Fight Area)**: Golpes em área de Water/Ground (Surf, Earthquake com aliado Flying) cobrem os dois.
-- **Volkner (Fight Area)**: Ground nos três; cuidado com o Ice Punch do Electivire.
+- **Volkner (Fight Area)**: Ground nos três; cuidado com o Fire Punch e o Brick Break do Electivire.
 - **Mars (Stark Mountain)**: Dupla com o Buck: Fighting no Purugly, Fire no Bronzong.
 - **Jupiter (Stark Mountain)**: Ground no Skuntank, Electric no Golbat.
 - **Barry (Survival Area (outside the Battleground))**: Lv 59–65: mesmos counters, mais níveis.
-- **Barry (Survival Area (outside the Battleground))**: Lv 79–85 depois da Dex Nacional: leve um time Lv 80+.
+- **Barry (Survival Area (outside the Battleground))**: Lv 79–85 depois de 10 vitórias na Liga: leve um time Lv 80+.
 - **Aaron (Pokémon League)**: Fire e Rock de novo; o Scizor tem fraqueza 4× a Fire.
 - **Bertha (Pokémon League)**: Water e Grass; Ice no Gliscor.
 - **Flint (Pokémon League)**: Water e Ground.

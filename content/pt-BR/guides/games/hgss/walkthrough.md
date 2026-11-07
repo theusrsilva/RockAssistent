@@ -34,7 +34,8 @@
 
 - A Route 46 (trecho norte) é um desvio curto a partir da Route 29.
 - Dark Cave: por enquanto só dá para entrar na primeira sala.
-- Violet City: pegue o Vs. Recorder; suba a Sprout Tower e vença o ancião.
+- A Lyra/o Ethan dá o Vs. Recorder na portaria da Route 31 para Violet City.
+- Violet City: suba a Sprout Tower e vença o ancião.
 
 **Itens**
 
@@ -204,7 +205,7 @@
 - Olivine: o Ampharos do Glitter Lighthouse está doente; a Jasmine espera o remédio.
 - Use Surf pelas Routes 40 e 41 até Cianwood.
 - Vença o Eusine e depois o Chuck; a esposa do Chuck dá a HM02 Fly.
-- Pegue a SecretPotion na Pharmacy de Cianwood.
+- Pegue a SecretPotion na Pharmacy de Cianwood (basta ter falado com a Jasmine no farol; não depende do Chuck).
 
 **Itens**
 
@@ -300,7 +301,7 @@
 
 :::boss hgss karate-king-kiyo
 
-- Dica: opcional, no fundo do Mt. Mortar (precisa de Waterfall); Flying ou Psychic vencem. Ele dá um Tyrogue.
+- Dica: opcional, no fundo do Mt. Mortar (entrada do meio, por Surf na Route 42; precisa de Surf e Waterfall); Flying ou Psychic vencem. Ele dá um Tyrogue.
 
 :::boss hgss petrel-hideout
 
@@ -587,7 +588,7 @@
 
 - TM91 Flash Cannon (Route 9), TM69 Rock Polish (Route 10)
 - TM56 Fling (Rock Tunnel)
-- TM57 Charge Beam (Power Plant, devolva a Machine Part)
+- TM57 Charge Beam (Power Plant, devolva a Machine Part; outra em Olivine City)
 - TM03 Water Pulse (Misty)
 - Pass (Copycat, Saffron), EXPN Card (Lavender)
 
