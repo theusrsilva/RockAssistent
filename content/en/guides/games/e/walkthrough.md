@@ -447,7 +447,7 @@ Story order. In Emerald both teams (Magma and Aqua) appear; the Champion is Wall
 **Do**
 
 - Battle Palace rules: Pokémon pick moves by Nature.
-- 3 of your own Pokémon, Lv. 30 or lower.
+- 3 of your own Pokémon, different species and items, no level cap; opponents are Lv. 30.
 - 3 wins in a row earn a prize.
 
 ## Route 111
@@ -576,8 +576,8 @@ Story order. In Emerald both teams (Magma and Aqua) appear; the Champion is Wall
 
 **Do**
 
-- Battle Arena rules: 3 turns, then the judge decides.
-- 3 of your own Pokémon, Lv. 30 or lower.
+- Battle Arena rules: 3 turns, then the judge decides; the 3 go out in the order you set.
+- 3 of your own Pokémon, different species and items, no level cap; opponents are Lv. 30.
 - 3 wins in a row earn a prize.
 
 ## Route 114
@@ -1528,4 +1528,4 @@ Story order. In Emerald both teams (Magma and Aqua) appear; the Champion is Wall
 
 :::encounters e faraway-island
 
-<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes) -->
+<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes, Battle Tents e Frontier Brains), pret/pokeemerald (data/text/battle_tent.inc) -->

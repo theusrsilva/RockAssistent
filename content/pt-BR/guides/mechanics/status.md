@@ -6,7 +6,7 @@
 | Poison (PSN) | Perde HP por turno | 1/16 (Gen 1), 1/8 (Gen 2+) | Poison, Steel |
 | Badly poisoned (TOX) | Dano cresce: 1/16, 2/16, 3/16... | Gen 1–2: vira veneno comum ao trocar; Gen 3+: volta a 1/16 ao trocar | Poison, Steel |
 | Paralysis (PAR) | 25% de não agir; Speed cai | Speed ×0,25 (Gen 1–6), ×0,5 (Gen 7+) | Electric (Gen 6+); Ground contra Thunder Wave |
-| Sleep (SLP) | Não age | 1–7 turnos (Gen 1–2), 2–5 (Gen 3–4), 1–3 (Gen 5+) | Habilidades como Insomnia |
+| Sleep (SLP) | Não age | 1–7 turnos (Gen 1), 2–7 (Gen 2; os dois contam o turno em que acorda), 2–5 (Gen 3–4), 1–3 (Gen 5+) | Habilidades como Insomnia |
 | Freeze (FRZ) | Não age | Gen 1: só sai com golpe Fire; Gen 2+: 20% de descongelar por turno (Gen 2: ~10%) | Ice (Gen 2+) |
 | Frostbite | Substitui o freeze em Legends: Arceus: 1/16 por turno e Sp. Atk pela metade | Só PLA | Ice |
 | Drowsy | Substitui o sleep em Legends: Arceus: leva mais dano e pode perder a vez | Só PLA | — |
@@ -54,4 +54,4 @@
 - Synchronize: passa burn, poison e paralysis para quem causou.
 - Early Bird: acorda na metade do tempo.
 
-<!-- fontes: Bulbapedia (Status condition, Burn, Paralysis, Sleep, Freeze, Confusion, Frostbite, Drowsy), Serebii -->
+<!-- fontes: Bulbapedia (Status condition, Burn, Paralysis, Sleep, Freeze, Confusion, Frostbite, Drowsy), Serebii; sono da Gen 1–2: pret/pokered e pret/pokecrystal (effect_commands) -->

@@ -57,7 +57,7 @@
 | Volo (Ginkgo Guild) | Encontrar Arceus e recriar o mundo; usa Giratina |
 | Kamado | Desconfia do jogador por ter caído do céu; expulsa o jogador por um tempo |
 
-- **Cogita:** mulher misteriosa que conhece os mitos; ela e o Volo se parecem com a Cynthia (o jogo sugere parentesco).
+- **Cogita:** mulher misteriosa que conhece os mitos; ela e o Volo se parecem com a Cynthia, mas o parentesco nunca foi confirmado.
 
 ## Paralelos com o mundo real
 

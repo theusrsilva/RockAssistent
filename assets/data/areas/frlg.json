@@ -2,6 +2,7 @@
   "source": [
     "https://www.pokemythology.net/detonados/detonado-firered-leafgreen/",
     "https://pokeapi.co/docs/v2#locations",
+    "dunsparce-tunnel: no jogo a tabela do Dunsparce está no mapa MAP_THREE_ISLAND_PORT (pret/pokefirered src/data/wild_encounters.json), por isso o PokeAPI a põe em three-isle-port (509) e three-isle-path (807) fica sem encontros.",
     "Ordem, nomes e tipo: docs/superpowers/sources/frlg-pokemythology-notes.md. bosses_before: chefes vencidos desde a área anterior da lista (a união das áreas visitadas = chefes já vencidos)."
   ],
   "items": [

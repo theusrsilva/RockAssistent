@@ -447,7 +447,7 @@ Ordem da história. No Emerald as duas equipes (Magma e Aqua) aparecem; o campe�
 **Faça**
 
 - Regras do Battle Palace: o Pokémon escolhe o golpe pela natureza.
-- 3 Pokémon seus, nv. 30 ou menos.
+- 3 Pokémon seus, de espécies e itens diferentes, sem limite de nível; os adversários ficam no nv. 30.
 - 3 vitórias seguidas dão prêmio.
 
 ## Route 111
@@ -576,8 +576,8 @@ Ordem da história. No Emerald as duas equipes (Magma e Aqua) aparecem; o campe�
 
 **Faça**
 
-- Regras do Battle Arena: 3 turnos, depois o juiz decide.
-- 3 Pokémon seus, nv. 30 ou menos.
+- Regras do Battle Arena: 3 turnos, depois o juiz decide; os 3 entram na ordem escolhida.
+- 3 Pokémon seus, de espécies e itens diferentes, sem limite de nível; os adversários ficam no nv. 30.
 - 3 vitórias seguidas dão prêmio.
 
 ## Route 114
@@ -1528,4 +1528,4 @@ Ordem da história. No Emerald as duas equipes (Magma e Aqua) aparecem; o campe�
 
 :::encounters e faraway-island
 
-<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes) -->
+<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes, Battle Tents e Frontier Brains), pret/pokeemerald (data/text/battle_tent.inc) -->

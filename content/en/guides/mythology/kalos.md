@@ -12,7 +12,7 @@
   Eternal Flower.
 - Angry at the war, AZ turned the machine into the **ultimate weapon** and ended the conflict, killing both sides.
 - The Floette left him when it found out; AZ became immortal and wandered for 3,000 years looking for it.
-- The ultimate weapon is hidden under Geosenge Town, the town of standing stones.
+- The ultimate weapon is hidden under Geosenge Town, the town of standing stones; the graves of the Pokémon that powered it line Route 10, whose stones absorbed their energy.
 
 ## Mega Evolution
 
@@ -56,4 +56,4 @@
 - Geosenge Town's stones = the Carnac alignments (Brittany).
 - The name "Kalos" comes from the Greek for "beauty".
 
-<!-- fontes: Bulbapedia (Kalos, AZ, Ultimate Weapon, Aura trio, Team Flare), Serebii; docs/superpowers/sources/xy-pokemythology-notes.md -->
+<!-- fontes: Bulbapedia (Kalos, AZ, Ultimate Weapon, Geosenge Town, Kalos Route 10, Aura trio, Team Flare), Serebii; docs/superpowers/sources/xy-pokemythology-notes.md -->
