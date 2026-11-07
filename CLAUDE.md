@@ -1,8 +1,12 @@
-# TradeRock: instruções para o Claude Code
+# RockAssistent (repositório TradeRock): instruções para o Claude Code
 
-App desktop (.NET 10 + React) para trocar Pokémon com FireRed/LeafGreen do Switch via wireless local
-(LDN), com público leigo. Especificação original completa: [docs/spec.md](docs/spec.md) (o projeto
-se chamava "FRLG Trade Studio"). Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D31).
+App desktop (.NET 10 + React), com público leigo: assistente Pokémon offline de todos os jogos da série principal
+(Pokédex, Guias, Boxes com saves por pasta, Nuzlocke, Contador Hunt, Histórico) que também troca Pokémon com os jogos
+do Switch via wireless local (LDN). O nome visível é **RockAssistent**; namespaces, pastas, scripts, pacotes, binário
+`traderock`, worker e pasta de dados continuam **TradeRock** (D33). Especificação original da troca:
+[docs/spec.md](docs/spec.md) (o projeto se chamava "FRLG Trade Studio"); do RockAssistent:
+[docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md).
+Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D33).
 
 ## Regras de trabalho (pedidas pelo autor, valem sempre)
 
@@ -21,9 +25,12 @@ se chamava "FRLG Trade Studio"). Decisões técnicas: [docs/decisions.md](docs/d
   `[pré-lançamento]` só quando o autor pedir (versões com sufixo, como `v1.0.0-rc.1`, também saem
   como pré-lançamento). O CI roda só nas tags `v*` e publica o Release com o texto de
   `packaging/release-notes.md` e a lista automática do GitHub.
-- Rode `scripts/ci.sh` antes de commitar. Ele roda typecheck, testes e build do frontend, os testes
-  do worker (Python `unittest`), os testes do pokeldn (`scripts/test-pokeldn.sh`, ~5 min) e o build e os
-  testes do .NET.
+- Rode `scripts/ci.sh` antes de commitar. Ele roda os testes dos scripts e o `build-dex.py`, o `check-guides.py`,
+  typecheck, testes e build do frontend, os testes do worker (Python `unittest`), os testes do pokeldn
+  (`scripts/test-pokeldn.sh`, ~5 min) e o build e os testes do .NET.
+- **Dados e guias:** fatos do jogo podem ser pesquisados em qualquer site e escritos no nosso formato; texto corrido
+  (guias, mitologia) é sempre escrito do zero, nunca copiado. Dado sem fonte conferida leva `"verified": false` e entra
+  em `docs/superpowers/data-doubts.md`.
 
 ## Segurança (inegociável)
 
@@ -33,8 +40,9 @@ se chamava "FRLG Trade Studio"). Decisões técnicas: [docs/decisions.md](docs/d
 - Nunca distribuir prod.keys nem ROMs.
 - O app principal **nunca** roda como root e nunca pede nem guarda senha. O root fica isolado no
   worker (pkexec + polkit, D15).
-- Sem telemetria. A única consulta à internet é a procura de atualizações no GitHub (D29), que dá para desligar e
-  não envia nada do PC. O pokeldn continua sem internet.
+- Sem telemetria. As consultas à internet são a procura de atualizações no GitHub (D29) e, só quando a pessoa liga
+  nas Configurações, as duas da internet opcional (D32: estatísticas do Smogon e pokepast.es); nenhuma envia nada do
+  PC. Todo o resto funciona offline (dados embutidos). O pokeldn continua sem internet.
 
 ## Decisões do autor (resumo)
 
@@ -60,6 +68,8 @@ se chamava "FRLG Trade Studio"). Decisões técnicas: [docs/decisions.md](docs/d
 | Modo servidor | HTTP (só rede de casa, com aviso). Argon2id (Konscious). Fila começa a troca sozinha. Conta nova com os Pokémon de demonstração. Porta 8337. Começa desligado a cada abertura |
 | Windows | Só ESP32. Instalador Inno Setup com administrador (regra do firewall só em redes privadas). Sem assinatura digital por enquanto. Dados em `%LOCALAPPDATA%` com ACL só do usuário. Sem WebView2: abre no navegador |
 | Jogos do Switch | Todos os jogos com troca local (FRLG, Let's Go, SwSh, BDSP, Arceus, SV, Z-A) pelo pokeldn (submódulo, D21). Escopo todo (troca, raids, Mystery Gift, Union Circle). ESP32 passa a usar o firmware do pokeldn. Python embutido no Windows. Modo LAN só no SwSh. Legalidade avisa e não bloqueia nos jogos novos. Cofre único com filtro por jogo. "Meu treinador" por jogo. Mover entre jogos como o HOME (D22) |
+| Internet opcional | Estatísticas do Smogon (formato do Champions, só ao clicar em Atualizar) e links do pokepast.es. Desligadas por padrão, só GET, mudar só na janela do PC (D32) |
+| RockAssistent | Nome só visível. Menu: Início, Pokédex, Guias, Boxes, Trocas, Mystery Gift, Nuzlocke, Contador Hunt, Histórico, Configurações, Sobre (celular: Início, Pokédex, Boxes, Trocas + "Mais"). Pokédex do PokeAPI (`dex.sqlite` gerado no build). Dados nossos em `assets/data` (JSON estrito, validador). Boxes com saves de pastas (backup automático; Gen 1/2 compactam caixas; mover entre gerações com aviso; clone só em saves). Hunt com odds por rolagens e atalho global opcional (Windows, X11). Nuzlocke com versão obrigatória nos jogos duplos e mapa SVG. Histórico unificado (`ActivityRecord`) (D33) |
 
 ## Estado das entregas
 
@@ -84,6 +94,7 @@ se chamava "FRLG Trade Studio"). Decisões técnicas: [docs/decisions.md](docs/d
 | 17 | Sem o motor e o submódulo do easyworld; catálogo de ESP32 com os dados do pokeldn; teste do modo AP da placa Wi-Fi (D25) | em PR, **AP sem placa real** |
 | 18 | Outras atividades (D26): 18a Mystery Gift do FRLG e do SwSh (tela Atividades); 18b raids do SwSh (Max Raid e Dynamax Adventure, também pela rede de casa) e Tera Raid do SV, com as raids de evento embutidas; 18c Union Circle do SV (missões e encontros) | em PR, **sem console real** |
 | 19 | Modo servidor com os jogos novos: troca de qualquer jogo pela fila, "Meu treinador" por jogo e por conta; outras atividades só na janela do PC (D27) | em PR, **sem celular real** |
+| 20 | RockAssistent: rebranding visível, menu novo, Pokédex offline, Guias dos 22 jogos, Boxes com saves por pasta, Contador Hunt, Nuzlocke, VGC Champions, Histórico unificado, Início, internet opcional (D32, D33) | em PR, **sem teste no navegador nem com hardware** |
 
 Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-lançamento é a tag `v0.00.01`. As branches das entregas foram apagadas depois do merge.
 
@@ -103,6 +114,11 @@ Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-l
   - modo servidor com um celular de verdade na rede (Entrega 10, D19);
   - ESP32 com conversor CH340/CP210x no Windows (o ESP32-S3 usa a USB nativa). O app, a janela, o instalador e os
     testes foram verificados num Windows 11 real, pelo WSL.
+  - Entrega 20: as telas novas num navegador (nenhuma foi vista); o atalho global com tecla apertada de verdade no
+    Windows e no X11 (só o grab no WSLg); saves reais de emulador nas Boxes; Smogon e pokepast.es com rede real (só o
+    arquivo do Smogon de 2026-10 foi baixado e lido).
+- Dados e guias: dúvidas e correções conhecidas dos JSON em
+  [docs/superpowers/data-doubts.md](docs/superpowers/data-doubts.md), para perguntar ao autor.
 
   O roteiro de teste no host está em [docs/dev-host.md](docs/dev-host.md).
 
@@ -110,15 +126,17 @@ Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-l
 
 | Pasta | Conteúdo |
 | --- | --- |
-| `app/TradeRock.App` | ASP.NET Core + Photino (API em `Api/`, DI em `ServiceSetup.cs`, modo servidor em `Server/`: contas, logins, `AccessPolicy`, liga/desliga) |
-| `app/TradeRock.Core` | Domínio: `Games/` (catálogo dos jogos do Switch, IDs de treinador), `Trading/`, `Engines/` (Fake, PythonLdn, `Pokeldn/` com ESP32 e LAN, `Worker/`), `Esp32/` (firmware, serial, esptool), `Pokemon/`, `Builder/`, `Storage/` (EF Core + SQLite), `Saves/`, `Setup/` (catálogo, probe do Linux, verificações, prod.keys) |
+| `app/TradeRock.App` | ASP.NET Core + Photino (API em `Api/`, DI em `ServiceSetup.cs`, modo servidor em `Server/`: contas, logins, `AccessPolicy`, liga/desliga; atalho global do contador em `Hotkeys/`: Windows, X11) |
+| `app/TradeRock.Core` | Domínio: `Games/` (catálogo dos jogos do Switch, IDs de treinador, `GameVersions` com os 22 jogos), `Trading/`, `Engines/` (Fake, PythonLdn, `Pokeldn/` com ESP32 e LAN, `Worker/`), `Esp32/` (firmware, serial, esptool), `Pokemon/`, `Builder/`, `Storage/` (EF Core + SQLite, `HistoryFeed`), `Saves/` (`SaveFileAccess`, `SaveFolders`, `SaveLibrary` das Boxes), `Setup/` (catálogo, probe do Linux, verificações, prod.keys), `Dex/` (`DexService` sobre o `dex.sqlite`), `GameData/` (`GameDataStore` e validador dos JSON de `assets/data`), `Hunts/` (`ShinyOdds`, `HuntStore`), `Nuzlocke/` (runs, regras, `RunProgress`), `Vgc/` (regulamentação, times, análise, Smogon, pokepast.es), `Activities/`, `Updates/` |
 | `app/TradeRock.Tests` | xUnit v3; worker falso em `FakeWorker.cs`, pokeldn falso em `FakePokeldn` (`Esp32Tests.cs`) |
 | `worker/` | Worker Python: `traderock_worker/` (server, radio, trade_child, card_child, beacon_child, esp32_flash, events, protocol) e `tests/` (dublês de trio/ldn em `fake_ldn`) |
 | `frontend/` | React + Vite + TS + Tailwind; o build vai para `app/TradeRock.App/wwwroot`. Cores do tema em `src/index.css` (tokens `bg-surface`, `text-muted`, `bg-accent`...); componentes base em `src/components/ui.tsx`; fontes e ícones embutidos (`src/assets/fonts`) |
 | `catalog/hardware-catalog.json` | Catálogo de placas |
-| `assets/` | Sprites 1–1025 do PokeAPI (`sprites/`, `scripts/fetch-sprites.sh`), Pokémon de demonstração (`demo/`) e firmware do ESP32 (`firmware/pokeldn/`) |
+| `assets/` | Sprites 1–1025 do PokeAPI (`sprites/`, com `shiny/` e `forms/`; `scripts/fetch-sprites.sh`), Pokémon de demonstração (`demo/`), firmware do ESP32 (`firmware/pokeldn/`) e dados (`data/`: `dex.sqlite` gerado e git-ignorado; nossos `bosses/`, `trainers/`, `areas/`, `encounters/`, `maps/`, `vgc/` e `shiny-methods.json`) |
+| `content/*/guides` | Guias em markdown (`index.json`, `games/<jogo>/`, `mechanics/`, `vgc/`, `mythology/`) com diretivas `:::bosses`, `:::boss`, `:::encounters`, `:::tms`, `:::shiny-methods`, `:::vgc-*` |
+| `docs/superpowers/` | Spec e plano do RockAssistent, `data-doubts.md` e `sources/` (fatos tirados dos detonados do autor, nunca a prosa) |
 | `engines/` | Submódulos (frlg-ldn-trade, pokeldn, PKHeX-Plugins) e `patches/` |
-| `scripts/` | `ci.sh`, `dev-host.sh`, `build-worker.sh`, `stage-pokeldn.sh`, `test-pokeldn.sh`, `build-nettools.sh`, `install-worker.sh`, `package-linux.sh`, `smoke-linux.sh`, `package-windows.sh`, `smoke-windows.ps1` |
+| `scripts/` | `ci.sh`, `build-dex.py` (Pokédex do PokeAPI), `check-guides.py` (`--strict`), `dev-host.sh`, `build-worker.sh`, `stage-pokeldn.sh`, `test-pokeldn.sh`, `build-nettools.sh`, `install-worker.sh`, `package-linux.sh`, `smoke-linux.sh`, `package-windows.sh`, `smoke-windows.ps1` |
 | `packaging/linux/` | Atalho, ícone e `worker-setup.sh` (instalação do worker do AppImage como root) |
 | `packaging/windows/` | `traderock.iss` (Inno Setup), `traderock.ico` e `make-icon.py` |
 
@@ -126,6 +144,8 @@ Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-l
 
 - `git submodule update --init --recursive` antes de tudo.
 - .NET 10 SDK, Node 24 e Python 3.12 (para os testes do worker).
+- `python3 -I scripts/build-dex.py` gera `assets/data/dex.sqlite` (git-ignorado; o build do Core falha sem ele). Os
+  CSVs do PokeAPI ficam em `~/.cache/traderock/pokeapi`; o `ci.sh` roda o script sozinho.
 - `scripts/build-worker.sh` baixa o Python embutido e o Zig. A primeira vez leva alguns minutos; o
   resultado fica em `~/.cache/traderock`.
 - JSON dos enums: snake_case. xUnit v3 com Microsoft.Testing.Platform:

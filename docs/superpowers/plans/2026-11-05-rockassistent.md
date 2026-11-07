@@ -492,7 +492,7 @@ Igual à Task 26. Para o Z-A, usar `docs/superpowers/sources/za-pokemythology-no
 
 ### Task 34: Documentação e CLAUDE.md
 
-**Files:** Modify `docs/decisions.md` (+ **D32** Rebranding RockAssistent e novas áreas: resumo das decisões da spec, inclusive a seção 7; **D33** Internet opcional), `CLAUDE.md` (nome do app, novas pastas no mapa do código: `Dex/`, `GameData/`, `Hunts/`, `Nuzlocke/`, `Vgc/`, `Hotkeys/`, `assets/data/`, `content/*/guides`; tabela de decisões; linha "Entrega 20"; o `ci.sh` agora roda `build-dex.py` e `check-guides.py`), `README.md` (seção dos dados: PokeAPI BSD-3, como gerar o dex), `docs/dev-host.md` (como testar Boxes com um save de emulador), `docs/superpowers/data-doubts.md` (consolidado pelo analista de dados na última revisão).
+**Files:** Modify `docs/decisions.md` (+ **D33** Rebranding RockAssistent e novas áreas: resumo das decisões da spec, inclusive a seção 7; a **D32** Internet opcional foi gravada pela Tarefa 33), `CLAUDE.md` (nome do app, novas pastas no mapa do código: `Dex/`, `GameData/`, `Hunts/`, `Nuzlocke/`, `Vgc/`, `Hotkeys/`, `assets/data/`, `content/*/guides`; tabela de decisões; linha "Entrega 20"; o `ci.sh` agora roda `build-dex.py` e `check-guides.py`), `README.md` (seção dos dados: PokeAPI BSD-3, como gerar o dex), `docs/dev-host.md` (como testar Boxes com um save de emulador), `docs/superpowers/data-doubts.md` (consolidado pelo analista de dados na última revisão).
 
 - [ ] Commit `docs: D32 e D33, CLAUDE.md e README do RockAssistent`.
 

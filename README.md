@@ -1,6 +1,18 @@
 # RockAssistent
 
-O RockAssistent (antes chamado TradeRock) troca Pokémon com **os jogos Pokémon do Nintendo Switch /
+O RockAssistent (antes chamado TradeRock) é um **assistente Pokémon offline de todos os jogos da série
+principal**, em português e inglês, explicado de forma simples:
+
+- **Pokédex** de RB/Y a Legends: Z-A, com dados por jogo (onde encontrar, golpes, stats, ovo, evoluções) e "Nos seus
+  saves";
+- **Guias** de cada jogo (detonado curto, chefes com times e level cap, TMs, exclusivos, trocas, eventos, pós-jogo,
+  lendários), **Mecânicas**, **VGC Champions** (regulamentação, times sugeridos, análise da sua equipe) e **Mitologia**;
+- **Boxes**: os saves achados nas suas pastas (emuladores, saves copiados do Switch) e o cofre do app, com mover,
+  copiar e anexar entre eles, sempre com backup;
+- **Nuzlocke** (regras, próximo chefe e level cap, encontros da área, mapa da região), **Contador Hunt** (métodos e
+  chances de shiny por jogo, atalho de teclado, também com o app em segundo plano) e **Histórico** de tudo.
+
+E continua trocando Pokémon com **os jogos Pokémon do Nintendo Switch /
 Switch 2** que têm troca local (FireRed e LeafGreen, Let's Go, Sword/Shield, Brilliant Diamond/Shining
 Pearl, Legends: Arceus, Scarlet/Violet e Legends: Z-A) usando o wireless local do jogo (LDN). O seu PC,
 ou uma plaquinha ESP32, finge ser um segundo Switch na sala de troca.
@@ -142,9 +154,9 @@ catalog/                 catálogo de placas Wi-Fi, ESP32 e conversores USB-seri
 worker/                  worker privilegiado (Linux, Python): protocolo, rádio, wrapper do motor
 frontend/                React + Vite + TypeScript + Tailwind
 firmware/                notas sobre o firmware ESP32 embutido (os binários ficam em assets/firmware/pokeldn)
-assets/                  sprites, Pokémon de demonstração e firmware do ESP32
+assets/                  sprites, dados dos jogos (assets/data), Pokémon de demonstração e firmware do ESP32
 engines/                 submódulos (motores e AutoMod)
-content/                 textos explicativos em markdown, por idioma
+content/                 textos explicativos e guias (content/<idioma>/guides) em markdown, por idioma
 packaging/               atalho, ícone e script de instalação do worker (Linux); instalador Windows
 docs/                    decisões e guias de desenvolvimento
 ```
@@ -375,7 +387,41 @@ Windows num runner Windows (testes, instalador e fumaça: instala, confere e des
 tudo passando, publica o Release. Detalhes em
 [packaging/README.md](packaging/README.md) e na decisão D17.
 
+## Dados e conteúdo
+
+Tudo vai embutido no app: nada é buscado na internet durante o uso. As únicas consultas são a procura de
+atualizações (desligável) e, só se você ligar em **Configurações → Preferências → Internet opcional**, as
+estatísticas de uso do Smogon e os links do pokepast.es. Nenhuma delas envia dados do seu PC.
+
+- **Pokédex:** os CSVs do [PokeAPI](https://github.com/PokeAPI/pokeapi) (licença BSD-3), num commit fixo, viram
+  `assets/data/dex.sqlite`. O arquivo é gerado, não fica no git, e o build do `TradeRock.Core` falha sem ele:
+
+  ```bash
+  python3 -I scripts/build-dex.py          # baixa os CSVs (cache em ~/.cache/traderock/pokeapi) e gera o banco
+  python3 -I scripts/build-dex.py --force  # gera de novo mesmo se estiver em dia
+  ```
+
+  O `scripts/ci.sh` e os scripts de pacote rodam isso sozinhos.
+- **Sprites:** do [PokeAPI/sprites](https://github.com/PokeAPI/sprites), também os shiny e as formas (`assets/sprites`, `scripts/fetch-sprites.sh`). A arte é da Nintendo e da GAME FREAK (por isso a distribuição é só entre amigos).
+- **Dados nossos** em `assets/data` (JSON no nosso formato, conferido por um validador ao abrir o app): times dos
+  chefes, treinadores dos jogos de GBA e DS, áreas e mapas de cada região, encontros dos jogos do Switch, métodos e
+  chances de shiny e os times de VGC. Montados a partir das decompilações da [pret](https://github.com/pret), de
+  pesquisa (fatos dos jogos, sempre reescritos) e das notas dos detonados do autor (`docs/superpowers/sources`, só
+  fatos). O que não foi conferido numa fonte aparece como "não conferido"; as dúvidas abertas estão em
+  [docs/superpowers/data-doubts.md](docs/superpowers/data-doubts.md).
+- **Guias** escritos por nós em `content/{pt-BR,en}/guides`; nenhum texto foi copiado de site. Os blocos de chefes,
+  encontros, TMs e shiny vêm dos dados acima. `python3 -I scripts/check-guides.py --strict` confere se todos os jogos
+  têm todas as seções.
+
+Pokémon e os nomes relacionados são marcas da Nintendo, da Creatures e da GAME FREAK. O RockAssistent é um projeto de
+fã, sem ligação com elas.
+
 ## Licença e créditos
 
 RockAssistent é software livre sob a **GNU AGPL-3.0**. Veja [LICENSE](LICENSE),
 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) e a tela **Sobre** do app.
+
+Agradecimentos: [PokeAPI](https://github.com/PokeAPI/pokeapi) (dados, BSD-3, e sprites, arte da Nintendo/GAME FREAK),
+[PKHeX](https://github.com/kwsch/PKHeX) e PKHeX-Plugins (leitura e legalidade dos Pokémon e saves),
+[pret](https://github.com/pret) (decompilações usadas para conferir os dados), frlg-ldn-trade e pokeldn (troca com o
+Switch).
