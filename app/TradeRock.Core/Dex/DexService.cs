@@ -293,6 +293,30 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult<MoveDetail?>(detail);
     }
 
+    /// <summary>
+    /// Tipo, categoria e poder de vários golpes como valem no jogo (com as mudanças do PokeAPI), sem a lista de quem
+    /// aprende. Golpe desconhecido fica fora. Para análises rápidas (times do VGC).
+    /// </summary>
+    public Task<IReadOnlyList<MoveBattleInfo>> MovesBattleInfoAsync(IEnumerable<int> ids, string gameKey, CancellationToken ct)
+    {
+        ct.ThrowIfCancellationRequested();
+        var data = Data;
+        var game = data.Game(gameKey);
+        using var c = db.Open();
+        var result = new List<MoveBattleInfo>();
+        foreach (var id in ids.Distinct())
+        {
+            using var cmd = Command(c, "SELECT identifier, name_en, type_id, power, pp, accuracy, damage_class FROM moves WHERE id = $m",
+                ("$m", id));
+            using var r = cmd.ExecuteReader();
+            if (!r.Read())
+                continue;
+            var stats = data.MoveAt(id, game.Order, Int(r, 2) ?? 0, Int(r, 3), Int(r, 4), Int(r, 5));
+            result.Add(new MoveBattleInfo(id, r.GetString(0), Str(r, 1) ?? r.GetString(0), data.TypeName(stats.Type), Str(r, 6), stats.Power));
+        }
+        return Task.FromResult<IReadOnlyList<MoveBattleInfo>>(result);
+    }
+
     public Task<AbilityDetail?> GetAbilityAsync(int id, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();

@@ -83,6 +83,14 @@ class CheckGuidesTests(unittest.TestCase):
         self.assertTrue(any(":::tms: espera de 1 a 1 argumentos" in e for e in errors), errors)
         self.assertFalse(any("ignorada" in e for e in errors), errors)
 
+    def test_diretivas_do_vgc_sem_argumentos(self):
+        for lang in check_guides.LANGS:
+            self.write(f"content/{lang}/guides/games/frlg/overview.md", ":::vgc-regulation\n:::vgc-teams\n")
+        self.assertEqual(self.errors(), [])
+        for lang in check_guides.LANGS:
+            self.write(f"content/{lang}/guides/games/frlg/overview.md", ":::vgc-teams sv\n")
+        self.assertTrue(any(":::vgc-teams: espera de 0 a 0 argumentos" in e for e in self.errors()))
+
     def test_strict_com_jogo_sem_secao(self):
         self.assertEqual(self.errors(), [])
         errors = self.errors(strict=True)

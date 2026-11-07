@@ -116,6 +116,7 @@ public static class TradeRockServer
         api.MapServer();
         api.MapDex();
         api.MapGameData();
+        api.MapVgc();
         api.MapHunts();
         api.MapNuzlocke();
     }

@@ -2491,5 +2491,91 @@
         "Delete": "Delete"
       }
     }
+  },
+  "vgc": {
+    "teamsTitle": "Sample teams",
+    "teamsCard": "Ready teams for the current regulation, with a paste to copy or import.",
+    "teamsSub": "{{regulation}} ({{from}} to {{to}}). Teams written by RockAssistent with Pokémon that are strong in the format.",
+    "teamsSubShort": "Teams written by RockAssistent with Pokémon that are strong in the format.",
+    "importHint": "Import creates the 6 in Scarlet/Violet and puts them in the Boxes inbox. Mega Stones don't exist in SV: those come without an item.",
+    "backToVgc": "← VGC Champions",
+    "goToMyTeam": "Build and analyze my team →",
+    "goToTeams": "See the sample teams →",
+    "idea": "Idea",
+    "howToPlay": "How to play",
+    "dangers": "Watch out for",
+    "copy": "Copy paste",
+    "copied": "Paste copied!",
+    "copyFailed": "Couldn't copy. Select the text and copy it by hand.",
+    "showPaste": "Show paste",
+    "hidePaste": "Hide paste",
+    "analyze": "Analyze",
+    "analyzing": "Analyzing…",
+    "import": "Import to Boxes",
+    "importing": "Importing…",
+    "imported_one": "{{count}} Pokémon in the inbox",
+    "imported_other": "{{count}} Pokémon in the inbox",
+    "importFailed": "These couldn't be created in Scarlet/Violet:",
+    "archetypes": {
+      "rain": "Rain",
+      "sun": "Sun",
+      "sand": "Sand",
+      "trick_room": "Trick Room",
+      "balance": "Balance",
+      "hyper_offense": "Hyper offense",
+      "setup": "Screens and setup"
+    },
+    "errors": {
+      "pasteInvalid": "I couldn't find any Pokémon in that text. Paste a Showdown export (name @ item, Ability, EVs, moves with -).",
+      "pasteTooBig": "The paste is over 20 KB. A team has 6 Pokémon: check that you pasted only the team.",
+      "analyze": "Couldn't analyze right now. Try again.",
+      "import": "Couldn't import right now. Try again."
+    },
+    "report": {
+      "title": "Analysis: {{name}}",
+      "skipped": "Left out of the analysis (not in Scarlet/Violet or past 6):",
+      "speedShort": "Spe {{n}}",
+      "defense": "Weaknesses by type",
+      "defenseHint": "How much damage each attacking type does to each member. Red: takes more; green: takes less or none.",
+      "teamWeak": "Team weak spots:",
+      "noTeamWeak": "No type hits half the team without an answer.",
+      "attack": "Attack",
+      "weak": "Weak",
+      "resist": "Resist",
+      "coverage": "Offensive coverage",
+      "coverageHint": "Types of the team's attacking moves (status moves don't count).",
+      "attackTypes": "Moves of:",
+      "uncovered": "Nothing super effective against:",
+      "allCovered": "every type",
+      "speeds": "Base Speed",
+      "limits": "Uses types and moves as in Scarlet/Violet. Doesn't count abilities (Levitate, Water Absorb...), items, Mega Evolution or Stat Points."
+    },
+    "myTeam": {
+      "title": "My team",
+      "card": "Paste a Showdown export, see weaknesses, coverage and speed.",
+      "sub": "Paste your team (the text Showdown and Pokémon Champions export). RockAssistent shows weaknesses, coverage and speeds.",
+      "label": "Team paste",
+      "placeholder": "Incineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat",
+      "size": "{{kb}} KB of {{max}} KB",
+      "save": "Save on this computer",
+      "saved": "Team saved on this computer.",
+      "saveFailed": "The browser didn't allow saving. The text stays here while the page is open.",
+      "offline": "Nothing leaves your computer: the analysis runs inside RockAssistent."
+    },
+    "regulation": {
+      "period": "Period",
+      "dates": "{{from}} to {{to}}",
+      "format": "Format",
+      "formatValue": "Doubles, bring {{bring}} pick {{pick}}, level {{level}}",
+      "pool": "Allowed Pokémon",
+      "checkedOn": "Checked on",
+      "rules": "Rules",
+      "newSpecies": "New in this regulation",
+      "newMegas": "New Megas",
+      "newItems": "New items",
+      "bannedSpecies": "Banned Pokémon",
+      "bannedMoves": "Banned moves",
+      "none": "none"
+    }
   }
 }

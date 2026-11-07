@@ -2,12 +2,13 @@ using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using TradeRock.Core.Dex;
 using TradeRock.Core.Games;
+using TradeRock.Core.Vgc;
 
 namespace TradeRock.Core.GameData;
 
 /// <summary>
 /// Os dados dos jogos embutidos (<c>assets/data/**/*.json</c>, recurso <c>data/&lt;caminho&gt;</c>): métodos de shiny,
-/// chefes, treinadores, áreas, encontros e mapas. Carrega e valida tudo no construtor; dado inválido é erro de build
+/// chefes, treinadores, áreas, encontros, mapas e os dados do VGC (times sugeridos e regulamentação). Carrega e valida tudo no construtor; dado inválido é erro de build
 /// (os testes carregam o mesmo conteúdo). Jogo sem arquivo = lista vazia.
 /// </summary>
 public sealed class GameDataStore
@@ -28,6 +29,7 @@ public sealed class GameDataStore
     private readonly Dictionary<string, IReadOnlyList<GameArea>> _areas = [];
     private readonly Dictionary<string, IReadOnlyList<OwnEncounter>> _encounters = [];
     private readonly Dictionary<Region, MapGraph> _maps = [];
+    private IReadOnlyList<VgcTeam> _vgcTeams = [];
 
     public GameDataStore(DexService dex, ILogger<GameDataStore> logger)
         : this(EmbeddedFiles(), MoveCheck(dex, logger), logger)
@@ -62,6 +64,8 @@ public sealed class GameDataStore
                 case DataFile<GameArea> f: _areas[key!] = f.Items; break;
                 case DataFile<OwnEncounter> f: _encounters[key!] = f.Items; break;
                 case MapGraph m: _maps[ParseRegion(key!)] = m; break;
+                case DataFile<VgcTeam> f: _vgcTeams = f.Items; break;
+                case VgcRegulation r: VgcRegulation = r; break;
                 default: errors.Add($"{path}: pasta desconhecida ({folder})"); break;
             }
         }
@@ -71,6 +75,7 @@ public sealed class GameDataStore
         if (moveExists is null)
             logger.LogWarning("Dados dos jogos: golpes não conferidos (Pokédex offline indisponível).");
         errors.AddRange(GameDataValidator.Validate(this, moveExists));
+        errors.AddRange(VgcValidator.Validate(_vgcTeams, VgcRegulation));
         if (errors.Count > 0)
             throw new InvalidDataException("Dados dos jogos inválidos:\n" + string.Join("\n", errors));
     }
@@ -88,6 +93,12 @@ public sealed class GameDataStore
     public IReadOnlyList<OwnEncounter> Encounters(string gameKey) => _encounters.GetValueOrDefault(gameKey) ?? [];
 
     public MapGraph? Map(Region region) => _maps.GetValueOrDefault(region);
+
+    /// <summary>Times sugeridos do VGC (<c>vgc/teams.json</c>).</summary>
+    public IReadOnlyList<VgcTeam> VgcTeams => _vgcTeams;
+
+    /// <summary>Regulamentação vigente do VGC (<c>vgc/regulation.json</c>); nula sem o arquivo.</summary>
+    public VgcRegulation? VgcRegulation { get; private set; }
 
     internal IEnumerable<string> GameKeys =>
         _bosses.Keys.Concat(_trainers.Keys).Concat(_areas.Keys).Concat(_encounters.Keys).Distinct();
@@ -123,6 +134,8 @@ public sealed class GameDataStore
             "areas" => Read<DataFile<GameArea>>(json),
             "encounters" => Read<DataFile<OwnEncounter>>(json),
             "maps" => Read<MapFile>(json) is { } m ? new MapGraph(m.Region, m.Nodes, m.Edges) : null,
+            "vgc" when key == "teams" => Read<DataFile<VgcTeam>>(json),
+            "vgc" when key == "regulation" => Read<VgcRegulation>(json),
             _ => throw new InvalidDataException("arquivo fora do formato conhecido"),
         };
         if (result is null)

@@ -2491,5 +2491,91 @@
         "Delete": "Delete"
       }
     }
+  },
+  "vgc": {
+    "teamsTitle": "Times sugeridos",
+    "teamsCard": "Times prontos da regulamentação atual, com paste para copiar ou importar.",
+    "teamsSub": "{{regulation}} ({{from}} a {{to}}). Times escritos pelo RockAssistent com Pokémon fortes no formato.",
+    "teamsSubShort": "Times escritos pelo RockAssistent com Pokémon fortes no formato.",
+    "importHint": "Importar cria os 6 no Scarlet/Violet e põe na Caixa de entrada do Boxes. Mega Stones não existem no SV: esses ficam sem item.",
+    "backToVgc": "← VGC Champions",
+    "goToMyTeam": "Montar e analisar a minha equipe →",
+    "goToTeams": "Ver os times sugeridos →",
+    "idea": "Ideia",
+    "howToPlay": "Como jogar",
+    "dangers": "Cuidado com",
+    "copy": "Copiar paste",
+    "copied": "Paste copiado!",
+    "copyFailed": "Não deu para copiar. Selecione o texto e copie à mão.",
+    "showPaste": "Ver paste",
+    "hidePaste": "Esconder paste",
+    "analyze": "Analisar",
+    "analyzing": "Analisando…",
+    "import": "Importar para o Boxes",
+    "importing": "Importando…",
+    "imported_one": "{{count}} Pokémon na Caixa de entrada",
+    "imported_other": "{{count}} Pokémon na Caixa de entrada",
+    "importFailed": "Estes não puderam ser criados no Scarlet/Violet:",
+    "archetypes": {
+      "rain": "Chuva",
+      "sun": "Sol",
+      "sand": "Areia",
+      "trick_room": "Trick Room",
+      "balance": "Equilíbrio",
+      "hyper_offense": "Ataque total",
+      "setup": "Telas e reforço"
+    },
+    "errors": {
+      "pasteInvalid": "Não achei nenhum Pokémon nesse texto. Cole um paste do Showdown (nome @ item, Ability, EVs, golpes com -).",
+      "pasteTooBig": "O paste passou de 20 KB. Um time tem 6 Pokémon: confira se colou só o time.",
+      "analyze": "Não deu para analisar agora. Tente de novo.",
+      "import": "Não deu para importar agora. Tente de novo."
+    },
+    "report": {
+      "title": "Análise: {{name}}",
+      "skipped": "Ficaram fora da análise (não existem no Scarlet/Violet ou passaram de 6):",
+      "speedShort": "Vel. {{n}}",
+      "defense": "Fraquezas por tipo",
+      "defenseHint": "Quanto dano cada tipo de ataque causa em cada um. Vermelho: leva mais; verde: leva menos ou nada.",
+      "teamWeak": "Pontos fracos do time:",
+      "noTeamWeak": "Nenhum tipo pega metade do time sem resposta.",
+      "attack": "Ataque",
+      "weak": "Fracos",
+      "resist": "Resistem",
+      "coverage": "Cobertura ofensiva",
+      "coverageHint": "Tipos dos golpes de ataque do time (golpes de status não contam).",
+      "attackTypes": "Golpes de:",
+      "uncovered": "Nada super efetivo contra:",
+      "allCovered": "todos os tipos",
+      "speeds": "Velocidade base",
+      "limits": "Conta os tipos e golpes como no Scarlet/Violet. Não conta habilidades (Levitate, Water Absorb...), itens, Mega Evolução nem Stat Points."
+    },
+    "myTeam": {
+      "title": "Minha equipe",
+      "card": "Cole um paste do Showdown, veja fraquezas, cobertura e velocidade.",
+      "sub": "Cole o paste do seu time (o texto que o Showdown e o Pokémon Champions exportam). O RockAssistent mostra fraquezas, cobertura e velocidades.",
+      "label": "Paste do time",
+      "placeholder": "Incineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat",
+      "size": "{{kb}} KB de {{max}} KB",
+      "save": "Salvar neste computador",
+      "saved": "Equipe salva neste computador.",
+      "saveFailed": "O navegador não deixou salvar. O texto continua aqui enquanto a página estiver aberta.",
+      "offline": "Nada sai do seu computador: a análise roda no próprio RockAssistent."
+    },
+    "regulation": {
+      "period": "Período",
+      "dates": "{{from}} a {{to}}",
+      "format": "Formato",
+      "formatValue": "Dupla, leva {{bring}} e escolhe {{pick}}, nível {{level}}",
+      "pool": "Pokémon permitidos",
+      "checkedOn": "Conferido em",
+      "rules": "Regras",
+      "newSpecies": "Novos nesta regulamentação",
+      "newMegas": "Novas Megas",
+      "newItems": "Novos itens",
+      "bannedSpecies": "Pokémon banidos",
+      "bannedMoves": "Golpes banidos",
+      "none": "nenhum"
+    }
   }
 }

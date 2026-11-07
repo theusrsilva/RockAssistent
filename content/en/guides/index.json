@@ -1139,14 +1139,29 @@
   ],
   "vgc": [
     {
-      "key": "intro",
-      "title": "What is VGC",
-      "description": "The official tournament format.",
+      "key": "champions",
+      "title": "VGC Champions",
+      "description": "Getting started, current regulation, sample teams and how to read a paste.",
       "sections": [
         {
-          "id": "intro",
-          "title": "What is VGC",
-          "file": "vgc/intro.md"
+          "id": "starting",
+          "title": "Getting started in VGC",
+          "file": "vgc/starting.md"
+        },
+        {
+          "id": "regulation",
+          "title": "Current regulation",
+          "file": "vgc/regulation.md"
+        },
+        {
+          "id": "teams",
+          "title": "Sample teams",
+          "file": "vgc/teams.md"
+        },
+        {
+          "id": "reading-a-team",
+          "title": "Reading a paste",
+          "file": "vgc/reading-a-team.md"
         }
       ]
     }

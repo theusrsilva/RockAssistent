@@ -30,6 +30,22 @@ function GuideCard({ section, guide }: { section: GuideSection; guide: GuideEntr
   )
 }
 
+/** Atalho para uma ferramenta da seção (times sugeridos, Minha equipe). */
+function ToolCard({ to, icon, title, sub }: { to: string; icon: string; title: string; sub: string }) {
+  return (
+    <Link
+      to={to}
+      className="flex items-start gap-2.5 rounded-xl border border-line bg-surface px-4 py-3 transition-colors hover:border-accent hover:bg-surface2"
+    >
+      <Icon name={icon} className="mt-0.5 text-[22px] text-accent" />
+      <span className="flex flex-col gap-0.5">
+        <span className="font-bold">{title}</span>
+        <span className="text-[12.5px] text-muted">{sub}</span>
+      </span>
+    </Link>
+  )
+}
+
 /** /guias/<seção> sem guia: volta ao índice, na seção (ou no topo, se a seção não existe). */
 export function GuideSectionRedirect() {
   const { section } = useParams()
@@ -61,6 +77,12 @@ export default function GuidesPage() {
               </h2>
               <p className="text-[12.5px] text-muted">{t(`guides.sectionsSub.${section}`)}</p>
             </div>
+            {section === 'vgc' && (
+              <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                <ToolCard to="/guias/vgc/times" icon="groups" title={t('vgc.teamsTitle')} sub={t('vgc.teamsCard')} />
+                <ToolCard to="/guias/vgc/minha-equipe" icon="edit_note" title={t('vgc.myTeam.title')} sub={t('vgc.myTeam.card')} />
+              </div>
+            )}
             {guides.length === 0 ? (
               <p className="text-sm text-muted">{t('guides.empty')}</p>
             ) : (

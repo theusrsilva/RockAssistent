@@ -66,6 +66,8 @@ def directive_specs(data: Data):
         "encounters": (2, 2, check_id(data, "areas", "área")),
         "tms": (1, 1, lambda a: check_game(data, a[0])),
         "shiny-methods": (0, 1, lambda a: check_game(data, a[0]) if a else None),
+        "vgc-regulation": (0, 0, lambda a: None),
+        "vgc-teams": (0, 0, lambda a: None),
     }
 
 

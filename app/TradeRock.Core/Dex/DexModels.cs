@@ -112,3 +112,6 @@ public enum AvailabilityKind
 }
 
 public sealed record GameAvailability(string GameKey, string Name, AvailabilityKind Kind);
+
+/// <summary>O essencial de um golpe para análise de time: tipo, categoria (physical/special/status) e poder.</summary>
+public sealed record MoveBattleInfo(int Id, string Identifier, string Name, string Type, string? Class, int? Power);

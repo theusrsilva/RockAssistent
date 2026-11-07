@@ -50,6 +50,46 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public void Times_do_VGC_tem_6_Pokemon_que_existem_no_SV()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        Assert.NotNull(store.VgcRegulation);
+        Assert.InRange(store.VgcTeams.Count, 6, 10);
+        foreach (var team in store.VgcTeams)
+        {
+            Assert.Equal(store.VgcRegulation!.Name, team.Regulation);
+            var items = TradeRock.Core.Builder.ShowdownImport.Parse(team.Paste,
+                new TradeRock.Core.Builder.TrainerSpec("VGC", 0, 0), TradeRock.Core.Trading.TradeGame.Scarlet);
+            Assert.Equal(6, items.Count);
+            // Toda espécie existe no SV (para analisar e importar para o Boxes); só item pode faltar (Mega Stones).
+            Assert.All(items, i => Assert.True(i.Spec is not null, $"{team.Id}: {i.Text.Split('\n')[0]} {string.Join(",", i.Problems)}"));
+            Assert.All(items, i => Assert.Equal(4, i.Spec!.Moves.Length));
+            Assert.All(items, i => Assert.DoesNotContain(i.Problems, p => p.StartsWith("move", StringComparison.Ordinal) || p.StartsWith("ability", StringComparison.Ordinal)));
+        }
+    }
+
+    [Fact]
+    public void Validador_do_VGC_rejeita_paste_com_5_Pokemon_e_item_repetido()
+    {
+        // O @"\n" vira o escape \n do JSON (quebra de linha no paste).
+        const string mon = @"Pikachu @ Light Ball\nAbility: Static\n- Thunderbolt\n\n";
+        var regulation = GameDataStore.EmbeddedFiles()["vgc/regulation.json"];
+        var files = new Dictionary<string, string>
+        {
+            ["vgc/regulation.json"] = regulation,
+            ["vgc/teams.json"] = $$"""
+                { {{Source}}, "items": [ { "id": "x", "name": "X", "archetype": "rain", "regulation": "Regulation Set M-C",
+                  "date_iso": "2026-11-06", "paste": "{{string.Concat(Enumerable.Repeat(mon, 5))}}",
+                  "idea_pt": "a", "idea_en": "a", "how_to_play_pt": "a", "how_to_play_en": "a", "dangers_pt": "a", "dangers_en": "a" } ] }
+                """,
+        };
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(files));
+        Assert.Contains("5 Pokémon", ex.Message);
+        Assert.Contains("Species Clause", ex.Message);
+        Assert.Contains("Item Clause", ex.Message);
+    }
+
+    [Fact]
     public void Validador_rejeita_especie_inexistente()
     {
         var files = new Dictionary<string, string>

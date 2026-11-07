@@ -30,6 +30,9 @@ import { ToastProvider } from './components/ui'
 
 // A página de um guia (markdown com tabelas e blocos de dados) fica num chunk separado.
 const GuidePage = lazy(() => import('./pages/guides/GuidePage'))
+// Seção VGC: times sugeridos e "Minha equipe" (também em chunks separados).
+const VgcTeamsPage = lazy(() => import('./pages/guides/vgc/TeamsPage'))
+const VgcMyTeamPage = lazy(() => import('./pages/guides/vgc/MyTeamPage'))
 
 export default function App() {
   useTheme() // aplica o tema salvo em qualquer página
@@ -49,6 +52,22 @@ export default function App() {
                 <Route path="/pokedex/tipos" element={<TypeChartPage />} />
                 <Route path="/guias" element={<GuidesPage />} />
                 <Route path="/guias/:section" element={<GuideSectionRedirect />} />
+                <Route
+                  path="/guias/vgc/times"
+                  element={
+                    <Suspense fallback={null}>
+                      <VgcTeamsPage />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/guias/vgc/minha-equipe"
+                  element={
+                    <Suspense fallback={null}>
+                      <VgcMyTeamPage />
+                    </Suspense>
+                  }
+                />
                 <Route
                   path="/guias/:section/:slug/:page?"
                   element={

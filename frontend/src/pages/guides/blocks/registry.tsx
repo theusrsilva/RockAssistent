@@ -4,6 +4,8 @@ import BossTable from './BossTable'
 import EncounterTable from './EncounterTable'
 import ShinyMethodsTable from './ShinyMethodsTable'
 import TmTable from './TmTable'
+import VgcRegulationBlock from './VgcRegulationBlock'
+import VgcTeamsBlock from './VgcTeamsBlock'
 import type { BlockProps } from './common'
 
 /**
@@ -16,4 +18,6 @@ export const GUIDE_BLOCKS: Record<string, ComponentType<BlockProps>> = {
   encounters: EncounterTable,
   tms: TmTable,
   'shiny-methods': ShinyMethodsTable,
+  'vgc-regulation': VgcRegulationBlock,
+  'vgc-teams': VgcTeamsBlock,
 }

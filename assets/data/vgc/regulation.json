@@ -1,0 +1,103 @@
+{
+  "source": [
+    "https://victoryroad.pro/champions-regulations/",
+    "https://www.serebii.net/pokemonchampions/rankedbattle/regulationm-c.shtml",
+    "https://gamewith.ai/pokemon-champions/en/articles/regulation-mc",
+    "https://www.pikalytics.com/pokedex/championstournaments",
+    "https://champdex.com/guides/stat-points"
+  ],
+  "name": "Regulation Set M-C",
+  "game": "Pokémon Champions",
+  "valid_from": "2026-09-09",
+  "valid_to": "2026-12-02",
+  "checked_on": "2026-11-06",
+  "format": "doubles",
+  "bring": 6,
+  "pick": 4,
+  "level": 50,
+  "allowed_dexes": [
+    "Pokémon Champions: roster M-C (tudo do M-A e do M-B + as adições do M-C)"
+  ],
+  "banned_species": [],
+  "banned_moves": [
+    "Pound (Politoed)",
+    "Mirror Coat (Archaludon)",
+    "Metal Burst (Archaludon)"
+  ],
+  "new_species": [
+    "Wigglytuff",
+    "Persian",
+    "Persian-Alola",
+    "Farfetch'd",
+    "Mr. Mime",
+    "Swalot",
+    "Absol",
+    "Salamence",
+    "Garchomp",
+    "Lucario",
+    "Gogoat",
+    "Golisopod",
+    "Rillaboom",
+    "Cinderace",
+    "Inteleon",
+    "Thievul",
+    "Toxtricity",
+    "Toxtricity-Low-Key",
+    "Grapploct",
+    "Perrserker",
+    "Sirfetch'd",
+    "Pincurchin",
+    "Indeedee",
+    "Indeedee-F",
+    "Pawmot",
+    "Arboliva",
+    "Squawkabilly",
+    "Mabosstiff",
+    "Baxcalibur"
+  ],
+  "new_megas": [
+    "Mega Absol Z",
+    "Mega Salamence",
+    "Mega Garchomp Z",
+    "Mega Lucario Z",
+    "Mega Golisopod",
+    "Mega Baxcalibur"
+  ],
+  "new_items": [
+    "Leek",
+    "Rocky Helmet",
+    "Air Balloon",
+    "Red Card",
+    "Binding Band",
+    "Eject Button",
+    "Normal Gem",
+    "Terrain Extender",
+    "Electric Seed",
+    "Psychic Seed",
+    "Misty Seed",
+    "Grassy Seed"
+  ],
+  "rules_pt": [
+    "Batalha em dupla (Doubles).",
+    "Leve 6 Pokémon e escolha 4 para cada batalha.",
+    "Todos lutam no nível 50 (o jogo ajusta sozinho).",
+    "Species Clause: sem dois Pokémon com o mesmo número da Pokédex Nacional (ex.: Heat Rotom e Wash Rotom juntos não).",
+    "Item Clause: cada um pode segurar um item, mas sem itens repetidos.",
+    "Mega Evolução vale (só nos Pokémon que têm Mega); não há Terastal.",
+    "Stat Points (SP) no lugar de EVs e IVs: 66 por Pokémon, no máximo 32 em um atributo.",
+    "Tempo: 7 minutos por jogador, 90 s para escolher os 4 e 45 s por turno."
+  ],
+  "rules_en": [
+    "Double battles.",
+    "Bring 6 Pokémon and pick 4 for each battle.",
+    "Everyone fights at level 50 (the game adjusts it).",
+    "Species Clause: no two Pokémon with the same National Pokédex number (e.g. no Heat Rotom with Wash Rotom).",
+    "Item Clause: each one may hold an item, but no repeated items.",
+    "Mega Evolution is allowed (only for Pokémon that have one); there is no Terastallization.",
+    "Stat Points (SP) replace EVs and IVs: 66 per Pokémon, at most 32 in one stat.",
+    "Clock: 7 minutes per player, 90 s to pick your 4 and 45 s per turn."
+  ],
+  "notes_pt": "Vale nas Ranked Battles do Pokémon Champions (temporadas M-6, M-7 e M-8) e na maior parte dos eventos do VGC no período. Não tira ninguém do M-A e do M-B: só adiciona. A lista completa de Pokémon fica no jogo (Recruit → Roster Info). A versão 1.2.0 mudou o PP de Wish e Strength Sap (12 → 8) e o poder de alguns golpes; calculadoras antigas podem errar.",
+  "notes_en": "Used in Pokémon Champions Ranked Battles (seasons M-6, M-7 and M-8) and in most VGC events in this period. Nothing from M-A and M-B was removed: it only adds. The full Pokémon list is in the game (Recruit → Roster Info). Version 1.2.0 changed the PP of Wish and Strength Sap (12 → 8) and the power of some moves; older calculators can be off.",
+  "verified": true
+}
