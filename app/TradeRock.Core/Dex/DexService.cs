@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text;
 using Microsoft.Data.Sqlite;
+using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
 
 namespace TradeRock.Core.Dex;
@@ -379,12 +380,20 @@ public sealed class DexService(DexDatabase db)
         return Task.FromResult(new TypeChart(generation, types.Select(t => t.Name).ToList(), factors));
     }
 
+    /// <summary>Disponibilidade só com o PokeAPI. Veja a sobrecarga com os nossos encontros.</summary>
+    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId, CancellationToken ct) =>
+        AvailabilityAsync(speciesId, null, ct);
+
     /// <summary>
-    /// Como conseguir a espécie em cada jogo, na ordem: Encounter (o PokeAPI tem um encontro numa versão do jogo),
-    /// Evolution (evolui de uma espécie que existe no jogo), Egg (melhor esforço: forma base, o jogo tem criação, e
-    /// alguma evolução dela existe no jogo e pode botar ovo), senão None. Gift fica para os nossos dados (Task 8).
+    /// Como conseguir a espécie em cada jogo, na ordem: Encounter, Gift, Trade, Evolution (evolui de uma espécie que
+    /// existe no jogo), Egg (melhor esforço: forma base, o jogo tem criação, e alguma evolução dela existe no jogo e
+    /// pode botar ovo), senão None. Nos jogos com encontros próprios (<paramref name="ownEncounters"/> não vazio:
+    /// BDSP, Arceus, SV e Z-A) Encounter vem deles (qualquer método que não seja <c>gift</c> nem <c>trade</c>); nos
+    /// outros, do PokeAPI. Gift e Trade vêm dos nossos dados em qualquer jogo.
     /// </summary>
-    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId, CancellationToken ct)
+    /// <param name="ownEncounters">Encontros próprios do jogo (<c>GameDataStore.Encounters</c>); nulo = só o PokeAPI.</param>
+    public Task<IReadOnlyList<GameAvailability>> AvailabilityAsync(int speciesId,
+        Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters, CancellationToken ct)
     {
         ct.ThrowIfCancellationRequested();
         var data = Data;
@@ -392,15 +401,27 @@ public sealed class DexService(DexDatabase db)
         IReadOnlyList<GameAvailability> result = GameVersions.All.Select(g =>
         {
             var game = data.Game(g.Key);
+            var own = ownEncounters?.Invoke(g.Key) ?? [];
+            var ownSpecies = own.Select(e => e.Species).ToHashSet();
+            var mine = own.Where(e => e.Species == speciesId).ToList();
+            bool In(int s) => game.Exists.Contains(s) || ownSpecies.Contains(s);
+
             var kind = AvailabilityKind.None;
-            if (row is not null && game.Exists.Contains(speciesId))
+            if (row is not null && In(speciesId))
             {
-                if (game.Encounters.Contains(speciesId))
+                var wild = own.Count > 0
+                    ? mine.Any(e => e.Method is not ("gift" or "trade"))
+                    : game.Exists.Contains(speciesId) && game.Encounters.Contains(speciesId);
+                if (wild)
                     kind = AvailabilityKind.Encounter;
-                else if (row.EvolvesFrom is { } from && game.Exists.Contains(from))
+                else if (mine.Any(e => e.Method == "gift"))
+                    kind = AvailabilityKind.Gift;
+                else if (mine.Any(e => e.Method == "trade"))
+                    kind = AvailabilityKind.Trade;
+                else if (row.EvolvesFrom is { } from && In(from))
                     kind = AvailabilityKind.Evolution;
                 else if (row.EvolvesFrom is null && g.Generation >= 2 && !NoBreeding.Contains(g.Key)
-                         && data.Descendants(speciesId).Any(d => game.Exists.Contains(d) && data.Breedable.Contains(d)))
+                         && data.Descendants(speciesId).Any(d => In(d) && data.Breedable.Contains(d)))
                     kind = AvailabilityKind.Egg;
             }
             return new GameAvailability(g.Key, g.Name, kind);

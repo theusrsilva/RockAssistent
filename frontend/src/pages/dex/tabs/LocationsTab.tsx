@@ -19,7 +19,7 @@ export function LocationsTab({ detail }: { detail: SpeciesDetail }) {
     places.set(key, [...(places.get(key) ?? []), e])
   }
   const method = (m: string) => t(`dex.method.${m}`, { defaultValue: titleCase(m) })
-  const condition = (c: string) => t(`dex.condition.${c}`, { defaultValue: c.replace(/-/g, ' ') })
+  const condition = (c: string) => t(`dex.condition.${c}`, { defaultValue: c.replace(/[-_]/g, ' ') })
 
   return (
     <div className="flex flex-col gap-3">

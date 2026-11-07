@@ -182,7 +182,7 @@ export interface TypeChart {
   factors: Record<string, Record<string, number>>
 }
 
-export type AvailabilityKind = 'none' | 'encounter' | 'evolution' | 'egg' | 'gift'
+export type AvailabilityKind = 'none' | 'encounter' | 'evolution' | 'egg' | 'gift' | 'trade'
 
 export interface GameAvailability {
   gameKey: string

@@ -1,4 +1,5 @@
 using TradeRock.Core.Dex;
+using TradeRock.Core.GameData;
 using TradeRock.Core.Games;
 
 namespace TradeRock.App.Api;
@@ -22,15 +23,21 @@ public static class DexEndpoints
             return Results.Ok(await dex.ListAsync(new DexQuery(text, type, generation, game, offset ?? 0, limit ?? 100), ct));
         });
 
-        group.MapGet("/species/{id:int}", async (int id, string? game, string? lang, DexService dex, CancellationToken ct) =>
+        group.MapGet("/species/{id:int}", async (int id, string? game, string? lang, DexService dex, GameDataStore data,
+            CancellationToken ct) =>
         {
             if (game is null || !KnownGame(game))
                 return UnknownGame();
-            return await dex.GetAsync(id, game, lang ?? DefaultLang, ct) is { } detail ? Results.Ok(detail) : Results.NotFound();
+            if (await dex.GetAsync(id, game, lang ?? DefaultLang, ct) is not { } detail)
+                return Results.NotFound();
+            // BDSP, Arceus, SV e Z-A: "Onde achar" mostra os nossos encontros (o PokeAPI não cobre esses jogos direito).
+            if (data.SpeciesEncounters(game, id) is { } own)
+                detail = detail with { Encounters = own, ExistsInGame = detail.ExistsInGame || own.Count > 0 };
+            return Results.Ok(detail);
         });
 
-        group.MapGet("/species/{id:int}/availability", async (int id, DexService dex, CancellationToken ct) =>
-            Results.Ok(await dex.AvailabilityAsync(id, ct)));
+        group.MapGet("/species/{id:int}/availability", async (int id, DexService dex, GameDataStore data, CancellationToken ct) =>
+            Results.Ok(await dex.AvailabilityAsync(id, data.Encounters, ct)));
 
         group.MapGet("/moves/{id:int}", async (int id, string? game, DexService dex, CancellationToken ct) =>
         {

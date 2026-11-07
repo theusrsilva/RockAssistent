@@ -101,7 +101,7 @@ public sealed record ItemDetail(int Id, string Identifier, string Name, string? 
 public sealed record TypeChart(int Generation, IReadOnlyList<string> Types,
     IReadOnlyDictionary<string, IReadOnlyDictionary<string, double>> Factors);
 
-/// <summary>Como conseguir a espécie no jogo. <see cref="Gift"/> vem dos nossos dados (Task 8).</summary>
+/// <summary>Como conseguir a espécie no jogo. <see cref="Gift"/> e <see cref="Trade"/> (troca com personagem) vêm dos nossos dados.</summary>
 public enum AvailabilityKind
 {
     None,
@@ -109,6 +109,7 @@ public enum AvailabilityKind
     Evolution,
     Egg,
     Gift,
+    Trade,
 }
 
 public sealed record GameAvailability(string GameKey, string Name, AvailabilityKind Kind);

@@ -548,6 +548,32 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public async Task Disponibilidade_usa_os_encontros_proprios()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido (rode scripts/build-dex.py).");
+        var store = new GameDataStore(fx.Service, NullLogger<GameDataStore>.Instance);
+        async Task<AvailabilityKind> Kind(int species, string game) =>
+            (await fx.Service.AvailabilityAsync(species, store.Encounters, TestContext.Current.CancellationToken))
+            .Single(a => a.GameKey == game).Kind;
+
+        // Bulbasaur no Z-A: presente no laboratório e selvagem numa Wild Zone.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(1, "za"));
+        Assert.Equal(AvailabilityKind.Gift, await Kind(142, "za"));   // Aerodactyl: só presente
+        Assert.Equal(AvailabilityKind.Trade, await Kind(137, "za"));  // Porygon: só troca
+        Assert.Equal(AvailabilityKind.None, await Kind(906, "za"));   // Sprigatito não está no Z-A
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(1001, "sv")); // Wo-Chien: encontro fixo
+        Assert.Equal(AvailabilityKind.Gift, await Kind(906, "sv"));
+        // Jogos do PokeAPI continuam como antes.
+        Assert.Equal(AvailabilityKind.Encounter, await Kind(92, "frlg"));
+
+        var detail = store.SpeciesEncounters("za", 1);
+        Assert.NotNull(detail);
+        Assert.Contains(detail, e => e.Method == "gift" && e.Version == "legends-za");
+        Assert.Contains(detail, e => e.Method == "walk" && e.MinLevel > 1);
+        Assert.Null(store.SpeciesEncounters("frlg", 1));
+    }
+
+    [Fact]
     public void Mapas_sem_aresta_repetida()
     {
         var store = FromFiles(GameDataStore.EmbeddedFiles());

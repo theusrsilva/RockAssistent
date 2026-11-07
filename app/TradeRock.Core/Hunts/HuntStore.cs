@@ -184,7 +184,7 @@ public sealed class HuntStore(IDbContextFactory<TradeRockDb> dbFactory, GameData
     {
         if (species is < 1 or > MaxSpecies)
             throw new HuntException("invalid_species");
-        var availability = await dex.AvailabilityAsync(species, ct);
+        var availability = await dex.AvailabilityAsync(species, data.Encounters, ct);
         var result = new List<HuntGame>();
         foreach (var game in GameVersions.All)
         {
