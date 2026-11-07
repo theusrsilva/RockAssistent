@@ -249,6 +249,12 @@ public sealed class NuzlockeRun : IOwned
     /// <summary>Versão do PokeAPI escolhida (<c>firered</c>, <c>scarlet</c>...); null = todas as do jogo.</summary>
     public string? Version { get; set; }
 
+    /// <summary>
+    /// Inicial escolhido pelo jogador (identificador do PokeAPI, <c>GameStarters</c>); null = não informado. Escolhe o
+    /// time dos chefes que dependem dele (<c>BossBattle.Variants</c>).
+    /// </summary>
+    public string? Starter { get; set; }
+
     /// <summary><c>NuzlockeRules</c> em JSON.</summary>
     public required string RulesJson { get; set; }
 

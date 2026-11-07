@@ -47,6 +47,8 @@ export interface RunInfo {
   name: string
   gameKey: string
   version: string | null
+  /** Inicial escolhido pelo jogador (identificador do PokeAPI); null = não informado. */
+  starter: string | null
   rules: NuzlockeRules
   status: RunStatus
   startedAt: string
@@ -103,6 +105,39 @@ export interface BossBattle {
   verified: boolean
   notes: string | null
   versions: string[] | null
+  /**
+   * Times que dependem do inicial do jogador (rivais e afins); `party`/`levelCap` são o time padrão. No `nextBoss` da
+   * run já vem o time do inicial da run (e sem variantes, se o backend achou a dele).
+   */
+  variants?: BossVariant[] | null
+}
+
+/** Time de um chefe para quem escolheu o inicial `starter` (identificador do PokeAPI do inicial do jogador). */
+export interface BossVariant {
+  starter: string
+  party: BossPokemon[]
+  levelCap: number
+  verified: boolean
+}
+
+/** Um inicial que o jogador escolhe (GET /api/data/{jogo}/starters). */
+export interface StarterInfo {
+  id: string
+  species: number
+}
+
+/**
+ * A variante mostrada de um chefe: a do inicial pedido; sem pedido (ou sem variante dele), a primeira. Null quando a
+ * batalha tem um time só.
+ */
+export function chosenVariant(boss: BossBattle, starter: string | null): BossVariant | null {
+  const variants = boss.variants ?? []
+  return variants.find((v) => v.starter === starter) ?? variants[0] ?? null
+}
+
+/** Time, cap e conferência mostrados para o chefe com o inicial pedido (o padrão quando não tem variantes). */
+export function bossTeam(boss: BossBattle, starter: string | null): Pick<BossVariant, 'party' | 'levelCap' | 'verified'> {
+  return chosenVariant(boss, starter) ?? boss
 }
 
 export interface TrainerBattle {
@@ -270,6 +305,7 @@ export const isFinished = (status: RunStatus) => status === 'champion' || status
 export const NUZLOCKE_ERRORS = [
   'unknown_game',
   'unknown_version',
+  'invalid_starter',
   'version_required',
   'unknown_area',
   'unknown_boss',

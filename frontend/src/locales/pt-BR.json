@@ -2055,6 +2055,7 @@
       "unknownHint": "Confira o nome da diretiva no guia.",
       "notVerified": "não conferido",
       "allVersions": "Todas",
+      "ifYouChose": "Se você escolheu {{name}}",
       "level": "Nv. {{level}}",
       "levels": "Nv. {{min}}–{{max}}",
       "alpha": "Alfa",
@@ -2309,6 +2310,15 @@
       "versionHelp": "Os chefes e os encontros mudam de uma versão para a outra.",
       "start": "Começar a run"
     },
+    "starter": {
+      "label": "Seu inicial",
+      "help": "Opcional, mas recomendado: o time do rival muda conforme o inicial que você escolheu.",
+      "none": "Não sei",
+      "yours": "Inicial: {{name}}",
+      "unknown": "Inicial não informado",
+      "change": "Trocar",
+      "bossHint": "O time deste chefe muda conforme o seu inicial. Informe o inicial no topo da run para ver o time certo."
+    },
     "run": {
       "pause": "Pausar",
       "resume": "Continuar",
@@ -2441,6 +2451,7 @@
     "errors": {
       "unknown_game": "Jogo desconhecido.",
       "unknown_version": "Esta versão não é deste jogo.",
+      "invalid_starter": "Este Pokémon não é um dos iniciais deste jogo.",
       "version_required": "Escolha a versão do jogo.",
       "unknown_area": "Área desconhecida neste jogo.",
       "unknown_boss": "Este chefe não é desta versão.",

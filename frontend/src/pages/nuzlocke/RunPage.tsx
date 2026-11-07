@@ -14,6 +14,7 @@ import TrainersCard from './TrainersCard'
 import { areaStates, formatRules, isFinished, nuzlockeErrorMessage, runStats, sortAreas, useRun, type GameArea, type RunView } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 import RegionMap from './RegionMap'
+import { StarterPicker, starterName, useStarters } from './StarterPicker'
 import type { MapGraph } from './regionMap'
 import { gameVersionByKey } from '../../lib/gameVersions'
 
@@ -44,6 +45,7 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
   const navigate = useNavigate()
   const [tab, setTab] = useState<Tab>('run')
   const [confirm, setConfirm] = useState<Confirm | null>(null)
+  const [pickStarter, setPickStarter] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const run = view.run
   const readOnly = isFinished(run.status)
@@ -55,6 +57,8 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
   const mapData = useApiGet<MapGraph>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
   const states = useMemo(() => areaStates(view), [view])
   const areaName = useMemo(() => new Map(areas.map((a) => [a.id, a.name])), [areas])
+  const starters = useStarters(run.gameKey)
+  const starter = starters.find((s) => s.id === run.starter)
 
   /** Ação simples do cabeçalho ou do chefe: o erro aparece no topo. */
   const act = async (request: () => Promise<RunView>) => {
@@ -119,6 +123,18 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
         <span>{runGameLabel(run.gameKey, run.version)}</span>
         <Badge tone={statusTone[run.status]}>{t(`nuzlocke.status.${run.status}`)}</Badge>
         {run.endedAt && <span>{t('nuzlocke.run.finishedOn', { date: date(run.endedAt) })}</span>}
+        {starters.length > 1 && (
+          <span className="flex items-center gap-1">
+            <span>·</span>
+            {starter && <img src={spriteUrl(starter.species)} alt="" className="pixelated -my-2 h-8 w-8" />}
+            <span>{starter ? t('nuzlocke.starter.yours', { name: starterName(starter, names) }) : t('nuzlocke.starter.unknown')}</span>
+            {!readOnly && (
+              <Button variant="ghost" size="sm" icon="edit" onClick={() => setPickStarter(true)}>
+                {t('nuzlocke.starter.change')}
+              </Button>
+            )}
+          </span>
+        )}
       </div>
       <div className="flex flex-wrap items-center gap-1.5 text-[12.5px]">
         <span className="font-semibold text-muted">{t('nuzlocke.rules.title')}:</span>
@@ -213,6 +229,31 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
       )}
 
       {tab === 'stats' && <Stats view={view} />}
+
+      {pickStarter && (
+        <Modal
+          title={t('nuzlocke.starter.label')}
+          actions={
+            <Button variant="secondary" onClick={() => setPickStarter(false)}>
+              {t('common.cancel')}
+            </Button>
+          }
+        >
+          <div className="flex flex-col gap-2 text-sm">
+            <StarterPicker
+              starters={starters}
+              value={run.starter}
+              names={names}
+              allowNone
+              onChange={(s) => {
+                setPickStarter(false)
+                void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}`, { starter: s ?? '' }))
+              }}
+            />
+            <span className="text-[12.5px] text-muted">{t('nuzlocke.starter.help')}</span>
+          </div>
+        </Modal>
+      )}
 
       {confirm && (
         <Modal

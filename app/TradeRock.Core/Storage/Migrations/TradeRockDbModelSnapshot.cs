@@ -186,6 +186,9 @@ namespace TradeRock.Core.Storage.Migrations
                     b.Property<long>("StartedAt")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Starter")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("TEXT");

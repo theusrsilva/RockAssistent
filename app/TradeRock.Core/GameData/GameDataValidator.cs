@@ -143,6 +143,7 @@ public static class GameDataValidator
             foreach (var v in (b.Versions ?? []).Where(v => !game.PokeApiVersions.Contains(v)))
                 errors.Add($"{at}: versão {v} não é do {key}");
             Party(at, b.Party, moveExists, errors);
+            Variants(at, key, b.Variants, moveExists, errors);
         }
 
         var trainers = store.Trainers(key);
@@ -195,6 +196,32 @@ public static class GameDataValidator
                 errors.Add($"{at}: chance {c}");
             foreach (var v in e.Versions.Where(v => !game.PokeApiVersions.Contains(v)))
                 errors.Add($"{at}: versão {v} não é do {key}");
+        }
+    }
+
+    /// <summary>
+    /// Variantes por inicial: o inicial é do jogo (<see cref="GameStarters"/>), sem inicial repetido, time não vazio,
+    /// <c>level_cap</c> = maior nível do time e as mesmas regras de espécie e golpe do time padrão.
+    /// </summary>
+    private static void Variants(string at, string key, IReadOnlyList<BossVariant>? variants, Func<string, bool>? moveExists,
+        List<string> errors)
+    {
+        if (variants is null)
+            return;
+        if (variants.Count == 0)
+            errors.Add($"{at}: variants vazio (use null ou tire o campo)");
+        foreach (var dup in Duplicates(variants.Select(v => v.Starter)))
+            errors.Add($"{at}: variante repetida para {dup}");
+        foreach (var v in variants)
+        {
+            var vat = $"{at}/variants/{v.Starter}";
+            if (!GameStarters.IsStarter(key, v.Starter))
+                errors.Add($"{vat}: {v.Starter} não é inicial do {key} ({string.Join(", ", GameStarters.For(key).Select(s => s.Id))})");
+            if (v.Party.Count == 0)
+                errors.Add($"{vat}: time vazio");
+            else if (v.LevelCap != v.Party.Max(p => p.Level))
+                errors.Add($"{vat}: level_cap {v.LevelCap} diferente do maior nível do time ({v.Party.Max(p => p.Level)})");
+            Party(vat, v.Party, moveExists, errors);
         }
     }
 

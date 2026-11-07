@@ -30,6 +30,24 @@ public sealed class RunProgressTests
     }
 
     [Fact]
+    public void Proximo_chefe_usa_o_time_do_inicial_da_run()
+    {
+        BossPokemon P(int species, int level) => new(species, 0, level, [], null, null, null);
+        var rival = new BossBattle("rival", "rival", "Silver", null, null, 1, null, [P(158, 5)], 5, true, null, null,
+            [new BossVariant("chikorita", [P(155, 6)], 6, true), new BossVariant("cyndaquil", [P(158, 5)], 5, false)]);
+        IReadOnlyList<BossBattle> bosses = [rival];
+
+        var chikorita = RunProgress.NextBoss(bosses, [], null, "chikorita")!;
+        Assert.Equal(155, Assert.Single(chikorita.Party).Species);
+        Assert.Equal(6, chikorita.LevelCap);
+        Assert.Null(chikorita.Variants);
+        Assert.False(RunProgress.NextBoss(bosses, [], null, "cyndaquil")!.Verified);
+        // Sem inicial, ou com um sem variante: o time padrão.
+        Assert.Same(rival, RunProgress.NextBoss(bosses, [], null));
+        Assert.Same(rival, RunProgress.NextBoss(bosses, [], null, "totodile"));
+    }
+
+    [Fact]
     public void Acima_do_cap()
     {
         IReadOnlyList<MonInfo> party = [Mon(14), Mon(15), Mon(9)];
