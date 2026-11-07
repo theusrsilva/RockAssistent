@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams, useSearchParams } from 'react-router'
 import { ApiError, spriteUrl } from '../../lib/api'
-import { dexLang, loadDexGame, saveDexGame, useAvailability, useSpecies } from '../../lib/dex'
-import { GAME_VERSIONS, gameVersionByKey } from '../../lib/gameVersions'
+import { dexLang, useDexGame, useAvailability, useSpecies } from '../../lib/dex'
+import { gameVersionByKey } from '../../lib/gameVersions'
 import { Badge, Callout, Icon } from '../../components/ui'
 import { GameSelector } from './GameSelector'
 import { TypeList } from './TypeBadge'
@@ -24,10 +24,7 @@ export default function SpeciesPage() {
   const id = Number(useParams().id)
   const [params, setParams] = useSearchParams()
   const tab: Tab = (tabs as readonly string[]).includes(params.get('aba') ?? '') ? (params.get('aba') as Tab) : 'general'
-  const [game, setGame] = useState(() => {
-    const saved = loadDexGame()
-    return GAME_VERSIONS.some((g) => g.key === saved) ? saved : 'frlg'
-  })
+  const [game, chooseGame] = useDexGame()
   const lang = dexLang(i18n.language)
   const valid = Number.isInteger(id) && id > 0
   const species = useSpecies(valid ? id : 0, game, lang)
@@ -37,10 +34,6 @@ export default function SpeciesPage() {
   const [formId, setFormId] = useState<number | null>(null)
   const [shiny, setShiny] = useState(false)
 
-  const chooseGame = (key: string) => {
-    setGame(key)
-    saveDexGame(key)
-  }
   const chooseTab = (next: Tab) =>
     setParams(
       (p) => {
@@ -168,7 +161,7 @@ export default function SpeciesPage() {
 
       {detail && tab === 'general' && <GeneralTab detail={detail} game={game} />}
       {detail && tab === 'locations' && <LocationsTab detail={detail} />}
-      {detail && tab === 'moves' && <MovesTab detail={detail} />}
+      {detail && tab === 'moves' && <MovesTab detail={detail} game={game} />}
       {detail && tab === 'stats' && <StatsTab detail={detail} form={form} onFormChange={setFormId} />}
       {detail && tab === 'egg' && <EggTab detail={detail} />}
       {tab === 'saves' && <SavesTab species={id} />}

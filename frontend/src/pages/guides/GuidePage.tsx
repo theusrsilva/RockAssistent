@@ -116,7 +116,7 @@ export default function GuidePage() {
               {t('guides.pageError')}
             </Callout>
           ) : (
-            <GuideMarkdown text={text.text} />
+            <GuideMarkdown text={text.text} game={sectionKey === 'games' ? guide.key : undefined} />
           )}
           {(prev || next) && (
             <div className="mt-6 flex flex-wrap justify-between gap-2 border-t border-line pt-4">

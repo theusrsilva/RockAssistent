@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Badge, Segmented } from '../../../components/ui'
 import { spriteUrl } from '../../../lib/api'
-import { useApiGet } from '../../../lib/dex'
+import { dexHref, useApiGet } from '../../../lib/dex'
 import { gameVersionByKey } from '../../../lib/gameVersions'
 import { useSpeciesOptions } from '../../../lib/hunts'
 import type { BossBattle, StarterInfo } from '../../nuzlocke/nuzlocke'
@@ -104,7 +104,7 @@ function BossRow({
           <BossVariantTabs boss={b} starters={starters} names={names} value={starter} onChange={onStarter} />
           <div className="flex gap-1">
             {team.party.map((p, i) => (
-              <Link key={i} to={`/pokedex/${p.species}`} className="flex w-12 shrink-0 flex-col items-center" title={names.get(p.species)}>
+              <Link key={i} to={dexHref(`/pokedex/${p.species}`, game)} className="flex w-12 shrink-0 flex-col items-center" title={names.get(p.species)}>
                 <img src={spriteUrl(p.species)} alt={names.get(p.species) ?? ''} className="pixelated h-10 w-10" loading="lazy" />
                 <span className="text-[11px] text-muted tabular-nums">{t('guides.block.level', { level: p.level })}</span>
               </Link>

@@ -56,7 +56,7 @@ function Boss({ game, boss, names }: { game: string; boss: BossBattle; names: Ma
       <BossVariantTabs boss={boss} starters={starters} names={names} value={starter} onChange={setStarter} />
       <div className="grid gap-1.5 sm:grid-cols-2">
         {team.party.map((p, i) => (
-          <BattlePokemon key={i} p={p} names={names} />
+          <BattlePokemon key={i} p={p} names={names} game={game} />
         ))}
       </div>
     </div>

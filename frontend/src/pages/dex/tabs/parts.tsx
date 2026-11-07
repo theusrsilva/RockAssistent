@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router'
 import { spriteUrl } from '../../../lib/api'
+import { dexHref } from '../../../lib/dex'
 import { Icon } from '../../../components/ui'
 
 /** Título de seção dentro de uma aba. */
@@ -37,10 +38,23 @@ export function BackLink({ to = '/pokedex', children }: { to?: string; children:
 }
 
 /** Pokémon pequeno com sprite que leva para a página da espécie. */
-export function SpeciesChip({ species, form, name, children }: { species: number; form?: number; name: string; children?: ReactNode }) {
+export function SpeciesChip({
+  species,
+  form,
+  name,
+  game,
+  children,
+}: {
+  species: number
+  form?: number
+  name: string
+  /** Jogo em que a ficha abre ("?game="). */
+  game?: string
+  children?: ReactNode
+}) {
   return (
     <Link
-      to={`/pokedex/${species}`}
+      to={dexHref(`/pokedex/${species}`, game)}
       className="flex min-w-0 items-center gap-2 rounded-lg bg-surface2 px-2 py-1.5 text-sm hover:bg-tile"
     >
       <img src={spriteUrl(species, { form })} alt="" loading="lazy" className="h-10 w-10 shrink-0 [image-rendering:pixelated]" />

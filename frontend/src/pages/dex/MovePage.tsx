@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router'
 import { ApiError } from '../../lib/api'
-import { dexLang, groupLearners, loadDexGame, saveDexGame, titleCase, useMove } from '../../lib/dex'
-import { GAME_VERSIONS, gameVersionByKey } from '../../lib/gameVersions'
+import { dexLang, groupLearners, titleCase, useDexGame, useMove } from '../../lib/dex'
+import { gameVersionByKey } from '../../lib/gameVersions'
 import { Badge, Callout } from '../../components/ui'
 import { GameSelector } from './GameSelector'
 import { TypeBadge } from './TypeBadge'
@@ -16,16 +15,9 @@ export default function MovePage() {
   const { t, i18n } = useTranslation()
   const id = Number(useParams().id)
   const valid = Number.isInteger(id) && id > 0
-  const [game, setGame] = useState(() => {
-    const saved = loadDexGame()
-    return GAME_VERSIONS.some((g) => g.key === saved) ? saved : 'frlg'
-  })
+  const [game, chooseGame] = useDexGame()
   const move = useMove(valid ? id : 0, game)
   const english = dexLang(i18n.language) === 'pt-BR' ? t('dex.move.effectInEnglish') : null
-  const chooseGame = (key: string) => {
-    setGame(key)
-    saveDexGame(key)
-  }
 
   const back = <BackLink>{t('dex.back')}</BackLink>
   if (!valid || (move.error instanceof ApiError && move.error.status === 404))
@@ -97,7 +89,7 @@ export default function MovePage() {
                 </h3>
                 <div className="grid grid-cols-1 gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
                   {g.learners.map((l, i) => (
-                    <SpeciesChip key={`${l.speciesId}-${l.method}-${l.level}-${i}`} species={l.speciesId} name={l.name}>
+                    <SpeciesChip key={`${l.speciesId}-${l.method}-${l.level}-${i}`} species={l.speciesId} name={l.name} game={game}>
                       {l.level != null && <span className="font-mono text-xs text-muted">{t('dex.move.level', { level: l.level })}</span>}
                       {g.method === 'other' && <span className="text-xs text-muted">{titleCase(l.method)}</span>}
                     </SpeciesChip>
