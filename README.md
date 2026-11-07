@@ -1,8 +1,21 @@
-# TradeRock
+# RockAssistent
 
-Troque Pokémon com **Pokémon FireRed e LeafGreen do Nintendo Switch / Switch 2** usando o
-wireless local do jogo (LDN). O seu PC, ou uma plaquinha ESP32, finge ser um segundo Switch na
-sala de troca do Direct Corner.
+O RockAssistent (antes chamado TradeRock) é um **assistente Pokémon offline de todos os jogos da série
+principal**, em português e inglês, explicado de forma simples:
+
+- **Pokédex** de RB/Y a Legends: Z-A, com dados por jogo (onde encontrar, golpes, stats, ovo, evoluções) e "Nos seus
+  saves";
+- **Guias** de cada jogo (detonado curto, chefes com times e level cap, TMs, exclusivos, trocas, eventos, pós-jogo,
+  lendários), **Mecânicas**, **VGC Champions** (regulamentação, times sugeridos, análise da sua equipe) e **Mitologia**;
+- **Boxes**: os saves achados nas suas pastas (emuladores, saves copiados do Switch) e o cofre do app, com mover,
+  copiar e anexar entre eles, sempre com backup;
+- **Nuzlocke** (regras, próximo chefe e level cap, encontros da área, mapa da região), **Contador Hunt** (métodos e
+  chances de shiny por jogo, atalho de teclado, também com o app em segundo plano) e **Histórico** de tudo.
+
+E continua trocando Pokémon com **os jogos Pokémon do Nintendo Switch /
+Switch 2** que têm troca local (FireRed e LeafGreen, Let's Go, Sword/Shield, Brilliant Diamond/Shining
+Pearl, Legends: Arceus, Scarlet/Violet e Legends: Z-A) usando o wireless local do jogo (LDN). O seu PC,
+ou uma plaquinha ESP32, finge ser um segundo Switch na sala de troca.
 
 > **Estado:** em desenvolvimento (Entrega 9 de 11). Já dá para **criar Pokémon legais** no app,
 > organizá-los no **cofre** (caixas, tags, busca, exportação, injeção em `.sav` de GBA), fazer o
@@ -14,7 +27,7 @@ sala de troca do Direct Corner.
 > com o Switch pela serial) também está pronto, **testado só com um ESP32 simulado**. Veja
 > [docs/dev-host.md](docs/dev-host.md). Já há pacotes para Linux: **.deb** e **AppImage**.
 
-O TradeRock nunca baixa, sugere fontes nem distribui `prod.keys` ou ROMs. Use só as chaves
+O RockAssistent nunca baixa, sugere fontes nem distribui `prod.keys` ou ROMs. Use só as chaves
 extraídas do seu próprio console.
 
 ## Instalação (Linux)
@@ -22,7 +35,8 @@ extraídas do seu próprio console.
 Baixe o pacote da versão mais recente na página de
 [Releases](https://github.com/theusrsilva/TradeRock/releases). O app procura versões novas
 sozinho (dá para desligar) e se atualiza pela tela **Sobre**. Também dá para baixar o
-pacote novo e instalar por cima.
+pacote novo e instalar por cima. Quem tem uma versão de antes da troca de nome (TradeRock) precisa
+baixar o RockAssistent uma vez por essa página: as versões antigas não acham mais a atualização sozinhas.
 
 **Debian, Ubuntu e derivados (.deb).** Ubuntu 22.04 ou mais novo, Debian 12 ou mais novo:
 
@@ -30,7 +44,7 @@ pacote novo e instalar por cima.
 sudo apt install ./traderock_<versão>_amd64.deb
 ```
 
-O `apt` instala as dependências (WebKitGTK 4.1, libnotify, pkexec, procps). O TradeRock aparece no
+O `apt` instala as dependências (WebKitGTK 4.1, libnotify, pkexec, procps). O RockAssistent aparece no
 menu de aplicativos, ou rode `traderock`. O componente de rede já vem instalado em
 `/usr/lib/traderock`. Para remover: `sudo apt remove traderock`. Os seus Pokémon, chaves e
 configurações ficam em `~/.local/share/traderock`.
@@ -38,8 +52,8 @@ configurações ficam em `~/.local/share/traderock`.
 **Outras distribuições (AppImage).**
 
 ```bash
-chmod +x TradeRock-<versão>-x86_64.AppImage
-./TradeRock-<versão>-x86_64.AppImage
+chmod +x RockAssistent-<versão>-x86_64.AppImage
+./RockAssistent-<versão>-x86_64.AppImage
 ```
 
 Precisa do WebKitGTK 4.1 e do libnotify do sistema (o app mostra o comando se faltarem) e do
@@ -59,22 +73,22 @@ ferramentas de rede embutidas (veja **Sobre** no rodapé do app).
 Windows 10 (versão 1809 ou mais nova) ou 11, 64 bits. No Windows o rádio é sempre um **ESP32** no
 USB (veja [Plataformas](#plataformas)).
 
-1. Baixe o `TradeRock-Setup-<versão>.exe` na página de
+1. Baixe o `RockAssistent-Setup-<versão>.exe` na página de
    [Releases](https://github.com/theusrsilva/TradeRock/releases).
 2. Abra o instalador. Como ele ainda **não tem assinatura digital**, o Windows mostra "O Windows
    protegeu o computador": clique em **Mais informações → Executar assim mesmo**. Se quiser, confira
-   antes o arquivo pelo `SHA256SUMS` do Release (`Get-FileHash TradeRock-Setup-<versão>.exe` no
+   antes o arquivo pelo `SHA256SUMS` do Release (`Get-FileHash RockAssistent-Setup-<versão>.exe` no
    PowerShell).
-3. O instalador pede **administrador** para instalar em Arquivos de Programas e liberar o TradeRock no
+3. O instalador pede **administrador** para instalar em Arquivos de Programas e liberar o RockAssistent no
    Firewall do Windows (só em redes privadas, para o [modo servidor](#modo-servidor-celular-e-outros-pcs)).
-   O TradeRock em si roda sempre como o seu usuário.
+   O RockAssistent em si roda sempre como o seu usuário.
 
 Tudo o que o app precisa vem junto (o .NET e o Python da gravação do ESP32). A janela usa o
 **Microsoft Edge WebView2**, que já vem no Windows 11 e nos Windows 10 atualizados; se faltar, o app
 abre no navegador e mostra o link da página oficial da Microsoft.
 
 Os seus Pokémon, chaves e configurações ficam em `%LOCALAPPDATA%\TradeRock`, só com acesso do seu
-usuário. Para remover: **Configurações do Windows → Aplicativos → TradeRock → Desinstalar**. Os seus
+usuário. Para remover: **Configurações do Windows → Aplicativos → RockAssistent → Desinstalar**. Os seus
 dados continuam na pasta acima (apague-a se não for mais usar).
 
 Conversores USB **CH340** ou **CP210x** podem precisar de driver: o Windows Update costuma
@@ -125,8 +139,8 @@ flowchart LR
   O frlg-ldn-trade recebe dois patches do FRLG-LDN-Trade-Console na hora do build
   ([engines/patches](engines/patches/frlg-ldn-trade/README.md)); o submódulo fica intocado.
 - **Worker privilegiado** (só com a placa Wi-Fi): um processo Python separado, iniciado via `pkexec`
-  com a política polkit do TradeRock. A senha de administrador é pedida pelo sistema, uma vez por
-  sessão do app; o TradeRock nunca a vê. App e worker conversam pela entrada/saída padrão do processo
+  com a política polkit do RockAssistent. A senha de administrador é pedida pelo sistema, uma vez por
+  sessão do app; o RockAssistent nunca a vê. App e worker conversam pela entrada/saída padrão do processo
   (só quem o iniciou fala com ele); quando o app fecha ou trava, o worker cancela a troca, devolve a
   placa ao estado anterior (Wi-Fi ligado e gerenciado pelo NetworkManager, se era assim) e sai. Os
   arquivos (`.pk3` e `prod.keys`) chegam como bytes: o worker nunca abre caminhos vindos do app.
@@ -141,9 +155,9 @@ catalog/                 catálogo de placas Wi-Fi, ESP32 e conversores USB-seri
 worker/                  worker privilegiado (Linux, Python): protocolo, rádio, wrapper do motor
 frontend/                React + Vite + TypeScript + Tailwind
 firmware/                notas sobre o firmware ESP32 embutido (os binários ficam em assets/firmware/pokeldn)
-assets/                  sprites, Pokémon de demonstração e firmware do ESP32
+assets/                  sprites, dados dos jogos (assets/data), Pokémon de demonstração e firmware do ESP32
 engines/                 submódulos (motores e AutoMod)
-content/                 textos explicativos em markdown, por idioma
+content/                 textos explicativos e guias (content/<idioma>/guides) em markdown, por idioma
 packaging/               atalho, ícone e script de instalação do worker (Linux); instalador Windows
 docs/                    decisões e guias de desenvolvimento
 ```
@@ -216,7 +230,7 @@ com `ls /dev/ttyUSB* /dev/ttyACM*` depois de conectar a placa.
 ### Construtor de Pokémon
 
 Em **Criar Pokémon**, escolha a espécie e o que quiser dela (nível, natureza, habilidade, gênero,
-shiny, IVs, EVs, golpes, item, Poké Bola, idioma, origem, treinador original). O TradeRock usa o
+shiny, IVs, EVs, golpes, item, Poké Bola, idioma, origem, treinador original). O RockAssistent usa o
 **PKHeX.Core.AutoMod** para gerar uma versão legal e o **LegalityAnalysis do PKHeX** para conferir,
 a cada mudança. Quando algo não é possível, a tela mostra o que mudou ou o que impede.
 
@@ -288,7 +302,7 @@ máquina virtual, Linux com ESP32 e Windows com ESP32.
 
 ### Modo demonstração
 
-Sem Switch, placa ou prod.keys, o TradeRock usa o **FakeEngine**, que simula a troca inteira no
+Sem Switch, placa ou prod.keys, o RockAssistent usa o **FakeEngine**, que simula a troca inteira no
 ritmo real. Na etapa "Jogo e treinador" dá para escolher o que o Switch simulado faz: dar certo,
 falhar algumas vezes antes de conectar, chaves erradas, cancelar a troca etc. Para acelerar a
 simulação em desenvolvimento, use `--Engines:Fake:SpeedFactor=0.2` (0 = instantâneo).
@@ -298,7 +312,7 @@ autor do easyworld/frlg-ldn-trade-esp32, em `assets/demo`). Detalhes do fluxo em
 
 ### Modo servidor (celular e outros PCs)
 
-Em **Configurações → Modo servidor**, a janela do PC pode abrir o TradeRock para a rede da casa
+Em **Configurações → Modo servidor**, a janela do PC pode abrir o RockAssistent para a rede da casa
 enquanto o app estiver aberto. Escolha a interface de rede (nunca a placa Wi-Fi das trocas) e a porta
 (padrão 8337), e crie as contas em **Contas**. No celular, abra o endereço mostrado (ou leia o QR code)
 e entre com a conta.
@@ -333,7 +347,7 @@ Migrações do banco: `dotnet tool restore && dotnet ef migrations add <Nome> --
 
 ## Solução de problemas
 
-**"Não foi possível abrir a janela do TradeRock: faltam bibliotecas do sistema"**
+**"Não foi possível abrir a janela do RockAssistent: faltam bibliotecas do sistema"**
 Instale o WebKitGTK 4.1 e o libnotify (o comando aparece na mensagem) ou rode com `--no-window`.
 
 **Minha placa Wi-Fi serve?** Abra Configurações → Conexão. O item "Rádio para falar com o Switch"
@@ -344,7 +358,7 @@ não fica acessível: use um ESP32 ou o Linux instalado de verdade.
 usuário ao grupo `dialout` (Arch: `uucp`), depois saia e entre de novo na sessão. Se o `brltty`
 estiver rodando e você não usa display braile, desative-o. Configurações → Conexão mostra os comandos exatos.
 
-**ESP32: "nenhum firmware do TradeRock respondeu".** Use "Gravar o firmware" no item "ESP32: firmware e porta USB" de Configurações → Conexão:
+**ESP32: "nenhum firmware do RockAssistent respondeu".** Use "Gravar o firmware" no item "ESP32: firmware e porta USB" de Configurações → Conexão:
 o app identifica o chip, escolhe o firmware certo e grava pelo USB. Se a placa não entrar no modo de
 gravação, segure o botão BOOT, aperte e solte RESET, solte o BOOT e tente de novo. Feche monitores
 seriais (Arduino IDE etc.) antes: a porta não pode estar em uso.
@@ -358,14 +372,14 @@ diálogo de senha não aparecer, falta um agente do polkit na sessão (GNOME e K
 ## Pacotes
 
 ```bash
-scripts/package-linux.sh            # dist/traderock_<versão>_amd64.deb e dist/TradeRock-<versão>-x86_64.AppImage
+scripts/package-linux.sh            # dist/traderock_<versão>_amd64.deb e dist/RockAssistent-<versão>-x86_64.AppImage
 scripts/package-linux.sh 0.8.1 --sources   # também o código-fonte e o das ferramentas de rede
 sudo scripts/smoke-linux.sh deb dist/traderock_*.deb          # teste de fumaça (instala e remove)
-sudo scripts/smoke-linux.sh appimage dist/TradeRock-*.AppImage
+sudo scripts/smoke-linux.sh appimage dist/RockAssistent-*.AppImage
 
 scripts/package-windows.sh           # build/windows/app (compilado daqui, do Linux ou do WSL)
-scripts/package-windows.sh --installer   # + dist/TradeRock-Setup-<versão>.exe (Inno Setup 6 no Windows)
-pwsh scripts/smoke-windows.ps1 dist\TradeRock-Setup-<versão>.exe <versão>   # no Windows, como administrador
+scripts/package-windows.sh --installer   # + dist/RockAssistent-Setup-<versão>.exe (Inno Setup 6 no Windows)
+pwsh scripts/smoke-windows.ps1 dist\RockAssistent-Setup-<versão>.exe <versão>   # no Windows, como administrador
 ```
 
 O CI (`.github/workflows/ci.yml`) roda **só nas tags `v*`** (ou à mão, pela aba Actions). Ele
@@ -374,7 +388,41 @@ Windows num runner Windows (testes, instalador e fumaça: instala, confere e des
 tudo passando, publica o Release. Detalhes em
 [packaging/README.md](packaging/README.md) e na decisão D17.
 
+## Dados e conteúdo
+
+Tudo vai embutido no app: nada é buscado na internet durante o uso. As únicas consultas são a procura de
+atualizações (desligável) e, só se você ligar em **Configurações → Preferências → Internet opcional**, as
+estatísticas de uso do Smogon e os links do pokepast.es. Nenhuma delas envia dados do seu PC.
+
+- **Pokédex:** os CSVs do [PokeAPI](https://github.com/PokeAPI/pokeapi) (licença BSD-3), num commit fixo, viram
+  `assets/data/dex.sqlite`. O arquivo é gerado, não fica no git, e o build do `TradeRock.Core` falha sem ele:
+
+  ```bash
+  python3 -I scripts/build-dex.py          # baixa os CSVs (cache em ~/.cache/traderock/pokeapi) e gera o banco
+  python3 -I scripts/build-dex.py --force  # gera de novo mesmo se estiver em dia
+  ```
+
+  O `scripts/ci.sh` e os scripts de pacote rodam isso sozinhos.
+- **Sprites:** do [PokeAPI/sprites](https://github.com/PokeAPI/sprites), também os shiny e as formas (`assets/sprites`, `scripts/fetch-sprites.sh`). A arte é da Nintendo e da GAME FREAK (por isso a distribuição é só entre amigos).
+- **Dados nossos** em `assets/data` (JSON no nosso formato, conferido por um validador ao abrir o app): times dos
+  chefes, treinadores dos jogos de GBA e DS, áreas e mapas de cada região, encontros dos jogos do Switch, métodos e
+  chances de shiny e os times de VGC. Montados a partir das decompilações da [pret](https://github.com/pret), de
+  pesquisa (fatos dos jogos, sempre reescritos) e das notas dos detonados do autor (`docs/superpowers/sources`, só
+  fatos). O que não foi conferido numa fonte aparece como "não conferido"; as dúvidas abertas estão em
+  [docs/superpowers/data-doubts.md](docs/superpowers/data-doubts.md).
+- **Guias** escritos por nós em `content/{pt-BR,en}/guides`; nenhum texto foi copiado de site. Os blocos de chefes,
+  encontros, TMs e shiny vêm dos dados acima. `python3 -I scripts/check-guides.py --strict` confere se todos os jogos
+  têm todas as seções.
+
+Pokémon e os nomes relacionados são marcas da Nintendo, da Creatures e da GAME FREAK. O RockAssistent é um projeto de
+fã, sem ligação com elas.
+
 ## Licença e créditos
 
-TradeRock é software livre sob a **GNU AGPL-3.0**. Veja [LICENSE](LICENSE),
+RockAssistent é software livre sob a **GNU AGPL-3.0**. Veja [LICENSE](LICENSE),
 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) e a tela **Sobre** do app.
+
+Agradecimentos: [PokeAPI](https://github.com/PokeAPI/pokeapi) (dados, BSD-3, e sprites, arte da Nintendo/GAME FREAK),
+[PKHeX](https://github.com/kwsch/PKHeX) e PKHeX-Plugins (leitura e legalidade dos Pokémon e saves),
+[pret](https://github.com/pret) (decompilações usadas para conferir os dados), frlg-ldn-trade e pokeldn (troca com o
+Switch).

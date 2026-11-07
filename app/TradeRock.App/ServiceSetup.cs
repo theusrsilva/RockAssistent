@@ -14,6 +14,7 @@ using TradeRock.Core.Pokemon;
 using TradeRock.Core.Storage;
 using TradeRock.Core.Trading;
 using TradeRock.Core.Updates;
+using TradeRock.Core.Vgc;
 using TradeRock.App.Api;
 
 namespace TradeRock.App;
@@ -39,6 +40,8 @@ public static class ServiceSetup
         services.AddSingleton<TradeRock.Core.Setup.ISystemProbe, TradeRock.Core.Setup.RealSystemProbe>();
         services.AddSingleton<TradeRock.Core.Setup.SetupService>();
         services.AddSingleton<TradeRock.Core.Saves.SaveBackups>();
+        services.AddSingleton<TradeRock.Core.Saves.SaveFolders>();
+        services.AddSingleton<TradeRock.Core.Saves.SaveLibrary>();
         services.AddSingleton<SettingsStore>();
         services.AddSingleton<TradeRecorder>();
         services.AddSingleton<ITradeRecorder>(sp => sp.GetRequiredService<TradeRecorder>());
@@ -46,6 +49,16 @@ public static class ServiceSetup
         services.AddSingleton<TradeQueue>();
         services.AddSingleton<TradeRock.Core.Activities.ActivityService>();
         services.AddSingleton<WindowBridge>();
+        services.AddSingleton(new TradeRock.Core.Dex.DexDatabase(paths));
+        services.AddSingleton<TradeRock.Core.Dex.DexService>();
+        services.AddSingleton<TradeRock.Core.GameData.GameDataStore>();
+        services.AddSingleton<TradeRock.Core.Hunts.HuntStore>();
+        services.AddSingleton<TradeRock.Core.Nuzlocke.NuzlockeStore>();
+        services.AddSingleton<HistoryFeed>();
+        // Atalho global do Contador Hunt (Windows e X11; só a janela local liga).
+        services.AddSingleton(sp => Hotkeys.GlobalHotkeys.Create(sp.GetRequiredService<ILoggerFactory>()));
+        services.AddSingleton<Hotkeys.GlobalHotkeyService>();
+        services.AddHostedService(sp => sp.GetRequiredService<Hotkeys.GlobalHotkeyService>());
 
         // Worker privilegiado (placa Wi-Fi, só Linux). Em desenvolvimento, a instalação dev
         // (scripts/install-worker.sh dev) vem antes da release.
@@ -100,6 +113,11 @@ public static class ServiceSetup
         services.AddSingleton(sp => ActivatorUtilities.CreateInstance<UpdateService>(sp,
             sp.GetRequiredService<IHttpClientFactory>().CreateClient(nameof(UpdateService))));
         services.AddHostedService<UpdateAutoCheck>();
+
+        // Internet opcional (D32): estatísticas do Smogon e links do pokepast.es, desligadas por padrão; só GET.
+        services.AddSingleton<SmogonUsageStore>();
+        services.AddHttpClient(InternetHttp.ClientName, http => InternetHttp.Configure(http, AppVersion.Current))
+            .ConfigurePrimaryHttpMessageHandler(InternetHttp.CreateHandler);
     }
 
     /// <summary>

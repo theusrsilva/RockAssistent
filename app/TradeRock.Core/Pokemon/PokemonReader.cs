@@ -56,7 +56,7 @@ public static class PokemonReader
         var pk = Parse(file, hinted);
         var game = GameCatalog.ByContext(pk.Context)
             ?? throw new InvalidPokemonFileException("game_unsupported",
-                $"Pokémon de um jogo que o TradeRock não troca ({pk.GetType().Name}).");
+                $"Pokémon de um jogo que o RockAssistent não troca ({pk.GetType().Name}).");
         if (hinted is { } h && h != game.Family)
             throw new InvalidPokemonFileException("game_mismatch", $"O arquivo é de {game.Name}, não de {GameCatalog.Get(h).Name}.");
         if (!pk.ChecksumValid)

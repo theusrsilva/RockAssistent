@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Monta os pacotes Linux do TradeRock em dist/:
+# Monta os pacotes Linux do RockAssistent em dist/:
 #   traderock_<versão>_amd64.deb         app + worker em /usr/lib/traderock (worker de dono root)
-#   TradeRock-<versão>-x86_64.AppImage   app + worker embutido, instalado pelo app na primeira vez
+#   RockAssistent-<versão>-x86_64.AppImage  app + worker embutido, instalado pelo app na primeira vez
 #
 #   scripts/package-linux.sh [versão] [--sources]
 #
@@ -34,7 +34,7 @@ DEB_VERSION=${VERSION/-/\~} # 1.0.0-rc.1 → 1.0.0~rc.1 (vem antes da 1.0.0 no d
 # é o mesmo que o GitHub mostra no Release. Para atualizar, troque a versão e o sha256 juntos.
 RUNTIME_URL=https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
 RUNTIME_SHA256=${TRADEROCK_APPIMAGE_RUNTIME_SHA256:-2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d}
-MAINTAINER=${TRADEROCK_MAINTAINER:-"TradeRock <https://github.com/theusrsilva/TradeRock/issues>"}
+MAINTAINER=${TRADEROCK_MAINTAINER:-"RockAssistent <https://github.com/theusrsilva/TradeRock/issues>"}
 CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/traderock"
 BUILD=build/package
 DIST=dist
@@ -43,11 +43,14 @@ APP_ID=io.github.traderock.TradeRock
 rm -rf "$BUILD"
 mkdir -p "$BUILD" "$DIST" "$CACHE"
 
+echo "==> Pokédex offline (dex.sqlite, embutida no app)"
+python3 -I scripts/build-dex.py
+
 echo "==> app $VERSION (self-contained, linux-x64)"
 dotnet publish app/TradeRock.App -c Release -r linux-x64 --self-contained \
   -p:BuildFrontend=true -p:Version="$VERSION" -p:DebugType=none -p:DebugSymbols=false \
   -o "$BUILD/app" --nologo -v quiet
-[[ "$("$BUILD/app/traderock" --version)" == "TradeRock $VERSION" ]] || { echo "versão do app não confere" >&2; exit 1; }
+[[ "$("$BUILD/app/traderock" --version)" == "RockAssistent $VERSION" ]] || { echo "versão do app não confere" >&2; exit 1; }
 
 echo "==> worker"
 if [[ "${TRADEROCK_SKIP_WORKER_BUILD:-0}" != 1 || ! -f build/worker/stage/BUILD-INFO.json ]]; then
@@ -84,11 +87,11 @@ cp packaging/linux/$APP_ID.svg "$DEB/usr/share/icons/hicolor/scalable/apps/"
 cp THIRD-PARTY-NOTICES.md "$DEB/usr/share/doc/traderock/"
 cat > "$DEB/usr/share/doc/traderock/copyright" <<EOF
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: TradeRock
+Upstream-Name: RockAssistent
 Source: https://github.com/theusrsilva/TradeRock
 
 Files: *
-Copyright: TradeRock contributors
+Copyright: RockAssistent (TradeRock) contributors
 License: AGPL-3.0-or-later
  The full text is in /usr/share/doc/traderock/LICENSE. Third-party components and their licenses are
  listed in /usr/share/doc/traderock/THIRD-PARTY-NOTICES.md. The complete corresponding source code of
@@ -110,10 +113,10 @@ Depends: libc6 (>= 2.31), libstdc++6, libgtk-3-0t64 | libgtk-3-0, libwebkit2gtk-
 Section: games
 Priority: optional
 Homepage: https://github.com/theusrsilva/TradeRock
-Description: Trade Pokémon with FireRed and LeafGreen on Nintendo Switch
- TradeRock trades Pokémon with the Switch release of Pokémon FireRed and
- LeafGreen over the game's local wireless (LDN). The PC's Wi-Fi card (or an
- ESP32 over USB) acts as a second Switch in the Direct Corner trade room.
+Description: Trade Pokémon with every Nintendo Switch game that has local trading
+ RockAssistent (formerly TradeRock) trades Pokémon with every Nintendo Switch
+ game that has local trading, over the game's local wireless (LDN). The PC's
+ Wi-Fi card (or an ESP32 over USB) acts as a second Switch in the trade room.
  .
  It also builds legal Pokémon (PKHeX + AutoMod) and keeps them in a vault.
  The Wi-Fi component runs as root through pkexec and polkit; the app itself
@@ -173,7 +176,7 @@ ln -s $APP_ID.svg "$APPDIR/.DirIcon"
 cp LICENSE THIRD-PARTY-NOTICES.md "$APPDIR/usr/share/doc/traderock/"
 normalize "$APPDIR"
 
-APPIMAGE="$DIST/TradeRock-$VERSION-x86_64.AppImage"
+APPIMAGE="$DIST/RockAssistent-$VERSION-x86_64.AppImage"
 mksquashfs "$APPDIR" "$BUILD/AppDir.squashfs" -root-owned -noappend -comp zstd -quiet -no-progress >/dev/null
 cat "$RUNTIME" "$BUILD/AppDir.squashfs" > "$APPIMAGE"
 chmod 755 "$APPIMAGE"

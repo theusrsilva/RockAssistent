@@ -8,7 +8,7 @@ using TradeRock.Core.Trading;
 
 namespace TradeRock.Core.Updates;
 
-/// <summary>Como este TradeRock foi instalado, e portanto qual arquivo do Release o atualiza (D29).</summary>
+/// <summary>Como este RockAssistent foi instalado, e portanto qual arquivo do Release o atualiza (D29).</summary>
 public enum InstallKind
 {
     /// <summary>Rodando do código ou de uma pasta solta: só avisa.</summary>
@@ -41,7 +41,7 @@ public sealed class UpdateException(string code, string message) : Exception(mes
     public string Code { get; } = code;
 }
 
-/// <summary>Versões do TradeRock: números separados por ponto ("01.00.00", "0.8.1"); um sufixo com "-" é pré-lançamento.</summary>
+/// <summary>Versões do RockAssistent: números separados por ponto ("01.00.00", "0.8.1"); um sufixo com "-" é pré-lançamento.</summary>
 public static class AppVersions
 {
     public static int[]? Parse(string text)
@@ -73,13 +73,26 @@ public static class AppVersions
     }
 
     /// <summary>O arquivo do Release para cada tipo de instalação (nomes de scripts/package-*.sh).</summary>
-    public static string? AssetName(InstallKind kind, string version) => kind switch
+    public static string? AssetName(InstallKind kind, string version) => AssetNames(kind, version).FirstOrDefault();
+
+    /// <summary>
+    /// Os nomes aceitos, o atual primeiro. Até o rebranding os arquivos se chamavam TradeRock-*; os Releases antigos
+    /// continuam valendo (o .deb sempre foi traderock_*).
+    /// </summary>
+    public static IReadOnlyList<string> AssetNames(InstallKind kind, string version) => kind switch
     {
-        InstallKind.WindowsInstaller => $"TradeRock-Setup-{version}.exe",
-        InstallKind.AppImage => $"TradeRock-{version}-x86_64.AppImage",
-        InstallKind.Deb => $"traderock_{version.Replace('-', '~')}_amd64.deb",
-        _ => null,
+        InstallKind.WindowsInstaller => [$"RockAssistent-Setup-{version}.exe", $"TradeRock-Setup-{version}.exe"],
+        InstallKind.AppImage => [$"RockAssistent-{version}-x86_64.AppImage", $"TradeRock-{version}-x86_64.AppImage"],
+        InstallKind.Deb => [$"traderock_{version.Replace('-', '~')}_amd64.deb"],
+        _ => [],
     };
+
+    /// <summary>O arquivo deste tipo de instalação no Release, pelo nome novo ou pelo antigo.</summary>
+    public static ReleaseAsset? PickAsset(InstallKind kind, string version, IEnumerable<ReleaseAsset> assets)
+    {
+        var list = assets.ToList();
+        return AssetNames(kind, version).Select(n => list.FirstOrDefault(a => a.Name == n)).FirstOrDefault(a => a is not null);
+    }
 
     /// <summary>"&lt;sha256&gt;  &lt;arquivo&gt;" por linha (sha256sum).</summary>
     public static string? HashOf(string sums, string file) =>
@@ -212,7 +225,7 @@ public sealed class UpdateService(
             throw new UpdateException("update_manual", "Esta instalação não se atualiza sozinha.");
         if (trades.IsBusy || activities.IsBusy)
             throw new UpdateException("busy", "Há uma troca ou atividade em andamento.");
-        if (release.Assets.FirstOrDefault(a => a.Name == name) is not { } asset
+        if (AppVersions.PickAsset(installer.Kind, release.Version, release.Assets) is not { } asset
             || release.Assets.FirstOrDefault(a => a.Name == "SHA256SUMS") is not { } sums)
             throw new UpdateException("update_asset_missing", $"O Release não tem {name} ou o SHA256SUMS.");
         lock (_lock)
@@ -327,7 +340,7 @@ public sealed class UpdateService(
     /// <summary>O HttpClient das atualizações: User-Agent (o GitHub exige) e tempo limite.</summary>
     public static void Configure(HttpClient http, string version)
     {
-        http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("TradeRock", version.Split('+')[0]));
+        http.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("RockAssistent", version.Split('+')[0]));
         http.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github+json"));
         http.Timeout = TimeSpan.FromMinutes(10);
     }

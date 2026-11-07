@@ -1,0 +1,106 @@
+{
+  "source": [
+    "https://www.pikalytics.com/pokedex/championstournaments",
+    "https://victoryroad.pro/champions-regulations/"
+  ],
+  "items": [
+    {
+      "id": "rain-archaludon",
+      "name": "Pelipper + Archaludon",
+      "archetype": "rain",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Pelipper @ Damp Rock\nAbility: Drizzle\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Hurricane\n- Weather Ball\n- Tailwind\n- Protect\n\nArchaludon @ Leftovers\nAbility: Stamina\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Electro Shot\n- Draco Meteor\n- Flash Cannon\n- Protect\n\nBasculegion @ Choice Scarf\nAbility: Adaptability\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Wave Crash\n- Last Respects\n- Aqua Jet\n- Flip Turn\n\nSneasler @ White Herb\nAbility: Unburden\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Close Combat\n- Dire Claw\n- Fake Out\n- Protect\n\nKingambit @ Black Glasses\nAbility: Defiant\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 Def\nAdamant Nature\n- Kowtow Cleave\n- Sucker Punch\n- Iron Head\n- Protect\n\nIncineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat\n",
+      "idea_pt": "Pelipper liga a chuva e o Archaludon dispara Electro Shot sem carregar. Sneasler e Kingambit cobrem o que a água não bate.",
+      "idea_en": "Pelipper sets rain so Archaludon fires Electro Shot without charging. Sneasler and Kingambit cover what water can't hit.",
+      "how_to_play_pt": "Abra com Pelipper + Archaludon ou Pelipper + Sneasler. Tailwind no primeiro turno se o rival for rápido. Troque o Pelipper para renovar a chuva. Incineroar entra para Fake Out e Intimidate.",
+      "how_to_play_en": "Lead Pelipper + Archaludon or Pelipper + Sneasler. Tailwind turn one if the opponent is fast. Switch Pelipper out and back in to reset rain. Incineroar comes in for Fake Out and Intimidate.",
+      "dangers_pt": "Outro clima (sol, areia) apaga a chuva. Rillaboom com Grassy Glide e Gholdengo seguram bem o Archaludon. Trick Room inverte a vantagem da velocidade.",
+      "dangers_en": "Another weather (sun, sand) removes the rain. Rillaboom with Grassy Glide and Gholdengo handle Archaludon well. Trick Room flips the speed advantage."
+    },
+    {
+      "id": "sun-charizard",
+      "name": "Mega Charizard Y + Venusaur",
+      "archetype": "sun",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Charizard @ Charizardite Y\nAbility: Blaze\nLevel: 50\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Heat Wave\n- Solar Beam\n- Weather Ball\n- Protect\n\nVenusaur @ Focus Sash\nAbility: Chlorophyll\nLevel: 50\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Leaf Storm\n- Sludge Bomb\n- Sleep Powder\n- Protect\n\nWhimsicott @ Babiri Berry\nAbility: Prankster\nLevel: 50\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Tailwind\n- Moonblast\n- Encore\n- Protect\n\nGarchomp @ Life Orb\nAbility: Rough Skin\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Earthquake\n- Dragon Claw\n- Rock Slide\n- Protect\n\nIncineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat\n\nGholdengo @ Leftovers\nAbility: Good as Gold\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Make It Rain\n- Shadow Ball\n- Nasty Plot\n- Protect\n",
+      "idea_pt": "A Mega Charizard Y liga o sol (Drought): Heat Wave forte e Solar Beam sem carregar. O Venusaur fica com velocidade dobrada pelo Chlorophyll.",
+      "idea_en": "Mega Charizard Y sets sun (Drought): strong Heat Wave and Solar Beam with no charge. Venusaur doubles its speed with Chlorophyll.",
+      "how_to_play_pt": "Abra com Charizard + Venusaur ou Whimsicott + Charizard (Tailwind). Mega Evolua no primeiro turno. Sleep Powder em quem ameaça o Charizard. Garchomp e Gholdengo cuidam das Pedras e dos Fogos rivais.",
+      "how_to_play_en": "Lead Charizard + Venusaur or Whimsicott + Charizard (Tailwind). Mega Evolve turn one. Sleep Powder whatever threatens Charizard. Garchomp and Gholdengo handle opposing Rock and Fire types.",
+      "dangers_pt": "Rock Slide e chuva (Pelipper) derrubam o plano. Tyranitar troca o sol por areia. Fake Out no Charizard atrasa tudo.",
+      "dangers_en": "Rock Slide and rain (Pelipper) break the plan. Tyranitar replaces sun with sand. Fake Out on Charizard delays everything."
+    },
+    {
+      "id": "trick-room",
+      "name": "Farigiraf + Indeedee",
+      "archetype": "trick_room",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Farigiraf @ Mental Herb\nAbility: Armor Tail\nLevel: 50\nEVs: 252 HP / 4 Def / 252 SpD\nSassy Nature\n- Trick Room\n- Psychic\n- Helping Hand\n- Protect\n\nIndeedee-F @ Psychic Seed\nAbility: Psychic Surge\nLevel: 50\nEVs: 252 HP / 252 Def / 4 SpD\nRelaxed Nature\n- Follow Me\n- Trick Room\n- Helping Hand\n- Protect\n\nSinistcha @ Colbur Berry\nAbility: Hospitality\nLevel: 50\nEVs: 252 HP / 252 Def / 4 SpA\nRelaxed Nature\n- Matcha Gotcha\n- Rage Powder\n- Trick Room\n- Strength Sap\n\nTyranitar @ Tyranitarite\nAbility: Sand Stream\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 SpD\nBrave Nature\n- Rock Slide\n- Knock Off\n- Low Kick\n- Protect\n\nKingambit @ Chople Berry\nAbility: Defiant\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 Def\nBrave Nature\n- Kowtow Cleave\n- Sucker Punch\n- Iron Head\n- Protect\n\nMilotic @ Leftovers\nAbility: Competitive\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nQuiet Nature\n- Muddy Water\n- Ice Beam\n- Recover\n- Protect\n",
+      "idea_pt": "Três Pokémon montam Trick Room e protegem quem monta (Armor Tail e Psychic Surge param Fake Out e golpes de prioridade). Depois os lentos e fortes batem primeiro.",
+      "idea_en": "Three Pokémon set Trick Room and keep the setter safe (Armor Tail and Psychic Surge stop Fake Out and priority). Then the slow, strong ones move first.",
+      "how_to_play_pt": "Abra com Farigiraf + Indeedee-F: Follow Me na Indeedee, Trick Room no Farigiraf. Nos 4 turnos, Tyranitar (Mega), Kingambit e Milotic atacam. Guarde um segundo Trick Room para depois.",
+      "how_to_play_en": "Lead Farigiraf + Indeedee-F: Follow Me with Indeedee, Trick Room with Farigiraf. During the 4 turns, Tyranitar (Mega), Kingambit and Milotic attack. Keep a second Trick Room for later.",
+      "dangers_pt": "Taunt e Imprison bloqueiam o Trick Room. Times que usam Protect enquanto o Trick Room acaba ganham tempo. Golpes de lutador acertam Tyranitar e Kingambit em cheio.",
+      "dangers_en": "Taunt and Imprison block Trick Room. Teams that Protect while the turns run out stall it. Fighting moves hit Tyranitar and Kingambit hard."
+    },
+    {
+      "id": "grassy-balance",
+      "name": "Rillaboom + Incineroar",
+      "archetype": "balance",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Rillaboom @ Miracle Seed\nAbility: Grassy Surge\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Fake Out\n- Grassy Glide\n- Wood Hammer\n- U-turn\n\nIncineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat\n\nGholdengo @ Life Orb\nAbility: Good as Gold\nLevel: 50\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Make It Rain\n- Shadow Ball\n- Thunderbolt\n- Protect\n\nGarchomp @ Haban Berry\nAbility: Rough Skin\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Stomping Tantrum\n- Dragon Claw\n- Rock Slide\n- Protect\n\nWhimsicott @ Focus Sash\nAbility: Prankster\nLevel: 50\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Tailwind\n- Moonblast\n- Encore\n- Protect\n\nRotom-Wash @ Leftovers\nAbility: Levitate\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Hydro Pump\n- Thunderbolt\n- Will-O-Wisp\n- Protect\n",
+      "idea_pt": "A dupla mais usada do formato: dois Fake Out, Intimidate e Grassy Glide com prioridade. Gholdengo e Garchomp batem forte; Whimsicott dá Tailwind.",
+      "idea_en": "The format's most used pair: two Fake Outs, Intimidate and priority Grassy Glide. Gholdengo and Garchomp hit hard; Whimsicott gives Tailwind.",
+      "how_to_play_pt": "Comece com Rillaboom + Incineroar para controlar o primeiro turno, ou Whimsicott + Gholdengo para Tailwind. Use U-turn e Parting Shot para trocar e repetir o Fake Out. Rotom-Wash entra contra Fogo e Água.",
+      "how_to_play_en": "Lead Rillaboom + Incineroar to control turn one, or Whimsicott + Gholdengo for Tailwind. Use U-turn and Parting Shot to switch and reuse Fake Out. Rotom-Wash comes in against Fire and Water.",
+      "dangers_pt": "Trick Room e Pokémon com Inner Focus ou Armor Tail anulam o Fake Out. Volcarona e Charizard castigam Rillaboom e Gholdengo.",
+      "dangers_en": "Trick Room and Pokémon with Inner Focus or Armor Tail shut down Fake Out. Volcarona and Charizard punish Rillaboom and Gholdengo."
+    },
+    {
+      "id": "sand-excadrill",
+      "name": "Mega Tyranitar + Excadrill",
+      "archetype": "sand",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Tyranitar @ Tyranitarite\nAbility: Sand Stream\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Rock Slide\n- Knock Off\n- Low Kick\n- Protect\n\nExcadrill @ Life Orb\nAbility: Sand Rush\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Drill Run\n- Iron Head\n- Rock Slide\n- Protect\n\nRotom-Wash @ Sitrus Berry\nAbility: Levitate\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Hydro Pump\n- Thunderbolt\n- Will-O-Wisp\n- Protect\n\nWhimsicott @ Focus Sash\nAbility: Prankster\nLevel: 50\nEVs: 252 HP / 4 Def / 252 Spe\nTimid Nature\n- Tailwind\n- Moonblast\n- Encore\n- Protect\n\nGarchomp @ Choice Scarf\nAbility: Rough Skin\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Dragon Claw\n- Rock Slide\n- Stomping Tantrum\n- Poison Jab\n\nIncineroar @ Chople Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat\n",
+      "idea_pt": "A Mega Tyranitar liga a areia: Excadrill dobra a velocidade (Sand Rush) e as Pedras ganham defesa especial. Rotom-Wash cobre Água e Lutador.",
+      "idea_en": "Mega Tyranitar sets sand: Excadrill doubles its speed (Sand Rush) and Rock types gain Special Defense. Rotom-Wash covers Water and Fighting threats.",
+      "how_to_play_pt": "Abra com Tyranitar + Excadrill e mega evolua o Tyranitar. Se o rival tiver Fake Out ou Intimidate, abra com Incineroar + Excadrill e traga o Tyranitar depois. Garchomp com Scarf limpa no fim.",
+      "how_to_play_en": "Lead Tyranitar + Excadrill and Mega Evolve Tyranitar. If the opponent has Fake Out or Intimidate, lead Incineroar + Excadrill and bring Tyranitar later. Scarf Garchomp cleans up late.",
+      "dangers_pt": "Chuva e sol trocam o clima. Água e Lutador acertam Tyranitar e Excadrill. Wide Guard para Rock Slide.",
+      "dangers_en": "Rain and sun change the weather. Water and Fighting moves hit Tyranitar and Excadrill. Wide Guard stops Rock Slide."
+    },
+    {
+      "id": "tailwind-offense",
+      "name": "Mega Salamence + Sneasler",
+      "archetype": "hyper_offense",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Salamence @ Salamencite\nAbility: Intimidate\nLevel: 50\nEVs: 4 HP / 252 SpA / 252 Spe\nTimid Nature\n- Hyper Voice\n- Draco Meteor\n- Tailwind\n- Protect\n\nSneasler @ White Herb\nAbility: Unburden\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Close Combat\n- Dire Claw\n- Fake Out\n- Protect\n\nKingambit @ Black Glasses\nAbility: Defiant\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 Def\nAdamant Nature\n- Kowtow Cleave\n- Sucker Punch\n- Iron Head\n- Protect\n\nBasculegion @ Mystic Water\nAbility: Adaptability\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nAdamant Nature\n- Wave Crash\n- Last Respects\n- Aqua Jet\n- Protect\n\nGholdengo @ Choice Scarf\nAbility: Good as Gold\nLevel: 50\nEVs: 4 HP / 252 SpA / 252 Spe\nModest Nature\n- Make It Rain\n- Shadow Ball\n- Power Gem\n- Thunderbolt\n\nRillaboom @ Miracle Seed\nAbility: Grassy Surge\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 SpD\nAdamant Nature\n- Fake Out\n- Grassy Glide\n- Wood Hammer\n- Protect\n",
+      "idea_pt": "Tailwind da Mega Salamence (Hyper Voice vira Voador com Aerilate) e muito dano por turno. O objetivo é derrubar dois por turno antes do rival se organizar.",
+      "idea_en": "Tailwind from Mega Salamence (Hyper Voice becomes Flying with Aerilate) and lots of damage per turn. The goal is to KO two per turn before the opponent sets up.",
+      "how_to_play_pt": "Abra com Salamence + Sneasler: Fake Out e Tailwind no primeiro turno. Kingambit fica no fundo (Defiant pune Intimidate). Basculegion fica mais forte a cada aliado derrubado (Last Respects).",
+      "how_to_play_en": "Lead Salamence + Sneasler: Fake Out and Tailwind turn one. Keep Kingambit in the back (Defiant punishes Intimidate). Basculegion gets stronger for each fainted ally (Last Respects).",
+      "dangers_pt": "Trick Room vira o jogo contra você. Intimidate repetido enfraquece Sneasler e Basculegion. Wide Guard e Protect em dupla gastam o Tailwind.",
+      "dangers_en": "Trick Room turns the game against you. Repeated Intimidate weakens Sneasler and Basculegion. Wide Guard and double Protect waste Tailwind."
+    },
+    {
+      "id": "screens-volcarona",
+      "name": "Grimmsnarl + Volcarona",
+      "archetype": "setup",
+      "regulation": "Regulation Set M-C",
+      "date_iso": "2026-11-06",
+      "paste": "Grimmsnarl @ Light Clay\nAbility: Prankster\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Reflect\n- Light Screen\n- Spirit Break\n- Fake Out\n\nVolcarona @ Leftovers\nAbility: Flame Body\nLevel: 50\nEVs: 252 HP / 4 SpA / 252 Spe\nTimid Nature\n- Quiver Dance\n- Fiery Dance\n- Bug Buzz\n- Protect\n\nSylveon @ Fairy Feather\nAbility: Pixilate\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Hyper Voice\n- Shadow Ball\n- Yawn\n- Protect\n\nGarchomp @ Life Orb\nAbility: Rough Skin\nLevel: 50\nEVs: 4 HP / 252 Atk / 252 Spe\nJolly Nature\n- Stomping Tantrum\n- Dragon Claw\n- Rock Slide\n- Protect\n\nKingambit @ Chople Berry\nAbility: Defiant\nLevel: 50\nEVs: 252 HP / 252 Atk / 4 Def\nAdamant Nature\n- Kowtow Cleave\n- Sucker Punch\n- Iron Head\n- Protect\n\nMilotic @ Sitrus Berry\nAbility: Competitive\nLevel: 50\nEVs: 252 HP / 252 SpA / 4 SpD\nModest Nature\n- Muddy Water\n- Ice Beam\n- Recover\n- Protect\n",
+      "idea_pt": "Grimmsnarl põe Reflect e Light Screen com prioridade (Prankster). Atrás das telas, a Volcarona usa Quiver Dance e fica difícil de parar.",
+      "idea_en": "Grimmsnarl sets Reflect and Light Screen with priority (Prankster). Behind screens, Volcarona uses Quiver Dance and becomes hard to stop.",
+      "how_to_play_pt": "Abra com Grimmsnarl + Volcarona: telas e Quiver Dance (ou Protect se houver Rock Slide). Sylveon espalha dano com Hyper Voice. Garchomp e Kingambit cobrem Pedra e Fada rivais.",
+      "how_to_play_en": "Lead Grimmsnarl + Volcarona: screens and Quiver Dance (or Protect if Rock Slide is coming). Sylveon spreads damage with Hyper Voice. Garchomp and Kingambit cover opposing Rock and Fairy types.",
+      "dangers_pt": "Rock Slide e Pedras rápidas acabam com a Volcarona. Brick Break e Psychic Fangs quebram as telas. Taunt no Grimmsnarl atrasa tudo.",
+      "dangers_en": "Rock Slide and fast Rock types end Volcarona. Brick Break and Psychic Fangs break screens. Taunt on Grimmsnarl delays everything."
+    }
+  ]
+}

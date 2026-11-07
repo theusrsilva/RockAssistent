@@ -1,0 +1,108 @@
+TMs and HMs of Diamond/Pearl. HMs can only be removed by the Move Deleter (Canalave City).
+
+:::tms dp
+
+## Where to find
+
+- TM01 Focus Punch: Oreburgh Gate B1F (Rock Smash).
+- TM02 Dragon Claw: Mt. Coronet (Rock Climb).
+- TM03 Water Pulse: Ravaged Path (Surf).
+- TM04 Calm Mind: Battle Park (BP).
+- TM05 Roar: Route 213 (Rock Climb).
+- TM06 Toxic: Route 212 (ground); Battle Park (BP).
+- TM07 Hail: Route 217.
+- TM08 Bulk Up: Battle Park (BP).
+- TM09 Bullet Seed: Route 204.
+- TM10 Hidden Power: Jubilife City.
+- TM11 Sunny Day: Route 212.
+- TM12 Taunt: Route 211 (west, Rock Smash).
+- TM13 Ice Beam: Route 216 (northeast).
+- TM14 Blizzard: Veilstone Dept. Store.
+- TM15 Hyper Beam: Veilstone Dept. Store.
+- TM16 Light Screen: Veilstone Dept. Store.
+- TM17 Protect: Veilstone Dept. Store.
+- TM18 Rain Dance: Route 223 (Surf); house on Route 212 for 10 Blue Shards.
+- TM19 Giga Drain: Route 209.
+- TM20 Safeguard: Veilstone Dept. Store.
+- TM21 Frustration: Galactic Warehouse.
+- TM22 Solar Beam: Veilstone Dept. Store.
+- TM23 Iron Tail: Iron Island.
+- TM24 Thunderbolt: Valley Windworks (Surf).
+- TM25 Thunder: Veilstone Dept. Store.
+- TM26 Earthquake: Wayward Cave (hidden entrance).
+- TM27 Return: Lost Tower.
+- TM28 Dig: Ruin Maniac Cave (Route 214).
+- TM29 Psychic: Veilstone Game Corner (coins).
+- TM30 Shadow Ball: Route 210 (south).
+- TM31 Brick Break: Oreburgh Gate (bike ramp); Battle Points.
+- TM32 Double Team: Veilstone Game Corner (coins).
+- TM33 Reflect: Veilstone Dept. Store.
+- TM34 Shock Wave: Route 215.
+- TM35 Flamethrower: Fuego Ironworks; Veilstone Game Corner (coins).
+- TM36 Sludge Bomb: Galactic Warehouse.
+- TM37 Sandstorm: Route 228.
+- TM38 Fire Blast: Lake Verity.
+- TM39 Rock Tomb: Ravaged Path.
+- TM40 Aerial Ace: Route 213.
+- TM41 Torment: Victory Road.
+- TM42 Facade: Survival Area (house to the south; postgame).
+- TM43 Secret Power: Amity Square.
+- TM44 Rest: Veilstone Game Corner (coins).
+- TM45 Attract: Amity Square; Battle Points.
+- TM46 Thief: Eterna City (Galactic building).
+- TM47 Steel Wing: Route 209.
+- TM48 Skill Swap: Canalave City (resident).
+- TM49 Snatch: Galactic Warehouse.
+- TM50 Overheat: Stark Mountain.
+- TM51 Roost: Route 210 (south).
+- TM52 Focus Blast: Veilstone Dept. Store.
+- TM53 Energy Ball: Route 226 (ground); Battle Park (64 BP).
+- TM54 False Swipe: Veilstone Dept. Store.
+- TM55 Brine: Crasher Wake (Pastoria Gym).
+- TM56 Fling: Route 222.
+- TM57 Charge Beam: Volkner (Sunyshore Gym).
+- TM58 Endure: Veilstone Game Corner (coins).
+- TM59 Dragon Pulse: Victory Road.
+- TM60 Drain Punch: Maylene (Veilstone Gym).
+- TM61 Will-O-Wisp: Battle Park (BP).
+- TM62 Silver Wind: Route 212.
+- TM63 Embargo: Veilstone City.
+- TM64 Explosion: Veilstone Game Corner (prize for 10 bonus rounds in a row, not sold).
+- TM65 Shadow Claw: Fantina (Hearthome Gym).
+- TM66 Payback: Route 215.
+- TM67 Recycle: Eterna City (Eterna Condominiums).
+- TM68 Giga Impact: Veilstone Game Corner (coins).
+- TM69 Rock Polish: Mt. Coronet.
+- TM70 Flash: Oreburgh Gate; Veilstone Dept. Store.
+- TM71 Stone Edge: Victory Road; Battle Points.
+- TM72 Avalanche: Candice (Snowpoint Gym).
+- TM73 Thunder Wave: Battle Park (BP).
+- TM74 Gyro Ball: Veilstone Game Corner (coins).
+- TM75 Swords Dance: Veilstone Game Corner (coins).
+- TM76 Stealth Rock: Roark (Oreburgh Gym).
+- TM77 Psych Up: Route 211.
+- TM78 Captivate: Route 204 (northeast, Cut).
+- TM79 Dark Pulse: Victory Road.
+- TM80 Rock Slide: Mt. Coronet.
+- TM81 X-Scissor: Route 221; Battle Points.
+- TM82 Sleep Talk: Eterna Forest.
+- TM83 Natural Gift: Veilstone Dept. Store.
+- TM84 Poison Jab: Route 212.
+- TM85 Dream Eater: Valor Lakefront (northeast, Rock Climb).
+- TM86 Grass Knot: Gardenia (Eterna Gym).
+- TM87 Swagger: Pokémon Mansion.
+- TM88 Pluck: Floaroma Town.
+- TM89 U-turn: Canalave City (southwest, Surf), free; Veilstone Game Corner (6,000 coins).
+- TM90 Substitute: Old Chateau.
+- TM91 Flash Cannon: Byron (Canalave Gym).
+- TM92 Trick Room: Route 213.
+- HM01 Cut: Cynthia (Eterna City).
+- HM02 Fly: Galactic Warehouse (Veilstone).
+- HM03 Surf: Celestic Town (elder).
+- HM04 Strength: Lost Tower (top floor).
+- HM05 Defog: Great Marsh (girl in the marsh).
+- HM06 Rock Smash: Hiker at Oreburgh Gate.
+- HM07 Waterfall: Jasmine (Sunyshore City).
+- HM08 Rock Climb: Route 217.
+
+<!-- fontes: assets/data (areas, bosses), notas pokemythology, Bulbapedia, Serebii -->

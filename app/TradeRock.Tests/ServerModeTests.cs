@@ -6,12 +6,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using TradeRock.App;
 using TradeRock.App.Server;
 using TradeRock.Core;
 using TradeRock.Core.Engines;
 using TradeRock.Core.Games;
+using TradeRock.Core.Storage;
 
 namespace TradeRock.Tests;
 
@@ -244,6 +246,32 @@ public sealed class ServerModeTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Atalhos_do_contador_valem_pela_rede_e_sao_por_conta()
+    {
+        await EnableAsync();
+        await CreateAccountAsync("rafa");
+        var rafa = await LoginAsync("rafa");
+
+        // Pela rede o endpoint existe (não é só da janela local) e começa no padrão.
+        var initial = await rafa.GetJsonAsync("/api/settings/hotkeys");
+        Assert.Equal("Space", initial.GetProperty("increment").GetString());
+        Assert.Equal("Backspace", initial.GetProperty("decrement").GetString());
+        // Atalho global só na janela do PC: pela rede não liga e as teclas do PC não chegam.
+        Assert.False(initial.GetProperty("supported").GetBoolean());
+        Assert.Equal("remote", initial.GetProperty("reason").GetString());
+        Assert.Equal(HttpStatusCode.Forbidden, (await rafa.PutAsync("/api/settings/hotkeys",
+            new { increment = "Space", decrement = "Backspace", global = true })).StatusCode);
+        Assert.Equal(HttpStatusCode.Forbidden, (await rafa.GetAsync("/api/hunts/events")).StatusCode);
+
+        Assert.Equal(HttpStatusCode.OK, (await rafa.PutAsync("/api/settings/hotkeys", new { increment = "Ctrl+ArrowUp", decrement = "Ctrl+ArrowDown" })).StatusCode);
+        Assert.Equal("Ctrl+ArrowUp", (await rafa.GetJsonAsync("/api/settings/hotkeys")).GetProperty("increment").GetString());
+
+        // O dono do PC continua com os dele.
+        var local = await _local.GetFromJsonAsync<JsonElement>("/api/settings/hotkeys", Ct);
+        Assert.Equal("Space", local.GetProperty("increment").GetString());
+    }
+
+    [Fact]
     public async Task Apagar_conta_apaga_o_cofre_dela_e_derruba_o_login()
     {
         await EnableAsync();
@@ -252,7 +280,43 @@ public sealed class ServerModeTests : IAsyncLifetime
         var accounts = await _local.GetFromJsonAsync<JsonElement>("/api/accounts", Ct);
         var id = accounts.EnumerateArray().Single(a => a.GetProperty("username").GetString() == "edu").GetProperty("id").GetString();
 
+        // Hunt e anexo de save da conta também vão embora.
+        Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync("/api/hunts",
+            new { species = 906, form = 0, gameKey = "sv", methodId = "masuda" })).StatusCode);
+        var runResponse = await edu.PostAsync("/api/nuzlocke", new { gameKey = "frlg", version = "firered" });
+        Assert.Equal(HttpStatusCode.OK, runResponse.StatusCode);
+        var runId = (await runResponse.Content.ReadFromJsonAsync<JsonElement>(Ct)).GetProperty("run").GetProperty("id").GetString();
+        Assert.Equal(HttpStatusCode.OK, (await edu.PostAsync($"/api/nuzlocke/{runId}/encounter",
+            new { areaId = "route-1", species = 16, form = 0, nickname = "Pidge", level = 3, status = "party" })).StatusCode);
+        var owner = Guid.Parse(id!);
+        var dbFactory = _app.Services.GetRequiredService<IDbContextFactory<TradeRockDb>>();
+        using (OwnerScope.Use(owner))
+        {
+            await using var db = await dbFactory.CreateDbContextAsync(Ct);
+            var mon = await db.Pokemon.FirstAsync(Ct);
+            db.SaveAttachments.Add(new SaveAttachment
+            {
+                Id = Guid.NewGuid(), PokemonId = mon.Id, SavePath = "/tmp/x.sav", SaveSha256 = "ab", Box = 0, Slot = 0,
+                AttachedAt = DateTimeOffset.UtcNow,
+            });
+            db.ActivityRecords.Add(new ActivityRecord
+            {
+                Id = Guid.NewGuid(), Kind = "gift", Game = TradeRock.Core.Trading.TradeGame.FireRed, EngineId = "fake",
+                Status = "completed", Ok = true, SummaryJson = "{}",
+            });
+            await db.SaveChangesAsync(Ct);
+        }
+
         Assert.Equal(HttpStatusCode.NoContent, (await _local.DeleteAsync($"/api/accounts/{id}", Ct)).StatusCode);
+        await using (var db = await dbFactory.CreateDbContextAsync(Ct))
+        {
+            Assert.Equal(0, await db.Hunts.IgnoreQueryFilters().CountAsync(h => h.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.SaveAttachments.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.NuzlockeRuns.IgnoreQueryFilters().CountAsync(r => r.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.ActivityRecords.IgnoreQueryFilters().CountAsync(a => a.OwnerId == owner, Ct));
+            Assert.Equal(0, await db.NuzlockeMons.CountAsync(Ct));
+            Assert.Equal(0, await db.NuzlockeEvents.CountAsync(Ct));
+        }
         Assert.Equal(HttpStatusCode.Unauthorized, (await edu.GetAsync("/api/pokemon")).StatusCode);
         // Os arquivos dos Pokémon de demonstração continuam: o cofre do dono também os usa.
         var local = await _local.GetFromJsonAsync<JsonElement>("/api/pokemon", Ct);
@@ -268,7 +332,7 @@ public sealed class ServerModeTests : IAsyncLifetime
         await CreateAccountAsync("gil", role: "admin");
         var fabi = await LoginAsync("fabi");
 
-        foreach (var path in new[] { "/api/setup", "/api/setup/report", "/api/worker", "/api/server" })
+        foreach (var path in new[] { "/api/setup", "/api/setup/report", "/api/worker", "/api/server", "/api/boxes/saves", "/api/settings/save-folders", "/api/saves/open-folder" })
         {
             var response = await fabi.GetAsync(path);
             Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);

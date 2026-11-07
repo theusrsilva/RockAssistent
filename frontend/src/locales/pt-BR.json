@@ -1,17 +1,20 @@
 {
   "app": {
-    "name": "TradeRock",
+    "name": "RockAssistent",
     "tagline": "Trocas de Pokémon com FireRed e LeafGreen do Switch"
   },
   "nav": {
     "home": "Início",
-    "trade": "Trocar",
-    "pokemon": "Cofre",
+    "dex": "Pokédex",
+    "guides": "Guias",
+    "boxes": "Boxes",
+    "trades": "Trocas",
+    "gifts": "Mystery Gift",
+    "nuzlocke": "Nuzlocke",
+    "hunt": "Contador Hunt",
     "history": "Histórico",
     "settings": "Configurações",
-    "builder": "Criar Pokémon",
-    "setup": "Configurar",
-    "activities": "Atividades"
+    "builder": "Criar Pokémon"
   },
   "common": {
     "loading": "Carregando…",
@@ -29,7 +32,7 @@
   },
   "demo": {
     "badge": "Modo demonstração",
-    "explain": "Nada é trocado de verdade: o TradeRock simula o Switch para você conhecer o passo a passo."
+    "explain": "Nada é trocado de verdade: o RockAssistent simula o Switch para você conhecer o passo a passo."
   },
   "status": {
     "title": "Status do aplicativo",
@@ -41,12 +44,24 @@
     "environment": "Ambiente"
   },
   "home": {
-    "title": "Bem-vindo ao TradeRock",
-    "intro": "O TradeRock finge ser um segundo Switch na sala de troca do FireRed e LeafGreen. Assim você manda Pokémon do PC para o seu jogo e guarda os que recebe.",
+    "title": "Bem-vindo ao RockAssistent",
+    "intro": "O RockAssistent finge ser um segundo Switch na sala de troca do FireRed e LeafGreen. Assim você manda Pokémon do PC para o seu jogo e guarda os que recebe.",
     "startTrade": "Fazer uma troca",
     "seePokemon": "Ver meus Pokémon",
     "running": "Há uma troca em andamento.",
-    "follow": "Acompanhar"
+    "follow": "Acompanhar",
+    "inProgress": "Em andamento",
+    "inProgressEmpty": "Nenhuma hunt nem run de Nuzlocke em andamento. Que tal começar uma?",
+    "newHunt": "Começar uma hunt",
+    "newRun": "Começar um Nuzlocke",
+    "giftSub": "Receba presentes de evento no FireRed / LeafGreen e no Sword / Shield.",
+    "guideOfTheDay": "Guia do dia",
+    "readGuide": "Ler o guia",
+    "dexSearch": "Buscar na Pokédex",
+    "dexSearchPlaceholder": "Nome ou número",
+    "search": "Buscar",
+    "dexSub": "Dados de cada Pokémon, golpe e tipo.",
+    "guidesSub": "Jogos, mecânicas, VGC e mitologia."
   },
   "pokemon": {
     "title": "Meus Pokémon",
@@ -159,7 +174,7 @@
       "attempt": "Tentativa {{attempt}} de {{max}}",
       "nowWhat": "O que fazer agora",
       "cancel": "Cancelar troca",
-      "cancelConfirm": "Cancelar a troca agora? O TradeRock encerra a conexão com segurança.",
+      "cancelConfirm": "Cancelar a troca agora? O RockAssistent encerra a conexão com segurança.",
       "cancelYes": "Sim, cancelar",
       "cancelNo": "Continuar",
       "cancelling": "Cancelando…",
@@ -217,7 +232,7 @@
     "trainer_id_invalid": "esse número de treinador não existe nesse jogo",
     "format_ambiguous": "não dá para saber de qual jogo é o arquivo: use a extensão certa (.pb7, .pk8, .pb8, .pk9 ou .pa9)",
     "game_mismatch": "o arquivo é de outro jogo",
-    "game_unsupported": "o Pokémon é de um jogo que o TradeRock não troca",
+    "game_unsupported": "o Pokémon é de um jogo que o RockAssistent não troca",
     "save_game_unsupported": "só dá para colocar no save Pokémon do FireRed/LeafGreen"
   },
   "failures": {
@@ -233,11 +248,11 @@
     "connection_lost": "A conexão caiu durante a troca.",
     "engine_crashed": "O motor de troca parou com um erro.",
     "cancelled": "Você cancelou a troca.",
-    "internal_error": "Erro interno do TradeRock.",
+    "internal_error": "Erro interno do RockAssistent.",
     "unknown": "Falha desconhecida.",
     "join_not_approved": "O Switch viu o pedido de entrada, mas ele não foi aprovado a tempo. Aprove o pedido na tela do Switch.",
     "radio_rx_failed": "A entrada autenticou, mas a placa parou de receber os anúncios do Switch. Configure o NetworkManager em Configurações → Conexão e tente de novo.",
-    "engine_broken": "O motor de troca está incompleto nesta instalação. Instale o TradeRock de novo.",
+    "engine_broken": "O motor de troca está incompleto nesta instalação. Instale o RockAssistent de novo.",
     "trade_incomplete": "Só parte das trocas foi concluída.",
     "engine_error": "O motor dos jogos do Switch parou com um erro. Os detalhes estão no log.",
     "invalid_request": "O pedido de troca tem um dado que o motor não aceita.",
@@ -245,14 +260,14 @@
     "phy_not_found": "A placa Wi-Fi escolhida não está mais no PC. Ela foi desconectada?",
     "not_root": "O componente de rede não está rodando como administrador.",
     "worker_missing": "O componente de rede não está instalado.",
-    "worker_unsafe": "A instalação do componente de rede não é segura. Instale o TradeRock de novo.",
+    "worker_unsafe": "A instalação do componente de rede não é segura. Instale o RockAssistent de novo.",
     "worker_policy_missing": "A permissão do componente de rede (polkit) não está instalada.",
     "pkexec_missing": "Falta o pkexec para pedir a senha de administrador.",
     "auth_cancelled": "A janela de senha foi fechada. O componente de rede precisa da senha de administrador para usar a placa.",
     "not_authorized": "O sistema não autorizou o componente de rede. Confira a senha de administrador.",
     "worker_exited": "O componente de rede parou.",
     "worker_timeout": "O componente de rede não respondeu a tempo.",
-    "worker_version": "O componente de rede instalado é de outra versão do TradeRock. Instale de novo.",
+    "worker_version": "O componente de rede instalado é de outra versão do RockAssistent. Instale de novo.",
     "worker_start_failed": "Não foi possível iniciar o componente de rede.",
     "wifi_not_configured": "Escolha a placa Wi-Fi em Configurações → Conexão.",
     "keys_missing": "O prod.keys não foi enviado.",
@@ -260,9 +275,9 @@
     "busy": "O componente de rede ainda está terminando a operação anterior. Tente de novo em alguns segundos.",
     "beacon_test_crashed": "O teste com o Switch parou com um erro. Tente de novo; se continuar, exporte o relatório no resumo.",
     "worker_install_failed": "A instalação do componente de rede falhou. Tente de novo; se continuar, exporte o relatório no resumo.",
-    "worker_not_bundled": "Esta versão do TradeRock não traz o componente de rede para instalar.",
+    "worker_not_bundled": "Esta versão do RockAssistent não traz o componente de rede para instalar.",
     "esp32_not_configured": "Configure o ESP32 em Configurações → Conexão (placa e porta).",
-    "esp32_firmware_missing": "Nenhum firmware do TradeRock respondeu no ESP32. Grave o firmware em Configurações → Conexão.",
+    "esp32_firmware_missing": "Nenhum firmware do RockAssistent respondeu no ESP32. Grave o firmware em Configurações → Conexão.",
     "esp32_firmware_incompatible": "O firmware do ESP32 é antigo ou diferente. Grave o firmware em Configurações → Conexão.",
     "esp32_no_response": "O ESP32 parou de responder.",
     "esp32_error": "Erro ao falar com o ESP32.",
@@ -272,7 +287,7 @@
     "serial_not_chosen": "Escolha a porta do ESP32.",
     "room_changed": "A sala do Switch mudou no meio da conexão. Abra a sala de novo e tente outra vez.",
     "esp32_busy": "O ESP32 está ocupado com outra operação. Espere terminar.",
-    "esp32_chip_unsupported": "Este chip não tem firmware do TradeRock.",
+    "esp32_chip_unsupported": "Este chip não tem firmware do RockAssistent.",
     "esp32_flash_too_small": "A flash desta placa é pequena demais para o firmware.",
     "verify_mismatch": "A gravação terminou, mas a conferência não bateu. Grave de novo.",
     "esptool_missing": "O gravador de firmware (esptool) não foi encontrado nesta instalação.",
@@ -286,7 +301,7 @@
     "received_missing": "A troca terminou, mas o Pokémon recebido não apareceu."
   },
   "history": {
-    "title": "Histórico de trocas",
+    "title": "Histórico",
     "empty": "Nenhuma troca ainda.",
     "trades": "{{done}} de {{planned}} troca(s)",
     "attempts": "{{count}} tentativa(s)",
@@ -295,7 +310,36 @@
     "received": "Recebido",
     "nothing": "nada",
     "details": "Ver eventos",
-    "hide": "Esconder eventos"
+    "hide": "Esconder eventos",
+    "kinds": {
+      "all": "Tudo",
+      "trade": "Troca",
+      "raid": "Raid",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunt",
+      "nuzlocke": "Nuzlocke"
+    },
+    "kindsPlural": {
+      "trade": "Trocas",
+      "raid": "Raids",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle",
+      "hunt": "Hunts",
+      "nuzlocke": "Nuzlocke"
+    },
+    "feed": {
+      "empty": "Nada por aqui ainda. Trocas, hunts terminadas e runs de Nuzlocke terminadas aparecem aqui.",
+      "huntFound": "{{name}}: shiny encontrado",
+      "huntGaveUp": "{{name}}: desistiu",
+      "runChampion": "{{name}}: campeão",
+      "runWipe": "{{name}}: wipe",
+      "ok": "Deu certo",
+      "fail": "Não deu certo",
+      "raid": "Raid",
+      "gift": "Mystery Gift",
+      "circle": "Union Circle"
+    }
   },
   "settings": {
     "title": "Configurações",
@@ -314,7 +358,7 @@
     },
     "tradeTitle": "Troca",
     "maxAttempts": "Tentativas de conexão",
-    "maxAttemptsHelp": "Quantas vezes o TradeRock tenta conectar antes de desistir. A conexão com o Switch às vezes precisa de algumas tentativas.",
+    "maxAttemptsHelp": "Quantas vezes o RockAssistent tenta conectar antes de desistir. A conexão com o Switch às vezes precisa de algumas tentativas.",
     "retryDelaySeconds": "Espera entre tentativas (segundos)",
     "approvalTimeoutSeconds": "Tempo para aprovar a entrada (segundos)",
     "phaseTimeoutSeconds": "Tempo máximo parado dentro da sala (segundos)",
@@ -327,7 +371,7 @@
     "choosePokemon": "Escolha um Pokémon que você capturou no Switch",
     "illegalTitle": "Pokémon ilegais",
     "allowIllegal": "Permitir trocar Pokémon ilegais (modo avançado)",
-    "allowIllegalHelp": "Desligado, o TradeRock não manda para o Switch um Pokémon que o PKHeX considera ilegal. Ligado, cada troca com um ilegal ainda pede confirmação.",
+    "allowIllegalHelp": "Desligado, o RockAssistent não manda para o Switch um Pokémon que o PKHeX considera ilegal. Ligado, cada troca com um ilegal ainda pede confirmação.",
     "engineReasons": {
       "not_linux": "só no Linux",
       "worker_missing": "falta instalar o componente de rede",
@@ -337,11 +381,25 @@
     "engineErrors": {
       "server_mode_on_radio": "O modo servidor está usando a placa Wi-Fi das trocas. Desligue o modo servidor ou escolha outra interface antes.",
       "busy": "Espere a troca e a fila terminarem para mudar o motor."
+    },
+    "internet": {
+      "title": "Internet opcional",
+      "sub": "Duas opções que baixam arquivos públicos. Começam desligadas; sem elas, tudo funciona sem internet.",
+      "smogon": {
+        "label": "Estatísticas de uso do Smogon",
+        "help": "Baixa, quando você clicar em Atualizar, o arquivo mensal do Smogon com os Pokémon, golpes, itens, habilidades e parceiros mais usados no VGC do Pokémon Champions (cerca de 15 MB). Aparece na aba Mais usados da seção VGC e fica guardado na pasta de dados."
+      },
+      "pokepaste": {
+        "label": "Abrir link do pokepast.es",
+        "help": "Deixa colar um link do pokepast.es em Minha equipe: o RockAssistent baixa o texto do time (até 20 KB). Sem isso, só dá para colar o texto."
+      },
+      "privacy": "Nenhuma das duas envia dados do seu computador: o RockAssistent só pede o arquivo e lê a resposta. Os downloads aparecem nos Logs sem o endereço do paste.",
+      "remote": "Só dá para ligar ou desligar na janela do PC."
     }
   },
   "close": {
     "title": "Fechar durante uma troca?",
-    "body": "Há uma troca em andamento. Se fechar agora, o TradeRock cancela a troca com segurança antes de sair. Pokémon já recebidos continuam guardados.",
+    "body": "Há uma troca em andamento. Se fechar agora, o RockAssistent cancela a troca com segurança antes de sair. Pokémon já recebidos continuam guardados.",
     "confirm": "Cancelar troca e fechar",
     "keep": "Continuar trocando"
   },
@@ -599,7 +657,7 @@
   },
   "inject": {
     "title": "Injetar num save de GBA",
-    "intro": "Coloca Pokémon do cofre nas caixas de um save de FireRed, LeafGreen, Ruby, Sapphire ou Emerald. Antes de gravar, o TradeRock guarda uma cópia do save original.",
+    "intro": "Coloca Pokémon do cofre nas caixas de um save de FireRed, LeafGreen, Ruby, Sapphire ou Emerald. Antes de gravar, o RockAssistent guarda uma cópia do save original.",
     "chooseFile": "Escolher o save",
     "reading": "Lendo o save…",
     "header": "{{file}} · {{game}} · {{trainer}}",
@@ -628,7 +686,7 @@
     }
   },
   "wizard": {
-    "title": "Configurar o TradeRock",
+    "title": "Configurar o RockAssistent",
     "stepOf": "Etapa {{n}} de {{total}}",
     "steps": [
       "Boas-vindas",
@@ -685,7 +743,7 @@
     "yourCard": "Sua placa",
     "usbAdapterTitle": "Alternativa: um adaptador Wi-Fi USB compatível",
     "usbAdapterPros": "Prós: usa o mesmo caminho da placa Wi-Fi e deixa a internet livre. Contras: custa mais que um ESP32 e só funciona no Linux.",
-    "esp32Pros": "ESP32: mais barato, funciona no Linux e no Windows, não mexe na rede. Contras: precisa gravar um firmware (o TradeRock faz isso).",
+    "esp32Pros": "ESP32: mais barato, funciona no Linux e no Windows, não mexe na rede. Contras: precisa gravar um firmware (o RockAssistent faz isso).",
     "catalogWifi": "Placas Wi-Fi conhecidas",
     "catalogEsp32": "ESP32 conhecidos",
     "catalogDate": "Dados conferidos em {{date}}.",
@@ -720,7 +778,7 @@
     "editStep": "Ir para a etapa",
     "simulation": "Simulação (desenvolvimento)",
     "simulationNone": "Sistema real",
-    "banner": "Configure o TradeRock para trocar com o seu Switch.",
+    "banner": "Configure o RockAssistent para trocar com o seu Switch.",
     "bannerAction": "Abrir o assistente",
     "checkStatus": {
       "ok": "OK",
@@ -779,10 +837,10 @@
       "udev_rule_optional": "Opcional: regra udev para a porta ter sempre o nome {{path}}.",
       "switch_test_ok": "Teste com o Switch aprovado: a sala foi encontrada no canal {{channel}} e decifrada. Rádio e prod.keys confirmados.",
       "switch_test_pending": "Teste com o Switch (sala encontrada e decifrada).",
-      "worker_missing": "Componente de rede não instalado. Ele vem com o pacote do TradeRock (.deb); no AppImage, Configurações → Conexão oferece instalar. Se você compilou o app, rode scripts/dev-host.sh.",
+      "worker_missing": "Componente de rede não instalado. Ele vem com o pacote do RockAssistent (.deb); no AppImage, Configurações → Conexão oferece instalar. Se você compilou o app, rode scripts/dev-host.sh.",
       "pkexec_missing": "Falta o pkexec, que o sistema usa para pedir a senha de administrador.",
-      "worker_unsafe": "A instalação do componente de rede ({{path}}) pode ser alterada sem ser administrador. Por segurança, o TradeRock não vai usá-la. Instale de novo.",
-      "worker_policy_missing": "A permissão do componente de rede (política do polkit) não está instalada. Instale o TradeRock de novo.",
+      "worker_unsafe": "A instalação do componente de rede ({{path}}) pode ser alterada sem ser administrador. Por segurança, o RockAssistent não vai usá-la. Instale de novo.",
+      "worker_policy_missing": "A permissão do componente de rede (política do polkit) não está instalada. Instale o RockAssistent de novo.",
       "worker_installed": "Componente de rede instalado. A senha de administrador é pedida uma vez, quando ele for usado.",
       "tools_missing": "Faltam programas que o motor usa para controlar a placa: {{tools}}.",
       "card_test_not_run": "Teste a placa {{model}} ({{phy}}) abaixo: é o teste que diz se ela serve.",
@@ -799,23 +857,23 @@
       "switch_test_not_run": "Recomendado: faça o teste com o Switch abaixo para confirmar o rádio e o prod.keys antes da primeira troca. A troca já está liberada sem ele.",
       "switch_test_failed": "O teste com o Switch não passou. A troca continua liberada, mas veja o resultado abaixo: o problema pode aparecer na troca.",
       "worker_appimage_missing": "O componente de rede ainda não foi instalado a partir do AppImage. Use o botão abaixo.",
-      "worker_appimage_outdated": "O componente de rede instalado é de outra versão do TradeRock. Use o botão abaixo para atualizar.",
+      "worker_appimage_outdated": "O componente de rede instalado é de outra versão do RockAssistent. Use o botão abaixo para atualizar.",
       "esp32_firmware_needs_port": "Escolha a porta do ESP32 para conferir o firmware.",
       "esp32_firmware_not_checked": "Confira o firmware do ESP32 (botão \"Verificar o firmware\").",
-      "esp32_firmware_ok": "O firmware do TradeRock respondeu pela porta ({{target}}): comunicação OK.",
+      "esp32_firmware_ok": "O firmware do RockAssistent respondeu pela porta ({{target}}): comunicação OK.",
       "esp32_firmware_other_chip": "O firmware desta placa é de outro chip ({{target}}), mas você marcou {{model}}. Confira qual ESP32 você tem.",
-      "esp32_firmware_verified": "O firmware gravado é exatamente o que o TradeRock traz.",
-      "esp32_firmware_other_version": "O firmware responde, mas não é exatamente o que o TradeRock traz. Se a troca falhar, grave o firmware de novo.",
+      "esp32_firmware_verified": "O firmware gravado é exatamente o que o RockAssistent traz.",
+      "esp32_firmware_other_version": "O firmware responde, mas não é exatamente o que o RockAssistent traz. Se a troca falhar, grave o firmware de novo.",
       "esp32_probe_hello_ok": "O firmware respondeu.",
-      "esp32_probe_esp32_firmware_missing": "Nenhum firmware do TradeRock respondeu nesta porta. Grave o firmware (botão \"Gravar o firmware\").",
-      "esp32_probe_esp32_firmware_incompatible": "O firmware desta placa é antigo ou diferente. Grave o firmware do TradeRock (botão \"Gravar o firmware\").",
+      "esp32_probe_esp32_firmware_missing": "Nenhum firmware do RockAssistent respondeu nesta porta. Grave o firmware (botão \"Gravar o firmware\").",
+      "esp32_probe_esp32_firmware_incompatible": "O firmware desta placa é antigo ou diferente. Grave o firmware do RockAssistent (botão \"Gravar o firmware\").",
       "esp32_probe_esp32_no_response": "O ESP32 parou de responder. Desconecte, conecte de novo e confira outra vez.",
       "esp32_probe_serial_permission": "Sem permissão para usar a porta serial (veja o item do grupo acima).",
       "esp32_probe_serial_busy": "A porta serial está em uso por outro programa (monitor serial, Arduino IDE…). Feche-o e confira de novo.",
       "esp32_probe_serial_port_missing": "A porta não existe mais. O ESP32 foi desconectado?",
       "esp32_probe_esp32_error": "Erro ao falar com o ESP32. Confira de novo; se continuar, exporte o relatório.",
       "esp32_chip_ok": "Chip identificado: {{chip}}, flash de {{flash}}.",
-      "esp32_chip_unsupported": "O chip {{chip}} não tem firmware do TradeRock.",
+      "esp32_chip_unsupported": "O chip {{chip}} não tem firmware do RockAssistent.",
       "esp32_board_mismatch": "Você marcou {{model}}, mas o chip é {{chip}}. Corrija a placa na lista acima.",
       "esp32_flash_too_small": "A flash desta placa tem {{size}}; o firmware precisa de {{needed}}.",
       "esp32_old_revision": "Chip {{chip}}: revisão antiga, típica do módulo ESP32-WROOM-32. Algumas placas assim não ouvem o Switch; o teste com o Switch mostra se a sua serve."
@@ -827,7 +885,7 @@
     "cardTest": {
       "title": "Teste da placa ({{phy}})",
       "help": "O teste coloca a placa em modo monitor e transmite os quadros que a sala do Switch usa. Leva uns 10 segundos e não precisa do Switch nem do prod.keys.",
-      "password": "Na primeira vez, o sistema pede a senha de administrador (é o sistema que pede, não o TradeRock). Depois, ela vale até você fechar o app.",
+      "password": "Na primeira vez, o sistema pede a senha de administrador (é o sistema que pede, não o RockAssistent). Depois, ela vale até você fechar o app.",
       "offline": "Durante o teste, o Wi-Fi normal desta placa fica desligado. No fim ele volta sozinho.",
       "offlineInternet": "Atenção: esta placa é a internet do PC. Durante o teste (e durante as trocas) a internet cai e volta sozinha no fim.",
       "needsWorker": "Primeiro resolva o componente de rede (veja a lista abaixo).",
@@ -861,7 +919,7 @@
       "title": "NetworkManager",
       "help": "A cada troca, o motor cria uma conexão sem fio temporária (com nome começando em \"ldn\"). Se o NetworkManager tentar controlá-la, a troca autentica mas nunca completa. A configuração diz a ele para ignorar essas conexões; a sua internet não muda.",
       "configure": "Configurar o NetworkManager",
-      "confirmText": "O TradeRock vai criar estes dois arquivos (como administrador) e recarregar a configuração do NetworkManager, sem derrubar a conexão atual:",
+      "confirmText": "O RockAssistent vai criar estes dois arquivos (como administrador) e recarregar a configuração do NetworkManager, sem derrubar a conexão atual:",
       "confirm": "Confirmar e configurar"
     },
     "switchTest": {
@@ -870,7 +928,7 @@
       "stepOpen": "abra o FireRed ou o LeafGreen e entre no Direct Corner (2º andar do Centro Pokémon);",
       "stepLeader": "escolha ser o Leader e fique na tela de espera da sala;",
       "stepNear": "deixe o Switch perto do PC (até uns 2 metros).",
-      "noJoin": "O TradeRock só escuta: ele não entra na sala, e o Switch não recebe nenhum pedido.",
+      "noJoin": "O RockAssistent só escuta: ele não entra na sala, e o Switch não recebe nenhum pedido.",
       "offline": "Durante o teste (até {{seconds}} segundos), o Wi-Fi normal desta placa fica desligado. No fim ele volta sozinho.",
       "needsCard": "Primeiro passe no teste da placa (item Componente de rede).",
       "needsKeys": "Primeiro envie o prod.keys (item Chaves).",
@@ -925,14 +983,14 @@
     },
     "esp32fw": {
       "title": "Firmware do ESP32",
-      "help": "O ESP32 precisa do firmware do pokeldn para conversar com o Switch (todos os jogos usam o mesmo). O TradeRock traz o firmware certo para cada chip e grava sozinho, pelo USB.",
+      "help": "O ESP32 precisa do firmware do pokeldn para conversar com o Switch (todos os jogos usam o mesmo). O RockAssistent traz o firmware certo para cada chip e grava sozinho, pelo USB.",
       "probe": "Verificar o firmware",
       "identify": "Identificar a placa",
       "verify": "Conferir a versão",
       "flash": "Gravar o firmware",
       "working": "Aguarde…",
       "identifyHelp": "Identificar e conferir reiniciam a placa por um instante; ela volta a funcionar sozinha.",
-      "flashConfirmTitle": "Gravar o firmware do TradeRock?",
+      "flashConfirmTitle": "Gravar o firmware do RockAssistent?",
       "flashConfirmText": "Tudo o que estiver gravado no ESP32 será substituído. Leva de 30 segundos a 2 minutos. Não desconecte a placa até terminar.",
       "flashConfirm": "Gravar agora",
       "stages": {
@@ -956,9 +1014,9 @@
   "workerInstall": {
     "title": "Instalar o componente de rede",
     "outdatedTitle": "Atualizar o componente de rede",
-    "why": "O componente de rede é a parte do TradeRock que usa a placa Wi-Fi como administrador. Ele vem dentro do AppImage, mas o sistema só deixa rodá-lo como administrador depois de copiado para uma pasta do sistema.",
+    "why": "O componente de rede é a parte do RockAssistent que usa a placa Wi-Fi como administrador. Ele vem dentro do AppImage, mas o sistema só deixa rodá-lo como administrador depois de copiado para uma pasta do sistema.",
     "where": "Ele vai para",
-    "password": "O sistema pede a senha de administrador para copiar (é o sistema que pede, não o TradeRock).",
+    "password": "O sistema pede a senha de administrador para copiar (é o sistema que pede, não o RockAssistent).",
     "remove": "Você pode removê-lo a qualquer momento em Configurações.",
     "install": "Instalar o componente de rede",
     "update": "Atualizar o componente de rede",
@@ -966,7 +1024,7 @@
     "settingsTitle": "Componente de rede (AppImage)",
     "state": {
       "missing": "Não instalado. Ele é necessário para trocar com a placa Wi-Fi.",
-      "outdated": "Instalado, mas de outra versão do TradeRock. Atualize para usar a placa Wi-Fi.",
+      "outdated": "Instalado, mas de outra versão do RockAssistent. Atualize para usar a placa Wi-Fi.",
       "ok": "Instalado em /usr/local/lib/traderock."
     },
     "removeButton": "Remover o componente de rede",
@@ -974,23 +1032,23 @@
     "removeHelp": "Apaga /usr/local/lib/traderock e a política do polkit. O sistema pede a senha de administrador. Seus Pokémon e configurações não são apagados."
   },
   "about": {
-    "title": "Sobre o TradeRock",
+    "title": "Sobre o RockAssistent",
     "version": "Versão {{version}}",
     "releases": "Pacotes e código-fonte de cada versão:",
     "credits": "Créditos e licenças",
-    "creditsHelp": "O TradeRock usa estes projetos. As licenças foram conferidas no código-fonte de cada um.",
+    "creditsHelp": "O RockAssistent usa estes projetos. As licenças foram conferidas no código-fonte de cada um.",
     "project": "Projeto",
-    "use": "Uso no TradeRock",
+    "use": "Uso no RockAssistent",
     "license": "Licença",
     "link": "Sobre"
   },
   "login": {
-    "title": "Entrar no TradeRock",
-    "intro": "Este TradeRock está aberto na rede da casa. Entre com a sua conta para ver o seu cofre e trocar.",
+    "title": "Entrar no RockAssistent",
+    "intro": "Este RockAssistent está aberto na rede da casa. Entre com a sua conta para ver o seu cofre e trocar.",
     "username": "Nome de usuário",
     "password": "Senha",
     "submit": "Entrar",
-    "noAccount": "Não tem conta? Peça para quem cuida do TradeRock no PC criar uma para você.",
+    "noAccount": "Não tem conta? Peça para quem cuida do RockAssistent no PC criar uma para você.",
     "as": "Conectado como {{name}}",
     "logout": "Sair",
     "errors": {
@@ -1005,12 +1063,12 @@
     "off": "Desligado",
     "onBadge": "Modo servidor",
     "onHint": "Outras pessoas da rede de casa podem entrar. Veja em Configurações.",
-    "intro": "Enquanto o app estiver aberto, outras pessoas da mesma rede (Wi-Fi ou cabo da sua casa) abrem o TradeRock no navegador do celular ou do PC delas, entram com uma conta e usam o próprio cofre. Como só existe um rádio, as trocas entram numa fila, uma por vez.",
+    "intro": "Enquanto o app estiver aberto, outras pessoas da mesma rede (Wi-Fi ou cabo da sua casa) abrem o RockAssistent no navegador do celular ou do PC delas, entram com uma conta e usam o próprio cofre. Como só existe um rádio, as trocas entram numa fila, uma por vez.",
     "warningTitle": "Só para a rede da sua casa",
-    "warningInternet": "Nunca libere esta porta no roteador nem coloque o TradeRock na internet. Qualquer pessoa de fora poderia tentar entrar.",
+    "warningInternet": "Nunca libere esta porta no roteador nem coloque o RockAssistent na internet. Qualquer pessoa de fora poderia tentar entrar.",
     "warningHttp": "A conexão não é criptografada (http): alguém na mesma rede poderia ver as senhas. Use só em redes de confiança e senhas que você não usa em outro lugar.",
     "interface": "Interface de rede",
-    "interfaceHelp": "Por onde este PC está ligado na rede da casa. O TradeRock escuta só nela.",
+    "interfaceHelp": "Por onde este PC está ligado na rede da casa. O RockAssistent escuta só nela.",
     "wired": "cabo",
     "wireless": "Wi-Fi",
     "blocked": "placa das trocas",
@@ -1023,7 +1081,7 @@
     "turnOff": "Desligar",
     "offOnStart": "O modo servidor começa desligado sempre que o app abre.",
     "openOnPhone": "No celular (na mesma rede), aponte a câmera para o código ou digite o endereço:",
-    "qrAlt": "Código QR com o endereço do TradeRock na rede",
+    "qrAlt": "Código QR com o endereço do RockAssistent na rede",
     "interfaceUsed": "Interface {{name}}",
     "sessions_one": "{{count}} pessoa conectada",
     "sessions_other": "{{count}} pessoas conectadas",
@@ -1033,9 +1091,9 @@
       "interface_is_radio": "Essa é a placa Wi-Fi das trocas. Escolha outra interface.",
       "bind_failed": "Não deu para usar essa porta (outro programa pode estar usando). Tente outra porta."
     },
-    "localOnly": "Esta tela só abre na janela do TradeRock no próprio PC.",
+    "localOnly": "Esta tela só abre na janela do RockAssistent no próprio PC.",
     "virtual": "virtual (não é a rede da casa)",
-    "windowsFirewall": "No Windows, o instalador já liberou o TradeRock no Firewall, só em redes \"Privadas\". Se o celular não conseguir abrir, confira em Configurações do Windows → Rede e Internet se a rede da casa está como \"Rede privada\"."
+    "windowsFirewall": "No Windows, o instalador já liberou o RockAssistent no Firewall, só em redes \"Privadas\". Se o celular não conseguir abrir, confira em Configurações do Windows → Rede e Internet se a rede da casa está como \"Rede privada\"."
   },
   "accounts": {
     "title": "Contas",
@@ -1109,10 +1167,11 @@
     },
     "mobileNav": {
       "home": "Início",
-      "swap_horiz": "Trocar",
-      "inventory_2": "Cofre",
-      "add_circle": "Criar",
-      "more": "Mais"
+      "menu_book": "Pokédex",
+      "map": "Guias",
+      "inventory_2": "Boxes",
+      "more": "Mais",
+      "swap_horiz": "Trocas"
     },
     "logoutAs": "Sair da conta {{name}}",
     "login": {
@@ -1125,7 +1184,6 @@
       "tradeSub": "Escolha até 6 Pokémon e mande para o Switch.",
       "vault": "Abrir o cofre",
       "vaultSub": "Veja, organize e edite seus Pokémon.",
-      "createSub": "Monte um Pokémon legal em poucos cliques.",
       "allReady": "Tudo pronto para trocar",
       "readySub": "Abra o Direct Corner no Switch e comece.",
       "missing_one": "Falta {{count}} item para a troca de verdade",
@@ -1166,13 +1224,13 @@
         "switch": "Teste com o Switch (recomendado)"
       },
       "what": {
-        "system": "Com a placa Wi-Fi, o TradeRock controla a placa diretamente, e isso só funciona com Linux instalado no PC (não serve máquina virtual nem WSL). Com ESP32, qualquer sistema serve.",
+        "system": "Com a placa Wi-Fi, o RockAssistent controla a placa diretamente, e isso só funciona com Linux instalado no PC (não serve máquina virtual nem WSL). Com ESP32, qualquer sistema serve.",
         "keys": "Os Switches conversam de forma criptografada. O arquivo prod.keys tem as chaves para entender essa conversa. Ele é único do seu console e sai dele.",
         "radio": "É o que fala “pelo ar” com o Switch: a placa Wi-Fi do seu PC ou uma plaquinha ESP32 ligada no USB. Basta um dos dois.",
         "driver": "Um programinha que deixa a placa Wi-Fi falar a “língua” do Switch. Instala uma vez só e pede a senha de administrador quando usado.",
         "usb": "O ESP32 precisa do firmware certo e o PC precisa de permissão para conversar com ele pela porta USB.",
-        "game": "No FireRed/LeafGreen, a troca sem fio acontece no Direct Corner (2º andar do Centro Pokémon). Você cria a sala como Leader e o TradeRock entra nela como se fosse outro Switch.",
-        "switch": "Um teste rápido, sem trocar nada: o TradeRock procura a sala do seu Switch e confere se consegue entender a conversa."
+        "game": "No FireRed/LeafGreen, a troca sem fio acontece no Direct Corner (2º andar do Centro Pokémon). Você cria a sala como Leader e o RockAssistent entra nela como se fosse outro Switch.",
+        "switch": "Um teste rápido, sem trocar nada: o RockAssistent procura a sala do seu Switch e confere se consegue entender a conversa."
       },
       "desc": {
         "systemOk": "Linux instalado de verdade",
@@ -1214,7 +1272,7 @@
       "activate": "Usar nas trocas de verdade",
       "activateHelp": "Tudo testado. Falta só ligar o rádio nas trocas.",
       "activated": "Trocas de verdade ligadas",
-      "keysNote": "Use só as chaves do seu próprio console. Não baixe da internet nem compartilhe. O TradeRock guarda o arquivo só para você e nunca o envia pela rede.",
+      "keysNote": "Use só as chaves do seu próprio console. Não baixe da internet nem compartilhe. O RockAssistent guarda o arquivo só para você e nunca o envia pela rede.",
       "remote": "A conexão é configurada no PC do dono. Aqui você só acompanha o status.",
       "fullText": "Explicação completa",
       "keysSteps": [
@@ -1227,7 +1285,7 @@
         "inUse": "Em uso",
         "sub": "O Sword/Shield também troca pela rede de casa, sem ESP32, placa Wi-Fi nem prod.keys. O Switch e este computador precisam estar na mesma rede.",
         "step1": "No jogo, abra as Opções e aperte L + R + o analógico esquerdo juntos: aparece o aviso de que o modo LAN foi ligado.",
-        "step2": "Na troca, o código não é usado: qualquer Switch no modo LAN da mesma rede encontra o TradeRock.",
+        "step2": "Na troca, o código não é usado: qualquer Switch no modo LAN da mesma rede encontra o RockAssistent.",
         "use": "Usar a rede de casa",
         "backRadio": "Voltar para o rádio",
         "backDemo": "Voltar para a demonstração"
@@ -1293,7 +1351,7 @@
       },
       "demoBanner": "Tudo funciona, mas as trocas são simuladas até a conexão ficar pronta.",
       "setupConnection": "Configurar conexão",
-      "teamTip": "O TradeRock finge ser outro Switch com este time. Marque quem vai para o seu jogo. O time precisa de 2 ou mais Pokémon porque o jogo não deixa trocar o último. Todos ficam guardados no cofre antes de começar.",
+      "teamTip": "O RockAssistent finge ser outro Switch com este time. Marque quem vai para o seu jogo. O time precisa de 2 ou mais Pokémon porque o jogo não deixa trocar o último. Todos ficam guardados no cofre antes de começar.",
       "empty": "Vazio",
       "send": "Enviar",
       "stays": "Fica",
@@ -1328,7 +1386,7 @@
         }
       ],
       "learnMore": "Saiba mais",
-      "prepMore": "O Direct Corner é liberado depois de uns 20 a 40 minutos de jogo. O Switch cria uma rede sem fio local e o TradeRock entra nela como se fosse um segundo Switch. A conexão às vezes precisa de algumas tentativas: o TradeRock tenta de novo sozinho.",
+      "prepMore": "O Direct Corner é liberado depois de uns 20 a 40 minutos de jogo. O Switch cria uma rede sem fio local e o RockAssistent entra nela como se fosse um segundo Switch. A conexão às vezes precisa de algumas tentativas: o RockAssistent tenta de novo sozinho.",
       "queueNote": "Você está pela rede: a troca entra na fila do PC.",
       "sending": "Enviando {{names}}",
       "nothingToSend": "Nada para enviar",
@@ -1347,7 +1405,7 @@
       "tradeNumber": "Troca {{n}}",
       "otherGame": "É do {{game}}: dá para mover de jogo no cofre",
       "tradeBack": "Trocar de volta para evoluir",
-      "tradeBackTip": "Para o Pokémon do Switch que evolui por troca: depois de cada troca, o TradeRock devolve na hora o Pokémon que recebeu (ele evolui no Switch) e recebe de volta o que tinha mandado. No fim, nada muda no cofre."
+      "tradeBackTip": "Para o Pokémon do Switch que evolui por troca: depois de cada troca, o RockAssistent devolve na hora o Pokémon que recebeu (ele evolui no Switch) e recebe de volta o que tinha mandado. No fim, nada muda no cofre."
     },
     "live": {
       "running": "Troca em andamento",
@@ -1392,7 +1450,7 @@
       "useInTrade": "Usar na troca",
       "exportPk3": "Exportar .pk3",
       "natureTip": "Na 3ª geração a natureza sai de um número interno (PID). Mudar a natureza gera o Pokémon de novo, como no Criar.",
-      "natureRegenerates": "Com outra natureza, o TradeRock gera o Pokémon de novo (como no Criar) para ele continuar possível no jogo. Os IVs podem mudar.",
+      "natureRegenerates": "Com outra natureza, o RockAssistent gera o Pokémon de novo (como no Criar) para ele continuar possível no jogo. Os IVs podem mudar.",
       "moveN": "Golpe {{n}}",
       "saveChanges": "Salvar alterações",
       "saved": "Alterações salvas",
@@ -1407,7 +1465,7 @@
       "movesHint": "Deixe vazio para usar os golpes que ele saberia nesse nível.",
       "moreOptions": "Mais opções (item, IVs, EVs, origem, treinador)",
       "lessOptions": "Menos opções",
-      "ivTip": "IV é a “genética” do Pokémon (0 a 31). EV é o treino (até 255 por status e 510 no total). Em “tanto faz”, o TradeRock escolhe valores possíveis.",
+      "ivTip": "IV é a “genética” do Pokémon (0 a 31). EV é o treino (até 255 por status e 510 no total). Em “tanto faz”, o RockAssistent escolhe valores possíveis.",
       "advancedBanner": "Dados brutos, como no PKHeX. Nada é corrigido sozinho: o painel ao lado mostra o que ficou errado.",
       "howItWorks": "Como funciona",
       "legalAttention": "Legal, com atenção",
@@ -1430,11 +1488,10 @@
       "license": "Licença, código-fonte e marcas",
       "projects_one": "{{count}} projeto",
       "projects_other": "{{count}} projetos"
-    }
+    },
+    "building": "Esta área ainda está em construção. Logo ela aparece aqui."
   },
   "activities": {
-    "title": "Outras atividades",
-    "sub": "Mystery Gift, raids e Union Circle, pelo mesmo rádio da troca.",
     "engineUnsupported": "A conexão escolhida não faz outras atividades. Use o ESP32, a placa Wi-Fi ou o modo demonstração em Configurações → Conexão.",
     "whichGame": "Para qual jogo?",
     "whichGameSub": "Mystery Gift no FireRed/LeafGreen e no Sword/Shield; raids no Sword/Shield e no Scarlet/Violet; Union Circle no Scarlet/Violet.",
@@ -1448,7 +1505,7 @@
       },
       "search": "Procurar…",
       "nothing": "Nenhum Mystery Gift encontrado.",
-      "fileHelp": "Abra um arquivo de presente ({{types}}). O TradeRock não baixa presentes: use arquivos que você já tem."
+      "fileHelp": "Abra um arquivo de presente ({{types}}). O RockAssistent não baixa presentes: use arquivos que você já tem."
     },
     "howTo": "No {{game}}",
     "send": "Enviar",
@@ -1481,7 +1538,7 @@
       "gift_file_other_game": "Este presente é de outro jogo.",
       "gift_not_received": "O console não recebeu o presente. Confira se ele estava na tela de busca do Mystery Gift e tente de novo.",
       "activity_engine_unsupported": "A conexão escolhida não faz outras atividades.",
-      "activity_game_unsupported": "Este jogo ainda não tem outras atividades no TradeRock.",
+      "activity_game_unsupported": "Este jogo ainda não tem outras atividades no RockAssistent.",
       "load_failed": "Não foi possível carregar a lista de presentes.",
       "raid_invalid": "Esta raid não é deste jogo, ou falta algum campo.",
       "raid_pokemon_missing": "Escolha os Pokémon da raid.",
@@ -1503,29 +1560,29 @@
     },
     "raid": {
       "title": "Qual raid?",
-      "sub": "Você escolhe quem abre a sala: o TradeRock ou o seu console.",
+      "sub": "Você escolhe quem abre a sala: o RockAssistent ou o seu console.",
       "start": "Começar a raid",
       "kinds": {
         "max-raid-host": "Max Raid: o console entra",
-        "max-raid-join": "Max Raid: o TradeRock entra",
+        "max-raid-join": "Max Raid: o RockAssistent entra",
         "lair-host": "Dynamax Adventure: o console entra",
-        "lair-join": "Dynamax Adventure: o TradeRock entra",
+        "lair-join": "Dynamax Adventure: o RockAssistent entra",
         "tera-raid-host": "Tera Raid: o console entra",
-        "tera-raid-join": "Tera Raid: o TradeRock entra"
+        "tera-raid-join": "Tera Raid: o RockAssistent entra"
       },
       "about": {
-        "max-raid-host": "O TradeRock abre uma Max Raid com o chefe que você escolher e entra na batalha com o seu Pokémon. O console entra pelo Y-Comm.",
-        "max-raid-join": "O console abre a raid numa toca (Invite Others) e o TradeRock entra para lutar ao seu lado.",
-        "lair-host": "O TradeRock abre uma Dynamax Adventure com o lendário escolhido. Quando a aventura começa, ele sai e um parceiro do jogo continua.",
-        "lair-join": "O console abre a Dynamax Adventure na Max Lair (Invite Others) e o TradeRock entra para ajudar.",
-        "tera-raid-host": "O TradeRock abre uma Tera Raid com o chefe que você escolher. O console procura pela Poké Portal com o código 4970.",
-        "tera-raid-join": "O console abre a Tera Raid num cristal (Challenge as a group) e o TradeRock entra com o seu Pokémon."
+        "max-raid-host": "O RockAssistent abre uma Max Raid com o chefe que você escolher e entra na batalha com o seu Pokémon. O console entra pelo Y-Comm.",
+        "max-raid-join": "O console abre a raid numa toca (Invite Others) e o RockAssistent entra para lutar ao seu lado.",
+        "lair-host": "O RockAssistent abre uma Dynamax Adventure com o lendário escolhido. Quando a aventura começa, ele sai e um parceiro do jogo continua.",
+        "lair-join": "O console abre a Dynamax Adventure na Max Lair (Invite Others) e o RockAssistent entra para ajudar.",
+        "tera-raid-host": "O RockAssistent abre uma Tera Raid com o chefe que você escolher. O console procura pela Poké Portal com o código 4970.",
+        "tera-raid-join": "O console abre a Tera Raid num cristal (Challenge as a group) e o RockAssistent entra com o seu Pokémon."
       },
       "noPokemon": "Você não tem Pokémon deste jogo no cofre. Crie um no construtor ou importe um arquivo.",
       "choosePokemon": "Escolha um Pokémon do cofre",
       "anyPokemon": "Nenhum (o pokeldn escolhe)",
       "level": "nível {{level}}",
-      "offer": "Pokémon que o TradeRock leva",
+      "offer": "Pokémon que o RockAssistent leva",
       "offerHelp": "Ele luta ao seu lado na raid.",
       "boss": "Chefe",
       "bossVault": "Chefe do cofre",
@@ -1533,7 +1590,7 @@
       "chooseBoss": "Escolha o chefe",
       "gigantamax": "Gigantamax (só se a espécie tiver)",
       "event": "Evento",
-      "move": "Golpe que o TradeRock usa",
+      "move": "Golpe que o RockAssistent usa",
       "moveN": "Golpe {{n}}",
       "legendary": "Lendário",
       "code": "Código (opcional)",
@@ -1564,24 +1621,24 @@
       "black": "Raid de 6 estrelas (cristal preto)",
       "seed": "Semente",
       "seedHelp": "8 dígitos hexadecimais. Com a mesma semente, a raid sai igual.",
-      "svOffer": "Pokémon que o TradeRock leva",
+      "svOffer": "Pokémon que o RockAssistent leva",
       "moveAuto": "Automático (a IA escolhe)",
-      "moveAutoHelp": "O TradeRock escolhe, antes de começar, o golpe mais efetivo contra o chefe (tipo, força e mesmo tipo do Pokémon). Ele usa esse golpe a batalha inteira.",
+      "moveAutoHelp": "O RockAssistent escolhe, antes de começar, o golpe mais efetivo contra o chefe (tipo, força e mesmo tipo do Pokémon). Ele usa esse golpe a batalha inteira.",
       "target": "Chefe da raid (opcional)",
-      "targetHelp": "O Pokémon que o seu console abriu. Sem ele, o TradeRock usa o golpe mais forte.",
+      "targetHelp": "O Pokémon que o seu console abriu. Sem ele, o RockAssistent usa o golpe mais forte.",
       "targetUnknown": "Não sei / qualquer um"
     },
     "circle": {
       "title": "Union Circle",
-      "sub": "O console abre o círculo e o TradeRock entra.",
+      "sub": "O console abre o círculo e o RockAssistent entra.",
       "start": "Entrar no círculo",
       "kinds": {
         "quests": "Blueberry Quests",
         "encounters": "Encontros"
       },
       "about": {
-        "quests": "O TradeRock cumpre Blueberry Quests pelo seu console: todos os lendários do Snacksworth, ou os BP que você escolher. Depois ele sai do círculo.",
-        "encounters": "O TradeRock faz aparecer em volta do seu jogador o Pokémon selvagem que você escolher, para batalhar e capturar."
+        "quests": "O RockAssistent cumpre Blueberry Quests pelo seu console: todos os lendários do Snacksworth, ou os BP que você escolher. Depois ele sai do círculo.",
+        "encounters": "O RockAssistent faz aparecer em volta do seu jogador o Pokémon selvagem que você escolher, para batalhar e capturar."
       },
       "code": "Código do círculo",
       "codeHelp": "Os 4 dígitos que você usou no console.",
@@ -1610,7 +1667,7 @@
   "logs": {
     "tab": "Logs",
     "title": "Logs",
-    "sub": "O que o TradeRock, o pokeldn e o gravador do ESP32 registraram nos últimos {{days}} dias. Os mais novos ficam em cima.",
+    "sub": "O que o RockAssistent, o pokeldn e o gravador do ESP32 registraram nos últimos {{days}} dias. Os mais novos ficam em cima.",
     "problemsOnly": "Só erros e avisos",
     "refresh": "Atualizar",
     "copy": "Copiar",
@@ -1635,7 +1692,7 @@
     "check": "Procurar agora",
     "checking": "Procurando…",
     "auto": "Procurar versão nova ao abrir o app (no máximo uma vez por dia)",
-    "privacy": "A procura só consulta a página de versões do TradeRock no GitHub. Nada do seu PC é enviado, e o prod.keys nunca sai daqui.",
+    "privacy": "A procura só consulta a página de versões do RockAssistent no GitHub. Nada do seu PC é enviado, e o prod.keys nunca sai daqui.",
     "upToDate": "Você está na versão mais nova ({{version}}).",
     "available": "Versão {{version}} disponível (você tem a {{current}}).",
     "notes": "Novidades",
@@ -1643,19 +1700,19 @@
     "install": "Atualizar agora",
     "manual": "Esta cópia não se atualiza sozinha. Baixe a versão nova na página do Release:",
     "openRelease": "abrir o Release",
-    "notice": "A versão {{version}} do TradeRock está disponível.",
+    "notice": "A versão {{version}} do RockAssistent está disponível.",
     "see": "Ver e atualizar",
     "confirm": {
-      "windows_installer": "O TradeRock baixa o instalador, confere o arquivo e roda a instalação. O Windows pede a permissão de administrador, como na primeira instalação. O app fecha e abre de novo sozinho no fim.",
-      "app_image": "O TradeRock baixa o AppImage novo, confere o arquivo, troca o atual e abre de novo.",
-      "deb": "O TradeRock baixa o pacote, confere o arquivo e instala. O sistema pede a sua senha de administrador. O app fecha e abre de novo sozinho no fim.",
+      "windows_installer": "O RockAssistent baixa o instalador, confere o arquivo e roda a instalação. O Windows pede a permissão de administrador, como na primeira instalação. O app fecha e abre de novo sozinho no fim.",
+      "app_image": "O RockAssistent baixa o AppImage novo, confere o arquivo, troca o atual e abre de novo.",
+      "deb": "O RockAssistent baixa o pacote, confere o arquivo e instala. O sistema pede a sua senha de administrador. O app fecha e abre de novo sozinho no fim.",
       "none": ""
     },
     "stages": {
       "downloading": "Baixando…",
       "verifying": "Conferindo o arquivo…",
       "installing": "Instalando…",
-      "restarting": "Pronto. O TradeRock vai fechar e abrir de novo."
+      "restarting": "Pronto. O RockAssistent vai fechar e abrir de novo."
     },
     "errors": {
       "update_check_failed": "Não foi possível consultar o GitHub. Confira a internet e tente de novo.",
@@ -1668,6 +1725,964 @@
       "update_none": "Não há versão nova.",
       "busy": "Termine a troca ou a atividade em andamento antes de atualizar.",
       "update_failed": "A atualização falhou. Veja a aba Logs nas Configurações."
+    }
+  },
+  "dex": {
+    "title": "Pokédex",
+    "sub": "Todos os Pokémon, com os dados do jogo que você escolher.",
+    "search": "Buscar",
+    "searchPlaceholder": "Nome ou número",
+    "type": "Tipo",
+    "allTypes": "Todos os tipos",
+    "generationLabel": "Geração",
+    "allGenerations": "Todas as gerações",
+    "generation": "Geração {{n}}",
+    "gameFilter": "Jogo",
+    "allGames": "Todos os jogos",
+    "loadMore": "Mostrar mais",
+    "empty": "Nenhum Pokémon com esses filtros.",
+    "error": "Não deu para carregar a Pokédex. Tente de novo daqui a pouco.",
+    "notFound": "Esse Pokémon não está na Pokédex.",
+    "back": "Pokédex",
+    "game": {
+      "label": "Jogo",
+      "unavailable": "não dá para pegar"
+    },
+    "availability": {
+      "encounter": "Na natureza",
+      "evolution": "Por evolução",
+      "egg": "Por ovo",
+      "gift": "Presente",
+      "none": "Não dá para pegar"
+    },
+    "notInGame": "Este Pokémon não existe em {{game}}. Os dados gerais aparecem mesmo assim; golpes, locais e textos ficam vazios.",
+    "flavorFrom": "Este jogo não tem texto da Pokédex para este Pokémon; este é o de {{game}}.",
+    "tabs": {
+      "general": "Geral",
+      "locations": "Onde achar",
+      "moves": "Golpes",
+      "stats": "Status",
+      "egg": "Ovo",
+      "saves": "Nos seus saves"
+    },
+    "general": {
+      "height": "Altura",
+      "weight": "Peso",
+      "gender": "Gênero",
+      "genderless": "Sem gênero",
+      "female": "{{pct}}% fêmea",
+      "male": "{{pct}}% macho",
+      "captureRate": "Taxa de captura",
+      "baseHappiness": "Amizade inicial",
+      "growthRate": "Crescimento",
+      "abilities": "Habilidades",
+      "hidden": "oculta",
+      "flavor": "Texto da Pokédex",
+      "inEnglish": "em inglês",
+      "noFlavor": "Sem texto da Pokédex neste jogo.",
+      "evolution": "Evolução",
+      "noEvolution": "Este Pokémon não evolui.",
+      "damageTaken": "Dano recebido",
+      "damageHelp": "Quanto cada tipo de golpe tira deste Pokémon: ×2 e ×4 são fraquezas, ×½ e ×¼ resistências e ×0 imunidade.",
+      "dexNumbers": "Números nas Pokédex",
+      "forms": "Formas",
+      "mega": "Mega"
+    },
+    "growth": {
+      "slow": "Lento",
+      "medium": "Médio",
+      "medium-slow": "Médio-lento",
+      "fast": "Rápido",
+      "slow-then-very-fast": "Errático",
+      "fast-then-very-slow": "Flutuante"
+    },
+    "eggGroup": {
+      "monster": "Monstro",
+      "water1": "Água 1",
+      "water2": "Água 2",
+      "water3": "Água 3",
+      "bug": "Inseto",
+      "flying": "Voador",
+      "ground": "Campo",
+      "fairy": "Fada",
+      "plant": "Planta",
+      "humanshape": "Humanoide",
+      "mineral": "Mineral",
+      "indeterminate": "Amorfo",
+      "ditto": "Ditto",
+      "dragon": "Dragão",
+      "no-eggs": "Sem ovos"
+    },
+    "types": {
+      "normal": "Normal",
+      "fighting": "Lutador",
+      "flying": "Voador",
+      "poison": "Venenoso",
+      "ground": "Terrestre",
+      "rock": "Pedra",
+      "bug": "Inseto",
+      "ghost": "Fantasma",
+      "steel": "Aço",
+      "fire": "Fogo",
+      "water": "Água",
+      "grass": "Planta",
+      "electric": "Elétrico",
+      "psychic": "Psíquico",
+      "ice": "Gelo",
+      "dragon": "Dragão",
+      "dark": "Sombrio",
+      "fairy": "Fada",
+      "unknown": "???"
+    },
+    "class": {
+      "physical": "Físico",
+      "special": "Especial",
+      "status": "Status"
+    },
+    "method": {
+      "walk": "Andando na grama ou na caverna",
+      "surf": "Surfando",
+      "old-rod": "Vara Velha",
+      "good-rod": "Vara Boa",
+      "super-rod": "Super Vara",
+      "rock-smash": "Quebrando pedras",
+      "gift": "Presente",
+      "gift-egg": "Ovo de presente",
+      "static": "Encontro fixo",
+      "npc-trade": "Troca com personagem",
+      "headbutt": "Headbutt em árvores",
+      "dark-grass": "Grama escura",
+      "roaming-grass": "Andarilho (grama)",
+      "roaming-water": "Andarilho (água)",
+      "overworld": "Visível no mapa",
+      "overworld-water": "Visível na água",
+      "overworld-flying": "Visível no ar",
+      "horde": "Horda",
+      "sos": "Pedido de ajuda (SOS)",
+      "max-raid": "Max Raid",
+      "dynamax-adventure": "Dynamax Adventure",
+      "hidden-grotto": "Gruta escondida",
+      "honey-tree": "Árvore de mel",
+      "pokeflute": "Poké Flute",
+      "seaweed": "Algas no fundo do mar",
+      "berry-trees": "Árvores de frutas",
+      "wanderer": "Andando pelo mapa",
+      "wanderer-water": "Andando na água"
+    },
+    "condition": {
+      "time-morning": "de manhã",
+      "time-day": "de dia",
+      "time-night": "à noite",
+      "swarm-yes": "durante o enxame",
+      "swarm-no": "sem enxame",
+      "radar-on": "com o Poké Radar",
+      "radar-off": "sem o Poké Radar",
+      "season-spring": "na primavera",
+      "season-summer": "no verão",
+      "season-autumn": "no outono",
+      "season-winter": "no inverno",
+      "story-progress-national-dex": "depois da Pokédex Nacional"
+    },
+    "encounters": {
+      "empty": "Não aparece na natureza neste jogo. Veja a aba Geral: talvez dê para conseguir por evolução, ovo ou troca.",
+      "level": "Nv. {{level}}",
+      "levels": "Nv. {{min}}–{{max}}",
+      "chance": "{{chance}}%"
+    },
+    "moves": {
+      "levelUp": "Por nível",
+      "machine": "TM/HM",
+      "tutor": "Tutor",
+      "egg": "Ovo",
+      "empty": "Nenhum golpe nesta lista neste jogo.",
+      "col": {
+        "level": "Nv.",
+        "machine": "TM",
+        "name": "Golpe",
+        "type": "Tipo",
+        "class": "Categoria",
+        "power": "Força",
+        "accuracy": "Precisão",
+        "pp": "PP"
+      }
+    },
+    "stats": {
+      "hp": "PS",
+      "attack": "Ataque",
+      "defense": "Defesa",
+      "special-attack": "Ataque Esp.",
+      "special-defense": "Defesa Esp.",
+      "speed": "Velocidade",
+      "total": "Total",
+      "base": "Status base",
+      "evs": "EVs que dá ao ser derrotado",
+      "form": "Forma"
+    },
+    "egg": {
+      "groups": "Grupos de ovo",
+      "hatchSteps": "Passos para chocar",
+      "steps": "{{count}} passos",
+      "noEggs": "Este Pokémon não bota ovos.",
+      "eggMoves": "Golpes de ovo"
+    },
+    "saves": {
+      "soon": "Em breve: aqui aparecem os saves das suas pastas que têm este Pokémon.",
+      "found_one": "Aparece {{count}} vez nos seus saves.",
+      "found_other": "Aparece {{count}} vezes nos seus saves.",
+      "none": "Nenhum dos seus saves tem este Pokémon.",
+      "error": "Não deu para procurar nos seus saves."
+    },
+    "sprite": {
+      "forms": "Formas",
+      "shiny": "Shiny",
+      "normal": "Normal",
+      "shinyToggle": "Ver a versão shiny"
+    },
+    "chartLink": "Tabela de tipos",
+    "move": {
+      "notFound": "Esse golpe não está na Pokédex.",
+      "error": "Não deu para carregar o golpe.",
+      "notInGame": "Este golpe não existe em {{game}} ou ninguém o aprende lá.",
+      "type": "Tipo",
+      "class": "Categoria",
+      "power": "Força",
+      "accuracy": "Precisão",
+      "pp": "PP",
+      "priority": "Prioridade",
+      "effectChance": "Chance do efeito",
+      "generation": "Desde a",
+      "machine": "Máquina",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês.",
+      "learners": "Quem aprende neste jogo",
+      "noLearners": "Ninguém aprende este golpe neste jogo.",
+      "otherMethod": "Outros jeitos",
+      "level": "Nv. {{level}}"
+    },
+    "ability": {
+      "notFound": "Essa habilidade não está na Pokédex.",
+      "error": "Não deu para carregar a habilidade.",
+      "generation": "Desde a",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês.",
+      "holders": "Pokémon com esta habilidade",
+      "hidden": "oculta",
+      "noHolders": "Nenhum Pokémon tem esta habilidade."
+    },
+    "item": {
+      "notFound": "Esse item não está na Pokédex.",
+      "error": "Não deu para carregar o item.",
+      "category": "Categoria",
+      "cost": "Preço",
+      "fling": "Força do Fling",
+      "effect": "O que faz",
+      "effectInEnglish": "O texto do efeito ainda está em inglês."
+    },
+    "typeChart": {
+      "title": "Tabela de tipos",
+      "sub": "Quanto dano cada tipo de golpe causa em cada tipo de Pokémon.",
+      "generation": "Regras da geração",
+      "attack": "Golpe",
+      "defense": "Pokémon",
+      "help": "Linha = tipo do golpe; coluna = tipo do Pokémon que recebe. ×2 é super efetivo, ×½ pouco efetivo e ×0 não faz efeito. Vazio é dano normal (×1).",
+      "error": "Não deu para carregar a tabela de tipos."
+    }
+  },
+  "guides": {
+    "title": "Guias",
+    "sub": "Fatos rápidos dos jogos, das mecânicas, do VGC e das lendas, sem enrolação.",
+    "sections": {
+      "games": "Jogos",
+      "mechanics": "Mecânicas",
+      "vgc": "VGC Champions",
+      "mythology": "Mitologia"
+    },
+    "sectionsSub": {
+      "games": "Detonado, chefes, TMs, exclusivos e lendários de cada jogo.",
+      "mechanics": "Como as regras do jogo funcionam.",
+      "vgc": "Batalhas oficiais em dupla.",
+      "mythology": "As lendas de cada região."
+    },
+    "generation": "Geração {{n}}",
+    "pages_one": "{{count}} página",
+    "pages_other": "{{count}} páginas",
+    "empty": "Nenhum guia aqui ainda.",
+    "contents": "Neste guia",
+    "previous": "Anterior",
+    "next": "Próxima",
+    "loading": "Carregando o guia…",
+    "notFound": "Esse guia não existe.",
+    "notFoundHint": "Talvez o endereço esteja errado ou o guia tenha mudado de lugar.",
+    "backToGuides": "Ver todos os guias",
+    "pageError": "Não deu para abrir esta página do guia.",
+    "block": {
+      "error": "Não deu para carregar estes dados.",
+      "empty": "Sem dados para mostrar aqui.",
+      "unknown": "Bloco desconhecido: {{name}}",
+      "unknownHint": "Confira o nome da diretiva no guia.",
+      "notVerified": "não conferido",
+      "allVersions": "Todas",
+      "level": "Nv. {{level}}",
+      "levels": "Nv. {{min}}–{{max}}",
+      "alpha": "Alfa",
+      "dlc": "DLC"
+    },
+    "col": {
+      "boss": "Chefe",
+      "location": "Local",
+      "cap": "Cap",
+      "team": "Time",
+      "pokemon": "Pokémon",
+      "method": "Método",
+      "levels": "Níveis",
+      "chance": "Chance",
+      "versions": "Versões",
+      "number": "Nº",
+      "move": "Golpe",
+      "type": "Tipo",
+      "category": "Categoria",
+      "power": "Poder",
+      "accuracy": "Precisão",
+      "shinyMethod": "Método",
+      "baseOdds": "Chance base",
+      "modifiers": "Modificadores",
+      "games": "Jogos"
+    }
+  },
+  "boxes": {
+    "title": "Boxes",
+    "tabs": {
+      "saves": "Saves",
+      "vault": "Cofre do app"
+    },
+    "localOnly": "Os saves ficam nas pastas do PC, então só aparecem na janela do RockAssistent no computador. Pelo celular, use o cofre do app.",
+    "new": "Novo",
+    "newHere": "Criar um Pokémon nesta posição",
+    "newInInbox": "Salvo no cofre, mas a posição escolhida já estava ocupada: ele ficou na Caixa de entrada.",
+    "savesTitle": "Saves",
+    "refresh": "Procurar de novo",
+    "sync": {
+      "label": "Sincronizar anexos: confere se os Pokémon anexados do cofre ainda estão na mesma posição dos saves e atualiza a cópia do cofre",
+      "none": "Nenhum Pokémon do cofre está anexado a um save.",
+      "done_one": "1 anexo conferido: {{updated}} atualizado, {{lost}} perdido.",
+      "done_other": "{{count}} anexos conferidos: {{updated}} atualizados, {{lost}} perdidos."
+    },
+    "folders": "Pastas de saves",
+    "noFolders": "Escolha as pastas onde o seu emulador guarda os saves. O RockAssistent procura os arquivos lá e mostra as caixas aqui.",
+    "addFolder": "Escolher pastas nas Configurações",
+    "noSaves": "Nenhum save encontrado nas pastas. Confira as pastas nas Configurações ou toque em \"Procurar de novo\".",
+    "readOnly": "só leitura",
+    "prevBox": "Caixa anterior",
+    "nextBox": "Próxima caixa",
+    "box": "Caixa",
+    "boxN": "Caixa {{n}}",
+    "slot": "Posição",
+    "genN": "Gen {{n}}",
+    "party": "Time (só para ver)",
+    "partyPlace": "{{file}} · Time · {{slot}}",
+    "slotPlace": "{{file}} · {{box}} · posição {{slot}}",
+    "dragMode": "Ao arrastar:",
+    "dragHint": "Arraste entre o save e o cofre. Soltar sobre outro Pokémon do mesmo save troca os dois de lugar.",
+    "vaultPane": "Cofre do app",
+    "vaultBox": "Caixa do cofre",
+    "dropInbox": "Solte aqui um Pokémon do save para guardá-lo na Caixa de entrada.",
+    "moveTitle": "Mover ou copiar {{name}}",
+    "moveAction": "Mover ou copiar",
+    "moveOtherSave": "Copiar para outro save",
+    "moveToSave": "Mover ou copiar para um save",
+    "viewDex": "Ver na Pokédex",
+    "clone": "Clonar",
+    "evolve": "Evoluir por troca",
+    "soon": "Em breve",
+    "modeLabel": "O que fazer",
+    "modeHelp": "Copiar deixa o original onde está. Mover tira do lugar de origem (no save, com backup antes; no cofre, vai para a lixeira). Anexar copia e mantém os dois ligados: o cofre se atualiza quando o Pokémon muda no save.",
+    "mode": {
+      "copy": "Copiar",
+      "move": "Mover",
+      "attach": "Anexar"
+    },
+    "modeHint": {
+      "copy": "O original continua onde está.",
+      "move": "Sai do lugar de origem. O save ganha um backup antes de ser alterado.",
+      "attach": "Copia e mantém ligado ao save: as mudanças no save chegam ao cofre."
+    },
+    "dest": {
+      "save": "Para um save",
+      "vault": "Para o cofre"
+    },
+    "working": "Gravando…",
+    "noWritableSaves": "Nenhum save que dê para alterar. Adicione uma pasta de saves nas Configurações.",
+    "save": "Save",
+    "boxFull": "Caixa cheia",
+    "convertHint": "Se o save for de outro jogo, o Pokémon é convertido como no Pokémon HOME (quando dá).",
+    "converted": "O Pokémon foi convertido para o jogo do destino, como no Pokémon HOME.",
+    "done": "Pronto!",
+    "doneWithBackup_one": "Pronto! O save antigo ficou guardado como backup.",
+    "doneWithBackup_other": "Pronto! Os saves antigos ficaram guardados como backup ({{count}}).",
+    "noFamily": "Este jogo não troca com o RockAssistent, então o Pokémon não vai para o cofre nem para a troca. Dá para copiar para outro save do mesmo tipo.",
+    "noFamilyShort": "Fora dos jogos de troca",
+    "errors": {
+      "save_unwritable": "Não deu para gravar o save (pasta sem permissão ou arquivo em uso). Nada foi alterado.",
+      "save_read_only": "Este save é só para ver: o RockAssistent não consegue gravar neste formato.",
+      "save_wrong_game": "Esse Pokémon não pode ir para o jogo deste save",
+      "save_game_unsupported": "Pokémon deste jogo não vão para o cofre (o jogo não troca com o RockAssistent).",
+      "save_changed": "O save mudou no disco (o emulador gravou?). Recarregamos as caixas: confira e tente de novo.",
+      "save_not_found": "O save não foi encontrado. Toque em \"Procurar de novo\".",
+      "slot_occupied": "Essa posição já está ocupada. Escolha uma vazia.",
+      "slot_locked": "Essa posição está travada no jogo (time de batalha ou caixa bloqueada).",
+      "slot_invalid": "Essa posição não existe neste save.",
+      "slot_empty": "Essa posição está vazia.",
+      "slot_repeated": "A mesma posição apareceu duas vezes.",
+      "attach_wrong_game": "Só dá para anexar quando o save é do mesmo jogo do Pokémon. Use Copiar.",
+      "attach_invalid": "Anexar só existe entre o cofre e um save.",
+      "sav_unknown": "Arquivo não reconhecido ou corrompido",
+      "sav_unsupported": "Jogo fora da lista do RockAssistent",
+      "sav_wrong_game": "Esse Pokémon é de outro formato e não cabe neste save.",
+      "sav_too_big": "Arquivo grande demais para ser um save",
+      "sav_unreadable": "Sem permissão para ler o arquivo",
+      "folder_invalid": "Use o caminho completo da pasta (por exemplo, /home/voce/saves ou C:\\Saves).",
+      "verify_failed": "A gravação não passou na conferência; o save foi restaurado do backup.",
+      "pokemon_not_found": "Esse Pokémon não está mais no cofre.",
+      "invalid_pokemon": "Os dados desse Pokémon não puderam ser lidos.",
+      "move_invalid": "Esse movimento não existe.",
+      "local_only": "Só na janela do PC.",
+      "no_window": "Abra o RockAssistent pela janela do PC para escolher a pasta.",
+      "box_not_found": "A caixa do cofre não existe mais. Escolha outra.",
+      "box_full": "Essa caixa do cofre está cheia. Escolha outra ou a Caixa de entrada.",
+      "evolve_not_available": "Este Pokémon não evolui por troca.",
+      "clone_exists": "Já existe uma cópia igual no cofre. Tente de novo.",
+      "clone_not_available": "Não deu para clonar este Pokémon.",
+      "evolve_wrong_target": "Essa evolução não vale para este Pokémon. Abra a lista de novo."
+    },
+    "foldersCard": {
+      "title": "Pastas de saves",
+      "sub": "Onde o seu emulador guarda os saves. A tela Boxes mostra as caixas desses arquivos.",
+      "add": "Adicionar pasta",
+      "addTyped": "Adicionar",
+      "placeholder": "Caminho completo da pasta",
+      "empty": "Nenhuma pasta ainda.",
+      "missing": "pasta não encontrada",
+      "remove": "Tirar da lista",
+      "found_one": "{{count}} save encontrado.",
+      "found_other": "{{count}} saves encontrados.",
+      "whereTitle": "Onde ficam os saves?",
+      "where": {
+        "mgba": "mGBA (GBA): na mesma pasta da ROM, arquivo .sav.",
+        "melonds": "melonDS (DS): na mesma pasta da ROM, arquivo .sav (ou .dsv no DeSmuME).",
+        "switchEmu": "Ryujinx / yuzu (Switch): na pasta de saves do emulador (menu \"Abrir pasta de saves\"); o arquivo se chama main.",
+        "citra": "Citra (3DS): na pasta sdmc do Citra, dentro de Nintendo 3DS/…/title/…/data; o arquivo se chama main."
+      },
+      "whereNote": "Pode escolher uma pasta acima: o RockAssistent procura também nas subpastas."
+    },
+    "clonedVault": "Clone feito, com PID novo. Ele foi para a Caixa de entrada.",
+    "clonedVaultIllegal": "Clone feito, com PID novo, e foi para a Caixa de entrada. O PKHeX aponta problemas de legalidade nele (é só um aviso).",
+    "cloneNoSpace": "Não há posição livre neste save para a cópia.",
+    "cloned": "Cópia feita em {{box}}, posição {{slot}}.",
+    "readOnlyHint": "Este save é só de leitura.",
+    "evolveDialog": {
+      "title": "Evoluir {{name}} por troca",
+      "help": "O app faz a evolução que aconteceria numa troca, sem precisar de outro jogo. O treinador, os golpes e o resto continuam iguais.",
+      "none": "Este Pokémon não evolui por troca (ou está segurando uma Everstone).",
+      "needsItem": "Na troca precisa segurar {{item}}. O app evolui mesmo sem o item.",
+      "usesItem": "Está segurando {{item}}: o item é gasto na evolução.",
+      "tradeWith": "No jogo, precisa ser trocado por um {{species}}.",
+      "done": "Evoluiu para {{species}}.",
+      "illegal": "O PKHeX achou problemas depois da evolução. Ele continua guardado, mas pode ser recusado numa troca:",
+      "vaultDone": "Evoluiu para {{species}}. O de antes ficou na lixeira.",
+      "egg": "Ovos não evoluem."
+    }
+  },
+  "trades": {
+    "title": "Trocas",
+    "sub": "Troque Pokémon com o Switch ou entre em raids e no Union Circle pelo mesmo rádio.",
+    "trade": {
+      "title": "Trocar",
+      "sub": "Mande e receba Pokémon com o seu console."
+    },
+    "raid": {
+      "title": "Raids",
+      "sub": "Max Raid e Dynamax Adventure (Sword/Shield) e Tera Raid (Scarlet/Violet)."
+    },
+    "circle": {
+      "title": "Union Circle",
+      "sub": "Missões e encontros no Scarlet/Violet."
+    }
+  },
+  "gifts": {
+    "title": "Mystery Gift",
+    "sub": "Mande presentes de evento para o FireRed/LeafGreen e o Sword/Shield pelo mesmo rádio da troca."
+  },
+  "nuzlocke": {
+    "title": "Nuzlocke",
+    "sub": "Acompanhe suas runs: o próximo chefe, a área em que você está, a equipe e quem ficou pelo caminho.",
+    "new": "Nova run",
+    "active": "Em andamento",
+    "finished": "Terminadas",
+    "emptyActive": "Nenhuma run em andamento. Comece uma em \"Nova run\".",
+    "emptyFinished": "Nenhuma run terminada ainda.",
+    "loadError": "Não deu para carregar as runs.",
+    "back": "Runs",
+    "noTeam": "Equipe vazia",
+    "deaths": "Mortes: {{count}}",
+    "bossesDefeated": "Chefes vencidos: {{count}}",
+    "status": {
+      "active": "Em andamento",
+      "paused": "Pausada",
+      "champion": "Campeão",
+      "wipe": "Wipe"
+    },
+    "rules": {
+      "title": "Regras",
+      "none": "Sem regras",
+      "custom": "Regras próprias",
+      "customHelp": "Escreva outras regras que você quer seguir (só para lembrar; o app não confere).",
+      "customPlaceholder": "Ex.: sem itens em batalha, Pokémon Center limitado",
+      "firstEncounterOnly": {
+        "name": "Primeiro encontro",
+        "help": "Só o primeiro Pokémon de cada área conta."
+      },
+      "nicknameRequired": {
+        "name": "Apelido obrigatório",
+        "help": "Todo Pokémon capturado ganha um apelido."
+      },
+      "faintIsDeath": {
+        "name": "Desmaiou, morreu",
+        "help": "Pokémon que desmaia vai para o cemitério."
+      },
+      "speciesClause": {
+        "name": "Cláusula de espécie",
+        "help": "Espécie que você já pegou não conta: dá para tentar de novo na área."
+      },
+      "shinyClause": {
+        "name": "Cláusula de shiny",
+        "help": "Shiny sempre pode ser capturado, mesmo com a área usada."
+      },
+      "dupesClause": {
+        "name": "Cláusula de duplicata",
+        "help": "Vale para a linha evolutiva inteira: um Pidgeotto conta como Pidgey."
+      },
+      "levelCapRequired": {
+        "name": "Level cap obrigatório",
+        "help": "Ninguém da equipe passa do nível do próximo chefe."
+      }
+    },
+    "newRun": {
+      "title": "Nova run",
+      "name": "Nome",
+      "namePlaceholder": "Ex.: Kanto sem Pokémon Center",
+      "game": "Jogo",
+      "generation": "Geração {{generation}}",
+      "version": "Versão",
+      "versionHelp": "Os chefes e os encontros mudam de uma versão para a outra.",
+      "start": "Começar a run"
+    },
+    "run": {
+      "pause": "Pausar",
+      "resume": "Continuar",
+      "champion": "Virei campeão!",
+      "wipe": "Wipe",
+      "delete": "Apagar run",
+      "confirmDelete": "Apagar esta run?",
+      "confirmDeleteText": "A run, a equipe e o cemitério somem de vez.",
+      "confirmChampion": "Terminar como campeão?",
+      "confirmChampionText": "Parabéns! A run fica guardada nas terminadas e não muda mais.",
+      "confirmWipe": "Terminar com wipe?",
+      "confirmWipeText": "A equipe toda caiu. A run fica guardada nas terminadas e não muda mais.",
+      "finishedOn": "Terminou em {{date}}",
+      "pausedNote": "Run pausada. Dá para registrar tudo normalmente; continue quando quiser.",
+      "notFound": "Não achamos esta run.",
+      "tabs": {
+        "run": "Run",
+        "graveyard": "Cemitério",
+        "stats": "Estatísticas"
+      }
+    },
+    "boss": {
+      "title": "Próximo chefe",
+      "cap": "Level cap",
+      "defeat": "Venci!",
+      "allDefeated": "Todos os chefes vencidos. Agora é só terminar a run!",
+      "defeatedList": "Vencidos ({{count}})",
+      "ability": "Habilidade",
+      "item": "Item",
+      "tera": "Tera",
+      "notVerified": "não conferido",
+      "level": "Nv. {{level}}"
+    },
+    "area": {
+      "title": "Área atual",
+      "change": "Mudar de área",
+      "search": "Procure a área",
+      "noAreas": "Ainda não temos as áreas deste jogo.",
+      "encounters": "Encontros",
+      "noEncounters": "Sem encontros conhecidos nesta área. Use \"Registrar outro\" para anotar o que apareceu.",
+      "used": "Área já usada",
+      "caught": "Capturei",
+      "other": "Registrar outro",
+      "noEncounter": "Sem encontro",
+      "noEncounterDone": "Área marcada sem encontro.",
+      "saved": "Registrado!",
+      "form": {
+        "title": "Registrar encontro",
+        "species": "Pokémon",
+        "searchSpecies": "Procure pelo nome ou número",
+        "nickname": "Apelido",
+        "level": "Nível",
+        "shiny": "É shiny",
+        "status": "O que aconteceu",
+        "statuses": {
+          "party": "Equipe",
+          "box": "Caixa",
+          "failed": "Fugiu/desmaiou",
+          "missed": "Não conta"
+        },
+        "statusHelp": {
+          "party": "Capturou e foi para a equipe.",
+          "box": "Capturou e foi para a caixa.",
+          "failed": "Fugiu ou desmaiou: a área fica usada.",
+          "missed": "Encontro que não conta (ex.: repetido pela cláusula): a área continua livre."
+        },
+        "save": "Registrar"
+      },
+      "noEncounterConfirm": "Marcar a área sem encontro?",
+      "noEncounterConfirmText": "A área fica usada: pela regra do primeiro encontro, você não poderá registrar outra captura aqui.",
+      "lostTitle": "Perdidos nesta área ({{count}})",
+      "caughtAfterAll": "Capturei afinal",
+      "toParty": "Equipe",
+      "toBox": "Caixa"
+    },
+    "team": {
+      "title": "Equipe",
+      "empty": "Ninguém na equipe ainda. Registre uma captura na área atual.",
+      "overCap": "Acima do level cap ({{cap}})",
+      "boxTitle": "Caixa",
+      "boxEmpty": "Caixa vazia.",
+      "toBox": "Mandar para a caixa",
+      "toParty": "Para a equipe",
+      "died": "Morreu",
+      "edit": "Editar",
+      "levelUp": "Subir um nível",
+      "levelDown": "Descer um nível",
+      "moves": "Golpes",
+      "probableMoves": "Golpes prováveis (pelo nível)",
+      "noMoves": "Sem golpes conhecidos.",
+      "upcoming": "Próximos golpes",
+      "noUpcoming": "Nada novo por nível.",
+      "evolution": "Evolui para {{name}}",
+      "onEvolve": "Ao evoluir",
+      "showMoves": "Ver golpes",
+      "hideMoves": "Esconder golpes",
+      "death": {
+        "title": "{{name}} morreu",
+        "cause": "Causa",
+        "causePlaceholder": "Ex.: crítico do Onix do Brock",
+        "confirm": "Mandar para o cemitério"
+      },
+      "editDialog": {
+        "title": "Editar {{name}}",
+        "species": "Espécie (para registrar a evolução)",
+        "moves": "Golpes atuais",
+        "movesHelp": "Escolha até 4 entre os golpes que ele já aprendeu por nível.",
+        "save": "Salvar"
+      }
+    },
+    "trainers": {
+      "title": "Treinadores da área",
+      "unavailable": "Treinadores comuns não estão disponíveis neste jogo. Os chefes aparecem no cartão do próximo chefe.",
+      "empty": "Nenhum treinador nesta área."
+    },
+    "graveyard": {
+      "empty": "Ninguém morreu ainda. Que continue assim!",
+      "noCause": "Sem causa anotada",
+      "died": "Morreu em {{date}}",
+      "area": "Capturado em {{area}}"
+    },
+    "stats": {
+      "caught": "Capturas",
+      "deaths": "Mortes",
+      "bosses": "Chefes vencidos",
+      "areas": "Áreas visitadas",
+      "shinies": "Shinies",
+      "lost": "Encontros perdidos"
+    },
+    "errors": {
+      "unknown_game": "Jogo desconhecido.",
+      "unknown_version": "Esta versão não é deste jogo.",
+      "version_required": "Escolha a versão do jogo.",
+      "unknown_area": "Área desconhecida neste jogo.",
+      "unknown_boss": "Este chefe não é desta versão.",
+      "invalid_name": "Nome inválido (até 80 letras).",
+      "invalid_status": "Situação inválida.",
+      "invalid_species": "Escolha um Pokémon válido.",
+      "invalid_form": "Forma inválida.",
+      "invalid_level": "O nível vai de 1 a 100.",
+      "nickname_required": "As regras pedem um apelido.",
+      "nickname_too_long": "O apelido tem no máximo 12 letras.",
+      "death_cause_too_long": "A causa tem no máximo 200 letras.",
+      "custom_too_long": "As regras próprias têm no máximo 2000 letras.",
+      "invalid_move": "Golpe desconhecido.",
+      "too_many_moves": "No máximo 4 golpes.",
+      "area_already_used": "Você já usou esta área: pela regra do primeiro encontro, só o primeiro conta.",
+      "dupe": "Repetido: você já pegou esta espécie (ou a linha dela). Registre como \"Não conta\" e tente de novo.",
+      "party_full": "A equipe já tem 6. Mande para a caixa.",
+      "run_not_found": "Não achamos esta run.",
+      "mon_not_found": "Não achamos este Pokémon na run.",
+      "run_finished": "Esta run já terminou e não muda mais."
+    },
+    "map": {
+      "title": "Mapa",
+      "current": "Área atual",
+      "states": {
+        "none": "Não visitada",
+        "visited": "Visitada",
+        "caught": "Capturou",
+        "missed": "Perdeu o encontro",
+        "dead": "Morreu"
+      }
+    }
+  },
+  "hunt": {
+    "title": "Contador Hunt",
+    "sub": "Conte os encontros até o shiny aparecer. Dá para ter várias hunts ao mesmo tempo.",
+    "new": "Nova hunt",
+    "active": "Em andamento",
+    "finished": "Terminadas",
+    "emptyActive": "Nenhuma hunt em andamento. Comece uma em \"Nova hunt\".",
+    "emptyFinished": "Nenhuma hunt terminada ainda.",
+    "found": "Achou",
+    "gaveUp": "Desistiu",
+    "encounters": "encontros",
+    "oneIn": "1 em {{odds}}",
+    "back": "Hunts",
+    "loadError": "Não deu para carregar as hunts.",
+    "wizard": {
+      "title": "Nova hunt",
+      "pokemon": "Pokémon",
+      "searchSpecies": "Procure pelo nome ou número",
+      "game": "Jogo",
+      "loadingGames": "Procurando os jogos...",
+      "noGames": "Não achamos jogo com um jeito de caçar este Pokémon nos nossos dados.",
+      "method": "Método",
+      "baseOdds": "Chance base: 1 em {{odds}}",
+      "modifiers": "Modificadores",
+      "noModifiers": "Este método não tem modificadores.",
+      "counterStep": "{{name}}: segue o contador sozinho.",
+      "start": "Começar a hunt",
+      "kinds": {
+        "encounter": "encontro",
+        "gift": "presente",
+        "egg": "ovo",
+        "evolution": "evolução"
+      }
+    },
+    "counter": {
+      "odds": "Chance atual",
+      "cumulative": "Chance acumulada",
+      "cumulativeHelp": "Com esse número de encontros, você já tinha {{percent}} de chance de ter achado.",
+      "time": "Tempo",
+      "pause": "Pausar",
+      "resume": "Continuar",
+      "plus": "Somar 1",
+      "minus": "Tirar 1",
+      "found": "Achei!",
+      "giveUp": "Desistir",
+      "giveUpTitle": "Desistir desta hunt?",
+      "giveUpText": "A hunt sai de \"Em andamento\" e fica nas terminadas como desistida.",
+      "notes": "Notas",
+      "notesPlaceholder": "Rota, horário, o que quiser lembrar...",
+      "step": "{{name}} {{value}}: 1 em {{odds}}",
+      "stepNone": "{{name}} {{value}}: ainda sem bônus",
+      "hotkeysHint": "Atalhos: {{inc}} soma e {{dec}} diminui. Dá para trocar em Configurações → Preferências.",
+      "hotkeysHintGlobal": "Atalho global ligado: {{inc}} soma e {{dec}} diminui mesmo com o app atrás de outra janela.",
+      "finishedFound": "Você achou o shiny em {{date}}!",
+      "finishedGaveUp": "Hunt encerrada em {{date}}.",
+      "foundToast": "Parabéns pelo shiny!",
+      "gaveUpToast": "Hunt encerrada.",
+      "delete": "Excluir hunt",
+      "deleteTitle": "Excluir esta hunt?",
+      "deleteText": "O contador, o tempo e as notas somem de vez.",
+      "deleted": "Hunt excluída."
+    },
+    "errors": {
+      "unknown_game": "Jogo desconhecido.",
+      "unknown_method": "Método desconhecido.",
+      "method_not_in_game": "Este método não existe neste jogo.",
+      "invalid_species": "Pokémon inválido.",
+      "invalid_form": "Forma inválida.",
+      "unknown_modifier": "Modificador desconhecido.",
+      "invalid_modifier": "Valor de modificador inválido.",
+      "modifier_not_in_game": "Este modificador não vale neste jogo.",
+      "invalid_delta": "Só dá para somar ou tirar até 100 de uma vez.",
+      "invalid_count": "O contador não pode ser negativo.",
+      "invalid_elapsed": "O tempo não pode ser negativo.",
+      "notes_too_long": "As notas passam de 500 caracteres.",
+      "hunt_not_found": "Esta hunt não existe mais.",
+      "hunt_finished": "Esta hunt já terminou."
+    },
+    "hotkeys": {
+      "title": "Atalhos do Contador Hunt",
+      "sub": "Valem com a página do contador aberta e a janela na frente. Fora de campos de texto.",
+      "increment": "Somar 1",
+      "decrement": "Tirar 1",
+      "record": "Gravar",
+      "recording": "Aperte a tecla... (Esc cancela)",
+      "reset": "Voltar ao padrão",
+      "global": {
+        "label": "Atalho global (funciona com o app em segundo plano)",
+        "help": "Para quem joga no emulador: as teclas contam mesmo com outra janela na frente. Só enquanto um contador estiver aberto, elas deixam de funcionar nos outros programas.",
+        "textKeyBlocked": "O atalho global não aceita teclas que escrevem ou apagam texto (Espaço, Backspace, letras, números). Grave outras teclas antes de ligar, por exemplo F7 e F8 ou Ctrl + uma tecla.",
+        "activeNow": "Ativo agora: as teclas estão com o RockAssistent.",
+        "idle": "Ligado. As teclas só ficam com o RockAssistent enquanto um contador estiver aberto.",
+        "reasons": {
+          "wayland": "No Wayland o sistema não permite atalho global; use o atalho da janela.",
+          "no_x11": "Não foi possível falar com o X11 (sem tela gráfica X); use o atalho da janela.",
+          "in_use": "Outro programa já usa uma dessas teclas. Escolha outra e ligue de novo.",
+          "unsupported_os": "Este sistema não tem atalho global; use o atalho da janela.",
+          "remote": "O atalho global só pode ser ligado na janela do PC.",
+          "text_key": "Uma das teclas escreve ou apaga texto e não vale como atalho global. Grave F1–F12 ou Ctrl/Alt + uma tecla; por enquanto vale o atalho da janela."
+        }
+      },
+      "errors": {
+        "hotkeys_same": "Os dois atalhos não podem ser iguais.",
+        "hotkey_invalid": "Essa tecla não serve de atalho.",
+        "hotkey_unsupported": "Essa tecla não serve de atalho global. Escolha F1–F12, setas ou Ctrl/Alt + uma tecla.",
+        "hotkey_in_use": "Outro programa já usa essa tecla. Escolha outra.",
+        "hotkey_global_unsupported": "O atalho global não funciona neste sistema.",
+        "hotkey_text_key": "Com o atalho global ligado, essa tecla não serve: ela escreve ou apaga texto. Use F1–F12 ou Ctrl/Alt + uma tecla.",
+        "local_only": "O atalho global só pode ser ligado na janela do PC."
+      },
+      "keyNames": {
+        "Space": "Espaço",
+        "Backspace": "Backspace",
+        "Enter": "Enter",
+        "Tab": "Tab",
+        "Delete": "Delete"
+      }
+    }
+  },
+  "vgc": {
+    "teamsTitle": "Times sugeridos",
+    "teamsCard": "Times prontos da regulamentação atual, com paste para copiar ou importar.",
+    "teamsSub": "{{regulation}} ({{from}} a {{to}}). Times escritos pelo RockAssistent com Pokémon fortes no formato.",
+    "teamsSubShort": "Times escritos pelo RockAssistent com Pokémon fortes no formato.",
+    "importHint": "Importar cria os 6 no Scarlet/Violet e põe na Caixa de entrada do Boxes. Mega Stones não existem no SV: esses ficam sem item.",
+    "backToVgc": "← VGC Champions",
+    "goToMyTeam": "Montar e analisar a minha equipe →",
+    "goToTeams": "Ver os times sugeridos →",
+    "idea": "Ideia",
+    "howToPlay": "Como jogar",
+    "dangers": "Cuidado com",
+    "copy": "Copiar paste",
+    "copied": "Paste copiado!",
+    "copyFailed": "Não deu para copiar. Selecione o texto e copie à mão.",
+    "showPaste": "Ver paste",
+    "hidePaste": "Esconder paste",
+    "analyze": "Analisar",
+    "analyzing": "Analisando…",
+    "import": "Importar para o Boxes",
+    "importing": "Importando…",
+    "imported_one": "{{count}} Pokémon na Caixa de entrada",
+    "imported_other": "{{count}} Pokémon na Caixa de entrada",
+    "importFailed": "Estes não puderam ser criados no Scarlet/Violet:",
+    "archetypes": {
+      "rain": "Chuva",
+      "sun": "Sol",
+      "sand": "Areia",
+      "trick_room": "Trick Room",
+      "balance": "Equilíbrio",
+      "hyper_offense": "Ataque total",
+      "setup": "Telas e reforço"
+    },
+    "errors": {
+      "pasteInvalid": "Não achei nenhum Pokémon nesse texto. Cole um paste do Showdown (nome @ item, Ability, EVs, golpes com -).",
+      "pasteTooBig": "O paste passou de 20 KB. Um time tem 6 Pokémon: confira se colou só o time.",
+      "analyze": "Não deu para analisar agora. Tente de novo.",
+      "import": "Não deu para importar agora. Tente de novo."
+    },
+    "report": {
+      "title": "Análise: {{name}}",
+      "skipped": "Ficaram fora da análise (não existem no Scarlet/Violet ou passaram de 6):",
+      "speedShort": "Vel. {{n}}",
+      "defense": "Fraquezas por tipo",
+      "defenseHint": "Quanto dano cada tipo de ataque causa em cada um. Vermelho: leva mais; verde: leva menos ou nada.",
+      "teamWeak": "Pontos fracos do time:",
+      "noTeamWeak": "Nenhum tipo pega metade do time sem resposta.",
+      "attack": "Ataque",
+      "weak": "Fracos",
+      "resist": "Resistem",
+      "coverage": "Cobertura ofensiva",
+      "coverageHint": "Tipos dos golpes de ataque do time (golpes de status não contam).",
+      "attackTypes": "Golpes de:",
+      "uncovered": "Nada super efetivo contra:",
+      "allCovered": "todos os tipos",
+      "speeds": "Velocidade base",
+      "limits": "Conta os tipos e golpes como no Scarlet/Violet. Não conta habilidades (Levitate, Water Absorb...), itens, Mega Evolução nem Stat Points."
+    },
+    "myTeam": {
+      "title": "Minha equipe",
+      "card": "Cole um paste do Showdown, veja fraquezas, cobertura e velocidade.",
+      "sub": "Cole o paste do seu time (o texto que o Showdown e o Pokémon Champions exportam). O RockAssistent mostra fraquezas, cobertura e velocidades.",
+      "label": "Paste do time",
+      "placeholder": "Incineroar @ Sitrus Berry\nAbility: Intimidate\nLevel: 50\nEVs: 252 HP / 4 Atk / 252 SpD\nCareful Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat",
+      "size": "{{kb}} KB de {{max}} KB",
+      "save": "Salvar neste computador",
+      "saved": "Equipe salva neste computador.",
+      "saveFailed": "O navegador não deixou salvar. O texto continua aqui enquanto a página estiver aberta.",
+      "offline": "Nada sai do seu computador: a análise roda no próprio RockAssistent."
+    },
+    "regulation": {
+      "period": "Período",
+      "dates": "{{from}} a {{to}}",
+      "format": "Formato",
+      "formatValue": "Dupla, leva {{bring}} e escolhe {{pick}}, nível {{level}}",
+      "pool": "Pokémon permitidos",
+      "checkedOn": "Conferido em",
+      "rules": "Regras",
+      "newSpecies": "Novos nesta regulamentação",
+      "newMegas": "Novas Megas",
+      "newItems": "Novos itens",
+      "bannedSpecies": "Pokémon banidos",
+      "bannedMoves": "Golpes banidos",
+      "none": "nenhum"
+    },
+    "usage": {
+      "tab": "Mais usados",
+      "tabTeams": "Times sugeridos",
+      "title": "Mais usados (Smogon)",
+      "sub": "Formato {{format}}, mês {{month}}, {{battles}} batalhas.",
+      "subEmpty": "Os 50 Pokémon mais usados no VGC do Pokémon Champions, pelas estatísticas mensais do Smogon (Pokémon Showdown).",
+      "refresh": "Atualizar",
+      "refreshing": "Baixando…",
+      "source": "Fonte: smogon.com/stats (batalhas do Pokémon Showdown, jogadores com 1760+). Toque num Pokémon para ver golpes, itens, habilidades e parceiros.",
+      "empty": "Ainda não há estatísticas. Para ver os mais usados, ligue \"Estatísticas de uso do Smogon\" em Configurações → Preferências → Internet opcional e clique em Atualizar.",
+      "emptyEnabled": "Ainda não há estatísticas. Clique em Atualizar para baixar o arquivo do mês.",
+      "emptyRemote": "Ainda não há estatísticas. Elas são baixadas na janela do PC.",
+      "howToEnable": "A opção está desligada. Ligue \"Estatísticas de uso do Smogon\" em Internet opcional para baixar.",
+      "disabledHint": "A opção está desligada: estes são os dados baixados da última vez.",
+      "openSettings": "Abrir Configurações",
+      "moves": "Golpes",
+      "items": "Itens",
+      "abilities": "Habilidades",
+      "teammates": "Parceiros",
+      "noItem": "Sem item",
+      "errors": {
+        "internet_disabled": "A opção está desligada em Configurações → Internet opcional.",
+        "paste_host_not_allowed": "Só links do pokepast.es (https://pokepast.es/...).",
+        "paste_not_found": "Esse paste não existe no pokepast.es.",
+        "paste_too_big": "O paste passa de 20 KB.",
+        "busy": "Já está baixando. Espere terminar.",
+        "local_only": "Só dá para baixar pela janela do PC.",
+        "network": "Não deu para baixar. Confira a internet e tente de novo.",
+        "networkCode": "Não deu para baixar ({{code}}). Confira a internet e tente de novo.",
+        "write_failed": "Baixou, mas não deu para gravar na pasta de dados. Confira o espaço livre e as permissões da pasta."
+      }
+    },
+    "paste": {
+      "linkLabel": "Link do pokepast.es (opcional)",
+      "open": "Abrir link",
+      "opening": "Abrindo…",
+      "disabled": "Para colar um link, ligue \"Abrir link do pokepast.es\" em Internet opcional.",
+      "remote": "Links do pokepast.es só abrem na janela do PC. Aqui, cole o texto."
     }
   }
 }

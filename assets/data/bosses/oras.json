@@ -1,0 +1,3054 @@
+{
+  "source": [
+    "https://www.serebii.net/omegarubyalphasapphire/gyms.shtml",
+    "https://www.serebii.net/omegarubyalphasapphire/elitefour.shtml",
+    "https://www.serebii.net/omegarubyalphasapphire/rival.shtml",
+    "https://www.serebii.net/omegarubyalphasapphire/wally.shtml",
+    "https://www.serebii.net/omegarubyalphasapphire/aquamagma.shtml",
+    "https://www.serebii.net/omegarubyalphasapphire/deltaepisode.shtml",
+    "https://www.pokewiki.de/Maike",
+    "https://www.pokewiki.de/Heiko",
+    "https://www.pokewiki.de/Marc",
+    "https://www.pokewiki.de/Adrian",
+    "https://www.pokewiki.de/Amalia",
+    "https://www.pokemythology.net/detonados/detonado-omega-ruby-alpha-sapphire/"
+  ],
+  "items": [
+    {
+      "id": "may-1",
+      "kind": "rival",
+      "name": "May",
+      "title": "Rival",
+      "location": "Route 103",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 258,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "time para quem escolheu Torchic; com Treecko: Torchic 5; com Mudkip: Treecko 5; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "roxanne",
+      "kind": "gym",
+      "name": "Roxanne",
+      "title": "Gym Leader",
+      "location": "Rustboro Gym",
+      "order": 2,
+      "badge": "Stone Badge",
+      "party": [
+        {
+          "species": 74,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "tackle",
+            "defense-curl",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 299,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "tackle",
+            "harden",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "brawly",
+      "kind": "gym",
+      "name": "Brawly",
+      "title": "Gym Leader",
+      "location": "Dewford Gym",
+      "order": 3,
+      "badge": "Knuckle Badge",
+      "party": [
+        {
+          "species": 66,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "leer",
+            "karate-chop",
+            "seismic-toss",
+            "bulk-up"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 296,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "arm-thrust",
+            "knock-off",
+            "sand-attack",
+            "bulk-up"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 16,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "may-2",
+      "kind": "rival",
+      "name": "May",
+      "title": "Rival",
+      "location": "Route 110",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 285,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "headbutt",
+            "mega-drain",
+            "stun-spore",
+            "leech-seed"
+          ],
+          "ability": "effect-spore",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 218,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "harden",
+            "incinerate",
+            "ember",
+            "rock-throw"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 259,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "foresight",
+            "mud-shot",
+            "bide",
+            "mud-slap"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "time para quem escolheu Torchic; com Treecko: Wailmer 18, Shroomish 18, Combusken 20; com Mudkip: Slugma 18, Wailmer 18, Grovyle 20; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "wally-1",
+      "kind": "rival",
+      "name": "Wally",
+      "title": "Rival",
+      "location": "Mauville City",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 280,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "confusion",
+            "growl",
+            "double-team",
+            "teleport"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 17,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "wattson",
+      "kind": "gym",
+      "name": "Wattson",
+      "title": "Gym Leader",
+      "location": "Mauville Gym",
+      "order": 6,
+      "badge": "Dynamo Badge",
+      "party": [
+        {
+          "species": 81,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "thunder-wave",
+            "tackle",
+            "volt-switch"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 100,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "rollout",
+            "charge",
+            "volt-switch"
+          ],
+          "ability": "soundproof",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "supersonic",
+            "magnet-bomb",
+            "volt-switch"
+          ],
+          "ability": "magnet-pull",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "tabitha-meteor-falls",
+      "kind": "evil",
+      "name": "Tabitha",
+      "title": "Team Magma",
+      "location": "Meteor Falls",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "odor-sleuth",
+            "roar",
+            "snarl",
+            "swagger"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 322,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "magnitude",
+            "flame-burst",
+            "amnesia",
+            "lava-plume"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o rival (May ou Brendan) do seu lado (o Grunt usa Koffing 23 [OR] / Grimer 23 [AS])",
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "shelly-meteor-falls",
+      "kind": "evil",
+      "name": "Shelly",
+      "title": "Team Aqua",
+      "location": "Meteor Falls",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "odor-sleuth",
+            "roar",
+            "snarl",
+            "swagger"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 318,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "aqua-jet",
+            "assurance",
+            "screech",
+            "swagger"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o rival (May ou Brendan) do seu lado (o Grunt usa Koffing 23 [OR] / Grimer 23 [AS])",
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "tabitha-chimney",
+      "kind": "evil",
+      "name": "Tabitha",
+      "title": "Team Magma",
+      "location": "Mt. Chimney",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "assurance",
+            "clear-smog",
+            "sludge",
+            "self-destruct"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 322,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "magnitude",
+            "flame-burst",
+            "amnesia",
+            "lava-plume"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "shelly-chimney",
+      "kind": "evil",
+      "name": "Shelly",
+      "title": "Team Aqua",
+      "location": "Mt. Chimney",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 88,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "disable",
+            "sludge",
+            "mud-bomb",
+            "minimize"
+          ],
+          "ability": "stench",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 318,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "aqua-jet",
+            "assurance",
+            "screech",
+            "swagger"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "maxie-chimney",
+      "kind": "evil",
+      "name": "Maxie",
+      "title": "Team Magma",
+      "location": "Mt. Chimney",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "roar",
+            "snarl",
+            "swagger",
+            "assurance"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "wing-attack",
+            "confuse-ray",
+            "air-cutter",
+            "swift"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 323,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "flame-burst",
+            "amnesia",
+            "lava-plume",
+            "earth-power"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "archie-chimney",
+      "kind": "evil",
+      "name": "Archie",
+      "title": "Team Aqua",
+      "location": "Mt. Chimney",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "roar",
+            "snarl",
+            "swagger",
+            "assurance"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "wing-attack",
+            "confuse-ray",
+            "air-cutter",
+            "swift"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "assurance",
+            "screech",
+            "swagger",
+            "ice-fang"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "flannery",
+      "kind": "gym",
+      "name": "Flannery",
+      "title": "Gym Leader",
+      "location": "Lavaridge Gym",
+      "order": 13,
+      "badge": "Heat Badge",
+      "party": [
+        {
+          "species": 218,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "overheat",
+            "rock-throw",
+            "light-screen",
+            "sunny-day"
+          ],
+          "ability": "flame-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 322,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "earth-power",
+            "lava-plume",
+            "amnesia",
+            "sunny-day"
+          ],
+          "ability": "simple",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 324,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "overheat",
+            "body-slam",
+            "curse",
+            "sunny-day"
+          ],
+          "ability": "white-smoke",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 28,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "norman",
+      "kind": "gym",
+      "name": "Norman",
+      "title": "Gym Leader",
+      "location": "Petalburg Gym",
+      "order": 14,
+      "badge": "Balance Badge",
+      "party": [
+        {
+          "species": 289,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "encore",
+            "retaliate",
+            "yawn",
+            "feint-attack"
+          ],
+          "ability": "truant",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 288,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "fury-swipes",
+            "feint-attack",
+            "retaliate",
+            "encore"
+          ],
+          "ability": "vital-spirit",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 289,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "chip-away",
+            "swagger",
+            "retaliate",
+            "feint-attack"
+          ],
+          "ability": "truant",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 30,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "courtney-southern-island",
+      "kind": "evil",
+      "name": "Courtney",
+      "title": "Team Magma",
+      "location": "Southern Island",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "lava-plume",
+            "earth-power",
+            "curse",
+            "take-down"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 31,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o Steven do seu lado (o Grunt usa Koffing 29 [OR] / Grimer 29 [AS])",
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "matt-southern-island",
+      "kind": "evil",
+      "name": "Matt",
+      "title": "Team Aqua",
+      "location": "Southern Island",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "swagger",
+            "ice-fang",
+            "scary-face",
+            "slash"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 31,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o Steven do seu lado (o Grunt usa Koffing 29 [OR] / Grimer 29 [AS])",
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "tabitha-weather-institute",
+      "kind": "evil",
+      "name": "Tabitha",
+      "title": "Team Magma",
+      "location": "Weather Institute",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "lava-plume",
+            "earth-power",
+            "curse",
+            "take-down"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "shelly-weather-institute",
+      "kind": "evil",
+      "name": "Shelly",
+      "title": "Team Aqua",
+      "location": "Weather Institute",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "swagger",
+            "ice-fang",
+            "scary-face",
+            "slash"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "may-3",
+      "kind": "rival",
+      "name": "May",
+      "title": "Rival",
+      "location": "Route 119",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 285,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "poison-powder",
+            "worry-seed",
+            "giga-drain",
+            "growth"
+          ],
+          "ability": "effect-spore",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 218,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "clear-smog",
+            "ancient-power",
+            "flame-burst",
+            "rock-slide"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 259,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "bide",
+            "mud-bomb",
+            "rock-slide",
+            "protect"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": "time para quem escolheu Torchic; com Treecko: Wailmer 31, Shroomish 31, Combusken 33; com Mudkip: Slugma 31, Wailmer 31, Grovyle 33; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time)",
+      "versions": null
+    },
+    {
+      "id": "winona",
+      "kind": "gym",
+      "name": "Winona",
+      "title": "Gym Leader",
+      "location": "Fortree Gym",
+      "order": 20,
+      "badge": "Feather Badge",
+      "party": [
+        {
+          "species": 277,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "quick-attack",
+            "aerial-ace",
+            "double-team",
+            "endeavor"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 279,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "water-pulse",
+            "roost",
+            "protect",
+            "aerial-ace"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "sand-attack",
+            "air-cutter",
+            "steel-wing",
+            "aerial-ace"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "earthquake",
+            "dragon-breath",
+            "cotton-guard",
+            "roost"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "may-4",
+      "kind": "rival",
+      "name": "May",
+      "title": "Rival",
+      "location": "Lilycove City",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 277,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "double-team",
+            "aerial-ace",
+            "quick-guard",
+            "agility"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 286,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "counter",
+            "mach-punch",
+            "force-palm",
+            "mind-reader"
+          ],
+          "ability": "effect-spore",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 219,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "flame-burst",
+            "rock-slide",
+            "lava-plume",
+            "amnesia"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 260,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "mud-bomb",
+            "rock-slide",
+            "protect",
+            "muddy-water"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": "time para quem escolheu Torchic; com Treecko: Swellow 37, Wailord 37, Breloom 37, Blaziken 39; com Mudkip: Swellow 37, Magcargo 37, Wailord 37, Sceptile 39; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); a Pokéwiki dá o inicial no nível 38",
+      "versions": null
+    },
+    {
+      "id": "courtney-mt-pyre",
+      "kind": "evil",
+      "name": "Courtney",
+      "title": "Team Magma",
+      "location": "Mt. Pyre",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "earth-power",
+            "curse",
+            "take-down",
+            "rock-slide"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "matt-mt-pyre",
+      "kind": "evil",
+      "name": "Matt",
+      "title": "Team Aqua",
+      "location": "Mt. Pyre",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "ice-fang",
+            "scary-face",
+            "slash",
+            "poison-fang"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "courtney-hideout",
+      "kind": "evil",
+      "name": "Courtney",
+      "title": "Team Magma",
+      "location": "Team Magma/Aqua Hideout",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "curse",
+            "take-down",
+            "rock-slide",
+            "yawn"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "matt-hideout",
+      "kind": "evil",
+      "name": "Matt",
+      "title": "Team Aqua",
+      "location": "Team Magma/Aqua Hideout",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "ice-fang",
+            "scary-face",
+            "slash",
+            "poison-fang"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "tate-liza",
+      "kind": "gym",
+      "name": "Tate & Liza",
+      "title": "Gym Leader",
+      "location": "Mossdeep Gym",
+      "order": 26,
+      "badge": "Mind Badge",
+      "party": [
+        {
+          "species": 337,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "light-screen",
+            "psychic",
+            "hypnosis",
+            "calm-mind"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 338,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "sunny-day",
+            "rock-slide",
+            "psychic",
+            "solar-beam"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 45,
+      "verified": true,
+      "notes": "dupla",
+      "versions": null
+    },
+    {
+      "id": "maxie-seafloor-cavern",
+      "kind": "evil",
+      "name": "Maxie",
+      "title": "Team Magma",
+      "location": "Seafloor Cavern",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "scary-face",
+            "embargo",
+            "taunt",
+            "take-down"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "haze",
+            "double-hit",
+            "sludge-bomb",
+            "explosion"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "poison-fang",
+            "mean-look",
+            "acrobatics",
+            "haze"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 323,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "curse",
+            "take-down",
+            "rock-slide",
+            "yawn"
+          ],
+          "ability": "magma-armor",
+          "item": "cameruptite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": "o último megaevolui",
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "archie-seafloor-cavern",
+      "kind": "evil",
+      "name": "Archie",
+      "title": "Team Aqua",
+      "location": "Seafloor Cavern",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "scary-face",
+            "embargo",
+            "taunt",
+            "take-down"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 89,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "sludge-wave",
+            "screech",
+            "venom-drench",
+            "gunk-shot"
+          ],
+          "ability": "stench",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "poison-fang",
+            "mean-look",
+            "acrobatics",
+            "haze"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "scary-face",
+            "slash",
+            "poison-fang",
+            "crunch"
+          ],
+          "ability": "rough-skin",
+          "item": "sharpedonite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": "o último megaevolui",
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "wallace",
+      "kind": "gym",
+      "name": "Wallace",
+      "title": "Gym Leader",
+      "location": "Sootopolis Gym",
+      "order": 29,
+      "badge": "Rain Badge",
+      "party": [
+        {
+          "species": 370,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "water-pulse",
+            "attract",
+            "sweet-kiss",
+            "draining-kiss"
+          ],
+          "ability": "swift-swim",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 340,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "mud-sport",
+            "waterfall",
+            "zen-headbutt",
+            "earthquake"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 364,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "encore",
+            "body-slam",
+            "aurora-beam",
+            "waterfall"
+          ],
+          "ability": "thick-fat",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 119,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "aqua-ring",
+            "rain-dance",
+            "waterfall",
+            "horn-drill"
+          ],
+          "ability": "swift-swim",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "hydro-pump",
+            "disarming-voice",
+            "recover",
+            "ice-beam"
+          ],
+          "ability": "marvel-scale",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "wally-2",
+      "kind": "rival",
+      "name": "Wally",
+      "title": "Rival",
+      "location": "Victory Road",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "aerial-ace",
+            "safeguard",
+            "dragon-pulse",
+            "cotton-guard"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "sing",
+            "disarming-voice",
+            "charm",
+            "feint-attack"
+          ],
+          "ability": "cute-charm",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 315,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "synthesis",
+            "leech-seed",
+            "petal-blizzard",
+            "toxic"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "screech",
+            "discharge",
+            "tri-attack",
+            "flash-cannon"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "psycho-cut",
+            "close-combat",
+            "slash",
+            "swords-dance"
+          ],
+          "ability": "steadfast",
+          "item": "galladite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "o Gallade megaevolui",
+      "versions": null
+    },
+    {
+      "id": "sidney",
+      "kind": "elite",
+      "name": "Sidney",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 262,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "swagger",
+            "take-down",
+            "sucker-punch",
+            "crunch"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 275,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "fake-out",
+            "feint-attack",
+            "extrasensory",
+            "leaf-blade"
+          ],
+          "ability": "chlorophyll",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 332,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "leech-seed",
+            "payback",
+            "needle-arm",
+            "spiky-shield"
+          ],
+          "ability": "sand-veil",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "crunch",
+            "poison-fang",
+            "aqua-jet",
+            "slash"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "aerial-ace",
+            "night-slash",
+            "psycho-cut",
+            "slash"
+          ],
+          "ability": "super-luck",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "phoebe",
+      "kind": "elite",
+      "name": "Phoebe",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 356,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "shadow-punch",
+            "confuse-ray",
+            "curse",
+            "future-sight"
+          ],
+          "ability": "pressure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 354,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "shadow-ball",
+            "spite",
+            "will-o-wisp",
+            "feint-attack"
+          ],
+          "ability": "insomnia",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "shadow-claw",
+            "foul-play",
+            "power-gem",
+            "fake-out"
+          ],
+          "ability": "prankster",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 354,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "shadow-ball",
+            "grudge",
+            "toxic",
+            "psychic"
+          ],
+          "ability": "insomnia",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 477,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "hex",
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch"
+          ],
+          "ability": "pressure",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "glacia",
+      "kind": "elite",
+      "name": "Glacia",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 362,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "light-screen",
+            "ice-shard",
+            "hail",
+            "crunch"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "confuse-ray",
+            "blizzard",
+            "hail",
+            "ominous-wind"
+          ],
+          "ability": "snow-cloak",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 362,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "protect",
+            "ice-shard",
+            "hail",
+            "freeze-dry"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "draining-kiss",
+            "blizzard",
+            "hail",
+            "shadow-ball"
+          ],
+          "ability": "snow-cloak",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 365,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "surf",
+            "body-slam",
+            "blizzard",
+            "sheer-cold"
+          ],
+          "ability": "thick-fat",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "drake",
+      "kind": "elite",
+      "name": "Drake",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "aerial-ace",
+            "cotton-guard",
+            "dragon-pulse",
+            "moonblast"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "earthquake",
+            "dragon-claw",
+            "rock-slide",
+            "supersonic"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "dragon-pulse",
+            "surf",
+            "yawn",
+            "ice-beam"
+          ],
+          "ability": "sniper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "flamethrower",
+            "boomburst",
+            "dragon-pulse",
+            "screech"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "dragon-rush",
+            "zen-headbutt",
+            "crunch",
+            "thunder-fang"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "steven",
+      "kind": "champion",
+      "name": "Steven",
+      "title": "Champion",
+      "location": "Pokémon League",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 227,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "toxic",
+            "aerial-ace",
+            "spikes",
+            "steel-wing"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 344,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "reflect",
+            "light-screen",
+            "extrasensory",
+            "earth-power"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "stone-edge",
+            "earthquake",
+            "iron-tail",
+            "dragon-claw"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 346,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "giga-drain",
+            "ancient-power",
+            "sludge-bomb",
+            "confuse-ray"
+          ],
+          "ability": "suction-cups",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 348,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "x-scissor",
+            "rock-blast",
+            "metal-claw",
+            "crush-claw"
+          ],
+          "ability": "battle-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "bullet-punch",
+            "zen-headbutt",
+            "meteor-mash",
+            "giga-impact"
+          ],
+          "ability": "clear-body",
+          "item": "metagrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "o Metagross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "may-5",
+      "kind": "rival",
+      "name": "May",
+      "title": "Rival",
+      "location": "Route 103",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 277,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "aerial-ace",
+            "quick-attack",
+            "u-turn",
+            "steel-wing"
+          ],
+          "ability": "guts",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "thunder-wave",
+            "thunderbolt",
+            "quick-attack",
+            "light-screen"
+          ],
+          "ability": "static",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 219,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "earth-power",
+            "lava-plume",
+            "body-slam",
+            "rock-slide"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 286,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "seed-bomb",
+            "force-palm",
+            "venoshock",
+            "rock-tomb"
+          ],
+          "ability": "effect-spore",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 260,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "earthquake",
+            "muddy-water",
+            "rock-slide",
+            "brick-break"
+          ],
+          "ability": "torrent",
+          "item": "swampertite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "time para quem escolheu Torchic; com Treecko: Swellow 48, Raichu 48, Breloom 48, Wailord 48, Blaziken 50; com Mudkip: Swellow 48, Raichu 48, Wailord 48, Magcargo 48, Sceptile 50; rival: May se você joga com o Brendan; com a May, o rival é o Brendan (mesmo time); pós-jogo, depois dos créditos; o inicial megaevolui",
+      "versions": null
+    },
+    {
+      "id": "courtney-delta-petalburg",
+      "kind": "evil",
+      "name": "Courtney",
+      "title": "Team Magma",
+      "location": "Wally's house, Petalburg City (Delta Episode)",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "rock-slide",
+            "yawn",
+            "earthquake",
+            "eruption"
+          ],
+          "ability": "magma-armor",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "matt-delta-petalburg",
+      "kind": "evil",
+      "name": "Matt",
+      "title": "Team Aqua",
+      "location": "Wally's house, Petalburg City (Delta Episode)",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "poison-fang",
+            "crunch",
+            "agility",
+            "skull-bash"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "zinnia-1",
+      "kind": "other",
+      "name": "Zinnia",
+      "title": "Lorekeeper",
+      "location": "Granite Cave (Delta Episode)",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 697,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "earthquake",
+            "stone-edge"
+          ],
+          "ability": "strong-jaw",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "dragon-pulse",
+            "moonblast",
+            "flamethrower",
+            "hyper-voice"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "fire-fang",
+            "thunder-fang"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "courtney-delta-space-center",
+      "kind": "evil",
+      "name": "Courtney",
+      "title": "Team Magma",
+      "location": "Mossdeep Space Center (Delta Episode)",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "rock-slide",
+            "yawn",
+            "earthquake",
+            "eruption"
+          ],
+          "ability": "magma-armor",
+          "item": "cameruptite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o Steven do seu lado; o Camerupt [OR] / Sharpedo [AS] megaevolui",
+      "versions": [
+        "omega-ruby"
+      ]
+    },
+    {
+      "id": "matt-delta-space-center",
+      "kind": "evil",
+      "name": "Matt",
+      "title": "Team Aqua",
+      "location": "Mossdeep Space Center (Delta Episode)",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 319,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "poison-fang",
+            "crunch",
+            "agility",
+            "skull-bash"
+          ],
+          "ability": "rough-skin",
+          "item": "sharpedonite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "dupla: o Admin e um Grunt juntos, com o Steven do seu lado; o Camerupt [OR] / Sharpedo [AS] megaevolui",
+      "versions": [
+        "alpha-sapphire"
+      ]
+    },
+    {
+      "id": "wallace-sky-pillar",
+      "kind": "other",
+      "name": "Wallace",
+      "title": "Sootopolitan",
+      "location": "Sky Pillar (Delta Episode)",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 321,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "water-spout",
+            "heavy-slam",
+            "earthquake",
+            "blizzard"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 73,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "sludge-wave",
+            "brine",
+            "rain-dance",
+            "dazzling-gleam"
+          ],
+          "ability": "clear-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 272,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "fake-out",
+            "scald",
+            "energy-ball",
+            "ice-beam"
+          ],
+          "ability": "swift-swim",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 340,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "earthquake",
+            "muddy-water",
+            "rock-tomb",
+            "rain-dance"
+          ],
+          "ability": "oblivious",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "waterfall",
+            "crunch",
+            "ice-fang",
+            "stone-edge"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "dragon-pulse",
+            "blizzard",
+            "recover",
+            "hydro-pump"
+          ],
+          "ability": "marvel-scale",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "zinnia-2",
+      "kind": "other",
+      "name": "Zinnia",
+      "title": "Lorekeeper",
+      "location": "Sky Pillar (Delta Episode)",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 706,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "dragon-pulse",
+            "muddy-water",
+            "thunderbolt",
+            "ice-beam"
+          ],
+          "ability": "sap-sipper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 715,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "dragon-pulse",
+            "air-slash",
+            "shadow-ball",
+            "super-fang"
+          ],
+          "ability": "infiltrator",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "dragon-pulse",
+            "moonblast",
+            "flamethrower",
+            "hyper-voice"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 697,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "earthquake",
+            "stone-edge"
+          ],
+          "ability": "strong-jaw",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "fire-fang",
+            "thunder-fang"
+          ],
+          "ability": "intimidate",
+          "item": "salamencite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "você usa o Rayquaza (Mega); o Salamence dela megaevolui",
+      "versions": null
+    },
+    {
+      "id": "sidney-rematch",
+      "kind": "elite",
+      "name": "Sidney",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 560,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "brick-break",
+            "poison-jab",
+            "dragon-claw"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 275,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "fake-out",
+            "feint-attack",
+            "extrasensory",
+            "leaf-blade"
+          ],
+          "ability": "chlorophyll",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "poison-fang",
+            "aqua-jet",
+            "slash"
+          ],
+          "ability": "rough-skin",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 571,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "night-slash",
+            "shadow-claw",
+            "dark-pulse",
+            "flamethrower"
+          ],
+          "ability": "illusion",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 630,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "brave-bird",
+            "bone-rush",
+            "feint-attack",
+            "tailwind"
+          ],
+          "ability": "overcoat",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "aerial-ace",
+            "night-slash",
+            "psycho-cut",
+            "slash"
+          ],
+          "ability": "super-luck",
+          "item": "absolite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 72,
+      "verified": true,
+      "notes": "revanche: depois do Delta Episode; Absol megaevolui",
+      "versions": null
+    },
+    {
+      "id": "phoebe-rematch",
+      "kind": "elite",
+      "name": "Phoebe",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "grudge",
+            "toxic",
+            "psychic"
+          ],
+          "ability": "insomnia",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 429,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "shadow-ball",
+            "power-gem",
+            "thunderbolt",
+            "pain-split"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 426,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "phantom-force",
+            "psychic",
+            "icy-wind",
+            "acrobatics"
+          ],
+          "ability": "aftermath",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "hex",
+            "flamethrower",
+            "energy-ball",
+            "dark-pulse"
+          ],
+          "ability": "flame-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 477,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "hex",
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch"
+          ],
+          "ability": "pressure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "shadow-claw",
+            "foul-play",
+            "power-gem",
+            "fake-out"
+          ],
+          "ability": "prankster",
+          "item": "sablenite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 73,
+      "verified": true,
+      "notes": "revanche: depois do Delta Episode; Sableye megaevolui",
+      "versions": null
+    },
+    {
+      "id": "glacia-rematch",
+      "kind": "elite",
+      "name": "Glacia",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 460,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "blizzard",
+            "wood-hammer",
+            "ice-shard",
+            "earthquake"
+          ],
+          "ability": "snow-warning",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 614,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "icicle-crash",
+            "slash",
+            "shadow-claw",
+            "brick-break"
+          ],
+          "ability": "snow-cloak",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "draining-kiss",
+            "blizzard",
+            "hail",
+            "shadow-ball"
+          ],
+          "ability": "snow-cloak",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "ice-beam",
+            "mirror-coat",
+            "freeze-dry",
+            "signal-beam"
+          ],
+          "ability": "ice-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 365,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "surf",
+            "body-slam",
+            "blizzard",
+            "sheer-cold"
+          ],
+          "ability": "thick-fat",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 362,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "protect",
+            "ice-shard",
+            "hail",
+            "freeze-dry"
+          ],
+          "ability": "inner-focus",
+          "item": "glalitite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "revanche: depois do Delta Episode; Glalie megaevolui",
+      "versions": null
+    },
+    {
+      "id": "drake-rematch",
+      "kind": "elite",
+      "name": "Drake",
+      "title": "Elite Four",
+      "location": "Pokémon League",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "aerial-ace",
+            "cotton-guard",
+            "dragon-pulse",
+            "moonblast"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 691,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "dragon-pulse",
+            "hydro-pump",
+            "sludge-wave",
+            "thunderbolt"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "dragon-pulse",
+            "surf",
+            "yawn",
+            "ice-beam"
+          ],
+          "ability": "sniper",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "flamethrower",
+            "boomburst",
+            "dragon-pulse",
+            "screech"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "dragon-claw",
+            "earthquake",
+            "x-scissor",
+            "shadow-claw"
+          ],
+          "ability": "mold-breaker",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "dragon-rush",
+            "zen-headbutt",
+            "crunch",
+            "thunder-fang"
+          ],
+          "ability": "intimidate",
+          "item": "salamencite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "revanche: depois do Delta Episode; Salamence megaevolui",
+      "versions": null
+    },
+    {
+      "id": "steven-rematch",
+      "kind": "champion",
+      "name": "Steven",
+      "title": "Champion",
+      "location": "Pokémon League",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 227,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "toxic",
+            "aerial-ace",
+            "spikes",
+            "steel-wing"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 344,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "reflect",
+            "light-screen",
+            "extrasensory",
+            "earth-power"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 703,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "moonblast",
+            "power-gem",
+            "psychic",
+            "earth-power"
+          ],
+          "ability": "clear-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "rock-slide",
+            "ice-fang",
+            "thunder-fang",
+            "fire-fang"
+          ],
+          "ability": "pressure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 77,
+          "moves": [
+            "stone-edge",
+            "earthquake",
+            "iron-tail",
+            "dragon-claw"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "bullet-punch",
+            "zen-headbutt",
+            "meteor-mash",
+            "giga-impact"
+          ],
+          "ability": "clear-body",
+          "item": "metagrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 79,
+      "verified": true,
+      "notes": "revanche: depois do Delta Episode; Metagross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "wally-rematch-1",
+      "kind": "rival",
+      "name": "Wally",
+      "title": "Rival",
+      "location": "Battle Resort (Battle Maison)",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "aerial-ace",
+            "safeguard",
+            "dragon-pulse",
+            "cotton-guard"
+          ],
+          "ability": "natural-cure",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "sing",
+            "disarming-voice",
+            "charm",
+            "feint-attack"
+          ],
+          "ability": "cute-charm",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "synthesis",
+            "leech-seed",
+            "petal-blizzard",
+            "toxic"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "screech",
+            "discharge",
+            "tri-attack",
+            "flash-cannon"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "psycho-cut",
+            "close-combat",
+            "slash",
+            "swords-dance"
+          ],
+          "ability": "steadfast",
+          "item": "galladite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 66,
+      "verified": true,
+      "notes": "pós-jogo; Gallade megaevolui",
+      "versions": null
+    },
+    {
+      "id": "wally-rematch-2",
+      "kind": "rival",
+      "name": "Wally",
+      "title": "Rival",
+      "location": "Battle Resort (Battle Maison)",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 407,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "shadow-ball",
+            "leech-seed",
+            "petal-blizzard",
+            "poison-jab"
+          ],
+          "ability": "poison-point",
+          "item": "bright-powder",
+          "tera_type": null
+        },
+        {
+          "species": 663,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "brave-bird",
+            "flare-blitz",
+            "steel-wing",
+            "tailwind"
+          ],
+          "ability": "gale-wings",
+          "item": "life-orb",
+          "tera_type": null
+        },
+        {
+          "species": 184,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "aqua-jet",
+            "play-rough",
+            "aqua-tail",
+            "iron-tail"
+          ],
+          "ability": "huge-power",
+          "item": "assault-vest",
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "thunder-wave",
+            "discharge",
+            "reflect",
+            "flash-cannon"
+          ],
+          "ability": "sturdy",
+          "item": "air-balloon",
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "dragon-claw",
+            "crunch",
+            "earthquake",
+            "stone-edge"
+          ],
+          "ability": "rough-skin",
+          "item": "rocky-helmet",
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 81,
+          "moves": [
+            "psycho-cut",
+            "close-combat",
+            "leaf-blade",
+            "swords-dance"
+          ],
+          "ability": "steadfast",
+          "item": "galladite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 81,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia; Gallade megaevolui",
+      "versions": null
+    }
+  ]
+}

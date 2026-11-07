@@ -23,6 +23,9 @@ import type {
 } from '../../lib/types'
 import { tagClass, tagColors } from './tagColors'
 import { TransferDialog } from './TransferDialog'
+import { ComingSoonActions } from '../boxes/ComingSoonActions'
+import { EvolveDialog } from '../boxes/EvolveDialog'
+import { errorMessage, evolveBody, type EvolveLegality } from '../boxes/boxes'
 
 type TabKey = 'resumo' | 'golpes' | 'status' | 'origem'
 const STAT_KEYS = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const
@@ -45,6 +48,7 @@ export function Details({
   onTagsChanged,
   onExport,
   onMove,
+  onMoveToSave,
   onClose,
 }: {
   pokemon: VaultPokemon
@@ -54,6 +58,8 @@ export function Details({
   onTagsChanged: () => void
   onExport: (ids: string[]) => void
   onMove: (id: string, target: string) => void
+  /** Só na janela do PC (tela Boxes): abre o Mover/Copiar/Anexar para um save. */
+  onMoveToSave?: () => void
   onClose: () => void
 }) {
   const { t, i18n } = useTranslation()
@@ -73,6 +79,24 @@ export function Details({
   const [saving, setSaving] = useState(false)
   const [editError, setEditError] = useState<string | null>(null)
   const [transferOpen, setTransferOpen] = useState(false)
+  const [evolveOpen, setEvolveOpen] = useState(false)
+  const [cloning, setCloning] = useState(false)
+
+  async function cloneInVault() {
+    setCloning(true)
+    try {
+      const r = await api.post<{ pokemon: VaultPokemon; legality: EvolveLegality }>(
+        `/api/vault/pokemon/${pokemon.id}/clone`,
+        { language: i18n.language },
+      )
+      onChanged()
+      toast(r.legality.valid ? t('boxes.clonedVault') : t('boxes.clonedVaultIllegal'))
+    } catch (e) {
+      toast(errorMessage(t, e))
+    } finally {
+      setCloning(false)
+    }
+  }
 
   // Dados completos (golpes, IVs, EVs, local) vêm do arquivo do Pokémon.
   useEffect(() => {
@@ -212,7 +236,7 @@ export function Details({
 
   function useInTrade() {
     requestTrade([pokemon.id])
-    navigate('/trocar')
+    navigate(`/trocas/trocar?pokemon=${pokemon.id}`)
   }
 
   const statLabel = (i: number) => t(`ui.stats.${STAT_KEYS[i]}`)
@@ -234,6 +258,22 @@ export function Details({
 
   return (
     <div className="flex min-h-0 flex-col">
+      {evolveOpen && (
+        <EvolveDialog
+          name={pokemon.nickname || pokemon.speciesName}
+          optionsUrl={`/api/vault/pokemon/${pokemon.id}/evolve-options`}
+          submit={async (option) => {
+            const r = await api.post<{ pokemon: VaultPokemon; legality: EvolveLegality }>(
+              `/api/vault/pokemon/${pokemon.id}/evolve`,
+              evolveBody(option, i18n.language),
+            )
+            onChanged()
+            toast(t('boxes.evolveDialog.vaultDone', { species: option.speciesName }))
+            return r.legality
+          }}
+          onClose={() => setEvolveOpen(false)}
+        />
+      )}
       {transferOpen && (
         <TransferDialog
           pokemon={pokemon}
@@ -259,7 +299,7 @@ export function Details({
 
       <div className="flex items-center gap-3.5 p-4">
         <div className="flex h-[104px] w-[104px] shrink-0 items-center justify-center rounded-lg bg-tile">
-          <img src={spriteUrl(pokemon.species)} alt="" className="pixelated h-24 w-24" />
+          <img src={spriteUrl(pokemon.species, { shiny: pokemon.isShiny })} alt="" className="pixelated h-24 w-24" />
         </div>
         <div className="flex min-w-0 flex-col gap-1">
           <div className="font-display text-[21px] leading-tight font-bold [overflow-wrap:anywhere]">{name}</div>
@@ -455,6 +495,18 @@ export function Details({
                     {t('ui.vault.useInTrade')}
                   </Button>
                 </div>
+                {onMoveToSave && (
+                  <Button className="h-9" variant="secondary" size="sm" icon="drive_file_move" onClick={onMoveToSave}>
+                    {t('boxes.moveToSave')}
+                  </Button>
+                )}
+                {/* Clonar no cofre: cópia com PID novo na Caixa de entrada. */}
+                <ComingSoonActions
+                  onClone={pokemon.isEgg || cloning ? undefined : () => void cloneInVault()}
+                  cloneHint={t('boxes.evolveDialog.egg')}
+                  evolveHint={t('boxes.evolveDialog.egg')}
+                  onEvolve={pokemon.isEgg ? undefined : () => setEvolveOpen(true)}
+                />
                 <div className="flex items-center gap-1.5">
                   <select
                     className={`${selectClass} h-9! flex-1 text-[13px]!`}
@@ -475,6 +527,7 @@ export function Details({
                   <IconButton name="file_download" label={gen3 ? t('ui.vault.exportPk3') : t('ui.vault.exportFile')} onClick={() => onExport([pokemon.id])} />
                   <IconButton name="move_up" label={t('vault.transfer.action')} onClick={() => setTransferOpen(true)} />
                   <IconButton name="tune" label={t('pokemon.editInBuilder')} onClick={() => navigate(`/criar/${pokemon.id}`)} />
+                  <IconButton name="menu_book" label={t('boxes.viewDex')} onClick={() => navigate(`/pokedex/${pokemon.species}`)} />
                   <IconButton
                     name="delete"
                     label={t('vault.toTrash')}

@@ -47,7 +47,7 @@ export function GlobalDrop() {
       const save = files.find((f) => isSave(f.name))
       if (save) {
         setPendingSave(save)
-        navigate('/pokemon')
+        navigate('/boxes')
         window.dispatchEvent(new Event(PENDING_SAVE))
         return
       }

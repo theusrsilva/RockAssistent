@@ -1,0 +1,109 @@
+Os TMs são reutilizáveis na Gen 5. Os HMs só são esquecidos com o Move Deleter (Mistralton).
+
+:::tms bw
+
+## Onde achar
+
+- TM01 Hone Claws: Sete Sábios, Zinzolin (Cold Storage, pós-jogo).
+- TM02 Dragon Claw: Victory Road.
+- TM03 Psyshock: Giant Chasm.
+- TM04 Calm Mind: Sete Sábios, Ryoku (Relic Castle, pós-jogo).
+- TM05 Roar: Route 10.
+- TM06 Toxic: Route 17.
+- TM07 Hail: Mistralton City.
+- TM08 Bulk Up: Sete Sábios, Giallo (Route 14, pós-jogo).
+- TM09 Venoshock: Route 15.
+- TM10 Hidden Power: Professora Juniper (100 vistos).
+- TM11 Sunny Day: Mistralton City.
+- TM12 Taunt: Victory Road.
+- TM13 Ice Beam: Giant Chasm.
+- TM14 Blizzard: Icirrus City (loja).
+- TM15 Hyper Beam: Shopping Mall Nine (Route 9), $90.000.
+- TM16 Light Screen: Nimbasa City (loja).
+- TM17 Protect: Professora Juniper (60 vistos).
+- TM18 Rain Dance: Mistralton City.
+- TM19 Telekinesis: Route 18.
+- TM20 Safeguard: Nimbasa City (loja).
+- TM21 Frustration: Nimbasa City (loja).
+- TM22 Solar Beam: Pinwheel Forest.
+- TM23 Smack Down: Battle Subway (BP).
+- TM24 Thunderbolt: P2 Laboratory (Route 17).
+- TM25 Thunder: Icirrus City (loja).
+- TM26 Earthquake: Relic Castle (salas novas, pós-jogo).
+- TM27 Return: Nimbasa City (loja).
+- TM28 Dig: Route 4 (casa).
+- TM29 Psychic: Route 13.
+- TM30 Shadow Ball: Relic Castle.
+- TM31 Brick Break: Icirrus City (moça do Pokémon Center).
+- TM32 Double Team: Sete Sábios, Rood (Route 18, pós-jogo).
+- TM33 Reflect: Nimbasa City (loja).
+- TM34 Sludge Wave: Battle Subway (BP).
+- TM35 Flamethrower: Abundant Shrine.
+- TM36 Sludge Bomb: Route 8 (Surf).
+- TM37 Sandstorm: Mistralton City.
+- TM38 Fire Blast: Icirrus City (loja).
+- TM39 Rock Tomb: Desert Resort.
+- TM40 Aerial Ace: Mistralton City (embaixo da pista).
+- TM41 Torment: Route 4.
+- TM42 Facade: Route 8 (moça do guarda-chuva).
+- TM43 Flame Charge: Tubeline Bridge.
+- TM44 Rest: Castelia City (prédio da Castelia Street, 11º andar).
+- TM45 Attract: Castelia City.
+- TM46 Thief: Wellspring Cave.
+- TM47 Low Sweep: Wellspring Cave (Surf).
+- TM48 Round: Battle Subway (BP).
+- TM49 Echoed Voice: Nimbasa City (Musical).
+- TM50 Overheat: Route 11.
+- TM51 Ally Switch: Battle Subway (BP).
+- TM52 Focus Blast: Wellspring Cave.
+- TM53 Energy Ball: Route 12.
+- TM54 False Swipe: Professora Juniper (30 vistos).
+- TM55 Scald: Cold Storage.
+- TM56 Fling: Tubeline Bridge.
+- TM57 Charge Beam: Route 7.
+- TM58 Sky Drop: Mistralton City.
+- TM59 Incinerate: Battle Subway (BP).
+- TM60 Quash: Battle Subway (BP).
+- TM61 Will-O-Wisp: Celestial Tower.
+- TM62 Acrobatics: Skyla (Mistralton Gym).
+- TM63 Embargo: Dragonspiral Tower.
+- TM64 Explosion: Battle Subway (BP).
+- TM65 Shadow Claw: Celestial Tower.
+- TM66 Payback: Route 16.
+- TM67 Retaliate: Lenora (Nacrene Gym).
+- TM68 Giga Impact: Shopping Mall Nine (Route 9), $90.000.
+- TM69 Rock Polish: Sete Sábios, Bronius (Chargestone Cave, pós-jogo).
+- TM70 Flash: Castelia City (Narrow Street).
+- TM71 Stone Edge: Challenger's Cave.
+- TM72 Volt Switch: Elesa (Nimbasa Gym).
+- TM73 Thunder Wave: Nimbasa City (loja).
+- TM74 Gyro Ball: Nimbasa City (loja).
+- TM75 Swords Dance: Sete Sábios, Gorm (Dreamyard, pós-jogo).
+- TM76 Struggle Bug: Burgh (Castelia Gym).
+- TM77 Psych Up: Battle Subway (BP).
+- TM78 Bulldoze: Clay (Driftveil Gym).
+- TM79 Frost Breath: Brycen (Icirrus Gym).
+- TM80 Rock Slide: Mistralton Cave.
+- TM81 X-Scissor: Route 7.
+- TM82 Dragon Tail: Drayden ou Iris (Opelucid Gym).
+- TM83 Work Up: prêmio do ginásio de Striaton.
+- TM84 Poison Jab: Route 6.
+- TM85 Dream Eater: Dreamyard.
+- TM86 Grass Knot: Pinwheel Forest.
+- TM87 Swagger: Battle Subway (BP).
+- TM88 Pluck: Battle Subway (BP).
+- TM89 U-turn: Route 13 (pede as três Grams).
+- TM90 Substitute: Twist Mountain (só no inverno).
+- TM91 Flash Cannon: Twist Mountain.
+- TM92 Trick Room: Abundant Shrine.
+- TM93 Wild Charge: Victory Road.
+- TM94 Rock Smash: Pinwheel Forest (moça fora da floresta).
+- TM95 Snarl: Castelia City, só com a Lock Capsule (nunca distribuída).
+- HM01 Cut: Fennel (Striaton City).
+- HM02 Fly: Bianca, Driftveil City.
+- HM03 Surf: Alder (entrada da Twist Mountain, Route 7).
+- HM04 Strength: Nimbasa City (menino numa casa).
+- HM05 Waterfall: Route 18.
+- HM06 Dive: Undella Town (pós-jogo).
+
+<!-- fontes: dex.sqlite (lista), notas pokemythology, Bisafans (locais) -->

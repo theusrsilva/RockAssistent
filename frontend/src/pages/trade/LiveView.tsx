@@ -187,7 +187,7 @@ export function LiveView({
           {received.length > 0 && <div className="text-sm text-muted">{t('ui.live.savedInbox')}</div>}
           <div className="flex flex-wrap justify-center gap-2.5">
             {firstReceived && (
-              <Button size="lg" onClick={() => navigate(`/pokemon?pokemon=${firstReceived}`)}>
+              <Button size="lg" onClick={() => navigate(`/boxes?pokemon=${firstReceived}`)}>
                 {t('ui.live.seeInVault')}
               </Button>
             )}

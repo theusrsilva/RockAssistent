@@ -27,7 +27,7 @@ public static class TradeRockServer
         if (!isDev && !IsLoopback(options.Bind))
         {
             throw new InvalidOperationException(
-                "Fora do modo desenvolvimento, o TradeRock só escuta em 127.0.0.1. " +
+                "Fora do modo desenvolvimento, o RockAssistent só escuta em 127.0.0.1. " +
                 "Para a rede, ligue o \"modo servidor\" nas Configurações (contas com senha).");
         }
 
@@ -110,9 +110,16 @@ public static class TradeRockServer
         api.MapBuilder();
         api.MapVault();
         api.MapSaves();
+        api.MapBoxes();
         api.MapSetup();
         api.MapWorker();
         api.MapServer();
+        api.MapDex();
+        api.MapGameData();
+        api.MapVgc();
+        api.MapHunts();
+        api.MapNuzlocke();
+        api.MapHistory();
     }
 
     /// <summary>Endereço real após o start (a porta 0 vira uma porta livre).</summary>
@@ -155,7 +162,7 @@ public static class TradeRockServer
         bind == "localhost" ? IPAddress.Loopback : IPAddress.Parse(bind);
 
     private const string MissingFrontendPage =
-        "<!doctype html><meta charset=utf-8><title>TradeRock</title>" +
-        "<h1>TradeRock</h1><p>O frontend não foi compilado neste build.</p>" +
+        "<!doctype html><meta charset=utf-8><title>RockAssistent</title>" +
+        "<h1>RockAssistent</h1><p>O frontend não foi compilado neste build.</p>" +
         "<p>Rode <code>npm run build</code> em <code>frontend/</code> ou use o Vite em modo dev.</p>";
 }

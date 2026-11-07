@@ -1,11 +1,11 @@
 ﻿# Fumaça do instalador do Windows: instala em silêncio (como administrador), confere o app, a regra do
 # firewall e a API, e desinstala conferindo que a regra saiu. Usado no CI (job windows).
 #
-#   pwsh scripts/smoke-windows.ps1 dist\TradeRock-Setup-x.y.z.exe x.y.z
+#   pwsh scripts/smoke-windows.ps1 dist\RockAssistent-Setup-x.y.z.exe x.y.z
 param([Parameter(Mandatory)] [string] $Installer, [Parameter(Mandatory)] [string] $Version)
 $ErrorActionPreference = 'Stop'
-$rule = 'TradeRock (modo servidor)'
-$lanRule = 'TradeRock (Sword/Shield na rede de casa)'
+$rule = 'RockAssistent (modo servidor)'
+$lanRule = 'RockAssistent (Sword/Shield na rede de casa)'
 
 function Wait-Process-Exit($p, $what) {
   if (-not $p.WaitForExit(300000)) { throw "$what demorou demais" }
@@ -20,7 +20,7 @@ if (-not (Test-Path $app)) { throw "traderock.exe não instalado em $app" }
 
 Write-Host '==> versão'
 $out = & $app --version | Out-String
-if ($out.Trim() -ne "TradeRock $Version") { throw "versão não confere: '$out'" }
+if ($out.Trim() -ne "RockAssistent $Version") { throw "versão não confere: '$out'" }
 
 Write-Host '==> firewall (só perfil privado, só o traderock.exe)'
 $fw = Get-NetFirewallRule -DisplayName $rule

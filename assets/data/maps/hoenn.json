@@ -1,0 +1,1077 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Hoenn",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo."
+  ],
+  "region": "hoenn",
+  "nodes": [
+    {
+      "id": "littleroot-town",
+      "name": "Littleroot Town",
+      "kind": "city",
+      "x": 0.3,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-101",
+      "name": "Route 101",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.73,
+      "games": null
+    },
+    {
+      "id": "oldale-town",
+      "name": "Oldale Town",
+      "kind": "city",
+      "x": 0.3,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "route-103",
+      "name": "Route 103",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.58,
+      "games": null
+    },
+    {
+      "id": "route-102",
+      "name": "Route 102",
+      "kind": "route",
+      "x": 0.22,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "petalburg-city",
+      "name": "Petalburg City",
+      "kind": "city",
+      "x": 0.14,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "route-104",
+      "name": "Route 104",
+      "kind": "route",
+      "x": 0.08,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "petalburg-woods",
+      "name": "Petalburg Woods",
+      "kind": "dungeon",
+      "x": 0.08,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "rustboro-city",
+      "name": "Rustboro City",
+      "kind": "city",
+      "x": 0.08,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-116",
+      "name": "Route 116",
+      "kind": "route",
+      "x": 0.14,
+      "y": 0.4,
+      "games": null
+    },
+    {
+      "id": "rusturf-tunnel",
+      "name": "Rusturf Tunnel",
+      "kind": "dungeon",
+      "x": 0.19,
+      "y": 0.4,
+      "games": null
+    },
+    {
+      "id": "verdanturf-town",
+      "name": "Verdanturf Town",
+      "kind": "city",
+      "x": 0.24,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-117",
+      "name": "Route 117",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "mauville-city",
+      "name": "Mauville City",
+      "kind": "city",
+      "x": 0.36,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-110",
+      "name": "Route 110",
+      "kind": "route",
+      "x": 0.36,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "new-mauville",
+      "name": "New Mauville",
+      "kind": "dungeon",
+      "x": 0.41,
+      "y": 0.48,
+      "games": null
+    },
+    {
+      "id": "slateport-city",
+      "name": "Slateport City",
+      "kind": "city",
+      "x": 0.36,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "route-109",
+      "name": "Route 109",
+      "kind": "sea",
+      "x": 0.36,
+      "y": 0.74,
+      "games": null
+    },
+    {
+      "id": "route-108",
+      "name": "Route 108",
+      "kind": "sea",
+      "x": 0.28,
+      "y": 0.86,
+      "games": null
+    },
+    {
+      "id": "abandoned-ship",
+      "name": "Abandoned Ship",
+      "kind": "building",
+      "x": 0.28,
+      "y": 0.92,
+      "games": [
+        "rs",
+        "e"
+      ]
+    },
+    {
+      "id": "route-107",
+      "name": "Route 107",
+      "kind": "sea",
+      "x": 0.2,
+      "y": 0.86,
+      "games": null
+    },
+    {
+      "id": "dewford-town",
+      "name": "Dewford Town",
+      "kind": "city",
+      "x": 0.12,
+      "y": 0.86,
+      "games": null
+    },
+    {
+      "id": "granite-cave",
+      "name": "Granite Cave",
+      "kind": "dungeon",
+      "x": 0.12,
+      "y": 0.93,
+      "games": null
+    },
+    {
+      "id": "route-106",
+      "name": "Route 106",
+      "kind": "sea",
+      "x": 0.08,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-105",
+      "name": "Route 105",
+      "kind": "sea",
+      "x": 0.04,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "island-cave",
+      "name": "Island Cave",
+      "kind": "dungeon",
+      "x": 0.01,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "route-115",
+      "name": "Route 115",
+      "kind": "route",
+      "x": 0.08,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "meteor-falls",
+      "name": "Meteor Falls",
+      "kind": "dungeon",
+      "x": 0.1,
+      "y": 0.2,
+      "games": null
+    },
+    {
+      "id": "route-114",
+      "name": "Route 114",
+      "kind": "route",
+      "x": 0.16,
+      "y": 0.13,
+      "games": null
+    },
+    {
+      "id": "desert-underpass",
+      "name": "Desert Underpass",
+      "kind": "dungeon",
+      "x": 0.13,
+      "y": 0.07,
+      "games": [
+        "e"
+      ]
+    },
+    {
+      "id": "fallarbor-town",
+      "name": "Fallarbor Town",
+      "kind": "city",
+      "x": 0.22,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "route-113",
+      "name": "Route 113",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "route-111",
+      "name": "Route 111",
+      "kind": "route",
+      "x": 0.36,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "desert",
+      "name": "Route 111 Desert",
+      "kind": "route",
+      "x": 0.4,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "mirage-tower",
+      "name": "Mirage Tower",
+      "kind": "dungeon",
+      "x": 0.43,
+      "y": 0.17,
+      "games": [
+        "e"
+      ]
+    },
+    {
+      "id": "desert-ruins",
+      "name": "Desert Ruins",
+      "kind": "dungeon",
+      "x": 0.43,
+      "y": 0.26,
+      "games": null
+    },
+    {
+      "id": "route-112",
+      "name": "Route 112",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "fiery-path",
+      "name": "Fiery Path",
+      "kind": "dungeon",
+      "x": 0.33,
+      "y": 0.24,
+      "games": null
+    },
+    {
+      "id": "mt-chimney",
+      "name": "Mt. Chimney",
+      "kind": "dungeon",
+      "x": 0.26,
+      "y": 0.2,
+      "games": null
+    },
+    {
+      "id": "jagged-pass",
+      "name": "Jagged Pass",
+      "kind": "route",
+      "x": 0.22,
+      "y": 0.26,
+      "games": null
+    },
+    {
+      "id": "magma-hideout",
+      "name": "Magma Hideout",
+      "kind": "dungeon",
+      "x": 0.19,
+      "y": 0.22,
+      "games": [
+        "e"
+      ]
+    },
+    {
+      "id": "lavaridge-town",
+      "name": "Lavaridge Town",
+      "kind": "city",
+      "x": 0.24,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "route-118",
+      "name": "Route 118",
+      "kind": "route",
+      "x": 0.46,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-119",
+      "name": "Route 119",
+      "kind": "route",
+      "x": 0.52,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "fortree-city",
+      "name": "Fortree City",
+      "kind": "city",
+      "x": 0.52,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "route-120",
+      "name": "Route 120",
+      "kind": "route",
+      "x": 0.6,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "ancient-tomb",
+      "name": "Ancient Tomb",
+      "kind": "dungeon",
+      "x": 0.6,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-121",
+      "name": "Route 121",
+      "kind": "route",
+      "x": 0.68,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "safari-zone",
+      "name": "Safari Zone",
+      "kind": "route",
+      "x": 0.68,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "route-122",
+      "name": "Route 122",
+      "kind": "sea",
+      "x": 0.68,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "mt-pyre",
+      "name": "Mt. Pyre",
+      "kind": "dungeon",
+      "x": 0.68,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "route-123",
+      "name": "Route 123",
+      "kind": "route",
+      "x": 0.58,
+      "y": 0.36,
+      "games": null
+    },
+    {
+      "id": "lilycove-city",
+      "name": "Lilycove City",
+      "kind": "city",
+      "x": 0.76,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "aqua-hideout",
+      "name": "Lilycove Hideout",
+      "kind": "dungeon",
+      "x": 0.8,
+      "y": 0.07,
+      "games": null
+    },
+    {
+      "id": "southern-island",
+      "name": "Southern Island",
+      "kind": "route",
+      "x": 0.8,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "route-124",
+      "name": "Route 124",
+      "kind": "sea",
+      "x": 0.84,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "mossdeep-city",
+      "name": "Mossdeep City",
+      "kind": "city",
+      "x": 0.92,
+      "y": 0.24,
+      "games": null
+    },
+    {
+      "id": "route-125",
+      "name": "Route 125",
+      "kind": "sea",
+      "x": 0.92,
+      "y": 0.16,
+      "games": null
+    },
+    {
+      "id": "shoal-cave",
+      "name": "Shoal Cave",
+      "kind": "dungeon",
+      "x": 0.95,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "route-127",
+      "name": "Route 127",
+      "kind": "sea",
+      "x": 0.88,
+      "y": 0.34,
+      "games": null
+    },
+    {
+      "id": "route-126",
+      "name": "Route 126",
+      "kind": "sea",
+      "x": 0.78,
+      "y": 0.32,
+      "games": null
+    },
+    {
+      "id": "sootopolis-city",
+      "name": "Sootopolis City",
+      "kind": "city",
+      "x": 0.76,
+      "y": 0.39,
+      "games": null
+    },
+    {
+      "id": "cave-of-origin",
+      "name": "Cave of Origin",
+      "kind": "dungeon",
+      "x": 0.72,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-128",
+      "name": "Route 128",
+      "kind": "sea",
+      "x": 0.86,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "seafloor-cavern",
+      "name": "Seafloor Cavern",
+      "kind": "dungeon",
+      "x": 0.83,
+      "y": 0.5,
+      "games": null
+    },
+    {
+      "id": "ever-grande-city",
+      "name": "Ever Grande City",
+      "kind": "city",
+      "x": 0.94,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "x": 0.97,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "x": 0.97,
+      "y": 0.68,
+      "games": null
+    },
+    {
+      "id": "route-129",
+      "name": "Route 129",
+      "kind": "sea",
+      "x": 0.82,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "route-130",
+      "name": "Route 130",
+      "kind": "sea",
+      "x": 0.74,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "mirage-island",
+      "name": "Mirage Island",
+      "kind": "route",
+      "x": 0.74,
+      "y": 0.71,
+      "games": [
+        "rs",
+        "e"
+      ]
+    },
+    {
+      "id": "route-131",
+      "name": "Route 131",
+      "kind": "sea",
+      "x": 0.66,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "sky-pillar",
+      "name": "Sky Pillar",
+      "kind": "dungeon",
+      "x": 0.66,
+      "y": 0.57,
+      "games": null
+    },
+    {
+      "id": "pacifidlog-town",
+      "name": "Pacifidlog Town",
+      "kind": "city",
+      "x": 0.58,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "route-132",
+      "name": "Route 132",
+      "kind": "sea",
+      "x": 0.53,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "route-133",
+      "name": "Route 133",
+      "kind": "sea",
+      "x": 0.48,
+      "y": 0.64,
+      "games": null
+    },
+    {
+      "id": "route-134",
+      "name": "Route 134",
+      "kind": "sea",
+      "x": 0.43,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "sealed-chamber",
+      "name": "Sealed Chamber",
+      "kind": "dungeon",
+      "x": 0.43,
+      "y": 0.73,
+      "games": null
+    },
+    {
+      "id": "battle-tower",
+      "name": "Battle Tower",
+      "kind": "building",
+      "x": 0.58,
+      "y": 0.9,
+      "games": [
+        "rs"
+      ]
+    },
+    {
+      "id": "battle-frontier",
+      "name": "Battle Frontier",
+      "kind": "city",
+      "x": 0.58,
+      "y": 0.9,
+      "games": [
+        "e"
+      ]
+    },
+    {
+      "id": "artisan-cave",
+      "name": "Artisan Cave",
+      "kind": "dungeon",
+      "x": 0.64,
+      "y": 0.92,
+      "games": [
+        "e"
+      ]
+    },
+    {
+      "id": "sea-mauville",
+      "name": "Sea Mauville",
+      "kind": "dungeon",
+      "x": 0.66,
+      "y": 0.66,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "mirage-spots",
+      "name": "Mirage Spots",
+      "kind": "route",
+      "x": 0.9,
+      "y": 0.82,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "battle-resort",
+      "name": "Battle Resort",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.3,
+      "games": [
+        "oras"
+      ]
+    },
+    {
+      "id": "scorched-slab",
+      "name": "Scorched Slab",
+      "kind": "dungeon",
+      "x": 0.52,
+      "y": 0.08,
+      "games": [
+        "oras"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "littleroot-town",
+      "to": "route-101"
+    },
+    {
+      "from": "route-101",
+      "to": "oldale-town"
+    },
+    {
+      "from": "oldale-town",
+      "to": "route-103"
+    },
+    {
+      "from": "oldale-town",
+      "to": "route-102"
+    },
+    {
+      "from": "route-102",
+      "to": "petalburg-city"
+    },
+    {
+      "from": "petalburg-city",
+      "to": "route-104"
+    },
+    {
+      "from": "route-104",
+      "to": "petalburg-woods"
+    },
+    {
+      "from": "petalburg-woods",
+      "to": "rustboro-city"
+    },
+    {
+      "from": "rustboro-city",
+      "to": "route-116"
+    },
+    {
+      "from": "route-116",
+      "to": "rusturf-tunnel"
+    },
+    {
+      "from": "rusturf-tunnel",
+      "to": "verdanturf-town"
+    },
+    {
+      "from": "rustboro-city",
+      "to": "route-115"
+    },
+    {
+      "from": "route-115",
+      "to": "meteor-falls"
+    },
+    {
+      "from": "meteor-falls",
+      "to": "route-114"
+    },
+    {
+      "from": "route-114",
+      "to": "fallarbor-town"
+    },
+    {
+      "from": "route-114",
+      "to": "desert-underpass"
+    },
+    {
+      "from": "fallarbor-town",
+      "to": "route-113"
+    },
+    {
+      "from": "route-113",
+      "to": "route-111"
+    },
+    {
+      "from": "route-111",
+      "to": "desert"
+    },
+    {
+      "from": "desert",
+      "to": "mirage-tower"
+    },
+    {
+      "from": "desert",
+      "to": "desert-ruins"
+    },
+    {
+      "from": "route-111",
+      "to": "route-112"
+    },
+    {
+      "from": "route-112",
+      "to": "fiery-path"
+    },
+    {
+      "from": "fiery-path",
+      "to": "route-111"
+    },
+    {
+      "from": "route-112",
+      "to": "mt-chimney"
+    },
+    {
+      "from": "mt-chimney",
+      "to": "jagged-pass"
+    },
+    {
+      "from": "jagged-pass",
+      "to": "lavaridge-town"
+    },
+    {
+      "from": "jagged-pass",
+      "to": "magma-hideout"
+    },
+    {
+      "from": "lavaridge-town",
+      "to": "route-112"
+    },
+    {
+      "from": "route-111",
+      "to": "mauville-city"
+    },
+    {
+      "from": "mauville-city",
+      "to": "route-117"
+    },
+    {
+      "from": "route-117",
+      "to": "verdanturf-town"
+    },
+    {
+      "from": "mauville-city",
+      "to": "route-110"
+    },
+    {
+      "from": "route-110",
+      "to": "slateport-city"
+    },
+    {
+      "from": "route-110",
+      "to": "new-mauville"
+    },
+    {
+      "from": "mauville-city",
+      "to": "route-118"
+    },
+    {
+      "from": "route-118",
+      "to": "route-119"
+    },
+    {
+      "from": "route-118",
+      "to": "route-123"
+    },
+    {
+      "from": "route-119",
+      "to": "fortree-city"
+    },
+    {
+      "from": "fortree-city",
+      "to": "route-120"
+    },
+    {
+      "from": "route-120",
+      "to": "ancient-tomb"
+    },
+    {
+      "from": "route-120",
+      "to": "route-121"
+    },
+    {
+      "from": "route-121",
+      "to": "safari-zone"
+    },
+    {
+      "from": "route-121",
+      "to": "route-122"
+    },
+    {
+      "from": "route-122",
+      "to": "mt-pyre"
+    },
+    {
+      "from": "route-122",
+      "to": "route-123"
+    },
+    {
+      "from": "route-121",
+      "to": "lilycove-city"
+    },
+    {
+      "from": "lilycove-city",
+      "to": "aqua-hideout"
+    },
+    {
+      "from": "lilycove-city",
+      "to": "southern-island"
+    },
+    {
+      "from": "lilycove-city",
+      "to": "route-124"
+    },
+    {
+      "from": "route-124",
+      "to": "mossdeep-city"
+    },
+    {
+      "from": "mossdeep-city",
+      "to": "route-125"
+    },
+    {
+      "from": "route-125",
+      "to": "shoal-cave"
+    },
+    {
+      "from": "mossdeep-city",
+      "to": "route-127"
+    },
+    {
+      "from": "route-124",
+      "to": "route-126"
+    },
+    {
+      "from": "route-126",
+      "to": "sootopolis-city"
+    },
+    {
+      "from": "sootopolis-city",
+      "to": "cave-of-origin"
+    },
+    {
+      "from": "route-127",
+      "to": "route-128"
+    },
+    {
+      "from": "route-128",
+      "to": "seafloor-cavern"
+    },
+    {
+      "from": "route-128",
+      "to": "ever-grande-city"
+    },
+    {
+      "from": "ever-grande-city",
+      "to": "victory-road"
+    },
+    {
+      "from": "victory-road",
+      "to": "pokemon-league"
+    },
+    {
+      "from": "route-128",
+      "to": "route-129"
+    },
+    {
+      "from": "route-129",
+      "to": "route-130"
+    },
+    {
+      "from": "route-130",
+      "to": "mirage-island"
+    },
+    {
+      "from": "route-130",
+      "to": "route-131"
+    },
+    {
+      "from": "route-131",
+      "to": "sky-pillar"
+    },
+    {
+      "from": "route-131",
+      "to": "pacifidlog-town"
+    },
+    {
+      "from": "pacifidlog-town",
+      "to": "route-132"
+    },
+    {
+      "from": "route-132",
+      "to": "route-133"
+    },
+    {
+      "from": "route-133",
+      "to": "route-134"
+    },
+    {
+      "from": "route-134",
+      "to": "sealed-chamber"
+    },
+    {
+      "from": "route-134",
+      "to": "slateport-city"
+    },
+    {
+      "from": "slateport-city",
+      "to": "route-109"
+    },
+    {
+      "from": "route-109",
+      "to": "route-108"
+    },
+    {
+      "from": "route-108",
+      "to": "abandoned-ship"
+    },
+    {
+      "from": "route-108",
+      "to": "route-107"
+    },
+    {
+      "from": "route-107",
+      "to": "dewford-town"
+    },
+    {
+      "from": "dewford-town",
+      "to": "granite-cave"
+    },
+    {
+      "from": "dewford-town",
+      "to": "route-106"
+    },
+    {
+      "from": "route-106",
+      "to": "route-105"
+    },
+    {
+      "from": "route-105",
+      "to": "route-104"
+    },
+    {
+      "from": "route-105",
+      "to": "island-cave"
+    },
+    {
+      "from": "slateport-city",
+      "to": "battle-tower"
+    },
+    {
+      "from": "slateport-city",
+      "to": "battle-frontier"
+    },
+    {
+      "from": "battle-frontier",
+      "to": "artisan-cave"
+    },
+    {
+      "from": "route-108",
+      "to": "sea-mauville"
+    },
+    {
+      "from": "route-130",
+      "to": "mirage-spots"
+    },
+    {
+      "from": "ever-grande-city",
+      "to": "battle-resort"
+    },
+    {
+      "from": "route-120",
+      "to": "scorched-slab"
+    }
+  ]
+}

@@ -1,0 +1,1010 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Kanto",
+    "https://bulbapedia.bulbagarden.net/wiki/Sevii_Islands",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo. Sevii Islands à direita, só no frlg."
+  ],
+  "region": "kanto",
+  "nodes": [
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "kind": "city",
+      "x": 0.111,
+      "y": 0.75,
+      "games": null
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "x": 0.111,
+      "y": 0.65,
+      "games": null
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "kind": "city",
+      "x": 0.111,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "kind": "route",
+      "x": 0.044,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-23",
+      "name": "Route 23",
+      "kind": "route",
+      "x": 0.03,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "x": 0.03,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "indigo-plateau",
+      "name": "Indigo Plateau",
+      "kind": "city",
+      "x": 0.03,
+      "y": 0.18,
+      "games": null
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "x": 0.111,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "kind": "dungeon",
+      "x": 0.141,
+      "y": 0.36,
+      "games": null
+    },
+    {
+      "id": "pewter-city",
+      "name": "Pewter City",
+      "kind": "city",
+      "x": 0.111,
+      "y": 0.25,
+      "games": null
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "x": 0.207,
+      "y": 0.25,
+      "games": null
+    },
+    {
+      "id": "mt-moon",
+      "name": "Mt. Moon",
+      "kind": "dungeon",
+      "x": 0.281,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "x": 0.355,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "cerulean-city",
+      "name": "Cerulean City",
+      "kind": "city",
+      "x": 0.444,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-24",
+      "name": "Route 24",
+      "kind": "route",
+      "x": 0.444,
+      "y": 0.12,
+      "games": null
+    },
+    {
+      "id": "route-25",
+      "name": "Route 25",
+      "kind": "route",
+      "x": 0.533,
+      "y": 0.08,
+      "games": null
+    },
+    {
+      "id": "cerulean-cave",
+      "name": "Cerulean Cave",
+      "kind": "dungeon",
+      "x": 0.392,
+      "y": 0.15,
+      "games": null
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "x": 0.444,
+      "y": 0.31,
+      "games": null
+    },
+    {
+      "id": "underground-path-5-6",
+      "name": "Underground Path (Routes 5-6)",
+      "kind": "dungeon",
+      "x": 0.488,
+      "y": 0.37,
+      "games": null
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "x": 0.444,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "vermilion-city",
+      "name": "Vermilion City",
+      "kind": "city",
+      "x": 0.444,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "x": 0.533,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "digletts-cave",
+      "name": "Diglett's Cave",
+      "kind": "dungeon",
+      "x": 0.592,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "x": 0.548,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "x": 0.636,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "rock-tunnel",
+      "name": "Rock Tunnel",
+      "kind": "dungeon",
+      "x": 0.681,
+      "y": 0.33,
+      "games": null
+    },
+    {
+      "id": "power-plant",
+      "name": "Power Plant",
+      "kind": "dungeon",
+      "x": 0.71,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "lavender-town",
+      "name": "Lavender Town",
+      "kind": "city",
+      "x": 0.636,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "x": 0.548,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "underground-path-7-8",
+      "name": "Underground Path (Routes 7-8)",
+      "kind": "dungeon",
+      "x": 0.407,
+      "y": 0.47,
+      "games": null
+    },
+    {
+      "id": "saffron-city",
+      "name": "Saffron City",
+      "kind": "city",
+      "x": 0.444,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "x": 0.37,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "celadon-city",
+      "name": "Celadon City",
+      "kind": "city",
+      "x": 0.296,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "x": 0.207,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17 (Cycling Road)",
+      "kind": "route",
+      "x": 0.207,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "x": 0.266,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "x": 0.636,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "x": 0.592,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "x": 0.533,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "x": 0.444,
+      "y": 0.82,
+      "games": null
+    },
+    {
+      "id": "fuchsia-city",
+      "name": "Fuchsia City",
+      "kind": "city",
+      "x": 0.355,
+      "y": 0.82,
+      "games": null
+    },
+    {
+      "id": "safari-zone",
+      "name": "Safari Zone",
+      "kind": "route",
+      "x": 0.355,
+      "y": 0.72,
+      "games": [
+        "rb",
+        "y",
+        "frlg"
+      ]
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "kind": "sea",
+      "x": 0.355,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "kind": "sea",
+      "x": 0.266,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "seafoam-islands",
+      "name": "Seafoam Islands",
+      "kind": "dungeon",
+      "x": 0.2,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "cinnabar-island",
+      "name": "Cinnabar Island",
+      "kind": "city",
+      "x": 0.111,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "kind": "sea",
+      "x": 0.111,
+      "y": 0.85,
+      "games": null
+    },
+    {
+      "id": "one-island",
+      "name": "One Island",
+      "kind": "city",
+      "x": 0.82,
+      "y": 0.56,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "kindle-road",
+      "name": "Kindle Road",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.47,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "mt-ember",
+      "name": "Mt. Ember",
+      "kind": "dungeon",
+      "x": 0.82,
+      "y": 0.39,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "treasure-beach",
+      "name": "Treasure Beach",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.64,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "two-island",
+      "name": "Two Island",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.56,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "cape-brink",
+      "name": "Cape Brink",
+      "kind": "route",
+      "x": 0.88,
+      "y": 0.49,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "three-island",
+      "name": "Three Island",
+      "kind": "city",
+      "x": 0.94,
+      "y": 0.56,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "bond-bridge",
+      "name": "Bond Bridge",
+      "kind": "route",
+      "x": 0.94,
+      "y": 0.62,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "berry-forest",
+      "name": "Berry Forest",
+      "kind": "dungeon",
+      "x": 0.98,
+      "y": 0.62,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "four-island",
+      "name": "Four Island",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.28,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "icefall-cave",
+      "name": "Icefall Cave",
+      "kind": "dungeon",
+      "x": 0.88,
+      "y": 0.2,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "five-island",
+      "name": "Five Island",
+      "kind": "city",
+      "x": 0.88,
+      "y": 0.72,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "five-isle-meadow",
+      "name": "Five Isle Meadow",
+      "kind": "route",
+      "x": 0.92,
+      "y": 0.7,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "memorial-pillar",
+      "name": "Memorial Pillar",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.7,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "water-labyrinth",
+      "name": "Water Labyrinth",
+      "kind": "sea",
+      "x": 0.88,
+      "y": 0.78,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "resort-gorgeous",
+      "name": "Resort Gorgeous",
+      "kind": "route",
+      "x": 0.84,
+      "y": 0.78,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "lost-cave",
+      "name": "Lost Cave",
+      "kind": "dungeon",
+      "x": 0.8,
+      "y": 0.78,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "six-island",
+      "name": "Six Island",
+      "kind": "city",
+      "x": 0.92,
+      "y": 0.86,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "green-path",
+      "name": "Green Path",
+      "kind": "route",
+      "x": 0.95,
+      "y": 0.83,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "outcast-island",
+      "name": "Outcast Island",
+      "kind": "route",
+      "x": 0.98,
+      "y": 0.8,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "altering-cave",
+      "name": "Altering Cave",
+      "kind": "dungeon",
+      "x": 0.98,
+      "y": 0.75,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "pattern-bush",
+      "name": "Pattern Bush",
+      "kind": "route",
+      "x": 0.98,
+      "y": 0.86,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "water-path",
+      "name": "Water Path",
+      "kind": "route",
+      "x": 0.92,
+      "y": 0.92,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "ruin-valley",
+      "name": "Ruin Valley",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.95,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "dotted-hole",
+      "name": "Dotted Hole",
+      "kind": "dungeon",
+      "x": 0.99,
+      "y": 0.99,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "seven-island",
+      "name": "Seven Island",
+      "kind": "city",
+      "x": 0.82,
+      "y": 0.86,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "canyon-entrance",
+      "name": "Canyon Entrance",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.91,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "sevault-canyon",
+      "name": "Sevault Canyon",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.95,
+      "games": [
+        "frlg"
+      ]
+    },
+    {
+      "id": "tanoby-ruins",
+      "name": "Tanoby Ruins",
+      "kind": "dungeon",
+      "x": 0.78,
+      "y": 0.99,
+      "games": [
+        "frlg"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "pallet-town",
+      "to": "route-1"
+    },
+    {
+      "from": "route-1",
+      "to": "viridian-city"
+    },
+    {
+      "from": "viridian-city",
+      "to": "route-22"
+    },
+    {
+      "from": "route-22",
+      "to": "route-23"
+    },
+    {
+      "from": "route-23",
+      "to": "victory-road"
+    },
+    {
+      "from": "victory-road",
+      "to": "indigo-plateau"
+    },
+    {
+      "from": "viridian-city",
+      "to": "route-2"
+    },
+    {
+      "from": "route-2",
+      "to": "viridian-forest"
+    },
+    {
+      "from": "viridian-forest",
+      "to": "pewter-city"
+    },
+    {
+      "from": "pewter-city",
+      "to": "route-3"
+    },
+    {
+      "from": "route-3",
+      "to": "mt-moon"
+    },
+    {
+      "from": "mt-moon",
+      "to": "route-4"
+    },
+    {
+      "from": "route-4",
+      "to": "cerulean-city"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-24"
+    },
+    {
+      "from": "route-24",
+      "to": "route-25"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "cerulean-cave"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-5"
+    },
+    {
+      "from": "route-5",
+      "to": "underground-path-5-6"
+    },
+    {
+      "from": "underground-path-5-6",
+      "to": "route-6"
+    },
+    {
+      "from": "route-6",
+      "to": "vermilion-city"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-9"
+    },
+    {
+      "from": "route-9",
+      "to": "route-10"
+    },
+    {
+      "from": "route-10",
+      "to": "rock-tunnel"
+    },
+    {
+      "from": "rock-tunnel",
+      "to": "lavender-town"
+    },
+    {
+      "from": "route-10",
+      "to": "power-plant"
+    },
+    {
+      "from": "route-5",
+      "to": "saffron-city"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-6"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-7"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-8"
+    },
+    {
+      "from": "route-7",
+      "to": "celadon-city"
+    },
+    {
+      "from": "route-8",
+      "to": "lavender-town"
+    },
+    {
+      "from": "route-7",
+      "to": "underground-path-7-8"
+    },
+    {
+      "from": "underground-path-7-8",
+      "to": "route-8"
+    },
+    {
+      "from": "celadon-city",
+      "to": "route-16"
+    },
+    {
+      "from": "route-16",
+      "to": "route-17"
+    },
+    {
+      "from": "route-17",
+      "to": "route-18"
+    },
+    {
+      "from": "route-18",
+      "to": "fuchsia-city"
+    },
+    {
+      "from": "lavender-town",
+      "to": "route-12"
+    },
+    {
+      "from": "route-12",
+      "to": "route-13"
+    },
+    {
+      "from": "route-13",
+      "to": "route-14"
+    },
+    {
+      "from": "route-14",
+      "to": "route-15"
+    },
+    {
+      "from": "route-15",
+      "to": "fuchsia-city"
+    },
+    {
+      "from": "fuchsia-city",
+      "to": "safari-zone"
+    },
+    {
+      "from": "fuchsia-city",
+      "to": "route-19"
+    },
+    {
+      "from": "route-19",
+      "to": "route-20"
+    },
+    {
+      "from": "route-20",
+      "to": "seafoam-islands"
+    },
+    {
+      "from": "seafoam-islands",
+      "to": "cinnabar-island"
+    },
+    {
+      "from": "cinnabar-island",
+      "to": "route-21"
+    },
+    {
+      "from": "route-21",
+      "to": "pallet-town"
+    },
+    {
+      "from": "vermilion-city",
+      "to": "route-11"
+    },
+    {
+      "from": "route-11",
+      "to": "route-12"
+    },
+    {
+      "from": "route-11",
+      "to": "digletts-cave"
+    },
+    {
+      "from": "digletts-cave",
+      "to": "route-2"
+    },
+    {
+      "from": "vermilion-city",
+      "to": "one-island"
+    },
+    {
+      "from": "one-island",
+      "to": "kindle-road"
+    },
+    {
+      "from": "kindle-road",
+      "to": "mt-ember"
+    },
+    {
+      "from": "one-island",
+      "to": "treasure-beach"
+    },
+    {
+      "from": "one-island",
+      "to": "two-island"
+    },
+    {
+      "from": "two-island",
+      "to": "cape-brink"
+    },
+    {
+      "from": "two-island",
+      "to": "three-island"
+    },
+    {
+      "from": "three-island",
+      "to": "bond-bridge"
+    },
+    {
+      "from": "bond-bridge",
+      "to": "berry-forest"
+    },
+    {
+      "from": "one-island",
+      "to": "four-island"
+    },
+    {
+      "from": "four-island",
+      "to": "icefall-cave"
+    },
+    {
+      "from": "one-island",
+      "to": "five-island"
+    },
+    {
+      "from": "five-island",
+      "to": "five-isle-meadow"
+    },
+    {
+      "from": "five-isle-meadow",
+      "to": "memorial-pillar"
+    },
+    {
+      "from": "five-island",
+      "to": "water-labyrinth"
+    },
+    {
+      "from": "water-labyrinth",
+      "to": "resort-gorgeous"
+    },
+    {
+      "from": "resort-gorgeous",
+      "to": "lost-cave"
+    },
+    {
+      "from": "five-island",
+      "to": "six-island"
+    },
+    {
+      "from": "six-island",
+      "to": "green-path"
+    },
+    {
+      "from": "green-path",
+      "to": "outcast-island"
+    },
+    {
+      "from": "green-path",
+      "to": "pattern-bush"
+    },
+    {
+      "from": "outcast-island",
+      "to": "altering-cave"
+    },
+    {
+      "from": "six-island",
+      "to": "water-path"
+    },
+    {
+      "from": "water-path",
+      "to": "ruin-valley"
+    },
+    {
+      "from": "ruin-valley",
+      "to": "dotted-hole"
+    },
+    {
+      "from": "six-island",
+      "to": "seven-island"
+    },
+    {
+      "from": "seven-island",
+      "to": "canyon-entrance"
+    },
+    {
+      "from": "canyon-entrance",
+      "to": "sevault-canyon"
+    },
+    {
+      "from": "sevault-canyon",
+      "to": "tanoby-ruins"
+    }
+  ]
+}

@@ -1132,3 +1132,101 @@ O autor pediu um parceiro mais efetivo na Dynamax Adventure e na Max Raid em que
   - o `--raid-move` automático com um PK8 de verdade;
   - testes do .NET (pedido "auto" com os tipos, chefe que não existe) e da tela.
 - **Não verificado:** em batalha com um Sword/Shield de verdade.
+
+## D32. Internet opcional: estatísticas do Smogon e links do pokepast.es
+
+A especificação do RockAssistent (4.10) pediu duas consultas à internet além da procura de atualizações (D29).
+
+- **Desligadas por padrão:** `internet.smogon` e `internet.pokepaste` em Configurações → Preferências → "Internet
+  opcional" (`GET/PUT /api/settings/internet`, valem para o PC todo). Mudar, só na janela do PC; pela rede o cartão só
+  mostra o estado.
+- **Nada do PC é enviado:** só GET, com o User-Agent do app, sem cookies, sem seguir redirecionamentos, tempo limite de
+  2 minutos para os cabeçalhos e outro para o corpo (`InternetHttp`). Erros viram códigos (`timeout`, `unreachable`,
+  `http_<status>`, `too_big`, `write_failed` quando a pasta de dados não aceita o arquivo) e um 502 `network_error`. Os Logs registram "download iniciado/concluído" e o código do erro; o endereço do paste
+  não entra.
+- **Smogon:** `https://www.smogon.com/stats/<aaaa-mm>/chaos/<formato>.json`, só quando a pessoa clica em Atualizar
+  (`POST /api/vgc/usage/refresh`, só na janela do PC). Formato `gen9championsvgc2026regmc-1760` (VGC do Champions,
+  Regulation M-C, 1760+; conferido na listagem de 2026-10), em `smogon_format` do `vgc/regulation.json`. Começa pelo mês
+  anterior (o Smogon publica o mês M no começo de M+1) e, num 404, tenta mais um mês para trás. Limite de 30 MB
+  (outubro/2026 tinha 14,3 MB); o arquivo só substitui o anterior se for um `chaos` válido. Fica em
+  `<DataDir>/vgc/<formato>-<aaaa-mm>.json`; `GET /api/vgc/usage` (também pela rede) lê o mais recente e devolve os
+  50 mais usados com golpes, itens, habilidades e parceiros. Percentuais normalizados pela soma das habilidades (o peso
+  do Pokémon).
+- **pokepast.es:** só `https://pokepast.es/<id>` (host exato, porta padrão, sem usuário); baixa `/<id>/raw` com limite de
+  20 KB (`POST /api/vgc/paste/fetch`, só na janela do PC). Outro endereço: `paste_host_not_allowed`, sem conexão.
+- **Verificado:** testes com uma internet falsa (parse da fixture, mês anterior no 404, arquivo inválido, hosts recusados,
+  endpoints desligados) e o parse do arquivo real de 2026-10 (50 espécies reconhecidas, 137 ms).
+
+## D33. RockAssistent: rebranding e as novas áreas (Entrega 20)
+
+O autor quis que a troca com o Switch virasse só uma das ferramentas de um assistente Pokémon de todos os jogos da série
+principal. Especificação: `docs/superpowers/specs/2026-11-05-rockassistent-design.md`; plano:
+`docs/superpowers/plans/2026-11-05-rockassistent.md`. A troca, as raids, o Union Circle, o Mystery Gift e o modo
+servidor não mudaram de comportamento, só de lugar no menu.
+
+- **Nome só visível:** "RockAssistent" (grafia do autor) na janela, no `--version`, nos textos, no `.desktop`, no
+  instalador, no AppImage (`RockAssistent-<versão>-x86_64.AppImage`), no `RockAssistent-Setup-<versão>.exe`, no Release e
+  no ícone novo (Poké Bola com um "R"). Namespaces, pastas, scripts, pacotes NuGet, binário `traderock`, pacote `.deb`
+  `traderock`, AppId do Inno Setup, worker e **pasta de dados** continuam TradeRock (sem migração).
+  - Atualização das instalações antigas: o app aceita os nomes novos e os antigos, mas o Release só publica os
+    `RockAssistent-*` (decisão do autor de 07/11/2026): quem tem o TradeRock baixa o RockAssistent uma vez pelo GitHub.
+  - Regras antigas do firewall "TradeRock (...)" são apagadas pelo instalador.
+- **Menu:** Início, Pokédex, Guias, Boxes, Trocas, Mystery Gift, Nuzlocke, Contador Hunt, Histórico, Configurações,
+  Sobre. Rotas antigas redirecionam (`/pokemon` → Boxes, `/atividades` → Mystery Gift/Trocas). No celular, as abas de
+  baixo são Início, Pokédex, Boxes e Trocas (a troca é a função principal do modo servidor); o resto fica em "Mais".
+- **Pokédex offline:** `scripts/build-dex.py` baixa os CSVs do PokeAPI num commit fixo (BSD-3, cache em
+  `~/.cache/traderock/pokeapi`) e gera `assets/data/dex.sqlite` (~25 MB, git-ignorado), embutido no `TradeRock.Core`
+  (o build falha se faltar). O `DexService` copia para `<DataDir>/dex/` e lê só leitura; API em `/api/dex`.
+  - Seletor de jogo de RB/Y a Z-A ("Champions" fora: a elegibilidade dele fica na seção VGC). Tipos antigos
+    (`type_efficacy_past`, `pokemon_types_past`) pela geração do jogo. Sprites shiny e de formas em
+    `assets/sprites/{shiny,forms}`.
+  - `genus` e textos da Pokédex em pt-BR não existem no PokeAPI: aparecem em inglês.
+- **Dados nossos em `assets/data`:** `bosses/`, `trainers/` (GBA e DS), `areas/`, `encounters/` (só bdsp, pla, sv,
+  za: o PokeAPI não cobre os jogos do Switch), `maps/` (um por região, nós e arestas de 0 a 1), `vgc/` e
+  `shiny-methods.json`. JSON **estrito** (snake_case, todos os campos, nulo escrito, campo desconhecido recusado),
+  validado ao carregar (`GameDataValidator`: espécies, golpes no dex, áreas, chefes, nós, versões, odds).
+  - Fontes: decompilações da pret (e pokebw2), pesquisa na internet (fatos do jogo, sempre no nosso formato) e notas
+    dos detonados do autor em `docs/superpowers/sources/` (só fatos, nunca a prosa). O que não foi conferido leva
+    `"verified": false` e aparece como "não conferido". Dúvidas abertas: `docs/superpowers/data-doubts.md`.
+  - Chefes e treinadores exclusivos de versão levam `versions` (nulo = todas).
+- **Guias:** markdown nosso em `content/{pt-BR,en}/guides/**` com `index.json`, carregados sob demanda, quatro seções
+  (Jogos, Mecânicas, VGC Champions, Mitologia). Diretivas que puxam os dados: `:::bosses`, `:::boss`, `:::encounters`,
+  `:::tms` (tabela `machines` do PokeAPI; bdsp incompleto e pla sem TMs), `:::shiny-methods`, `:::vgc-regulation`,
+  `:::vgc-teams`. `scripts/check-guides.py` confere índice, arquivos, paridade dos idiomas e diretivas; `--strict`
+  exige as 9 seções em todos os 22 jogos. Estilo curto (listas e tabelas), sem copiar texto de site.
+- **Boxes:** aba Saves (só na janela do PC) com os saves achados nas pastas de Configurações → Preferências → "Pastas de
+  saves" (padrão `**/*.sav;**/*.dsv;**/*.sa1;**/main;**/*.bin`, até 6 níveis, até 16 MB), lidos pelo PKHeX.Core; aba
+  Cofre do app (o cofre de sempre, também pelo celular).
+  - Gravar no save: backup automático, conferência em memória, `.tmp` + `File.Replace`, releitura e volta do backup se
+    falhar; SHA esperado para não gravar por cima do que o emulador acabou de salvar (`save_changed`).
+  - Mover, Copiar e Anexar (cópia no cofre que acompanha o save ao sincronizar). Mover entre gerações é livre, com aviso
+    de legalidade (como o HOME, D22); só é recusado quando o PKHeX não converte.
+  - Gen 1 e 2 compactam as caixas ao gravar: só se grava até a primeira posição vazia.
+  - `SlotSummary` não tem família de jogo: a família vem da entrada do save (`null` fora do catálogo de troca →
+    `save_game_unsupported` ao levar para o cofre).
+  - "Evoluir por troca" é edição local pelo PKHeX (não chama o Switch). Clonar só em saves: o cofre não aceita duas
+    cópias iguais (índice do SHA).
+- **Contador Hunt:** métodos e odds por jogo em `shiny-methods.json` (odd base, modificadores com `games`, degraus com
+  um `counter` movido pela contagem). Combinação por rolagens: `1 / (1 - (1 - 1/RollOdds)^(BaseRolls + Σ Rolls))`;
+  métodos sem rolagens (Ovo Estranho, Poké Radar, DexNav, Ultra Wormhole, Dynamax Adventure, Grande Subterrâneo, Tera
+  Raid) usam a odd do degrau. Várias hunts, pausáveis, por conta.
+  - Atalhos (Configurações → Preferências): na janela por padrão; Tab, Enter e Escape recusados. "Atalho global"
+    opcional, só na janela do PC: Windows (`RegisterHotKey`) e Linux com X11 (`XGrabKey`); no Wayland o app avisa que o
+    sistema não deixa. Com Espaço ou Backspace global, a tecla some do sistema todo: o app só avisa.
+- **Nuzlocke:** runs por conta, pausáveis, com regras (primeiro encontro, apelido, desmaiou morreu, cláusulas de
+  espécie, shiny e linha evolutiva, level cap, texto livre). Próximo chefe = menor `order` não vencido; level cap = maior
+  nível dele. A **versão é obrigatória** nos jogos com duas versões (`version_required`). Encontros do PokeAPI (chance
+  da sub-área com mais chance, limitada a 100%) ou dos nossos JSON nos jogos do Switch; treinadores comuns só onde há
+  decompilação (nos outros, aviso). Mapa esquemático em SVG por região, colorido pelo estado; áreas sem nó continuam
+  na lista.
+- **VGC Champions:** regulamentação vigente e 7 times nossos em `assets/data/vgc` (Regulation Set M-C, sem Terastal,
+  pastes com EVs equivalentes aos Stat Points e só espécies do SV, onde a análise e a importação rodam). "Minha equipe"
+  analisa fraquezas, cobertura e velocidade.
+- **Histórico unificado:** trocas, hunts terminadas, runs terminadas e, pela entidade nova `ActivityRecord`, raids,
+  Mystery Gift e Union Circle (antes ficavam só na memória). Filtros por tipo.
+- **Início:** conexão, "Em andamento" (hunts e runs), última troca, Mystery Gift, guia do dia e busca da Pokédex.
+- **Modo servidor:** Pokédex, Guias, Contador Hunt, Nuzlocke, Histórico e o cofre valem pela rede (por conta); Boxes →
+  Saves, pastas de saves, atalho global e o que já era só do PC continuam só na janela do PC.
+- **Verificado:** testes do .NET, do frontend e dos scripts Python (build-dex, check-guides); atalho global no WSLg (grab
+  e `BadAccess`); arquivo real do Smogon (D32). **Não verificado:** as telas novas num navegador, a tecla global
+  apertada de verdade no Windows e no X11, saves reais de emulador e a janela com o nome novo nos pacotes.

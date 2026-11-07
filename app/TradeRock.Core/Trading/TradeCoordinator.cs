@@ -226,7 +226,7 @@ public sealed class TradeCoordinator(ITradeRecorder recorder, TimeProvider time,
         catch (Exception ex)
         {
             logger.LogError(ex, "Erro inesperado no coordenador de troca.");
-            failure = new TradeFailure("internal_error", "Erro interno do TradeRock.", false);
+            failure = new TradeFailure("internal_error", "Erro interno do RockAssistent.", false);
             status = s.TradesCompleted > 0 ? TradeSessionStatus.PartiallyCompleted : TradeSessionStatus.Failed;
         }
 

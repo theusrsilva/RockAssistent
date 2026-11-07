@@ -467,7 +467,7 @@ public static class SetupReport
     {
         var s = status.System;
         var sb = new StringBuilder();
-        sb.AppendLine("## Relatório do TradeRock");
+        sb.AppendLine("## Relatório do RockAssistent");
         sb.AppendLine();
         sb.AppendLine($"- Versão: {appVersion}");
         sb.AppendLine($"- Sistema: {s.Os}{(s.Distro is { } d ? $" ({d.Name})" : "")}");

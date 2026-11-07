@@ -1,0 +1,63 @@
+{
+  "info": {
+    "metagame": "gen9championsvgc2026regmc",
+    "cutoff": 1760,
+    "cutoff deviation": 0,
+    "team type": null,
+    "number of battles": 1200
+  },
+  "data": {
+    "Kingambit": {
+      "Raw count": 600,
+      "Viability Ceiling": [300, 86, 74, 61],
+      "Abilities": { "defiant": 450.0, "supremeoverlord": 50.0 },
+      "Items": { "blackglasses": 200.0, "focussash": 150.0, "occaberry": 100.0, "nothing": 50.0 },
+      "Spreads": { "Adamant:32/32/0/0/2/0": 500.0 },
+      "Moves": { "kowtowcleave": 480.0, "suckerpunch": 470.0, "ironhead": 400.0, "protect": 450.0, "swordsdance": 200.0 },
+      "Tera Types": { "nothing": 500.0 },
+      "Happiness": { "255": 500.0 },
+      "Teammates": { "Sneasler": 150.0, "Rotom-Wash": 100.0 },
+      "Checks and Counters": {},
+      "usage": 0.42
+    },
+    "Sneasler": {
+      "Raw count": 1000,
+      "Viability Ceiling": [400, 86, 74, 61],
+      "Abilities": { "unburden": 700.0, "poisontouch": 300.0 },
+      "Items": { "whiteherb": 500.0, "focussash": 300.0, "grassyseed": 200.0 },
+      "Spreads": { "Jolly:2/32/0/0/0/32": 1000.0 },
+      "Moves": { "closecombat": 990.0, "direclaw": 700.0, "fakeout": 600.0, "protect": 900.0, "": 10.0 },
+      "Tera Types": { "nothing": 1000.0 },
+      "Happiness": { "255": 1000.0 },
+      "Teammates": { "Kingambit": 150.0, "Rotom-Wash": 120.0, "Swampert-Mega": 60.0 },
+      "Checks and Counters": {},
+      "usage": 0.5
+    },
+    "Rotom-Wash": {
+      "Raw count": 300,
+      "Viability Ceiling": [100, 85, 70, 60],
+      "Abilities": { "levitate": 200.0 },
+      "Items": { "sitrusberry": 120.0, "leftovers": 80.0 },
+      "Spreads": { "Modest:32/0/2/32/0/0": 200.0 },
+      "Moves": { "hydropump": 180.0, "thunderbolt": 190.0, "protect": 150.0, "willowisp": 120.0, "voltswitch": 60.0 },
+      "Tera Types": { "nothing": 200.0 },
+      "Happiness": { "255": 200.0 },
+      "Teammates": { "Sneasler": 120.0, "Kingambit": 100.0 },
+      "Checks and Counters": {},
+      "usage": 0.2
+    },
+    "Swampert-Mega": {
+      "Raw count": 100,
+      "Viability Ceiling": [40, 80, 70, 60],
+      "Abilities": { "swiftswim": 60.0 },
+      "Items": { "swampertite": 60.0 },
+      "Spreads": { "Adamant:32/32/0/0/2/0": 60.0 },
+      "Moves": { "wavecrash": 60.0, "highhorsepower": 55.0, "protect": 50.0, "icepunch": 40.0 },
+      "Tera Types": { "nothing": 60.0 },
+      "Happiness": { "255": 60.0 },
+      "Teammates": { "Sneasler": 60.0 },
+      "Checks and Counters": {},
+      "usage": 0.05
+    }
+  }
+}

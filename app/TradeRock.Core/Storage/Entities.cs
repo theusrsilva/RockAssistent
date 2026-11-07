@@ -147,6 +147,160 @@ public sealed class TrainerPreset : IOwned
     public TradeGame Game { get; set; }
 }
 
+/// <summary>
+/// Pokémon do cofre "anexado" a uma posição de um save do PC: quando o slot muda no jogo (subiu de nível,
+/// evoluiu), a sincronização (<c>POST /api/boxes/sync-attachments</c>) substitui os dados do cofre.
+/// </summary>
+public sealed class SaveAttachment : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public Guid PokemonId { get; set; }
+    public required string SavePath { get; set; }
+
+    /// <summary>SHA-256 do save na última vez que o anexo foi conferido (igual = nada mudou).</summary>
+    public required string SaveSha256 { get; set; }
+
+    /// <summary>Caixa (a partir de 0) ou -1 para o time.</summary>
+    public int Box { get; set; }
+
+    public int Slot { get; set; }
+    public DateTimeOffset AttachedAt { get; set; }
+}
+
+/// <summary>Hunt de shiny (Contador Hunt): espécie, jogo, método, modificadores, contador e cronômetro.</summary>
+public sealed class ShinyHunt : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public int Species { get; set; }
+    public int Form { get; set; }
+
+    /// <summary>Chave do jogo (<c>GameVersions</c>: sv, bdsp, frlg...).</summary>
+    public required string GameKey { get; set; }
+
+    /// <summary>Id do método em <c>shiny-methods.json</c>.</summary>
+    public required string MethodId { get; set; }
+
+    /// <summary>Modificadores em JSON: id → "true"/"false" (toggle) ou o número em texto (steps).</summary>
+    public required string ModifiersJson { get; set; }
+
+    public int Count { get; set; }
+    public long ElapsedSeconds { get; set; }
+    public DateTimeOffset StartedAt { get; set; }
+
+    /// <summary>Quando terminou (achou ou desistiu); null = em andamento.</summary>
+    public DateTimeOffset? EndedAt { get; set; }
+
+    public bool Found { get; set; }
+    public string? Notes { get; set; }
+}
+
+/// <summary>
+/// Registro de uma atividade terminada (raid, Mystery Gift ou Union Circle) para o Histórico. Gravado pelo
+/// <c>ActivityService</c> no fim da sessão (sucesso, cancelamento ou erro). Nunca guarda o arquivo do presente.
+/// </summary>
+public sealed class ActivityRecord : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+
+    /// <summary><c>raid</c>, <c>gift</c> ou <c>circle</c>.</summary>
+    public required string Kind { get; set; }
+
+    /// <summary>Tipo da raid (<c>max-raid-host</c>...) ou do Union Circle (<c>quests</c>, <c>encounters</c>).</summary>
+    public string? SubKind { get; set; }
+
+    public TradeGame Game { get; set; }
+    public required string EngineId { get; set; }
+    public bool IsSimulation { get; set; }
+    public DateTimeOffset StartedAt { get; set; }
+    public DateTimeOffset EndedAt { get; set; }
+
+    /// <summary><c>completed</c>, <c>failed</c> ou <c>cancelled</c>.</summary>
+    public required string Status { get; set; }
+
+    public bool Ok { get; set; }
+    public string? ErrorCode { get; set; }
+
+    /// <summary>Nome do presente ou título do evento da raid.</summary>
+    public string? Label { get; set; }
+
+    /// <summary>Espécie do encontro do Union Circle ou o lendário da Dynamax Adventure.</summary>
+    public int? Species { get; set; }
+
+    /// <summary>Resumo em JSON (raid: evento, chefe, jogadores, Gigantamax; circle: missão, BP, nível, shiny, tera; gift: modo, chave, extensão).</summary>
+    public required string SummaryJson { get; set; }
+}
+
+/// <summary>
+/// Run de Nuzlocke: jogo (e versão, se a pessoa escolheu), regras, estado e a área em que está. Os Pokémon
+/// (<see cref="NuzlockeMon"/>) e os eventos (<see cref="NuzlockeEvent"/>) pertencem à run e só se chega a eles por ela.
+/// </summary>
+public sealed class NuzlockeRun : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public required string Name { get; set; }
+
+    /// <summary>Chave do jogo (<c>GameVersions</c>).</summary>
+    public required string GameKey { get; set; }
+
+    /// <summary>Versão do PokeAPI escolhida (<c>firered</c>, <c>scarlet</c>...); null = todas as do jogo.</summary>
+    public string? Version { get; set; }
+
+    /// <summary><c>NuzlockeRules</c> em JSON.</summary>
+    public required string RulesJson { get; set; }
+
+    /// <summary><c>active</c>, <c>paused</c>, <c>champion</c> ou <c>wipe</c>.</summary>
+    public required string Status { get; set; }
+
+    public DateTimeOffset StartedAt { get; set; }
+    public DateTimeOffset? EndedAt { get; set; }
+
+    /// <summary>Id da área em <c>assets/data/areas</c>; null = a primeira do jogo.</summary>
+    public string? CurrentAreaId { get; set; }
+}
+
+/// <summary>Pokémon de uma run (o encontro registrado e o que aconteceu com ele).</summary>
+public sealed class NuzlockeMon
+{
+    public Guid Id { get; set; }
+    public Guid RunId { get; set; }
+    public required string AreaId { get; set; }
+
+    /// <summary>Espécie; 0 = sem encontro (só com <c>missed</c> ou <c>failed</c>).</summary>
+    public int Species { get; set; }
+
+    public int Form { get; set; }
+    public string? Nickname { get; set; }
+    public int Level { get; set; }
+
+    /// <summary><c>party</c>, <c>box</c>, <c>dead</c>, <c>missed</c> ou <c>failed</c>.</summary>
+    public required string Status { get; set; }
+
+    public bool Shiny { get; set; }
+    public string? DeathCause { get; set; }
+    public DateTimeOffset CaughtAt { get; set; }
+    public DateTimeOffset? DiedAt { get; set; }
+
+    /// <summary>Golpes atuais em JSON: lista de identificadores do PokeAPI (<c>["thunder-shock"]</c>).</summary>
+    public required string MovesJson { get; set; }
+}
+
+/// <summary>Evento de uma run (para o histórico e as estatísticas): tipo e os dados em JSON.</summary>
+public sealed class NuzlockeEvent
+{
+    public Guid Id { get; set; }
+    public Guid RunId { get; set; }
+    public DateTimeOffset At { get; set; }
+
+    /// <summary><c>run_started</c>, <c>area_changed</c>, <c>encounter</c>, <c>mon_updated</c>, <c>boss_defeated</c> ou <c>run_finished</c>.</summary>
+    public required string Kind { get; set; }
+
+    public required string Json { get; set; }
+}
+
 /// <summary>Configuração chave → JSON.</summary>
 public sealed class SettingEntry
 {

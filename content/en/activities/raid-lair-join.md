@@ -2,11 +2,11 @@
 **On Sword/Shield (Crown Tundra):**
 
 1. At the **Max Lair**, talk to the receptionist, with no code, and choose **Invite Others**.
-2. Click **Start the raid** here: TradeRock joins the room.
+2. Click **Start the raid** here: RockAssistent joins the room.
 3. Press **Ready** and pick your rental Pokémon first.
-4. TradeRock fights at your side with a rental.
+4. RockAssistent fights at your side with a rental.
 
-**Mini AI:** among the rentals left, TradeRock takes the one with the best moves against the final legendary and
+**Mini AI:** among the rentals left, RockAssistent takes the one with the best moves against the final legendary and
 against the adventure's Pokémon. Before each battle it picks a move: in the first three, the one that works best
 against the adventure's Pokémon; against the legendary, the most effective one against it.
 

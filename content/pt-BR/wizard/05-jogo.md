@@ -5,5 +5,5 @@ Prepare o jogo no Switch:
 3. Fale com a atendente do **Direct Corner** (balcão da esquerda) e escolha **trocar**.
 4. Escolha **ser o Leader** (criar a sala). O Switch fica esperando alguém entrar.
 
-Na hora da troca, o Switch mostra um **pedido para entrar**: é o TradeRock. Aprove, ande até a
+Na hora da troca, o Switch mostra um **pedido para entrar**: é o RockAssistent. Aprove, ande até a
 **cadeira da esquerda** e siga as instruções da tela de troca.

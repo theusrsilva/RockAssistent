@@ -1,0 +1,971 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de sv)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/sv-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "cabo-poco",
+      "name": "Cabo Poco",
+      "kind": "city",
+      "order": 1,
+      "map_node": "cabo-poco",
+      "poke_api_location_id": 815,
+      "bosses_before": []
+    },
+    {
+      "id": "private-beach",
+      "name": "Private Beach",
+      "kind": "route",
+      "order": 2,
+      "map_node": "cabo-poco",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "nemona-1"
+      ]
+    },
+    {
+      "id": "poco-path",
+      "name": "Poco Path",
+      "kind": "route",
+      "order": 3,
+      "map_node": "poco-path",
+      "poke_api_location_id": 835,
+      "bosses_before": []
+    },
+    {
+      "id": "inleth-grotto",
+      "name": "Inleth Grotto",
+      "kind": "dungeon",
+      "order": 4,
+      "map_node": "inleth-grotto",
+      "poke_api_location_id": 836,
+      "bosses_before": [
+        "arven-1"
+      ]
+    },
+    {
+      "id": "poco-path-lighthouse",
+      "name": "Poco Path Lighthouse",
+      "kind": "building",
+      "order": 5,
+      "map_node": "poco-path",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "south-province-area-one",
+      "name": "South Province (Area One)",
+      "kind": "route",
+      "order": 6,
+      "map_node": "south-province-area-one",
+      "poke_api_location_id": 828,
+      "bosses_before": []
+    },
+    {
+      "id": "los-platos",
+      "name": "Los Platos",
+      "kind": "city",
+      "order": 7,
+      "map_node": "los-platos",
+      "poke_api_location_id": 816,
+      "bosses_before": []
+    },
+    {
+      "id": "mesagoza",
+      "name": "Mesagoza",
+      "kind": "city",
+      "order": 8,
+      "map_node": "mesagoza",
+      "poke_api_location_id": 817,
+      "bosses_before": []
+    },
+    {
+      "id": "naranja-uva-academy",
+      "name": "Naranja Academy / Uva Academy",
+      "kind": "building",
+      "order": 9,
+      "map_node": "mesagoza",
+      "poke_api_location_id": 837,
+      "bosses_before": [
+        "nemona-2"
+      ]
+    },
+    {
+      "id": "south-province-area-two",
+      "name": "South Province (Area Two)",
+      "kind": "route",
+      "order": 10,
+      "map_node": "south-province-area-two",
+      "poke_api_location_id": 829,
+      "bosses_before": []
+    },
+    {
+      "id": "grand-olive-orchard",
+      "name": "The Grand Olive Orchard",
+      "kind": "route",
+      "order": 11,
+      "map_node": "south-province-area-two",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "cortondo",
+      "name": "Cortondo",
+      "kind": "city",
+      "order": 12,
+      "map_node": "cortondo",
+      "poke_api_location_id": 818,
+      "bosses_before": []
+    },
+    {
+      "id": "south-province-area-three",
+      "name": "South Province (Area Three)",
+      "kind": "route",
+      "order": 13,
+      "map_node": "south-province-area-three",
+      "poke_api_location_id": 830,
+      "bosses_before": [
+        "katy"
+      ]
+    },
+    {
+      "id": "artazon",
+      "name": "Artazon",
+      "kind": "city",
+      "order": 14,
+      "map_node": "artazon",
+      "poke_api_location_id": 821,
+      "bosses_before": [
+        "titan-klawf"
+      ]
+    },
+    {
+      "id": "south-province-area-five",
+      "name": "South Province (Area Five)",
+      "kind": "route",
+      "order": 15,
+      "map_node": "south-province-area-five",
+      "poke_api_location_id": 832,
+      "bosses_before": [
+        "brassius"
+      ]
+    },
+    {
+      "id": "secluded-beach",
+      "name": "Secluded Beach",
+      "kind": "route",
+      "order": 16,
+      "map_node": "south-province-area-five",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "west-province-area-one",
+      "name": "West Province (Area One)",
+      "kind": "route",
+      "order": 17,
+      "map_node": "west-province-area-one",
+      "poke_api_location_id": 847,
+      "bosses_before": []
+    },
+    {
+      "id": "segin-squad-base",
+      "name": "Segin Squad's Base",
+      "kind": "building",
+      "order": 18,
+      "map_node": "west-province-area-one",
+      "poke_api_location_id": 852,
+      "bosses_before": [
+        "titan-bombirdier",
+        "giacomo"
+      ]
+    },
+    {
+      "id": "south-province-area-four",
+      "name": "South Province (Area Four)",
+      "kind": "route",
+      "order": 19,
+      "map_node": "south-province-area-four",
+      "poke_api_location_id": 831,
+      "bosses_before": []
+    },
+    {
+      "id": "south-paldean-sea",
+      "name": "South Paldean Sea",
+      "kind": "sea",
+      "order": 20,
+      "map_node": "south-paldean-sea",
+      "poke_api_location_id": 834,
+      "bosses_before": []
+    },
+    {
+      "id": "east-paldean-sea",
+      "name": "East Paldean Sea",
+      "kind": "sea",
+      "order": 21,
+      "map_node": "east-paldean-sea",
+      "poke_api_location_id": 843,
+      "bosses_before": []
+    },
+    {
+      "id": "west-paldean-sea",
+      "name": "West Paldean Sea",
+      "kind": "sea",
+      "order": 22,
+      "map_node": "west-paldean-sea",
+      "poke_api_location_id": 851,
+      "bosses_before": []
+    },
+    {
+      "id": "east-province-area-one",
+      "name": "East Province (Area One)",
+      "kind": "route",
+      "order": 23,
+      "map_node": "east-province-area-one",
+      "poke_api_location_id": 840,
+      "bosses_before": []
+    },
+    {
+      "id": "levincia",
+      "name": "Levincia",
+      "kind": "city",
+      "order": 24,
+      "map_node": "levincia",
+      "poke_api_location_id": 822,
+      "bosses_before": []
+    },
+    {
+      "id": "schedar-squad-base",
+      "name": "Schedar Squad's Base",
+      "kind": "building",
+      "order": 25,
+      "map_node": "east-province-area-one",
+      "poke_api_location_id": 845,
+      "bosses_before": [
+        "nemona-3",
+        "iono",
+        "mela"
+      ]
+    },
+    {
+      "id": "east-province-area-two",
+      "name": "East Province (Area Two)",
+      "kind": "route",
+      "order": 26,
+      "map_node": "east-province-area-two",
+      "poke_api_location_id": 841,
+      "bosses_before": []
+    },
+    {
+      "id": "levincia-lighthouse",
+      "name": "Levincia Lighthouse",
+      "kind": "building",
+      "order": 27,
+      "map_node": "levincia",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "east-province-area-three",
+      "name": "East Province (Area Three)",
+      "kind": "route",
+      "order": 28,
+      "map_node": "east-province-area-three",
+      "poke_api_location_id": 842,
+      "bosses_before": []
+    },
+    {
+      "id": "million-volt-skyline",
+      "name": "Million Volt Skyline",
+      "kind": "route",
+      "order": 29,
+      "map_node": "levincia",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "titan-orthworm"
+      ]
+    },
+    {
+      "id": "zapapico",
+      "name": "Zapapico",
+      "kind": "city",
+      "order": 30,
+      "map_node": "zapapico",
+      "poke_api_location_id": 823,
+      "bosses_before": []
+    },
+    {
+      "id": "cascarrafa",
+      "name": "Cascarrafa",
+      "kind": "city",
+      "order": 31,
+      "map_node": "cascarrafa",
+      "poke_api_location_id": 824,
+      "bosses_before": []
+    },
+    {
+      "id": "asado-desert",
+      "name": "Asado Desert",
+      "kind": "route",
+      "order": 32,
+      "map_node": "asado-desert",
+      "poke_api_location_id": 850,
+      "bosses_before": [
+        "kofu"
+      ]
+    },
+    {
+      "id": "porto-marinada-lighthouse",
+      "name": "Porto Marinada Lighthouse",
+      "kind": "building",
+      "order": 33,
+      "map_node": "porto-marinada",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "porto-marinada",
+      "name": "Porto Marinada",
+      "kind": "city",
+      "order": 34,
+      "map_node": "porto-marinada",
+      "poke_api_location_id": 825,
+      "bosses_before": []
+    },
+    {
+      "id": "navi-squad-base",
+      "name": "Navi Squad's Base",
+      "kind": "building",
+      "order": 35,
+      "map_node": "west-province-area-three",
+      "poke_api_location_id": 846,
+      "bosses_before": []
+    },
+    {
+      "id": "tagtree-thicket",
+      "name": "Tagtree Thicket",
+      "kind": "route",
+      "order": 36,
+      "map_node": "tagtree-thicket",
+      "poke_api_location_id": 844,
+      "bosses_before": []
+    },
+    {
+      "id": "dalizapa-passage",
+      "name": "Dalizapa Passage",
+      "kind": "dungeon",
+      "order": 37,
+      "map_node": "dalizapa-passage",
+      "poke_api_location_id": 858,
+      "bosses_before": [
+        "atticus"
+      ]
+    },
+    {
+      "id": "medali",
+      "name": "Medali",
+      "kind": "city",
+      "order": 38,
+      "map_node": "medali",
+      "poke_api_location_id": 826,
+      "bosses_before": []
+    },
+    {
+      "id": "west-province-area-three",
+      "name": "West Province (Area Three)",
+      "kind": "route",
+      "order": 39,
+      "map_node": "west-province-area-three",
+      "poke_api_location_id": 849,
+      "bosses_before": [
+        "larry",
+        "nemona-4"
+      ]
+    },
+    {
+      "id": "glaseados-grasp",
+      "name": "Glaseado's Grasp",
+      "kind": "route",
+      "order": 40,
+      "map_node": "glaseado-mountain",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "montenevera",
+      "name": "Montenevera",
+      "kind": "city",
+      "order": 41,
+      "map_node": "montenevera",
+      "poke_api_location_id": 827,
+      "bosses_before": []
+    },
+    {
+      "id": "colonnade-hollow",
+      "name": "Colonnade Hollow",
+      "kind": "route",
+      "order": 42,
+      "map_node": "west-province-area-two",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "ryme",
+        "titan-great-tusk",
+        "titan-iron-treads"
+      ]
+    },
+    {
+      "id": "west-province-area-two",
+      "name": "West Province (Area Two)",
+      "kind": "route",
+      "order": 43,
+      "map_node": "west-province-area-two",
+      "poke_api_location_id": 848,
+      "bosses_before": []
+    },
+    {
+      "id": "alfornada-cavern",
+      "name": "Alfornada Cavern",
+      "kind": "dungeon",
+      "order": 44,
+      "map_node": "alfornada-cavern",
+      "poke_api_location_id": 838,
+      "bosses_before": []
+    },
+    {
+      "id": "south-province-area-six",
+      "name": "South Province (Area Six)",
+      "kind": "route",
+      "order": 45,
+      "map_node": "south-province-area-six",
+      "poke_api_location_id": 833,
+      "bosses_before": []
+    },
+    {
+      "id": "leaking-tower",
+      "name": "Leaking Tower of Paldea",
+      "kind": "route",
+      "order": 46,
+      "map_node": "south-province-area-six",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "alfornada",
+      "name": "Alfornada",
+      "kind": "city",
+      "order": 47,
+      "map_node": "alfornada",
+      "poke_api_location_id": 819,
+      "bosses_before": []
+    },
+    {
+      "id": "glaseado-mountain",
+      "name": "Glaseado Mountain",
+      "kind": "route",
+      "order": 48,
+      "map_node": "glaseado-mountain",
+      "poke_api_location_id": 859,
+      "bosses_before": [
+        "nemona-5",
+        "tulip"
+      ]
+    },
+    {
+      "id": "paldeas-highest-peak",
+      "name": "Paldea's Highest Peak",
+      "kind": "route",
+      "order": 49,
+      "map_node": "glaseado-mountain",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "grusha"
+      ]
+    },
+    {
+      "id": "north-province-area-three",
+      "name": "North Province (Area Three)",
+      "kind": "route",
+      "order": 50,
+      "map_node": "north-province-area-three",
+      "poke_api_location_id": 856,
+      "bosses_before": []
+    },
+    {
+      "id": "ruchbah-squad-base",
+      "name": "Ruchbah Squad's Base",
+      "kind": "building",
+      "order": 51,
+      "map_node": "west-province-area-two",
+      "poke_api_location_id": 864,
+      "bosses_before": [
+        "ortega"
+      ]
+    },
+    {
+      "id": "casseroya-falls",
+      "name": "Casseroya Falls",
+      "kind": "route",
+      "order": 52,
+      "map_node": "casseroya-lake",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "casseroya-lake",
+      "name": "Casseroya Lake",
+      "kind": "sea",
+      "order": 53,
+      "map_node": "casseroya-lake",
+      "poke_api_location_id": 857,
+      "bosses_before": []
+    },
+    {
+      "id": "socarrat-trail",
+      "name": "Socarrat Trail",
+      "kind": "route",
+      "order": 54,
+      "map_node": "socarrat-trail",
+      "poke_api_location_id": 860,
+      "bosses_before": [
+        "titan-dondozo-tatsugiri"
+      ]
+    },
+    {
+      "id": "gracia-stones",
+      "name": "Gracia Stones",
+      "kind": "route",
+      "order": 55,
+      "map_node": "north-province-area-two",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "north-province-area-one",
+      "name": "North Province (Area One)",
+      "kind": "route",
+      "order": 56,
+      "map_node": "north-province-area-one",
+      "poke_api_location_id": 854,
+      "bosses_before": []
+    },
+    {
+      "id": "north-province-area-two",
+      "name": "North Province (Area Two)",
+      "kind": "route",
+      "order": 57,
+      "map_node": "north-province-area-two",
+      "poke_api_location_id": 855,
+      "bosses_before": []
+    },
+    {
+      "id": "fury-falls",
+      "name": "Fury Falls",
+      "kind": "route",
+      "order": 58,
+      "map_node": "north-province-area-one",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "eri",
+        "arven-2",
+        "clavell-1",
+        "penny-1"
+      ]
+    },
+    {
+      "id": "caph-squad-base",
+      "name": "Caph Squad's Base",
+      "kind": "building",
+      "order": 59,
+      "map_node": "north-province-area-one",
+      "poke_api_location_id": 865,
+      "bosses_before": []
+    },
+    {
+      "id": "groundblight-shrine",
+      "name": "Groundblight Shrine",
+      "kind": "building",
+      "order": 60,
+      "map_node": "socarrat-trail",
+      "poke_api_location_id": 861,
+      "bosses_before": []
+    },
+    {
+      "id": "icerend-shrine",
+      "name": "Icerend Shrine",
+      "kind": "building",
+      "order": 61,
+      "map_node": "west-province-area-one",
+      "poke_api_location_id": 853,
+      "bosses_before": []
+    },
+    {
+      "id": "grasswither-shrine",
+      "name": "Grasswither Shrine",
+      "kind": "building",
+      "order": 62,
+      "map_node": "south-province-area-one",
+      "poke_api_location_id": 839,
+      "bosses_before": []
+    },
+    {
+      "id": "firescourge-shrine",
+      "name": "Firescourge Shrine",
+      "kind": "building",
+      "order": 63,
+      "map_node": "north-province-area-two",
+      "poke_api_location_id": 862,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "order": 64,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 820,
+      "bosses_before": []
+    },
+    {
+      "id": "zero-gate",
+      "name": "Zero Gate",
+      "kind": "building",
+      "order": 65,
+      "map_node": "zero-gate",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "rika",
+        "poppy",
+        "larry-elite",
+        "hassel",
+        "geeta",
+        "nemona-6"
+      ]
+    },
+    {
+      "id": "area-zero",
+      "name": "Area Zero",
+      "kind": "dungeon",
+      "order": 66,
+      "map_node": "area-zero",
+      "poke_api_location_id": 866,
+      "bosses_before": []
+    },
+    {
+      "id": "zero-lab",
+      "name": "Zero Lab",
+      "kind": "building",
+      "order": 67,
+      "map_node": "area-zero",
+      "poke_api_location_id": 867,
+      "bosses_before": []
+    },
+    {
+      "id": "north-paldean-sea",
+      "name": "North Paldean Sea",
+      "kind": "sea",
+      "order": 68,
+      "map_node": "north-paldean-sea",
+      "poke_api_location_id": 863,
+      "bosses_before": [
+        "ai-sada",
+        "ai-turo",
+        "koraidon-ppp",
+        "miraidon-ppp"
+      ]
+    },
+    {
+      "id": "kitakami-road",
+      "name": "Kitakami Road",
+      "kind": "route",
+      "order": 69,
+      "map_node": "kitakami-road",
+      "poke_api_location_id": 1065,
+      "bosses_before": []
+    },
+    {
+      "id": "mossui-town",
+      "name": "Mossui Town",
+      "kind": "city",
+      "order": 70,
+      "map_node": "mossui-town",
+      "poke_api_location_id": 1069,
+      "bosses_before": []
+    },
+    {
+      "id": "apple-hills",
+      "name": "Apple Hills",
+      "kind": "route",
+      "order": 71,
+      "map_node": "apple-hills",
+      "poke_api_location_id": 1058,
+      "bosses_before": [
+        "carmine-1",
+        "kieran-1"
+      ]
+    },
+    {
+      "id": "chilling-waterhead",
+      "name": "Chilling Waterhead",
+      "kind": "route",
+      "order": 72,
+      "map_node": "chilling-waterhead",
+      "poke_api_location_id": 1059,
+      "bosses_before": []
+    },
+    {
+      "id": "loyalty-plaza",
+      "name": "Loyalty Plaza",
+      "kind": "route",
+      "order": 73,
+      "map_node": "loyalty-plaza",
+      "poke_api_location_id": 1067,
+      "bosses_before": []
+    },
+    {
+      "id": "revelers-road",
+      "name": "Reveler's Road",
+      "kind": "route",
+      "order": 74,
+      "map_node": "revelers-road",
+      "poke_api_location_id": 1073,
+      "bosses_before": []
+    },
+    {
+      "id": "kitakami-hall",
+      "name": "Kitakami Hall",
+      "kind": "building",
+      "order": 75,
+      "map_node": "kitakami-hall",
+      "poke_api_location_id": 1064,
+      "bosses_before": []
+    },
+    {
+      "id": "onis-maw",
+      "name": "Oni's Maw",
+      "kind": "route",
+      "order": 76,
+      "map_node": "onis-maw",
+      "poke_api_location_id": 1071,
+      "bosses_before": []
+    },
+    {
+      "id": "oni-mountain",
+      "name": "Oni Mountain",
+      "kind": "route",
+      "order": 77,
+      "map_node": "oni-mountain",
+      "poke_api_location_id": 1070,
+      "bosses_before": []
+    },
+    {
+      "id": "dreaded-den",
+      "name": "Dreaded Den",
+      "kind": "dungeon",
+      "order": 78,
+      "map_node": "dreaded-den",
+      "poke_api_location_id": 1061,
+      "bosses_before": []
+    },
+    {
+      "id": "infernal-pass",
+      "name": "Infernal Pass",
+      "kind": "route",
+      "order": 79,
+      "map_node": "infernal-pass",
+      "poke_api_location_id": 1063,
+      "bosses_before": [
+        "kieran-2",
+        "carmine-2"
+      ]
+    },
+    {
+      "id": "crystal-pool",
+      "name": "Crystal Pool",
+      "kind": "route",
+      "order": 80,
+      "map_node": "crystal-pool",
+      "poke_api_location_id": 1060,
+      "bosses_before": []
+    },
+    {
+      "id": "mossfell-confluence",
+      "name": "Mossfell Confluence",
+      "kind": "route",
+      "order": 81,
+      "map_node": "mossfell-confluence",
+      "poke_api_location_id": 1068,
+      "bosses_before": []
+    },
+    {
+      "id": "fellhorn-gorge",
+      "name": "Fellhorn Gorge",
+      "kind": "route",
+      "order": 82,
+      "map_node": "fellhorn-gorge",
+      "poke_api_location_id": 1062,
+      "bosses_before": []
+    },
+    {
+      "id": "wistful-fields",
+      "name": "Wistful Fields",
+      "kind": "route",
+      "order": 83,
+      "map_node": "wistful-fields",
+      "poke_api_location_id": 1075,
+      "bosses_before": []
+    },
+    {
+      "id": "kitakami-wilds",
+      "name": "Kitakami Wilds",
+      "kind": "route",
+      "order": 84,
+      "map_node": "kitakami-wilds",
+      "poke_api_location_id": 1066,
+      "bosses_before": []
+    },
+    {
+      "id": "paradise-barrens",
+      "name": "Paradise Barrens",
+      "kind": "route",
+      "order": 85,
+      "map_node": "paradise-barrens",
+      "poke_api_location_id": 1072,
+      "bosses_before": []
+    },
+    {
+      "id": "timeless-woods",
+      "name": "Timeless Woods",
+      "kind": "route",
+      "order": 86,
+      "map_node": "timeless-woods",
+      "poke_api_location_id": 1074,
+      "bosses_before": [
+        "kieran-3",
+        "kieran-4",
+        "kieran-5",
+        "ogerpon-test",
+        "carmine-3"
+      ]
+    },
+    {
+      "id": "blueberry-academy",
+      "name": "Blueberry Academy",
+      "kind": "building",
+      "order": 87,
+      "map_node": "blueberry-academy",
+      "poke_api_location_id": 1082,
+      "bosses_before": []
+    },
+    {
+      "id": "terarium-central",
+      "name": "Central Plaza",
+      "kind": "route",
+      "order": 88,
+      "map_node": "terarium-central",
+      "poke_api_location_id": 1078,
+      "bosses_before": [
+        "lacey-intro"
+      ]
+    },
+    {
+      "id": "savanna-biome",
+      "name": "Savanna Biome",
+      "kind": "route",
+      "order": 89,
+      "map_node": "savanna-biome",
+      "poke_api_location_id": 1085,
+      "bosses_before": [
+        "carmine-4",
+        "crispin",
+        "amarys",
+        "lacey",
+        "drayton",
+        "kieran-champion"
+      ]
+    },
+    {
+      "id": "coastal-biome",
+      "name": "Coastal Biome",
+      "kind": "route",
+      "order": 90,
+      "map_node": "coastal-biome",
+      "poke_api_location_id": 1080,
+      "bosses_before": []
+    },
+    {
+      "id": "canyon-biome",
+      "name": "Canyon Biome",
+      "kind": "route",
+      "order": 91,
+      "map_node": "canyon-biome",
+      "poke_api_location_id": 1076,
+      "bosses_before": []
+    },
+    {
+      "id": "polar-biome",
+      "name": "Polar Biome",
+      "kind": "route",
+      "order": 92,
+      "map_node": "polar-biome",
+      "poke_api_location_id": 1083,
+      "bosses_before": []
+    },
+    {
+      "id": "chargestone-cavern",
+      "name": "Chargestone Cavern",
+      "kind": "dungeon",
+      "order": 93,
+      "map_node": "chargestone-cavern",
+      "poke_api_location_id": 1079,
+      "bosses_before": []
+    },
+    {
+      "id": "torchlit-labyrinth",
+      "name": "Torchlit Labyrinth",
+      "kind": "dungeon",
+      "order": 94,
+      "map_node": "torchlit-labyrinth",
+      "poke_api_location_id": 1087,
+      "bosses_before": []
+    },
+    {
+      "id": "area-zero-underdepths",
+      "name": "Area Zero Underdepths",
+      "kind": "dungeon",
+      "order": 95,
+      "map_node": "area-zero-underdepths",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "underdepths-crystal-cave",
+      "name": "Underdepths Crystal Cave",
+      "kind": "dungeon",
+      "order": 96,
+      "map_node": "area-zero-underdepths",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "kieran-terapagos",
+        "mochi-yukito",
+        "mochi-hideko",
+        "mochi-arven",
+        "mochi-penny",
+        "mochi-nemona",
+        "arven-aat",
+        "jacq-aat",
+        "dendra-aat",
+        "geeta-aat",
+        "ogre-masamune",
+        "ogre-hasebe",
+        "ogre-raikiri",
+        "ogre-kunitsuna",
+        "ogre-kanemitsu",
+        "ogre-munechika",
+        "ogre-kotetsu",
+        "ogre-muramasa"
+      ]
+    }
+  ]
+}

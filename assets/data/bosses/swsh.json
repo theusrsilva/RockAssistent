@@ -1,0 +1,4513 @@
+{
+  "source": [
+    "https://www.serebii.net/swordshield/gyms.shtml",
+    "https://www.serebii.net/swordshield/championcup.shtml",
+    "https://www.serebii.net/swordshield/hop.shtml",
+    "https://www.serebii.net/swordshield/bede.shtml",
+    "https://www.serebii.net/swordshield/marnie.shtml",
+    "https://www.serebii.net/swordshield/macrocosmos.shtml",
+    "https://www.serebii.net/swordshield/sordwardshielbert.shtml",
+    "https://www.serebii.net/swordshield/klaraavery.shtml",
+    "https://www.serebii.net/swordshield/mustard.shtml",
+    "https://www.pokewiki.de/Delion",
+    "https://www.pokewiki.de/Peony",
+    "https://www.pokewiki.de/Sophora",
+    "https://www.pokewiki.de/Saverio",
+    "https://www.pokemythology.net/detonados/detonado-sword-shield/",
+    "https://www.serebii.net/pokedex-swsh/eternatus/locations.shtml",
+    "https://samurai-gamers.com/pokemon-sword-and-shield/dojo-matron-honey-battle-court-guide",
+    "https://www.pokewiki.de/Mastrich"
+  ],
+  "items": [
+    {
+      "id": "hop-1",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Postwick",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 831,
+          "form": 0,
+          "level": 3,
+          "moves": [
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 810,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "scratch",
+            "growl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 3, Sobble 5; com Sobble: Wooloo 3, Scorbunny 5",
+      "versions": null
+    },
+    {
+      "id": "hop-2",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Route 2",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 831,
+          "form": 0,
+          "level": 6,
+          "moves": [
+            "tackle",
+            "growl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 821,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "leer",
+            "peck"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 810,
+          "form": 0,
+          "level": 8,
+          "moves": [
+            "scratch",
+            "growl",
+            "branch-poke"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 8,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 6, Rookidee 5, Sobble 8; com Sobble: Wooloo 6, Rookidee 5, Scorbunny 8",
+      "versions": null
+    },
+    {
+      "id": "hop-3",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Route 3",
+      "order": 3,
+      "badge": null,
+      "party": [
+        {
+          "species": 831,
+          "form": 0,
+          "level": 11,
+          "moves": [
+            "tackle",
+            "growl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 821,
+          "form": 0,
+          "level": 12,
+          "moves": [
+            "peck",
+            "leer"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 810,
+          "form": 0,
+          "level": 14,
+          "moves": [
+            "scratch",
+            "growl",
+            "branch-poke",
+            "taunt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 11, Rookidee 12, Sobble 14; com Sobble: Wooloo 11, Rookidee 12, Scorbunny 14",
+      "versions": null
+    },
+    {
+      "id": "bede-1",
+      "kind": "rival",
+      "name": "Bede",
+      "title": "Rival",
+      "location": "Galar Mine",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 577,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "endeavor",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 574,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "psybeam",
+            "tickle",
+            "pound"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 856,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "confusion",
+            "round",
+            "disarming-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 16,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "milo",
+      "kind": "gym",
+      "name": "Milo",
+      "title": "Gym Leader",
+      "location": "Turffield Stadium",
+      "order": 5,
+      "badge": "Grass Badge",
+      "party": [
+        {
+          "species": 829,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "magical-leaf",
+            "round",
+            "rapid-spin"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 830,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "magical-leaf",
+            "leafage",
+            "round"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "Eldegoss usa Dynamax",
+      "versions": null
+    },
+    {
+      "id": "hop-4",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Route 5",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 831,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "tackle",
+            "growl",
+            "defense-curl",
+            "double-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 822,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "leer",
+            "peck",
+            "fury-attack",
+            "pluck"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 811,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "round",
+            "razor-leaf",
+            "double-hit",
+            "screech"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Wooloo 18, Corvisquire 19, Drizzile 21; com Sobble: Wooloo 18, Corvisquire 19, Raboot 21",
+      "versions": null
+    },
+    {
+      "id": "nessa",
+      "kind": "gym",
+      "name": "Nessa",
+      "title": "Gym Leader",
+      "location": "Hulbury Stadium",
+      "order": 7,
+      "badge": "Water Badge",
+      "party": [
+        {
+          "species": 118,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "water-pulse",
+            "whirlpool",
+            "horn-attack",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 846,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "aqua-jet",
+            "bite",
+            "whirlpool",
+            "fury-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 834,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "razor-shell",
+            "water-gun",
+            "bite",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": "Drednaw usa Dynamax",
+      "versions": null
+    },
+    {
+      "id": "bede-2",
+      "kind": "rival",
+      "name": "Bede",
+      "title": "Rival",
+      "location": "Galar Mine No. 2",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 577,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "psyshock",
+            "psybeam",
+            "endeavor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 574,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "psyshock",
+            "rock-tomb",
+            "psybeam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 77,
+          "form": 1,
+          "level": 22,
+          "moves": [
+            "confusion",
+            "fairy-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 856,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "psybeam",
+            "disarming-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "marnie-1",
+      "kind": "rival",
+      "name": "Marnie",
+      "title": "Rival",
+      "location": "Motostoke",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 453,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "poison-sting",
+            "venoshock",
+            "revenge",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 559,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "beat-up",
+            "headbutt",
+            "low-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 877,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "bite",
+            "quick-attack",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "kabu",
+      "kind": "gym",
+      "name": "Kabu",
+      "title": "Gym Leader",
+      "location": "Motostoke Stadium",
+      "order": 10,
+      "badge": "Fire Badge",
+      "party": [
+        {
+          "species": 38,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "will-o-wisp",
+            "fire-spin",
+            "quick-attack",
+            "ember"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "will-o-wisp",
+            "flame-wheel",
+            "bite",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 851,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "flame-wheel",
+            "coil",
+            "bug-bite",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": "Centiskorch usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "hop-5",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Stow-on-Side",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 845,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "dive",
+            "fury-attack",
+            "pluck"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 848,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "tearful-look",
+            "nuzzle",
+            "flail",
+            "acid"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 843,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "glare",
+            "dig",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 811,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "knock-off",
+            "razor-leaf",
+            "screech",
+            "round"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Cramorant 28, Toxel 29, Silicobra 30, Drizzile 33; com Sobble: Cramorant 29, Toxel 29, Silicobra 30, Raboot 33",
+      "versions": null
+    },
+    {
+      "id": "bea",
+      "kind": "gym",
+      "name": "Bea",
+      "title": "Gym Leader",
+      "location": "Stow-on-Side Stadium",
+      "order": 12,
+      "badge": "Fighting Badge",
+      "party": [
+        {
+          "species": 237,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "triple-kick",
+            "quick-attack",
+            "counter",
+            "revenge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 675,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "bullet-punch",
+            "circle-throw",
+            "night-slash",
+            "work-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 865,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "detect",
+            "swords-dance",
+            "brutal-swing",
+            "revenge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "scary-face",
+            "revenge",
+            "knock-off",
+            "strength"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 36,
+      "verified": true,
+      "notes": "Machamp usa Gigantamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "allister",
+      "kind": "gym",
+      "name": "Allister",
+      "title": "Gym Leader",
+      "location": "Stow-on-Side Stadium",
+      "order": 13,
+      "badge": "Ghost Badge",
+      "party": [
+        {
+          "species": 562,
+          "form": 1,
+          "level": 34,
+          "moves": [
+            "brutal-swing",
+            "hex",
+            "disable"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 778,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "shadow-sneak",
+            "baby-doll-eyes",
+            "hone-claws",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 864,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "ancient-power",
+            "curse",
+            "hex"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "venoshock",
+            "hex",
+            "hypnosis",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 36,
+      "verified": true,
+      "notes": "Gengar usa Gigantamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "bede-3",
+      "kind": "rival",
+      "name": "Bede",
+      "title": "Rival",
+      "location": "Stow-on-Side (mural)",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 578,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "light-screen",
+            "reflect",
+            "psyshock",
+            "psybeam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 575,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "fake-tears",
+            "psybeam",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 77,
+          "form": 1,
+          "level": 33,
+          "moves": [
+            "fairy-wind",
+            "psybeam",
+            "agility"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 857,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "dazzling-gleam",
+            "psybeam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "opal",
+      "kind": "gym",
+      "name": "Opal",
+      "title": "Gym Leader",
+      "location": "Ballonlea Stadium",
+      "order": 15,
+      "badge": "Fairy Badge",
+      "party": [
+        {
+          "species": 110,
+          "form": 1,
+          "level": 36,
+          "moves": [
+            "sludge",
+            "fairy-wind",
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 303,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "draining-kiss",
+            "crunch",
+            "iron-defense",
+            "astonish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "air-slash",
+            "draining-kiss",
+            "ancient-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 869,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "draining-kiss",
+            "acid-armor",
+            "sweet-kiss"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "Alcremie usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "hop-6",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Hammerlocke",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 709,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "horn-leech",
+            "shadow-claw",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 631,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "fire-lash",
+            "bug-bite",
+            "slash",
+            "lick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "body-slam",
+            "stockpile",
+            "heavy-slam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 836,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "spark",
+            "crunch",
+            "roar",
+            "nuzzle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "drum-beating",
+            "knock-off",
+            "slam",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 37,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Inteleon 37; com Sobble: Trevenant 34, Heatmor 34, Snorlax 35, Boltund 35, Cinderace 37",
+      "versions": null
+    },
+    {
+      "id": "gordie",
+      "kind": "gym",
+      "name": "Gordie",
+      "title": "Gym Leader",
+      "location": "Circhester Stadium",
+      "order": 17,
+      "badge": "Rock Badge",
+      "party": [
+        {
+          "species": 689,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "shell-smash",
+            "rock-tomb",
+            "razor-shell"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 213,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "power-split",
+            "stone-edge",
+            "struggle-bug",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 874,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "stealth-rock",
+            "rock-tomb",
+            "body-slam",
+            "wonder-room"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 839,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "tar-shot",
+            "stealth-rock",
+            "heat-crash",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": "Coalossal usa Gigantamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "melony",
+      "kind": "gym",
+      "name": "Melony",
+      "title": "Gym Leader",
+      "location": "Circhester Stadium",
+      "order": 18,
+      "badge": "Ice Badge",
+      "party": [
+        {
+          "species": 873,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "icy-wind",
+            "feather-dance",
+            "bug-buzz",
+            "hail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 2,
+          "level": 40,
+          "moves": [
+            "icicle-crash",
+            "headbutt",
+            "taunt",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 875,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "amnesia",
+            "freeze-dry",
+            "hail",
+            "icy-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "icy-wind",
+            "ice-beam",
+            "surf",
+            "sing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": "Lapras usa Gigantamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "hop-7",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Circhester",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 832,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "double-kick",
+            "take-down",
+            "growl",
+            "defense-curl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "drill-peck",
+            "scary-face",
+            "pluck",
+            "fury-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 871,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "spark",
+            "bubble-beam",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "heavy-slam",
+            "body-slam",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "drum-beating",
+            "double-hit",
+            "brick-break",
+            "knock-off"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Inteleon 41; com Sobble: Dubwool 40, Corviknight 40, Pincurchin 39, Snorlax 39, Cinderace 41",
+      "versions": null
+    },
+    {
+      "id": "marnie-2",
+      "kind": "rival",
+      "name": "Marnie",
+      "title": "Rival",
+      "location": "Route 9 (Spikemuth)",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "fake-out",
+            "torment",
+            "nasty-plot",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "venoshock",
+            "sucker-punch",
+            "swagger",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "brick-break",
+            "scary-face",
+            "crunch",
+            "swagger"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 877,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "quick-attack",
+            "torment",
+            "spark",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 44,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "piers",
+      "kind": "gym",
+      "name": "Piers",
+      "title": "Gym Leader",
+      "location": "Spikemuth",
+      "order": 21,
+      "badge": "Dark Badge",
+      "party": [
+        {
+          "species": 560,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "fake-out",
+            "sand-attack",
+            "brick-break",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "night-slash",
+            "foul-play",
+            "psycho-cut",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 435,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "sucker-punch",
+            "screech",
+            "toxic",
+            "snarl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 862,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "obstruct",
+            "throat-chop",
+            "counter",
+            "shadow-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": "não usa Dynamax",
+      "versions": null
+    },
+    {
+      "id": "raihan",
+      "kind": "gym",
+      "name": "Raihan",
+      "title": "Gym Leader",
+      "location": "Hammerlocke Stadium",
+      "order": 22,
+      "badge": "Dragon Badge",
+      "party": [
+        {
+          "species": 526,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "stealth-rock",
+            "sand-tomb",
+            "rock-blast",
+            "body-press"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "thunder-punch",
+            "breaking-swipe",
+            "crunch",
+            "steel-wing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 844,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "protect",
+            "glare",
+            "fire-fang",
+            "earth-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 884,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "breaking-swipe",
+            "body-press",
+            "stone-edge",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "dupla; Duraludon usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "marnie-cup",
+      "kind": "rival",
+      "name": "Marnie",
+      "title": "Rival",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "fake-out",
+            "torment",
+            "nasty-plot",
+            "snarl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "venoshock",
+            "sucker-punch",
+            "swagger",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "swagger",
+            "scary-face",
+            "brick-break",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 877,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "bullet-seed",
+            "torment",
+            "spark",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 861,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "spirit-break",
+            "darkest-lariat",
+            "bulk-up",
+            "torment"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 49,
+      "verified": true,
+      "notes": "semifinal da Champion Cup; Grimmsnarl usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "hop-cup",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 832,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "cotton-guard",
+            "reversal",
+            "body-slam",
+            "zen-headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "steel-wing",
+            "drill-peck",
+            "scary-face",
+            "swagger"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 871,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "thunderbolt",
+            "poison-jab",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "heavy-slam",
+            "high-horsepower",
+            "hammer-arm"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "drum-beating",
+            "high-horsepower",
+            "snarl",
+            "uproar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 49,
+      "verified": true,
+      "notes": "semifinal da Champion Cup; time para quem escolheu Scorbunny; com Grookey: Dubwool 48, Corviknight 48, Pincurchin 47, Snorlax 47, Cinderace 49; com Sobble: Dubwool 48, Corviknight 48, Pincurchin 47, Snorlax 47, Inteleon 49",
+      "versions": null
+    },
+    {
+      "id": "oleana",
+      "kind": "evil",
+      "name": "Oleana",
+      "title": "Macro Cosmos",
+      "location": "Rose Tower",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 478,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "hex",
+            "icy-wind",
+            "will-o-wisp",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 763,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "trop-kick",
+            "stomp",
+            "attract",
+            "acrobatics"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 758,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "venoshock",
+            "incinerate",
+            "poison-gas",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "surf",
+            "safeguard",
+            "aqua-ring",
+            "recover"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 569,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "gunk-shot",
+            "stomping-tantrum",
+            "rock-blast",
+            "toxic-spikes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": "Garbodor usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "bede-cup",
+      "kind": "rival",
+      "name": "Bede",
+      "title": "Rival",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 303,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "play-rough",
+            "iron-head",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "dazzling-gleam",
+            "psychic",
+            "calm-mind",
+            "wish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 1,
+          "level": 52,
+          "moves": [
+            "psycho-cut",
+            "take-down",
+            "dazzling-gleam",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 858,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "psychic",
+            "dazzling-gleam",
+            "calm-mind",
+            "mystical-fire"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "luta extra antes da final: Bede volta como aprendiz da Opal; Hatterene usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "nessa-cup",
+      "kind": "other",
+      "name": "Nessa",
+      "title": "Champion Cup",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 768,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "first-impression",
+            "liquidation",
+            "swords-dance",
+            "shadow-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 279,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "roost",
+            "air-slash",
+            "water-pulse",
+            "tailwind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 847,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "liquidation",
+            "throat-chop",
+            "ice-fang",
+            "drill-run"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 119,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "smart-strike",
+            "megahorn",
+            "aqua-ring",
+            "waterfall"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 834,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "liquidation",
+            "jaw-lock",
+            "rock-tomb",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "final da Champion Cup, 1ª luta; Drednaw usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "bea-cup",
+      "kind": "other",
+      "name": "Bea",
+      "title": "Champion Cup",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 701,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "flying-press",
+            "high-jump-kick",
+            "bounce"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 853,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "octolock",
+            "submission",
+            "bind",
+            "mega-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 865,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "leaf-blade",
+            "slam",
+            "brick-break",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "no-retreat",
+            "bulk-up",
+            "close-combat",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "cross-chop",
+            "revenge",
+            "fire-punch",
+            "strength"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "final da Champion Cup, 2ª luta; Machamp usa Gigantamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "allister-cup",
+      "kind": "other",
+      "name": "Allister",
+      "title": "Champion Cup",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 477,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "shadow-punch",
+            "thunder-punch",
+            "rock-tomb",
+            "disable"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "shadow-ball",
+            "mystical-fire",
+            "will-o-wisp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 864,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "hex",
+            "strength-sap",
+            "ancient-power",
+            "amnesia"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 855,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "shadow-ball",
+            "protect",
+            "nasty-plot",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "shadow-ball",
+            "sludge-bomb",
+            "dark-pulse",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "final da Champion Cup, 2ª luta; Gengar usa Gigantamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "raihan-cup",
+      "kind": "other",
+      "name": "Raihan",
+      "title": "Champion Cup",
+      "location": "Champion Cup, Wyndon Stadium",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 324,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "lava-plume",
+            "body-press",
+            "solar-beam",
+            "yawn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 706,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "rain-dance",
+            "surf",
+            "thunder",
+            "muddy-water"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 776,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sunny-day",
+            "dragon-pulse",
+            "shell-trap",
+            "fire-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 330,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sandstorm",
+            "dragon-claw",
+            "earthquake",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 884,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "dragon-claw",
+            "body-press",
+            "stone-edge",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "final da Champion Cup, 3ª luta (dupla); Duraludon usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "rose",
+      "kind": "evil",
+      "name": "Rose",
+      "title": "Macro Cosmos",
+      "location": "Energy Plant, Hammerlocke",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 589,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "drill-run",
+            "iron-head",
+            "megahorn",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 598,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "gyro-ball",
+            "power-whip",
+            "body-press",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 863,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "iron-head",
+            "screech",
+            "shadow-claw",
+            "throat-chop"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "gear-grind",
+            "shift-gear",
+            "wild-charge",
+            "assurance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 879,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "heavy-slam",
+            "iron-head",
+            "high-horsepower",
+            "zen-headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "Copperajah usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "eternatus-1",
+      "kind": "other",
+      "name": "Eternatus",
+      "title": "Pokémon",
+      "location": "Energy Plant (topo)",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 890,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "não capturável nesta luta; depois vem a Max Raid do Eternamax Eternatus; nível 60 (Serebii e detonado); golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "leon",
+      "kind": "champion",
+      "name": "Leon",
+      "title": "Champion",
+      "location": "Wyndon Stadium",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 681,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "kings-shield",
+            "shadow-ball",
+            "sacred-sword",
+            "flash-cannon"
+          ],
+          "ability": "stance-change",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 887,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "shadow-ball",
+            "flamethrower",
+            "thunderbolt",
+            "dragon-breath"
+          ],
+          "ability": "clear-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 612,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "poison-jab",
+            "iron-tail",
+            "outrage",
+            "earthquake"
+          ],
+          "ability": "mold-breaker",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 866,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "teeter-dance",
+            "psychic",
+            "freeze-dry",
+            "thunderbolt"
+          ],
+          "ability": "tangled-feet",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 818,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "snipe-shot",
+            "dark-pulse",
+            "mud-shot",
+            "tearful-look"
+          ],
+          "ability": "torrent",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "fire-blast",
+            "air-slash",
+            "solar-beam",
+            "ancient-power"
+          ],
+          "ability": "blaze",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Aegislash 62, Dragapult 62, Haxorus 63, Seismitoad 64, Cinderace 64, Charizard 65; com Sobble: Aegislash 62, Dragapult 62, Haxorus 63, Rhyperior 64, Rillaboom 64, Charizard 65; Charizard usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "hop-postgame-1",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Slumbering Weald",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 832,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "cotton-guard",
+            "double-kick",
+            "double-edge",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "steel-wing",
+            "drill-peck",
+            "scary-face",
+            "brave-bird"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 871,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "zing-zap",
+            "poison-jab",
+            "bubble-beam",
+            "fury-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "hammer-arm",
+            "high-horsepower",
+            "heavy-slam",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 845,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "dive",
+            "drill-peck",
+            "throat-chop",
+            "steel-wing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "drum-beating",
+            "slam",
+            "knock-off",
+            "uproar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "time para quem escolheu Scorbunny; com Grookey: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Inteleon 60; com Sobble: Dubwool 59, Corviknight 59, Pincurchin 58, Snorlax 58, Cramorant 58, Cinderace 60; pós-jogo; Rillaboom usa Dynamax",
+      "versions": null
+    },
+    {
+      "id": "sordward-1",
+      "kind": "evil",
+      "name": "Sordward",
+      "title": "Pokémon Trainer",
+      "location": "Slumbering Weald",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 865,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "leaf-blade",
+            "slam",
+            "meteor-assault",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 768,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "first-impression",
+            "liquidation",
+            "x-scissor",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 680,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "sacred-sword",
+            "iron-head",
+            "night-slash",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "iron-head",
+            "night-slash",
+            "swords-dance",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "depois vêm as Max Raids nos estádios (lv 62): Dynamax Tsareena (Turffield), Gyarados (Hulbury) e Torkoal (Motostoke), com o líder de cada um do seu lado",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "shielbert-1",
+      "kind": "evil",
+      "name": "Shielbert",
+      "title": "Pokémon Trainer",
+      "location": "Slumbering Weald",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 865,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "leaf-blade",
+            "slam",
+            "meteor-assault",
+            "iron-defense"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 437,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "light-screen",
+            "extrasensory",
+            "gyro-ball",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "no-retreat",
+            "first-impression",
+            "close-combat",
+            "megahorn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "gear-grind",
+            "shift-gear",
+            "protect",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "depois vêm as Max Raids nos estádios (lv 62): Dynamax Tsareena (Turffield), Gyarados (Hulbury) e Torkoal (Motostoke), com o líder de cada um do seu lado",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "sordward-2",
+      "kind": "evil",
+      "name": "Sordward",
+      "title": "Pokémon Trainer",
+      "location": "Wedgehurst",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 768,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "first-impression",
+            "liquidation",
+            "x-scissor",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 680,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "sacred-sword",
+            "iron-head",
+            "night-slash",
+            "shadow-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "iron-head",
+            "night-slash",
+            "stone-edge",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado; depois, Max Raids lv 62 em Stow-on-Side (Dynamax Conkeldurr no Sword, Dusknoir no Shield), Circhester (Gigalith no Sword, Froslass no Shield) e Hammerlocke (Haxorus)",
+      "versions": null
+    },
+    {
+      "id": "shielbert-2",
+      "kind": "evil",
+      "name": "Shielbert",
+      "title": "Pokémon Trainer",
+      "location": "Wedgehurst",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 437,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "light-screen",
+            "extrasensory",
+            "gyro-ball",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "no-retreat",
+            "first-impression",
+            "close-combat",
+            "megahorn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "gear-grind",
+            "shift-gear",
+            "protect",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "dupla: Sordward e Shielbert juntos, com o Hop do seu lado; depois, Max Raids lv 62 em Stow-on-Side (Dynamax Conkeldurr no Sword, Dusknoir no Shield), Circhester (Gigalith no Sword, Froslass no Shield) e Hammerlocke (Haxorus)",
+      "versions": null
+    },
+    {
+      "id": "bede-leader",
+      "kind": "other",
+      "name": "Bede",
+      "title": "Gym Leader",
+      "location": "Ballonlea Stadium",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 303,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "play-rough",
+            "fake-tears",
+            "iron-head",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "dazzling-gleam",
+            "psychic",
+            "future-sight",
+            "magical-leaf"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 1,
+          "level": 62,
+          "moves": [
+            "smart-strike",
+            "psycho-cut",
+            "dazzling-gleam",
+            "stomp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 858,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "psychic",
+            "calm-mind",
+            "dazzling-gleam",
+            "mystical-fire"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "pós-jogo: Bede é o novo líder de Ballonlea",
+      "versions": null
+    },
+    {
+      "id": "sordward-3",
+      "kind": "evil",
+      "name": "Sordward",
+      "title": "Pokémon Trainer",
+      "location": "Energy Plant",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 865,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "leaf-blade",
+            "slam",
+            "meteor-assault",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 768,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "first-impression",
+            "liquidation",
+            "x-scissor",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 680,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "sacred-sword",
+            "iron-head",
+            "night-slash",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 625,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "iron-head",
+            "night-slash",
+            "swords-dance",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "shielbert-3",
+      "kind": "evil",
+      "name": "Shielbert",
+      "title": "Pokémon Trainer",
+      "location": "Energy Plant",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 865,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "leaf-blade",
+            "slam",
+            "meteor-assault",
+            "iron-defense"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 437,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "light-screen",
+            "extrasensory",
+            "gyro-ball",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "no-retreat",
+            "first-impression",
+            "close-combat",
+            "megahorn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 601,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "gear-grind",
+            "shift-gear",
+            "protect",
+            "wild-charge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": null,
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "hop-final",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Slumbering Weald",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 832,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "cotton-guard",
+            "double-kick",
+            "double-edge",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "hammer-arm",
+            "earthquake",
+            "heavy-slam",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 871,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "zing-zap",
+            "poison-jab",
+            "liquidation",
+            "recover"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "steel-wing",
+            "drill-peck",
+            "swagger",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "drum-beating",
+            "slam",
+            "knock-off",
+            "high-horsepower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 889,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemoth-bash",
+            "psychic-fangs",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": "rusted-shield",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: a última luta; time para quem escolheu Scorbunny; com Grookey: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zamazenta 70; com Sobble: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zamazenta 70",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "hop-final-shield",
+      "kind": "rival",
+      "name": "Hop",
+      "title": "Rival",
+      "location": "Slumbering Weald",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 832,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "cotton-guard",
+            "double-kick",
+            "double-edge",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "hammer-arm",
+            "earthquake",
+            "heavy-slam",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 871,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "zing-zap",
+            "poison-jab",
+            "liquidation",
+            "recover"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "steel-wing",
+            "drill-peck",
+            "swagger",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 812,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "drum-beating",
+            "slam",
+            "knock-off",
+            "high-horsepower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 888,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "behemoth-blade",
+            "wild-charge",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": "rusted-sword",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: a última luta; time para quem escolheu Scorbunny; com Grookey: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Inteleon 70, Zacian 70; com Sobble: Dubwool 69, Snorlax 68, Pincurchin 68, Corviknight 69, Cinderace 70, Zacian 70",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "marnie-rematch",
+      "kind": "other",
+      "name": "Marnie",
+      "title": "Pokémon Trainer",
+      "location": "Spikemuth",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "fake-out",
+            "torment",
+            "nasty-plot",
+            "snarl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "drain-punch",
+            "gunk-shot",
+            "earthquake",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "ice-punch",
+            "thunder-punch",
+            "drain-punch",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 877,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "aura-wheel",
+            "seed-bomb",
+            "torment",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 861,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "spirit-break",
+            "darkest-lariat",
+            "bulk-up",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia",
+      "versions": null
+    },
+    {
+      "id": "morimoto",
+      "kind": "other",
+      "name": "Morimoto",
+      "title": "Game Freak",
+      "location": "Hotel Ionia, Circhester",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 864,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "disable",
+            "strength-sap",
+            "shadow-ball",
+            "mirror-coat"
+          ],
+          "ability": "perish-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 853,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "octolock",
+            "detect",
+            "dig",
+            "body-slam"
+          ],
+          "ability": "limber",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 874,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "stealth-rock",
+            "stone-edge",
+            "heavy-slam",
+            "rest"
+          ],
+          "ability": "power-spot",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 887,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "dragon-darts",
+            "thunder-wave",
+            "shadow-ball",
+            "protect"
+          ],
+          "ability": "clear-body",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 839,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "tar-shot",
+            "body-press",
+            "flare-blitz",
+            "stone-edge"
+          ],
+          "ability": "flash-fire",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "high-horsepower",
+            "superpower",
+            "giga-impact",
+            "gunk-shot"
+          ],
+          "ability": "immunity",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "pós-jogo, uma vez por dia (dupla)",
+      "versions": null
+    },
+    {
+      "id": "klara-1",
+      "kind": "rival",
+      "name": "Klara",
+      "title": "Rival",
+      "location": "Armor Station",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 543,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "poison-tail"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 79,
+          "form": 1,
+          "level": 60,
+          "moves": [
+            "confusion",
+            "acid"
+          ],
+          "ability": "gluttony",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Venipede 10, Slowpoke 12",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "avery-1",
+      "kind": "rival",
+      "name": "Avery",
+      "title": "Rival",
+      "location": "Armor Station",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 63,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "confusion"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 79,
+          "form": 1,
+          "level": 60,
+          "moves": [
+            "confusion",
+            "acid"
+          ],
+          "ability": "gluttony",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Abra 10, Slowpoke 12",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "mustard-1",
+      "kind": "other",
+      "name": "Mustard",
+      "title": "Dojo Master",
+      "location": "Master Dojo",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 619,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "fake-out",
+            "u-turn",
+            "force-palm"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 403,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "bite",
+            "spark"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 61,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Mienfoo 13, Shinx 13",
+      "versions": null
+    },
+    {
+      "id": "klara-2",
+      "kind": "rival",
+      "name": "Klara",
+      "title": "Rival",
+      "location": "Warm-Up Tunnel",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 79,
+          "form": 1,
+          "level": 62,
+          "moves": [
+            "acid",
+            "confusion"
+          ],
+          "ability": "gluttony",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "clear-smog",
+            "assurance"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 544,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "poison-tail",
+            "bug-bite"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Slowpoke 18, Koffing 18, Whirlipede 19",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "avery-2",
+      "kind": "rival",
+      "name": "Avery",
+      "title": "Rival",
+      "location": "Warm-Up Tunnel",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 79,
+          "form": 1,
+          "level": 62,
+          "moves": [
+            "acid",
+            "confusion"
+          ],
+          "ability": "gluttony",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 527,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "confusion",
+            "air-cutter"
+          ],
+          "ability": "unaware",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "psybeam",
+            "swift"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Slowpoke 18, Woobat 18, Kadabra 19",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "klara-3",
+      "kind": "rival",
+      "name": "Klara",
+      "title": "Rival",
+      "location": "Master Dojo",
+      "order": 51,
+      "badge": null,
+      "party": [
+        {
+          "species": 451,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "bite",
+            "poison-fang"
+          ],
+          "ability": "battle-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 1,
+          "level": 66,
+          "moves": [
+            "clear-smog",
+            "assurance"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 544,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "poison-tail",
+            "bug-bite"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 2,
+          "level": 67,
+          "moves": [
+            "water-pulse",
+            "shell-side-arm",
+            "confusion"
+          ],
+          "ability": "quick-draw",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Skorupi 23, Weezing 24, Whirlipede 24, Slowbro 25; Slowbro usa Dynamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "avery-3",
+      "kind": "rival",
+      "name": "Avery",
+      "title": "Rival",
+      "location": "Master Dojo",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 77,
+          "form": 1,
+          "level": 65,
+          "moves": [
+            "psybeam",
+            "fairy-wind"
+          ],
+          "ability": "run-away",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "confusion",
+            "air-cutter"
+          ],
+          "ability": "unaware",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "psybeam",
+            "swift"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 2,
+          "level": 67,
+          "moves": [
+            "water-pulse",
+            "shell-side-arm",
+            "confusion"
+          ],
+          "ability": "quick-draw",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Ponyta 23, Swoobat 24, Kadabra 24, Slowbro 25; Slowbro usa Dynamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "mustard-tower",
+      "kind": "other",
+      "name": "Mustard",
+      "title": "Dojo Master",
+      "location": "Tower of Darkness / Tower of Waters",
+      "order": 53,
+      "badge": null,
+      "party": [
+        {
+          "species": 891,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "aerial-ace",
+            "focus-energy",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "só o Kubfu, no topo da torre; Isle of Armor; com a DLC antes da Champion Cup, o time é mais fraco: Kubfu 30",
+      "versions": null
+    },
+    {
+      "id": "mustard-final",
+      "kind": "other",
+      "name": "Mustard",
+      "title": "Dojo Master",
+      "location": "Master Dojo",
+      "order": 54,
+      "badge": null,
+      "party": [
+        {
+          "species": 620,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "fake-out",
+            "u-turn",
+            "blaze-kick",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 405,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "psychic-fangs",
+            "wild-charge",
+            "crunch",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 745,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "accelerock",
+            "stealth-rock",
+            "stone-edge",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "iron-head",
+            "brave-bird",
+            "body-press",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 784,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "clanging-scales",
+            "aura-sphere",
+            "flash-cannon",
+            "clangorous-soul"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 892,
+          "form": 1,
+          "level": 75,
+          "moves": [
+            "surging-strikes",
+            "close-combat",
+            "poison-jab",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "o Urshifu dele é o oposto do seu: Rapid Strike se você subiu a Tower of Darkness (Single Strike com a Tower of Waters); depois, uma vez por dia; Urshifu usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "klara-rematch",
+      "kind": "other",
+      "name": "Klara",
+      "title": "Pokémon Trainer",
+      "location": "Master Dojo",
+      "order": 55,
+      "badge": null,
+      "party": [
+        {
+          "species": 452,
+          "form": 0,
+          "level": 65,
+          "moves": [
+            "x-scissor",
+            "poison-fang",
+            "crunch",
+            "ice-fang"
+          ],
+          "ability": "battle-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 1,
+          "level": 66,
+          "moves": [
+            "toxic",
+            "heat-wave",
+            "protect",
+            "strange-steam"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 545,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "smart-strike",
+            "poison-jab",
+            "megahorn",
+            "protect"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 2,
+          "level": 67,
+          "moves": [
+            "scald",
+            "shell-side-arm",
+            "focus-blast",
+            "psychic"
+          ],
+          "ability": "quick-draw",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo da Isle of Armor, uma vez por dia; Slowbro usa Dynamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "avery-rematch",
+      "kind": "other",
+      "name": "Avery",
+      "title": "Pokémon Trainer",
+      "location": "Master Dojo",
+      "order": 56,
+      "badge": null,
+      "party": [
+        {
+          "species": 78,
+          "form": 1,
+          "level": 65,
+          "moves": [
+            "psychic",
+            "mystical-fire",
+            "quick-attack",
+            "dazzling-gleam"
+          ],
+          "ability": "run-away",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "psychic",
+            "air-slash",
+            "energy-ball",
+            "future-sight"
+          ],
+          "ability": "unaware",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 66,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "tri-attack",
+            "reflect"
+          ],
+          "ability": "synchronize",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 2,
+          "level": 67,
+          "moves": [
+            "scald",
+            "shell-side-arm",
+            "focus-blast",
+            "psychic"
+          ],
+          "ability": "quick-draw",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 67,
+      "verified": true,
+      "notes": "pós-jogo da Isle of Armor, uma vez por dia; Slowbro usa Dynamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "honey-1",
+      "kind": "other",
+      "name": "Honey",
+      "title": "Master Dojo",
+      "location": "Battle Court, Master Dojo",
+      "order": 57,
+      "badge": null,
+      "party": [
+        {
+          "species": 242,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 2,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 758,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "Isle of Armor: depois do 1.000.000 de watts; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); níveis conferidos na samurai-gamers; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "honey-rematch",
+      "kind": "other",
+      "name": "Honey",
+      "title": "Master Dojo",
+      "location": "Battle Court, Master Dojo",
+      "order": 58,
+      "badge": null,
+      "party": [
+        {
+          "species": 242,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 555,
+          "form": 2,
+          "level": 73,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 74,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 758,
+          "form": 0,
+          "level": 73,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 468,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 75,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "Isle of Armor: revanche uma vez por dia; o último é o Gigantamax Venusaur se você escolheu o Squirtle (Blastoise com o Bulbasaur); níveis conferidos na samurai-gamers; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "peony-1",
+      "kind": "other",
+      "name": "Peony",
+      "title": "Pokémon Trainer",
+      "location": "Crown Tundra Station",
+      "order": 59,
+      "badge": null,
+      "party": [
+        {
+          "species": 879,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "heavy-slam",
+            "play-rough",
+            "high-horsepower",
+            "superpower"
+          ],
+          "ability": "sheer-force",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "iron-head",
+            "stone-edge",
+            "body-press"
+          ],
+          "ability": "sturdy",
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "Crown Tundra",
+      "versions": null
+    },
+    {
+      "id": "peony-rematch",
+      "kind": "other",
+      "name": "Peony",
+      "title": "Pokémon Trainer",
+      "location": "Max Lair",
+      "order": 60,
+      "badge": null,
+      "party": [
+        {
+          "species": 863,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "u-turn",
+            "iron-head",
+            "seed-bomb",
+            "throat-chop"
+          ],
+          "ability": "steely-spirit",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "bullet-punch",
+            "x-scissor",
+            "wing-attack",
+            "double-hit"
+          ],
+          "ability": "technician",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 437,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "flash-cannon",
+            "extrasensory",
+            "shadow-ball",
+            "calm-mind"
+          ],
+          "ability": "heatproof",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "crunch",
+            "iron-head",
+            "stone-edge",
+            "body-press"
+          ],
+          "ability": "sturdy",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 879,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "heavy-slam",
+            "play-rough",
+            "high-horsepower",
+            "superpower"
+          ],
+          "ability": "sheer-force",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "Crown Tundra: uma vez por dia, depois das 3 Legendary Clues; o detonado dá Scizor 74 e Bronzong 74",
+      "versions": null
+    },
+    {
+      "id": "marnie-final",
+      "kind": "other",
+      "name": "Marnie",
+      "title": "Gym Leader",
+      "location": "Spikemuth",
+      "order": 61,
+      "badge": null,
+      "party": [
+        {
+          "species": 510,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "fake-out",
+            "torment",
+            "nasty-plot",
+            "snarl"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "drain-punch",
+            "gunk-shot",
+            "earthquake",
+            "poison-jab"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "ice-punch",
+            "thunder-punch",
+            "drain-punch",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 877,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "aura-wheel",
+            "seed-bomb",
+            "torment",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 861,
+          "form": 0,
+          "level": 74,
+          "moves": [
+            "spirit-break",
+            "darkest-lariat",
+            "bulk-up",
+            "play-rough"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 74,
+      "verified": true,
+      "notes": "depois do Galarian Star Tournament (Crown Tundra), uma vez por dia; Grimmsnarl usa Gigantamax",
+      "versions": null
+    },
+    {
+      "id": "klara-final",
+      "kind": "other",
+      "name": "Klara",
+      "title": "Gym Leader",
+      "location": "Master Dojo",
+      "order": 62,
+      "badge": null,
+      "party": [
+        {
+          "species": 199,
+          "form": 1,
+          "level": 68,
+          "moves": [
+            "scald",
+            "eerie-spell",
+            "power-gem",
+            "blizzard"
+          ],
+          "ability": "curious-medicine",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 1,
+          "level": 68,
+          "moves": [
+            "toxic",
+            "heat-wave",
+            "protect",
+            "strange-steam"
+          ],
+          "ability": "levitate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 452,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "x-scissor",
+            "poison-fang",
+            "crunch",
+            "ice-fang"
+          ],
+          "ability": "battle-armor",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 545,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "smart-strike",
+            "poison-jab",
+            "megahorn",
+            "protect"
+          ],
+          "ability": "poison-point",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 2,
+          "level": 70,
+          "moves": [
+            "scald",
+            "shell-side-arm",
+            "focus-blast",
+            "psychic"
+          ],
+          "ability": "quick-draw",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "depois do Galarian Star Tournament; Slowbro usa Dynamax",
+      "versions": [
+        "sword"
+      ]
+    },
+    {
+      "id": "avery-final",
+      "kind": "other",
+      "name": "Avery",
+      "title": "Gym Leader",
+      "location": "Master Dojo",
+      "order": 63,
+      "badge": null,
+      "party": [
+        {
+          "species": 80,
+          "form": 2,
+          "level": 68,
+          "moves": [
+            "scald",
+            "shell-side-arm",
+            "focus-blast",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 528,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "psychic",
+            "air-slash",
+            "energy-ball",
+            "future-sight"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 1,
+          "level": 68,
+          "moves": [
+            "psychic",
+            "mystical-fire",
+            "quick-attack",
+            "dazzling-gleam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "tri-attack",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 199,
+          "form": 1,
+          "level": 70,
+          "moves": [
+            "scald",
+            "eerie-spell",
+            "power-gem",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "depois do Galarian Star Tournament; Slowking usa Dynamax",
+      "versions": [
+        "shield"
+      ]
+    },
+    {
+      "id": "mustard-ultimate",
+      "kind": "other",
+      "name": "Mustard",
+      "title": "Dojo Master",
+      "location": "Master Dojo",
+      "order": 64,
+      "badge": null,
+      "party": [
+        {
+          "species": 620,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "fake-out",
+            "u-turn",
+            "blaze-kick",
+            "close-combat"
+          ],
+          "ability": "inner-focus",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 405,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "psychic-fangs",
+            "wild-charge",
+            "crunch",
+            "play-rough"
+          ],
+          "ability": "intimidate",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 745,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "accelerock",
+            "stealth-rock",
+            "stone-edge",
+            "play-rough"
+          ],
+          "ability": "keen-eye",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 823,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "iron-head",
+            "brave-bird",
+            "body-press",
+            "light-screen"
+          ],
+          "ability": "unnerve",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 784,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "clanging-scales",
+            "aura-sphere",
+            "flash-cannon",
+            "clangorous-soul"
+          ],
+          "ability": "soundproof",
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 892,
+          "form": 1,
+          "level": 80,
+          "moves": [
+            "surging-strikes",
+            "close-combat",
+            "poison-jab",
+            "iron-head"
+          ],
+          "ability": "unseen-fist",
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 80,
+      "verified": true,
+      "notes": "depois do Galarian Star Tournament, uma vez por dia; o Urshifu dele é o oposto do seu (Rapid Strike se você subiu a Tower of Darkness; com a Tower of Waters, Single Strike com wicked-blow no lugar de surging-strikes); Urshifu usa Gigantamax",
+      "versions": null
+    }
+  ]
+}

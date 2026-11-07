@@ -1,0 +1,85 @@
+:::bosses e
+
+## Tips
+
+- **May** (Rival, Route 103): Rival's starter Lv. 5, strong against yours. Use your stat move first and heal with Potion.
+- **Roxanne** (Gym Leader, Rustboro Gym): Two Geodude 12 and Nosepass 15 (Rock Tomb). Mudkip/Treecko win easily; Torchic needs Fighting.
+- **May** (Rival, Rustboro City): On the way out of Rustboro. Starter Lv. 15 plus one Lv. 13 partner.
+- **Brawly** (Gym Leader, Dewford Gym): Machop, Meditite and Makuhita 19: Flying or Psychic.
+- **May** (Rival, Route 110): Evolved starter Lv. 20 with 2 partners: cover their types.
+- **Wally** (Pokémon Trainer, Mauville City): Just a Ralts 16.
+- **Wattson** (Gym Leader, Mauville Gym): Voltorb, Electrike, Magneton and Manectric 24: Ground.
+- **Tabitha** (Team Magma Admin, Mt. Chimney): Numel, Poochyena and Zubat up to Lv. 22: Water/Electric.
+- **Maxie** (Team Magma Leader, Mt. Chimney): Camerupt 25 is 4× weak to Water.
+- **Flannery** (Gym Leader, Lavaridge Gym): Numel, Slugma, Camerupt and Torkoal 29: Water.
+- **Norman** (Gym Leader, Petalburg Gym): Spinda, Vigoroth, Linoone and Slaking 31 (Truant): Fighting.
+- **Shelly** (Team Aqua Admin, Weather Institute 2F, Route 119): Carvanha and Mightyena 28: Electric and Fighting.
+- **May** (Rival, Route 119): Evolved starter Lv. 31 plus 2 support Pokémon.
+- **Winona** (Gym Leader, Fortree Gym): Swablu, Tropius, Pelipper, Skarmory and Altaria 33: Ice, Electric and Rock.
+- **May** (Rival, Lilycove City): Last rival battle: final-stage starter Lv. 34 and 3 partners.
+- **Tabitha** (Team Magma Admin, Magma Hideout, Jagged Pass): Camerupt 33 and Mightyena: Water.
+- **Maxie** (Team Magma Leader, Magma Hideout, Jagged Pass): Mightyena, Crobat and Camerupt 39: Water and Electric/Psychic.
+- **Matt** (Team Aqua Admin, Aqua Hideout, Lilycove City): Mightyena and Golbat 34: Electric and Fighting.
+- **Tate & Liza** (Gym Leader, Mossdeep Gym): Claydol, Xatu, Lunatone and Solrock 42 in doubles: Water, Dark and Ghost.
+- **Maxie** (Team Magma Leader, Mossdeep Space Center): Camerupt 44: Water; Steven's Metang helps.
+- **Tabitha** (Team Magma Admin, Mossdeep Space Center): Camerupt, Mightyena and Golbat up to Lv. 40.
+- **Shelly** (Team Aqua Admin, Seafloor Cavern): Sharpedo and Mightyena 37: Electric/Fighting.
+- **Archie** (Team Aqua Leader, Seafloor Cavern): Mightyena, Crobat and Sharpedo 43: Electric.
+- **Juan** (Gym Leader, Sootopolis Gym): Kingdra 46 is only weak to Dragon; the rest are Water: Electric and Grass.
+- **Wally** (Pokémon Trainer, Victory Road): Gardevoir 45 and Magneton: carry Fire/Ground and Steel/Poison.
+- **Sidney** (Elite Four, Pokémon League): Dark: Fighting and Bug.
+- **Phoebe** (Elite Four, Pokémon League): Ghost: Dark and Ghost.
+- **Glacia** (Elite Four, Pokémon League): Ice: Fire, Fighting, Electric (Walrein).
+- **Drake** (Elite Four, Pokémon League): Dragon: Ice is 4× on Flygon, Altaria and Salamence; Kingdra only falls to Dragon.
+- **Wallace** (Champion, Pokémon League): Water: Electric and Grass. Gyarados and Ludicolo blunt those: bring Rock and Fire/Flying.
+- **Steven** (Pokémon Trainer, Meteor Falls (inner room)): Postgame, Meteor Falls inner room (Waterfall). Metagross 78: Fire and Ground.
+- **Roxanne** (Gym Leader, Rustboro Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Brawly** (Gym Leader, Dewford Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Wattson** (Gym Leader, Mauville Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Flannery** (Gym Leader, Lavaridge Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Norman** (Gym Leader, Petalburg Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Winona** (Gym Leader, Fortree Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Tate & Liza** (Gym Leader, Mossdeep Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Juan** (Gym Leader, Sootopolis Gym): Rematch #1 via Match Call (postgame), double battle.
+- **Roxanne** (Gym Leader, Rustboro Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Brawly** (Gym Leader, Dewford Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Wattson** (Gym Leader, Mauville Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Flannery** (Gym Leader, Lavaridge Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Norman** (Gym Leader, Petalburg Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Winona** (Gym Leader, Fortree Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Tate & Liza** (Gym Leader, Mossdeep Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Juan** (Gym Leader, Sootopolis Gym): Rematch #2 via Match Call (postgame), double battle.
+- **Roxanne** (Gym Leader, Rustboro Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Brawly** (Gym Leader, Dewford Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Wattson** (Gym Leader, Mauville Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Flannery** (Gym Leader, Lavaridge Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Norman** (Gym Leader, Petalburg Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Winona** (Gym Leader, Fortree Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Tate & Liza** (Gym Leader, Mossdeep Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Juan** (Gym Leader, Sootopolis Gym): Rematch #3 via Match Call (postgame), double battle.
+- **Roxanne** (Gym Leader, Rustboro Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Brawly** (Gym Leader, Dewford Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Wattson** (Gym Leader, Mauville Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Flannery** (Gym Leader, Lavaridge Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Norman** (Gym Leader, Petalburg Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Winona** (Gym Leader, Fortree Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Tate & Liza** (Gym Leader, Mossdeep Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Juan** (Gym Leader, Sootopolis Gym): Rematch #4 via Match Call (postgame), double battle.
+- **Wally** (Pokémon Trainer, Victory Road): Victory Road rematch (postgame): same team, Lv. 48.
+- **Wally** (Pokémon Trainer, Victory Road): Victory Road rematch (postgame): same team, Lv. 51.
+- **Wally** (Pokémon Trainer, Victory Road): Victory Road rematch (postgame): same team, Lv. 54.
+- **Wally** (Pokémon Trainer, Victory Road): Victory Road rematch (postgame): same team, Lv. 57.
+- **Anabel** (Salon Maiden, Battle Tower, Battle Frontier): Battle Tower. Alakazam, Entei and Snorlax: Dark and Fighting.
+- **Anabel** (Salon Maiden, Battle Tower, Battle Frontier): Raikou, Latios and Snorlax: Ground for Raikou, Ice/Dragon for Latios.
+- **Tucker** (Dome Ace, Battle Dome, Battle Frontier): Battle Dome. Swampert, Salamence and Charizard: Grass and Ice.
+- **Tucker** (Dome Ace, Battle Dome, Battle Frontier): Swampert, Metagross and Latias.
+- **Spenser** (Palace Maven, Battle Palace, Battle Frontier): Battle Palace (Nature decides). Crobat, Slaking and Lapras.
+- **Spenser** (Palace Maven, Battle Palace, Battle Frontier): Arcanine, Slaking and Suicune.
+- **Greta** (Arena Tycoon, Battle Arena, Battle Frontier): Battle Arena (3 turns). Heracross, Umbreon and Shedinja: bring Fire/Rock/Ghost for Shedinja.
+- **Greta** (Arena Tycoon, Battle Arena, Battle Frontier): Umbreon, Gengar and Breloom.
+- **Lucy** (Pike Queen, Battle Pike, Battle Frontier): Battle Pike. Seviper, Shuckle and Milotic.
+- **Lucy** (Pike Queen, Battle Pike, Battle Frontier): Seviper, Steelix and Gyarados.
+- **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Battle Pyramid. The 3 Regis: Fighting, Fire and Water.
+- **Brandon** (Pyramid King, Battle Pyramid, Battle Frontier): Articuno, Zapdos and Moltres: Rock and Electric.
+
+<!-- fontes: assets/data/areas/e.json, bosses/e.json, dex.sqlite (encontros); docs/superpowers/sources/e-pokemythology-notes.md; pokemondb.net (TMs), poketools.com (trocas, presentes, estáticos), altissimo1.github.io (ausentes, Battle Tents e Frontier Brains), pret/pokeemerald (data/text/battle_tent.inc) -->

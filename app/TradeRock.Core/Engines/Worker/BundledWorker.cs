@@ -136,7 +136,7 @@ public sealed class BundledWorker(IPrivilegedShell shell, string? payloadDir, st
     public async Task InstallAsync(CancellationToken ct)
     {
         if (payloadDir is null)
-            throw new WorkerException("worker_not_bundled", "Esta versão do TradeRock não traz o componente de rede para instalar.");
+            throw new WorkerException("worker_not_bundled", "Esta versão do RockAssistent não traz o componente de rede para instalar.");
         var target = WorkerLocator.AppImage;
         var (code, error) = await shell.RunAsync(Script, ["install", R(target.Prefix), R(target.Policy)],
             stream => TarFile.CreateFromDirectoryAsync(payloadDir, stream, includeBaseDirectory: false, ct), ct);

@@ -1,14 +1,14 @@
 The game's local wireless is **encrypted**. The **prod.keys** file holds the Switch keys needed to
-understand that conversation. Without it, TradeRock can't talk to your console.
+understand that conversation. Without it, RockAssistent can't talk to your console.
 
 **How to get it:** dump it from **your own** Switch with **Lockpick_RCM**, on a hackable Switch 1
 (vulnerable models or with a modchip). The **Switch 2 can't** have its keys dumped.
 
 > ⚠ **Important:** the keys are Nintendo's protected material. Use **only** keys dumped from your
 > own console. **Don't download** them and **don't share** the file: part of the keys is unique to
-> your console. TradeRock never downloads keys or points to sources.
+> your console. RockAssistent never downloads keys or points to sources.
 
-**What TradeRock does with the file:** stores it in a folder only you can read (mode 600), uses it
+**What RockAssistent does with the file:** stores it in a folder only you can read (mode 600), uses it
 only to talk to the Switch, and **never** shows the values, logs them, sends them over the network,
 or puts them in backups, exports or reports.
 
@@ -17,7 +17,7 @@ or puts them in backups, exports or reports.
 Here we only check the **format**: that the file is readable and has the keys the LDN library uses
 (`aes_kek_generation_source`, `aes_key_generation_source` and `master_key_00` or `master_key_12`).
 That **doesn't prove** the values are right. The proof comes in the **Switch test** (last item of the list): if
-TradeRock can decrypt your game's room, the keys are right.
+RockAssistent can decrypt your game's room, the keys are right.
 
 </details>
 

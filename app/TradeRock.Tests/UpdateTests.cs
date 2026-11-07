@@ -30,8 +30,8 @@ public class AppVersionTests
     [Fact]
     public void Arquivo_de_cada_instalacao_e_hash()
     {
-        Assert.Equal("TradeRock-Setup-01.00.01.exe", AppVersions.AssetName(InstallKind.WindowsInstaller, "01.00.01"));
-        Assert.Equal("TradeRock-01.00.01-x86_64.AppImage", AppVersions.AssetName(InstallKind.AppImage, "01.00.01"));
+        Assert.Equal("RockAssistent-Setup-01.00.01.exe", AppVersions.AssetName(InstallKind.WindowsInstaller, "01.00.01"));
+        Assert.Equal("RockAssistent-01.00.01-x86_64.AppImage", AppVersions.AssetName(InstallKind.AppImage, "01.00.01"));
         Assert.Equal("traderock_01.00.01_amd64.deb", AppVersions.AssetName(InstallKind.Deb, "01.00.01"));
         Assert.Null(AppVersions.AssetName(InstallKind.None, "01.00.01"));
 
@@ -39,6 +39,43 @@ public class AppVersionTests
         var sums = $"{new string('b', 64)}  outro.exe\n{hash}  TradeRock-Setup-01.00.01.exe\n";
         Assert.Equal(hash, AppVersions.HashOf(sums, "TradeRock-Setup-01.00.01.exe"));
         Assert.Null(AppVersions.HashOf(sums, "TradeRock-Setup-9.exe"));
+    }
+
+    [Theory]
+    [InlineData(InstallKind.WindowsInstaller, "RockAssistent-Setup-1.2.3.exe", "TradeRock-Setup-1.2.3.exe")]
+    [InlineData(InstallKind.AppImage, "RockAssistent-1.2.3-x86_64.AppImage", "TradeRock-1.2.3-x86_64.AppImage")]
+    [InlineData(InstallKind.Deb, "traderock_1.2.3_amd64.deb", "traderock_1.2.3_amd64.deb")]
+    public void Arquivo_do_release_com_o_nome_novo_ou_o_antigo(InstallKind kind, string novo, string antigo)
+    {
+        static ReleaseAsset A(string name) => new(name, UpdateFixture.Download("v1.2.3", name), 3);
+        ReleaseAsset[] novos = [A("SHA256SUMS"), A("RockAssistent-Setup-1.2.3.exe"), A("traderock_1.2.3_amd64.deb"), A("RockAssistent-1.2.3-x86_64.AppImage")];
+        ReleaseAsset[] antigos = [A("SHA256SUMS"), A("TradeRock-Setup-1.2.3.exe"), A("traderock_1.2.3_amd64.deb"), A("TradeRock-1.2.3-x86_64.AppImage")];
+
+        Assert.Equal(novo, AppVersions.PickAsset(kind, "1.2.3", novos)?.Name);
+        Assert.Equal(antigo, AppVersions.PickAsset(kind, "1.2.3", antigos)?.Name);
+        Assert.Null(AppVersions.PickAsset(kind, "1.2.4", novos));
+        Assert.Null(AppVersions.PickAsset(InstallKind.None, "1.2.3", novos));
+    }
+
+    [Fact]
+    public void Release_da_transicao_tem_os_dois_nomes()
+    {
+        // Release da transição de nome (TradeRock → RockAssistent): cada arquivo com o nome novo e o antigo, os dois no
+        // SHA256SUMS. A versão nova escolhe o novo; a antiga (que só conhece TradeRock-*) acha o seu e o hash dele.
+        static ReleaseAsset A(string name) => new(name, UpdateFixture.Download("v1.2.3", name), 3);
+        string[] names = ["SHA256SUMS", "traderock_1.2.3_amd64.deb", "RockAssistent-Setup-1.2.3.exe", "RockAssistent-1.2.3-x86_64.AppImage",
+            "TradeRock-Setup-1.2.3.exe", "TradeRock-1.2.3-x86_64.AppImage"];
+        var assets = names.Select(A).ToList();
+        var exe = new string('c', 64);
+        var app = new string('d', 64);
+        var sums = $"{new string('e', 64)}  traderock_1.2.3_amd64.deb\n{app}  RockAssistent-1.2.3-x86_64.AppImage\n"
+            + $"{exe}  RockAssistent-Setup-1.2.3.exe\n{exe}  TradeRock-Setup-1.2.3.exe\n{app}  TradeRock-1.2.3-x86_64.AppImage\n";
+
+        Assert.Equal("RockAssistent-Setup-1.2.3.exe", AppVersions.PickAsset(InstallKind.WindowsInstaller, "1.2.3", assets)?.Name);
+        Assert.Equal("RockAssistent-1.2.3-x86_64.AppImage", AppVersions.PickAsset(InstallKind.AppImage, "1.2.3", assets)?.Name);
+        Assert.Equal(exe, AppVersions.HashOf(sums, "TradeRock-Setup-1.2.3.exe"));
+        Assert.Equal(app, AppVersions.HashOf(sums, "TradeRock-1.2.3-x86_64.AppImage"));
+        Assert.Equal(exe, AppVersions.HashOf(sums, "RockAssistent-Setup-1.2.3.exe"));
     }
 
     [Fact]
@@ -87,7 +124,7 @@ internal sealed class FakeGitHub : HttpMessageHandler
         var url = request.RequestUri!.ToString();
         lock (Requests)
             Requests.Add(url);
-        Assert.Contains("TradeRock", request.Headers.UserAgent.ToString());
+        Assert.Contains("RockAssistent", request.Headers.UserAgent.ToString());
         var (status, body) = Routes.TryGetValue(url, out var r) ? r : (HttpStatusCode.NotFound, []);
         return Task.FromResult(new HttpResponseMessage(status) { Content = new ByteArrayContent(body) });
     }

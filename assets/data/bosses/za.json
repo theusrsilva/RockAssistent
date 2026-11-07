@@ -1,0 +1,4780 @@
+{
+  "source": [
+    "https://www.serebii.net/legendsz-a/mainmissions.shtml",
+    "https://www.serebii.net/legendsz-a/z-aroyale.shtml",
+    "https://www.pokewiki.de/Alton",
+    "https://www.pokewiki.de/Zita",
+    "https://www.pokewiki.de/Kaylen",
+    "https://www.pokewiki.de/Duro",
+    "https://www.pokewiki.de/Matière",
+    "https://www.pokewiki.de/Cosette",
+    "https://www.pokewiki.de/Anouk",
+    "https://www.pokewiki.de/Asami",
+    "https://www.pokemythology.net/detonados/detonado-legends-z-a/",
+    "https://gmtreks.com/pokemon-z-a/main-missions/10",
+    "https://gmtreks.com/pokemon-z-a/main-missions/18",
+    "https://gmtreks.com/pokemon-z-a/main-missions/19",
+    "https://gmtreks.com/pokemon-z-a/main-missions/28",
+    "https://gmtreks.com/pokemon-z-a/main-missions/29",
+    "https://gmtreks.com/pokemon-z-a/main-missions/30",
+    "https://gmtreks.com/pokemon-z-a/main-missions/33",
+    "https://gmtreks.com/pokemon-z-a/main-missions/37",
+    "https://gmtreks.com/pokemon-z-a/main-missions/38",
+    "https://gmtreks.com/pokemon-z-a/main-missions/40",
+    "https://www.sportskeeda.com/pokemon/how-defeat-rogue-mega-tyranitar-pokemon-legends-z-a",
+    "https://www.sportskeeda.com/pokemon/how-defeat-rogue-mega-starmie-pokemon-legends-z-a",
+    "https://deltiasgaming.com/?p=373754",
+    "https://serebii.net/pokearth/lumiosecity/quasarticoinc..shtml",
+    "https://serebii.net/legendsz-a/mainmissions/reachingrankx.shtml",
+    "https://www.serebii.net/legendsz-a/mainmissions/reachingrankd.shtml",
+    "https://www.pokewiki.de/Gwynn"
+  ],
+  "items": [
+    {
+      "id": "andi-1",
+      "kind": "other",
+      "name": "Andi",
+      "title": "Pokémon Trainer",
+      "location": "Lumiose City",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 674,
+          "form": 0,
+          "level": 4,
+          "moves": [
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 4,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "taunie-1",
+      "kind": "rival",
+      "name": "Taunie",
+      "title": "Team MZ",
+      "location": "Hotel Z",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 152,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "tail-whip"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 158,
+          "form": 0,
+          "level": 5,
+          "moves": [
+            "tackle",
+            "leer"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); ficam com os dois iniciais que você não escolheu; time para quem escolheu Tepig; com Chikorita: Totodile 5, Tepig 5; com Totodile: Tepig 5, Chikorita 5",
+      "versions": null
+    },
+    {
+      "id": "zach-z",
+      "kind": "gym",
+      "name": "Zach",
+      "title": "Promotion Match",
+      "location": "Vert Sector 7 (ponto de táxi)",
+      "order": 3,
+      "badge": "Rank Y",
+      "party": [
+        {
+          "species": 79,
+          "form": 0,
+          "level": 8,
+          "moves": [
+            "water-gun",
+            "growl",
+            "tackle",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 16,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "tackle",
+            "growl",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "quick-attack",
+            "growl",
+            "thunder-wave",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 9,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank Y",
+      "versions": null
+    },
+    {
+      "id": "josee-1",
+      "kind": "other",
+      "name": "Josée",
+      "title": "Fist of Justice",
+      "location": "Caminho do Looker Bureau",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 66,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "leer",
+            "rock-smash",
+            "focus-energy"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 307,
+          "form": 0,
+          "level": 11,
+          "moves": [
+            "confusion",
+            "work-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 11,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "emma-1",
+      "kind": "other",
+      "name": "Emma",
+      "title": "Looker Bureau",
+      "location": "Looker Bureau",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 179,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "tackle",
+            "thunder-shock",
+            "growl",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 15,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "yvon-y",
+      "kind": "gym",
+      "name": "Yvon",
+      "title": "Promotion Match",
+      "location": "Bleu Plaza",
+      "order": 6,
+      "badge": "Rank X",
+      "party": [
+        {
+          "species": 682,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "fairy-wind",
+            "fake-tears",
+            "disarming-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 684,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "tackle",
+            "charm",
+            "fairy-wind",
+            "fake-tears"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 666,
+          "form": 7,
+          "level": 16,
+          "moves": [
+            "light-screen",
+            "infestation",
+            "gust",
+            "draining-kiss"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 16,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank X",
+      "versions": null
+    },
+    {
+      "id": "naveen-1",
+      "kind": "rival",
+      "name": "Naveen",
+      "title": "Team MZ",
+      "location": "Hotel Z",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 167,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "absorb",
+            "infestation",
+            "shadow-sneak",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 16,
+          "moves": [
+            "tackle",
+            "leer",
+            "shadow-sneak",
+            "take-down"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 559,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "tackle",
+            "headbutt",
+            "power-up-punch",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 17,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "xavi-x",
+      "kind": "gym",
+      "name": "Xavi",
+      "title": "Promotion Match",
+      "location": "Rouge District (escola)",
+      "order": 8,
+      "badge": "Rank W",
+      "party": [
+        {
+          "species": 543,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "spikes",
+            "rollout",
+            "screech",
+            "pin-missile"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 315,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "spikes",
+            "sleep-powder",
+            "razor-leaf",
+            "magical-leaf"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "psybeam",
+            "reflect",
+            "shadow-ball",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 676,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "fire-fang",
+            "thunder-fang",
+            "take-down",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank W",
+      "versions": null
+    },
+    {
+      "id": "lida-1",
+      "kind": "rival",
+      "name": "Lida",
+      "title": "Team MZ",
+      "location": "Vert Sector 5",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 692,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "mud-shot",
+            "aqua-jet",
+            "bubble-beam",
+            "water-gun"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 582,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "tackle",
+            "taunt",
+            "icy-wind",
+            "harden"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 120,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "confuse-ray",
+            "water-gun",
+            "harden",
+            "bubble-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 23,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rintaro-w",
+      "kind": "gym",
+      "name": "Rintaro",
+      "title": "Promotion Match",
+      "location": "Restaurant Le Nah, South Boulevard",
+      "order": 10,
+      "badge": "Rank V",
+      "party": [
+        {
+          "species": 512,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "protect",
+            "vine-whip",
+            "bite",
+            "magical-leaf"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "protect",
+            "bite",
+            "bubble-beam",
+            "water-gun"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 24,
+          "moves": [
+            "protect",
+            "bite",
+            "ember",
+            "flame-wheel"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank V",
+      "versions": null
+    },
+    {
+      "id": "rogue-absol",
+      "kind": "other",
+      "name": "Rogue Mega Absol",
+      "title": "Rogue Mega",
+      "location": "Jaune District (telhado, missão 9)",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 359,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; você luta com um Lucario emprestado; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "taunie-2",
+      "kind": "rival",
+      "name": "Taunie",
+      "title": "Team MZ",
+      "location": "Hotel Z",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 153,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "giga-drain",
+            "leech-seed",
+            "body-slam",
+            "disarming-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 159,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "aqua-jet",
+            "tackle",
+            "slash",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 310,
+          "form": 0,
+          "level": 26,
+          "moves": [
+            "thunder-fang",
+            "spark",
+            "bite",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": "manectite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 26,
+      "verified": true,
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); time para quem escolheu Tepig; com Chikorita: Croconaw 25, Pignite 25, Manectric 26; com Totodile: Pignite 25, Bayleef 25, Manectric 26; Manectric megaevolui",
+      "versions": null
+    },
+    {
+      "id": "vinnie-v",
+      "kind": "gym",
+      "name": "Vinnie",
+      "title": "Promotion Match",
+      "location": "Quasartico Inc. (quadra)",
+      "order": 13,
+      "badge": "Rank F",
+      "party": [
+        {
+          "species": 229,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "fire-fang",
+            "fire-spin",
+            "bite",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "whirlpool",
+            "aqua-jet",
+            "night-slash",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 427,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "charm",
+            "quick-attack",
+            "draining-kiss",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 780,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "safeguard",
+            "icy-wind",
+            "twister",
+            "glare"
+          ],
+          "ability": null,
+          "item": "drampanite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank F; o Vinnie leva direto do Rank V ao Rank F; Drampa megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-slowbro",
+      "kind": "other",
+      "name": "Rogue Mega Slowbro",
+      "title": "Rogue Mega",
+      "location": "Aymlis Park",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 80,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-camerupt",
+      "kind": "other",
+      "name": "Rogue Mega Camerupt",
+      "title": "Rogue Mega",
+      "location": "Jaune Sector 3 (telhado)",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 323,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-victreebel",
+      "kind": "other",
+      "name": "Rogue Mega Victreebel",
+      "title": "Rogue Mega",
+      "location": "Magenta Sector 9",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 71,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "naveen-2",
+      "kind": "rival",
+      "name": "Naveen",
+      "title": "Team MZ",
+      "location": "Hotel Z",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 168,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "poison-jab",
+            "pin-missile",
+            "sticky-web",
+            "shadow-sneak"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "shadow-claw",
+            "night-slash",
+            "confuse-ray",
+            "take-down"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 559,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "brick-break",
+            "rock-tomb",
+            "power-up-punch",
+            "headbutt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "mani-quiz",
+      "kind": "other",
+      "name": "Mani",
+      "title": "DYN4MO",
+      "location": "Electrical Substation",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 694,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "parabolic-charge",
+            "breaking-swipe",
+            "bulldoze",
+            "swift"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 587,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "spark",
+            "wing-attack",
+            "charge",
+            "nuzzle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "thunderbolt",
+            "quick-attack",
+            "brick-break",
+            "spark"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": "3ª rodada do quiz da Canari",
+      "versions": null
+    },
+    {
+      "id": "tarragon-1",
+      "kind": "other",
+      "name": "Tarragon",
+      "title": "DYN4MO",
+      "location": "Racine Construction",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 450,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "heavy-slam",
+            "amnesia",
+            "crunch",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 660,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "swords-dance",
+            "take-down",
+            "bounce",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 530,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "swords-dance",
+            "dig",
+            "rock-slide",
+            "x-scissor"
+          ],
+          "ability": null,
+          "item": "excadrite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 37,
+      "verified": true,
+      "notes": "Excadrill megaevolui",
+      "versions": null
+    },
+    {
+      "id": "canari-f",
+      "kind": "gym",
+      "name": "Canari",
+      "title": "Promotion Match",
+      "location": "Racine Construction",
+      "order": 20,
+      "badge": "Rank E",
+      "party": [
+        {
+          "species": 695,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "swift",
+            "parabolic-charge",
+            "volt-switch",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 181,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "cotton-guard",
+            "discharge",
+            "power-gem",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 618,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "discharge",
+            "spark",
+            "charge",
+            "mud-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 39,
+          "moves": [
+            "discharge",
+            "crunch",
+            "volt-switch",
+            "eerie-impulse"
+          ],
+          "ability": null,
+          "item": "eelektrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank E; Eelektross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-beedrill",
+      "kind": "other",
+      "name": "Rogue Mega Beedrill",
+      "title": "Rogue Mega",
+      "location": "Vert Sector 5",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 15,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-hawlucha",
+      "kind": "other",
+      "name": "Rogue Mega Hawlucha",
+      "title": "Rogue Mega",
+      "location": "Magenta Sector 3",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 701,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-banette",
+      "kind": "other",
+      "name": "Rogue Mega Banette",
+      "title": "Rogue Mega",
+      "location": "Jaune Sector 9",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "josee-2",
+      "kind": "other",
+      "name": "Josée",
+      "title": "Fist of Justice",
+      "location": "Justice Dojo",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 67,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "bulk-up",
+            "bulldoze",
+            "knock-off",
+            "bullet-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "psybeam",
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 43,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "canari-rematch",
+      "kind": "other",
+      "name": "Canari",
+      "title": "DYN4MO",
+      "location": "Racine Construction",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 695,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "thunder-wave",
+            "parabolic-charge",
+            "thunderbolt",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 181,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "dazzling-gleam",
+            "discharge",
+            "power-gem",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 618,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "discharge",
+            "thunder-shock",
+            "stealth-rock",
+            "mud-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "discharge",
+            "fire-punch",
+            "volt-switch",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": "eelektrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 44,
+      "verified": true,
+      "notes": "revanche para conseguir a ajuda dela (caso da Gwynn); Eelektross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "gwynn-1",
+      "kind": "other",
+      "name": "Gwynn",
+      "title": "Fist of Justice",
+      "location": "Esgotos (Bleu Sector 7)",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "shadow-sneak",
+            "shadow-claw",
+            "knock-off",
+            "heal-block"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 711,
+          "form": 1,
+          "level": 44,
+          "moves": [
+            "trick-or-treat",
+            "shadow-claw",
+            "bullet-seed",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "flamethrower",
+            "fire-spin",
+            "shadow-ball",
+            "protect"
+          ],
+          "ability": null,
+          "item": "chandelurite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 45,
+      "verified": true,
+      "notes": "Chandelure megaevolui",
+      "versions": null
+    },
+    {
+      "id": "ivor-e",
+      "kind": "gym",
+      "name": "Ivor",
+      "title": "Promotion Match",
+      "location": "Justice Dojo",
+      "order": 27,
+      "badge": "Rank D",
+      "party": [
+        {
+          "species": 214,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "rock-blast",
+            "pin-missile",
+            "aerial-ace",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "zen-headbutt",
+            "rock-smash",
+            "protect",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "bulldoze",
+            "brick-break",
+            "brutal-swing",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "iron-head",
+            "brick-break",
+            "rock-slide",
+            "no-retreat"
+          ],
+          "ability": null,
+          "item": "falinksite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank D; Falinks megaevolui",
+      "versions": null
+    },
+    {
+      "id": "philippe-1",
+      "kind": "evil",
+      "name": "Philippe",
+      "title": "Rust Syndicate",
+      "location": "Rust Syndicate (Bleu District)",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 208,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "heavy-slam",
+            "stealth-rock",
+            "crunch",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "air-slash",
+            "swords-dance",
+            "x-scissor",
+            "bullet-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "drill-run",
+            "night-slash",
+            "steel-wing",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": "skarmorite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": "Skarmory megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-mawile",
+      "kind": "other",
+      "name": "Rogue Mega Mawile",
+      "title": "Rogue Mega",
+      "location": "Magenta Sector 6",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 303,
+          "form": 0,
+          "level": 48,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-barbaracle",
+      "kind": "other",
+      "name": "Rogue Mega Barbaracle",
+      "title": "Rogue Mega",
+      "location": "Esgotos (Bleu Sector 5)",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 689,
+          "form": 0,
+          "level": 48,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "gwynn-2",
+      "kind": "other",
+      "name": "Gwynn",
+      "title": "Fist of Justice",
+      "location": "Rouge Sector 6 (Holovator)",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "phantom-force",
+            "shadow-claw",
+            "knock-off",
+            "heal-block"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 711,
+          "form": 1,
+          "level": 46,
+          "moves": [
+            "trick-or-treat",
+            "shadow-claw",
+            "bullet-seed",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "shadow-ball",
+            "icy-wind",
+            "dark-pulse",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "flamethrower",
+            "calm-mind",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": "chandelurite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": "Chandelure megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-ampharos",
+      "kind": "other",
+      "name": "Rogue Mega Ampharos",
+      "title": "Rogue Mega",
+      "location": "Rouge Sector 6",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 181,
+          "form": 0,
+          "level": 48,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "corbeau-d",
+      "kind": "gym",
+      "name": "Corbeau",
+      "title": "Promotion Match",
+      "location": "Rust Syndicate",
+      "order": 33,
+      "badge": "Rank C",
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "poison-jab",
+            "fire-fang",
+            "toxic",
+            "leech-life"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "crunch",
+            "waterfall",
+            "dragon-rush",
+            "bounce"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "giga-drain",
+            "synthesis",
+            "sludge-bomb",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 545,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "gunk-shot",
+            "protect",
+            "x-scissor",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "scolipite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 52,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank C; Scolipede megaevolui",
+      "versions": null
+    },
+    {
+      "id": "lida-2",
+      "kind": "rival",
+      "name": "Lida",
+      "title": "Team MZ",
+      "location": "Vert Sector 4 (quadra)",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 693,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "dark-pulse",
+            "aura-sphere",
+            "water-pulse",
+            "mud-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 583,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "ice-beam",
+            "icy-wind",
+            "flash-cannon",
+            "icicle-crash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 587,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "volt-switch",
+            "air-slash",
+            "spark",
+            "quick-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 120,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "psychic",
+            "power-gem",
+            "surf",
+            "swift"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 48,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "naveen-3",
+      "kind": "rival",
+      "name": "Naveen",
+      "title": "Team MZ",
+      "location": "Vert Sector 4 (quadra)",
+      "order": 35,
+      "badge": null,
+      "party": [
+        {
+          "species": 168,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "megahorn",
+            "poison-jab",
+            "sticky-web",
+            "leech-life"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "shadow-claw",
+            "zen-headbutt",
+            "confuse-ray",
+            "power-gem"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "crunch",
+            "iron-tail",
+            "earthquake",
+            "sand-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "iron-tail",
+            "ice-punch",
+            "power-up-punch",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "scraftinite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "Scrafty megaevolui",
+      "versions": null
+    },
+    {
+      "id": "asami-1",
+      "kind": "other",
+      "name": "Asami",
+      "title": "Boutique Couture",
+      "location": "Vernal Avenue",
+      "order": 36,
+      "badge": null,
+      "party": [
+        {
+          "species": 671,
+          "form": 3,
+          "level": 50,
+          "moves": [
+            "magical-leaf",
+            "draining-kiss",
+            "energy-ball",
+            "fairy-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "vença usando Mega Evolução",
+      "versions": null
+    },
+    {
+      "id": "rogue-froslass",
+      "kind": "other",
+      "name": "Rogue Mega Froslass",
+      "title": "Rogue Mega",
+      "location": "Aymlis Park (telhado)",
+      "order": 37,
+      "badge": null,
+      "party": [
+        {
+          "species": 478,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-altaria",
+      "kind": "other",
+      "name": "Rogue Mega Altaria",
+      "title": "Rogue Mega",
+      "location": "Magenta Sector 4",
+      "order": 38,
+      "badge": null,
+      "party": [
+        {
+          "species": 334,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-venusaur",
+      "kind": "other",
+      "name": "Rogue Mega Venusaur",
+      "title": "Rogue Mega",
+      "location": "Jaune Sector 8 (coreto)",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 3,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "lebanne-1",
+      "kind": "other",
+      "name": "Lebanne",
+      "title": "SBC",
+      "location": "Hotel Z",
+      "order": 40,
+      "badge": null,
+      "party": [
+        {
+          "species": 715,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "hurricane",
+            "super-fang",
+            "dragon-pulse",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 697,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "earthquake",
+            "breaking-swipe",
+            "rock-slide",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "earthquake",
+            "swords-dance",
+            "dragon-claw",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 691,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sludge-bomb",
+            "dragon-pulse",
+            "hydro-pump",
+            "protect"
+          ],
+          "ability": null,
+          "item": "dragalgite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "Dragalge megaevolui",
+      "versions": null
+    },
+    {
+      "id": "tournoi-canari",
+      "kind": "other",
+      "name": "Canari",
+      "title": "Super-Tournoi",
+      "location": "Hotel Richissime",
+      "order": 41,
+      "badge": null,
+      "party": [
+        {
+          "species": 695,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "thunder-wave",
+            "parabolic-charge",
+            "thunderbolt",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 181,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "dazzling-gleam",
+            "thunder",
+            "power-gem",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 618,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "discharge",
+            "thunder-shock",
+            "stealth-rock",
+            "mud-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "liquidation",
+            "thunderbolt",
+            "zap-cannon",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": "eelektrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "Super-Tournoi da SBC, lutas seguidas; Eelektross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "tournoi-ivor",
+      "kind": "other",
+      "name": "Ivor",
+      "title": "Super-Tournoi",
+      "location": "Hotel Richissime",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 214,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "rock-blast",
+            "megahorn",
+            "aerial-ace",
+            "brick-break"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "zen-headbutt",
+            "rock-smash",
+            "protect",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "bulldoze",
+            "brick-break",
+            "brutal-swing",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "iron-head",
+            "close-combat",
+            "rock-slide",
+            "no-retreat"
+          ],
+          "ability": null,
+          "item": "falinksite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "Super-Tournoi da SBC, lutas seguidas; Falinks megaevolui",
+      "versions": null
+    },
+    {
+      "id": "tournoi-corbeau",
+      "kind": "other",
+      "name": "Corbeau",
+      "title": "Super-Tournoi",
+      "location": "Hotel Richissime",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "poison-jab",
+            "fire-fang",
+            "toxic",
+            "leech-life"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "crunch",
+            "waterfall",
+            "dragon-rush",
+            "bounce"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "giga-drain",
+            "synthesis",
+            "sludge-bomb",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 545,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "gunk-shot",
+            "protect",
+            "x-scissor",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "scolipite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "Super-Tournoi da SBC, lutas seguidas; Scolipede megaevolui",
+      "versions": null
+    },
+    {
+      "id": "jacinthe-c",
+      "kind": "gym",
+      "name": "Jacinthe",
+      "title": "Promotion Match",
+      "location": "Hotel Richissime",
+      "order": 44,
+      "badge": "Rank B",
+      "party": [
+        {
+          "species": 703,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "stealth-rock",
+            "stone-edge",
+            "moonblast",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 303,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "play-rough",
+            "iron-head",
+            "crunch",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 699,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "blizzard",
+            "freeze-dry",
+            "rock-blast",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "moonblast",
+            "mystical-fire",
+            "psychic",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "air-slash",
+            "moonblast",
+            "mystical-fire",
+            "protect"
+          ],
+          "ability": null,
+          "item": "clefablite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank B; Clefable megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-dragonite",
+      "kind": "other",
+      "name": "Rogue Mega Dragonite",
+      "title": "Rogue Mega",
+      "location": "Vert Sector 3",
+      "order": 45,
+      "badge": null,
+      "party": [
+        {
+          "species": 149,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-tyranitar",
+      "kind": "other",
+      "name": "Rogue Mega Tyranitar",
+      "title": "Rogue Mega",
+      "location": "Jaune Sector 4",
+      "order": 46,
+      "badge": null,
+      "party": [
+        {
+          "species": 248,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "philippe-2",
+      "kind": "evil",
+      "name": "Philippe",
+      "title": "Rust Syndicate",
+      "location": "Bleu Sector 9",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 208,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "stone-edge",
+            "heavy-slam",
+            "stealth-rock",
+            "breaking-swipe"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "protect",
+            "iron-head",
+            "x-scissor",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "iron-tail",
+            "rock-slide",
+            "earthquake",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "drill-run",
+            "night-slash",
+            "steel-wing",
+            "protect"
+          ],
+          "ability": null,
+          "item": "skarmorite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "Skarmory megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-starmie",
+      "kind": "other",
+      "name": "Rogue Mega Starmie",
+      "title": "Rogue Mega",
+      "location": "Bleu Sector 9",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 121,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "Mega Evolução descontrolada; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "emma-2",
+      "kind": "other",
+      "name": "Emma",
+      "title": "Looker Bureau",
+      "location": "Looker Bureau",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 181,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "thunder",
+            "power-gem",
+            "dragon-pulse",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 303,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "play-rough",
+            "dynamic-punch",
+            "crunch",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 428,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch",
+            "power-up-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "aura-sphere",
+            "flash-cannon",
+            "psychic",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "poison-jab",
+            "night-slash",
+            "psycho-cut",
+            "slash"
+          ],
+          "ability": null,
+          "item": "malamarite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "Malamar megaevolui",
+      "versions": null
+    },
+    {
+      "id": "griselle-1",
+      "kind": "evil",
+      "name": "Griselle",
+      "title": "Team Flare Nouveau",
+      "location": "Lysandre Café",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 663,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "flare-blitz",
+            "steel-wing",
+            "quick-attack",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 323,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "earthquake",
+            "lava-plume",
+            "rock-slide",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "stone-edge",
+            "iron-head",
+            "crunch",
+            "thunder-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "bullet-punch",
+            "psycho-cut",
+            "brutal-swing",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "flamethrower",
+            "earth-power",
+            "hyper-voice",
+            "snarl"
+          ],
+          "ability": null,
+          "item": "pyroarite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 61,
+      "verified": true,
+      "notes": "Pyroar megaevolui",
+      "versions": null
+    },
+    {
+      "id": "grisham-b",
+      "kind": "gym",
+      "name": "Grisham",
+      "title": "Promotion Match",
+      "location": "Nouveau Café, Centrico Plaza",
+      "order": 51,
+      "badge": "Rank A",
+      "party": [
+        {
+          "species": 675,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "brick-break",
+            "crunch",
+            "bullet-punch",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "hypnosis",
+            "psyshock",
+            "night-slash",
+            "liquidation"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "overheat",
+            "earth-power",
+            "snarl",
+            "hyper-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 248,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "stone-edge",
+            "ice-punch",
+            "crunch",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "aerial-ace",
+            "earthquake",
+            "fire-fang",
+            "draco-meteor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "flare-blitz",
+            "air-slash",
+            "dragon-rush",
+            "protect"
+          ],
+          "ability": null,
+          "item": "charizardite-x",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 63,
+      "verified": true,
+      "notes": "partida de promoção do Z-A Royale: vencer leva ao Rank A; Charizard megaevolui",
+      "versions": null
+    },
+    {
+      "id": "taunie-3",
+      "kind": "rival",
+      "name": "Taunie",
+      "title": "Team MZ",
+      "location": "Prism Tower, Centrico Plaza",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "light-screen",
+            "reflect",
+            "psychic",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 706,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "surf",
+            "toxic",
+            "draco-meteor",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 713,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "icicle-crash",
+            "crunch",
+            "stone-edge",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 154,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "leech-seed",
+            "earth-power",
+            "dazzling-gleam",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 310,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "snarl",
+            "thunder",
+            "overheat",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "breaking-swipe",
+            "liquidation",
+            "ice-fang",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": "feraligite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "rival: Taunie se você joga com o Urbain; com a Taunie, o rival é o Urbain (mesmo time); time para quem escolheu Tepig; com Chikorita: Meowstic 62, Goodra 62, Avalugg 62, Feraligatr 63, Manectric 63, Emboar 64; com Totodile: Meowstic 62, Goodra 62, Avalugg 62, Emboar 63, Manectric 63, Meganium 64; Feraligatr megaevolui",
+      "versions": null
+    },
+    {
+      "id": "rogue-gengar-heracross",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Centrico Plaza",
+      "order": 53,
+      "badge": null,
+      "party": [
+        {
+          "species": 94,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 214,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-pidgeot-kangaskhan-garchomp",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Lumiose (missão 37)",
+      "order": 54,
+      "badge": null,
+      "party": [
+        {
+          "species": 18,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com Ivor e Gwynn; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-blastoise-steelix",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Lumiose (missão 37)",
+      "order": 55,
+      "badge": null,
+      "party": [
+        {
+          "species": 9,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 208,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com a Canari; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-salamence-aggron",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Lumiose (missão 37)",
+      "order": 56,
+      "badge": null,
+      "party": [
+        {
+          "species": 373,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com a Lebanne; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-gardevoir-gallade",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Lumiose (missão 37)",
+      "order": 57,
+      "badge": null,
+      "party": [
+        {
+          "species": 282,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com o Corbeau; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "rogue-alakazam-metagross-aerodactyl",
+      "kind": "other",
+      "name": "Rogue Megas",
+      "title": "Rogue Mega",
+      "location": "Lumiose (missão 37)",
+      "order": 58,
+      "badge": null,
+      "party": [
+        {
+          "species": 65,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "vários Rogue Megas de uma vez; com o Grisham e a Griselle; golpes não listados nas fontes",
+      "versions": null
+    },
+    {
+      "id": "l-final",
+      "kind": "other",
+      "name": "L",
+      "title": "Pokémon Trainer",
+      "location": "Hotel Z (caminho)",
+      "order": 59,
+      "badge": null,
+      "party": [
+        {
+          "species": 668,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "hyper-voice",
+            "flamethrower",
+            "snarl",
+            "solar-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 671,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "energy-ball",
+            "dazzling-gleam",
+            "psychic",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 78,
+          "moves": [
+            "will-o-wisp",
+            "night-slash",
+            "shadow-claw",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 715,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "boomburst",
+            "hurricane",
+            "dragon-pulse",
+            "super-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 569,
+          "form": 0,
+          "level": 79,
+          "moves": [
+            "gunk-shot",
+            "brutal-swing",
+            "rock-blast",
+            "metal-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "crunch",
+            "waterfall",
+            "ice-fang",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "gyaradosite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 80,
+      "verified": true,
+      "notes": "pós-jogo (missão 42): o treinador mais forte; Gyarados megaevolui",
+      "versions": null
+    },
+    {
+      "id": "zach-reward-1",
+      "kind": "other",
+      "name": "Zach",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 60,
+      "badge": null,
+      "party": [
+        {
+          "species": 79,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "water-gun",
+            "growl",
+            "tackle",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 16,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "tackle",
+            "growl",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 25,
+          "form": 0,
+          "level": 10,
+          "moves": [
+            "quick-attack",
+            "growl",
+            "thunder-wave",
+            "thunder-shock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 10,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 1 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
+      "id": "griselle-reward",
+      "kind": "other",
+      "name": "Griselle",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 61,
+      "badge": null,
+      "party": [
+        {
+          "species": 663,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "flare-blitz",
+            "steel-wing",
+            "brave-bird",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 323,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "earthquake",
+            "lava-plume",
+            "rock-slide",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "stone-edge",
+            "iron-head",
+            "crunch",
+            "thunder-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 376,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "bullet-punch",
+            "psycho-cut",
+            "earthquake",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "flamethrower",
+            "earth-power",
+            "hyper-voice",
+            "snarl"
+          ],
+          "ability": null,
+          "item": "pyroarite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 2 do Infinite Z-A Royale (Quasartico Inc.); Pyroar megaevolui",
+      "versions": null
+    },
+    {
+      "id": "lida-reward",
+      "kind": "other",
+      "name": "Lida",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 62,
+      "badge": null,
+      "party": [
+        {
+          "species": 693,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "dark-pulse",
+            "aura-sphere",
+            "water-pulse",
+            "mud-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 584,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "ice-beam",
+            "icy-wind",
+            "flash-cannon",
+            "icicle-crash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 587,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "volt-switch",
+            "air-slash",
+            "u-turn",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 134,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "aqua-ring",
+            "blizzard",
+            "surf",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "zen-headbutt",
+            "liquidation",
+            "bulk-up",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": "starminite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 3 do Infinite Z-A Royale (Quasartico Inc.); Starmie megaevolui",
+      "versions": null
+    },
+    {
+      "id": "tarragon-reward",
+      "kind": "other",
+      "name": "Tarragon",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 63,
+      "badge": null,
+      "party": [
+        {
+          "species": 450,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "heavy-slam",
+            "amnesia",
+            "earthquake",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 618,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "earth-power",
+            "sludge-bomb",
+            "thunderbolt",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 660,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "swords-dance",
+            "ice-punch",
+            "fire-punch",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "iron-head",
+            "gunk-shot",
+            "crunch",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 530,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "swords-dance",
+            "iron-head",
+            "drill-run",
+            "megahorn"
+          ],
+          "ability": null,
+          "item": "excadrite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 4 do Infinite Z-A Royale (Quasartico Inc.); Excadrill megaevolui",
+      "versions": null
+    },
+    {
+      "id": "xavi-reward",
+      "kind": "other",
+      "name": "Xavi",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 64,
+      "badge": null,
+      "party": [
+        {
+          "species": 545,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "megahorn",
+            "gunk-shot",
+            "earthquake",
+            "spikes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 199,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "future-sight",
+            "hydro-pump",
+            "blizzard",
+            "metronome"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "spikes",
+            "toxic-spikes",
+            "energy-ball",
+            "dazzling-gleam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "psychic",
+            "reflect",
+            "shadow-ball",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 676,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "fire-fang",
+            "thunder-fang",
+            "ice-fang",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 69,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 5 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
+      "id": "gwynn-reward",
+      "kind": "other",
+      "name": "Gwynn",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 65,
+      "badge": null,
+      "party": [
+        {
+          "species": 354,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "phantom-force",
+            "shadow-claw",
+            "knock-off",
+            "heal-block"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 711,
+          "form": 1,
+          "level": 69,
+          "moves": [
+            "trick-or-treat",
+            "shadow-claw",
+            "power-whip",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "shadow-ball",
+            "dazzling-gleam",
+            "sludge-bomb",
+            "hypnosis"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "shadow-ball",
+            "ice-beam",
+            "water-pulse",
+            "heal-block"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 609,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "flamethrower",
+            "calm-mind",
+            "psychic",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": "chandelurite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 6 do Infinite Z-A Royale (Quasartico Inc.); Chandelure megaevolui",
+      "versions": null
+    },
+    {
+      "id": "lebanne-reward",
+      "kind": "other",
+      "name": "Lebanne",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 66,
+      "badge": null,
+      "party": [
+        {
+          "species": 715,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "hurricane",
+            "super-fang",
+            "dragon-pulse",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 697,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "earthquake",
+            "breaking-swipe",
+            "stone-edge",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "cotton-guard",
+            "fire-spin",
+            "hurricane",
+            "dragon-breath"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "earthquake",
+            "swords-dance",
+            "dragon-claw",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 691,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "sludge-bomb",
+            "dragon-pulse",
+            "hydro-pump",
+            "protect"
+          ],
+          "ability": null,
+          "item": "dragalgite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 7 do Infinite Z-A Royale (Quasartico Inc.); Dragalge megaevolui",
+      "versions": null
+    },
+    {
+      "id": "naveen-reward",
+      "kind": "other",
+      "name": "Naveen",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 67,
+      "badge": null,
+      "party": [
+        {
+          "species": 168,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "megahorn",
+            "poison-jab",
+            "sticky-web",
+            "leech-life"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "shadow-claw",
+            "zen-headbutt",
+            "confuse-ray",
+            "power-gem"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 553,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "crunch",
+            "iron-tail",
+            "earthquake",
+            "sand-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 681,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "kings-shield",
+            "shadow-ball",
+            "flash-cannon",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 560,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "iron-tail",
+            "ice-punch",
+            "power-up-punch",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "scraftinite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 8 do Infinite Z-A Royale (Quasartico Inc.); Scrafty megaevolui",
+      "versions": null
+    },
+    {
+      "id": "yvon-reward",
+      "kind": "other",
+      "name": "Yvon",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 68,
+      "badge": null,
+      "party": [
+        {
+          "species": 683,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "hypnosis",
+            "moonblast",
+            "psychic",
+            "heal-block"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "psychic",
+            "flamethrower",
+            "hydro-pump",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 685,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "sticky-web",
+            "fake-tears",
+            "dazzling-gleam",
+            "energy-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 709,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "wood-hammer",
+            "phantom-force",
+            "x-scissor",
+            "forests-curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 666,
+          "form": 7,
+          "level": 69,
+          "moves": [
+            "hurricane",
+            "bug-buzz",
+            "dazzling-gleam",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 69,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 9 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
+      "id": "rintaro-reward",
+      "kind": "other",
+      "name": "Rintaro",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 69,
+      "badge": null,
+      "party": [
+        {
+          "species": 512,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "giga-drain",
+            "crunch",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 197,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "snarl",
+            "moonlight",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 516,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "liquidation",
+            "ice-beam",
+            "gunk-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 196,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "power-gem",
+            "charm",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 514,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "fire-blast",
+            "solar-beam",
+            "flame-wheel"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 69,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 10 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
+      "id": "canari-reward",
+      "kind": "other",
+      "name": "Canari",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 70,
+      "badge": null,
+      "party": [
+        {
+          "species": 695,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "solar-beam",
+            "surf",
+            "parabolic-charge",
+            "discharge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 181,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "dazzling-gleam",
+            "thunder",
+            "power-gem",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 618,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "discharge",
+            "sludge-wave",
+            "stealth-rock",
+            "earth-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 310,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "snarl",
+            "flamethrower",
+            "thunderbolt",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 702,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "super-fang",
+            "thunder",
+            "dazzling-gleam",
+            "charm"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 604,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "liquidation",
+            "flamethrower",
+            "zap-cannon",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": "eelektrossite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 11 do Infinite Z-A Royale (Quasartico Inc.); Eelektross megaevolui",
+      "versions": null
+    },
+    {
+      "id": "mani-reward",
+      "kind": "other",
+      "name": "Mani",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 71,
+      "badge": null,
+      "party": [
+        {
+          "species": 695,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "solar-beam",
+            "thunder",
+            "bulldoze",
+            "electroweb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 587,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "discharge",
+            "air-slash",
+            "charge",
+            "thunder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 1,
+          "level": 68,
+          "moves": [
+            "psychic",
+            "thunderbolt",
+            "play-rough",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 135,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "charm",
+            "shadow-ball",
+            "thunderbolt",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 26,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "iron-tail",
+            "play-rough",
+            "dig",
+            "volt-switch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 69,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 12 do Infinite Z-A Royale (Quasartico Inc.)",
+      "versions": null
+    },
+    {
+      "id": "emma-reward",
+      "kind": "other",
+      "name": "Emma",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 72,
+      "badge": null,
+      "party": [
+        {
+          "species": 181,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "thunder",
+            "power-gem",
+            "dragon-pulse",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 303,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "play-rough",
+            "dynamic-punch",
+            "crunch",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 428,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "fire-punch",
+            "ice-punch",
+            "thunder-punch",
+            "power-up-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 460,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "ice-punch",
+            "leech-seed",
+            "leaf-storm",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "bullet-punch",
+            "extreme-speed",
+            "power-up-punch",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "poison-jab",
+            "night-slash",
+            "psycho-cut",
+            "slash"
+          ],
+          "ability": null,
+          "item": "malamarite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 13 do Infinite Z-A Royale (Quasartico Inc.); Malamar megaevolui",
+      "versions": null
+    },
+    {
+      "id": "corbeau-reward",
+      "kind": "other",
+      "name": "Corbeau",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 73,
+      "badge": null,
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "poison-jab",
+            "fire-fang",
+            "toxic",
+            "leech-life"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 689,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "stone-edge",
+            "liquidation",
+            "poison-jab",
+            "stealth-rock"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "giga-drain",
+            "synthesis",
+            "sludge-bomb",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "crunch",
+            "waterfall",
+            "ice-fang",
+            "bounce"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 569,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "gunk-shot",
+            "rock-blast",
+            "bullet-seed",
+            "brutal-swing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 545,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "gunk-shot",
+            "protect",
+            "x-scissor",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "scolipite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 14 do Infinite Z-A Royale (Quasartico Inc.); Scolipede megaevolui",
+      "versions": null
+    },
+    {
+      "id": "taunie-reward",
+      "kind": "other",
+      "name": "Taunie",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 74,
+      "badge": null,
+      "party": [
+        {
+          "species": 678,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "light-screen",
+            "reflect",
+            "psychic",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 706,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "surf",
+            "toxic",
+            "draco-meteor",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 154,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "leech-seed",
+            "earth-power",
+            "dazzling-gleam",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 310,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "snarl",
+            "thunder",
+            "overheat",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "breaking-swipe",
+            "liquidation",
+            "ice-fang",
+            "bulldoze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 670,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "light-of-ruin",
+            "energy-ball",
+            "giga-drain",
+            "synthesis"
+          ],
+          "ability": null,
+          "item": "floettite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 72,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 15 do Infinite Z-A Royale (Quasartico Inc.); Floette megaevolui",
+      "versions": null
+    },
+    {
+      "id": "ivor-reward",
+      "kind": "other",
+      "name": "Ivor",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 75,
+      "badge": null,
+      "party": [
+        {
+          "species": 214,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "stone-edge",
+            "megahorn",
+            "bulk-up",
+            "close-combat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 308,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "zen-headbutt",
+            "dynamic-punch",
+            "protect",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "earthquake",
+            "close-combat",
+            "poison-jab",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 701,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "swords-dance",
+            "flying-press",
+            "iron-head",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "psycho-cut",
+            "leaf-blade",
+            "stone-edge",
+            "fire-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 870,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "iron-head",
+            "close-combat",
+            "rock-slide",
+            "no-retreat"
+          ],
+          "ability": null,
+          "item": "falinksite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 16 do Infinite Z-A Royale (Quasartico Inc.); Falinks megaevolui",
+      "versions": null
+    },
+    {
+      "id": "philippe-reward",
+      "kind": "other",
+      "name": "Philippe",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 76,
+      "badge": null,
+      "party": [
+        {
+          "species": 208,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "stone-edge",
+            "heavy-slam",
+            "stealth-rock",
+            "breaking-swipe"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 212,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "iron-head",
+            "x-scissor",
+            "air-slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 306,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "iron-tail",
+            "rock-slide",
+            "earthquake",
+            "ice-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 707,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "heal-block",
+            "dazzling-gleam",
+            "flash-cannon",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "drill-run",
+            "night-slash",
+            "steel-wing",
+            "protect"
+          ],
+          "ability": null,
+          "item": "skarmorite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 70,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 17 do Infinite Z-A Royale (Quasartico Inc.); Skarmory megaevolui",
+      "versions": null
+    },
+    {
+      "id": "jacinthe-reward",
+      "kind": "other",
+      "name": "Jacinthe",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 77,
+      "badge": null,
+      "party": [
+        {
+          "species": 703,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "stealth-rock",
+            "stone-edge",
+            "moonblast",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 303,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "play-rough",
+            "iron-head",
+            "crunch",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 699,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "blizzard",
+            "freeze-dry",
+            "rock-blast",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "moonblast",
+            "mystical-fire",
+            "psychic",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 700,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "moonblast",
+            "shadow-ball",
+            "dazzling-gleam",
+            "fake-tears"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "air-slash",
+            "moonblast",
+            "mystical-fire",
+            "protect"
+          ],
+          "ability": null,
+          "item": "clefablite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 18 do Infinite Z-A Royale (Quasartico Inc.); Clefable megaevolui",
+      "versions": null
+    },
+    {
+      "id": "grisham-reward",
+      "kind": "other",
+      "name": "Grisham",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 78,
+      "badge": null,
+      "party": [
+        {
+          "species": 675,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "close-combat",
+            "crunch",
+            "power-up-punch",
+            "protect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 687,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "bulk-up",
+            "psyshock",
+            "night-slash",
+            "liquidation"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 668,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "overheat",
+            "earth-power",
+            "snarl",
+            "hyper-voice"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 248,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "stone-edge",
+            "ice-punch",
+            "crunch",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 373,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "aerial-ace",
+            "earthquake",
+            "fire-fang",
+            "draco-meteor"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "flare-blitz",
+            "air-slash",
+            "dragon-rush",
+            "protect"
+          ],
+          "ability": null,
+          "item": "charizardite-x",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 72,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 19 do Infinite Z-A Royale (Quasartico Inc.); Charizard megaevolui",
+      "versions": null
+    },
+    {
+      "id": "vinnie-reward",
+      "kind": "other",
+      "name": "Vinnie",
+      "title": "Z-A Royale",
+      "location": "Quasartico Inc.",
+      "order": 79,
+      "badge": null,
+      "party": [
+        {
+          "species": 229,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "flamethrower",
+            "fire-spin",
+            "snarl",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 319,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "whirlpool",
+            "aqua-jet",
+            "night-slash",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 362,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "freeze-dry",
+            "earthquake",
+            "ice-beam",
+            "iron-head"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 428,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "protect",
+            "dynamic-punch",
+            "draining-kiss",
+            "bounce"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 780,
+          "form": 0,
+          "level": 71,
+          "moves": [
+            "draco-meteor",
+            "icy-wind",
+            "flamethrower",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": "drampanite",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 71,
+      "verified": true,
+      "notes": "pós-jogo: partida de recompensa 20 do Infinite Z-A Royale (Quasartico Inc.); Drampa megaevolui",
+      "versions": null
+    }
+  ]
+}

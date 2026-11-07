@@ -20,7 +20,7 @@ public sealed record SaveLayout(
 /// <summary>Um Pokémon (decriptado) indo para uma posição de caixa do save.</summary>
 public sealed record Placement(byte[] Data, int Box, int Slot);
 
-public sealed class SaveInjectionException(string code, string message) : Exception(message)
+public sealed class SaveInjectionException(string code, string message, Exception? inner = null) : Exception(message, inner)
 {
     public string Code { get; } = code;
 }
@@ -39,7 +39,7 @@ public static class SaveInjection
     {
         if (file.Length > SaveImport.MaxSaveBytes)
             throw new SaveInjectionException("sav_size", "Arquivo grande demais para um save de GBA.");
-        var sav = SaveUtil.GetSaveFile(file.ToArray()) ?? throw new SaveInjectionException("sav_unknown", "Não é um save reconhecido.");
+        var sav = SaveFileAccess.Open(file);
         if (sav is not SAV3)
             throw new SaveInjectionException("sav_not_gen3", "O save não é da terceira geração (GBA).");
         return sav;

@@ -7,7 +7,7 @@ Variables: {trainer} = simulated trainer name, {n} = trade number, {total} = num
 Looking for your Switch's room. Keep the Direct Corner open as **Leader**.
 
 ## tentando_de_novo
-The connection didn't work this time. TradeRock will **try again** on its own. Keep the room open on the Switch.
+The connection didn't work this time. RockAssistent will **try again** on its own. Keep the room open on the Switch.
 
 ## aprovar
 A request to join the room showed up on the Switch. **Approve {trainer}'s request.**
@@ -36,7 +36,7 @@ The trade was cancelled on the Switch. **Leave the room** on the Switch.
 ## fim
 Done! The connection was closed.
 
-<!-- TradeRock is the host (pokeldn: the newer games, and FRLG over the ESP32). {code} = link code. -->
+<!-- RockAssistent is the host (pokeldn: the newer games, and FRLG over the ESP32). {code} = link code. -->
 
 ## sala_abrindo
 Opening the trade room. One moment.
@@ -51,7 +51,7 @@ The Switch joined the room! There, **choose the Pokémon** you want to send to t
 Trade {n} of {total} done! The Pokémon is already in the vault. On the Switch, choose the Pokémon for the **next trade**.
 
 ## sala_sair
-Trades done! TradeRock closes the room on its own; on the Switch, **end the trade** when the game lets you.
+Trades done! RockAssistent closes the room on its own; on the Switch, **end the trade** when the game lets you.
 
 ## sala_saiu
 The Switch left the room before finishing. Whatever was traded is in the vault.

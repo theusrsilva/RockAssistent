@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Gera traderock.ico a partir do desenho de frontend/public/icon.svg (uma Poké Bola simples), sem
+"""Gera traderock.ico a partir do desenho de frontend/public/icon.svg (uma Poké Bola com um "R"; o mesmo
+desenho de packaging/linux/io.github.traderock.TradeRock.svg), sem
 ferramentas externas: cada tamanho é desenhado com supersampling e gravado como PNG dentro do .ico.
 
 Se o icon.svg mudar, atualize as formas abaixo e rode: python3 packaging/windows/make-icon.py
@@ -15,21 +16,45 @@ DARK = (0x1E, 0x29, 0x3B)
 SIZES = [16, 24, 32, 48, 64, 256]
 SAMPLES = 4  # 4x4 amostras por pixel (bordas suaves)
 
+# O "R" do botão: o traço do <path> (stroke-width 3.4, pontas e cantos redondos), como segmentos e um arco.
+R_HALF = 1.7
+R_SEGMENTS = [((28, 39.5), (28, 24)), ((28, 24), (32, 24)), ((32, 33), (28, 33)), ((31, 33), (36, 39.5))]
+R_ARC = ((32, 28.5), 4.5)  # a 4.5 4.5 de (32,24) a (32,33): metade da direita
+
+
+def dist_segment(x, y, a, b):
+    (ax, ay), (bx, by) = a, b
+    dx, dy = bx - ax, by - ay
+    t = max(0.0, min(1.0, ((x - ax) * dx + (y - ay) * dy) / (dx * dx + dy * dy)))
+    return ((x - ax - t * dx) ** 2 + (y - ay - t * dy) ** 2) ** 0.5
+
+
+def in_r(x, y):
+    if any(dist_segment(x, y, a, b) <= R_HALF for a, b in R_SEGMENTS):
+        return True
+    (cx, cy), radius = R_ARC
+    d = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
+    return x >= cx and abs(d - radius) <= R_HALF
+
 
 def color_at(x, y):
     """Cor no ponto (x, y) do viewBox 0 0 64 64, ou None (transparente). Mesma ordem de pintura do SVG."""
     r = ((x - 32) ** 2 + (y - 32) ** 2) ** 0.5
     color = None
-    if r <= 30:
-        color = RED                      # <circle r=30 fill=#ef4444>
+    if r <= 29.5:
+        color = RED                      # <circle r=29.5 fill=#ef4444>
         if y >= 32:
-            color = WHITE                # <path M2 32h60a30 30 0 0 1-60 0z> (metade de baixo)
-        if 2 <= x <= 62 and 29 <= y <= 35:
-            color = DARK                 # <rect x=2 y=29 width=60 height=6>
-    if r <= 9:
-        color = WHITE                    # <circle r=9 fill=#f8fafc ...>
-    if 6.5 <= r <= 11.5:
-        color = DARK                     # ... stroke=#1e293b stroke-width=5
+            color = WHITE                # <path M2.5 32h59a29.5 29.5 0 0 1-59 0z> (metade de baixo)
+    if 2 <= x <= 62 and 29 <= y <= 35 and r <= 31:
+        color = DARK                     # <rect x=2 y=29 width=60 height=6>
+    if 28 <= r <= 31:
+        color = DARK                     # contorno: <circle r=29.5 stroke-width=3>
+    if r <= 11:
+        color = WHITE                    # botão: <circle r=13 fill=#f8fafc ...>
+    if 11 <= r <= 15:
+        color = DARK                     # ... stroke=#1e293b stroke-width=4
+    if in_r(x, y):
+        color = DARK                     # o "R" do RockAssistent
     return color
 
 

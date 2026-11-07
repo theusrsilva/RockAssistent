@@ -1,0 +1,108 @@
+All 92 TMs and 8 HMs. Locations are the same in both versions.
+
+:::tms hgss
+
+## Where to find
+
+- TM01 Focus Punch: Chuck (Cianwood Gym).
+- TM02 Dragon Claw: Route 27; Goldenrod lottery (Sunday).
+- TM03 Water Pulse: Misty (Cerulean Gym).
+- TM04 Calm Mind: Battle Frontier (48 BP).
+- TM05 Roar: Route 32.
+- TM06 Toxic: Battle Frontier (32 BP).
+- TM07 Hail: Pryce (Mahogany Gym).
+- TM08 Bulk Up: Battle Frontier (48 BP).
+- TM09 Bullet Seed: Route 32.
+- TM10 Hidden Power: Lake of Rage; Celadon Game Corner.
+- TM11 Sunny Day: Radio Tower 3F (after Team Rocket).
+- TM12 Taunt: Burnt Tower; Ilex Forest gate; Celadon Dept. Store.
+- TM13 Ice Beam: Seafoam Islands; Goldenrod Game Corner.
+- TM14 Blizzard: Goldenrod Dept. Store.
+- TM15 Hyper Beam: Goldenrod Dept. Store.
+- TM16 Light Screen: Goldenrod Dept. Store.
+- TM17 Protect: Goldenrod Dept. Store.
+- TM18 Rain Dance: Slowpoke Well.
+- TM19 Giga Drain: Erika (Celadon Gym).
+- TM20 Safeguard: Celadon Dept. Store.
+- TM21 Frustration: Goldenrod Dept. Store (Sunday, unhappy Pokémon); Celadon Dept. Store.
+- TM22 Solar Beam: Goldenrod Dept. Store.
+- TM23 Iron Tail: Jasmine (Olivine Gym).
+- TM24 Thunderbolt: Cerulean Cave; Goldenrod Game Corner.
+- TM25 Thunder: Goldenrod Dept. Store.
+- TM26 Earthquake: Victory Road; Battle Frontier (80 BP).
+- TM27 Return: Goldenrod Dept. Store (Sunday, happy Pokémon); Celadon Dept. Store.
+- TM28 Dig: National Park; Celadon Dept. Store.
+- TM29 Psychic: Mr. Psychic (Saffron); Celadon Game Corner.
+- TM30 Shadow Ball: Morty (Ecruteak Gym); Battle Frontier.
+- TM31 Brick Break: Battle Frontier (48 BP).
+- TM32 Double Team: Celadon Game Corner.
+- TM33 Reflect: Goldenrod Dept. Store.
+- TM34 Shock Wave: Lt. Surge (Vermilion Gym).
+- TM35 Flamethrower: Route 28; Goldenrod Game Corner.
+- TM36 Sludge Bomb: Route 43 (house); Battle Frontier.
+- TM37 Sandstorm: Route 27.
+- TM38 Fire Blast: Goldenrod Dept. Store.
+- TM39 Rock Tomb: Union Cave.
+- TM40 Aerial Ace: Mt. Mortar; Battle Frontier.
+- TM41 Torment: Celadon Dept. Store.
+- TM42 Facade: Goldenrod lottery (Friday).
+- TM43 Secret Power: Lake of Rage.
+- TM44 Rest: free from the sleeping man on Route 31 when you deliver the Spearow "Kenya" (from the Goldenrod → Route 35 gate guard); also Goldenrod Game Corner.
+- TM45 Attract: Whitney (Goldenrod Gym); Battle Frontier.
+- TM46 Thief: Team Rocket Hideout.
+- TM47 Steel Wing: Route 28 (house).
+- TM48 Skill Swap: Sabrina (Saffron Gym).
+- TM49 Snatch: Team Rocket Hideout.
+- TM50 Overheat: Blaine (Seafoam Islands).
+- TM51 Roost: Falkner (Violet Gym).
+- TM52 Focus Blast: Goldenrod Dept. Store.
+- TM53 Energy Ball: Battle Frontier (64 BP).
+- TM54 False Swipe: Dark Cave; Goldenrod Dept. Store.
+- TM55 Brine: Celadon Dept. Store.
+- TM56 Fling: Rock Tunnel.
+- TM57 Charge Beam: Power Plant (return the Machine Part); Olivine City; Goldenrod lottery (Wednesday).
+- TM58 Endure: Celadon Game Corner.
+- TM59 Dragon Pulse: Clair (Blackthorn Gym); Battle Frontier.
+- TM60 Drain Punch: Route 39; Goldenrod lottery (Thursday).
+- TM61 Will-O-Wisp: Battle Frontier (32 BP).
+- TM62 Silver Wind: Route 6; Goldenrod lottery (Saturday).
+- TM63 Embargo: Route 34.
+- TM64 Explosion: Underground Path (for a RageCandyBar).
+- TM65 Shadow Claw: Route 42; Goldenrod lottery (Monday).
+- TM66 Payback: Route 35.
+- TM67 Recycle: Celadon City (behind the Pokémon Center).
+- TM68 Giga Impact: Celadon Game Corner.
+- TM69 Rock Polish: Route 10.
+- TM70 Flash: Elder Li (Sprout Tower); Goldenrod Dept. Store.
+- TM71 Stone Edge: Battle Frontier (80 BP).
+- TM72 Avalanche: Ice Path; Celadon Dept. Store.
+- TM73 Thunder Wave: Battle Frontier (32 BP).
+- TM74 Gyro Ball: Celadon Game Corner.
+- TM75 Swords Dance: Goldenrod Game Corner.
+- TM76 Stealth Rock: Mt. Silver; Celadon Dept. Store.
+- TM77 Psych Up: Viridian Forest.
+- TM78 Captivate: Goldenrod Game Corner (gift); Celadon Dept. Store.
+- TM79 Dark Pulse: Victory Road; Celadon Dept. Store.
+- TM80 Rock Slide: Brock (Pewter Gym).
+- TM81 X-Scissor: Battle Frontier (64 BP).
+- TM82 Sleep Talk: Goldenrod Dept. Store (basement).
+- TM83 Natural Gift: Route 39 (Moomoo Farm); Goldenrod Dept. Store.
+- TM84 Poison Jab: Janine (Fuchsia Gym).
+- TM85 Dream Eater: Viridian City.
+- TM86 Grass Knot: Route 11.
+- TM87 Swagger: Glitter Lighthouse; Celadon Dept. Store.
+- TM88 Pluck: Route 40.
+- TM89 U-turn: Bugsy (Azalea Gym); Battle Frontier.
+- TM90 Substitute: Goldenrod Game Corner.
+- TM91 Flash Cannon: Route 9; Goldenrod lottery (Tuesday).
+- TM92 Trick Room: Blue (Viridian Gym).
+- HM01 Cut: Ilex Forest (charcoal maker's boss).
+- HM02 Fly: Chuck's wife (Cianwood).
+- HM03 Surf: Dance Theater, Ecruteak, right after you beat the Rocket Grunt there (Morty not required).
+- HM04 Strength: hiker on Route 42.
+- HM05 Whirlpool: Lance (Team Rocket Hideout).
+- HM06 Rock Smash: man on Route 36.
+- HM07 Waterfall: Ice Path.
+- HM08 Rock Climb: Prof. Oak (Pallet Town, 16 badges).
+
+<!-- fontes: dex.sqlite (machines), notas pokemythology, pokemondb, Serebii -->

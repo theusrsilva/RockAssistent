@@ -46,7 +46,10 @@ export default function TradePage() {
   const [pokemon, setPokemon] = useState<Pokemon[]>([])
   // "Usar na troca" no cofre: o Pokémon já entra no time, indo para o Switch.
   const [party, setParty] = useState<PartyState>(() => {
-    const ids = takeTradeRequest()
+    // Vindo do Boxes com ?pokemon=<id> (o link funciona mesmo depois de recarregar a página).
+    const asked = new URLSearchParams(window.location.search).get('pokemon')
+    const requested = takeTradeRequest()
+    const ids = requested.length > 0 ? requested : asked ? [asked] : []
     return { party: ids, offered: ids }
   })
   const [trainer, setTrainer] = useState<TrainerState>({

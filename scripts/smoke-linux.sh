@@ -6,7 +6,7 @@
 #       confere que ele acha o worker do pacote (seguro, com iw/ip embutidos), fala com o worker
 #       como root e remove o pacote (os dados do usuário ficam).
 #
-#   scripts/smoke-linux.sh appimage dist/TradeRock-*.AppImage
+#   scripts/smoke-linux.sh appimage dist/RockAssistent-*.AppImage
 #       roda o AppImage (extrair e rodar, sem FUSE), instala o worker embutido com o mesmo script que
 #       o app usa (packaging/linux/worker-setup.sh), confere que o app passa a usá-lo e remove.
 #
@@ -83,7 +83,7 @@ case "$KIND" in
     WORK="$HOME_DIR/appimage"
     rm -rf "$WORK" && mkdir -p "$WORK" && cp "$PKG" "$WORK/TradeRock.AppImage" && chown -R "$USER_NAME" "$WORK"
     version=$(su "$USER_NAME" -s /bin/sh -c "cd '$WORK' && TMPDIR='$WORK' APPIMAGE_EXTRACT_AND_RUN=1 ./TradeRock.AppImage --version")
-    [[ $version == "TradeRock "* ]] || fail "o AppImage não rodou: $version"
+    [[ $version == "RockAssistent "* ]] || fail "o AppImage não rodou: $version"
     echo "==> $version"
     su "$USER_NAME" -s /bin/sh -c "cd '$WORK' && ./TradeRock.AppImage --appimage-extract >/dev/null"
     APP="$WORK/squashfs-root"

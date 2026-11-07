@@ -1,0 +1,1232 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Johto",
+    "https://bulbapedia.bulbagarden.net/wiki/Kanto",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo. Johto à esquerda e a metade de Kanto dos jogos gs/c/hgss à direita (o mapa da região do jogo é o de Johto)."
+  ],
+  "region": "johto",
+  "nodes": [
+    {
+      "id": "new-bark-town",
+      "name": "New Bark Town",
+      "kind": "city",
+      "x": 0.5,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "route-29",
+      "name": "Route 29",
+      "kind": "route",
+      "x": 0.46,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "cherrygrove-city",
+      "name": "Cherrygrove City",
+      "kind": "city",
+      "x": 0.42,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "route-30",
+      "name": "Route 30",
+      "kind": "route",
+      "x": 0.42,
+      "y": 0.5,
+      "games": null
+    },
+    {
+      "id": "route-31",
+      "name": "Route 31",
+      "kind": "route",
+      "x": 0.38,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "dark-cave",
+      "name": "Dark Cave",
+      "kind": "dungeon",
+      "x": 0.4,
+      "y": 0.34,
+      "games": null
+    },
+    {
+      "id": "violet-city",
+      "name": "Violet City",
+      "kind": "city",
+      "x": 0.33,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "ruins-of-alph",
+      "name": "Ruins of Alph",
+      "kind": "dungeon",
+      "x": 0.28,
+      "y": 0.5,
+      "games": null
+    },
+    {
+      "id": "route-32",
+      "name": "Route 32",
+      "kind": "route",
+      "x": 0.33,
+      "y": 0.58,
+      "games": null
+    },
+    {
+      "id": "union-cave",
+      "name": "Union Cave",
+      "kind": "dungeon",
+      "x": 0.33,
+      "y": 0.7,
+      "games": null
+    },
+    {
+      "id": "route-33",
+      "name": "Route 33",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "azalea-town",
+      "name": "Azalea Town",
+      "kind": "city",
+      "x": 0.26,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "slowpoke-well",
+      "name": "Slowpoke Well",
+      "kind": "dungeon",
+      "x": 0.26,
+      "y": 0.85,
+      "games": null
+    },
+    {
+      "id": "ilex-forest",
+      "name": "Ilex Forest",
+      "kind": "dungeon",
+      "x": 0.2,
+      "y": 0.74,
+      "games": null
+    },
+    {
+      "id": "route-34",
+      "name": "Route 34",
+      "kind": "route",
+      "x": 0.2,
+      "y": 0.63,
+      "games": null
+    },
+    {
+      "id": "goldenrod-city",
+      "name": "Goldenrod City",
+      "kind": "city",
+      "x": 0.2,
+      "y": 0.53,
+      "games": null
+    },
+    {
+      "id": "route-35",
+      "name": "Route 35",
+      "kind": "route",
+      "x": 0.2,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "national-park",
+      "name": "National Park",
+      "kind": "route",
+      "x": 0.22,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "route-36",
+      "name": "Route 36",
+      "kind": "route",
+      "x": 0.28,
+      "y": 0.36,
+      "games": null
+    },
+    {
+      "id": "route-37",
+      "name": "Route 37",
+      "kind": "route",
+      "x": 0.24,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "ecruteak-city",
+      "name": "Ecruteak City",
+      "kind": "city",
+      "x": 0.24,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "tin-tower",
+      "name": "Tin Tower",
+      "kind": "building",
+      "x": 0.24,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "route-38",
+      "name": "Route 38",
+      "kind": "route",
+      "x": 0.18,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-39",
+      "name": "Route 39",
+      "kind": "route",
+      "x": 0.13,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "olivine-city",
+      "name": "Olivine City",
+      "kind": "city",
+      "x": 0.13,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "route-40",
+      "name": "Route 40",
+      "kind": "sea",
+      "x": 0.1,
+      "y": 0.46,
+      "games": null
+    },
+    {
+      "id": "battle-tower",
+      "name": "Battle Tower",
+      "kind": "building",
+      "x": 0.08,
+      "y": 0.4,
+      "games": [
+        "c"
+      ]
+    },
+    {
+      "id": "battle-frontier",
+      "name": "Battle Frontier",
+      "kind": "building",
+      "x": 0.08,
+      "y": 0.4,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-41",
+      "name": "Route 41",
+      "kind": "sea",
+      "x": 0.06,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "whirl-islands",
+      "name": "Whirl Islands",
+      "kind": "dungeon",
+      "x": 0.07,
+      "y": 0.63,
+      "games": null
+    },
+    {
+      "id": "cianwood-city",
+      "name": "Cianwood City",
+      "kind": "city",
+      "x": 0.02,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "cliff-cave",
+      "name": "Cliff Cave",
+      "kind": "dungeon",
+      "x": 0.02,
+      "y": 0.46,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-47",
+      "name": "Route 47",
+      "kind": "route",
+      "x": 0.02,
+      "y": 0.37,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "embedded-tower",
+      "name": "Embedded Tower",
+      "kind": "building",
+      "x": 0.0,
+      "y": 0.3,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-48",
+      "name": "Route 48",
+      "kind": "route",
+      "x": 0.04,
+      "y": 0.28,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "safari-zone",
+      "name": "Safari Zone",
+      "kind": "route",
+      "x": 0.06,
+      "y": 0.2,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-42",
+      "name": "Route 42",
+      "kind": "route",
+      "x": 0.3,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "mt-mortar",
+      "name": "Mt. Mortar",
+      "kind": "dungeon",
+      "x": 0.34,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "mahogany-town",
+      "name": "Mahogany Town",
+      "kind": "city",
+      "x": 0.38,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-43",
+      "name": "Route 43",
+      "kind": "route",
+      "x": 0.38,
+      "y": 0.14,
+      "games": null
+    },
+    {
+      "id": "lake-of-rage",
+      "name": "Lake of Rage",
+      "kind": "route",
+      "x": 0.38,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "route-44",
+      "name": "Route 44",
+      "kind": "route",
+      "x": 0.43,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "ice-path",
+      "name": "Ice Path",
+      "kind": "dungeon",
+      "x": 0.47,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "blackthorn-city",
+      "name": "Blackthorn City",
+      "kind": "city",
+      "x": 0.47,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "dragons-den",
+      "name": "Dragon's Den",
+      "kind": "dungeon",
+      "x": 0.51,
+      "y": 0.27,
+      "games": null
+    },
+    {
+      "id": "route-45",
+      "name": "Route 45",
+      "kind": "route",
+      "x": 0.48,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-46",
+      "name": "Route 46",
+      "kind": "route",
+      "x": 0.46,
+      "y": 0.51,
+      "games": null
+    },
+    {
+      "id": "route-27",
+      "name": "Route 27",
+      "kind": "sea",
+      "x": 0.54,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "tohjo-falls",
+      "name": "Tohjo Falls",
+      "kind": "dungeon",
+      "x": 0.57,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "route-26",
+      "name": "Route 26",
+      "kind": "route",
+      "x": 0.57,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "x": 0.57,
+      "y": 0.3,
+      "games": null
+    },
+    {
+      "id": "indigo-plateau",
+      "name": "Indigo Plateau",
+      "kind": "city",
+      "x": 0.57,
+      "y": 0.18,
+      "games": null
+    },
+    {
+      "id": "route-28",
+      "name": "Route 28",
+      "kind": "route",
+      "x": 0.61,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "mt-silver",
+      "name": "Mt. Silver",
+      "kind": "dungeon",
+      "x": 0.6,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "kind": "city",
+      "x": 0.694,
+      "y": 0.75,
+      "games": null
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "x": 0.694,
+      "y": 0.65,
+      "games": null
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "kind": "city",
+      "x": 0.694,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "kind": "route",
+      "x": 0.662,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "x": 0.694,
+      "y": 0.45,
+      "games": null
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "kind": "dungeon",
+      "x": 0.708,
+      "y": 0.36,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "pewter-city",
+      "name": "Pewter City",
+      "kind": "city",
+      "x": 0.694,
+      "y": 0.25,
+      "games": null
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "x": 0.741,
+      "y": 0.25,
+      "games": null
+    },
+    {
+      "id": "mt-moon",
+      "name": "Mt. Moon",
+      "kind": "dungeon",
+      "x": 0.777,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "x": 0.813,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "cerulean-city",
+      "name": "Cerulean City",
+      "kind": "city",
+      "x": 0.856,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-24",
+      "name": "Route 24",
+      "kind": "route",
+      "x": 0.856,
+      "y": 0.12,
+      "games": null
+    },
+    {
+      "id": "route-25",
+      "name": "Route 25",
+      "kind": "route",
+      "x": 0.899,
+      "y": 0.08,
+      "games": null
+    },
+    {
+      "id": "cerulean-cave",
+      "name": "Cerulean Cave",
+      "kind": "dungeon",
+      "x": 0.831,
+      "y": 0.15,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "x": 0.856,
+      "y": 0.31,
+      "games": null
+    },
+    {
+      "id": "underground-path-5-6",
+      "name": "Underground Path (Routes 5-6)",
+      "kind": "dungeon",
+      "x": 0.878,
+      "y": 0.37,
+      "games": [
+        "hgss"
+      ]
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "x": 0.856,
+      "y": 0.52,
+      "games": null
+    },
+    {
+      "id": "vermilion-city",
+      "name": "Vermilion City",
+      "kind": "city",
+      "x": 0.856,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "x": 0.899,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "digletts-cave",
+      "name": "Diglett's Cave",
+      "kind": "dungeon",
+      "x": 0.928,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "x": 0.906,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "x": 0.95,
+      "y": 0.28,
+      "games": null
+    },
+    {
+      "id": "rock-tunnel",
+      "name": "Rock Tunnel",
+      "kind": "dungeon",
+      "x": 0.971,
+      "y": 0.33,
+      "games": null
+    },
+    {
+      "id": "power-plant",
+      "name": "Power Plant",
+      "kind": "dungeon",
+      "x": 0.986,
+      "y": 0.22,
+      "games": null
+    },
+    {
+      "id": "lavender-town",
+      "name": "Lavender Town",
+      "kind": "city",
+      "x": 0.95,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "x": 0.906,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "saffron-city",
+      "name": "Saffron City",
+      "kind": "city",
+      "x": 0.856,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "x": 0.82,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "celadon-city",
+      "name": "Celadon City",
+      "kind": "city",
+      "x": 0.784,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "x": 0.741,
+      "y": 0.42,
+      "games": null
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17 (Cycling Road)",
+      "kind": "route",
+      "x": 0.741,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "x": 0.77,
+      "y": 0.8,
+      "games": null
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "x": 0.95,
+      "y": 0.55,
+      "games": null
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "x": 0.928,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "x": 0.899,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "x": 0.856,
+      "y": 0.82,
+      "games": null
+    },
+    {
+      "id": "fuchsia-city",
+      "name": "Fuchsia City",
+      "kind": "city",
+      "x": 0.813,
+      "y": 0.82,
+      "games": null
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "kind": "sea",
+      "x": 0.813,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "kind": "sea",
+      "x": 0.77,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "seafoam-islands",
+      "name": "Seafoam Islands",
+      "kind": "dungeon",
+      "x": 0.737,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "cinnabar-island",
+      "name": "Cinnabar Island",
+      "kind": "city",
+      "x": 0.694,
+      "y": 0.95,
+      "games": null
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "kind": "sea",
+      "x": 0.694,
+      "y": 0.85,
+      "games": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "new-bark-town",
+      "to": "route-29"
+    },
+    {
+      "from": "route-29",
+      "to": "cherrygrove-city"
+    },
+    {
+      "from": "route-29",
+      "to": "route-46"
+    },
+    {
+      "from": "cherrygrove-city",
+      "to": "route-30"
+    },
+    {
+      "from": "route-30",
+      "to": "route-31"
+    },
+    {
+      "from": "route-31",
+      "to": "violet-city"
+    },
+    {
+      "from": "route-31",
+      "to": "dark-cave"
+    },
+    {
+      "from": "dark-cave",
+      "to": "route-45"
+    },
+    {
+      "from": "violet-city",
+      "to": "route-32"
+    },
+    {
+      "from": "violet-city",
+      "to": "route-36"
+    },
+    {
+      "from": "route-32",
+      "to": "ruins-of-alph"
+    },
+    {
+      "from": "route-36",
+      "to": "ruins-of-alph"
+    },
+    {
+      "from": "route-32",
+      "to": "union-cave"
+    },
+    {
+      "from": "union-cave",
+      "to": "route-33"
+    },
+    {
+      "from": "route-33",
+      "to": "azalea-town"
+    },
+    {
+      "from": "azalea-town",
+      "to": "slowpoke-well"
+    },
+    {
+      "from": "azalea-town",
+      "to": "ilex-forest"
+    },
+    {
+      "from": "ilex-forest",
+      "to": "route-34"
+    },
+    {
+      "from": "route-34",
+      "to": "goldenrod-city"
+    },
+    {
+      "from": "goldenrod-city",
+      "to": "route-35"
+    },
+    {
+      "from": "route-35",
+      "to": "national-park"
+    },
+    {
+      "from": "national-park",
+      "to": "route-36"
+    },
+    {
+      "from": "route-36",
+      "to": "route-37"
+    },
+    {
+      "from": "route-37",
+      "to": "ecruteak-city"
+    },
+    {
+      "from": "ecruteak-city",
+      "to": "tin-tower"
+    },
+    {
+      "from": "ecruteak-city",
+      "to": "route-38"
+    },
+    {
+      "from": "route-38",
+      "to": "route-39"
+    },
+    {
+      "from": "route-39",
+      "to": "olivine-city"
+    },
+    {
+      "from": "olivine-city",
+      "to": "route-40"
+    },
+    {
+      "from": "route-40",
+      "to": "battle-tower"
+    },
+    {
+      "from": "route-40",
+      "to": "battle-frontier"
+    },
+    {
+      "from": "route-40",
+      "to": "route-41"
+    },
+    {
+      "from": "route-41",
+      "to": "whirl-islands"
+    },
+    {
+      "from": "route-41",
+      "to": "cianwood-city"
+    },
+    {
+      "from": "cianwood-city",
+      "to": "cliff-cave"
+    },
+    {
+      "from": "cliff-cave",
+      "to": "route-47"
+    },
+    {
+      "from": "route-47",
+      "to": "embedded-tower"
+    },
+    {
+      "from": "route-47",
+      "to": "route-48"
+    },
+    {
+      "from": "route-48",
+      "to": "safari-zone"
+    },
+    {
+      "from": "ecruteak-city",
+      "to": "route-42"
+    },
+    {
+      "from": "route-42",
+      "to": "mt-mortar"
+    },
+    {
+      "from": "mt-mortar",
+      "to": "mahogany-town"
+    },
+    {
+      "from": "mahogany-town",
+      "to": "route-43"
+    },
+    {
+      "from": "route-43",
+      "to": "lake-of-rage"
+    },
+    {
+      "from": "mahogany-town",
+      "to": "route-44"
+    },
+    {
+      "from": "route-44",
+      "to": "ice-path"
+    },
+    {
+      "from": "ice-path",
+      "to": "blackthorn-city"
+    },
+    {
+      "from": "blackthorn-city",
+      "to": "dragons-den"
+    },
+    {
+      "from": "blackthorn-city",
+      "to": "route-45"
+    },
+    {
+      "from": "route-45",
+      "to": "route-46"
+    },
+    {
+      "from": "new-bark-town",
+      "to": "route-27"
+    },
+    {
+      "from": "route-27",
+      "to": "tohjo-falls"
+    },
+    {
+      "from": "tohjo-falls",
+      "to": "route-26"
+    },
+    {
+      "from": "route-26",
+      "to": "victory-road"
+    },
+    {
+      "from": "victory-road",
+      "to": "indigo-plateau"
+    },
+    {
+      "from": "route-28",
+      "to": "victory-road"
+    },
+    {
+      "from": "route-28",
+      "to": "mt-silver"
+    },
+    {
+      "from": "route-22",
+      "to": "victory-road"
+    },
+    {
+      "from": "olivine-city",
+      "to": "vermilion-city"
+    },
+    {
+      "from": "goldenrod-city",
+      "to": "saffron-city"
+    },
+    {
+      "from": "pallet-town",
+      "to": "route-1"
+    },
+    {
+      "from": "route-1",
+      "to": "viridian-city"
+    },
+    {
+      "from": "viridian-city",
+      "to": "route-22"
+    },
+    {
+      "from": "viridian-city",
+      "to": "route-2"
+    },
+    {
+      "from": "route-2",
+      "to": "viridian-forest"
+    },
+    {
+      "from": "viridian-forest",
+      "to": "pewter-city"
+    },
+    {
+      "from": "pewter-city",
+      "to": "route-3"
+    },
+    {
+      "from": "route-3",
+      "to": "mt-moon"
+    },
+    {
+      "from": "mt-moon",
+      "to": "route-4"
+    },
+    {
+      "from": "route-4",
+      "to": "cerulean-city"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-24"
+    },
+    {
+      "from": "route-24",
+      "to": "route-25"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "cerulean-cave"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-5"
+    },
+    {
+      "from": "route-5",
+      "to": "underground-path-5-6"
+    },
+    {
+      "from": "underground-path-5-6",
+      "to": "route-6"
+    },
+    {
+      "from": "route-6",
+      "to": "vermilion-city"
+    },
+    {
+      "from": "cerulean-city",
+      "to": "route-9"
+    },
+    {
+      "from": "route-9",
+      "to": "route-10"
+    },
+    {
+      "from": "route-10",
+      "to": "rock-tunnel"
+    },
+    {
+      "from": "rock-tunnel",
+      "to": "lavender-town"
+    },
+    {
+      "from": "route-10",
+      "to": "power-plant"
+    },
+    {
+      "from": "route-5",
+      "to": "saffron-city"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-6"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-7"
+    },
+    {
+      "from": "saffron-city",
+      "to": "route-8"
+    },
+    {
+      "from": "route-7",
+      "to": "celadon-city"
+    },
+    {
+      "from": "route-8",
+      "to": "lavender-town"
+    },
+    {
+      "from": "celadon-city",
+      "to": "route-16"
+    },
+    {
+      "from": "route-16",
+      "to": "route-17"
+    },
+    {
+      "from": "route-17",
+      "to": "route-18"
+    },
+    {
+      "from": "route-18",
+      "to": "fuchsia-city"
+    },
+    {
+      "from": "lavender-town",
+      "to": "route-12"
+    },
+    {
+      "from": "route-12",
+      "to": "route-13"
+    },
+    {
+      "from": "route-13",
+      "to": "route-14"
+    },
+    {
+      "from": "route-14",
+      "to": "route-15"
+    },
+    {
+      "from": "route-15",
+      "to": "fuchsia-city"
+    },
+    {
+      "from": "fuchsia-city",
+      "to": "safari-zone"
+    },
+    {
+      "from": "fuchsia-city",
+      "to": "route-19"
+    },
+    {
+      "from": "route-19",
+      "to": "route-20"
+    },
+    {
+      "from": "route-20",
+      "to": "seafoam-islands"
+    },
+    {
+      "from": "seafoam-islands",
+      "to": "cinnabar-island"
+    },
+    {
+      "from": "cinnabar-island",
+      "to": "route-21"
+    },
+    {
+      "from": "route-21",
+      "to": "pallet-town"
+    },
+    {
+      "from": "vermilion-city",
+      "to": "route-11"
+    },
+    {
+      "from": "route-11",
+      "to": "route-12"
+    },
+    {
+      "from": "route-11",
+      "to": "digletts-cave"
+    },
+    {
+      "from": "digletts-cave",
+      "to": "route-2"
+    }
+  ]
+}

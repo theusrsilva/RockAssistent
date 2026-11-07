@@ -20,7 +20,7 @@ public sealed record TradeWarning(string Code, IReadOnlyDictionary<string, objec
 /// - src/battle_util.c IsMonDisobedient: Pokémon de outro treinador desobedece acima do nível
 ///   10 / 30 (2ª insígnia) / 50 (4ª) / 70 (6ª); com a 8ª, obedece sempre. Mew/Deoxys sem a flag
 ///   de encontro fatídico nunca obedecem.
-/// - Evolução por troca (<see cref="TradeEvolution"/>).
+/// - Evolução por troca (<see cref="Gen3TradeEvolution"/>).
 /// </summary>
 public static class TradeRules
 {
@@ -50,7 +50,7 @@ public static class TradeRules
                 warnings.Add(new TradeWarning("national_dex_required", Args(("species", p.Species))));
         }
 
-        if (TradeEvolution.EvolvesInto(p.Species, p.HeldItem) is { } target)
+        if (Gen3TradeEvolution.EvolvesInto(p.Species, p.HeldItem) is { } target)
             warnings.Add(new TradeWarning("trade_evolution", Args(("into", target))));
 
         if (me is not null && !p.IsEgg && IsOtherTrainer(p, me))

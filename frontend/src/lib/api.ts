@@ -20,6 +20,8 @@ export class ApiError extends Error {
     public code: string | null,
     public errors: string[],
     public detail: string | null = null,
+    /** Motivo extra de alguns erros ({ error, reason }), como o save_wrong_game da tela Boxes. */
+    public reason: string | null = null,
   ) {
     super(`HTTP ${status}${code ? ` (${code})` : ''}`)
   }
@@ -44,17 +46,19 @@ async function request<T>(method: string, path: string, body?: unknown, signal?:
     let code: string | null = null
     let errors: string[] = []
     let detail: string | null = null
+    let reason: string | null = null
     try {
-      const data = (await response.json()) as { error?: string; errors?: string[]; message?: string }
+      const data = (await response.json()) as { error?: string; errors?: string[]; message?: string; reason?: string | null }
       code = data.error ?? null
       errors = data.errors ?? []
       detail = data.message ?? null
+      reason = data.reason ?? null
     } catch {
       // corpo vazio ou não-JSON
     }
     // Pela rede, o login expirou ou caiu (senha trocada, modo servidor desligado): volta à tela de entrada.
     if (response.status === 401 && code === 'login_required') window.dispatchEvent(new Event(unauthorizedEvent))
-    throw new ApiError(response.status, code, errors, detail)
+    throw new ApiError(response.status, code, errors, detail, reason)
   }
   if (response.status === 204) return undefined as T
   const text = await response.text()
@@ -68,4 +72,14 @@ export const api = {
   delete: <T>(path: string) => request<T>('DELETE', path),
 }
 
-export const spriteUrl = (species: number) => `/api/sprites/${species}`
+/**
+ * Sprite embutido. <form> é o id do pokemon no PokeAPI (Mega, regionais...); o id da própria espécie é a forma padrão.
+ * O backend cai no sprite da espécie quando falta o arquivo da forma ou o shiny.
+ */
+export function spriteUrl(species: number, opts: { shiny?: boolean; form?: number } = {}) {
+  const q = new URLSearchParams()
+  if (opts.shiny) q.set('shiny', '1')
+  if (opts.form && opts.form !== species) q.set('form', String(opts.form))
+  const query = q.toString()
+  return `/api/sprites/${species}${query ? `?${query}` : ''}`
+}

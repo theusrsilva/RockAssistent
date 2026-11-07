@@ -161,7 +161,7 @@ internal sealed class TestDataDir : IDisposable
     }
 }
 
-public sealed class TradeEvolutionTests
+public sealed class Gen3TradeEvolutionTests
 {
     [Theory]
     [InlineData(64, 0, 65)]     // Kadabra evolui sempre
@@ -169,7 +169,7 @@ public sealed class TradeEvolutionTests
     [InlineData(95, 199, 208)]  // Onix com Metal Coat
     [InlineData(366, 193, 368)] // Clamperl com Deep Sea Scale
     public void Evolui(ushort species, ushort item, ushort target) =>
-        Assert.Equal(target, TradeEvolution.EvolvesInto(species, item));
+        Assert.Equal(target, Gen3TradeEvolution.EvolvesInto(species, item));
 
     [Theory]
     [InlineData(64, 195)] // Kadabra com Everstone
@@ -177,5 +177,5 @@ public sealed class TradeEvolutionTests
     [InlineData(123, 187)] // Scyther com o item errado
     [InlineData(150, 0)]  // Mewtwo
     public void Nao_evolui(ushort species, ushort item) =>
-        Assert.Null(TradeEvolution.EvolvesInto(species, item));
+        Assert.Null(Gen3TradeEvolution.EvolvesInto(species, item));
 }

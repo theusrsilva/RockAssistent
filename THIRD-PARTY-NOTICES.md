@@ -1,7 +1,7 @@
 # Componentes de terceiros
 
-O TradeRock é distribuído sob a GNU AGPL-3.0. Ele usa os projetos abaixo, cujas licenças são
-compatíveis com a AGPL-3.0. Licenças conferidas no código-fonte em 2026-09-29.
+O RockAssistent (repositório TradeRock) é distribuído sob a GNU AGPL-3.0. Ele usa os projetos abaixo, cujas licenças são
+compatíveis com a AGPL-3.0. Licenças conferidas no código-fonte em 2026-09-29 (as do RockAssistent em 2026-11-07).
 
 | Projeto | Uso no TradeRock | Licença |
 | --- | --- | --- |
@@ -32,11 +32,35 @@ compatíveis com a AGPL-3.0. Licenças conferidas no código-fonte em 2026-09-29
 | [musl](https://musl.libc.org/) (via [Zig](https://ziglang.org/) 0.16.0) | libc estática do `iw`/`ip` embutidos; o Zig só compila, não é distribuído | MIT |
 | [AppImage/type2-runtime](https://github.com/AppImage/type2-runtime) | Runtime no início do AppImage (monta e roda o app) | MIT; ligado estaticamente a squashfuse (BSD-2-Clause), libfuse 3 (LGPL-2.1), zstd e zlib (BSD/zlib). Fonte no repositório indicado |
 | [GB-Link/GB-Link-Switch-LDN](https://github.com/GB-Link/GB-Link-Switch-LDN) | Referência (não distribuído) | AGPL-3.0, sem código incorporado |
+| [remark-gfm](https://github.com/remarkjs/remark-gfm) 4 | Tabelas e listas do markdown dos guias (com o react-markdown) | MIT |
 | [Material Symbols](https://github.com/google/material-design-icons) (Rounded, via o pacote npm `material-symbols`) | Ícones da interface (arquivo reduzido em `frontend/src/assets/fonts`) | Apache-2.0 |
 | [Nunito](https://github.com/googlefonts/nunito), [Pixelify Sans](https://github.com/eifetx/Pixelify-Sans) e [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) (via `@fontsource`) | Fontes da interface, embutidas no app | SIL OFL 1.1 |
 | [PokeAPI/pokeapi](https://github.com/PokeAPI/pokeapi) | Tipo, força, precisão e categoria dos golpes até a Gen 8 em `worker/traderock_worker/data/moves.json`, para a mini IA das raids (`data/v2/csv/moves.csv`, commit `ed5c11e`, `scripts/fetch-move-data.py`) | BSD-3-Clause |
-| [PokeAPI/sprites](https://github.com/PokeAPI/sprites) | Sprites 1–1025 em `assets/sprites` (1–386 copiados do easyworld/frlg-ldn-trade-esp32; 387–1025 do commit `1dd55c0`, `scripts/fetch-sprites.sh`) | Arte © Nintendo, Game Freak e The Pokémon Company; uso não autorizado por eles |
+| [PokeAPI/pokeapi](https://github.com/PokeAPI/pokeapi) | Pokédex offline `assets/data/dex.sqlite` (espécies, formas, tipos, golpes, habilidades, itens, locais e encontros), gerada no build por `scripts/build-dex.py` a partir dos CSVs de `data/v2/csv` no commit `6ea97b5641faa12e090866e8144ae8f57764fc64` e embutida no app. Texto da licença abaixo | BSD-3-Clause |
+| [PokeAPI/sprites](https://github.com/PokeAPI/sprites) | Sprites 1–1025 em `assets/sprites` (1–386 copiados do easyworld/frlg-ldn-trade-esp32; 387–1025 do commit `1dd55c0`, `scripts/fetch-sprites.sh`), os shiny (`assets/sprites/shiny`) e os das formas alternativas e as versões shiny delas (`assets/sprites/forms`, pelo id do pokemon no PokeAPI), do mesmo commit | Arte © Nintendo, Game Freak e The Pokémon Company; uso não autorizado por eles |
 | [projectpokemon/EventsGallery](https://github.com/projectpokemon/EventsGallery) | Raids de evento do Sword/Shield e do Scarlet/Violet em `assets/raid-events/raid-events.zip` (commits `0595d45` e `bc61f78`, `scripts/fetch-raid-events.sh`) | Sem licença declarada; dados dos eventos oficiais © Nintendo, Game Freak e The Pokémon Company, como os sprites |
+| Dados dos jogos em `assets/data` (chefes, treinadores, áreas, encontros, mapas, métodos de shiny, VGC) e guias em `content/` | Fatos conferidos nas decompilações da [pret](https://github.com/pret) (pokered, pokecrystal, pokeemerald, pokefirered, pokeplatinum, pokeheartgold...) e do pokebw2, no PokeAPI, na Serebii, na Bulbapedia e nos detonados da Pokémon Mythology; nenhum código ou texto copiado (as fontes de cada arquivo estão no campo `source`) | Escritos pelo projeto (AGPL-3.0); nomes e dados dos jogos © Nintendo, Game Freak e The Pokémon Company |
+| Estatísticas do [Smogon](https://www.smogon.com/stats/) e [pokepast.es](https://pokepast.es) | Consultados só quando a pessoa liga a internet opcional (D32); nada deles vem embutido | Não distribuído |
 | Pokémon de demonstração | `assets/demo/mewtwo.pk3` e `deoxys.pk3`, copiados do [easyworld/frlg-ldn-trade-esp32](https://github.com/easyworld/frlg-ldn-trade-esp32) | Fornecidos pelo autor do easyworld |
 
 O TradeRock nunca distribui `prod.keys`, chaves do Switch nem ROMs.
+
+## Licença do PokeAPI (BSD-3-Clause)
+
+Vale para os dados do PokeAPI embutidos no `assets/data/dex.sqlite` e no `worker/traderock_worker/data/moves.json`.
+
+```
+Copyright (c) © 2013–2023 Paul Hallett and PokéAPI contributors (https://github.com/PokeAPI/pokeapi#contributing). Pokémon and Pokémon character names are trademarks of Nintendo.
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+* Neither the name of PokéAPI nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```

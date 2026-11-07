@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace TradeRock.Core.Storage;
 
 /// <summary>
-/// Banco do app. Pokémon, caixas, tags, histórico e treinadores salvos são de um dono
+/// Banco do app. Pokémon, caixas, tags, histórico, treinadores salvos, anexos, hunts e runs de Nuzlocke são de um dono
 /// (<see cref="OwnerScope"/>): as consultas só enxergam os do dono atual e o que é criado vai para ele.
 /// </summary>
 public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbContext(options)
@@ -22,6 +22,12 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<Tag> Tags => Set<Tag>();
     public DbSet<PokemonTag> PokemonTags => Set<PokemonTag>();
     public DbSet<UserAccount> Users => Set<UserAccount>();
+    public DbSet<SaveAttachment> SaveAttachments => Set<SaveAttachment>();
+    public DbSet<ShinyHunt> Hunts => Set<ShinyHunt>();
+    public DbSet<NuzlockeRun> NuzlockeRuns => Set<NuzlockeRun>();
+    public DbSet<NuzlockeMon> NuzlockeMons => Set<NuzlockeMon>();
+    public DbSet<NuzlockeEvent> NuzlockeEvents => Set<NuzlockeEvent>();
+    public DbSet<ActivityRecord> ActivityRecords => Set<ActivityRecord>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -111,6 +117,46 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
         {
             e.HasIndex(u => u.Username).IsUnique();
             e.Property(u => u.Role).HasConversion<string>();
+        });
+
+        model.Entity<SaveAttachment>(e =>
+        {
+            e.HasQueryFilter(a => a.OwnerId == Owner);
+            e.HasIndex(a => new { a.OwnerId, a.SavePath });
+            // Apagar o Pokémon do cofre de vez desfaz o anexo.
+            e.HasOne<StoredPokemon>().WithMany().HasForeignKey(a => a.PokemonId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<ShinyHunt>(e =>
+        {
+            e.HasQueryFilter(h => h.OwnerId == Owner);
+            e.HasIndex(h => new { h.OwnerId, h.StartedAt });
+        });
+
+        model.Entity<NuzlockeRun>(e =>
+        {
+            e.HasQueryFilter(r => r.OwnerId == Owner);
+            e.HasIndex(r => new { r.OwnerId, r.StartedAt });
+        });
+
+        // Os Pokémon e os eventos não têm dono próprio: só se chega a eles pela run (que tem o filtro).
+        model.Entity<NuzlockeMon>(e =>
+        {
+            e.HasIndex(m => m.RunId);
+            e.HasOne<NuzlockeRun>().WithMany().HasForeignKey(m => m.RunId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<NuzlockeEvent>(e =>
+        {
+            e.HasIndex(x => new { x.RunId, x.At });
+            e.HasOne<NuzlockeRun>().WithMany().HasForeignKey(x => x.RunId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<ActivityRecord>(e =>
+        {
+            e.HasQueryFilter(a => a.OwnerId == Owner);
+            e.HasIndex(a => new { a.OwnerId, a.StartedAt });
+            e.Property(a => a.Game).HasConversion<string>();
         });
 
         model.Entity<SettingEntry>(e => e.HasKey(s => s.Key));

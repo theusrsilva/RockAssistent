@@ -1,0 +1,5088 @@
+{
+  "source": [
+    "https://github.com/pret/pokeheartgold/blob/master/files/poketool/trainer/trainers.json",
+    "https://github.com/pret/pokeheartgold/blob/master/include/constants/trainers.h",
+    "https://www.pokemythology.net/detonados/detonado-heartgold-soulsilver/",
+    "https://pokemondb.net/heartgold-soulsilver/gymleaders-elitefour",
+    "https://www.serebii.net/heartgoldsoulsilver/gym-rematch.shtml"
+  ],
+  "items": [
+    {
+      "id": "rival-cherrygrove",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Cherrygrove City",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 158,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Cyndaquil 5; com Totodile: Chikorita 5; pode perder: a história continua",
+      "versions": null
+    },
+    {
+      "id": "sage-li",
+      "kind": "other",
+      "name": "Li",
+      "title": "Elder",
+      "location": "Sprout Tower 3F, Violet City",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 69,
+          "form": 0,
+          "level": 7,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 69,
+          "form": 0,
+          "level": 7,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 163,
+          "form": 0,
+          "level": 10,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 10,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "falkner",
+      "kind": "gym",
+      "name": "Falkner",
+      "title": "Gym Leader",
+      "location": "Violet Gym",
+      "order": 3,
+      "badge": "Zephyr Badge",
+      "party": [
+        {
+          "species": 16,
+          "form": 0,
+          "level": 9,
+          "moves": [
+            "tackle",
+            "sand-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 17,
+          "form": 0,
+          "level": 13,
+          "moves": [
+            "tackle",
+            "roost",
+            "gust"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 13,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "proton-slowpoke-well",
+      "kind": "evil",
+      "name": "Proton",
+      "title": "Team Rocket Executive",
+      "location": "Slowpoke Well, Azalea Town",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 41,
+          "form": 0,
+          "level": 8,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 12,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "bugsy",
+      "kind": "gym",
+      "name": "Bugsy",
+      "title": "Gym Leader",
+      "location": "Azalea Gym",
+      "order": 5,
+      "badge": "Hive Badge",
+      "party": [
+        {
+          "species": 123,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "quick-attack",
+            "leer",
+            "u-turn",
+            "focus-energy"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 14,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "poison-sting"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 11,
+          "form": 0,
+          "level": 15,
+          "moves": [
+            "tackle"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 17,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rival-azalea",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Azalea Town (west exit)",
+      "order": 6,
+      "badge": null,
+      "party": [
+        {
+          "species": 92,
+          "form": 0,
+          "level": 14,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 41,
+          "form": 0,
+          "level": 16,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 159,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem escolheu Cyndaquil; com Chikorita: Gastly 14, Zubat 16, Quilava 18; com Totodile: Gastly 14, Zubat 16, Bayleef 18",
+      "versions": null
+    },
+    {
+      "id": "whitney",
+      "kind": "gym",
+      "name": "Whitney",
+      "title": "Gym Leader",
+      "location": "Goldenrod Gym",
+      "order": 7,
+      "badge": "Plain Badge",
+      "party": [
+        {
+          "species": 35,
+          "form": 0,
+          "level": 17,
+          "moves": [
+            "double-slap",
+            "mimic",
+            "encore",
+            "metronome"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 241,
+          "form": 0,
+          "level": 19,
+          "moves": [
+            "rollout",
+            "attract",
+            "stomp",
+            "milk-drink"
+          ],
+          "ability": null,
+          "item": "lum-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 19,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rival-burned-tower",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Burned Tower, Ecruteak City",
+      "order": 8,
+      "badge": null,
+      "party": [
+        {
+          "species": 92,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "lick",
+            "confuse-ray",
+            "mean-look",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 81,
+          "form": 0,
+          "level": 18,
+          "moves": [
+            "thunder-wave",
+            "thunder-shock",
+            "supersonic",
+            "sonic-boom"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 41,
+          "form": 0,
+          "level": 20,
+          "moves": [
+            "astonish",
+            "supersonic",
+            "bite",
+            "wing-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 159,
+          "form": 0,
+          "level": 22,
+          "moves": [
+            "scary-face",
+            "ice-fang",
+            "water-gun",
+            "bite"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 22,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Gastly 20, Magnemite 18, Zubat 20, Quilava 22; com Totodile: Gastly 20, Magnemite 18, Zubat 20, Bayleef 22",
+      "versions": null
+    },
+    {
+      "id": "rocket-grunt-dance-theater",
+      "kind": "evil",
+      "name": "Grunt",
+      "title": "Team Rocket",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 9,
+      "badge": null,
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 12,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": true,
+      "notes": "golpes padrão do nível; depois da luta o senhor do teatro dá o HM03 (Surf)",
+      "versions": null
+    },
+    {
+      "id": "morty",
+      "kind": "gym",
+      "name": "Morty",
+      "title": "Gym Leader",
+      "location": "Ecruteak Gym",
+      "order": 10,
+      "badge": "Fog Badge",
+      "party": [
+        {
+          "species": 92,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "lick",
+            "spite",
+            "mean-look",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 21,
+          "moves": [
+            "hypnosis",
+            "dream-eater",
+            "curse",
+            "nightmare"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "hypnosis",
+            "shadow-ball",
+            "mean-look",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 23,
+          "moves": [
+            "curse",
+            "mean-look",
+            "sucker-punch",
+            "night-shade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "eusine",
+      "kind": "other",
+      "name": "Eusine",
+      "title": "Mystery Man",
+      "location": "Cianwood City",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 96,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "dream-eater",
+            "hypnosis",
+            "disable",
+            "confusion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "lick",
+            "hypnosis",
+            "mean-look",
+            "curse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 101,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "screech",
+            "sonic-boom",
+            "thunder",
+            "rollout"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "chuck",
+      "kind": "gym",
+      "name": "Chuck",
+      "title": "Gym Leader",
+      "location": "Cianwood Gym",
+      "order": 12,
+      "badge": "Storm Badge",
+      "party": [
+        {
+          "species": 57,
+          "form": 0,
+          "level": 29,
+          "moves": [
+            "leer",
+            "double-team",
+            "focus-punch",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 62,
+          "form": 0,
+          "level": 31,
+          "moves": [
+            "hypnosis",
+            "surf",
+            "focus-punch",
+            "body-slam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 31,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "jasmine",
+      "kind": "gym",
+      "name": "Jasmine",
+      "title": "Gym Leader",
+      "location": "Olivine Gym",
+      "order": 13,
+      "badge": "Mineral Badge",
+      "party": [
+        {
+          "species": 81,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "thunderbolt",
+            "supersonic",
+            "sonic-boom",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 81,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "thunderbolt",
+            "supersonic",
+            "sonic-boom",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 208,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "screech",
+            "sandstorm",
+            "rock-throw",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 35,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "petrel-hideout",
+      "kind": "evil",
+      "name": "Petrel",
+      "title": "Team Rocket Executive",
+      "location": "Team Rocket Hideout, Mahogany Town",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 41,
+          "form": 0,
+          "level": 22,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 20,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 22,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 24,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "ariana-hideout",
+      "kind": "evil",
+      "name": "Ariana",
+      "title": "Team Rocket Executive",
+      "location": "Team Rocket Hideout, Mahogany Town",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "wrap",
+            "poison-sting",
+            "crunch",
+            "glare"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 44,
+          "form": 0,
+          "level": 25,
+          "moves": [
+            "mega-drain",
+            "sweet-scent",
+            "sleep-powder",
+            "acid"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 198,
+          "form": 0,
+          "level": 27,
+          "moves": [
+            "wing-attack",
+            "pursuit",
+            "astonish",
+            "night-shade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": "dupla: Ariana e um Grunt juntos, com o Lance do seu lado",
+      "versions": null
+    },
+    {
+      "id": "pryce",
+      "kind": "gym",
+      "name": "Pryce",
+      "title": "Gym Leader",
+      "location": "Mahogany Gym",
+      "order": 16,
+      "badge": "Glacier Badge",
+      "party": [
+        {
+          "species": 86,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "snore",
+            "hail",
+            "icy-wind",
+            "rest"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 87,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "sleep-talk",
+            "ice-shard",
+            "aurora-beam",
+            "rest"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 221,
+          "form": 0,
+          "level": 34,
+          "moves": [
+            "hail",
+            "ice-fang",
+            "mud-bomb",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "petrel-radio-tower",
+      "kind": "evil",
+      "name": "Petrel",
+      "title": "Team Rocket Executive",
+      "location": "Radio Tower 5F, Goldenrod City (fake director)",
+      "order": 17,
+      "badge": null,
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "tackle",
+            "self-destruct",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "tackle",
+            "self-destruct",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "tackle",
+            "self-destruct",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "tackle",
+            "explosion",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "tackle",
+            "self-destruct",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "tackle",
+            "smog",
+            "sludge",
+            "smokescreen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rival-underground",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Goldenrod Underground",
+      "order": 18,
+      "badge": null,
+      "party": [
+        {
+          "species": 42,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "astonish",
+            "bite",
+            "confuse-ray",
+            "air-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 81,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "supersonic",
+            "spark",
+            "sonic-boom",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 30,
+          "moves": [
+            "confuse-ray",
+            "mean-look",
+            "curse",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 215,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "icy-wind",
+            "quick-attack",
+            "fury-swipes",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "ice-fang",
+            "water-gun",
+            "crunch",
+            "thrash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Golbat 32, Magnemite 30, Haunter 32, Sneasel 34, Quilava 34; com Totodile: Golbat 32, Magnemite 30, Haunter 32, Sneasel 34, Meganium 34",
+      "versions": null
+    },
+    {
+      "id": "proton-radio-tower",
+      "kind": "evil",
+      "name": "Proton",
+      "title": "Team Rocket Executive",
+      "location": "Radio Tower, Goldenrod City",
+      "order": 19,
+      "badge": null,
+      "party": [
+        {
+          "species": 42,
+          "form": 0,
+          "level": 28,
+          "moves": [
+            "leech-life",
+            "bite",
+            "confuse-ray",
+            "wing-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 33,
+          "moves": [
+            "double-hit",
+            "sludge",
+            "smokescreen",
+            "smog"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 33,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "ariana-radio-tower",
+      "kind": "evil",
+      "name": "Ariana",
+      "title": "Team Rocket Executive",
+      "location": "Radio Tower 5F, Goldenrod City",
+      "order": 20,
+      "badge": null,
+      "party": [
+        {
+          "species": 24,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "wrap",
+            "poison-sting",
+            "crunch",
+            "glare"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 45,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "mega-drain",
+            "sweet-scent",
+            "sleep-powder",
+            "acid"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 198,
+          "form": 0,
+          "level": 32,
+          "moves": [
+            "wing-attack",
+            "pursuit",
+            "astonish",
+            "night-shade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "archer-radio-tower",
+      "kind": "evil",
+      "name": "Archer",
+      "title": "Team Rocket Executive",
+      "location": "Radio Tower 5F, Goldenrod City (director's office)",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 228,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "fire-fang",
+            "roar",
+            "bite",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 35,
+          "moves": [
+            "tackle",
+            "sludge",
+            "smokescreen",
+            "haze"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "fire-fang",
+            "smog",
+            "bite",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "clair",
+      "kind": "gym",
+      "name": "Clair",
+      "title": "Gym Leader",
+      "location": "Blackthorn Gym",
+      "order": 22,
+      "badge": "Rising Badge",
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "twister",
+            "dragon-rage",
+            "bite",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "thunder-wave",
+            "fire-blast",
+            "slam",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "thunder-wave",
+            "aqua-tail",
+            "slam",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "smokescreen",
+            "hydro-pump",
+            "hyper-beam",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "kimono-girl-zuki",
+      "kind": "other",
+      "name": "Zuki",
+      "title": "Kimono Girl",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 197,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "last-resort",
+            "dark-pulse",
+            "confuse-ray",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "cinco lutas seguidas, sem curar entre elas",
+      "versions": null
+    },
+    {
+      "id": "kimono-girl-naoko",
+      "kind": "other",
+      "name": "Naoko",
+      "title": "Kimono Girl",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 196,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "last-resort",
+            "psychic",
+            "psych-up",
+            "swift"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "cinco lutas seguidas, sem curar entre elas",
+      "versions": null
+    },
+    {
+      "id": "kimono-girl-miki",
+      "kind": "other",
+      "name": "Miki",
+      "title": "Kimono Girl",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 136,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "last-resort",
+            "fire-blast",
+            "quick-attack",
+            "will-o-wisp"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "cinco lutas seguidas, sem curar entre elas",
+      "versions": null
+    },
+    {
+      "id": "kimono-girl-sayo",
+      "kind": "other",
+      "name": "Sayo",
+      "title": "Kimono Girl",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 135,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "last-resort",
+            "thunderbolt",
+            "double-team",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "cinco lutas seguidas, sem curar entre elas",
+      "versions": null
+    },
+    {
+      "id": "kimono-girl-kuni",
+      "kind": "other",
+      "name": "Kuni",
+      "title": "Kimono Girl",
+      "location": "Dance Theater, Ecruteak City",
+      "order": 27,
+      "badge": null,
+      "party": [
+        {
+          "species": 134,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "last-resort",
+            "surf",
+            "quick-attack",
+            "aurora-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 38,
+      "verified": true,
+      "notes": "cinco lutas seguidas, sem curar entre elas",
+      "versions": null
+    },
+    {
+      "id": "karate-king-kiyo",
+      "kind": "other",
+      "name": "Kiyo",
+      "title": "Karate King",
+      "location": "Mt. Mortar",
+      "order": 28,
+      "badge": null,
+      "party": [
+        {
+          "species": 106,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 34,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 34,
+      "verified": true,
+      "notes": "golpes padrão do nível; luta opcional",
+      "versions": null
+    },
+    {
+      "id": "rival-victory-road",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Victory Road",
+      "order": 29,
+      "badge": null,
+      "party": [
+        {
+          "species": 215,
+          "form": 0,
+          "level": 36,
+          "moves": [
+            "quick-attack",
+            "icy-wind",
+            "feint-attack",
+            "fury-swipes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 38,
+          "moves": [
+            "astonish",
+            "bite",
+            "confuse-ray",
+            "air-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "spark",
+            "supersonic",
+            "thunder-wave",
+            "magnet-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "mean-look",
+            "curse",
+            "shadow-ball",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 37,
+          "moves": [
+            "disable",
+            "psybeam",
+            "recover",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "waterfall",
+            "ice-fang",
+            "crunch",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 36, Golbat 38, Magneton 37, Haunter 37, Kadabra 37, Typhlosion 40; com Totodile: Sneasel 36, Golbat 38, Magneton 37, Haunter 37, Kadabra 37, Meganium 40",
+      "versions": null
+    },
+    {
+      "id": "will",
+      "kind": "elite",
+      "name": "Will",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 30,
+      "badge": null,
+      "party": [
+        {
+          "species": 178,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "u-turn",
+            "me-first",
+            "confuse-ray",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "double-slap",
+            "lovely-kiss",
+            "ice-punch",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "reflect",
+            "hypnosis",
+            "egg-bomb",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "curse",
+            "amnesia",
+            "water-pulse",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 178,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "aerial-ace",
+            "ominous-wind",
+            "confuse-ray",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 42,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "koga",
+      "kind": "elite",
+      "name": "Koga",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 31,
+      "badge": null,
+      "party": [
+        {
+          "species": 168,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "poison-jab",
+            "spider-web",
+            "baton-pass",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 41,
+          "moves": [
+            "supersonic",
+            "gust",
+            "psychic",
+            "toxic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 205,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "protect",
+            "swift",
+            "explosion",
+            "toxic-spikes"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 89,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "minimize",
+            "screech",
+            "gunk-shot",
+            "toxic"
+          ],
+          "ability": null,
+          "item": "black-sludge",
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "double-team",
+            "quick-attack",
+            "wing-attack",
+            "poison-fang"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 44,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "bruno",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 32,
+      "badge": null,
+      "party": [
+        {
+          "species": 237,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "counter",
+            "quick-attack",
+            "dig",
+            "triple-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "swagger",
+            "focus-energy",
+            "high-jump-kick",
+            "blaze-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "thunder-punch",
+            "ice-punch",
+            "fire-punch",
+            "bullet-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "dragon-breath",
+            "earthquake",
+            "sandstorm",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "rock-slide",
+            "foresight",
+            "revenge",
+            "cross-chop"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "karen",
+      "kind": "elite",
+      "name": "Karen",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 33,
+      "badge": null,
+      "party": [
+        {
+          "species": 197,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "double-team",
+            "confuse-ray",
+            "feint-attack",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 45,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "stun-spore",
+            "acid",
+            "moonlight",
+            "petal-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 45,
+          "moves": [
+            "lick",
+            "spite",
+            "focus-blast",
+            "destiny-bond"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 198,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "pluck",
+            "whirlwind",
+            "sucker-punch",
+            "feint-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "nasty-plot",
+            "dark-pulse",
+            "flamethrower",
+            "crunch"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 47,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lance",
+      "kind": "champion",
+      "name": "Lance",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 34,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "flail",
+            "dragon-pulse",
+            "waterfall",
+            "ice-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "thunder-wave",
+            "dragon-rush",
+            "thunder",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "thunder-wave",
+            "dragon-rush",
+            "blizzard",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "aerial-ace",
+            "crunch",
+            "rock-slide",
+            "thunder-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "shadow-claw",
+            "air-slash",
+            "dragon-claw",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "fire-blast",
+            "safeguard",
+            "outrage",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "lt-surge",
+      "kind": "gym",
+      "name": "Lt. Surge",
+      "title": "Gym Leader",
+      "location": "Vermilion Gym",
+      "order": 35,
+      "badge": "Thunder Badge",
+      "party": [
+        {
+          "species": 26,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "thunder-wave",
+            "quick-attack",
+            "shock-wave",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 101,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "thunder-wave",
+            "double-team",
+            "shock-wave",
+            "light-screen"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "supersonic",
+            "double-team",
+            "shock-wave",
+            "mirror-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 101,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "screech",
+            "double-team",
+            "self-destruct",
+            "charge-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 125,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "quick-attack",
+            "shock-wave",
+            "light-screen",
+            "low-kick"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "sabrina",
+      "kind": "gym",
+      "name": "Sabrina",
+      "title": "Gym Leader",
+      "location": "Saffron Gym",
+      "order": 36,
+      "badge": "Marsh Badge",
+      "party": [
+        {
+          "species": 196,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "shadow-ball",
+            "skill-swap",
+            "calm-mind",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "mimic",
+            "light-screen",
+            "skill-swap",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "skill-swap",
+            "psychic",
+            "energy-ball",
+            "reflect"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "erika",
+      "kind": "gym",
+      "name": "Erika",
+      "title": "Gym Leader",
+      "location": "Celadon Gym",
+      "order": 37,
+      "badge": "Rainbow Badge",
+      "party": [
+        {
+          "species": 189,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "u-turn",
+            "leech-seed",
+            "sunny-day",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 114,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "ancient-power",
+            "wring-out",
+            "giga-drain",
+            "sleep-powder"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 71,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "sunny-day",
+            "synthesis",
+            "grass-knot",
+            "leaf-storm"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 182,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "sunny-day",
+            "synthesis",
+            "giga-drain",
+            "solar-beam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "janine",
+      "kind": "gym",
+      "name": "Janine",
+      "title": "Gym Leader",
+      "location": "Fuchsia Gym",
+      "order": 38,
+      "badge": "Soul Badge",
+      "party": [
+        {
+          "species": 169,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "screech",
+            "supersonic",
+            "confuse-ray",
+            "wing-attack"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 44,
+          "moves": [
+            "double-hit",
+            "sludge-bomb",
+            "toxic",
+            "explosion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 168,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "scary-face",
+            "poison-jab",
+            "pin-missile",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 168,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "pin-missile",
+            "poison-jab",
+            "swagger",
+            "night-shade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "sludge-bomb",
+            "double-team",
+            "signal-beam",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rocket-grunt-route-24",
+      "kind": "evil",
+      "name": "Grunt",
+      "title": "Team Rocket",
+      "location": "Route 24 (Nugget Bridge)",
+      "order": 39,
+      "badge": null,
+      "party": [
+        {
+          "species": 42,
+          "form": 0,
+          "level": 39,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 39,
+      "verified": true,
+      "notes": "golpes padrão do nível; o Grunt que roubou a Machine Part da Power Plant",
+      "versions": null
+    },
+    {
+      "id": "misty",
+      "kind": "gym",
+      "name": "Misty",
+      "title": "Gym Leader",
+      "location": "Cerulean Gym",
+      "order": 40,
+      "badge": "Cascade Badge",
+      "party": [
+        {
+          "species": 55,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "water-pulse",
+            "disable",
+            "psych-up",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 195,
+          "form": 0,
+          "level": 49,
+          "moves": [
+            "water-pulse",
+            "amnesia",
+            "earthquake",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "water-pulse",
+            "sing",
+            "ice-beam",
+            "body-slam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "water-pulse",
+            "confuse-ray",
+            "recover",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "brock",
+      "kind": "gym",
+      "name": "Brock",
+      "title": "Gym Leader",
+      "location": "Pewter Gym",
+      "order": 41,
+      "badge": "Boulder Badge",
+      "party": [
+        {
+          "species": 75,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "defense-curl",
+            "rock-slide",
+            "rollout",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 51,
+          "moves": [
+            "sandstorm",
+            "scary-face",
+            "earthquake",
+            "horn-drill"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 139,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "ancient-power",
+            "brine",
+            "protect",
+            "spike-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "iron-tail",
+            "rock-slide",
+            "screech",
+            "sandstorm"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 141,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "rock-slide",
+            "aqua-jet",
+            "endure",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "rival-mt-moon",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Mt. Moon",
+      "order": 42,
+      "badge": null,
+      "party": [
+        {
+          "species": 215,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "quick-attack",
+            "icy-wind",
+            "feint-attack",
+            "shadow-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 47,
+          "moves": [
+            "poison-fang",
+            "bite",
+            "confuse-ray",
+            "air-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "discharge",
+            "supersonic",
+            "thunder-wave",
+            "magnet-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "mean-look",
+            "curse",
+            "shadow-ball",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "disable",
+            "recover",
+            "reflect",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "waterfall",
+            "ice-fang",
+            "crunch",
+            "slash"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 46, Golbat 47, Magneton 46, Gengar 48, Alakazam 48, Typhlosion 50; com Totodile: Sneasel 46, Golbat 47, Magneton 46, Gengar 48, Alakazam 48, Meganium 50",
+      "versions": null
+    },
+    {
+      "id": "clair-dragons-den",
+      "kind": "other",
+      "name": "Clair",
+      "title": "Gym Leader",
+      "location": "Dragon's Den, Blackthorn City",
+      "order": 43,
+      "badge": null,
+      "party": [
+        {
+          "species": 148,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "thunder-wave",
+            "dragon-rush",
+            "thunderbolt",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "yawn",
+            "hydro-pump",
+            "ice-beam",
+            "dragon-breath"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "thunder",
+            "protect",
+            "dragon-breath",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "dupla: Clair e Lance juntos, com o Silver do seu lado",
+      "versions": null
+    },
+    {
+      "id": "lance-dragons-den",
+      "kind": "other",
+      "name": "Lance",
+      "title": "Champion",
+      "location": "Dragon's Den, Blackthorn City",
+      "order": 44,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "thunder-wave",
+            "ice-fang",
+            "waterfall",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "flamethrower",
+            "air-slash",
+            "dragon-claw",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "fire-punch",
+            "safeguard",
+            "draco-meteor",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "dupla: Clair e Lance juntos, com o Silver do seu lado",
+      "versions": null
+    },
+    {
+      "id": "blaine",
+      "kind": "gym",
+      "name": "Blaine",
+      "title": "Gym Leader",
+      "location": "Seafoam Islands (temporary gym)",
+      "order": 45,
+      "badge": "Volcano Badge",
+      "party": [
+        {
+          "species": 219,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sunny-day",
+            "smog",
+            "overheat",
+            "rock-slide"
+          ],
+          "ability": null,
+          "item": "white-herb",
+          "tera_type": null
+        },
+        {
+          "species": 126,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "thunder-punch",
+            "overheat",
+            "sunny-day",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": "white-herb",
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "quick-attack",
+            "flare-blitz",
+            "bounce",
+            "overheat"
+          ],
+          "ability": null,
+          "item": "white-herb",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "blue",
+      "kind": "gym",
+      "name": "Blue",
+      "title": "Gym Leader",
+      "location": "Viridian Gym",
+      "order": 46,
+      "badge": "Earth Badge",
+      "party": [
+        {
+          "species": 103,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "leaf-storm",
+            "psychic",
+            "hypnosis",
+            "trick-room"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "roar",
+            "dragon-pulse",
+            "flare-blitz",
+            "extreme-speed"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 112,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "megahorn",
+            "stone-edge",
+            "thunder-fang",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "ice-fang",
+            "waterfall",
+            "dragon-dance",
+            "return"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "dynamic-punch",
+            "earthquake",
+            "stone-edge",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 18,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "return",
+            "whirlwind",
+            "air-slash",
+            "mirror-move"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": null,
+      "versions": null
+    },
+    {
+      "id": "red",
+      "kind": "other",
+      "name": "Red",
+      "title": "Pokémon Trainer",
+      "location": "Mt. Silver (summit)",
+      "order": 47,
+      "badge": null,
+      "party": [
+        {
+          "species": 25,
+          "form": 0,
+          "level": 88,
+          "moves": [
+            "volt-tackle",
+            "iron-tail",
+            "quick-attack",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": "light-ball",
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 80,
+          "moves": [
+            "blizzard",
+            "brine",
+            "psychic",
+            "body-slam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 143,
+          "form": 0,
+          "level": 82,
+          "moves": [
+            "shadow-ball",
+            "crunch",
+            "blizzard",
+            "giga-impact"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 3,
+          "form": 0,
+          "level": 84,
+          "moves": [
+            "sludge-bomb",
+            "giga-drain",
+            "sleep-powder",
+            "frenzy-plant"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 84,
+          "moves": [
+            "flare-blitz",
+            "air-slash",
+            "blast-burn",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 9,
+          "form": 0,
+          "level": 84,
+          "moves": [
+            "focus-blast",
+            "hydro-cannon",
+            "blizzard",
+            "flash-cannon"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 88,
+      "verified": true,
+      "notes": "luta final do jogo, com as 16 insígnias",
+      "versions": null
+    },
+    {
+      "id": "rival-indigo-plateau",
+      "kind": "rival",
+      "name": "Silver",
+      "title": "Rival",
+      "location": "Indigo Plateau (Pokémon League entrance)",
+      "order": 48,
+      "badge": null,
+      "party": [
+        {
+          "species": 215,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "icy-wind",
+            "shadow-claw",
+            "feint-attack",
+            "metal-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "toxic",
+            "bite",
+            "confuse-ray",
+            "air-cutter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 82,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "discharge",
+            "mirror-shot",
+            "thunder-wave",
+            "magnet-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "dark-pulse",
+            "sludge-bomb",
+            "shadow-ball",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "recover",
+            "focus-blast",
+            "psychic",
+            "reflect"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 160,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "crunch",
+            "aqua-tail",
+            "slash",
+            "ice-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "time para quem escolheu Cyndaquil; com Chikorita: Sneasel 55, Crobat 58, Magneton 55, Gengar 56, Alakazam 56, Typhlosion 60; com Totodile: Sneasel 55, Crobat 58, Magneton 55, Gengar 56, Alakazam 56, Meganium 60; revanche: só às segundas e quartas, uma vez por dia, depois da luta no Mt. Moon",
+      "versions": null
+    },
+    {
+      "id": "will-rematch",
+      "kind": "elite",
+      "name": "Will",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 49,
+      "badge": null,
+      "party": [
+        {
+          "species": 437,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "reflect",
+            "payback",
+            "gravity",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "fake-tears",
+            "lovely-kiss",
+            "blizzard",
+            "dream-eater"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 326,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "confuse-ray",
+            "signal-beam",
+            "power-gem",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "curse",
+            "amnesia",
+            "body-slam",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 282,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "focus-blast",
+            "charge-beam",
+            "calm-mind",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 178,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "quick-attack",
+            "shadow-ball",
+            "confuse-ray",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "revanche no pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "koga-rematch",
+      "kind": "elite",
+      "name": "Koga",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 50,
+      "badge": null,
+      "party": [
+        {
+          "species": 435,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "sucker-punch",
+            "dig",
+            "toxic",
+            "explosion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "double-team",
+            "baton-pass",
+            "psychic",
+            "silver-wind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "cross-chop",
+            "x-scissor",
+            "swagger",
+            "gunk-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 89,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "minimize",
+            "screech",
+            "swagger",
+            "toxic"
+          ],
+          "ability": null,
+          "item": "black-sludge",
+          "tera_type": null
+        },
+        {
+          "species": 169,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "toxic",
+            "mean-look",
+            "fly",
+            "cross-poison"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 317,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "yawn",
+            "amnesia",
+            "pain-split",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": "leftovers",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "revanche no pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "bruno-rematch",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 51,
+      "badge": null,
+      "party": [
+        {
+          "species": 237,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "counter",
+            "quick-attack",
+            "close-combat",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "swagger",
+            "close-combat",
+            "reversal",
+            "blaze-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "substitute",
+            "drain-punch",
+            "close-combat",
+            "bullet-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 297,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "low-kick",
+            "payback",
+            "bullet-punch",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "bullet-punch",
+            "foresight",
+            "stone-edge",
+            "dynamic-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 448,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "extreme-speed",
+            "close-combat",
+            "counter",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "revanche no pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "karen-rematch",
+      "kind": "elite",
+      "name": "Karen",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 52,
+      "badge": null,
+      "party": [
+        {
+          "species": 461,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "ice-shard",
+            "night-slash",
+            "ice-punch",
+            "low-kick"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 442,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "curse",
+            "confuse-ray",
+            "pain-split",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 359,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "night-slash",
+            "psycho-cut",
+            "detect",
+            "perish-song"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "drill-peck",
+            "whirlwind",
+            "sucker-punch",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 63,
+          "moves": [
+            "nasty-plot",
+            "dark-pulse",
+            "flamethrower",
+            "sludge-bomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 197,
+          "form": 0,
+          "level": 64,
+          "moves": [
+            "curse",
+            "payback",
+            "confuse-ray",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 64,
+      "verified": true,
+      "notes": "revanche no pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "lance-rematch",
+      "kind": "champion",
+      "name": "Lance",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 53,
+      "badge": null,
+      "party": [
+        {
+          "species": 373,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "flamethrower",
+            "shadow-claw",
+            "dragon-claw",
+            "rest"
+          ],
+          "ability": null,
+          "item": "lum-berry",
+          "tera_type": null
+        },
+        {
+          "species": 130,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "thunder-wave",
+            "ice-fang",
+            "waterfall",
+            "dragon-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 445,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "swords-dance",
+            "outrage",
+            "earthquake",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 334,
+          "form": 0,
+          "level": 73,
+          "moves": [
+            "perish-song",
+            "dragon-breath",
+            "double-team",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "flamethrower",
+            "air-slash",
+            "dragon-claw",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 75,
+          "moves": [
+            "fire-blast",
+            "safeguard",
+            "draco-meteor",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 75,
+      "verified": true,
+      "notes": "revanche no pós-jogo",
+      "versions": null
+    },
+    {
+      "id": "falkner-rematch",
+      "kind": "gym",
+      "name": "Falkner",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 54,
+      "badge": "Zephyr Badge",
+      "party": [
+        {
+          "species": 398,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "attract",
+            "brave-bird",
+            "close-combat",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 164,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "roost",
+            "air-slash",
+            "shadow-ball",
+            "feather-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 277,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "facade",
+            "protect",
+            "double-team",
+            "endeavor"
+          ],
+          "ability": null,
+          "item": "flame-orb",
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "night-slash",
+            "sucker-punch",
+            "thunder-wave",
+            "dark-pulse"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 279,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "surf",
+            "tailwind",
+            "ice-beam",
+            "hidden-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 18,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "return",
+            "double-team",
+            "swagger",
+            "roost"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "bugsy-rematch",
+      "kind": "gym",
+      "name": "Bugsy",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 55,
+      "badge": "Hive Badge",
+      "party": [
+        {
+          "species": 212,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "bullet-punch",
+            "x-scissor",
+            "swords-dance",
+            "superpower"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 292,
+          "form": 0,
+          "level": 48,
+          "moves": [
+            "toxic",
+            "x-scissor",
+            "shadow-sneak",
+            "swagger"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 469,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "detect",
+            "bug-buzz",
+            "air-slash",
+            "ancient-power"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 127,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "earthquake",
+            "guillotine",
+            "x-scissor",
+            "rock-tomb"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 214,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "close-combat",
+            "megahorn",
+            "stone-edge",
+            "counter"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 416,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "protect",
+            "confuse-ray",
+            "attack-order",
+            "defend-order"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "whitney-rematch",
+      "kind": "gym",
+      "name": "Whitney",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 56,
+      "badge": "Plain Badge",
+      "party": [
+        {
+          "species": 203,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "psychic",
+            "shadow-ball",
+            "calm-mind",
+            "baton-pass"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 463,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "wring-out",
+            "flamethrower",
+            "ice-beam",
+            "thunderbolt"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 400,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "double-team",
+            "charge-beam",
+            "surf",
+            "ice-beam"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 301,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "fake-out",
+            "assist",
+            "calm-mind",
+            "baton-pass"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 36,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "blizzard",
+            "thunder",
+            "fire-blast",
+            "calm-mind"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 241,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "body-slam",
+            "attract",
+            "sleep-talk",
+            "rest"
+          ],
+          "ability": null,
+          "item": "lum-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "morty-rematch",
+      "kind": "gym",
+      "name": "Morty",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 57,
+      "badge": "Fog Badge",
+      "party": [
+        {
+          "species": 426,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "destiny-bond",
+            "substitute",
+            "thunderbolt",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 477,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "pain-split",
+            "will-o-wisp",
+            "substitute",
+            "payback"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 302,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "sucker-punch",
+            "brick-break",
+            "ice-punch",
+            "fake-out"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 429,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "perish-song",
+            "mean-look",
+            "confuse-ray",
+            "astonish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "hypnosis",
+            "confuse-ray",
+            "shadow-ball",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "substitute",
+            "shadow-ball",
+            "thunderbolt",
+            "destiny-bond"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 57,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "chuck-rematch",
+      "kind": "gym",
+      "name": "Chuck",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 58,
+      "badge": "Storm Badge",
+      "party": [
+        {
+          "species": 308,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "high-jump-kick",
+            "psycho-cut",
+            "attract",
+            "thunder-punch"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "mach-punch",
+            "swagger",
+            "focus-punch",
+            "double-team"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "high-jump-kick",
+            "fake-out",
+            "blaze-kick",
+            "bulk-up"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 286,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "substitute",
+            "focus-punch",
+            "drain-punch",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": "toxic-orb",
+          "tera_type": null
+        },
+        {
+          "species": 57,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "close-combat",
+            "payback",
+            "thunder-punch",
+            "swagger"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 62,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "double-team",
+            "waterfall",
+            "focus-punch",
+            "substitute"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "jasmine-rematch",
+      "kind": "gym",
+      "name": "Jasmine",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 59,
+      "badge": "Mineral Badge",
+      "party": [
+        {
+          "species": 376,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "meteor-mash",
+            "bullet-punch",
+            "gravity",
+            "explosion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "zap-cannon",
+            "lock-on",
+            "mirror-coat",
+            "metal-sound"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 227,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "air-slash",
+            "spikes",
+            "night-slash",
+            "steel-wing"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 437,
+          "form": 0,
+          "level": 50,
+          "moves": [
+            "gyro-ball",
+            "hypnosis",
+            "dream-eater",
+            "gravity"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 395,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "hydro-pump",
+            "blizzard",
+            "aqua-jet",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 208,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "stone-edge",
+            "stealth-rock",
+            "roar",
+            "iron-tail"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "pryce-rematch",
+      "kind": "gym",
+      "name": "Pryce",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 60,
+      "badge": "Glacier Badge",
+      "party": [
+        {
+          "species": 460,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "ice-shard",
+            "wood-hammer",
+            "earthquake",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 87,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "dive",
+            "sheer-cold",
+            "sleep-talk",
+            "rest"
+          ],
+          "ability": null,
+          "item": "lum-berry",
+          "tera_type": null
+        },
+        {
+          "species": 362,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "payback",
+            "torment",
+            "attract",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 478,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "ice-shard",
+            "confuse-ray",
+            "attract",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 365,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "hail",
+            "body-slam",
+            "swagger",
+            "blizzard"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 473,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "earthquake",
+            "avalanche",
+            "stone-edge",
+            "double-team"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "clair-rematch",
+      "kind": "gym",
+      "name": "Clair",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 61,
+      "badge": "Rising Badge",
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "dragon-dance",
+            "earthquake",
+            "waterfall",
+            "dragon-pulse"
+          ],
+          "ability": null,
+          "item": "wacan-berry",
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "thunder-wave",
+            "dragon-rush",
+            "thunderbolt",
+            "flamethrower"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "earthquake",
+            "thunder-fang",
+            "rock-slide",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 230,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "yawn",
+            "hydro-pump",
+            "ice-beam",
+            "dragon-breath"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 6,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "shadow-claw",
+            "air-slash",
+            "dragon-claw",
+            "fire-fang"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "thunder",
+            "safeguard",
+            "dragon-breath",
+            "hyper-beam"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "lt-surge-rematch",
+      "kind": "gym",
+      "name": "Lt. Surge",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 62,
+      "badge": "Thunder Badge",
+      "party": [
+        {
+          "species": 26,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "thunder-wave",
+            "quick-attack",
+            "thunderbolt",
+            "grass-knot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 310,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "thunder-wave",
+            "natural-gift",
+            "discharge",
+            "overheat"
+          ],
+          "ability": null,
+          "item": "pinap-berry",
+          "tera_type": null
+        },
+        {
+          "species": 462,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "thunderbolt",
+            "double-team",
+            "magnet-rise",
+            "mirror-shot"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 101,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "thunder-wave",
+            "double-team",
+            "thunderbolt",
+            "explosion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 417,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "quick-attack",
+            "super-fang",
+            "discharge",
+            "sweet-kiss"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 466,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "thunderbolt",
+            "cross-chop",
+            "ice-punch",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "sabrina-rematch",
+      "kind": "gym",
+      "name": "Sabrina",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 63,
+      "badge": "Marsh Badge",
+      "party": [
+        {
+          "species": 65,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "gravity",
+            "focus-blast",
+            "energy-ball",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 196,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "calm-mind",
+            "baton-pass",
+            "shadow-ball",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 122,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "reflect",
+            "skill-swap",
+            "thunder",
+            "psychic"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "blizzard",
+            "perish-song",
+            "psychic",
+            "focus-blast"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 202,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "counter",
+            "mirror-coat",
+            "destiny-bond",
+            "encore"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 475,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "close-combat",
+            "psycho-cut",
+            "night-slash",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "erika-rematch",
+      "kind": "gym",
+      "name": "Erika",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 64,
+      "badge": "Rainbow Badge",
+      "party": [
+        {
+          "species": 275,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "leaf-storm",
+            "sucker-punch",
+            "explosion",
+            "sunny-day"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 189,
+          "form": 0,
+          "level": 53,
+          "moves": [
+            "u-turn",
+            "memento",
+            "sleep-powder",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 71,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "natural-gift",
+            "sludge-bomb",
+            "leaf-storm",
+            "leaf-blade"
+          ],
+          "ability": null,
+          "item": "kelpsy-berry",
+          "tera_type": null
+        },
+        {
+          "species": 182,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "sunny-day",
+            "solar-beam",
+            "giga-drain",
+            "attract"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 465,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "swords-dance",
+            "power-whip",
+            "rock-slide",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 407,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "weather-ball",
+            "energy-ball",
+            "sludge-bomb",
+            "stun-spore"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "janine-rematch",
+      "kind": "gym",
+      "name": "Janine",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 65,
+      "badge": "Soul Badge",
+      "party": [
+        {
+          "species": 169,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "heat-wave",
+            "cross-poison",
+            "confuse-ray",
+            "u-turn"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "thunderbolt",
+            "sludge-bomb",
+            "toxic",
+            "explosion"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 454,
+          "form": 0,
+          "level": 52,
+          "moves": [
+            "cross-chop",
+            "poison-jab",
+            "attract",
+            "substitute"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 168,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "toxic",
+            "bounce",
+            "swagger",
+            "night-shade"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 59,
+          "moves": [
+            "sleep-powder",
+            "double-team",
+            "bug-buzz",
+            "psychic"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 452,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "cross-poison",
+            "confuse-ray",
+            "crunch",
+            "swords-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 59,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "misty-rematch",
+      "kind": "gym",
+      "name": "Misty",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 66,
+      "badge": "Cascade Badge",
+      "party": [
+        {
+          "species": 121,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "thunderbolt",
+            "psychic",
+            "ice-beam",
+            "surf"
+          ],
+          "ability": null,
+          "item": "colbur-berry",
+          "tera_type": null
+        },
+        {
+          "species": 195,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "water-pulse",
+            "amnesia",
+            "earthquake",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "surf",
+            "perish-song",
+            "blizzard",
+            "rain-dance"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 171,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "confuse-ray",
+            "thunderbolt",
+            "surf",
+            "thunder-wave"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 419,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "agility",
+            "ice-fang",
+            "waterfall",
+            "baton-pass"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 350,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "hydro-pump",
+            "ice-beam",
+            "rest",
+            "sleep-talk"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "brock-rematch",
+      "kind": "gym",
+      "name": "Brock",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 67,
+      "badge": "Boulder Badge",
+      "party": [
+        {
+          "species": 76,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "sandstorm",
+            "rock-slide",
+            "rock-polish",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 369,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "head-smash",
+            "aqua-tail",
+            "earthquake",
+            "rest"
+          ],
+          "ability": null,
+          "item": "lum-berry",
+          "tera_type": null
+        },
+        {
+          "species": 139,
+          "form": 0,
+          "level": 56,
+          "moves": [
+            "ancient-power",
+            "brine",
+            "protect",
+            "sandstorm"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 61,
+          "moves": [
+            "stealth-rock",
+            "rock-slide",
+            "rock-polish",
+            "sandstorm"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        },
+        {
+          "species": 141,
+          "form": 0,
+          "level": 55,
+          "moves": [
+            "rock-slide",
+            "aqua-jet",
+            "endure",
+            "giga-drain"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 409,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "earthquake",
+            "stone-edge",
+            "avalanche",
+            "rock-polish"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 61,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "blaine-rematch",
+      "kind": "gym",
+      "name": "Blaine",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 68,
+      "badge": "Volcano Badge",
+      "party": [
+        {
+          "species": 324,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "sunny-day",
+            "yawn",
+            "body-slam",
+            "overheat"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 323,
+          "form": 0,
+          "level": 57,
+          "moves": [
+            "earthquake",
+            "eruption",
+            "solar-beam",
+            "sunny-day"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 60,
+          "moves": [
+            "megahorn",
+            "quick-attack",
+            "overheat",
+            "flare-blitz"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 219,
+          "form": 0,
+          "level": 58,
+          "moves": [
+            "curse",
+            "gyro-ball",
+            "overheat",
+            "stone-edge"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 229,
+          "form": 0,
+          "level": 54,
+          "moves": [
+            "shadow-ball",
+            "dark-pulse",
+            "flamethrower",
+            "sucker-punch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 467,
+          "form": 0,
+          "level": 62,
+          "moves": [
+            "thunderbolt",
+            "low-kick",
+            "flamethrower",
+            "confuse-ray"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "blue-rematch",
+      "kind": "gym",
+      "name": "Blue",
+      "title": "Gym Leader",
+      "location": "Fighting Dojo, Saffron City",
+      "order": 69,
+      "badge": "Earth Badge",
+      "party": [
+        {
+          "species": 103,
+          "form": 0,
+          "level": 67,
+          "moves": [
+            "leaf-storm",
+            "psychic",
+            "explosion",
+            "trick-room"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 69,
+          "moves": [
+            "dynamic-punch",
+            "stone-edge",
+            "fling",
+            "attract"
+          ],
+          "ability": null,
+          "item": "iron-ball",
+          "tera_type": null
+        },
+        {
+          "species": 464,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "megahorn",
+            "stone-edge",
+            "thunder-fang",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 68,
+          "moves": [
+            "flare-blitz",
+            "extreme-speed",
+            "thunder-fang",
+            "crunch"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 248,
+          "form": 0,
+          "level": 70,
+          "moves": [
+            "low-kick",
+            "fire-fang",
+            "rock-slide",
+            "earthquake"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 18,
+          "form": 0,
+          "level": 72,
+          "moves": [
+            "return",
+            "double-team",
+            "air-slash",
+            "steel-wing"
+          ],
+          "ability": null,
+          "item": "sitrus-berry",
+          "tera_type": null
+        }
+      ],
+      "level_cap": 72,
+      "verified": true,
+      "notes": "revanche no Fighting Dojo (Saffron City): com as 16 insígnias, ligue para o líder pelo Pokégear no dia e horário dele",
+      "versions": null
+    },
+    {
+      "id": "giovanni",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Team Rocket Hideout (past, Celebi event)",
+      "order": 70,
+      "badge": null,
+      "party": [
+        {
+          "species": 34,
+          "form": 0,
+          "level": 42,
+          "moves": [
+            "focus-energy",
+            "fury-attack",
+            "double-kick",
+            "shadow-claw"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 115,
+          "form": 0,
+          "level": 40,
+          "moves": [
+            "dizzy-punch",
+            "sucker-punch",
+            "leer",
+            "outrage"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 430,
+          "form": 0,
+          "level": 43,
+          "moves": [
+            "dark-pulse",
+            "nasty-plot",
+            "swagger",
+            "shadow-ball"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 46,
+          "moves": [
+            "earth-power",
+            "superpower",
+            "crunch",
+            "roar"
+          ],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 46,
+      "verified": true,
+      "notes": "evento do Celebi (com o Celebi do evento), viagem ao passado",
+      "versions": null
+    }
+  ]
+}

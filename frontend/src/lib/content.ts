@@ -2,7 +2,8 @@
 // Convenções: comentários HTML são ignorados; blocos <details><summary>X</summary>...</details>
 // viram seções "Saiba mais"; em fases.md, cada "## chave" é uma instrução.
 
-const files = import.meta.glob('../../../content/*/**/*.md', {
+// Os guias (content/*/guides) ficam de fora: são carregados sob demanda por lib/guides.ts.
+const files = import.meta.glob(['../../../content/*/**/*.md', '!../../../content/*/guides/**'], {
   query: '?raw',
   import: 'default',
   eager: true,

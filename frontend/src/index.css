@@ -145,6 +145,11 @@ body {
   line-height: 1.45;
 }
 
+/* A fonte pixel dos títulos (Pixelify Sans) não tem o glifo da ligadura "fi": sem ligaduras nela. */
+.font-display {
+  font-variant-ligatures: none;
+}
+
 @layer components {
   .icon {
     font-family: 'Material Symbols Rounded';

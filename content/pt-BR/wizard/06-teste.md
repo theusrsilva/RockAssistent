@@ -1,4 +1,4 @@
-Com a sala aberta como **Leader** no Switch, o TradeRock procura a sala e tenta **decifrá-la**, sem
+Com a sala aberta como **Leader** no Switch, o RockAssistent procura a sala e tenta **decifrá-la**, sem
 entrar nela. Ele escuta por até 30 segundos e para assim que acha a sala. O resultado diz o que está
 funcionando:
 

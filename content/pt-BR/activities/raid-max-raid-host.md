@@ -3,7 +3,7 @@
 
 1. Clique em **Começar a raid** aqui.
 2. Aperte **Y** para abrir o **Y-Comm** em comunicação local e escolha a raid do **POKELDN** na lista.
-3. Aperte **Ready**: o console conduz a batalha e o Pokémon do TradeRock luta ao seu lado.
+3. Aperte **Ready**: o console conduz a batalha e o Pokémon do RockAssistent luta ao seu lado.
 4. Vença a raid para ganhar as recompensas. Quando a batalha acabar, clique em **Terminei** aqui.
 
 <details><summary>Saiba mais</summary>

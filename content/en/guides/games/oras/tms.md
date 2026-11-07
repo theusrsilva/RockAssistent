@@ -1,0 +1,115 @@
+TMs are reusable. Mirage Spot TMs depend on the day's spot.
+
+:::tms oras
+
+## Where to find
+
+- TM01 Hone Claws: Slateport City (traveling TM salesman).
+- TM02 Dragon Claw: Meteor Falls.
+- TM03 Psyshock: Pacifidlog Town.
+- TM04 Calm Mind: Tate & Liza, Mossdeep Gym.
+- TM05 Roar: Route 114.
+- TM06 Toxic: Fiery Path.
+- TM07 Hail: Shoal Cave.
+- TM08 Bulk Up: Brawly, Dewford Gym.
+- TM09 Venoshock: Mauville City Poké Mart.
+- TM10 Hidden Power: Fortree City.
+- TM11 Sunny Day: Scorched Slab.
+- TM12 Taunt: Trick House prize (Route 110).
+- TM13 Ice Beam: Sea Mauville.
+- TM14 Blizzard: Lilycove Department Store.
+- TM15 Hyper Beam: Lilycove Department Store.
+- TM16 Light Screen: Lilycove Department Store.
+- TM17 Protect: Lilycove Department Store.
+- TM18 Rain Dance: Sea Mauville.
+- TM19 Roost: Winona, Fortree Gym.
+- TM20 Safeguard: Lilycove Department Store.
+- TM21 Frustration: Pacifidlog Town.
+- TM22 Solar Beam: Safari Zone.
+- TM23 Smack Down: Prof. Cozmo, Fallarbor Town.
+- TM24 Thunderbolt: Wattson, Mauville City (after New Mauville).
+- TM25 Thunder: Lilycove Department Store.
+- TM26 Earthquake: Seafloor Cavern.
+- TM27 Return: Pacifidlog Town.
+- TM28 Dig: Route 114.
+- TM29 Psychic: Ever Grande City.
+- TM30 Shadow Ball: Mt. Pyre.
+- TM31 Brick Break: Sootopolis City.
+- TM32 Double Team: Route 113.
+- TM33 Reflect: Lilycove Department Store.
+- TM34 Sludge Wave: Route 132.
+- TM35 Flamethrower: Victory Road.
+- TM36 Sludge Bomb: Dewford Town.
+- TM37 Sandstorm: Route 111.
+- TM38 Fire Blast: Lilycove Department Store.
+- TM39 Rock Tomb: Roxanne, Rustboro Gym.
+- TM40 Aerial Ace: Mauville City Poké Mart.
+- TM41 Torment: Slateport City.
+- TM42 Facade: Mauville City Poké Mart.
+- TM43 Flame Charge: Jagged Pass.
+- TM44 Rest: Lilycove City.
+- TM45 Attract: Verdanturf Town Contest Hall.
+- TM46 Thief: Slateport City (Oceanic Museum).
+- TM47 Low Sweep: Mauville City Poké Mart.
+- TM48 Round: Mauville City café.
+- TM49 Echoed Voice: Route 104.
+- TM50 Overheat: Flannery, Lavaridge Gym.
+- TM51 Steel Wing: Steven, Granite Cave.
+- TM52 Focus Blast: Lilycove Department Store.
+- TM53 Energy Ball: Safari Zone.
+- TM54 False Swipe: Rustboro City.
+- TM55 Scald: Seafloor Cavern.
+- TM56 Fling: Pacifidlog Town.
+- TM57 Charge Beam: Mauville City Poké Mart.
+- TM58 Sky Drop: Mauville City.
+- TM59 Incinerate: Mt. Chimney.
+- TM60 Quash: Mossdeep City.
+- TM61 Will-O-Wisp: Mt. Pyre.
+- TM62 Acrobatics: Route 119.
+- TM63 Embargo: S.S. Tidal.
+- TM64 Explosion: Sky Pillar.
+- TM65 Shadow Claw: Granite Cave.
+- TM66 Payback: Mirage Island.
+- TM67 Retaliate: Norman, Petalburg Gym.
+- TM68 Giga Impact: Lilycove Department Store.
+- TM69 Rock Polish: Jagged Pass.
+- TM70 Flash: Granite Cave.
+- TM71 Stone Edge: Lilycove Department Store.
+- TM72 Volt Switch: Wattson, Mauville Gym.
+- TM73 Thunder Wave: Slateport City (traveling TM salesman).
+- TM74 Gyro Ball: Mirage Forest.
+- TM75 Swords Dance: Lavaridge Town.
+- TM76 Struggle Bug: Slateport City (traveling TM salesman).
+- TM77 Psych Up: Route 133.
+- TM78 Bulldoze: Mauville City Poké Mart.
+- TM79 Frost Breath: Shoal Cave.
+- TM80 Rock Slide: Route 134.
+- TM81 X-Scissor: Victory Road.
+- TM82 Dragon Tail: Mauville City Poké Mart.
+- TM83 Infestation: Sootopolis City.
+- TM84 Poison Jab: Mirage Mountain.
+- TM85 Dream Eater: Route 121.
+- TM86 Grass Knot: Fortree City.
+- TM87 Swagger: Battle Resort.
+- TM88 Sleep Talk: Lilycove City.
+- TM89 U-turn: Mauville Hills (balcony).
+- TM90 Substitute: Mirage Island.
+- TM91 Flash Cannon: Mirage Island.
+- TM92 Trick Room: Trick House prize (Route 110).
+- TM93 Wild Charge: Safari Zone.
+- TM94 Secret Power: Aarune, Route 111.
+- TM95 Snarl: Mirage Cave.
+- TM96 Nature Power: Aarune, Fiery Path.
+- TM97 Dark Pulse: Team Magma/Aqua Hideout.
+- TM98 Power-Up Punch: Mauville City Poké Mart.
+- TM99 Dazzling Gleam: Route 123.
+- TM100 Confide: Slateport City (traveling TM salesman).
+- HM01 Cut: Rustboro City (Cutter's house).
+- HM02 Fly: May/Brendan, Route 119.
+- HM03 Surf: Wally's father, Petalburg City (after Norman).
+- HM04 Strength: May/Brendan, Route 112.
+- HM05 Waterfall: Wallace, Sootopolis Gym.
+- HM06 Rock Smash: Wally's uncle, Mauville City.
+- HM07 Dive: Steven, Mossdeep City.
+
+<!-- fontes: Serebii (TMs de ORAS), notas pokemythology (oras) -->

@@ -1,0 +1,656 @@
+{
+  "source": [
+    "https://www.pokemythology.net/detonados/detonado-lets-go-pikachu-lets-go-eevee/",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/lgpe-pokemythology-notes.md. bosses_before: chefes vencidos desde a área anterior da lista (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "pallet-town",
+      "name": "Pallet Town",
+      "kind": "city",
+      "order": 1,
+      "map_node": "pallet-town",
+      "poke_api_location_id": 86,
+      "bosses_before": []
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "order": 2,
+      "map_node": "route-1",
+      "poke_api_location_id": 88,
+      "bosses_before": [
+        "trace-1-lgp",
+        "trace-1-lge"
+      ]
+    },
+    {
+      "id": "viridian-city",
+      "name": "Viridian City",
+      "kind": "city",
+      "order": 3,
+      "map_node": "viridian-city",
+      "poke_api_location_id": 154,
+      "bosses_before": []
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "kind": "route",
+      "order": 4,
+      "map_node": "route-22",
+      "poke_api_location_id": 102,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "order": 5,
+      "map_node": "route-2",
+      "poke_api_location_id": 99,
+      "bosses_before": [
+        "trace-2-lgp",
+        "trace-2-lge"
+      ]
+    },
+    {
+      "id": "viridian-forest",
+      "name": "Viridian Forest",
+      "kind": "dungeon",
+      "order": 6,
+      "map_node": "viridian-forest",
+      "poke_api_location_id": 155,
+      "bosses_before": []
+    },
+    {
+      "id": "pewter-city",
+      "name": "Pewter City",
+      "kind": "city",
+      "order": 7,
+      "map_node": "pewter-city",
+      "poke_api_location_id": 231,
+      "bosses_before": []
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "order": 8,
+      "map_node": "route-3",
+      "poke_api_location_id": 109,
+      "bosses_before": [
+        "brock"
+      ]
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "order": 9,
+      "map_node": "route-4",
+      "poke_api_location_id": 120,
+      "bosses_before": []
+    },
+    {
+      "id": "mt-moon",
+      "name": "Mt. Moon",
+      "kind": "dungeon",
+      "order": 10,
+      "map_node": "mt-moon",
+      "poke_api_location_id": 80,
+      "bosses_before": []
+    },
+    {
+      "id": "cerulean-city",
+      "name": "Cerulean City",
+      "kind": "city",
+      "order": 11,
+      "map_node": "cerulean-city",
+      "poke_api_location_id": 68,
+      "bosses_before": [
+        "jessie-james-1"
+      ]
+    },
+    {
+      "id": "route-24",
+      "name": "Route 24 (Nugget Bridge)",
+      "kind": "route",
+      "order": 12,
+      "map_node": "route-24",
+      "poke_api_location_id": 103,
+      "bosses_before": []
+    },
+    {
+      "id": "route-25",
+      "name": "Route 25 (Bill's House)",
+      "kind": "route",
+      "order": 13,
+      "map_node": "route-25",
+      "poke_api_location_id": 104,
+      "bosses_before": [
+        "trace-3-lgp",
+        "trace-3-lge"
+      ]
+    },
+    {
+      "id": "cerulean-robbed-house",
+      "name": "Cerulean City (casa vigiada)",
+      "kind": "building",
+      "order": 14,
+      "map_node": "cerulean-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5 (Day Care)",
+      "kind": "route",
+      "order": 15,
+      "map_node": "route-5",
+      "poke_api_location_id": 130,
+      "bosses_before": [
+        "misty"
+      ]
+    },
+    {
+      "id": "underground-path-5-6",
+      "name": "Underground Path (Cerulean–Vermilion)",
+      "kind": "dungeon",
+      "order": 16,
+      "map_node": "underground-path-5-6",
+      "poke_api_location_id": 1113,
+      "bosses_before": []
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "order": 17,
+      "map_node": "route-6",
+      "poke_api_location_id": 131,
+      "bosses_before": []
+    },
+    {
+      "id": "vermilion-city",
+      "name": "Vermilion City",
+      "kind": "city",
+      "order": 18,
+      "map_node": "vermilion-city",
+      "poke_api_location_id": 151,
+      "bosses_before": []
+    },
+    {
+      "id": "diglett-cave",
+      "name": "Diglett's Cave",
+      "kind": "dungeon",
+      "order": 19,
+      "map_node": "digletts-cave",
+      "poke_api_location_id": 73,
+      "bosses_before": []
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "order": 20,
+      "map_node": "route-11",
+      "poke_api_location_id": 90,
+      "bosses_before": []
+    },
+    {
+      "id": "ss-anne",
+      "name": "S.S. Anne",
+      "kind": "building",
+      "order": 21,
+      "map_node": "vermilion-city",
+      "poke_api_location_id": 498,
+      "bosses_before": []
+    },
+    {
+      "id": "vermilion-gym",
+      "name": "Vermilion Gym",
+      "kind": "building",
+      "order": 22,
+      "map_node": "vermilion-city",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "trace-4-lgp",
+        "trace-4-lge"
+      ]
+    },
+    {
+      "id": "pewter-museum-back",
+      "name": "Pewter Museum (área dos fundos)",
+      "kind": "route",
+      "order": 23,
+      "map_node": "pewter-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2-east",
+      "name": "Route 2 (leste)",
+      "kind": "route",
+      "order": 24,
+      "map_node": "route-2",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "mina-1",
+        "lt-surge"
+      ]
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "order": 25,
+      "map_node": "route-9",
+      "poke_api_location_id": 134,
+      "bosses_before": []
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "order": 26,
+      "map_node": "route-10",
+      "poke_api_location_id": 89,
+      "bosses_before": []
+    },
+    {
+      "id": "rock-tunnel",
+      "name": "Rock Tunnel",
+      "kind": "dungeon",
+      "order": 27,
+      "map_node": "rock-tunnel",
+      "poke_api_location_id": 87,
+      "bosses_before": []
+    },
+    {
+      "id": "lavender-town",
+      "name": "Lavender Town",
+      "kind": "city",
+      "order": 28,
+      "map_node": "lavender-town",
+      "poke_api_location_id": 232,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-tower",
+      "name": "Pokémon Tower",
+      "kind": "building",
+      "order": 29,
+      "map_node": "lavender-town",
+      "poke_api_location_id": 160,
+      "bosses_before": []
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "order": 30,
+      "map_node": "route-8",
+      "poke_api_location_id": 133,
+      "bosses_before": []
+    },
+    {
+      "id": "underground-path-7-8",
+      "name": "Underground Path (Lavender–Celadon)",
+      "kind": "dungeon",
+      "order": 31,
+      "map_node": "underground-path-7-8",
+      "poke_api_location_id": 1113,
+      "bosses_before": []
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "order": 32,
+      "map_node": "route-7",
+      "poke_api_location_id": 132,
+      "bosses_before": []
+    },
+    {
+      "id": "celadon-city",
+      "name": "Celadon City",
+      "kind": "city",
+      "order": 33,
+      "map_node": "celadon-city",
+      "poke_api_location_id": 67,
+      "bosses_before": [
+        "trace-5-lgp",
+        "trace-5-lge"
+      ]
+    },
+    {
+      "id": "celadon-department-store",
+      "name": "Celadon Department Store",
+      "kind": "building",
+      "order": 34,
+      "map_node": "celadon-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "game-corner",
+      "name": "Game Corner",
+      "kind": "building",
+      "order": 35,
+      "map_node": "celadon-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "rocket-hideout",
+      "name": "Rocket Hideout",
+      "kind": "dungeon",
+      "order": 36,
+      "map_node": "celadon-city",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "erika"
+      ]
+    },
+    {
+      "id": "saffron-city",
+      "name": "Saffron City",
+      "kind": "city",
+      "order": 37,
+      "map_node": "saffron-city",
+      "poke_api_location_id": 234,
+      "bosses_before": [
+        "jessie-james-2",
+        "archer-1",
+        "giovanni-1",
+        "jessie-james-3"
+      ]
+    },
+    {
+      "id": "fighting-dojo",
+      "name": "Fighting Dojo",
+      "kind": "building",
+      "order": 38,
+      "map_node": "saffron-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "silph-co",
+      "name": "Silph Co.",
+      "kind": "building",
+      "order": 39,
+      "map_node": "saffron-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "saffron-gym",
+      "name": "Saffron Gym",
+      "kind": "building",
+      "order": 40,
+      "map_node": "saffron-city",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "blue-1",
+        "archer-2",
+        "jessie-james-4",
+        "giovanni-2"
+      ]
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "order": 41,
+      "map_node": "route-16",
+      "poke_api_location_id": 95,
+      "bosses_before": [
+        "sabrina"
+      ]
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17 (Pokémon Road)",
+      "kind": "route",
+      "order": 42,
+      "map_node": "route-17",
+      "poke_api_location_id": 96,
+      "bosses_before": []
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "order": 43,
+      "map_node": "route-18",
+      "poke_api_location_id": 97,
+      "bosses_before": []
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "order": 44,
+      "map_node": "route-12",
+      "poke_api_location_id": 91,
+      "bosses_before": []
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "order": 45,
+      "map_node": "route-13",
+      "poke_api_location_id": 92,
+      "bosses_before": []
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "order": 46,
+      "map_node": "route-14",
+      "poke_api_location_id": 93,
+      "bosses_before": []
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "order": 47,
+      "map_node": "route-15",
+      "poke_api_location_id": 94,
+      "bosses_before": []
+    },
+    {
+      "id": "fuchsia-city",
+      "name": "Fuchsia City",
+      "kind": "city",
+      "order": 48,
+      "map_node": "fuchsia-city",
+      "poke_api_location_id": 76,
+      "bosses_before": []
+    },
+    {
+      "id": "go-park",
+      "name": "GO Park Complex",
+      "kind": "building",
+      "order": 49,
+      "map_node": "fuchsia-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "fuchsia-gym",
+      "name": "Fuchsia Gym",
+      "kind": "building",
+      "order": 50,
+      "map_node": "fuchsia-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "celadon-pond",
+      "name": "Celadon City (lagoa)",
+      "kind": "sea",
+      "order": 51,
+      "map_node": "celadon-city",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "koga"
+      ]
+    },
+    {
+      "id": "power-plant",
+      "name": "Power Plant",
+      "kind": "dungeon",
+      "order": 52,
+      "map_node": "power-plant",
+      "poke_api_location_id": 158,
+      "bosses_before": []
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "kind": "sea",
+      "order": 53,
+      "map_node": "route-19",
+      "poke_api_location_id": 98,
+      "bosses_before": []
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "kind": "sea",
+      "order": 54,
+      "map_node": "route-20",
+      "poke_api_location_id": 100,
+      "bosses_before": []
+    },
+    {
+      "id": "seafoam-islands",
+      "name": "Seafoam Islands",
+      "kind": "dungeon",
+      "order": 55,
+      "map_node": "seafoam-islands",
+      "poke_api_location_id": 136,
+      "bosses_before": []
+    },
+    {
+      "id": "cinnabar-island",
+      "name": "Cinnabar Island",
+      "kind": "city",
+      "order": 56,
+      "map_node": "cinnabar-island",
+      "poke_api_location_id": 71,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-mansion",
+      "name": "Pokémon Mansion",
+      "kind": "building",
+      "order": 57,
+      "map_node": "cinnabar-island",
+      "poke_api_location_id": 161,
+      "bosses_before": []
+    },
+    {
+      "id": "cinnabar-gym",
+      "name": "Cinnabar Gym",
+      "kind": "building",
+      "order": 58,
+      "map_node": "cinnabar-island",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "kind": "sea",
+      "order": 59,
+      "map_node": "route-21",
+      "poke_api_location_id": 101,
+      "bosses_before": [
+        "blaine"
+      ]
+    },
+    {
+      "id": "viridian-gym",
+      "name": "Viridian Gym",
+      "kind": "building",
+      "order": 60,
+      "map_node": "viridian-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "route-23",
+      "name": "Route 23",
+      "kind": "route",
+      "order": 61,
+      "map_node": "route-23",
+      "poke_api_location_id": 157,
+      "bosses_before": [
+        "giovanni",
+        "trace-6-lgp",
+        "trace-6-lge"
+      ]
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "order": 62,
+      "map_node": "victory-road",
+      "poke_api_location_id": 152,
+      "bosses_before": []
+    },
+    {
+      "id": "indigo-plateau",
+      "name": "Indigo Plateau",
+      "kind": "building",
+      "order": 63,
+      "map_node": "indigo-plateau",
+      "poke_api_location_id": 233,
+      "bosses_before": []
+    },
+    {
+      "id": "kanto-sky",
+      "name": "Céu de Kanto",
+      "kind": "route",
+      "order": 64,
+      "map_node": null,
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "lorelei",
+        "bruno",
+        "agatha",
+        "lance",
+        "trace-champion-lgp",
+        "trace-champion-lge"
+      ]
+    },
+    {
+      "id": "cerulean-cave",
+      "name": "Cerulean Cave",
+      "kind": "dungeon",
+      "order": 65,
+      "map_node": "cerulean-cave",
+      "poke_api_location_id": 147,
+      "bosses_before": []
+    },
+    {
+      "id": "celadon-condominiums",
+      "name": "Celadon Condominiums",
+      "kind": "building",
+      "order": 66,
+      "map_node": "celadon-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    }
+  ]
+}

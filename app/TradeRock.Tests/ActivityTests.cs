@@ -115,6 +115,24 @@ public sealed class ActivityTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Presente_entregue_vai_para_o_historico()
+    {
+        await Json(await _client.PostAsJsonAsync("/api/activities",
+            new { game = "fire_red", kind = "gift", gift = new { mode = "preset", key = "celebi" } }));
+        Assert.Equal("completed", (await FinishedAsync()).GetProperty("status").GetString());
+
+        // A linha é gravada antes de o fim aparecer em /current.
+        var items = await Json(await _client.GetAsync("/api/history?kind=gift"));
+        var item = Assert.Single(items.EnumerateArray());
+        Assert.Equal("gift", item.GetProperty("kind").GetString());
+        Assert.True(item.GetProperty("ok").GetBoolean());
+        Assert.Equal("Celebi", item.GetProperty("title").GetString());
+        Assert.Equal("completed", item.GetProperty("subtitle").GetString());
+        Assert.Equal("frlg", item.GetProperty("gameKey").GetString());
+        Assert.Empty((await Json(await _client.GetAsync("/api/history?kind=raid"))).EnumerateArray());
+    }
+
+    [Fact]
     public async Task Presente_do_sword_fica_no_ar_ate_encerrar_e_bloqueia_a_troca()
     {
         await Json(await _client.PostAsJsonAsync("/api/activities", new

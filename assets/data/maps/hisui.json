@@ -1,0 +1,1259 @@
+{
+  "source": [
+    "https://bulbapedia.bulbagarden.net/wiki/Hisui",
+    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+  ],
+  "region": "hisui",
+  "nodes": [
+    {
+      "id": "jubilife-village",
+      "name": "Jubilife Village",
+      "kind": "city",
+      "x": 0.04,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "prelude-beach",
+      "name": "Prelude Beach",
+      "kind": "route",
+      "x": 0.06,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "practice-field",
+      "name": "Practice Field",
+      "kind": "route",
+      "x": 0.02,
+      "y": 0.88,
+      "games": null
+    },
+    {
+      "id": "fieldlands-camp",
+      "name": "Fieldlands Camp",
+      "kind": "building",
+      "x": 0.22,
+      "y": 0.72,
+      "games": null
+    },
+    {
+      "id": "aspiration-hill",
+      "name": "Aspiration Hill",
+      "kind": "route",
+      "x": 0.198,
+      "y": 0.749,
+      "games": null
+    },
+    {
+      "id": "horseshoe-plains",
+      "name": "Horseshoe Plains",
+      "kind": "route",
+      "x": 0.167,
+      "y": 0.692,
+      "games": null
+    },
+    {
+      "id": "floaro-gardens",
+      "name": "Floaro Gardens",
+      "kind": "route",
+      "x": 0.117,
+      "y": 0.735,
+      "games": null
+    },
+    {
+      "id": "deertrack-path",
+      "name": "Deertrack Path",
+      "kind": "route",
+      "x": 0.193,
+      "y": 0.646,
+      "games": null
+    },
+    {
+      "id": "windswept-run",
+      "name": "Windswept Run",
+      "kind": "route",
+      "x": 0.27,
+      "y": 0.586,
+      "games": null
+    },
+    {
+      "id": "natures-pantry",
+      "name": "Nature's Pantry",
+      "kind": "route",
+      "x": 0.281,
+      "y": 0.621,
+      "games": null
+    },
+    {
+      "id": "deertrack-heights",
+      "name": "Deertrack Heights",
+      "kind": "route",
+      "x": 0.199,
+      "y": 0.54,
+      "games": null
+    },
+    {
+      "id": "worn-bridge",
+      "name": "Worn Bridge",
+      "kind": "route",
+      "x": 0.129,
+      "y": 0.646,
+      "games": null
+    },
+    {
+      "id": "grueling-grove",
+      "name": "Grueling Grove",
+      "kind": "route",
+      "x": 0.153,
+      "y": 0.606,
+      "games": null
+    },
+    {
+      "id": "oreburrow-tunnel",
+      "name": "Oreburrow Tunnel",
+      "kind": "dungeon",
+      "x": 0.115,
+      "y": 0.595,
+      "games": null
+    },
+    {
+      "id": "the-heartwood",
+      "name": "The Heartwood",
+      "kind": "route",
+      "x": 0.117,
+      "y": 0.518,
+      "games": null
+    },
+    {
+      "id": "grandtree-arena",
+      "name": "Grandtree Arena",
+      "kind": "building",
+      "x": 0.16,
+      "y": 0.48,
+      "games": null
+    },
+    {
+      "id": "tidewater-dam",
+      "name": "Tidewater Dam",
+      "kind": "route",
+      "x": 0.088,
+      "y": 0.685,
+      "games": null
+    },
+    {
+      "id": "obsidian-falls",
+      "name": "Obsidian Falls",
+      "kind": "route",
+      "x": 0.037,
+      "y": 0.643,
+      "games": null
+    },
+    {
+      "id": "lake-verity",
+      "name": "Lake Verity",
+      "kind": "sea",
+      "x": 0.2,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "sandgem-flats",
+      "name": "Sandgem Flats",
+      "kind": "route",
+      "x": 0.131,
+      "y": 0.865,
+      "games": null
+    },
+    {
+      "id": "ramanas-island",
+      "name": "Ramanas Island",
+      "kind": "route",
+      "x": 0.04,
+      "y": 0.98,
+      "games": null
+    },
+    {
+      "id": "mirelands-camp",
+      "name": "Mirelands Camp",
+      "kind": "building",
+      "x": 0.5,
+      "y": 0.76,
+      "games": null
+    },
+    {
+      "id": "golden-lowlands",
+      "name": "Golden Lowlands",
+      "kind": "route",
+      "x": 0.525,
+      "y": 0.823,
+      "games": null
+    },
+    {
+      "id": "bolderoll-slope",
+      "name": "Bolderoll Slope",
+      "kind": "route",
+      "x": 0.489,
+      "y": 0.85,
+      "games": null
+    },
+    {
+      "id": "gapejaw-bog",
+      "name": "Gapejaw Bog",
+      "kind": "route",
+      "x": 0.447,
+      "y": 0.816,
+      "games": null
+    },
+    {
+      "id": "scarlet-bog",
+      "name": "Scarlet Bog",
+      "kind": "route",
+      "x": 0.423,
+      "y": 0.789,
+      "games": null
+    },
+    {
+      "id": "bogbound-camp",
+      "name": "Bogbound Camp",
+      "kind": "building",
+      "x": 0.388,
+      "y": 0.777,
+      "games": null
+    },
+    {
+      "id": "sludge-mound",
+      "name": "Sludge Mound",
+      "kind": "route",
+      "x": 0.363,
+      "y": 0.73,
+      "games": null
+    },
+    {
+      "id": "ursas-ring",
+      "name": "Ursa's Ring",
+      "kind": "route",
+      "x": 0.379,
+      "y": 0.867,
+      "games": null
+    },
+    {
+      "id": "holm-of-trials",
+      "name": "Holm of Trials",
+      "kind": "route",
+      "x": 0.344,
+      "y": 0.857,
+      "games": null
+    },
+    {
+      "id": "diamond-settlement",
+      "name": "Diamond Settlement",
+      "kind": "city",
+      "x": 0.62,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "diamond-heath",
+      "name": "Diamond Heath",
+      "kind": "route",
+      "x": 0.603,
+      "y": 0.652,
+      "games": null
+    },
+    {
+      "id": "cloudpool-ridge",
+      "name": "Cloudpool Ridge",
+      "kind": "route",
+      "x": 0.667,
+      "y": 0.612,
+      "games": null
+    },
+    {
+      "id": "shrouded-ruins",
+      "name": "Shrouded Ruins",
+      "kind": "dungeon",
+      "x": 0.669,
+      "y": 0.648,
+      "games": null
+    },
+    {
+      "id": "cottonsedge-prairie",
+      "name": "Cottonsedge Prairie",
+      "kind": "route",
+      "x": 0.654,
+      "y": 0.732,
+      "games": null
+    },
+    {
+      "id": "droning-meadow",
+      "name": "Droning Meadow",
+      "kind": "route",
+      "x": 0.617,
+      "y": 0.763,
+      "games": null
+    },
+    {
+      "id": "lake-valor",
+      "name": "Lake Valor",
+      "kind": "sea",
+      "x": 0.66,
+      "y": 0.84,
+      "games": null
+    },
+    {
+      "id": "solaceon-ruins",
+      "name": "Solaceon Ruins",
+      "kind": "dungeon",
+      "x": 0.614,
+      "y": 0.725,
+      "games": null
+    },
+    {
+      "id": "brava-arena",
+      "name": "Brava Arena",
+      "kind": "building",
+      "x": 0.74,
+      "y": 0.66,
+      "games": null
+    },
+    {
+      "id": "beachside-camp",
+      "name": "Beachside Camp",
+      "kind": "building",
+      "x": 0.82,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "ginkgo-landing",
+      "name": "Ginkgo Landing",
+      "kind": "route",
+      "x": 0.889,
+      "y": 0.78,
+      "games": null
+    },
+    {
+      "id": "crossing-slope",
+      "name": "Crossing Slope",
+      "kind": "route",
+      "x": 0.873,
+      "y": 0.699,
+      "games": null
+    },
+    {
+      "id": "aipom-hill",
+      "name": "Aipom Hill",
+      "kind": "route",
+      "x": 0.933,
+      "y": 0.667,
+      "games": null
+    },
+    {
+      "id": "coastlands-camp",
+      "name": "Coastlands Camp",
+      "kind": "building",
+      "x": 0.88,
+      "y": 0.6,
+      "games": null
+    },
+    {
+      "id": "bathers-lagoon",
+      "name": "Bathers' Lagoon",
+      "kind": "route",
+      "x": 0.819,
+      "y": 0.593,
+      "games": null
+    },
+    {
+      "id": "hideaway-bay",
+      "name": "Hideaway Bay",
+      "kind": "route",
+      "x": 0.805,
+      "y": 0.559,
+      "games": null
+    },
+    {
+      "id": "deadwood-haunt",
+      "name": "Deadwood Haunt",
+      "kind": "route",
+      "x": 0.837,
+      "y": 0.703,
+      "games": null
+    },
+    {
+      "id": "sands-reach",
+      "name": "Sand's Reach",
+      "kind": "route",
+      "x": 0.875,
+      "y": 0.814,
+      "games": null
+    },
+    {
+      "id": "tombolo-walk",
+      "name": "Tombolo Walk",
+      "kind": "route",
+      "x": 0.823,
+      "y": 0.889,
+      "games": null
+    },
+    {
+      "id": "castaway-shore",
+      "name": "Castaway Shore",
+      "kind": "route",
+      "x": 0.809,
+      "y": 0.855,
+      "games": null
+    },
+    {
+      "id": "windbreak-stand",
+      "name": "Windbreak Stand",
+      "kind": "route",
+      "x": 0.749,
+      "y": 0.809,
+      "games": null
+    },
+    {
+      "id": "veilstone-cape",
+      "name": "Veilstone Cape",
+      "kind": "route",
+      "x": 0.741,
+      "y": 0.854,
+      "games": null
+    },
+    {
+      "id": "tranquility-cove",
+      "name": "Tranquility Cove",
+      "kind": "sea",
+      "x": 0.859,
+      "y": 0.659,
+      "games": null
+    },
+    {
+      "id": "tidal-passage",
+      "name": "Tidal Passage",
+      "kind": "route",
+      "x": 0.815,
+      "y": 0.649,
+      "games": null
+    },
+    {
+      "id": "lunkers-lair",
+      "name": "Lunker's Lair",
+      "kind": "sea",
+      "x": 0.897,
+      "y": 0.673,
+      "games": null
+    },
+    {
+      "id": "seagrass-haven",
+      "name": "Seagrass Haven",
+      "kind": "sea",
+      "x": 0.966,
+      "y": 0.755,
+      "games": null
+    },
+    {
+      "id": "seaside-hollow",
+      "name": "Seaside Hollow",
+      "kind": "dungeon",
+      "x": 0.99,
+      "y": 0.728,
+      "games": null
+    },
+    {
+      "id": "islespy-shore",
+      "name": "Islespy Shore",
+      "kind": "route",
+      "x": 0.99,
+      "y": 0.782,
+      "games": null
+    },
+    {
+      "id": "spring-path",
+      "name": "Spring Path",
+      "kind": "route",
+      "x": 0.92,
+      "y": 0.56,
+      "games": null
+    },
+    {
+      "id": "firespit-island",
+      "name": "Firespit Island",
+      "kind": "route",
+      "x": 0.96,
+      "y": 0.84,
+      "games": null
+    },
+    {
+      "id": "molten-arena",
+      "name": "Molten Arena",
+      "kind": "building",
+      "x": 0.98,
+      "y": 0.92,
+      "games": null
+    },
+    {
+      "id": "lava-dome-sanctum",
+      "name": "Lava Dome Sanctum",
+      "kind": "dungeon",
+      "x": 0.926,
+      "y": 0.872,
+      "games": null
+    },
+    {
+      "id": "highlands-camp",
+      "name": "Highlands Camp",
+      "kind": "building",
+      "x": 0.5,
+      "y": 0.48,
+      "games": null
+    },
+    {
+      "id": "heavenward-lookout",
+      "name": "Heavenward Lookout",
+      "kind": "route",
+      "x": 0.461,
+      "y": 0.524,
+      "games": null
+    },
+    {
+      "id": "wayward-cave",
+      "name": "Wayward Cave",
+      "kind": "dungeon",
+      "x": 0.501,
+      "y": 0.53,
+      "games": null
+    },
+    {
+      "id": "wayward-wood",
+      "name": "Wayward Wood",
+      "kind": "route",
+      "x": 0.505,
+      "y": 0.603,
+      "games": null
+    },
+    {
+      "id": "ancient-quarry",
+      "name": "Ancient Quarry",
+      "kind": "dungeon",
+      "x": 0.467,
+      "y": 0.62,
+      "games": null
+    },
+    {
+      "id": "sonorous-path",
+      "name": "Sonorous Path",
+      "kind": "route",
+      "x": 0.476,
+      "y": 0.438,
+      "games": null
+    },
+    {
+      "id": "lonely-spring",
+      "name": "Lonely Spring",
+      "kind": "route",
+      "x": 0.517,
+      "y": 0.448,
+      "games": null
+    },
+    {
+      "id": "mountain-camp",
+      "name": "Mountain Camp",
+      "kind": "building",
+      "x": 0.48,
+      "y": 0.34,
+      "games": null
+    },
+    {
+      "id": "clamberclaw-cliffs",
+      "name": "Clamberclaw Cliffs",
+      "kind": "route",
+      "x": 0.455,
+      "y": 0.379,
+      "games": null
+    },
+    {
+      "id": "celestica-ruins",
+      "name": "Celestica Ruins",
+      "kind": "dungeon",
+      "x": 0.377,
+      "y": 0.333,
+      "games": null
+    },
+    {
+      "id": "primeval-grotto",
+      "name": "Primeval Grotto",
+      "kind": "dungeon",
+      "x": 0.364,
+      "y": 0.375,
+      "games": null
+    },
+    {
+      "id": "celestica-trail",
+      "name": "Celestica Trail",
+      "kind": "route",
+      "x": 0.409,
+      "y": 0.316,
+      "games": null
+    },
+    {
+      "id": "fabled-spring",
+      "name": "Fabled Spring",
+      "kind": "route",
+      "x": 0.374,
+      "y": 0.264,
+      "games": null
+    },
+    {
+      "id": "bolderoll-ravine",
+      "name": "Bolderoll Ravine",
+      "kind": "route",
+      "x": 0.508,
+      "y": 0.364,
+      "games": null
+    },
+    {
+      "id": "stonetooth-rows",
+      "name": "Stonetooth Rows",
+      "kind": "route",
+      "x": 0.54,
+      "y": 0.349,
+      "games": null
+    },
+    {
+      "id": "sacred-plaza",
+      "name": "Sacred Plaza",
+      "kind": "route",
+      "x": 0.609,
+      "y": 0.403,
+      "games": null
+    },
+    {
+      "id": "cloudcap-pass",
+      "name": "Cloudcap Pass",
+      "kind": "route",
+      "x": 0.604,
+      "y": 0.363,
+      "games": null
+    },
+    {
+      "id": "moonview-arena",
+      "name": "Moonview Arena",
+      "kind": "building",
+      "x": 0.64,
+      "y": 0.38,
+      "games": null
+    },
+    {
+      "id": "snowfields-camp",
+      "name": "Snowfields Camp",
+      "kind": "building",
+      "x": 0.34,
+      "y": 0.18,
+      "games": null
+    },
+    {
+      "id": "whiteout-valley",
+      "name": "Whiteout Valley",
+      "kind": "route",
+      "x": 0.402,
+      "y": 0.12,
+      "games": null
+    },
+    {
+      "id": "crevasse-passage",
+      "name": "Crevasse Passage",
+      "kind": "dungeon",
+      "x": 0.373,
+      "y": 0.089,
+      "games": null
+    },
+    {
+      "id": "bonechill-wastes",
+      "name": "Bonechill Wastes",
+      "kind": "route",
+      "x": 0.354,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "icebound-falls",
+      "name": "Icebound Falls",
+      "kind": "route",
+      "x": 0.458,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "avalanche-slopes",
+      "name": "Avalanche Slopes",
+      "kind": "route",
+      "x": 0.491,
+      "y": 0.025,
+      "games": null
+    },
+    {
+      "id": "ice-column-chamber",
+      "name": "Ice Column Chamber",
+      "kind": "dungeon",
+      "x": 0.543,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "arenas-approach",
+      "name": "Arena's Approach",
+      "kind": "route",
+      "x": 0.311,
+      "y": 0.01,
+      "games": null
+    },
+    {
+      "id": "snowfall-hot-spring",
+      "name": "Snowfall Hot Spring",
+      "kind": "route",
+      "x": 0.524,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "glacier-terrace",
+      "name": "Glacier Terrace",
+      "kind": "route",
+      "x": 0.46,
+      "y": 0.097,
+      "games": null
+    },
+    {
+      "id": "lake-acuity",
+      "name": "Lake Acuity",
+      "kind": "sea",
+      "x": 0.44,
+      "y": 0.04,
+      "games": null
+    },
+    {
+      "id": "icepeak-camp",
+      "name": "Icepeak Camp",
+      "kind": "building",
+      "x": 0.28,
+      "y": 0.08,
+      "games": null
+    },
+    {
+      "id": "icepeak-cavern",
+      "name": "Icepeak Cavern",
+      "kind": "dungeon",
+      "x": 0.204,
+      "y": 0.07,
+      "games": null
+    },
+    {
+      "id": "hearts-crag",
+      "name": "Heart's Crag",
+      "kind": "route",
+      "x": 0.17,
+      "y": 0.1,
+      "games": null
+    },
+    {
+      "id": "pearl-settlement",
+      "name": "Pearl Settlement",
+      "kind": "city",
+      "x": 0.16,
+      "y": 0.06,
+      "games": null
+    },
+    {
+      "id": "avaluggs-legacy",
+      "name": "Avalugg's Legacy",
+      "kind": "route",
+      "x": 0.324,
+      "y": 0.056,
+      "games": null
+    },
+    {
+      "id": "snowpoint-temple",
+      "name": "Snowpoint Temple",
+      "kind": "building",
+      "x": 0.334,
+      "y": 0.101,
+      "games": null
+    },
+    {
+      "id": "icepeak-arena",
+      "name": "Icepeak Arena",
+      "kind": "building",
+      "x": 0.22,
+      "y": 0.02,
+      "games": null
+    },
+    {
+      "id": "secret-hollow",
+      "name": "Secret Hollow",
+      "kind": "dungeon",
+      "x": 0.213,
+      "y": 0.105,
+      "games": null
+    },
+    {
+      "id": "ancient-retreat",
+      "name": "Ancient Retreat",
+      "kind": "building",
+      "x": 0.12,
+      "y": 0.02,
+      "games": null
+    },
+    {
+      "id": "summit-camp",
+      "name": "Summit Camp",
+      "kind": "building",
+      "x": 0.5,
+      "y": 0.26,
+      "games": null
+    },
+    {
+      "id": "stone-portal",
+      "name": "Stone Portal",
+      "kind": "dungeon",
+      "x": 0.455,
+      "y": 0.247,
+      "games": null
+    },
+    {
+      "id": "temple-of-sinnoh",
+      "name": "Temple of Sinnoh",
+      "kind": "building",
+      "x": 0.46,
+      "y": 0.2,
+      "games": null
+    },
+    {
+      "id": "turnback-cave",
+      "name": "Turnback Cave",
+      "kind": "dungeon",
+      "x": 0.253,
+      "y": 0.12,
+      "games": null
+    }
+  ],
+  "edges": [
+    {
+      "from": "jubilife-village",
+      "to": "prelude-beach"
+    },
+    {
+      "from": "prelude-beach",
+      "to": "practice-field"
+    },
+    {
+      "from": "jubilife-village",
+      "to": "fieldlands-camp"
+    },
+    {
+      "from": "fieldlands-camp",
+      "to": "aspiration-hill"
+    },
+    {
+      "from": "aspiration-hill",
+      "to": "horseshoe-plains"
+    },
+    {
+      "from": "horseshoe-plains",
+      "to": "floaro-gardens"
+    },
+    {
+      "from": "horseshoe-plains",
+      "to": "deertrack-path"
+    },
+    {
+      "from": "deertrack-path",
+      "to": "deertrack-heights"
+    },
+    {
+      "from": "deertrack-heights",
+      "to": "grandtree-arena"
+    },
+    {
+      "from": "deertrack-path",
+      "to": "windswept-run"
+    },
+    {
+      "from": "windswept-run",
+      "to": "natures-pantry"
+    },
+    {
+      "from": "horseshoe-plains",
+      "to": "worn-bridge"
+    },
+    {
+      "from": "worn-bridge",
+      "to": "grueling-grove"
+    },
+    {
+      "from": "grueling-grove",
+      "to": "oreburrow-tunnel"
+    },
+    {
+      "from": "grueling-grove",
+      "to": "the-heartwood"
+    },
+    {
+      "from": "the-heartwood",
+      "to": "grandtree-arena"
+    },
+    {
+      "from": "worn-bridge",
+      "to": "tidewater-dam"
+    },
+    {
+      "from": "tidewater-dam",
+      "to": "obsidian-falls"
+    },
+    {
+      "from": "horseshoe-plains",
+      "to": "sandgem-flats"
+    },
+    {
+      "from": "sandgem-flats",
+      "to": "lake-verity"
+    },
+    {
+      "from": "sandgem-flats",
+      "to": "ramanas-island"
+    },
+    {
+      "from": "jubilife-village",
+      "to": "mirelands-camp"
+    },
+    {
+      "from": "mirelands-camp",
+      "to": "golden-lowlands"
+    },
+    {
+      "from": "golden-lowlands",
+      "to": "bolderoll-slope"
+    },
+    {
+      "from": "bolderoll-slope",
+      "to": "gapejaw-bog"
+    },
+    {
+      "from": "gapejaw-bog",
+      "to": "scarlet-bog"
+    },
+    {
+      "from": "scarlet-bog",
+      "to": "bogbound-camp"
+    },
+    {
+      "from": "bogbound-camp",
+      "to": "sludge-mound"
+    },
+    {
+      "from": "gapejaw-bog",
+      "to": "ursas-ring"
+    },
+    {
+      "from": "ursas-ring",
+      "to": "holm-of-trials"
+    },
+    {
+      "from": "mirelands-camp",
+      "to": "diamond-settlement"
+    },
+    {
+      "from": "diamond-settlement",
+      "to": "diamond-heath"
+    },
+    {
+      "from": "diamond-heath",
+      "to": "cloudpool-ridge"
+    },
+    {
+      "from": "cloudpool-ridge",
+      "to": "shrouded-ruins"
+    },
+    {
+      "from": "diamond-heath",
+      "to": "cottonsedge-prairie"
+    },
+    {
+      "from": "cottonsedge-prairie",
+      "to": "droning-meadow"
+    },
+    {
+      "from": "droning-meadow",
+      "to": "lake-valor"
+    },
+    {
+      "from": "cottonsedge-prairie",
+      "to": "solaceon-ruins"
+    },
+    {
+      "from": "cloudpool-ridge",
+      "to": "brava-arena"
+    },
+    {
+      "from": "jubilife-village",
+      "to": "beachside-camp"
+    },
+    {
+      "from": "beachside-camp",
+      "to": "ginkgo-landing"
+    },
+    {
+      "from": "ginkgo-landing",
+      "to": "crossing-slope"
+    },
+    {
+      "from": "crossing-slope",
+      "to": "aipom-hill"
+    },
+    {
+      "from": "aipom-hill",
+      "to": "coastlands-camp"
+    },
+    {
+      "from": "coastlands-camp",
+      "to": "bathers-lagoon"
+    },
+    {
+      "from": "bathers-lagoon",
+      "to": "hideaway-bay"
+    },
+    {
+      "from": "crossing-slope",
+      "to": "deadwood-haunt"
+    },
+    {
+      "from": "ginkgo-landing",
+      "to": "sands-reach"
+    },
+    {
+      "from": "sands-reach",
+      "to": "tombolo-walk"
+    },
+    {
+      "from": "tombolo-walk",
+      "to": "castaway-shore"
+    },
+    {
+      "from": "castaway-shore",
+      "to": "windbreak-stand"
+    },
+    {
+      "from": "windbreak-stand",
+      "to": "veilstone-cape"
+    },
+    {
+      "from": "bathers-lagoon",
+      "to": "tranquility-cove"
+    },
+    {
+      "from": "tranquility-cove",
+      "to": "lunkers-lair"
+    },
+    {
+      "from": "lunkers-lair",
+      "to": "seagrass-haven"
+    },
+    {
+      "from": "seagrass-haven",
+      "to": "seaside-hollow"
+    },
+    {
+      "from": "seagrass-haven",
+      "to": "islespy-shore"
+    },
+    {
+      "from": "islespy-shore",
+      "to": "firespit-island"
+    },
+    {
+      "from": "firespit-island",
+      "to": "molten-arena"
+    },
+    {
+      "from": "firespit-island",
+      "to": "lava-dome-sanctum"
+    },
+    {
+      "from": "coastlands-camp",
+      "to": "spring-path"
+    },
+    {
+      "from": "tranquility-cove",
+      "to": "tidal-passage"
+    },
+    {
+      "from": "jubilife-village",
+      "to": "highlands-camp"
+    },
+    {
+      "from": "highlands-camp",
+      "to": "heavenward-lookout"
+    },
+    {
+      "from": "heavenward-lookout",
+      "to": "wayward-cave"
+    },
+    {
+      "from": "heavenward-lookout",
+      "to": "wayward-wood"
+    },
+    {
+      "from": "wayward-wood",
+      "to": "ancient-quarry"
+    },
+    {
+      "from": "highlands-camp",
+      "to": "sonorous-path"
+    },
+    {
+      "from": "sonorous-path",
+      "to": "lonely-spring"
+    },
+    {
+      "from": "highlands-camp",
+      "to": "mountain-camp"
+    },
+    {
+      "from": "mountain-camp",
+      "to": "clamberclaw-cliffs"
+    },
+    {
+      "from": "clamberclaw-cliffs",
+      "to": "celestica-ruins"
+    },
+    {
+      "from": "celestica-ruins",
+      "to": "primeval-grotto"
+    },
+    {
+      "from": "celestica-ruins",
+      "to": "celestica-trail"
+    },
+    {
+      "from": "celestica-trail",
+      "to": "fabled-spring"
+    },
+    {
+      "from": "mountain-camp",
+      "to": "bolderoll-ravine"
+    },
+    {
+      "from": "bolderoll-ravine",
+      "to": "stonetooth-rows"
+    },
+    {
+      "from": "stonetooth-rows",
+      "to": "sacred-plaza"
+    },
+    {
+      "from": "sacred-plaza",
+      "to": "moonview-arena"
+    },
+    {
+      "from": "sacred-plaza",
+      "to": "cloudcap-pass"
+    },
+    {
+      "from": "mountain-camp",
+      "to": "summit-camp"
+    },
+    {
+      "from": "summit-camp",
+      "to": "stone-portal"
+    },
+    {
+      "from": "stone-portal",
+      "to": "temple-of-sinnoh"
+    },
+    {
+      "from": "jubilife-village",
+      "to": "snowfields-camp"
+    },
+    {
+      "from": "snowfields-camp",
+      "to": "whiteout-valley"
+    },
+    {
+      "from": "whiteout-valley",
+      "to": "crevasse-passage"
+    },
+    {
+      "from": "crevasse-passage",
+      "to": "bonechill-wastes"
+    },
+    {
+      "from": "bonechill-wastes",
+      "to": "icebound-falls"
+    },
+    {
+      "from": "icebound-falls",
+      "to": "avalanche-slopes"
+    },
+    {
+      "from": "avalanche-slopes",
+      "to": "ice-column-chamber"
+    },
+    {
+      "from": "bonechill-wastes",
+      "to": "arenas-approach"
+    },
+    {
+      "from": "arenas-approach",
+      "to": "icepeak-arena"
+    },
+    {
+      "from": "avalanche-slopes",
+      "to": "snowfall-hot-spring"
+    },
+    {
+      "from": "snowfall-hot-spring",
+      "to": "glacier-terrace"
+    },
+    {
+      "from": "glacier-terrace",
+      "to": "lake-acuity"
+    },
+    {
+      "from": "snowfields-camp",
+      "to": "icepeak-camp"
+    },
+    {
+      "from": "icepeak-camp",
+      "to": "icepeak-cavern"
+    },
+    {
+      "from": "icepeak-cavern",
+      "to": "hearts-crag"
+    },
+    {
+      "from": "hearts-crag",
+      "to": "pearl-settlement"
+    },
+    {
+      "from": "icepeak-camp",
+      "to": "avaluggs-legacy"
+    },
+    {
+      "from": "avaluggs-legacy",
+      "to": "snowpoint-temple"
+    },
+    {
+      "from": "icepeak-cavern",
+      "to": "secret-hollow"
+    },
+    {
+      "from": "pearl-settlement",
+      "to": "ancient-retreat"
+    },
+    {
+      "from": "icepeak-camp",
+      "to": "turnback-cave"
+    }
+  ]
+}

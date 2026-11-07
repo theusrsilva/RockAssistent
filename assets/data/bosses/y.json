@@ -1,0 +1,1257 @@
+{
+  "source": [
+    "https://github.com/pret/pokeyellow/blob/master/data/trainers/parties.asm",
+    "https://github.com/pret/pokeyellow/blob/master/data/trainers/special_moves.asm",
+    "https://github.com/pret/pokeyellow/blob/master/scripts/OaksLab.asm",
+    "https://github.com/pret/pokeyellow/blob/master/scripts/Route22.asm",
+    "https://www.pokemythology.net/detonados/detonado-pokemon-yellow/",
+    "https://www.serebii.net/yellow/elitefour.shtml"
+  ],
+  "items": [
+    {
+      "id": "rival-1",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Oak's Lab, Pallet Town",
+      "order": 1,
+      "badge": null,
+      "party": [
+        {
+          "species": 133,
+          "form": 0,
+          "level": 5,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 5,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "rival-2",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 2,
+      "badge": null,
+      "party": [
+        {
+          "species": 21,
+          "form": 0,
+          "level": 9,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 8,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 9,
+      "verified": true,
+      "notes": "golpes padrão do nível; luta opcional",
+      "versions": null
+    },
+    {
+      "id": "brock",
+      "kind": "gym",
+      "name": "Brock",
+      "title": "Gym Leader",
+      "location": "Pewter Gym",
+      "order": 3,
+      "badge": "Boulder Badge",
+      "party": [
+        {
+          "species": 74,
+          "form": 0,
+          "level": 10,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 12,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 12,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Onix 12: Bind (3º), Bide (4º)",
+      "versions": null
+    },
+    {
+      "id": "jessie-james-1",
+      "kind": "evil",
+      "name": "Jessie & James",
+      "title": "Team Rocket",
+      "location": "Mt. Moon B2F",
+      "order": 4,
+      "badge": null,
+      "party": [
+        {
+          "species": 23,
+          "form": 0,
+          "level": 14,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 52,
+          "form": 0,
+          "level": 14,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 109,
+          "form": 0,
+          "level": 14,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 14,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "rival-3",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Cerulean City (north exit, before Nugget Bridge)",
+      "order": 5,
+      "badge": null,
+      "party": [
+        {
+          "species": 21,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 27,
+          "form": 0,
+          "level": 15,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 19,
+          "form": 0,
+          "level": 15,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 17,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 18,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "misty",
+      "kind": "gym",
+      "name": "Misty",
+      "title": "Gym Leader",
+      "location": "Cerulean Gym",
+      "order": 6,
+      "badge": "Cascade Badge",
+      "party": [
+        {
+          "species": 120,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 121,
+          "form": 0,
+          "level": 21,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 21,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Starmie 21: Bubble Beam (4º)",
+      "versions": null
+    },
+    {
+      "id": "rival-4",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "S.S. Anne 2F",
+      "order": 7,
+      "badge": null,
+      "party": [
+        {
+          "species": 21,
+          "form": 0,
+          "level": 19,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 19,
+          "form": 0,
+          "level": 16,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 27,
+          "form": 0,
+          "level": 18,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 20,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "lt-surge",
+      "kind": "gym",
+      "name": "Lt. Surge",
+      "title": "Gym Leader",
+      "location": "Vermilion Gym",
+      "order": 8,
+      "badge": "Thunder Badge",
+      "party": [
+        {
+          "species": 26,
+          "form": 0,
+          "level": 28,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 28,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Raichu 28: Thunderbolt (1º), Mega Punch (2º), Mega Kick (3º), Growl (4º)",
+      "versions": null
+    },
+    {
+      "id": "erika",
+      "kind": "gym",
+      "name": "Erika",
+      "title": "Gym Leader",
+      "location": "Celadon Gym",
+      "order": 9,
+      "badge": "Rainbow Badge",
+      "party": [
+        {
+          "species": 114,
+          "form": 0,
+          "level": 30,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 70,
+          "form": 0,
+          "level": 32,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 44,
+          "form": 0,
+          "level": 32,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 32,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Tangela 30: Mega Drain (3º); Weepinbell 32: Razor Leaf (1º); Gloom 32: Petal Dance (1º)",
+      "versions": null
+    },
+    {
+      "id": "jessie-james-2",
+      "kind": "evil",
+      "name": "Jessie & James",
+      "title": "Team Rocket",
+      "location": "Rocket Hideout B4F",
+      "order": 10,
+      "badge": null,
+      "party": [
+        {
+          "species": 109,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 52,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 23,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "giovanni-hideout",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Rocket Hideout B4F",
+      "order": 11,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 24,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 53,
+          "form": 0,
+          "level": 29,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 29,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "rival-5",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Pokémon Tower 2F",
+      "order": 12,
+      "badge": null,
+      "party": [
+        {
+          "species": 22,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 90,
+          "form": 0,
+          "level": 23,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 37,
+          "form": 0,
+          "level": 22,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 27,
+          "form": 0,
+          "level": 20,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 133,
+          "form": 0,
+          "level": 25,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 25,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Fearow 25, Magnemite 23, Shellder 22, Sandshrew 20, Eevee 25; perdeu no lab (Vaporeon): Fearow 25, Vulpix 23, Magnemite 22, Sandshrew 20, Eevee 25",
+      "versions": null
+    },
+    {
+      "id": "jessie-james-3",
+      "kind": "evil",
+      "name": "Jessie & James",
+      "title": "Team Rocket",
+      "location": "Pokémon Tower 7F",
+      "order": 13,
+      "badge": null,
+      "party": [
+        {
+          "species": 52,
+          "form": 0,
+          "level": 27,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 27,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 110,
+          "form": 0,
+          "level": 27,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 27,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "rival-6",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Silph Co. 7F",
+      "order": 14,
+      "badge": null,
+      "party": [
+        {
+          "species": 28,
+          "form": 0,
+          "level": 38,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 38,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 135,
+          "form": 0,
+          "level": 40,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 40,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 38, Cloyster 35, Magneton 37, Kadabra 35, Flareon 40; perdeu no lab (Vaporeon): Sandslash 38, Magneton 35, Ninetales 37, Kadabra 35, Vaporeon 40",
+      "versions": null
+    },
+    {
+      "id": "jessie-james-4",
+      "kind": "evil",
+      "name": "Jessie & James",
+      "title": "Team Rocket",
+      "location": "Silph Co. 11F",
+      "order": 15,
+      "badge": null,
+      "party": [
+        {
+          "species": 110,
+          "form": 0,
+          "level": 31,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 31,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 52,
+          "form": 0,
+          "level": 31,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 31,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "giovanni-silph",
+      "kind": "evil",
+      "name": "Giovanni",
+      "title": "Team Rocket Boss",
+      "location": "Silph Co. 11F",
+      "order": 16,
+      "badge": null,
+      "party": [
+        {
+          "species": 33,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 53,
+          "form": 0,
+          "level": 35,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 111,
+          "form": 0,
+          "level": 37,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 41,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 41,
+      "verified": true,
+      "notes": "golpes padrão do nível",
+      "versions": null
+    },
+    {
+      "id": "koga",
+      "kind": "gym",
+      "name": "Koga",
+      "title": "Gym Leader",
+      "location": "Fuchsia Gym",
+      "order": 17,
+      "badge": "Soul Badge",
+      "party": [
+        {
+          "species": 48,
+          "form": 0,
+          "level": 44,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 48,
+          "form": 0,
+          "level": 46,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 48,
+          "form": 0,
+          "level": 48,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 49,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Venonat 44: Toxic (1º), Tackle (2º); Venonat 46: Toxic (1º), Supersonic (3º); Venonat 48: Toxic (1º), Double-Edge (2º); Venomoth 50: Leech Life (1º), Double Team (2º), Psychic (3º), Toxic (4º)",
+      "versions": null
+    },
+    {
+      "id": "sabrina",
+      "kind": "gym",
+      "name": "Sabrina",
+      "title": "Gym Leader",
+      "location": "Saffron Gym",
+      "order": 18,
+      "badge": "Marsh Badge",
+      "party": [
+        {
+          "species": 63,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 50,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Abra 50: Flash (1º); Kadabra 50: Kinesis (1º), Psywave (4º); Alakazam 50: Psywave (1º)",
+      "versions": null
+    },
+    {
+      "id": "blaine",
+      "kind": "gym",
+      "name": "Blaine",
+      "title": "Gym Leader",
+      "location": "Cinnabar Gym",
+      "order": 19,
+      "badge": "Volcano Badge",
+      "party": [
+        {
+          "species": 38,
+          "form": 0,
+          "level": 48,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 78,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 59,
+          "form": 0,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 54,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Ninetales 48: Flamethrower (1º), Confuse Ray (4º); Arcanine 54: Flamethrower (1º), Fire Blast (2º), Reflect (3º)",
+      "versions": null
+    },
+    {
+      "id": "giovanni-gym",
+      "kind": "gym",
+      "name": "Giovanni",
+      "title": "Gym Leader",
+      "location": "Viridian Gym",
+      "order": 20,
+      "badge": "Earth Badge",
+      "party": [
+        {
+          "species": 51,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 53,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 31,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 34,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 112,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 55,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Dugtrio 50: Fissure (3º); Persian 53: Double Team (2º); Nidoqueen 53: Earthquake (1º), Thunder (3º); Nidoking 55: Earthquake (1º), Leer (2º), Thunder (3º); Rhydon 55: Rock Slide (1º), Earthquake (4º)",
+      "versions": null
+    },
+    {
+      "id": "rival-7",
+      "kind": "rival",
+      "name": "Blue",
+      "title": "Rival",
+      "location": "Route 22",
+      "order": 21,
+      "badge": null,
+      "party": [
+        {
+          "species": 28,
+          "form": 0,
+          "level": 47,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 102,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 38,
+          "form": 0,
+          "level": 45,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 47,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 64,
+          "form": 0,
+          "level": 50,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 135,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 53,
+      "verified": true,
+      "notes": "golpes padrão do nível; time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 47, Exeggcute 45, Cloyster 45, Magneton 47, Kadabra 50, Flareon 53; perdeu no lab (Vaporeon): Sandslash 47, Exeggcute 45, Magneton 45, Ninetales 47, Kadabra 50, Vaporeon 53",
+      "versions": null
+    },
+    {
+      "id": "lorelei",
+      "kind": "elite",
+      "name": "Lorelei",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 22,
+      "badge": null,
+      "party": [
+        {
+          "species": 87,
+          "form": 0,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 80,
+          "form": 0,
+          "level": 54,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 124,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 131,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 56,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Dewgong 54: Bubble Beam (1º); Cloyster 53: Ice Beam (3º); Slowbro 54: Psychic (1º), Surf (2º); Jynx 56: Lovely Kiss (3º); Lapras 56: Blizzard (3º)",
+      "versions": null
+    },
+    {
+      "id": "bruno",
+      "kind": "elite",
+      "name": "Bruno",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 23,
+      "badge": null,
+      "party": [
+        {
+          "species": 95,
+          "form": 0,
+          "level": 53,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 107,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 106,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 95,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 68,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 58,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Onix 53: Rock Slide (1º), Screech (2º), Dig (4º); Hitmonchan 55: Fire Punch (3º), Double Team (4º); Hitmonlee 55: Double Kick (1º), Mega Kick (2º), Double Team (4º); Onix 56: Rock Slide (1º), Screech (2º), Earthquake (4º); Machamp 58: Karate Chop (2º), Strength (3º)",
+      "versions": null
+    },
+    {
+      "id": "agatha",
+      "kind": "elite",
+      "name": "Agatha",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 24,
+      "badge": null,
+      "party": [
+        {
+          "species": 94,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 42,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 93,
+          "form": 0,
+          "level": 55,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 24,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 94,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 60,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Gengar 56: Substitute (2º), Lick (3º), Mega Drain (4º); Golbat 56: Toxic (2º), Leech Life (4º); Haunter 55: Lick (2º); Arbok 58: Wrap (1º); Gengar 60: Psychic (2º)",
+      "versions": null
+    },
+    {
+      "id": "lance",
+      "kind": "elite",
+      "name": "Lance",
+      "title": "Elite Four",
+      "location": "Indigo Plateau",
+      "order": 25,
+      "badge": null,
+      "party": [
+        {
+          "species": 130,
+          "form": 0,
+          "level": 58,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 148,
+          "form": 0,
+          "level": 56,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 142,
+          "form": 0,
+          "level": 60,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 149,
+          "form": 0,
+          "level": 62,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 62,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Gyarados 58: Dragon Rage (1º); Dragonair 56: Thunder Wave (1º), Thunderbolt (3º); Dragonair 56: Bubble Beam (1º), Wrap (2º), Ice Beam (3º); Aerodactyl 60: Wing Attack (1º), Swift (2º), Fly (3º); Dragonite 62: Blizzard (1º), Fire Blast (2º), Thunder (3º)",
+      "versions": null
+    },
+    {
+      "id": "blue-champion",
+      "kind": "champion",
+      "name": "Blue",
+      "title": "Champion",
+      "location": "Indigo Plateau",
+      "order": 26,
+      "badge": null,
+      "party": [
+        {
+          "species": 28,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 65,
+          "form": 0,
+          "level": 59,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 103,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 91,
+          "form": 0,
+          "level": 61,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 38,
+          "form": 0,
+          "level": 63,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        },
+        {
+          "species": 135,
+          "form": 0,
+          "level": 65,
+          "moves": [],
+          "ability": null,
+          "item": null,
+          "tera_type": null
+        }
+      ],
+      "level_cap": 65,
+      "verified": true,
+      "notes": "golpes padrão do nível, com estes fixos: Sandslash 61: Earthquake (3º); Alakazam 59: Kinesis (4º); Exeggutor 61: Leech Seed (4º); Cloyster 61: Ice Beam (1º); Ninetales 63: Confuse Ray (1º), Fire Spin (4º); Jolteon 65: Quick Attack (3º); time para quem ganhou a 1ª luta (lab) e a da Route 22 (Eevee vira Jolteon); ganhou no lab e perdeu ou pulou a Route 22 (Flareon): Sandslash 61, Alakazam 59, Exeggutor 61, Magneton 61, Cloyster 63, Flareon 65; perdeu no lab (Vaporeon): Sandslash 61, Alakazam 59, Exeggutor 61, Ninetales 61, Magneton 63, Vaporeon 65",
+      "versions": null
+    }
+  ]
+}

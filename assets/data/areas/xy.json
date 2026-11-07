@@ -1,0 +1,672 @@
+{
+  "source": [
+    "https://www.pokemythology.net/ (detonado de xy)",
+    "https://pokeapi.co/docs/v2#locations",
+    "Ordem, nomes e tipo: docs/superpowers/sources/xy-pokemythology-notes.md. bosses_before: cada chefe uma vez, na primeira área da lista depois da luta (a união das áreas visitadas = chefes já vencidos)."
+  ],
+  "items": [
+    {
+      "id": "vaniville-town",
+      "name": "Vaniville Town",
+      "kind": "city",
+      "order": 1,
+      "map_node": "vaniville-town",
+      "poke_api_location_id": 587,
+      "bosses_before": []
+    },
+    {
+      "id": "route-1",
+      "name": "Route 1",
+      "kind": "route",
+      "order": 2,
+      "map_node": "route-1",
+      "poke_api_location_id": 588,
+      "bosses_before": []
+    },
+    {
+      "id": "aquacorde-town",
+      "name": "Aquacorde Town",
+      "kind": "city",
+      "order": 3,
+      "map_node": "aquacorde-town",
+      "poke_api_location_id": 590,
+      "bosses_before": []
+    },
+    {
+      "id": "route-2",
+      "name": "Route 2",
+      "kind": "route",
+      "order": 4,
+      "map_node": "route-2",
+      "poke_api_location_id": 591,
+      "bosses_before": [
+        "shauna-1"
+      ]
+    },
+    {
+      "id": "santalune-forest",
+      "name": "Santalune Forest",
+      "kind": "dungeon",
+      "order": 5,
+      "map_node": "santalune-forest",
+      "poke_api_location_id": 593,
+      "bosses_before": []
+    },
+    {
+      "id": "route-3",
+      "name": "Route 3",
+      "kind": "route",
+      "order": 6,
+      "map_node": "route-3",
+      "poke_api_location_id": 594,
+      "bosses_before": []
+    },
+    {
+      "id": "santalune-city",
+      "name": "Santalune City",
+      "kind": "city",
+      "order": 7,
+      "map_node": "santalune-city",
+      "poke_api_location_id": 596,
+      "bosses_before": []
+    },
+    {
+      "id": "route-22",
+      "name": "Route 22",
+      "kind": "route",
+      "order": 8,
+      "map_node": "route-22",
+      "poke_api_location_id": 655,
+      "bosses_before": [
+        "viola"
+      ]
+    },
+    {
+      "id": "route-4",
+      "name": "Route 4",
+      "kind": "route",
+      "order": 9,
+      "map_node": "route-4",
+      "poke_api_location_id": 597,
+      "bosses_before": []
+    },
+    {
+      "id": "lumiose-city",
+      "name": "Lumiose City",
+      "kind": "city",
+      "order": 10,
+      "map_node": "lumiose-city",
+      "poke_api_location_id": 599,
+      "bosses_before": []
+    },
+    {
+      "id": "route-5",
+      "name": "Route 5",
+      "kind": "route",
+      "order": 11,
+      "map_node": "route-5",
+      "poke_api_location_id": 602,
+      "bosses_before": [
+        "sycamore-1"
+      ]
+    },
+    {
+      "id": "camphrier-town",
+      "name": "Camphrier Town",
+      "kind": "city",
+      "order": 12,
+      "map_node": "camphrier-town",
+      "poke_api_location_id": 604,
+      "bosses_before": [
+        "tierno-1"
+      ]
+    },
+    {
+      "id": "route-6",
+      "name": "Route 6",
+      "kind": "route",
+      "order": 13,
+      "map_node": "route-6",
+      "poke_api_location_id": 606,
+      "bosses_before": []
+    },
+    {
+      "id": "parfum-palace",
+      "name": "Parfum Palace",
+      "kind": "building",
+      "order": 14,
+      "map_node": "parfum-palace",
+      "poke_api_location_id": 608,
+      "bosses_before": []
+    },
+    {
+      "id": "route-7",
+      "name": "Route 7",
+      "kind": "route",
+      "order": 15,
+      "map_node": "route-7",
+      "poke_api_location_id": 609,
+      "bosses_before": []
+    },
+    {
+      "id": "battle-chateau",
+      "name": "Battle Chateau",
+      "kind": "building",
+      "order": 16,
+      "map_node": "route-7",
+      "poke_api_location_id": 617,
+      "bosses_before": [
+        "tierno-trevor-1"
+      ]
+    },
+    {
+      "id": "berry-fields",
+      "name": "Berry Fields",
+      "kind": "route",
+      "order": 17,
+      "map_node": "route-7",
+      "poke_api_location_id": 1121,
+      "bosses_before": []
+    },
+    {
+      "id": "connecting-cave",
+      "name": "Connecting Cave",
+      "kind": "dungeon",
+      "order": 18,
+      "map_node": "connecting-cave",
+      "poke_api_location_id": 672,
+      "bosses_before": []
+    },
+    {
+      "id": "route-8",
+      "name": "Route 8",
+      "kind": "route",
+      "order": 19,
+      "map_node": "route-8",
+      "poke_api_location_id": 612,
+      "bosses_before": []
+    },
+    {
+      "id": "ambrette-town",
+      "name": "Ambrette Town",
+      "kind": "city",
+      "order": 20,
+      "map_node": "ambrette-town",
+      "poke_api_location_id": 614,
+      "bosses_before": []
+    },
+    {
+      "id": "route-9",
+      "name": "Route 9",
+      "kind": "route",
+      "order": 21,
+      "map_node": "route-9",
+      "poke_api_location_id": 615,
+      "bosses_before": []
+    },
+    {
+      "id": "glittering-cave",
+      "name": "Glittering Cave",
+      "kind": "dungeon",
+      "order": 22,
+      "map_node": "glittering-cave",
+      "poke_api_location_id": 671,
+      "bosses_before": []
+    },
+    {
+      "id": "ambrette-beach",
+      "name": "Ambrette Beach",
+      "kind": "route",
+      "order": 23,
+      "map_node": "ambrette-beach",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "cyllage-city",
+      "name": "Cyllage City",
+      "kind": "city",
+      "order": 24,
+      "map_node": "cyllage-city",
+      "poke_api_location_id": 611,
+      "bosses_before": []
+    },
+    {
+      "id": "route-10",
+      "name": "Route 10",
+      "kind": "route",
+      "order": 25,
+      "map_node": "route-10",
+      "poke_api_location_id": 618,
+      "bosses_before": [
+        "grant"
+      ]
+    },
+    {
+      "id": "geosenge-town",
+      "name": "Geosenge Town",
+      "kind": "city",
+      "order": 26,
+      "map_node": "geosenge-town",
+      "poke_api_location_id": 620,
+      "bosses_before": []
+    },
+    {
+      "id": "route-11",
+      "name": "Route 11",
+      "kind": "route",
+      "order": 27,
+      "map_node": "route-11",
+      "poke_api_location_id": 621,
+      "bosses_before": [
+        "korrina-geosenge"
+      ]
+    },
+    {
+      "id": "reflection-cave",
+      "name": "Reflection Cave",
+      "kind": "dungeon",
+      "order": 28,
+      "map_node": "reflection-cave",
+      "poke_api_location_id": 623,
+      "bosses_before": []
+    },
+    {
+      "id": "shalour-city",
+      "name": "Shalour City",
+      "kind": "city",
+      "order": 29,
+      "map_node": "shalour-city",
+      "poke_api_location_id": 624,
+      "bosses_before": []
+    },
+    {
+      "id": "tower-of-mastery",
+      "name": "Tower of Mastery",
+      "kind": "building",
+      "order": 30,
+      "map_node": "shalour-city",
+      "poke_api_location_id": 625,
+      "bosses_before": []
+    },
+    {
+      "id": "route-12",
+      "name": "Route 12",
+      "kind": "route",
+      "order": 31,
+      "map_node": "route-12",
+      "poke_api_location_id": 626,
+      "bosses_before": [
+        "serena-1",
+        "korrina",
+        "korrina-lucario"
+      ]
+    },
+    {
+      "id": "azure-bay",
+      "name": "Azure Bay",
+      "kind": "sea",
+      "order": 32,
+      "map_node": "azure-bay",
+      "poke_api_location_id": 661,
+      "bosses_before": []
+    },
+    {
+      "id": "coumarine-city",
+      "name": "Coumarine City",
+      "kind": "city",
+      "order": 33,
+      "map_node": "coumarine-city",
+      "poke_api_location_id": 628,
+      "bosses_before": []
+    },
+    {
+      "id": "route-13",
+      "name": "Route 13",
+      "kind": "route",
+      "order": 34,
+      "map_node": "route-13",
+      "poke_api_location_id": 629,
+      "bosses_before": [
+        "serena-2",
+        "ramos"
+      ]
+    },
+    {
+      "id": "kalos-power-plant",
+      "name": "Kalos Power Plant",
+      "kind": "building",
+      "order": 35,
+      "map_node": "kalos-power-plant",
+      "poke_api_location_id": 674,
+      "bosses_before": []
+    },
+    {
+      "id": "prism-tower",
+      "name": "Prism Tower",
+      "kind": "building",
+      "order": 36,
+      "map_node": "lumiose-city",
+      "poke_api_location_id": 600,
+      "bosses_before": [
+        "flare-admin-power-plant",
+        "aliana-1"
+      ]
+    },
+    {
+      "id": "route-14",
+      "name": "Route 14",
+      "kind": "route",
+      "order": 37,
+      "map_node": "route-14",
+      "poke_api_location_id": 631,
+      "bosses_before": [
+        "clemont"
+      ]
+    },
+    {
+      "id": "scary-house",
+      "name": "Scary House",
+      "kind": "building",
+      "order": 38,
+      "map_node": "route-14",
+      "poke_api_location_id": null,
+      "bosses_before": [
+        "serena-3"
+      ]
+    },
+    {
+      "id": "laverre-city",
+      "name": "Laverre City",
+      "kind": "city",
+      "order": 39,
+      "map_node": "laverre-city",
+      "poke_api_location_id": 633,
+      "bosses_before": []
+    },
+    {
+      "id": "poke-ball-factory",
+      "name": "Poké Ball Factory",
+      "kind": "building",
+      "order": 40,
+      "map_node": "laverre-city",
+      "poke_api_location_id": 634,
+      "bosses_before": [
+        "valerie"
+      ]
+    },
+    {
+      "id": "dendemille-town",
+      "name": "Dendemille Town",
+      "kind": "city",
+      "order": 41,
+      "map_node": "dendemille-town",
+      "poke_api_location_id": 637,
+      "bosses_before": [
+        "flare-admin-factory",
+        "celosia-1",
+        "bryony-1"
+      ]
+    },
+    {
+      "id": "route-15",
+      "name": "Route 15",
+      "kind": "route",
+      "order": 42,
+      "map_node": "route-15",
+      "poke_api_location_id": 635,
+      "bosses_before": []
+    },
+    {
+      "id": "route-16",
+      "name": "Route 16",
+      "kind": "route",
+      "order": 43,
+      "map_node": "route-16",
+      "poke_api_location_id": 638,
+      "bosses_before": []
+    },
+    {
+      "id": "lost-hotel",
+      "name": "Lost Hotel",
+      "kind": "building",
+      "order": 44,
+      "map_node": "lost-hotel",
+      "poke_api_location_id": 677,
+      "bosses_before": []
+    },
+    {
+      "id": "frost-cavern",
+      "name": "Frost Cavern",
+      "kind": "dungeon",
+      "order": 45,
+      "map_node": "frost-cavern",
+      "poke_api_location_id": 640,
+      "bosses_before": []
+    },
+    {
+      "id": "route-17",
+      "name": "Route 17",
+      "kind": "route",
+      "order": 46,
+      "map_node": "route-17",
+      "poke_api_location_id": 641,
+      "bosses_before": [
+        "mable-1"
+      ]
+    },
+    {
+      "id": "anistar-city",
+      "name": "Anistar City",
+      "kind": "city",
+      "order": 47,
+      "map_node": "anistar-city",
+      "poke_api_location_id": 643,
+      "bosses_before": []
+    },
+    {
+      "id": "lysandre-labs",
+      "name": "Lysandre Labs",
+      "kind": "building",
+      "order": 48,
+      "map_node": "lumiose-city",
+      "poke_api_location_id": 601,
+      "bosses_before": [
+        "serena-4",
+        "olympia"
+      ]
+    },
+    {
+      "id": "team-flare-secret-hq",
+      "name": "Team Flare Secret HQ",
+      "kind": "dungeon",
+      "order": 49,
+      "map_node": "team-flare-secret-hq",
+      "poke_api_location_id": 675,
+      "bosses_before": [
+        "lysandre-1",
+        "aliana-2",
+        "celosia-2",
+        "bryony-2",
+        "mable-2",
+        "xerosic-1"
+      ]
+    },
+    {
+      "id": "route-18",
+      "name": "Route 18",
+      "kind": "route",
+      "order": 50,
+      "map_node": "route-18",
+      "poke_api_location_id": 644,
+      "bosses_before": [
+        "lysandre-2",
+        "lysandre-3"
+      ]
+    },
+    {
+      "id": "terminus-cave",
+      "name": "Terminus Cave",
+      "kind": "dungeon",
+      "order": 51,
+      "map_node": "terminus-cave",
+      "poke_api_location_id": 676,
+      "bosses_before": []
+    },
+    {
+      "id": "couriway-town",
+      "name": "Couriway Town",
+      "kind": "city",
+      "order": 52,
+      "map_node": "couriway-town",
+      "poke_api_location_id": 646,
+      "bosses_before": []
+    },
+    {
+      "id": "route-19",
+      "name": "Route 19",
+      "kind": "route",
+      "order": 53,
+      "map_node": "route-19",
+      "poke_api_location_id": 647,
+      "bosses_before": [
+        "sycamore-2"
+      ]
+    },
+    {
+      "id": "snowbelle-city",
+      "name": "Snowbelle City",
+      "kind": "city",
+      "order": 54,
+      "map_node": "snowbelle-city",
+      "poke_api_location_id": 649,
+      "bosses_before": [
+        "shauna-2",
+        "tierno-2",
+        "trevor-2"
+      ]
+    },
+    {
+      "id": "route-20",
+      "name": "Route 20",
+      "kind": "route",
+      "order": 55,
+      "map_node": "route-20",
+      "poke_api_location_id": 650,
+      "bosses_before": [
+        "wulfric"
+      ]
+    },
+    {
+      "id": "pokemon-village",
+      "name": "Pokémon Village",
+      "kind": "route",
+      "order": 56,
+      "map_node": "pokemon-village",
+      "poke_api_location_id": 652,
+      "bosses_before": []
+    },
+    {
+      "id": "route-21",
+      "name": "Route 21",
+      "kind": "route",
+      "order": 57,
+      "map_node": "route-21",
+      "poke_api_location_id": 653,
+      "bosses_before": []
+    },
+    {
+      "id": "victory-road",
+      "name": "Victory Road",
+      "kind": "dungeon",
+      "order": 58,
+      "map_node": "victory-road",
+      "poke_api_location_id": 657,
+      "bosses_before": []
+    },
+    {
+      "id": "pokemon-league",
+      "name": "Pokémon League",
+      "kind": "building",
+      "order": 59,
+      "map_node": "pokemon-league",
+      "poke_api_location_id": 658,
+      "bosses_before": [
+        "serena-5"
+      ]
+    },
+    {
+      "id": "kiloude-city",
+      "name": "Kiloude City",
+      "kind": "city",
+      "order": 60,
+      "map_node": "kiloude-city",
+      "poke_api_location_id": 659,
+      "bosses_before": [
+        "malva",
+        "siebold",
+        "wikstrom",
+        "drasna",
+        "diantha",
+        "az"
+      ]
+    },
+    {
+      "id": "battle-maison",
+      "name": "Battle Maison",
+      "kind": "building",
+      "order": 61,
+      "map_node": "kiloude-city",
+      "poke_api_location_id": 660,
+      "bosses_before": [
+        "serena-kiloude",
+        "essentia-final"
+      ]
+    },
+    {
+      "id": "friend-safari",
+      "name": "Friend Safari",
+      "kind": "route",
+      "order": 62,
+      "map_node": "friend-safari",
+      "poke_api_location_id": 680,
+      "bosses_before": []
+    },
+    {
+      "id": "looker-bureau",
+      "name": "Looker Bureau",
+      "kind": "building",
+      "order": 63,
+      "map_node": "lumiose-city",
+      "poke_api_location_id": null,
+      "bosses_before": []
+    },
+    {
+      "id": "sea-spirits-den",
+      "name": "Sea Spirit's Den",
+      "kind": "dungeon",
+      "order": 64,
+      "map_node": "sea-spirits-den",
+      "poke_api_location_id": 679,
+      "bosses_before": []
+    },
+    {
+      "id": "unknown-dungeon",
+      "name": "Unknown Dungeon",
+      "kind": "dungeon",
+      "order": 65,
+      "map_node": "unknown-dungeon",
+      "poke_api_location_id": 690,
+      "bosses_before": []
+    },
+    {
+      "id": "chamber-of-emptiness",
+      "name": "Chamber of Emptiness",
+      "kind": "dungeon",
+      "order": 66,
+      "map_node": "chamber-of-emptiness",
+      "poke_api_location_id": 678,
+      "bosses_before": []
+    }
+  ]
+}

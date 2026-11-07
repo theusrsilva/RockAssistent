@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Monta o TradeRock para Windows x64 (só ESP32) em build/windows/app e, se o Inno Setup estiver
-# disponível, o instalador dist/TradeRock-Setup-<versão>.exe.
+# Monta o RockAssistent para Windows x64 (só ESP32) em build/windows/app e, se o Inno Setup estiver
+# disponível, o instalador dist/RockAssistent-Setup-<versão>.exe.
 #
 #   scripts/package-windows.sh [versão] [--installer] [--tests]
 #
@@ -63,6 +63,9 @@ fetch() { # arquivo sha256
 
 rm -rf "$BUILD"
 mkdir -p "$BUILD" "$DIST" "$CACHE"
+
+echo "==> Pokédex offline (dex.sqlite, embutida no app)"
+python3 -I scripts/build-dex.py
 
 echo "==> app $VERSION (self-contained, win-x64)"
 dotnet publish app/TradeRock.App -c Release -r win-x64 --self-contained \
@@ -148,5 +151,5 @@ if [[ $INSTALLER == 1 ]]; then
   winpath() { if command -v wslpath >/dev/null; then wslpath -w "$1"; else cygpath -w "$1" 2>/dev/null || echo "$1"; fi; }
   "$ISCC" /Q "/DAppVersion=$VERSION" "/DSourceDir=$(winpath "$PWD/$APP")" "/DOutputDir=$(winpath "$PWD/$DIST")" \
     "$(winpath "$PWD/packaging/windows/traderock.iss")"
-  ls -la "$DIST/TradeRock-Setup-$VERSION.exe"
+  ls -la "$DIST/RockAssistent-Setup-$VERSION.exe"
 fi

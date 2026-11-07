@@ -17,6 +17,189 @@ namespace TradeRock.Core.Storage.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.12");
 
+            modelBuilder.Entity("TradeRock.Core.Storage.ActivityRecord", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("EndedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("EngineId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ErrorCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Game")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsSimulation")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Label")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Ok")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("Species")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("StartedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SubKind")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SummaryJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "StartedAt");
+
+                    b.ToTable("ActivityRecords");
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeEvent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("At")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Json")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("RunId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RunId", "At");
+
+                    b.ToTable("NuzlockeEvents");
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeMon", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("AreaId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("CaughtAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DeathCause")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long?>("DiedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Form")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("MovesJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nickname")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("RunId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Shiny")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Species")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RunId");
+
+                    b.ToTable("NuzlockeMons");
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeRun", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CurrentAreaId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long?>("EndedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("GameKey")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RulesJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("StartedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Version")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "StartedAt");
+
+                    b.ToTable("NuzlockeRuns");
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.PokemonTag", b =>
                 {
                     b.Property<Guid>("PokemonId")
@@ -32,6 +215,44 @@ namespace TradeRock.Core.Storage.Migrations
                     b.ToTable("PokemonTags");
                 });
 
+            modelBuilder.Entity("TradeRock.Core.Storage.SaveAttachment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("AttachedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Box")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PokemonId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SavePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SaveSha256")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Slot")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PokemonId");
+
+                    b.HasIndex("OwnerId", "SavePath");
+
+                    b.ToTable("SaveAttachments");
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.SettingEntry", b =>
                 {
                     b.Property<string>("Key")
@@ -44,6 +265,58 @@ namespace TradeRock.Core.Storage.Migrations
                     b.HasKey("Key");
 
                     b.ToTable("Settings");
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.ShinyHunt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("ElapsedSeconds")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long?>("EndedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Form")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Found")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("GameKey")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MethodId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ModifiersJson")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Species")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("StartedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "StartedAt");
+
+                    b.ToTable("Hunts");
                 });
 
             modelBuilder.Entity("TradeRock.Core.Storage.StoredPokemon", b =>
@@ -369,6 +642,24 @@ namespace TradeRock.Core.Storage.Migrations
                     b.ToTable("Boxes");
                 });
 
+            modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeEvent", b =>
+                {
+                    b.HasOne("TradeRock.Core.Storage.NuzlockeRun", null)
+                        .WithMany()
+                        .HasForeignKey("RunId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeMon", b =>
+                {
+                    b.HasOne("TradeRock.Core.Storage.NuzlockeRun", null)
+                        .WithMany()
+                        .HasForeignKey("RunId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.PokemonTag", b =>
                 {
                     b.HasOne("TradeRock.Core.Storage.StoredPokemon", null)
@@ -380,6 +671,15 @@ namespace TradeRock.Core.Storage.Migrations
                     b.HasOne("TradeRock.Core.Storage.Tag", null)
                         .WithMany()
                         .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TradeRock.Core.Storage.SaveAttachment", b =>
+                {
+                    b.HasOne("TradeRock.Core.Storage.StoredPokemon", null)
+                        .WithMany()
+                        .HasForeignKey("PokemonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -115,7 +115,7 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
         return AccountDto.From(user);
     }
 
-    /// <summary>Apaga a conta e o cofre dela (Pokémon, caixas, tags, histórico e treinadores salvos).</summary>
+    /// <summary>Apaga a conta e o cofre dela (Pokémon, caixas, tags, histórico, treinadores salvos, anexos de save, hunts e runs de Nuzlocke).</summary>
     public async Task DeleteAsync(Guid id, CancellationToken ct)
     {
         if (id == OwnerScope.LocalOwner)
@@ -131,6 +131,13 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
             await vault.Trades.ExecuteDeleteAsync(ct);
             var mine = await vault.Pokemon.Select(p => new { p.Id, p.Sha256, p.Family }).ToListAsync(ct);
             var ids = mine.Select(p => p.Id).ToList();
+            await vault.SaveAttachments.ExecuteDeleteAsync(ct);
+            await vault.Hunts.ExecuteDeleteAsync(ct);
+            await vault.ActivityRecords.ExecuteDeleteAsync(ct);
+            var runs = await vault.NuzlockeRuns.Select(r => r.Id).ToListAsync(ct);
+            await vault.NuzlockeMons.Where(m => runs.Contains(m.RunId)).ExecuteDeleteAsync(ct);
+            await vault.NuzlockeEvents.Where(e => runs.Contains(e.RunId)).ExecuteDeleteAsync(ct);
+            await vault.NuzlockeRuns.ExecuteDeleteAsync(ct);
             await vault.PokemonTags.Where(t => ids.Contains(t.PokemonId)).ExecuteDeleteAsync(ct);
             await vault.Pokemon.ExecuteDeleteAsync(ct);
             await vault.Tags.ExecuteDeleteAsync(ct);

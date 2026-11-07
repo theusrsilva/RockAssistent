@@ -1,5 +1,6 @@
 using PKHeX.Core;
 using TradeRock.Core.Pokemon;
+using TradeRock.Core.Saves;
 
 namespace TradeRock.Core.Builder;
 
@@ -12,17 +13,26 @@ public sealed class InvalidSaveException(string code, string message) : Exceptio
     public string Code { get; } = code;
 }
 
-/// <summary>Lê um .sav de GBA (Gen 3) e lista o time e as caixas.</summary>
+/// <summary>
+/// Lê um save para importar no cofre. Abre qualquer geração que o PKHeX reconheça (<see cref="SaveFileAccess"/>),
+/// mas a lista para o cofre (formato .pk3) continua só da Gen 3: os outros saves dão "not_gen3".
+/// </summary>
 public static class SaveImport
 {
+    /// <summary>Limite do envio pela API de importação (saves de GBA).</summary>
     public const int MaxSaveBytes = 256 * 1024;
 
     public static SaveContents Read(byte[] file)
     {
-        if (file.Length > MaxSaveBytes)
-            throw new InvalidSaveException("size", "Arquivo grande demais para um save de GBA.");
-
-        var sav = SaveUtil.GetSaveFile(file) ?? throw new InvalidSaveException("unknown", "Não é um save reconhecido.");
+        SaveFile sav;
+        try
+        {
+            sav = SaveFileAccess.Open(file);
+        }
+        catch (SaveInjectionException ex)
+        {
+            throw new InvalidSaveException(ex.Code == "sav_size" ? "size" : "unknown", ex.Message);
+        }
         return Read(sav);
     }
 

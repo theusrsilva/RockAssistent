@@ -42,10 +42,13 @@
     <None Include="appsettings*.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
-  <!-- Sprites 1–1025 do PokeAPI/sprites (1–386 vindos do easyworld; 387–1025 de scripts/fetch-sprites.sh).
-       Arte © Nintendo/Game Freak/The Pokémon Company. -->
+  <!-- Sprites 1–1025 do PokeAPI/sprites (1–386 vindos do easyworld; 387–1025 de scripts/fetch-sprites.sh), os shiny
+       e os das formas alternativas pelo id do pokemon no PokeAPI. Arte © Nintendo/Game Freak/The Pokémon Company. -->
   <ItemGroup>
     <EmbeddedResource Include="..\..\assets\sprites\*.png" LogicalName="sprites/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\shiny\*.png" LogicalName="sprites/shiny/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\forms\*.png" LogicalName="sprites/forms/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\forms\shiny\*.png" LogicalName="sprites/forms/shiny/%(Filename)%(Extension)" />
   </ItemGroup>
 
   <!--

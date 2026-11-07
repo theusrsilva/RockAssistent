@@ -4,13 +4,13 @@
 1. Confira se o Switch e este computador estão na **mesma rede**.
 2. Se ainda não ligou o modo LAN: em **Opções**, aperte **L + R + o analógico esquerdo** juntos. O jogo avisa que o modo LAN foi ligado.
 3. Aperte **Y** para abrir o **Y-Comm** e escolha **Link Trade**. O código, se você puser um, é ignorado.
-4. Aperte **A** nas duas mensagens: o TradeRock aparece na tela de troca.
+4. Aperte **A** nas duas mensagens: o RockAssistent aparece na tela de troca.
 5. Escolha o Pokémon que você vai mandar e confirme.
 
 <details><summary>Saiba mais</summary>
 
 - O jogo avisa que, no modo LAN, só as Max Raid Battles são garantidas. A troca funcionou num Sword de verdade, num Switch 2 pelo Wi-Fi.
-- No Windows, o instalador libera as portas da troca só em redes "Privadas". Se a rede de casa estiver marcada como "Pública", o Switch não acha o TradeRock.
+- No Windows, o instalador libera as portas da troca só em redes "Privadas". Se a rede de casa estiver marcada como "Pública", o Switch não acha o RockAssistent.
 - Para desligar o modo LAN, repita o mesmo comando nas Opções.
 
 </details>
