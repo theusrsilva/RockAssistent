@@ -64,7 +64,8 @@ describe('índice', () => {
 
   it('carrega o arquivo do guia sob demanda; arquivo que não existe = null', async () => {
     const pt = guideIndex('pt-BR')
-    const file = pt.games[0].sections[0].file
+    // O guia de chefes sempre tem a diretiva :::bosses (o de visão geral pode não ter nenhuma).
+    const file = pt.games.flatMap((g) => g.sections).find((s) => s.id === 'bosses')!.file
     expect(await loadGuide('pt-BR', file)).toContain(':::')
     expect(await loadGuide('pt-BR', 'games/nada/nada.md')).toBeNull()
   })
