@@ -9,6 +9,7 @@ só o que nenhuma fonte cobre e as convenções nossas.
 
 | jogo | item | dúvida | fontes tentadas |
 | --- | --- | --- | --- |
+| usum | `bosses/usum.json` hau-4 (variante Popplio) | Nível do Eevee: Serebii e um guia dizem 16; Pokewiki e Gamer Guides dizem 14. Ficou 16 (Serebii vence empate), `verified: false`. | serebii, pokewiki, gamerguides |
 | za | bosses (Floette Hyperrogue) | Nível da luta final contra a Floette Hyperrogue: nenhuma fonte dá (a Serebii só dá 25.000 de HP). Fica fora de bosses/za.json, e o teste do Z-A segue sem campeão. | serebii operationprotectlumiose; gmtreks missão 38; deltiasgaming; sportskeeda; game8 (busca) |
 | pla | encounters/pla.json (Celestica Ruins) | Nível do Bronzor e do Bronzong na sub-área (ficou a faixa da área, 21–63). | serebii celesticaruins e celesticatrail (não listam os dois); pokemondb (nível "—") |
 | sv | encounters/sv.json (Gimmighoul forma de baú) | Nível do baú em South Province Area Two (10) e Three (10), East Province Area Three (25), South Province Area Six (40), Glaseado Mountain (35) e North Province Area One (50): a Serebii dá 25 baús com nível (5 a 50), mas os marcadores cobrem Paldea inteira e não dizem a área. Também não entraram, sem nível por área, os fixos e Tera que a Serebii lista e o JSON não tem: Dragonite (Casseroya Lake, North Province Area Two), Spiritomb (Casseroya, Dalizapa Passage, North Province Area One, Socarrat Trail), Tsareena (Casseroya) e Eelektross (North Province Area One). | serebii pokearth/paldea e spawntable 6124–6430; pokemondb |

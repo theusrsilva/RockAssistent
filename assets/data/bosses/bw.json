@@ -504,7 +504,7 @@
     {
       "id": "striaton-trio",
       "kind": "gym",
-      "name": "Cress",
+      "name": "Cilan, Chili ou Cress",
       "title": "Gym Leader",
       "location": "Striaton Gym",
       "order": 6,
@@ -541,7 +541,7 @@
       ],
       "level_cap": 14,
       "verified": true,
-      "notes": "o líder depende do seu inicial: com Snivy, Chili; com Tepig, Cress; com Oshawott, Cilan (o nome mostrado é o do Cress)",
+      "notes": "o líder depende do seu inicial: com Snivy, Chili; com Tepig, Cress; com Oshawott, Cilan",
       "versions": null,
       "variants": [
         {
