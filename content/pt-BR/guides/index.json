@@ -1125,6 +1125,54 @@
   ],
   "mechanics": [
     {
+      "key": "natures",
+      "title": "Naturezas",
+      "description": "As 25 naturezas, stats e sabores.",
+      "sections": [
+        {
+          "id": "natures",
+          "title": "Naturezas",
+          "file": "mechanics/natures.md"
+        }
+      ]
+    },
+    {
+      "key": "evs-ivs",
+      "title": "EVs e IVs",
+      "description": "Limites, treino e Hyper Training.",
+      "sections": [
+        {
+          "id": "evs-ivs",
+          "title": "EVs e IVs",
+          "file": "mechanics/evs-ivs.md"
+        }
+      ]
+    },
+    {
+      "key": "breeding",
+      "title": "Breeding",
+      "description": "Grupos de ovo, herança e chocagem.",
+      "sections": [
+        {
+          "id": "breeding",
+          "title": "Breeding",
+          "file": "mechanics/breeding.md"
+        }
+      ]
+    },
+    {
+      "key": "shiny",
+      "title": "Shiny",
+      "description": "Chances, Masuda, Shiny Charm e métodos.",
+      "sections": [
+        {
+          "id": "shiny",
+          "title": "Shiny",
+          "file": "mechanics/shiny.md"
+        }
+      ]
+    },
+    {
       "key": "types",
       "title": "Tipos",
       "description": "Vantagens, fraquezas e imunidades.",
@@ -1133,6 +1181,114 @@
           "id": "types",
           "title": "Tipos",
           "file": "mechanics/types.md"
+        }
+      ]
+    },
+    {
+      "key": "evolutions",
+      "title": "Evoluções",
+      "description": "Métodos, trocas, pedras e casos estranhos.",
+      "sections": [
+        {
+          "id": "evolutions",
+          "title": "Evoluções",
+          "file": "mechanics/evolutions.md"
+        }
+      ]
+    },
+    {
+      "key": "happiness",
+      "title": "Felicidade",
+      "description": "Como sobe, como desce e evoluções.",
+      "sections": [
+        {
+          "id": "happiness",
+          "title": "Felicidade",
+          "file": "mechanics/happiness.md"
+        }
+      ]
+    },
+    {
+      "key": "abilities",
+      "title": "Habilidades",
+      "description": "Habilidades ocultas, Capsule e Patch.",
+      "sections": [
+        {
+          "id": "abilities",
+          "title": "Habilidades",
+          "file": "mechanics/abilities.md"
+        }
+      ]
+    },
+    {
+      "key": "held-items",
+      "title": "Itens segurados",
+      "description": "Berries, Choice, Life Orb e onde achar.",
+      "sections": [
+        {
+          "id": "held-items",
+          "title": "Itens segurados",
+          "file": "mechanics/held-items.md"
+        }
+      ]
+    },
+    {
+      "key": "contests",
+      "title": "Concursos",
+      "description": "Categorias, Pokéblocks, Poffins e ribbons.",
+      "sections": [
+        {
+          "id": "contests",
+          "title": "Concursos",
+          "file": "mechanics/contests.md"
+        }
+      ]
+    },
+    {
+      "key": "safari",
+      "title": "Safari",
+      "description": "Safari Zone por jogo e Bug-Catching Contest.",
+      "sections": [
+        {
+          "id": "safari",
+          "title": "Safari",
+          "file": "mechanics/safari.md"
+        }
+      ]
+    },
+    {
+      "key": "secret-bases",
+      "title": "Bases secretas",
+      "description": "Bases do RSE/ORAS e Underground.",
+      "sections": [
+        {
+          "id": "secret-bases",
+          "title": "Bases secretas",
+          "file": "mechanics/secret-bases.md"
+        }
+      ]
+    },
+    {
+      "key": "battle-gimmicks",
+      "title": "Mecânicas de batalha",
+      "description": "Mega, Z-Moves, Dynamax e Terastal.",
+      "sections": [
+        {
+          "id": "battle-gimmicks",
+          "title": "Mecânicas de batalha",
+          "file": "mechanics/battle-gimmicks.md"
+        }
+      ]
+    },
+    {
+      "key": "status",
+      "title": "Status",
+      "description": "Burn, sleep, paralysis e números por geração.",
+      "sections": [
+        {
+          "id": "status",
+          "title": "Status",
+          "file": "mechanics/status.md"
         }
       ]
     }
@@ -1176,6 +1332,126 @@
           "id": "kanto",
           "title": "Kanto",
           "file": "mythology/kanto.md"
+        }
+      ]
+    },
+    {
+      "key": "johto",
+      "title": "Johto",
+      "description": "As torres de Ecruteak, Lugia, Ho-Oh e os cães.",
+      "sections": [
+        {
+          "id": "johto",
+          "title": "Johto",
+          "file": "mythology/johto.md"
+        }
+      ]
+    },
+    {
+      "key": "hoenn",
+      "title": "Hoenn",
+      "description": "Groudon, Kyogre, Rayquaza e os Regis.",
+      "sections": [
+        {
+          "id": "hoenn",
+          "title": "Hoenn",
+          "file": "mythology/hoenn.md"
+        }
+      ]
+    },
+    {
+      "key": "sinnoh",
+      "title": "Sinnoh",
+      "description": "Arceus, a criação e os guardiões dos lagos.",
+      "sections": [
+        {
+          "id": "sinnoh",
+          "title": "Sinnoh",
+          "file": "mythology/sinnoh.md"
+        }
+      ]
+    },
+    {
+      "key": "unova",
+      "title": "Unova",
+      "description": "Os dois heróis, Reshiram, Zekrom e Kyurem.",
+      "sections": [
+        {
+          "id": "unova",
+          "title": "Unova",
+          "file": "mythology/unova.md"
+        }
+      ]
+    },
+    {
+      "key": "kalos",
+      "title": "Kalos",
+      "description": "AZ, a arma final e o trio Aura.",
+      "sections": [
+        {
+          "id": "kalos",
+          "title": "Kalos",
+          "file": "mythology/kalos.md"
+        }
+      ]
+    },
+    {
+      "key": "alola",
+      "title": "Alola",
+      "description": "Tapus, sol e lua, Ultra Beasts.",
+      "sections": [
+        {
+          "id": "alola",
+          "title": "Alola",
+          "file": "mythology/alola.md"
+        }
+      ]
+    },
+    {
+      "key": "galar",
+      "title": "Galar",
+      "description": "O Darkest Day, Zacian, Zamazenta e Eternatus.",
+      "sections": [
+        {
+          "id": "galar",
+          "title": "Galar",
+          "file": "mythology/galar.md"
+        }
+      ]
+    },
+    {
+      "key": "hisui",
+      "title": "Hisui",
+      "description": "Os clãs, os Noble Pokémon e Arceus.",
+      "sections": [
+        {
+          "id": "hisui",
+          "title": "Hisui",
+          "file": "mythology/hisui.md"
+        }
+      ]
+    },
+    {
+      "key": "paldea",
+      "title": "Paldea",
+      "description": "Area Zero, Paradox, Ruinous e Kitakami.",
+      "sections": [
+        {
+          "id": "paldea",
+          "title": "Paldea",
+          "file": "mythology/paldea.md"
+        }
+      ]
+    },
+    {
+      "key": "lumiose",
+      "title": "Lumiose (Z-A)",
+      "description": "Reconstrução, Rogue Megas e Zygarde.",
+      "sections": [
+        {
+          "id": "lumiose",
+          "title": "Lumiose (Z-A)",
+          "file": "mythology/lumiose.md"
         }
       ]
     }
