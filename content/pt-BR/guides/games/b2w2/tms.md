@@ -1,0 +1,109 @@
+Os TMs são reutilizáveis. BP = Battle Points, gastos no balcão do PWT ou do Battle Subway.
+
+:::tms b2w2
+
+## Onde achar
+
+- TM01 Hone Claws: Victory Road (à direita do Pokémon Center).
+- TM02 Dragon Claw: Dragonspiral Tower.
+- TM03 Psyshock: Giant Chasm (floresta interna).
+- TM04 Calm Mind: Striaton City (loja), $80.000.
+- TM05 Roar: Route 23.
+- TM06 Toxic: Seaside Cave.
+- TM07 Hail: Mistralton City (loja), $50.000.
+- TM08 Bulk Up: Striaton City (loja), $80.000.
+- TM09 Venoshock: Roxie (Virbank Gym).
+- TM10 Hidden Power: 18 BP.
+- TM11 Sunny Day: Mistralton City (loja), $50.000.
+- TM12 Taunt: Route 23.
+- TM13 Ice Beam: Giant Chasm (Strength).
+- TM14 Blizzard: Lacunosa Town (Pokémon Center), $70.000.
+- TM15 Hyper Beam: Shopping Mall Nine (Route 9), $90.000.
+- TM16 Light Screen: Nimbasa City (loja), $30.000.
+- TM17 Protect: 6 BP.
+- TM18 Rain Dance: Mistralton City (loja), $50.000.
+- TM19 Telekinesis: Route 18.
+- TM20 Safeguard: 6 BP.
+- TM21 Frustration: Floccesy Ranch.
+- TM22 Solar Beam: Pinwheel Forest (parte interna).
+- TM23 Smack Down: 18 BP.
+- TM24 Thunderbolt: Hugh (Victory Road).
+- TM25 Thunder: Lacunosa Town (Pokémon Center), $70.000.
+- TM26 Earthquake: Route 15 (Strength).
+- TM27 Return: Bianca (Aspertia City, depois do Cheren).
+- TM28 Dig: Route 4.
+- TM29 Psychic: Route 13.
+- TM30 Shadow Ball: Strange House (lado de fora).
+- TM31 Brick Break: 12 BP.
+- TM32 Double Team: 6 BP.
+- TM33 Reflect: Nimbasa City (loja), $30.000.
+- TM34 Sludge Wave: 24 BP.
+- TM35 Flamethrower: Route 23 (casa, Surf).
+- TM36 Sludge Bomb: Route 8.
+- TM37 Sandstorm: Mistralton City (loja), $50.000.
+- TM38 Fire Blast: Lacunosa Town (Pokémon Center), $70.000.
+- TM39 Rock Tomb: Relic Castle.
+- TM40 Aerial Ace: Mistralton City (menino da pista).
+- TM41 Torment: Castelia Sewers (só na primavera e no verão).
+- TM42 Facade: Marine Tube.
+- TM43 Flame Charge: Tubeline Bridge.
+- TM44 Rest: Castelia City (casa da Castelia Street).
+- TM45 Attract: Castelia City (norte).
+- TM46 Thief: Virbank Complex.
+- TM47 Low Sweep: Wellspring Cave.
+- TM48 Round: 18 BP.
+- TM49 Echoed Voice: Nimbasa City (Musical).
+- TM50 Overheat: N's Castle.
+- TM51 Ally Switch: 24 BP.
+- TM52 Focus Blast: Wellspring Cave.
+- TM53 Energy Ball: Aspertia City (Surf).
+- TM54 False Swipe: Reversal Mountain.
+- TM55 Scald: Marlon (Humilau Gym).
+- TM56 Fling: Route 6 (Surf).
+- TM57 Charge Beam: Lentimas Town (mulher numa casa).
+- TM58 Sky Drop: Mistralton City (pista).
+- TM59 Incinerate: 6 BP.
+- TM60 Quash: 24 BP.
+- TM61 Will-O-Wisp: Celestial Tower.
+- TM62 Acrobatics: Skyla (Mistralton Gym).
+- TM63 Embargo: Driftveil City (loja).
+- TM64 Explosion: 24 BP.
+- TM65 Shadow Claw: Celestial Tower.
+- TM66 Payback: Route 16.
+- TM67 Retaliate: Plasma Frigate.
+- TM68 Giga Impact: Shopping Mall Nine (Route 9), $90.000.
+- TM69 Rock Polish: Reversal Mountain.
+- TM70 Flash: Castelia City (Narrow Street).
+- TM71 Stone Edge: Twist Mountain.
+- TM72 Volt Switch: Elesa (Nimbasa Gym).
+- TM73 Thunder Wave: Nimbasa City (loja), $10.000.
+- TM74 Gyro Ball: Nimbasa City (loja), $10.000.
+- TM75 Swords Dance: 18 BP.
+- TM76 Struggle Bug: Burgh (Castelia Gym).
+- TM77 Psych Up: 24 BP.
+- TM78 Bulldoze: Clay (Driftveil Gym).
+- TM79 Frost Breath: 12 BP.
+- TM80 Rock Slide: Mistralton Cave.
+- TM81 X-Scissor: Route 7.
+- TM82 Dragon Tail: Drayden (Opelucid Gym).
+- TM83 Work Up: Cheren (Aspertia Gym).
+- TM84 Poison Jab: Moor of Icirrus.
+- TM85 Dream Eater: Dreamyard.
+- TM86 Grass Knot: Pinwheel Forest (parte interna).
+- TM87 Swagger: 18 BP.
+- TM88 Pluck: 18 BP.
+- TM89 U-turn: 12 BP.
+- TM90 Substitute: Twist Mountain.
+- TM91 Flash Cannon: Twist Mountain.
+- TM92 Trick Room: Abundant Shrine.
+- TM93 Wild Charge: Victory Road (Surf e Waterfall).
+- TM94 Rock Smash: Virbank Complex.
+- TM95 Snarl: Lostlorn Forest, com o treinador fantasiado de Zoroark no trailer.
+- HM01 Cut: Roxie (Virbank).
+- HM02 Fly: Bianca (Route 5, portaria oeste de Nimbasa).
+- HM03 Surf: Cheren (Route 6).
+- HM04 Strength: Hugh (Castelia Sewers).
+- HM05 Waterfall: N (Victory Road).
+- HM06 Dive: Hugh (Undella Town, pós-jogo).
+
+<!-- fontes: dex.sqlite (lista), notas pokemythology, Bisafans (locais) -->

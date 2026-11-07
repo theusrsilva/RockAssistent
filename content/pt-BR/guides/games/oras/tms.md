@@ -1,0 +1,115 @@
+As TMs não gastam. As TMs dos Mirage Spots dependem do local do dia.
+
+:::tms oras
+
+## Onde achar
+
+- TM01 Hone Claws: Slateport City (vendedor de TMs ambulante).
+- TM02 Dragon Claw: Meteor Falls.
+- TM03 Psyshock: Pacifidlog Town.
+- TM04 Calm Mind: Tate & Liza, ginásio de Mossdeep.
+- TM05 Roar: Route 114.
+- TM06 Toxic: Fiery Path.
+- TM07 Hail: Shoal Cave.
+- TM08 Bulk Up: Brawly, ginásio de Dewford.
+- TM09 Venoshock: Poké Mart de Mauville City.
+- TM10 Hidden Power: Fortree City.
+- TM11 Sunny Day: Scorched Slab.
+- TM12 Taunt: prêmio da Trick House (Route 110).
+- TM13 Ice Beam: Sea Mauville.
+- TM14 Blizzard: Lilycove Department Store.
+- TM15 Hyper Beam: Lilycove Department Store.
+- TM16 Light Screen: Lilycove Department Store.
+- TM17 Protect: Lilycove Department Store.
+- TM18 Rain Dance: Sea Mauville.
+- TM19 Roost: Winona, ginásio de Fortree.
+- TM20 Safeguard: Lilycove Department Store.
+- TM21 Frustration: Pacifidlog Town.
+- TM22 Solar Beam: Safari Zone.
+- TM23 Smack Down: Prof. Cozmo, Fallarbor Town.
+- TM24 Thunderbolt: Wattson, Mauville City (depois da New Mauville).
+- TM25 Thunder: Lilycove Department Store.
+- TM26 Earthquake: Seafloor Cavern.
+- TM27 Return: Pacifidlog Town.
+- TM28 Dig: Route 114.
+- TM29 Psychic: Ever Grande City.
+- TM30 Shadow Ball: Mt. Pyre.
+- TM31 Brick Break: Sootopolis City.
+- TM32 Double Team: Route 113.
+- TM33 Reflect: Lilycove Department Store.
+- TM34 Sludge Wave: Route 132.
+- TM35 Flamethrower: Victory Road.
+- TM36 Sludge Bomb: Dewford Town.
+- TM37 Sandstorm: Route 111.
+- TM38 Fire Blast: Lilycove Department Store.
+- TM39 Rock Tomb: Roxanne, ginásio de Rustboro.
+- TM40 Aerial Ace: Poké Mart de Mauville City.
+- TM41 Torment: Slateport City.
+- TM42 Facade: Poké Mart de Mauville City.
+- TM43 Flame Charge: Jagged Pass.
+- TM44 Rest: Lilycove City.
+- TM45 Attract: Contest Hall de Verdanturf Town.
+- TM46 Thief: Slateport City (Oceanic Museum).
+- TM47 Low Sweep: Poké Mart de Mauville City.
+- TM48 Round: café de Mauville City.
+- TM49 Echoed Voice: Route 104.
+- TM50 Overheat: Flannery, ginásio de Lavaridge.
+- TM51 Steel Wing: Steven, Granite Cave.
+- TM52 Focus Blast: Lilycove Department Store.
+- TM53 Energy Ball: Safari Zone.
+- TM54 False Swipe: Rustboro City.
+- TM55 Scald: Seafloor Cavern.
+- TM56 Fling: Pacifidlog Town.
+- TM57 Charge Beam: Poké Mart de Mauville City.
+- TM58 Sky Drop: Mauville City.
+- TM59 Incinerate: Mt. Chimney.
+- TM60 Quash: Mossdeep City.
+- TM61 Will-O-Wisp: Mt. Pyre.
+- TM62 Acrobatics: Route 119.
+- TM63 Embargo: S.S. Tidal.
+- TM64 Explosion: Sky Pillar.
+- TM65 Shadow Claw: Granite Cave.
+- TM66 Payback: Mirage Island.
+- TM67 Retaliate: Norman, ginásio de Petalburg.
+- TM68 Giga Impact: Lilycove Department Store.
+- TM69 Rock Polish: Jagged Pass.
+- TM70 Flash: Granite Cave.
+- TM71 Stone Edge: Lilycove Department Store.
+- TM72 Volt Switch: Wattson, ginásio de Mauville.
+- TM73 Thunder Wave: Slateport City (vendedor de TMs ambulante).
+- TM74 Gyro Ball: Mirage Forest.
+- TM75 Swords Dance: Lavaridge Town.
+- TM76 Struggle Bug: Slateport City (vendedor de TMs ambulante).
+- TM77 Psych Up: Route 133.
+- TM78 Bulldoze: Poké Mart de Mauville City.
+- TM79 Frost Breath: Shoal Cave.
+- TM80 Rock Slide: Route 134.
+- TM81 X-Scissor: Victory Road.
+- TM82 Dragon Tail: Poké Mart de Mauville City.
+- TM83 Infestation: Sootopolis City.
+- TM84 Poison Jab: Mirage Mountain.
+- TM85 Dream Eater: Route 121.
+- TM86 Grass Knot: Fortree City.
+- TM87 Swagger: Battle Resort.
+- TM88 Sleep Talk: Lilycove City.
+- TM89 U-turn: Mauville Hills (sacada).
+- TM90 Substitute: Mirage Island.
+- TM91 Flash Cannon: Mirage Island.
+- TM92 Trick Room: prêmio da Trick House (Route 110).
+- TM93 Wild Charge: Safari Zone.
+- TM94 Secret Power: Aarune, Route 111.
+- TM95 Snarl: Mirage Cave.
+- TM96 Nature Power: Aarune, Fiery Path.
+- TM97 Dark Pulse: esconderijo da Team Magma/Aqua.
+- TM98 Power-Up Punch: Poké Mart de Mauville City.
+- TM99 Dazzling Gleam: Route 123.
+- TM100 Confide: Slateport City (vendedor de TMs ambulante).
+- HM01 Cut: Rustboro City (casa do Cutter).
+- HM02 Fly: May/Brendan, Route 119.
+- HM03 Surf: pai do Wally, Petalburg City (depois do Norman).
+- HM04 Strength: May/Brendan, Route 112.
+- HM05 Waterfall: Wallace, ginásio de Sootopolis.
+- HM06 Rock Smash: tio do Wally, Mauville City.
+- HM07 Dive: Steven, Mossdeep City.
+
+<!-- fontes: Serebii (TMs de ORAS), notas pokemythology (oras) -->
