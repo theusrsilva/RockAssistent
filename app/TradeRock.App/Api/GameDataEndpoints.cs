@@ -24,7 +24,10 @@ public static class GameDataEndpoints
         {
             if (!Enum.TryParse<Region>(region, ignoreCase: true, out var r) || int.TryParse(region, out _))
                 return Results.BadRequest(new { error = "unknown_region" });
-            return store.Map(r) is { } map ? Results.Ok(map) : Results.NotFound();
+            // TODO(mapas): o formato antigo sai quando as 11 regiões estiverem no novo.
+            if (store.Map(r) is { } map)
+                return Results.Ok(map);
+            return store.LegacyMap(r) is { } legacy ? Results.Ok(legacy) : Results.NotFound();
         });
 
         group.MapGet("/{game}/bosses", (string game, GameDataStore store) =>

@@ -2486,6 +2486,12 @@
         "caught": "Capturou",
         "missed": "Perdeu o encontro",
         "dead": "Morreu"
+      },
+      "legend": {
+        "city": "Cidade",
+        "place": "Lugar",
+        "route": "Rota",
+        "water": "Rota de água"
       }
     }
   },

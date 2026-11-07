@@ -2486,6 +2486,12 @@
         "caught": "Caught",
         "missed": "Missed the encounter",
         "dead": "Died"
+      },
+      "legend": {
+        "city": "City",
+        "place": "Place",
+        "route": "Route",
+        "water": "Water route"
       }
     }
   },

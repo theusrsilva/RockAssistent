@@ -44,6 +44,14 @@
   --tr-bad-soft: #fbe4e1;
   --tr-info: #3566a8;
   --tr-info-soft: #e3ecf8;
+  /* Mapa da região (Nuzlocke): terreno e rotas. */
+  --tr-map-sea: #bfdcea;
+  --tr-map-land: #dcebc6;
+  --tr-map-mountain: #e6cdae;
+  --tr-map-sand: #f1e4bd;
+  --tr-map-water: #4f9fd0;
+  --tr-map-water-edge: #2f6f99;
+  --tr-map-route-edge: #9a8a7c;
 }
 
 .dark {
@@ -71,6 +79,13 @@
   --tr-bad-soft: #3c1e1c;
   --tr-info: #7fb0f0;
   --tr-info-soft: #1b2a3e;
+  --tr-map-sea: #17303d;
+  --tr-map-land: #28382a;
+  --tr-map-mountain: #44352a;
+  --tr-map-sand: #47402a;
+  --tr-map-water: #5fa9d8;
+  --tr-map-water-edge: #9ccbe8;
+  --tr-map-route-edge: #8a7a6c;
 }
 
 @theme inline {
@@ -102,6 +117,13 @@
   --color-bad-soft: var(--tr-bad-soft);
   --color-info: var(--tr-info);
   --color-info-soft: var(--tr-info-soft);
+  --color-map-sea: var(--tr-map-sea);
+  --color-map-land: var(--tr-map-land);
+  --color-map-mountain: var(--tr-map-mountain);
+  --color-map-sand: var(--tr-map-sand);
+  --color-map-water: var(--tr-map-water);
+  --color-map-water-edge: var(--tr-map-water-edge);
+  --color-map-route-edge: var(--tr-map-route-edge);
 }
 
 /* Tons neutros (slate) e de destaque (sky) puxados para a paleta quente, para textos e detalhes menores. */
