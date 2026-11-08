@@ -1,1085 +1,162 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Alola",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+    "Mapa metrô feito à mão pela geografia do Town Map de Sun/Moon e Ultra Sun/Ultra Moon: Melemele (noroeste), Ula'ula (nordeste), Akala (sul) e Poni (sudoeste), separadas pelo mar, com a Aether Paradise entre Melemele e Akala. Lugares só do USUM com games. Rotas como linhas horizontais e verticais; ligações sem número (link-*) são caminhos sem área."
   ],
   "region": "alola",
-  "nodes": [
-    {
-      "id": "iki-town",
-      "name": "Iki Town",
-      "kind": "city",
-      "x": 0.2,
-      "y": 0.06,
-      "games": null
-    },
-    {
-      "id": "mahalo-trail",
-      "name": "Mahalo Trail",
-      "kind": "route",
-      "x": 0.126,
-      "y": 0.056,
-      "games": null
-    },
-    {
-      "id": "ruins-of-conflict",
-      "name": "Ruins of Conflict",
-      "kind": "dungeon",
-      "x": 0.162,
-      "y": 0.116,
-      "games": null
-    },
-    {
-      "id": "route-1",
-      "name": "Route 1",
-      "kind": "route",
-      "x": 0.209,
-      "y": 0.184,
-      "games": null
-    },
-    {
-      "id": "route-1-hauoli-outskirts",
-      "name": "Route 1 (Hau'oli Outskirts)",
-      "kind": "route",
-      "x": 0.218,
-      "y": 0.263,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "hauoli-city",
-      "name": "Hau'oli City",
-      "kind": "city",
-      "x": 0.22,
-      "y": 0.36,
-      "games": null
-    },
-    {
-      "id": "route-2",
-      "name": "Route 2",
-      "kind": "route",
-      "x": 0.337,
-      "y": 0.422,
-      "games": null
-    },
-    {
-      "id": "berry-fields",
-      "name": "Berry Fields",
-      "kind": "route",
-      "x": 0.293,
-      "y": 0.445,
-      "games": null
-    },
-    {
-      "id": "hauoli-cemetery",
-      "name": "Hau'oli Cemetery",
-      "kind": "route",
-      "x": 0.37,
-      "y": 0.411,
-      "games": null
-    },
-    {
-      "id": "big-wave-beach",
-      "name": "Big Wave Beach",
-      "kind": "route",
-      "x": 0.18,
-      "y": 0.322,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "verdant-cavern",
-      "name": "Verdant Cavern",
-      "kind": "dungeon",
-      "x": 0.292,
-      "y": 0.408,
-      "games": null
-    },
-    {
-      "id": "route-3",
-      "name": "Route 3",
-      "kind": "route",
-      "x": 0.335,
-      "y": 0.529,
-      "games": null
-    },
-    {
-      "id": "kalae-bay",
-      "name": "Kala'e Bay",
-      "kind": "sea",
-      "x": 0.302,
-      "y": 0.486,
-      "games": null
-    },
-    {
-      "id": "melemele-meadow",
-      "name": "Melemele Meadow",
-      "kind": "route",
-      "x": 0.254,
-      "y": 0.559,
-      "games": null
-    },
-    {
-      "id": "seaward-cave",
-      "name": "Seaward Cave",
-      "kind": "dungeon",
-      "x": 0.281,
-      "y": 0.583,
-      "games": null
-    },
-    {
-      "id": "ten-carat-hill",
-      "name": "Ten Carat Hill",
-      "kind": "dungeon",
-      "x": 0.17,
-      "y": 0.21,
-      "games": null
-    },
-    {
-      "id": "melemele-sea",
-      "name": "Melemele Sea",
-      "kind": "sea",
-      "x": 0.08,
-      "y": 0.3,
-      "games": null
-    },
-    {
-      "id": "heahea-city",
-      "name": "Heahea City",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "route-4",
-      "name": "Route 4",
-      "kind": "route",
-      "x": 0.516,
-      "y": 0.157,
-      "games": null
-    },
-    {
-      "id": "heahea-beach",
-      "name": "Heahea Beach",
-      "kind": "route",
-      "x": 0.46,
-      "y": 0.24,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "paniola-town",
-      "name": "Paniola Town",
-      "kind": "city",
-      "x": 0.62,
-      "y": 0.12,
-      "games": null
-    },
-    {
-      "id": "paniola-ranch",
-      "name": "Paniola Ranch",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.083,
-      "games": null
-    },
-    {
-      "id": "route-5",
-      "name": "Route 5",
-      "kind": "route",
-      "x": 0.62,
-      "y": 0.047,
-      "games": null
-    },
-    {
-      "id": "pikachu-valley",
-      "name": "Pikachu Valley",
-      "kind": "route",
-      "x": 0.549,
-      "y": 0.192,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "brooklet-hill",
-      "name": "Brooklet Hill",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "route-6",
-      "name": "Route 6",
-      "kind": "route",
-      "x": 0.62,
-      "y": 0.249,
-      "games": null
-    },
-    {
-      "id": "royal-avenue",
-      "name": "Royal Avenue",
-      "kind": "city",
-      "x": 0.6,
-      "y": 0.36,
-      "games": null
-    },
-    {
-      "id": "route-7",
-      "name": "Route 7",
-      "kind": "route",
-      "x": 0.561,
-      "y": 0.405,
-      "games": null
-    },
-    {
-      "id": "wela-volcano-park",
-      "name": "Wela Volcano Park",
-      "kind": "route",
-      "x": 0.538,
-      "y": 0.436,
-      "games": null
-    },
-    {
-      "id": "route-8",
-      "name": "Route 8",
-      "kind": "route",
-      "x": 0.6,
-      "y": 0.497,
-      "games": null
-    },
-    {
-      "id": "lush-jungle",
-      "name": "Lush Jungle",
-      "kind": "route",
-      "x": 0.653,
-      "y": 0.478,
-      "games": null
-    },
-    {
-      "id": "diglett-tunnel",
-      "name": "Diglett's Tunnel",
-      "kind": "dungeon",
-      "x": 0.691,
-      "y": 0.408,
-      "games": null
-    },
-    {
-      "id": "route-9",
-      "name": "Route 9",
-      "kind": "route",
-      "x": 0.716,
-      "y": 0.434,
-      "games": null
-    },
-    {
-      "id": "dividing-peak-tunnel",
-      "name": "Dividing Peak Tunnel",
-      "kind": "dungeon",
-      "x": 0.576,
-      "y": 0.438,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "memorial-hill",
-      "name": "Memorial Hill",
-      "kind": "route",
-      "x": 0.817,
-      "y": 0.428,
-      "games": null
-    },
-    {
-      "id": "akala-outskirts",
-      "name": "Akala Outskirts",
-      "kind": "route",
-      "x": 0.845,
-      "y": 0.375,
-      "games": null
-    },
-    {
-      "id": "ruins-of-life",
-      "name": "Ruins of Life",
-      "kind": "dungeon",
-      "x": 0.876,
-      "y": 0.394,
-      "games": null
-    },
-    {
-      "id": "konikoni-city",
-      "name": "Konikoni City",
-      "kind": "city",
-      "x": 0.78,
-      "y": 0.4,
-      "games": null
-    },
-    {
-      "id": "hano-grand-resort",
-      "name": "Hano Grand Resort",
-      "kind": "building",
-      "x": 0.736,
-      "y": 0.37,
-      "games": null
-    },
-    {
-      "id": "hano-beach",
-      "name": "Hano Beach",
-      "kind": "route",
-      "x": 0.769,
-      "y": 0.324,
-      "games": null
-    },
-    {
-      "id": "aether-paradise",
-      "name": "Aether Paradise",
-      "kind": "building",
-      "x": 0.4,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "malie-city",
-      "name": "Malie City",
-      "kind": "city",
-      "x": 0.62,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "malie-garden",
-      "name": "Malie Garden",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "malie-outer-cape",
-      "name": "Malie City Outer Cape",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.565,
-      "games": null
-    },
-    {
-      "id": "route-10",
-      "name": "Route 10",
-      "kind": "route",
-      "x": 0.664,
-      "y": 0.546,
-      "games": null
-    },
-    {
-      "id": "mount-hokulani",
-      "name": "Mount Hokulani",
-      "kind": "route",
-      "x": 0.628,
-      "y": 0.519,
-      "games": null
-    },
-    {
-      "id": "route-11",
-      "name": "Route 11",
-      "kind": "route",
-      "x": 0.648,
-      "y": 0.639,
-      "games": null
-    },
-    {
-      "id": "route-12",
-      "name": "Route 12",
-      "kind": "route",
-      "x": 0.694,
-      "y": 0.595,
-      "games": null
-    },
-    {
-      "id": "blush-mountain",
-      "name": "Blush Mountain",
-      "kind": "route",
-      "x": 0.717,
-      "y": 0.639,
-      "games": null
-    },
-    {
-      "id": "secluded-shore",
-      "name": "Secluded Shore",
-      "kind": "route",
-      "x": 0.727,
-      "y": 0.581,
-      "games": [
-        "sm"
-      ]
-    },
-    {
-      "id": "route-13",
-      "name": "Route 13",
-      "kind": "route",
-      "x": 0.773,
-      "y": 0.632,
-      "games": null
-    },
-    {
-      "id": "tapu-village",
-      "name": "Tapu Village",
-      "kind": "city",
-      "x": 0.86,
-      "y": 0.68,
-      "games": null
-    },
-    {
-      "id": "route-14",
-      "name": "Route 14",
-      "kind": "route",
-      "x": 0.896,
-      "y": 0.723,
-      "games": null
-    },
-    {
-      "id": "route-15",
-      "name": "Route 15",
-      "kind": "route",
-      "x": 0.979,
-      "y": 0.684,
-      "games": null
-    },
-    {
-      "id": "haina-desert",
-      "name": "Haina Desert",
-      "kind": "route",
-      "x": 0.774,
-      "y": 0.668,
-      "games": null
-    },
-    {
-      "id": "ruins-of-abundance",
-      "name": "Ruins of Abundance",
-      "kind": "dungeon",
-      "x": 0.753,
-      "y": 0.696,
-      "games": null
-    },
-    {
-      "id": "route-16",
-      "name": "Route 16",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.722,
-      "games": null
-    },
-    {
-      "id": "route-17",
-      "name": "Route 17",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.822,
-      "games": null
-    },
-    {
-      "id": "ulaula-beach",
-      "name": "Ula'ula Beach",
-      "kind": "route",
-      "x": 0.91,
-      "y": 0.683,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "ulaula-meadow",
-      "name": "Ula'ula Meadow",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.78,
-      "games": null
-    },
-    {
-      "id": "lake-of-the-sunne",
-      "name": "Lake of the Sunne",
-      "kind": "route",
-      "x": 0.95,
-      "y": 0.809,
-      "games": null
-    },
-    {
-      "id": "lake-of-the-moone",
-      "name": "Lake of the Moone",
-      "kind": "route",
-      "x": 0.95,
-      "y": 0.772,
-      "games": null
-    },
-    {
-      "id": "po-town",
-      "name": "Po Town",
-      "kind": "city",
-      "x": 0.96,
-      "y": 0.9,
-      "games": null
-    },
-    {
-      "id": "seafolk-village",
-      "name": "Seafolk Village",
-      "kind": "city",
-      "x": 0.3,
-      "y": 0.66,
-      "games": null
-    },
-    {
-      "id": "poni-wilds",
-      "name": "Poni Wilds",
-      "kind": "route",
-      "x": 0.244,
-      "y": 0.722,
-      "games": null
-    },
-    {
-      "id": "ancient-poni-path",
-      "name": "Ancient Poni Path",
-      "kind": "route",
-      "x": 0.16,
-      "y": 0.843,
-      "games": null
-    },
-    {
-      "id": "poni-breaker-coast",
-      "name": "Poni Breaker Coast",
-      "kind": "sea",
-      "x": 0.194,
-      "y": 0.824,
-      "games": null
-    },
-    {
-      "id": "ruins-of-hope",
-      "name": "Ruins of Hope",
-      "kind": "dungeon",
-      "x": 0.252,
-      "y": 0.87,
-      "games": null
-    },
-    {
-      "id": "exeggutor-island",
-      "name": "Exeggutor Island",
-      "kind": "route",
-      "x": 0.26,
-      "y": 0.662,
-      "games": null
-    },
-    {
-      "id": "sandy-cave",
-      "name": "Sandy Cave",
-      "kind": "dungeon",
-      "x": 0.831,
-      "y": 0.613,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "vast-poni-canyon",
-      "name": "Vast Poni Canyon",
-      "kind": "dungeon",
-      "x": 0.12,
-      "y": 0.9,
-      "games": null
-    },
-    {
-      "id": "altar-of-the-sunne",
-      "name": "Altar of the Sunne",
-      "kind": "building",
-      "x": 0.035,
-      "y": 0.88,
-      "games": null
-    },
-    {
-      "id": "altar-of-the-moone",
-      "name": "Altar of the Moone",
-      "kind": "building",
-      "x": 0.103,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "ultra-space",
-      "name": "Ultra Space Wilds",
-      "kind": "route",
-      "x": 0.04,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "mount-lanakila",
-      "name": "Mount Lanakila",
-      "kind": "dungeon",
-      "x": 0.842,
-      "y": 0.556,
-      "games": null
-    },
-    {
-      "id": "pokemon-league",
-      "name": "Pokémon League",
-      "kind": "building",
-      "x": 0.78,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "poni-grove",
-      "name": "Poni Grove",
-      "kind": "route",
-      "x": 0.326,
-      "y": 0.785,
-      "games": null
-    },
-    {
-      "id": "poni-plains",
-      "name": "Poni Plains",
-      "kind": "route",
-      "x": 0.342,
-      "y": 0.818,
-      "games": null
-    },
-    {
-      "id": "poni-meadow",
-      "name": "Poni Meadow",
-      "kind": "route",
-      "x": 0.394,
-      "y": 0.864,
-      "games": null
-    },
-    {
-      "id": "resolution-cave",
-      "name": "Resolution Cave",
-      "kind": "dungeon",
-      "x": 0.438,
-      "y": 0.828,
-      "games": null
-    },
-    {
-      "id": "poni-beach",
-      "name": "Poni Beach",
-      "kind": "route",
-      "x": 0.161,
-      "y": 0.787,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "poni-coast",
-      "name": "Poni Coast",
-      "kind": "route",
-      "x": 0.391,
-      "y": 0.908,
-      "games": null
-    },
-    {
-      "id": "poni-gauntlet",
-      "name": "Poni Gauntlet",
-      "kind": "route",
-      "x": 0.44,
-      "y": 0.96,
-      "games": null
-    },
-    {
-      "id": "ultra-megalopolis",
-      "name": "Ultra Megalopolis",
-      "kind": "route",
-      "x": 0.02,
-      "y": 0.82,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "plank-bridge",
-      "name": "Plank Bridge",
-      "kind": "route",
-      "x": 0.109,
-      "y": 0.117,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "reverse-world",
-      "name": "Reverse World",
-      "kind": "route",
-      "x": 0.107,
-      "y": 0.955,
-      "games": [
-        "usum"
-      ]
-    },
-    {
-      "id": "plains-grotto",
-      "name": "Plains Grotto",
-      "kind": "dungeon",
-      "x": 0.327,
-      "y": 0.857,
-      "games": [
-        "usum"
-      ]
-    }
+  "grid": {"cols": 46, "rows": 31},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [46, 0], [46, 31], [0, 31]]},
+    {"kind": "land", "polygon": [[2.0, 1.7], [2.7, 1.0], [18.9, 1.0], [19.6, 1.7], [19.6, 10.7], [18.9, 11.4], [14.3, 11.4], [13.6, 12.1], [13.6, 12.1], [12.9, 12.8], [2.7, 12.8], [2.0, 12.1]]},
+    {"kind": "land", "polygon": [[22.6, 1.7], [23.3, 1.0], [44.9, 1.0], [45.6, 1.7], [45.6, 10.7], [44.9, 11.4], [37.3, 11.4], [36.6, 12.1], [36.6, 13.7], [35.9, 14.4], [23.3, 14.4], [22.6, 13.7]]},
+    {"kind": "land", "polygon": [[21.6, 17.7], [22.3, 17.0], [40.9, 17.0], [41.6, 17.7], [41.6, 29.9], [40.9, 30.6], [29.7, 30.6], [29.0, 30.0], [29.0, 30.0], [28.3, 29.4], [22.3, 29.4], [21.6, 28.7]]},
+    {"kind": "land", "polygon": [[0.8, 17.9], [1.5, 17.2], [9.9, 17.2], [10.6, 16.9], [10.6, 16.9], [11.3, 16.6], [12.7, 16.6], [13.4, 16.9], [13.4, 16.9], [14.1, 17.2], [20.7, 17.2], [21.4, 17.9], [21.4, 27.9], [20.7, 28.6], [1.5, 28.6], [0.8, 27.9]]},
+    {"kind": "mountain", "polygon": [[36.4, 1.9], [37.1, 1.2], [39.7, 1.2], [40.4, 1.9], [40.4, 4.7], [39.7, 5.4], [37.1, 5.4], [36.4, 4.7]]},
+    {"kind": "sand", "polygon": [[39.6, 6.5], [40.3, 5.8], [44.7, 5.8], [45.4, 6.5], [45.4, 7.3], [44.7, 8.0], [40.3, 8.0], [39.6, 7.3]]},
+    {"kind": "mountain", "polygon": [[29.4, 28.5], [30.1, 27.8], [31.7, 27.8], [32.4, 28.5], [32.4, 29.5], [31.7, 30.2], [30.1, 30.2], [29.4, 29.5]]},
+    {"kind": "mountain", "polygon": [[10.8, 20.5], [11.5, 19.8], [12.9, 19.8], [13.6, 20.5], [13.6, 26.1], [12.9, 26.8], [11.5, 26.8], [10.8, 26.1]]}
   ],
-  "edges": [
-    {
-      "from": "iki-town",
-      "to": "mahalo-trail"
-    },
-    {
-      "from": "mahalo-trail",
-      "to": "ruins-of-conflict"
-    },
-    {
-      "from": "mahalo-trail",
-      "to": "plank-bridge"
-    },
-    {
-      "from": "plank-bridge",
-      "to": "ruins-of-conflict"
-    },
-    {
-      "from": "iki-town",
-      "to": "route-1"
-    },
-    {
-      "from": "route-1",
-      "to": "route-1-hauoli-outskirts"
-    },
-    {
-      "from": "route-1-hauoli-outskirts",
-      "to": "hauoli-city"
-    },
-    {
-      "from": "hauoli-city",
-      "to": "route-2"
-    },
-    {
-      "from": "route-2",
-      "to": "hauoli-cemetery"
-    },
-    {
-      "from": "route-2",
-      "to": "verdant-cavern"
-    },
-    {
-      "from": "route-2",
-      "to": "berry-fields"
-    },
-    {
-      "from": "route-2",
-      "to": "route-3"
-    },
-    {
-      "from": "route-3",
-      "to": "melemele-meadow"
-    },
-    {
-      "from": "melemele-meadow",
-      "to": "seaward-cave"
-    },
-    {
-      "from": "route-3",
-      "to": "kalae-bay"
-    },
-    {
-      "from": "route-1",
-      "to": "ten-carat-hill"
-    },
-    {
-      "from": "hauoli-city",
-      "to": "big-wave-beach"
-    },
-    {
-      "from": "route-1",
-      "to": "melemele-sea"
-    },
-    {
-      "from": "hauoli-city",
-      "to": "heahea-city"
-    },
-    {
-      "from": "heahea-city",
-      "to": "heahea-beach"
-    },
-    {
-      "from": "heahea-city",
-      "to": "route-4"
-    },
-    {
-      "from": "route-4",
-      "to": "paniola-town"
-    },
-    {
-      "from": "paniola-town",
-      "to": "paniola-ranch"
-    },
-    {
-      "from": "paniola-ranch",
-      "to": "route-5"
-    },
-    {
-      "from": "route-5",
-      "to": "brooklet-hill"
-    },
-    {
-      "from": "route-4",
-      "to": "pikachu-valley"
-    },
-    {
-      "from": "paniola-town",
-      "to": "route-6"
-    },
-    {
-      "from": "route-6",
-      "to": "royal-avenue"
-    },
-    {
-      "from": "royal-avenue",
-      "to": "route-7"
-    },
-    {
-      "from": "route-7",
-      "to": "wela-volcano-park"
-    },
-    {
-      "from": "wela-volcano-park",
-      "to": "route-8"
-    },
-    {
-      "from": "route-8",
-      "to": "lush-jungle"
-    },
-    {
-      "from": "lush-jungle",
-      "to": "diglett-tunnel"
-    },
-    {
-      "from": "diglett-tunnel",
-      "to": "route-9"
-    },
-    {
-      "from": "route-9",
-      "to": "konikoni-city"
-    },
-    {
-      "from": "konikoni-city",
-      "to": "memorial-hill"
-    },
-    {
-      "from": "memorial-hill",
-      "to": "akala-outskirts"
-    },
-    {
-      "from": "akala-outskirts",
-      "to": "ruins-of-life"
-    },
-    {
-      "from": "route-7",
-      "to": "dividing-peak-tunnel"
-    },
-    {
-      "from": "konikoni-city",
-      "to": "hano-grand-resort"
-    },
-    {
-      "from": "hano-grand-resort",
-      "to": "hano-beach"
-    },
-    {
-      "from": "heahea-city",
-      "to": "aether-paradise"
-    },
-    {
-      "from": "heahea-city",
-      "to": "malie-city"
-    },
-    {
-      "from": "malie-city",
-      "to": "malie-garden"
-    },
-    {
-      "from": "malie-city",
-      "to": "malie-outer-cape"
-    },
-    {
-      "from": "malie-city",
-      "to": "route-10"
-    },
-    {
-      "from": "route-10",
-      "to": "mount-hokulani"
-    },
-    {
-      "from": "malie-city",
-      "to": "route-11"
-    },
-    {
-      "from": "route-11",
-      "to": "route-12"
-    },
-    {
-      "from": "route-12",
-      "to": "blush-mountain"
-    },
-    {
-      "from": "route-12",
-      "to": "secluded-shore"
-    },
-    {
-      "from": "route-12",
-      "to": "route-13"
-    },
-    {
-      "from": "route-13",
-      "to": "tapu-village"
-    },
-    {
-      "from": "tapu-village",
-      "to": "route-14"
-    },
-    {
-      "from": "route-14",
-      "to": "route-15"
-    },
-    {
-      "from": "route-13",
-      "to": "haina-desert"
-    },
-    {
-      "from": "haina-desert",
-      "to": "ruins-of-abundance"
-    },
-    {
-      "from": "route-13",
-      "to": "sandy-cave"
-    },
-    {
-      "from": "route-14",
-      "to": "ulaula-beach"
-    },
-    {
-      "from": "route-15",
-      "to": "route-16"
-    },
-    {
-      "from": "route-16",
-      "to": "ulaula-meadow"
-    },
-    {
-      "from": "ulaula-meadow",
-      "to": "lake-of-the-sunne"
-    },
-    {
-      "from": "ulaula-meadow",
-      "to": "lake-of-the-moone"
-    },
-    {
-      "from": "route-16",
-      "to": "route-17"
-    },
-    {
-      "from": "route-17",
-      "to": "po-town"
-    },
-    {
-      "from": "tapu-village",
-      "to": "mount-lanakila"
-    },
-    {
-      "from": "mount-lanakila",
-      "to": "pokemon-league"
-    },
-    {
-      "from": "malie-city",
-      "to": "seafolk-village"
-    },
-    {
-      "from": "seafolk-village",
-      "to": "poni-wilds"
-    },
-    {
-      "from": "poni-wilds",
-      "to": "ancient-poni-path"
-    },
-    {
-      "from": "ancient-poni-path",
-      "to": "poni-breaker-coast"
-    },
-    {
-      "from": "poni-breaker-coast",
-      "to": "ruins-of-hope"
-    },
-    {
-      "from": "ancient-poni-path",
-      "to": "poni-beach"
-    },
-    {
-      "from": "ancient-poni-path",
-      "to": "vast-poni-canyon"
-    },
-    {
-      "from": "vast-poni-canyon",
-      "to": "altar-of-the-sunne"
-    },
-    {
-      "from": "altar-of-the-sunne",
-      "to": "ultra-space"
-    },
-    {
-      "from": "vast-poni-canyon",
-      "to": "altar-of-the-moone"
-    },
-    {
-      "from": "altar-of-the-moone",
-      "to": "ultra-space"
-    },
-    {
-      "from": "altar-of-the-sunne",
-      "to": "ultra-megalopolis"
-    },
-    {
-      "from": "altar-of-the-moone",
-      "to": "reverse-world"
-    },
-    {
-      "from": "seafolk-village",
-      "to": "exeggutor-island"
-    },
-    {
-      "from": "poni-wilds",
-      "to": "poni-grove"
-    },
-    {
-      "from": "poni-grove",
-      "to": "poni-plains"
-    },
-    {
-      "from": "poni-plains",
-      "to": "poni-meadow"
-    },
-    {
-      "from": "poni-meadow",
-      "to": "resolution-cave"
-    },
-    {
-      "from": "poni-plains",
-      "to": "poni-coast"
-    },
-    {
-      "from": "poni-coast",
-      "to": "poni-gauntlet"
-    },
-    {
-      "from": "poni-plains",
-      "to": "plains-grotto"
-    }
+  "places": [
+    {"id": "melemele-meadow", "name": "Melemele Meadow", "kind": "place", "x": 7, "y": 2, "label": "w", "games": null},
+    {"id": "seaward-cave", "name": "Seaward Cave", "kind": "place", "x": 10, "y": 2, "label": "n", "games": null},
+    {"id": "kalae-bay", "name": "Kala'e Bay", "kind": "place", "x": 10, "y": 4, "label": "e", "games": null},
+    {"id": "sandy-cave", "name": "Sandy Cave", "kind": "place", "x": 10, "y": 6, "label": "e", "games": ["usum"]},
+    {"id": "iki-town", "name": "Iki Town", "kind": "city", "x": 14, "y": 5, "label": "w", "games": null},
+    {"id": "mahalo-trail", "name": "Mahalo Trail", "kind": "place", "x": 14, "y": 2, "label": "w", "games": null},
+    {"id": "plank-bridge", "name": "Plank Bridge", "kind": "place", "x": 16, "y": 2, "label": "n", "games": ["usum"]},
+    {"id": "ruins-of-conflict", "name": "Ruins of Conflict", "kind": "place", "x": 18, "y": 2, "label": "s", "games": null},
+    {"id": "ten-carat-hill", "name": "Ten Carat Hill", "kind": "place", "x": 17, "y": 7, "label": "e", "games": null},
+    {"id": "big-wave-beach", "name": "Big Wave Beach", "kind": "place", "x": 17, "y": 10, "label": "e", "games": ["usum"]},
+    {"id": "route-1-hauoli-outskirts", "name": "Hau'oli Outskirts", "kind": "place", "x": 12, "y": 12, "label": "e", "games": ["usum"]},
+    {"id": "hauoli-city", "name": "Hau'oli City", "kind": "city", "x": 7, "y": 10, "label": "sw", "games": null},
+    {"id": "melemele-sea", "name": "Melemele Sea", "kind": "place", "x": 7, "y": 13, "label": "e", "games": null},
+    {"id": "hauoli-cemetery", "name": "Hau'oli Cemetery", "kind": "place", "x": 4, "y": 9, "label": "n", "games": null},
+    {"id": "berry-fields", "name": "Berry Fields", "kind": "place", "x": 10, "y": 9, "label": "n", "games": null},
+    {"id": "verdant-cavern", "name": "Verdant Cavern", "kind": "place", "x": 4, "y": 6, "label": "n", "games": null},
+    {"id": "malie-city", "name": "Malie City", "kind": "city", "x": 26, "y": 10, "label": "e", "games": null},
+    {"id": "malie-garden", "name": "Malie Garden", "kind": "place", "x": 26, "y": 13, "label": "e", "games": null},
+    {"id": "malie-outer-cape", "name": "Malie Outer Cape", "kind": "place", "x": 24, "y": 10, "label": "n", "games": null},
+    {"id": "mount-hokulani", "name": "Mount Hokulani", "kind": "place", "x": 26, "y": 4, "label": "e", "games": null},
+    {"id": "blush-mountain", "name": "Blush Mountain", "kind": "place", "x": 34, "y": 7, "label": "n", "games": null},
+    {"id": "tapu-village", "name": "Tapu Village", "kind": "city", "x": 38, "y": 7, "label": "se", "games": null},
+    {"id": "mount-lanakila", "name": "Mount Lanakila", "kind": "place", "x": 38, "y": 4, "label": "ne", "games": null},
+    {"id": "pokemon-league", "name": "Pokémon League", "kind": "building", "x": 38, "y": 2, "label": "e", "games": null},
+    {"id": "lake-of-the-moone", "name": "Lake of the Moone", "kind": "place", "x": 35, "y": 4, "label": "s", "games": null},
+    {"id": "lake-of-the-sunne", "name": "Lake of the Sunne", "kind": "place", "x": 41, "y": 4, "label": "s", "games": null},
+    {"id": "haina-desert", "name": "Haina Desert", "kind": "place", "x": 41, "y": 7, "label": "n", "games": null},
+    {"id": "ruins-of-abundance", "name": "Ruins of Abundance", "kind": "place", "x": 44, "y": 7, "label": "n", "games": null},
+    {"id": "secluded-shore", "name": "Secluded Shore", "kind": "place", "x": 41, "y": 9, "label": "e", "games": ["sm"]},
+    {"id": "ulaula-beach", "name": "Ula'ula Beach", "kind": "place", "x": 41, "y": 9, "label": "e", "games": ["usum"]},
+    {"id": "ulaula-meadow", "name": "Ula'ula Meadow", "kind": "place", "x": 30, "y": 13, "label": "s", "games": null},
+    {"id": "po-town", "name": "Po Town", "kind": "city", "x": 34, "y": 13, "label": "e", "games": null},
+    {"id": "heahea-city", "name": "Heahea City", "kind": "city", "x": 26, "y": 18, "label": "w", "games": null},
+    {"id": "heahea-beach", "name": "Heahea Beach", "kind": "place", "x": 29, "y": 18, "label": "e", "games": ["usum"]},
+    {"id": "pikachu-valley", "name": "Pikachu Valley", "kind": "place", "x": 23, "y": 19, "label": "s", "games": ["usum"]},
+    {"id": "paniola-town", "name": "Paniola Town", "kind": "city", "x": 26, "y": 22, "label": "e", "games": null},
+    {"id": "paniola-ranch", "name": "Paniola Ranch", "kind": "place", "x": 23, "y": 22, "label": "s", "games": null},
+    {"id": "brooklet-hill", "name": "Brooklet Hill", "kind": "place", "x": 26, "y": 26, "label": "w", "games": null},
+    {"id": "dividing-peak-tunnel", "name": "Dividing Peak Tunnel", "kind": "place", "x": 27, "y": 28, "label": "w", "games": ["usum"]},
+    {"id": "royal-avenue", "name": "Royal Avenue", "kind": "city", "x": 31, "y": 26, "label": "e", "games": null},
+    {"id": "hano-grand-resort", "name": "Hano Grand Resort", "kind": "place", "x": 31, "y": 23, "label": "w", "games": null},
+    {"id": "hano-beach", "name": "Hano Beach", "kind": "place", "x": 34, "y": 23, "label": "n", "games": null},
+    {"id": "wela-volcano-park", "name": "Wela Volcano Park", "kind": "place", "x": 31, "y": 29, "label": "s", "games": null},
+    {"id": "lush-jungle", "name": "Lush Jungle", "kind": "place", "x": 33, "y": 27, "label": "e", "games": null},
+    {"id": "diglett-tunnel", "name": "Diglett Tunnel", "kind": "place", "x": 36, "y": 29, "label": "s", "games": null},
+    {"id": "konikoni-city", "name": "Konikoni City", "kind": "city", "x": 39, "y": 29, "label": "s", "games": null},
+    {"id": "memorial-hill", "name": "Memorial Hill", "kind": "place", "x": 39, "y": 26, "label": "e", "games": null},
+    {"id": "akala-outskirts", "name": "Akala Outskirts", "kind": "place", "x": 39, "y": 23, "label": "e", "games": null},
+    {"id": "ruins-of-life", "name": "Ruins of Life", "kind": "place", "x": 39, "y": 20, "label": "e", "games": null},
+    {"id": "seafolk-village", "name": "Seafolk Village", "kind": "city", "x": 16, "y": 18, "label": "e", "games": null},
+    {"id": "poni-wilds", "name": "Poni Wilds", "kind": "place", "x": 16, "y": 21, "label": "e", "games": null},
+    {"id": "ancient-poni-path", "name": "Ancient Poni Path", "kind": "place", "x": 16, "y": 24, "label": "e", "games": null},
+    {"id": "poni-breaker-coast", "name": "Poni Breaker Coast", "kind": "place", "x": 16, "y": 27, "label": "s", "games": null},
+    {"id": "ruins-of-hope", "name": "Ruins of Hope", "kind": "place", "x": 19, "y": 27, "label": "s", "games": null},
+    {"id": "exeggutor-island", "name": "Exeggutor Island", "kind": "place", "x": 12, "y": 18, "label": "n", "games": null},
+    {"id": "vast-poni-canyon", "name": "Vast Poni Canyon", "kind": "place", "x": 12, "y": 21, "label": "e", "games": null},
+    {"id": "altar-of-the-sunne", "name": "Altar of the Sunne", "kind": "place", "x": 12, "y": 24, "label": "e", "games": null},
+    {"id": "altar-of-the-moone", "name": "Altar of the Moone", "kind": "place", "x": 12, "y": 26, "label": "e", "games": null},
+    {"id": "poni-grove", "name": "Poni Grove", "kind": "place", "x": 8, "y": 18, "label": "n", "games": null},
+    {"id": "poni-plains", "name": "Poni Plains", "kind": "place", "x": 8, "y": 21, "label": "e", "games": null},
+    {"id": "plains-grotto", "name": "Plains Grotto", "kind": "place", "x": 5, "y": 21, "label": "n", "games": ["usum"]},
+    {"id": "poni-meadow", "name": "Poni Meadow", "kind": "place", "x": 8, "y": 24, "label": "e", "games": null},
+    {"id": "resolution-cave", "name": "Resolution Cave", "kind": "place", "x": 8, "y": 27, "label": "e", "games": null},
+    {"id": "poni-coast", "name": "Poni Coast", "kind": "place", "x": 5, "y": 24, "label": "n", "games": null},
+    {"id": "poni-gauntlet", "name": "Poni Gauntlet", "kind": "place", "x": 5, "y": 27, "label": "s", "games": null},
+    {"id": "poni-beach", "name": "Poni Beach", "kind": "place", "x": 2, "y": 24, "label": "s", "games": ["usum"]},
+    {"id": "aether-paradise", "name": "Aether Paradise", "kind": "place", "x": 20, "y": 15, "label": "e", "games": null}
+  ],
+  "routes": [
+    {"id": "route-3", "name": "Route 3", "number": "3", "water": false, "path": [[7, 5], [7, 2]], "games": null},
+    {"id": "link-melemele-meadow-seaward-cave", "name": "melemele-meadow ↔ seaward-cave", "number": null, "water": false, "path": [[7, 2], [10, 2]], "games": null},
+    {"id": "link-seaward-cave-kalae-bay", "name": "seaward-cave ↔ kalae-bay", "number": null, "water": false, "path": [[10, 2], [10, 4]], "games": null},
+    {"id": "link-kalae-bay-sandy-cave", "name": "kalae-bay ↔ sandy-cave", "number": null, "water": false, "path": [[10, 4], [10, 6]], "games": ["usum"]},
+    {"id": "link-iki-town-mahalo-trail", "name": "iki-town ↔ mahalo-trail", "number": null, "water": false, "path": [[14, 5], [14, 2]], "games": null},
+    {"id": "link-mahalo-trail-ruins-of-conflict", "name": "mahalo-trail ↔ ruins-of-conflict", "number": null, "water": false, "path": [[14, 2], [18, 2]], "games": null},
+    {"id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[14, 5], [14, 10], [7, 10]], "games": null},
+    {"id": "link-route-1-ten-carat-hill", "name": "route-1 ↔ ten-carat-hill", "number": null, "water": false, "path": [[14, 7], [17, 7]], "games": null},
+    {"id": "link-route-1-big-wave-beach", "name": "route-1 ↔ big-wave-beach", "number": null, "water": false, "path": [[14, 10], [17, 10]], "games": ["usum"]},
+    {"id": "link-route-1-route-1-hauoli-outskirts", "name": "route-1 ↔ route-1-hauoli-outskirts", "number": null, "water": false, "path": [[12, 10], [12, 12]], "games": ["usum"]},
+    {"id": "link-hauoli-city-melemele-sea", "name": "hauoli-city ↔ melemele-sea", "number": null, "water": true, "path": [[7, 10], [7, 13]], "games": null},
+    {"id": "route-2", "name": "Route 2", "number": "2", "water": false, "path": [[7, 10], [7, 5]], "games": null},
+    {"id": "link-route-2-hauoli-cemetery", "name": "route-2 ↔ hauoli-cemetery", "number": null, "water": false, "path": [[7, 9], [4, 9]], "games": null},
+    {"id": "link-route-2-berry-fields", "name": "route-2 ↔ berry-fields", "number": null, "water": false, "path": [[7, 9], [10, 9]], "games": null},
+    {"id": "link-route-2-verdant-cavern", "name": "route-2 ↔ verdant-cavern", "number": null, "water": false, "path": [[7, 6], [4, 6]], "games": null},
+    {"id": "link-malie-city-malie-garden", "name": "malie-city ↔ malie-garden", "number": null, "water": false, "path": [[26, 10], [26, 13]], "games": null},
+    {"id": "link-malie-city-malie-outer-cape", "name": "malie-city ↔ malie-outer-cape", "number": null, "water": false, "path": [[26, 10], [24, 10]], "games": null},
+    {"id": "route-10", "name": "Route 10", "number": "10", "water": false, "path": [[26, 10], [26, 7]], "games": null},
+    {"id": "link-route-10-mount-hokulani", "name": "route-10 ↔ mount-hokulani", "number": null, "water": false, "path": [[26, 7], [26, 4]], "games": null},
+    {"id": "route-11", "name": "Route 11", "number": "11", "water": false, "path": [[26, 7], [30, 7]], "games": null},
+    {"id": "route-12", "name": "Route 12", "number": "12", "water": false, "path": [[30, 7], [34, 7]], "games": null},
+    {"id": "route-13", "name": "Route 13", "number": "13", "water": false, "path": [[34, 7], [35, 7], [38, 7]], "games": null},
+    {"id": "link-tapu-village-mount-lanakila", "name": "tapu-village ↔ mount-lanakila", "number": null, "water": false, "path": [[38, 7], [38, 4]], "games": null},
+    {"id": "link-mount-lanakila-pokemon-league", "name": "mount-lanakila ↔ pokemon-league", "number": null, "water": false, "path": [[38, 4], [38, 2]], "games": null},
+    {"id": "link-mount-lanakila-lake-of-the-moone", "name": "mount-lanakila ↔ lake-of-the-moone", "number": null, "water": false, "path": [[38, 4], [35, 4]], "games": null},
+    {"id": "link-mount-lanakila-lake-of-the-sunne", "name": "mount-lanakila ↔ lake-of-the-sunne", "number": null, "water": false, "path": [[38, 4], [41, 4]], "games": null},
+    {"id": "link-tapu-village-haina-desert", "name": "tapu-village ↔ haina-desert", "number": null, "water": false, "path": [[38, 7], [41, 7]], "games": null},
+    {"id": "link-haina-desert-ruins-of-abundance", "name": "haina-desert ↔ ruins-of-abundance", "number": null, "water": false, "path": [[41, 7], [44, 7]], "games": null},
+    {"id": "route-14", "name": "Route 14", "number": "14", "water": false, "path": [[38, 7], [38, 10], [34, 10]], "games": null},
+    {"id": "link-route-14-secluded-shore", "name": "route-14 ↔ secluded-shore", "number": null, "water": false, "path": [[38, 9], [41, 9]], "games": ["sm"]},
+    {"id": "link-route-14-ulaula-beach", "name": "route-14 ↔ ulaula-beach", "number": null, "water": false, "path": [[38, 9], [41, 9]], "games": ["usum"]},
+    {"id": "route-15", "name": "Route 15", "number": "15", "water": false, "path": [[34, 10], [30, 10]], "games": null},
+    {"id": "route-16", "name": "Route 16", "number": "16", "water": false, "path": [[30, 10], [30, 13]], "games": null},
+    {"id": "route-17", "name": "Route 17", "number": "17", "water": false, "path": [[30, 13], [34, 13]], "games": null},
+    {"id": "link-heahea-city-heahea-beach", "name": "heahea-city ↔ heahea-beach", "number": null, "water": false, "path": [[26, 18], [29, 18]], "games": ["usum"]},
+    {"id": "route-4", "name": "Route 4", "number": "4", "water": false, "path": [[26, 18], [26, 19], [26, 22]], "games": null},
+    {"id": "link-route-4-pikachu-valley", "name": "route-4 ↔ pikachu-valley", "number": null, "water": false, "path": [[26, 19], [23, 19]], "games": ["usum"]},
+    {"id": "link-paniola-town-paniola-ranch", "name": "paniola-town ↔ paniola-ranch", "number": null, "water": false, "path": [[26, 22], [23, 22]], "games": null},
+    {"id": "route-5", "name": "Route 5", "number": "5", "water": false, "path": [[26, 22], [26, 26]], "games": null},
+    {"id": "route-6", "name": "Route 6", "number": "6", "water": false, "path": [[26, 26], [31, 26]], "games": null},
+    {"id": "link-route-6-dividing-peak-tunnel", "name": "route-6 ↔ dividing-peak-tunnel", "number": null, "water": false, "path": [[27, 26], [27, 28]], "games": ["usum"]},
+    {"id": "link-royal-avenue-hano-grand-resort", "name": "royal-avenue ↔ hano-grand-resort", "number": null, "water": false, "path": [[31, 26], [31, 23]], "games": null},
+    {"id": "link-hano-grand-resort-hano-beach", "name": "hano-grand-resort ↔ hano-beach", "number": null, "water": false, "path": [[31, 23], [34, 23]], "games": null},
+    {"id": "route-7", "name": "Route 7", "number": "7", "water": false, "path": [[31, 26], [31, 29]], "games": null},
+    {"id": "route-8", "name": "Route 8", "number": "8", "water": false, "path": [[31, 29], [33, 29], [36, 29]], "games": null},
+    {"id": "link-route-8-lush-jungle", "name": "route-8 ↔ lush-jungle", "number": null, "water": false, "path": [[33, 29], [33, 27]], "games": null},
+    {"id": "route-9", "name": "Route 9", "number": "9", "water": false, "path": [[36, 29], [39, 29]], "games": null},
+    {"id": "link-konikoni-city-memorial-hill", "name": "konikoni-city ↔ memorial-hill", "number": null, "water": false, "path": [[39, 29], [39, 26]], "games": null},
+    {"id": "link-memorial-hill-akala-outskirts", "name": "memorial-hill ↔ akala-outskirts", "number": null, "water": false, "path": [[39, 26], [39, 23]], "games": null},
+    {"id": "link-akala-outskirts-ruins-of-life", "name": "akala-outskirts ↔ ruins-of-life", "number": null, "water": false, "path": [[39, 23], [39, 20]], "games": null},
+    {"id": "link-seafolk-village-poni-wilds", "name": "seafolk-village ↔ poni-wilds", "number": null, "water": false, "path": [[16, 18], [16, 21]], "games": null},
+    {"id": "link-poni-wilds-ancient-poni-path", "name": "poni-wilds ↔ ancient-poni-path", "number": null, "water": false, "path": [[16, 21], [16, 24]], "games": null},
+    {"id": "link-ancient-poni-path-poni-breaker-coast", "name": "ancient-poni-path ↔ poni-breaker-coast", "number": null, "water": false, "path": [[16, 24], [16, 27]], "games": null},
+    {"id": "link-poni-breaker-coast-ruins-of-hope", "name": "poni-breaker-coast ↔ ruins-of-hope", "number": null, "water": false, "path": [[16, 27], [19, 27]], "games": null},
+    {"id": "link-seafolk-village-exeggutor-island", "name": "seafolk-village ↔ exeggutor-island", "number": null, "water": true, "path": [[16, 18], [12, 18]], "games": null},
+    {"id": "link-exeggutor-island-vast-poni-canyon", "name": "exeggutor-island ↔ vast-poni-canyon", "number": null, "water": false, "path": [[12, 18], [12, 21]], "games": null},
+    {"id": "link-vast-poni-canyon-altar-of-the-sunne", "name": "vast-poni-canyon ↔ altar-of-the-sunne", "number": null, "water": false, "path": [[12, 21], [12, 24]], "games": null},
+    {"id": "link-altar-of-the-sunne-altar-of-the-moone", "name": "altar-of-the-sunne ↔ altar-of-the-moone", "number": null, "water": false, "path": [[12, 24], [12, 26]], "games": null},
+    {"id": "link-exeggutor-island-poni-grove", "name": "exeggutor-island ↔ poni-grove", "number": null, "water": false, "path": [[12, 18], [8, 18]], "games": null},
+    {"id": "link-poni-grove-poni-plains", "name": "poni-grove ↔ poni-plains", "number": null, "water": false, "path": [[8, 18], [8, 21]], "games": null},
+    {"id": "link-poni-plains-plains-grotto", "name": "poni-plains ↔ plains-grotto", "number": null, "water": false, "path": [[8, 21], [5, 21]], "games": ["usum"]},
+    {"id": "link-poni-plains-poni-meadow", "name": "poni-plains ↔ poni-meadow", "number": null, "water": false, "path": [[8, 21], [8, 24]], "games": null},
+    {"id": "link-poni-meadow-resolution-cave", "name": "poni-meadow ↔ resolution-cave", "number": null, "water": false, "path": [[8, 24], [8, 27]], "games": null},
+    {"id": "link-poni-meadow-poni-coast", "name": "poni-meadow ↔ poni-coast", "number": null, "water": false, "path": [[8, 24], [5, 24]], "games": null},
+    {"id": "link-poni-coast-poni-gauntlet", "name": "poni-coast ↔ poni-gauntlet", "number": null, "water": false, "path": [[5, 24], [5, 27]], "games": null},
+    {"id": "link-poni-coast-poni-beach", "name": "poni-coast ↔ poni-beach", "number": null, "water": false, "path": [[5, 24], [2, 24]], "games": ["usum"]}
+  ],
+  "unmapped": [
+    {"id": "ultra-space", "reason": "Ultra Space (outra dimensão, pelo Ultra Wormhole), fora do mapa de Alola"},
+    {"id": "ultra-megalopolis", "reason": "Ultra Megalopolis (outra dimensão, pelo Ultra Wormhole), fora do mapa de Alola"},
+    {"id": "reverse-world", "reason": "Reverse World (dimensão do Giratina, pelo Ultra Wormhole), fora do mapa de Alola"},
+    {"id": "festival-plaza", "reason": "Festival Plaza (praça online do jogo, sem lugar no mapa)"}
   ]
 }
