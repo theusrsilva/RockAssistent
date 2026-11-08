@@ -1,1008 +1,166 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Sinnoh",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo. Battle Zone no canto de cima à direita."
+    "https://bulbapedia.bulbagarden.net/wiki/Grand_Underground",
+    "Mapa metrô feito à mão pela geografia dos jogos: o Mt. Coronet no meio separa o oeste (Twinleaf, Jubilife, Eterna) do leste (Hearthome, Veilstone, Sunyshore); Snowpoint ao norte, a Liga e a Battle Zone a nordeste. O quadro de baixo é o Grand Underground do bdsp (subsolo, sem posição na superfície). Rotas como linhas horizontais e verticais; ligações sem número (link-*) são caminhos sem área."
   ],
   "region": "sinnoh",
-  "nodes": [
-    {
-      "id": "twinleaf-town",
-      "name": "Twinleaf Town",
-      "kind": "city",
-      "x": 0.22,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "route-201",
-      "name": "Route 201",
-      "kind": "route",
-      "x": 0.27,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "lake-verity",
-      "name": "Lake Verity",
-      "kind": "route",
-      "x": 0.2,
-      "y": 0.77,
-      "games": null
-    },
-    {
-      "id": "sandgem-town",
-      "name": "Sandgem Town",
-      "kind": "city",
-      "x": 0.32,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "route-202",
-      "name": "Route 202",
-      "kind": "route",
-      "x": 0.32,
-      "y": 0.72,
-      "games": null
-    },
-    {
-      "id": "jubilife-city",
-      "name": "Jubilife City",
-      "kind": "city",
-      "x": 0.32,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "route-203",
-      "name": "Route 203",
-      "kind": "route",
-      "x": 0.4,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "oreburgh-gate",
-      "name": "Oreburgh Gate",
-      "kind": "dungeon",
-      "x": 0.46,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "oreburgh-city",
-      "name": "Oreburgh City",
-      "kind": "city",
-      "x": 0.52,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "oreburgh-mine",
-      "name": "Oreburgh Mine",
-      "kind": "dungeon",
-      "x": 0.52,
-      "y": 0.71,
-      "games": null
-    },
-    {
-      "id": "route-218",
-      "name": "Route 218",
-      "kind": "route",
-      "x": 0.22,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "canalave-city",
-      "name": "Canalave City",
-      "kind": "city",
-      "x": 0.14,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "iron-island",
-      "name": "Iron Island",
-      "kind": "dungeon",
-      "x": 0.06,
-      "y": 0.58,
-      "games": null
-    },
-    {
-      "id": "fullmoon-island",
-      "name": "Fullmoon Island",
-      "kind": "route",
-      "x": 0.12,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "newmoon-island",
-      "name": "Newmoon Island",
-      "kind": "route",
-      "x": 0.06,
-      "y": 0.48,
-      "games": null
-    },
-    {
-      "id": "route-204",
-      "name": "Route 204",
-      "kind": "route",
-      "x": 0.32,
-      "y": 0.55,
-      "games": null
-    },
-    {
-      "id": "ravaged-path",
-      "name": "Ravaged Path",
-      "kind": "dungeon",
-      "x": 0.35,
-      "y": 0.51,
-      "games": null
-    },
-    {
-      "id": "floaroma-town",
-      "name": "Floaroma Town",
-      "kind": "city",
-      "x": 0.32,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "floaroma-meadow",
-      "name": "Floaroma Meadow",
-      "kind": "route",
-      "x": 0.27,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "route-205",
-      "name": "Route 205",
-      "kind": "route",
-      "x": 0.38,
-      "y": 0.4,
-      "games": null
-    },
-    {
-      "id": "valley-windworks",
-      "name": "Valley Windworks",
-      "kind": "building",
-      "x": 0.4,
-      "y": 0.46,
-      "games": null
-    },
-    {
-      "id": "fuego-ironworks",
-      "name": "Fuego Ironworks",
-      "kind": "building",
-      "x": 0.45,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "eterna-forest",
-      "name": "Eterna Forest",
-      "kind": "dungeon",
-      "x": 0.42,
-      "y": 0.32,
-      "games": null
-    },
-    {
-      "id": "old-chateau",
-      "name": "Old Chateau",
-      "kind": "building",
-      "x": 0.4,
-      "y": 0.26,
-      "games": null
-    },
-    {
-      "id": "eterna-city",
-      "name": "Eterna City",
-      "kind": "city",
-      "x": 0.48,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "route-211-west",
-      "name": "Route 211 (west)",
-      "kind": "route",
-      "x": 0.53,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "mt-coronet",
-      "name": "Mt. Coronet",
-      "kind": "dungeon",
-      "x": 0.58,
-      "y": 0.38,
-      "games": null
-    },
-    {
-      "id": "spear-pillar",
-      "name": "Spear Pillar",
-      "kind": "dungeon",
-      "x": 0.6,
-      "y": 0.31,
-      "games": null
-    },
-    {
-      "id": "route-211-east",
-      "name": "Route 211 (east)",
-      "kind": "route",
-      "x": 0.63,
-      "y": 0.28,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "celestic-town",
-      "name": "Celestic Town",
-      "kind": "city",
-      "x": 0.68,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "route-206",
-      "name": "Route 206 (Cycling Road)",
-      "kind": "route",
-      "x": 0.48,
-      "y": 0.4,
-      "games": null
-    },
-    {
-      "id": "wayward-cave",
-      "name": "Wayward Cave",
-      "kind": "dungeon",
-      "x": 0.51,
-      "y": 0.45,
-      "games": null
-    },
-    {
-      "id": "route-207",
-      "name": "Route 207",
-      "kind": "route",
-      "x": 0.52,
-      "y": 0.52,
-      "games": null
-    },
-    {
-      "id": "route-208",
-      "name": "Route 208",
-      "kind": "route",
-      "x": 0.62,
-      "y": 0.52,
-      "games": null
-    },
-    {
-      "id": "hearthome-city",
-      "name": "Hearthome City",
-      "kind": "city",
-      "x": 0.7,
-      "y": 0.52,
-      "games": null
-    },
-    {
-      "id": "route-209",
-      "name": "Route 209",
-      "kind": "route",
-      "x": 0.76,
-      "y": 0.46,
-      "games": null
-    },
-    {
-      "id": "lost-tower",
-      "name": "Lost Tower",
-      "kind": "building",
-      "x": 0.73,
-      "y": 0.42,
-      "games": null
-    },
-    {
-      "id": "solaceon-town",
-      "name": "Solaceon Town",
-      "kind": "city",
-      "x": 0.78,
-      "y": 0.38,
-      "games": null
-    },
-    {
-      "id": "solaceon-ruins",
-      "name": "Solaceon Ruins",
-      "kind": "dungeon",
-      "x": 0.82,
-      "y": 0.36,
-      "games": null
-    },
-    {
-      "id": "route-210-south",
-      "name": "Route 210 (south)",
-      "kind": "route",
-      "x": 0.78,
-      "y": 0.3,
-      "games": null
-    },
-    {
-      "id": "route-210-north",
-      "name": "Route 210 (north)",
-      "kind": "route",
-      "x": 0.74,
-      "y": 0.24,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "route-215",
-      "name": "Route 215",
-      "kind": "route",
-      "x": 0.84,
-      "y": 0.3,
-      "games": null
-    },
-    {
-      "id": "veilstone-city",
-      "name": "Veilstone City",
-      "kind": "city",
-      "x": 0.9,
-      "y": 0.3,
-      "games": null
-    },
-    {
-      "id": "route-214",
-      "name": "Route 214",
-      "kind": "route",
-      "x": 0.9,
-      "y": 0.4,
-      "games": null
-    },
-    {
-      "id": "ruin-maniac-cave",
-      "name": "Ruin Maniac Cave",
-      "kind": "dungeon",
-      "x": 0.94,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "spring-path",
-      "name": "Spring Path",
-      "kind": "route",
-      "x": 0.86,
-      "y": 0.45,
-      "games": null
-    },
-    {
-      "id": "sendoff-spring",
-      "name": "Sendoff Spring",
-      "kind": "route",
-      "x": 0.83,
-      "y": 0.47,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "turnback-cave",
-      "name": "Turnback Cave",
-      "kind": "dungeon",
-      "x": 0.8,
-      "y": 0.49,
-      "games": null
-    },
-    {
-      "id": "valor-lakefront",
-      "name": "Valor Lakefront",
-      "kind": "route",
-      "x": 0.88,
-      "y": 0.54,
-      "games": null
-    },
-    {
-      "id": "lake-valor",
-      "name": "Lake Valor",
-      "kind": "route",
-      "x": 0.84,
-      "y": 0.57,
-      "games": null
-    },
-    {
-      "id": "route-213",
-      "name": "Route 213",
-      "kind": "route",
-      "x": 0.88,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "pastoria-city",
-      "name": "Pastoria City",
-      "kind": "city",
-      "x": 0.78,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "great-marsh",
-      "name": "Great Marsh",
-      "kind": "route",
-      "x": 0.78,
-      "y": 0.71,
-      "games": null
-    },
-    {
-      "id": "route-212",
-      "name": "Route 212",
-      "kind": "route",
-      "x": 0.7,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "route-219",
-      "name": "Route 219",
-      "kind": "sea",
-      "x": 0.32,
-      "y": 0.88,
-      "games": null
-    },
-    {
-      "id": "route-220",
-      "name": "Route 220",
-      "kind": "sea",
-      "x": 0.38,
-      "y": 0.92,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "route-221",
-      "name": "Route 221",
-      "kind": "route",
-      "x": 0.46,
-      "y": 0.92,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "pal-park",
-      "name": "Pal Park",
-      "kind": "building",
-      "x": 0.51,
-      "y": 0.94,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "route-216",
-      "name": "Route 216",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.2,
-      "games": null
-    },
-    {
-      "id": "route-217",
-      "name": "Route 217",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.12,
-      "games": null
-    },
-    {
-      "id": "acuity-lakefront",
-      "name": "Acuity Lakefront",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.04,
-      "games": null
-    },
-    {
-      "id": "snowpoint-city",
-      "name": "Snowpoint City",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.06,
-      "games": null
-    },
-    {
-      "id": "snowpoint-temple",
-      "name": "Snowpoint Temple",
-      "kind": "dungeon",
-      "x": 0.45,
-      "y": 0.03,
-      "games": null
-    },
-    {
-      "id": "route-222",
-      "name": "Route 222",
-      "kind": "route",
-      "x": 0.92,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "sunyshore-city",
-      "name": "Sunyshore City",
-      "kind": "city",
-      "x": 0.97,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "route-223",
-      "name": "Route 223",
-      "kind": "sea",
-      "x": 0.97,
-      "y": 0.66,
-      "games": null
-    },
-    {
-      "id": "victory-road",
-      "name": "Victory Road",
-      "kind": "dungeon",
-      "x": 0.97,
-      "y": 0.55,
-      "games": null
-    },
-    {
-      "id": "pokemon-league",
-      "name": "Pokémon League",
-      "kind": "building",
-      "x": 0.97,
-      "y": 0.47,
-      "games": null
-    },
-    {
-      "id": "route-224",
-      "name": "Route 224",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.38,
-      "games": null
-    },
-    {
-      "id": "flower-paradise",
-      "name": "Flower Paradise",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.31,
-      "games": null
-    },
-    {
-      "id": "fight-area",
-      "name": "Fight Area",
-      "kind": "city",
-      "x": 0.76,
-      "y": 0.1,
-      "games": null
-    },
-    {
-      "id": "route-225",
-      "name": "Route 225",
-      "kind": "route",
-      "x": 0.78,
-      "y": 0.03,
-      "games": null
-    },
-    {
-      "id": "survival-area",
-      "name": "Survival Area",
-      "kind": "city",
-      "x": 0.86,
-      "y": 0.02,
-      "games": null
-    },
-    {
-      "id": "route-226",
-      "name": "Route 226",
-      "kind": "sea",
-      "x": 0.92,
-      "y": 0.03,
-      "games": [
-        "dp",
-        "pt"
-      ]
-    },
-    {
-      "id": "route-227",
-      "name": "Route 227",
-      "kind": "route",
-      "x": 0.96,
-      "y": 0.09,
-      "games": null
-    },
-    {
-      "id": "stark-mountain",
-      "name": "Stark Mountain",
-      "kind": "dungeon",
-      "x": 0.97,
-      "y": 0.16,
-      "games": null
-    },
-    {
-      "id": "route-228",
-      "name": "Route 228",
-      "kind": "route",
-      "x": 0.9,
-      "y": 0.1,
-      "games": null
-    },
-    {
-      "id": "route-229",
-      "name": "Route 229",
-      "kind": "route",
-      "x": 0.86,
-      "y": 0.15,
-      "games": null
-    },
-    {
-      "id": "resort-area",
-      "name": "Resort Area",
-      "kind": "city",
-      "x": 0.82,
-      "y": 0.18,
-      "games": null
-    },
-    {
-      "id": "route-230",
-      "name": "Route 230",
-      "kind": "sea",
-      "x": 0.79,
-      "y": 0.14,
-      "games": null
-    }
+  "grid": {"cols": 50, "rows": 40},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [50, 0], [50, 40], [0, 40]]},
+    {"kind": "land", "polygon": [[8.6, 1.1], [9.3, 0.4], [23.8, 0.4], [24.5, 1.1], [24.5, 7.7], [25.2, 8.4], [35.7, 8.4], [36.4, 9.1], [36.4, 16.1], [37.1, 16.8], [41.5, 16.8], [42.2, 17.5], [42.2, 22.7], [42.9, 23.4], [44.9, 23.4], [45.6, 24.1], [45.6, 29.1], [44.9, 29.8], [20.1, 29.8], [19.4, 30.5], [19.4, 31.1], [18.7, 31.8], [14.3, 31.8], [13.6, 31.1], [13.6, 29.3], [12.9, 28.6], [2.1, 28.6], [1.4, 27.9], [1.4, 26.3], [2.1, 25.6], [3.7, 25.6], [4.4, 24.9], [4.4, 22.3], [5.1, 21.6], [5.7, 21.6], [6.4, 20.9], [6.4, 16.0], [7.1, 15.3], [7.2, 15.3], [7.9, 14.6], [7.9, 13.3], [8.25, 12.6], [8.25, 12.6], [8.6, 11.9]]},
+    {"kind": "land", "polygon": [[1.2, 22.9], [1.9, 22.2], [2.1, 22.2], [2.8, 22.9], [2.8, 23.1], [2.1, 23.8], [1.9, 23.8], [1.2, 23.1]]},
+    {"kind": "land", "polygon": [[4.2, 19.9], [4.9, 19.2], [5.1, 19.2], [5.8, 19.9], [5.8, 20.1], [5.1, 20.8], [4.9, 20.8], [4.2, 20.1]]},
+    {"kind": "land", "polygon": [[4.2, 16.9], [4.9, 16.2], [5.1, 16.2], [5.8, 16.9], [5.8, 17.1], [5.1, 17.8], [4.9, 17.8], [4.2, 17.1]]},
+    {"kind": "land", "polygon": [[6.2, 13.9], [6.9, 13.2], [7.1, 13.2], [7.8, 13.9], [7.8, 14.1], [7.1, 14.8], [6.9, 14.8], [6.2, 14.1]]},
+    {"kind": "land", "polygon": [[42.4, 14.3], [43.1, 13.6], [47.7, 13.6], [48.4, 14.3], [48.4, 15.7], [47.7, 16.4], [44.9, 16.4], [44.2, 17.1], [44.2, 18.1], [43.5, 18.8], [43.1, 18.8], [42.4, 18.1]]},
+    {"kind": "land", "polygon": [[37.2, 1.3], [37.9, 0.6], [46.9, 0.6], [47.6, 1.3], [47.6, 9.1], [46.9, 9.8], [37.9, 9.8], [37.2, 9.1]]},
+    {"kind": "mountain", "polygon": [[19.1, 3.9], [19.8, 3.2], [20.2, 3.2], [20.9, 3.9], [20.9, 18.9], [20.2, 19.6], [19.8, 19.6], [19.1, 18.9]]},
+    {"kind": "mountain", "polygon": [[40.8, 1.5], [41.5, 0.8], [42.7, 0.8], [43.4, 1.5], [43.4, 2.7], [42.7, 3.4], [41.5, 3.4], [40.8, 2.7]]},
+    {"kind": "mountain", "polygon": [[20.6, 32.8], [21.3, 32.1], [46.9, 32.1], [47.6, 32.8], [47.6, 38.9], [46.9, 39.6], [21.3, 39.6], [20.6, 38.9]]}
   ],
-  "edges": [
-    {
-      "from": "twinleaf-town",
-      "to": "route-201"
-    },
-    {
-      "from": "route-201",
-      "to": "lake-verity"
-    },
-    {
-      "from": "route-201",
-      "to": "sandgem-town"
-    },
-    {
-      "from": "sandgem-town",
-      "to": "route-202"
-    },
-    {
-      "from": "sandgem-town",
-      "to": "route-219"
-    },
-    {
-      "from": "route-202",
-      "to": "jubilife-city"
-    },
-    {
-      "from": "jubilife-city",
-      "to": "route-203"
-    },
-    {
-      "from": "route-203",
-      "to": "oreburgh-gate"
-    },
-    {
-      "from": "oreburgh-gate",
-      "to": "oreburgh-city"
-    },
-    {
-      "from": "oreburgh-city",
-      "to": "oreburgh-mine"
-    },
-    {
-      "from": "oreburgh-city",
-      "to": "route-207"
-    },
-    {
-      "from": "jubilife-city",
-      "to": "route-204"
-    },
-    {
-      "from": "route-204",
-      "to": "ravaged-path"
-    },
-    {
-      "from": "route-204",
-      "to": "floaroma-town"
-    },
-    {
-      "from": "floaroma-town",
-      "to": "floaroma-meadow"
-    },
-    {
-      "from": "floaroma-town",
-      "to": "route-205"
-    },
-    {
-      "from": "route-205",
-      "to": "valley-windworks"
-    },
-    {
-      "from": "route-205",
-      "to": "eterna-forest"
-    },
-    {
-      "from": "route-205",
-      "to": "fuego-ironworks"
-    },
-    {
-      "from": "eterna-forest",
-      "to": "old-chateau"
-    },
-    {
-      "from": "eterna-forest",
-      "to": "eterna-city"
-    },
-    {
-      "from": "eterna-city",
-      "to": "route-211-west"
-    },
-    {
-      "from": "route-211-west",
-      "to": "mt-coronet"
-    },
-    {
-      "from": "mt-coronet",
-      "to": "route-211-east"
-    },
-    {
-      "from": "route-211-east",
-      "to": "celestic-town"
-    },
-    {
-      "from": "eterna-city",
-      "to": "route-206"
-    },
-    {
-      "from": "route-206",
-      "to": "wayward-cave"
-    },
-    {
-      "from": "route-206",
-      "to": "route-207"
-    },
-    {
-      "from": "route-207",
-      "to": "mt-coronet"
-    },
-    {
-      "from": "mt-coronet",
-      "to": "route-208"
-    },
-    {
-      "from": "mt-coronet",
-      "to": "spear-pillar"
-    },
-    {
-      "from": "mt-coronet",
-      "to": "route-216"
-    },
-    {
-      "from": "route-208",
-      "to": "hearthome-city"
-    },
-    {
-      "from": "hearthome-city",
-      "to": "route-209"
-    },
-    {
-      "from": "route-209",
-      "to": "lost-tower"
-    },
-    {
-      "from": "route-209",
-      "to": "solaceon-town"
-    },
-    {
-      "from": "solaceon-town",
-      "to": "solaceon-ruins"
-    },
-    {
-      "from": "solaceon-town",
-      "to": "route-210-south"
-    },
-    {
-      "from": "route-210-south",
-      "to": "route-215"
-    },
-    {
-      "from": "route-215",
-      "to": "veilstone-city"
-    },
-    {
-      "from": "route-210-south",
-      "to": "route-210-north"
-    },
-    {
-      "from": "route-210-north",
-      "to": "celestic-town"
-    },
-    {
-      "from": "veilstone-city",
-      "to": "route-214"
-    },
-    {
-      "from": "route-214",
-      "to": "ruin-maniac-cave"
-    },
-    {
-      "from": "route-214",
-      "to": "spring-path"
-    },
-    {
-      "from": "spring-path",
-      "to": "sendoff-spring"
-    },
-    {
-      "from": "sendoff-spring",
-      "to": "turnback-cave"
-    },
-    {
-      "from": "route-214",
-      "to": "valor-lakefront"
-    },
-    {
-      "from": "valor-lakefront",
-      "to": "lake-valor"
-    },
-    {
-      "from": "valor-lakefront",
-      "to": "route-213"
-    },
-    {
-      "from": "route-213",
-      "to": "pastoria-city"
-    },
-    {
-      "from": "pastoria-city",
-      "to": "great-marsh"
-    },
-    {
-      "from": "pastoria-city",
-      "to": "route-212"
-    },
-    {
-      "from": "route-212",
-      "to": "hearthome-city"
-    },
-    {
-      "from": "valor-lakefront",
-      "to": "route-222"
-    },
-    {
-      "from": "route-222",
-      "to": "sunyshore-city"
-    },
-    {
-      "from": "sunyshore-city",
-      "to": "route-223"
-    },
-    {
-      "from": "route-223",
-      "to": "victory-road"
-    },
-    {
-      "from": "victory-road",
-      "to": "pokemon-league"
-    },
-    {
-      "from": "pokemon-league",
-      "to": "route-224"
-    },
-    {
-      "from": "route-224",
-      "to": "flower-paradise"
-    },
-    {
-      "from": "route-219",
-      "to": "route-220"
-    },
-    {
-      "from": "route-220",
-      "to": "route-221"
-    },
-    {
-      "from": "route-221",
-      "to": "pal-park"
-    },
-    {
-      "from": "jubilife-city",
-      "to": "route-218"
-    },
-    {
-      "from": "route-218",
-      "to": "canalave-city"
-    },
-    {
-      "from": "canalave-city",
-      "to": "iron-island"
-    },
-    {
-      "from": "canalave-city",
-      "to": "fullmoon-island"
-    },
-    {
-      "from": "canalave-city",
-      "to": "newmoon-island"
-    },
-    {
-      "from": "route-216",
-      "to": "route-217"
-    },
-    {
-      "from": "route-217",
-      "to": "acuity-lakefront"
-    },
-    {
-      "from": "acuity-lakefront",
-      "to": "snowpoint-city"
-    },
-    {
-      "from": "snowpoint-city",
-      "to": "snowpoint-temple"
-    },
-    {
-      "from": "snowpoint-city",
-      "to": "fight-area"
-    },
-    {
-      "from": "fight-area",
-      "to": "route-225"
-    },
-    {
-      "from": "route-225",
-      "to": "survival-area"
-    },
-    {
-      "from": "survival-area",
-      "to": "route-226"
-    },
-    {
-      "from": "route-226",
-      "to": "route-227"
-    },
-    {
-      "from": "route-227",
-      "to": "stark-mountain"
-    },
-    {
-      "from": "route-226",
-      "to": "route-228"
-    },
-    {
-      "from": "route-228",
-      "to": "route-229"
-    },
-    {
-      "from": "route-229",
-      "to": "resort-area"
-    },
-    {
-      "from": "resort-area",
-      "to": "route-230"
-    },
-    {
-      "from": "route-230",
-      "to": "fight-area"
-    }
-  ]
+  "places": [
+    {"id": "twinleaf-town", "name": "Twinleaf Town", "kind": "city", "x": 6, "y": 28, "label": "s", "games": null},
+    {"id": "lake-verity", "name": "Lake Verity", "kind": "place", "x": 3, "y": 28, "label": "n", "games": null},
+    {"id": "sandgem-town", "name": "Sandgem Town", "kind": "city", "x": 10, "y": 28, "label": "e", "games": null},
+    {"id": "jubilife-city", "name": "Jubilife City", "kind": "city", "x": 10, "y": 23, "label": "ne", "games": null},
+    {"id": "canalave-city", "name": "Canalave City", "kind": "city", "x": 5, "y": 23, "label": "s", "games": null},
+    {"id": "iron-island", "name": "Iron Island", "kind": "place", "x": 2, "y": 23, "label": "n", "games": null},
+    {"id": "fullmoon-island", "name": "Fullmoon Island", "kind": "place", "x": 5, "y": 20, "label": "w", "games": null},
+    {"id": "newmoon-island", "name": "Newmoon Island", "kind": "place", "x": 5, "y": 17, "label": "w", "games": null},
+    {"id": "ravaged-path", "name": "Ravaged Path", "kind": "place", "x": 8, "y": 20, "label": "s", "games": null},
+    {"id": "floaroma-town", "name": "Floaroma Town", "kind": "city", "x": 10, "y": 16, "label": "e", "games": null},
+    {"id": "floaroma-meadow", "name": "Floaroma Meadow", "kind": "place", "x": 8, "y": 16, "label": "w", "games": null},
+    {"id": "valley-windworks", "name": "Valley Windworks", "kind": "building", "x": 12, "y": 15, "label": "e", "games": null},
+    {"id": "fuego-ironworks", "name": "Fuego Ironworks", "kind": "building", "x": 7, "y": 14, "label": "w", "games": null},
+    {"id": "eterna-forest", "name": "Eterna Forest", "kind": "place", "x": 10, "y": 12, "label": "w", "games": null},
+    {"id": "old-chateau", "name": "Old Chateau", "kind": "building", "x": 12, "y": 10, "label": "n", "games": null},
+    {"id": "eterna-city", "name": "Eterna City", "kind": "city", "x": 16, "y": 12, "label": "n", "games": null},
+    {"id": "wayward-cave", "name": "Wayward Cave", "kind": "place", "x": 14, "y": 17, "label": "w", "games": null},
+    {"id": "oreburgh-gate", "name": "Oreburgh Gate", "kind": "place", "x": 13, "y": 23, "label": "s", "games": null},
+    {"id": "oreburgh-city", "name": "Oreburgh City", "kind": "city", "x": 16, "y": 23, "label": "e", "games": null},
+    {"id": "oreburgh-mine", "name": "Oreburgh Mine", "kind": "place", "x": 16, "y": 25, "label": "e", "games": null},
+    {"id": "mt-coronet", "name": "Mt. Coronet", "kind": "place", "x": 20, "y": 16, "label": "e", "games": null},
+    {"id": "spear-pillar", "name": "Spear Pillar", "kind": "place", "x": 20, "y": 6, "label": "e", "games": null},
+    {"id": "hall-of-origin", "name": "Hall of Origin", "kind": "place", "x": 20, "y": 4, "label": "e", "games": null},
+    {"id": "acuity-lakefront", "name": "Acuity Lakefront", "kind": "place", "x": 14, "y": 6, "label": "e", "games": null},
+    {"id": "snowpoint-city", "name": "Snowpoint City", "kind": "city", "x": 14, "y": 3, "label": "e", "games": null},
+    {"id": "snowpoint-temple", "name": "Snowpoint Temple", "kind": "place", "x": 14, "y": 1, "label": "e", "games": null},
+    {"id": "celestic-town", "name": "Celestic Town", "kind": "city", "x": 25, "y": 12, "label": "s", "games": null},
+    {"id": "hearthome-city", "name": "Hearthome City", "kind": "city", "x": 25, "y": 19, "label": "n", "games": null},
+    {"id": "lost-tower", "name": "Lost Tower", "kind": "building", "x": 27, "y": 21, "label": "s", "games": null},
+    {"id": "solaceon-town", "name": "Solaceon Town", "kind": "city", "x": 30, "y": 19, "label": "s", "games": null},
+    {"id": "solaceon-ruins", "name": "Solaceon Ruins", "kind": "place", "x": 32, "y": 19, "label": "n", "games": null},
+    {"id": "veilstone-city", "name": "Veilstone City", "kind": "city", "x": 35, "y": 16, "label": "ne", "games": null},
+    {"id": "ruin-maniac-cave", "name": "Ruin Maniac Cave", "kind": "place", "x": 33, "y": 21, "label": "w", "games": null},
+    {"id": "spring-path", "name": "Spring Path", "kind": "place", "x": 37, "y": 19, "label": "s", "games": null},
+    {"id": "sendoff-spring", "name": "Sendoff Spring", "kind": "place", "x": 39, "y": 19, "label": "n", "games": ["dp", "pt"]},
+    {"id": "turnback-cave", "name": "Turnback Cave", "kind": "place", "x": 41, "y": 19, "label": "n", "games": null},
+    {"id": "distortion-world", "name": "Distortion World", "kind": "place", "x": 41, "y": 21, "label": "s", "games": ["pt"]},
+    {"id": "valor-lakefront", "name": "Valor Lakefront", "kind": "place", "x": 35, "y": 24, "label": "ne", "games": null},
+    {"id": "lake-valor", "name": "Lake Valor", "kind": "place", "x": 33, "y": 24, "label": "n", "games": null},
+    {"id": "pastoria-city", "name": "Pastoria City", "kind": "city", "x": 29, "y": 27, "label": "n", "games": null},
+    {"id": "great-marsh", "name": "Great Marsh (Safari)", "kind": "place", "x": 29, "y": 29, "label": "e", "games": null},
+    {"id": "sunyshore-city", "name": "Sunyshore City", "kind": "city", "x": 43, "y": 24, "label": "e", "games": null},
+    {"id": "victory-road", "name": "Victory Road", "kind": "place", "x": 43, "y": 18, "label": "e", "games": null},
+    {"id": "pokemon-league", "name": "Pokémon League", "kind": "building", "x": 43, "y": 15, "label": "n", "games": null},
+    {"id": "flower-paradise", "name": "Seabreak Path / Flower Paradise", "kind": "place", "x": 47, "y": 15, "label": "n", "games": null},
+    {"id": "fight-area", "name": "Fight Area", "kind": "city", "x": 38, "y": 9, "label": "w", "games": null},
+    {"id": "survival-area", "name": "Survival Area", "kind": "city", "x": 38, "y": 5, "label": "w", "games": null},
+    {"id": "stark-mountain", "name": "Stark Mountain", "kind": "place", "x": 42, "y": 2, "label": "e", "games": null},
+    {"id": "resort-area", "name": "Resort Area", "kind": "city", "x": 46, "y": 9, "label": "n", "games": null},
+    {"id": "pal-park", "name": "Pal Park", "kind": "building", "x": 18, "y": 31, "label": "n", "games": ["dp", "pt"]},
+    {"id": "ramanas-park", "name": "Ramanas Park", "kind": "building", "x": 18, "y": 31, "label": "n", "games": ["bdsp"]},
+    {"id": "grand-underground", "name": "Grand Underground", "kind": "place", "x": 22, "y": 34, "label": "n", "games": ["bdsp"]},
+    {"id": "spacious-cave", "name": "Spacious Cave", "kind": "place", "x": 26, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "grassland-cave", "name": "Grassland Cave", "kind": "place", "x": 30, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "fountainspring-cave", "name": "Fountainspring Cave", "kind": "place", "x": 34, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "rocky-cave", "name": "Rocky Cave", "kind": "place", "x": 38, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "volcanic-cave", "name": "Volcanic Cave", "kind": "place", "x": 42, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "swampy-cave", "name": "Swampy Cave", "kind": "place", "x": 46, "y": 34, "label": "s", "games": ["bdsp"]},
+    {"id": "dazzling-cave", "name": "Dazzling Cave", "kind": "place", "x": 26, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "whiteout-cave", "name": "Whiteout Cave", "kind": "place", "x": 30, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "icy-cave", "name": "Icy Cave", "kind": "place", "x": 34, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "riverbank-cave", "name": "Riverbank Cave", "kind": "place", "x": 38, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "sandsear-cave", "name": "Sandsear Cave", "kind": "place", "x": 42, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "still-water-cavern", "name": "Still-Water Cavern", "kind": "place", "x": 46, "y": 36, "label": "s", "games": ["bdsp"]},
+    {"id": "sunlit-cavern", "name": "Sunlit Cavern", "kind": "place", "x": 26, "y": 38, "label": "s", "games": ["bdsp"]},
+    {"id": "big-bluff-cavern", "name": "Big Bluff Cavern", "kind": "place", "x": 30, "y": 38, "label": "s", "games": ["bdsp"]},
+    {"id": "stargleam-cavern", "name": "Stargleam Cavern", "kind": "place", "x": 34, "y": 38, "label": "s", "games": ["bdsp"]},
+    {"id": "glacial-cavern", "name": "Glacial Cavern", "kind": "place", "x": 38, "y": 38, "label": "s", "games": ["bdsp"]},
+    {"id": "bogsunk-cavern", "name": "Bogsunk Cavern", "kind": "place", "x": 42, "y": 38, "label": "s", "games": ["bdsp"]},
+    {"id": "typhlo-cavern", "name": "Typhlo Cavern", "kind": "place", "x": 46, "y": 38, "label": "s", "games": ["bdsp"]}
+  ],
+  "routes": [
+    {"id": "route-201", "name": "Route 201", "number": "201", "water": false, "path": [[6, 28], [10, 28]], "games": null},
+    {"id": "route-202", "name": "Route 202", "number": "202", "water": false, "path": [[10, 28], [10, 23]], "games": null},
+    {"id": "route-203", "name": "Route 203", "number": "203", "water": false, "path": [[10, 23], [13, 23]], "games": null},
+    {"id": "route-204", "name": "Route 204", "number": "204", "water": false, "path": [[10, 23], [10, 20], [10, 16]], "games": null},
+    {"id": "route-205", "name": "Route 205", "number": "205", "water": false, "path": [[10, 16], [10, 15], [10, 14], [10, 12]], "games": null},
+    {"id": "route-206", "name": "Route 206 (Cycling Road)", "number": "206", "water": false, "path": [[16, 12], [16, 17], [16, 19]], "games": null},
+    {"id": "route-207", "name": "Route 207", "number": "207", "water": false, "path": [[16, 23], [16, 19], [20, 19]], "games": null},
+    {"id": "route-208", "name": "Route 208", "number": "208", "water": false, "path": [[20, 19], [25, 19]], "games": null},
+    {"id": "route-209", "name": "Route 209", "number": "209", "water": false, "path": [[25, 19], [27, 19], [30, 19]], "games": null},
+    {"id": "route-210-south", "name": "Route 210 (south)", "number": "210", "water": false, "path": [[30, 19], [30, 16]], "games": null},
+    {"id": "route-210-north", "name": "Route 210 (north)", "number": "210", "water": false, "path": [[30, 16], [30, 12], [25, 12]], "games": ["dp", "pt"]},
+    {"id": "link-route-210-south-celestic-town", "name": "route-210-south ↔ celestic-town", "number": null, "water": false, "path": [[30, 16], [30, 12], [25, 12]], "games": ["bdsp"]},
+    {"id": "route-211-west", "name": "Route 211", "number": "211", "water": false, "path": [[16, 12], [20, 12]], "games": null},
+    {"id": "route-211-east", "name": "Route 211 (east)", "number": "211", "water": false, "path": [[20, 12], [25, 12]], "games": ["dp", "pt"]},
+    {"id": "link-mt-coronet-celestic-town", "name": "mt-coronet ↔ celestic-town", "number": null, "water": false, "path": [[20, 12], [25, 12]], "games": ["bdsp"]},
+    {"id": "route-212", "name": "Route 212", "number": "212", "water": false, "path": [[25, 19], [25, 27], [29, 27]], "games": null},
+    {"id": "route-213", "name": "Route 213", "number": "213", "water": false, "path": [[29, 27], [35, 27], [35, 24]], "games": null},
+    {"id": "route-214", "name": "Route 214", "number": "214", "water": false, "path": [[35, 16], [35, 19], [35, 21], [35, 24]], "games": null},
+    {"id": "route-215", "name": "Route 215", "number": "215", "water": false, "path": [[30, 16], [35, 16]], "games": null},
+    {"id": "route-216", "name": "Route 216", "number": "216", "water": false, "path": [[20, 9], [14, 9]], "games": null},
+    {"id": "route-217", "name": "Route 217", "number": "217", "water": false, "path": [[14, 9], [14, 6]], "games": null},
+    {"id": "route-218", "name": "Route 218", "number": "218", "water": false, "path": [[10, 23], [5, 23]], "games": null},
+    {"id": "route-219", "name": "Route 219", "number": "219", "water": true, "path": [[10, 28], [10, 31]], "games": null},
+    {"id": "route-220", "name": "Route 220", "number": "220", "water": true, "path": [[10, 31], [14, 31]], "games": ["dp", "pt"]},
+    {"id": "route-221", "name": "Route 221", "number": "221", "water": false, "path": [[14, 31], [18, 31]], "games": ["dp", "pt"]},
+    {"id": "link-route-219-ramanas-park", "name": "route-219 ↔ ramanas-park", "number": null, "water": false, "path": [[10, 31], [14, 31], [18, 31]], "games": ["bdsp"]},
+    {"id": "route-222", "name": "Route 222", "number": "222", "water": false, "path": [[35, 24], [43, 24]], "games": null},
+    {"id": "route-223", "name": "Route 223", "number": "223", "water": true, "path": [[43, 24], [43, 18]], "games": null},
+    {"id": "route-224", "name": "Route 224", "number": "224", "water": false, "path": [[43, 15], [47, 15]], "games": null},
+    {"id": "route-225", "name": "Route 225", "number": "225", "water": false, "path": [[38, 9], [38, 5]], "games": null},
+    {"id": "route-226", "name": "Route 226", "number": "226", "water": false, "path": [[38, 5], [42, 5]], "games": ["dp", "pt"]},
+    {"id": "link-survival-area-route-227", "name": "survival-area ↔ route-227", "number": null, "water": false, "path": [[38, 5], [42, 5]], "games": ["bdsp"]},
+    {"id": "route-227", "name": "Route 227", "number": "227", "water": false, "path": [[42, 5], [42, 2]], "games": null},
+    {"id": "route-228", "name": "Route 228", "number": "228", "water": false, "path": [[42, 5], [42, 9]], "games": null},
+    {"id": "route-229", "name": "Route 229", "number": "229", "water": false, "path": [[42, 9], [44, 9], [46, 9]], "games": null},
+    {"id": "route-230", "name": "Route 230", "number": "230", "water": true, "path": [[38, 9], [38, 11], [44, 11], [44, 9]], "games": null},
+    {"id": "link-twinleaf-town-lake-verity", "name": "twinleaf-town ↔ lake-verity", "number": null, "water": false, "path": [[6, 28], [3, 28]], "games": null},
+    {"id": "link-canalave-city-iron-island", "name": "canalave-city ↔ iron-island", "number": null, "water": true, "path": [[5, 23], [2, 23]], "games": null},
+    {"id": "link-canalave-city-fullmoon-island", "name": "canalave-city ↔ fullmoon-island", "number": null, "water": true, "path": [[5, 23], [5, 20]], "games": null},
+    {"id": "link-fullmoon-island-newmoon-island", "name": "fullmoon-island ↔ newmoon-island", "number": null, "water": true, "path": [[5, 20], [5, 17]], "games": null},
+    {"id": "link-route-204-ravaged-path", "name": "route-204 ↔ ravaged-path", "number": null, "water": false, "path": [[10, 20], [8, 20]], "games": null},
+    {"id": "link-floaroma-town-floaroma-meadow", "name": "floaroma-town ↔ floaroma-meadow", "number": null, "water": false, "path": [[10, 16], [8, 16]], "games": null},
+    {"id": "link-route-205-valley-windworks", "name": "route-205 ↔ valley-windworks", "number": null, "water": false, "path": [[10, 15], [12, 15]], "games": null},
+    {"id": "link-route-205-fuego-ironworks", "name": "route-205 ↔ fuego-ironworks", "number": null, "water": true, "path": [[10, 14], [7, 14]], "games": null},
+    {"id": "link-eterna-forest-eterna-city", "name": "eterna-forest ↔ eterna-city", "number": null, "water": false, "path": [[10, 12], [12, 12], [16, 12]], "games": null},
+    {"id": "link-eterna-forest-old-chateau", "name": "eterna-forest ↔ old-chateau", "number": null, "water": false, "path": [[12, 12], [12, 10]], "games": null},
+    {"id": "link-route-206-wayward-cave", "name": "route-206 ↔ wayward-cave", "number": null, "water": false, "path": [[16, 17], [14, 17]], "games": null},
+    {"id": "link-oreburgh-gate-oreburgh-city", "name": "oreburgh-gate ↔ oreburgh-city", "number": null, "water": false, "path": [[13, 23], [16, 23]], "games": null},
+    {"id": "link-oreburgh-city-oreburgh-mine", "name": "oreburgh-city ↔ oreburgh-mine", "number": null, "water": false, "path": [[16, 23], [16, 25]], "games": null},
+    {"id": "link-mt-coronet-route-207", "name": "mt-coronet ↔ route-207", "number": null, "water": false, "path": [[20, 16], [20, 19]], "games": null},
+    {"id": "link-mt-coronet-spear-pillar", "name": "mt-coronet ↔ spear-pillar", "number": null, "water": false, "path": [[20, 16], [20, 12], [20, 9], [20, 6]], "games": null},
+    {"id": "link-spear-pillar-hall-of-origin", "name": "spear-pillar ↔ hall-of-origin", "number": null, "water": false, "path": [[20, 6], [20, 4]], "games": null},
+    {"id": "link-acuity-lakefront-snowpoint-city", "name": "acuity-lakefront ↔ snowpoint-city", "number": null, "water": false, "path": [[14, 6], [14, 3]], "games": null},
+    {"id": "link-snowpoint-city-snowpoint-temple", "name": "snowpoint-city ↔ snowpoint-temple", "number": null, "water": false, "path": [[14, 3], [14, 1]], "games": null},
+    {"id": "link-route-209-lost-tower", "name": "route-209 ↔ lost-tower", "number": null, "water": false, "path": [[27, 19], [27, 21]], "games": null},
+    {"id": "link-solaceon-town-solaceon-ruins", "name": "solaceon-town ↔ solaceon-ruins", "number": null, "water": false, "path": [[30, 19], [32, 19]], "games": null},
+    {"id": "link-route-214-ruin-maniac-cave", "name": "route-214 ↔ ruin-maniac-cave", "number": null, "water": false, "path": [[35, 21], [33, 21]], "games": null},
+    {"id": "link-route-214-spring-path", "name": "route-214 ↔ spring-path", "number": null, "water": false, "path": [[35, 19], [37, 19]], "games": null},
+    {"id": "link-spring-path-sendoff-spring", "name": "spring-path ↔ sendoff-spring", "number": null, "water": false, "path": [[37, 19], [39, 19]], "games": ["dp", "pt"]},
+    {"id": "link-sendoff-spring-turnback-cave", "name": "sendoff-spring ↔ turnback-cave", "number": null, "water": false, "path": [[39, 19], [41, 19]], "games": ["dp", "pt"]},
+    {"id": "link-spring-path-turnback-cave", "name": "spring-path ↔ turnback-cave", "number": null, "water": false, "path": [[37, 19], [39, 19], [41, 19]], "games": ["bdsp"]},
+    {"id": "link-turnback-cave-distortion-world", "name": "turnback-cave ↔ distortion-world", "number": null, "water": false, "path": [[41, 19], [41, 21]], "games": ["pt"]},
+    {"id": "link-valor-lakefront-lake-valor", "name": "valor-lakefront ↔ lake-valor", "number": null, "water": false, "path": [[35, 24], [33, 24]], "games": null},
+    {"id": "link-pastoria-city-great-marsh", "name": "pastoria-city ↔ great-marsh", "number": null, "water": false, "path": [[29, 27], [29, 29]], "games": null},
+    {"id": "link-victory-road-pokemon-league", "name": "victory-road ↔ pokemon-league", "number": null, "water": false, "path": [[43, 18], [43, 15]], "games": null},
+    {"id": "link-grand-underground-caves", "name": "grand-underground ↔ caves", "number": null, "water": false, "path": [[22, 34], [22, 36], [22, 38]], "games": ["bdsp"]},
+    {"id": "link-grand-underground-row-1", "name": "grand-underground ↔ fileira 1", "number": null, "water": false, "path": [[22, 34], [26, 34], [30, 34], [34, 34], [38, 34], [42, 34], [46, 34]], "games": ["bdsp"]},
+    {"id": "link-grand-underground-row-2", "name": "grand-underground ↔ fileira 2", "number": null, "water": false, "path": [[22, 36], [26, 36], [30, 36], [34, 36], [38, 36], [42, 36], [46, 36]], "games": ["bdsp"]},
+    {"id": "link-grand-underground-row-3", "name": "grand-underground ↔ fileira 3", "number": null, "water": false, "path": [[22, 38], [26, 38], [30, 38], [34, 38], [38, 38], [42, 38], [46, 38]], "games": ["bdsp"]}
+  ],
+  "unmapped": []
 }
