@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import {
+  dexHref,
   formatEvolutionCondition,
   formatMultiplier,
   genderRatio,
@@ -136,5 +137,24 @@ describe('quem aprende o golpe', () => {
     expect(groups.map((g) => g.method)).toEqual(['level-up', 'machine', 'egg', 'other'])
     expect(groups[0].learners.map((x) => x.speciesId)).toEqual([2, 5])
     expect(groups[3].learners[0].method).toBe('light-ball-egg')
+  })
+})
+
+describe('link da Pokédex no jogo do guia', () => {
+  it('acrescenta ?game= nas fichas e nos golpes', () => {
+    expect(dexHref('/pokedex/25', 'frlg')).toBe('/pokedex/25?game=frlg')
+    expect(dexHref('/pokedex/golpe/33', 'sv')).toBe('/pokedex/golpe/33?game=sv')
+  })
+  it('mantém a consulta e a âncora', () => {
+    expect(dexHref('/pokedex/25?aba=moves#x', 'frlg')).toBe('/pokedex/25?aba=moves&game=frlg#x')
+  })
+  it('não troca um ?game= já escrito', () => {
+    expect(dexHref('/pokedex/25?game=sv', 'frlg')).toBe('/pokedex/25?game=sv')
+  })
+  it('ignora jogo desconhecido, sem jogo e outros endereços', () => {
+    expect(dexHref('/pokedex/25', 'nada')).toBe('/pokedex/25')
+    expect(dexHref('/pokedex/25', undefined)).toBe('/pokedex/25')
+    expect(dexHref('/pokedex', 'frlg')).toBe('/pokedex')
+    expect(dexHref('/guias/games/frlg', 'frlg')).toBe('/guias/games/frlg')
   })
 })

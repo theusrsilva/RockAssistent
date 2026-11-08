@@ -30,7 +30,7 @@ export default function TypeChartPage() {
 
   return (
     <div className="flex flex-col gap-4">
-      <BackLink>{t('dex.back')}</BackLink>
+      <BackLink history>{t('dex.back')}</BackLink>
       <PageTitle>{t('dex.typeChart.title')}</PageTitle>
       <p className="-mt-2 text-sm text-muted">{t('dex.typeChart.sub')}</p>
 

@@ -1,9 +1,10 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router'
 import { api } from '../lib/api'
 import { useAuth } from '../lib/auth'
 import { requiredKeys, useConnection } from '../lib/connection'
+import { useScrollRestoration } from '../lib/scrollRestoration'
 import type { TradeSession } from '../lib/types'
 import { useTheme } from '../theme'
 import { GlobalDrop } from './GlobalDrop'
@@ -91,11 +92,12 @@ export function Layout({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('beforeunload', handler)
   }, [])
 
-  // Trocou de tela: fecha o "Mais" e volta ao topo.
+  // Trocou de tela: fecha o "Mais". A rolagem volta ao topo, ou ao mesmo ponto ao voltar (useScrollRestoration).
   useEffect(() => {
     setMoreOpen(false)
-    document.querySelector('main')?.scrollTo(0, 0)
   }, [location.pathname])
+  const mainRef = useRef<HTMLElement>(null)
+  useScrollRestoration(mainRef)
 
   async function confirmClose() {
     setClosing(true)
@@ -119,7 +121,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <aside className="flex w-[232px] shrink-0 flex-col border-r border-side-line bg-side px-3 py-[18px] text-side-ink">
           <div className="flex items-center gap-2.5 px-2 pt-1 pb-[22px]">
             <Logo />
-            <div className="font-display text-xl font-bold tracking-[.2px]">{t('app.name')}</div>
+            <div className="font-logo text-xl font-bold tracking-[.2px]">{t('app.name')}</div>
           </div>
           <nav className="flex flex-col gap-0.5">
             {mainLinks.filter((l) => !(remote && l.localOnly)).map((l) => (
@@ -185,11 +187,11 @@ export function Layout({ children }: { children: ReactNode }) {
         </aside>
       )}
 
-      <main className="relative flex min-w-0 flex-1 flex-col overflow-auto">
+      <main ref={mainRef} className="relative flex min-w-0 flex-1 flex-col overflow-auto">
         {mobile && (
           <header className="sticky top-0 z-30 flex h-14 shrink-0 items-center gap-2.5 bg-side px-3.5 text-side-ink">
             <Logo size={26} />
-            <div className="flex-1 font-display text-lg font-bold">{t('app.name')}</div>
+            <div className="flex-1 font-logo text-lg font-bold">{t('app.name')}</div>
             <button
               type="button"
               onClick={() => navigate('/configuracoes')}

@@ -50,13 +50,13 @@ function Boss({ game, boss, names }: { game: string; boss: BossBattle; names: Ma
         </div>
         <div className="rounded-lg bg-accent-soft px-3 py-1.5 text-center">
           <div className="text-[11px] font-bold tracking-wide text-muted uppercase">{t('guides.col.cap')}</div>
-          <div className="font-display text-xl leading-none font-bold tabular-nums">{team.levelCap}</div>
+          <div className="font-display text-xl leading-none font-extrabold tabular-nums">{team.levelCap}</div>
         </div>
       </div>
       <BossVariantTabs boss={boss} starters={starters} names={names} value={starter} onChange={setStarter} />
       <div className="grid gap-1.5 sm:grid-cols-2">
         {team.party.map((p, i) => (
-          <BattlePokemon key={i} p={p} names={names} />
+          <BattlePokemon key={i} p={p} names={names} game={game} />
         ))}
       </div>
     </div>

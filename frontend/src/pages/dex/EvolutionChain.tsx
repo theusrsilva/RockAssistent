@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { spriteUrl } from '../../lib/api'
-import { dexLang, formatEvolutionCondition, type EvolutionStep } from '../../lib/dex'
+import { dexHref, dexLang, formatEvolutionCondition, type EvolutionStep } from '../../lib/dex'
 import { Icon } from '../../components/ui'
 import { useTypeName } from './TypeBadge'
 
 /** Cadeia de evolução em estágios (colunas); cada um mostra como se chega nele. */
-export function EvolutionChain({ chain, current }: { chain: EvolutionStep[]; current: number }) {
+export function EvolutionChain({ chain, current, game }: { chain: EvolutionStep[]; current: number; game?: string }) {
   const { t, i18n } = useTranslation()
   const typeName = useTypeName()
   const lang = dexLang(i18n.language)
@@ -27,7 +27,7 @@ export function EvolutionChain({ chain, current }: { chain: EvolutionStep[]; cur
             {stage.map((s) => (
               <Link
                 key={s.speciesId}
-                to={`/pokedex/${s.speciesId}`}
+                to={dexHref(`/pokedex/${s.speciesId}`, game)}
                 className={`flex w-32 flex-col items-center rounded-lg border p-2 text-center hover:bg-surface2 ${
                   s.speciesId === current ? 'border-accent bg-accent-soft' : 'border-line'
                 }`}

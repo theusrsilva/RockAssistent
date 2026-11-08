@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Badge } from '../../../components/ui'
 import { spriteUrl } from '../../../lib/api'
-import { titleCase, useApiGet } from '../../../lib/dex'
+import { dexHref, titleCase, useApiGet } from '../../../lib/dex'
 import { summarizeEncounters, type AreaEncounterRow } from '../../../lib/encounters'
 import { BlockState, BlockTable, cell, versionLabel, type BlockProps } from './common'
 
@@ -27,7 +27,7 @@ export default function EncounterTable({ args: [game, area] }: BlockProps) {
             {rows.map((r, i) => (
               <tr key={i}>
                 <td className={cell}>
-                  <Link to={`/pokedex/${r.species}`} className="flex items-center gap-1.5 font-semibold hover:text-accent">
+                  <Link to={dexHref(`/pokedex/${r.species}`, game)} className="flex items-center gap-1.5 font-semibold hover:text-accent">
                     <img src={spriteUrl(r.species)} alt="" className="pixelated h-9 w-9 shrink-0" loading="lazy" />
                     <span className="whitespace-nowrap">{r.speciesName}</span>
                   </Link>
@@ -59,7 +59,7 @@ export default function EncounterTable({ args: [game, area] }: BlockProps) {
             </div>
             <div className="mt-1 flex flex-wrap gap-0.5">
               {species.map((s) => (
-                <Link key={`${s.species}-${s.form}`} to={`/pokedex/${s.species}`} title={s.name} aria-label={s.name} className="rounded hover:bg-surface2">
+                <Link key={`${s.species}-${s.form}`} to={dexHref(`/pokedex/${s.species}`, game)} title={s.name} aria-label={s.name} className="rounded hover:bg-surface2">
                   <img src={spriteUrl(s.species)} alt="" className="pixelated h-10 w-10" loading="lazy" />
                 </Link>
               ))}

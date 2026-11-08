@@ -34,10 +34,6 @@ export default function GuidePage() {
   const page = guide && index >= 0 ? guide.sections[index] : null
   const text = usePageText(i18n.language, page?.file ?? null)
 
-  useEffect(() => {
-    window.scrollTo?.(0, 0)
-  }, [page?.file])
-
   if (!guide || !page)
     return (
       <div className="flex flex-col gap-4">
@@ -116,7 +112,7 @@ export default function GuidePage() {
               {t('guides.pageError')}
             </Callout>
           ) : (
-            <GuideMarkdown text={text.text} />
+            <GuideMarkdown text={text.text} game={sectionKey === 'games' ? guide.key : undefined} />
           )}
           {(prev || next) && (
             <div className="mt-6 flex flex-wrap justify-between gap-2 border-t border-line pt-4">

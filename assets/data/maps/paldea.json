@@ -1,879 +1,138 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Paldea",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+    "https://bulbapedia.bulbagarden.net/wiki/Kitakami",
+    "https://bulbapedia.bulbagarden.net/wiki/Blueberry_Academy",
+    "Mapa metrô feito à mão pela geografia do Scarlet/Violet: Paldea à esquerda com a Area Zero no meio; cada Province Area é uma linha com o nome curto (S1 = South Province Area One, W = West, E = East, N = North). Kitakami (nordeste) e a Blueberry Academy com o Terarium (sudeste) são ilhas à parte (DLC). Ligações sem número (link-*) são caminhos sem área."
   ],
   "region": "paldea",
-  "nodes": [
-    {
-      "id": "cabo-poco",
-      "name": "Cabo Poco",
-      "kind": "city",
-      "x": 0.44,
-      "y": 0.98,
-      "games": null
-    },
-    {
-      "id": "poco-path",
-      "name": "Poco Path",
-      "kind": "route",
-      "x": 0.41,
-      "y": 0.9,
-      "games": null
-    },
-    {
-      "id": "inleth-grotto",
-      "name": "Inleth Grotto",
-      "kind": "dungeon",
-      "x": 0.45,
-      "y": 0.922,
-      "games": null
-    },
-    {
-      "id": "south-province-area-one",
-      "name": "South Province (Area One)",
-      "kind": "route",
-      "x": 0.432,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "los-platos",
-      "name": "Los Platos",
-      "kind": "city",
-      "x": 0.46,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "mesagoza",
-      "name": "Mesagoza",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.72,
-      "games": null
-    },
-    {
-      "id": "south-province-area-two",
-      "name": "South Province (Area Two)",
-      "kind": "route",
-      "x": 0.337,
-      "y": 0.72,
-      "games": null
-    },
-    {
-      "id": "cortondo",
-      "name": "Cortondo",
-      "kind": "city",
-      "x": 0.26,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "south-province-area-three",
-      "name": "South Province (Area Three)",
-      "kind": "route",
-      "x": 0.396,
-      "y": 0.821,
-      "games": null
-    },
-    {
-      "id": "artazon",
-      "name": "Artazon",
-      "kind": "city",
-      "x": 0.32,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "south-province-area-five",
-      "name": "South Province (Area Five)",
-      "kind": "route",
-      "x": 0.36,
-      "y": 0.56,
-      "games": null
-    },
-    {
-      "id": "west-province-area-one",
-      "name": "West Province (Area One)",
-      "kind": "route",
-      "x": 0.295,
-      "y": 0.502,
-      "games": null
-    },
-    {
-      "id": "south-province-area-four",
-      "name": "South Province (Area Four)",
-      "kind": "route",
-      "x": 0.549,
-      "y": 0.85,
-      "games": null
-    },
-    {
-      "id": "south-paldean-sea",
-      "name": "South Paldean Sea",
-      "kind": "sea",
-      "x": 0.6,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "east-paldean-sea",
-      "name": "East Paldean Sea",
-      "kind": "sea",
-      "x": 0.99,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "west-paldean-sea",
-      "name": "West Paldean Sea",
-      "kind": "sea",
-      "x": 0.01,
-      "y": 0.7,
-      "games": null
-    },
-    {
-      "id": "east-province-area-one",
-      "name": "East Province (Area One)",
-      "kind": "route",
-      "x": 0.666,
-      "y": 0.647,
-      "games": null
-    },
-    {
-      "id": "levincia",
-      "name": "Levincia",
-      "kind": "city",
-      "x": 0.84,
-      "y": 0.56,
-      "games": null
-    },
-    {
-      "id": "east-province-area-two",
-      "name": "East Province (Area Two)",
-      "kind": "route",
-      "x": 0.794,
-      "y": 0.477,
-      "games": null
-    },
-    {
-      "id": "east-province-area-three",
-      "name": "East Province (Area Three)",
-      "kind": "route",
-      "x": 0.826,
-      "y": 0.443,
-      "games": null
-    },
-    {
-      "id": "zapapico",
-      "name": "Zapapico",
-      "kind": "city",
-      "x": 0.78,
-      "y": 0.36,
-      "games": null
-    },
-    {
-      "id": "cascarrafa",
-      "name": "Cascarrafa",
-      "kind": "city",
-      "x": 0.18,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "asado-desert",
-      "name": "Asado Desert",
-      "kind": "route",
-      "x": 0.205,
-      "y": 0.479,
-      "games": null
-    },
-    {
-      "id": "porto-marinada",
-      "name": "Porto Marinada",
-      "kind": "city",
-      "x": 0.04,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "west-province-area-three",
-      "name": "West Province (Area Three)",
-      "kind": "route",
-      "x": 0.276,
-      "y": 0.424,
-      "games": null
-    },
-    {
-      "id": "tagtree-thicket",
-      "name": "Tagtree Thicket",
-      "kind": "route",
-      "x": 0.62,
-      "y": 0.34,
-      "games": null
-    },
-    {
-      "id": "dalizapa-passage",
-      "name": "Dalizapa Passage",
-      "kind": "dungeon",
-      "x": 0.46,
-      "y": 0.32,
-      "games": null
-    },
-    {
-      "id": "medali",
-      "name": "Medali",
-      "kind": "city",
-      "x": 0.3,
-      "y": 0.3,
-      "games": null
-    },
-    {
-      "id": "glaseado-mountain",
-      "name": "Glaseado Mountain",
-      "kind": "route",
-      "x": 0.48,
-      "y": 0.14,
-      "games": null
-    },
-    {
-      "id": "montenevera",
-      "name": "Montenevera",
-      "kind": "city",
-      "x": 0.78,
-      "y": 0.2,
-      "games": null
-    },
-    {
-      "id": "west-province-area-two",
-      "name": "West Province (Area Two)",
-      "kind": "route",
-      "x": 0.296,
-      "y": 0.395,
-      "games": null
-    },
-    {
-      "id": "alfornada-cavern",
-      "name": "Alfornada Cavern",
-      "kind": "dungeon",
-      "x": 0.638,
-      "y": 0.875,
-      "games": null
-    },
-    {
-      "id": "south-province-area-six",
-      "name": "South Province (Area Six)",
-      "kind": "route",
-      "x": 0.662,
-      "y": 0.842,
-      "games": null
-    },
-    {
-      "id": "alfornada",
-      "name": "Alfornada",
-      "kind": "city",
-      "x": 0.68,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "north-province-area-three",
-      "name": "North Province (Area Three)",
-      "kind": "route",
-      "x": 0.398,
-      "y": 0.114,
-      "games": null
-    },
-    {
-      "id": "casseroya-lake",
-      "name": "Casseroya Lake",
-      "kind": "sea",
-      "x": 0.34,
-      "y": 0.06,
-      "games": null
-    },
-    {
-      "id": "socarrat-trail",
-      "name": "Socarrat Trail",
-      "kind": "route",
-      "x": 0.411,
-      "y": 0.023,
-      "games": null
-    },
-    {
-      "id": "north-province-area-two",
-      "name": "North Province (Area Two)",
-      "kind": "route",
-      "x": 0.509,
-      "y": 0.07,
-      "games": null
-    },
-    {
-      "id": "north-province-area-one",
-      "name": "North Province (Area One)",
-      "kind": "route",
-      "x": 0.431,
-      "y": 0.074,
-      "games": null
-    },
-    {
-      "id": "pokemon-league",
-      "name": "Pokémon League",
-      "kind": "building",
-      "x": 0.62,
-      "y": 0.7,
-      "games": null
-    },
-    {
-      "id": "zero-gate",
-      "name": "Zero Gate",
-      "kind": "building",
-      "x": 0.485,
-      "y": 0.617,
-      "games": null
-    },
-    {
-      "id": "area-zero",
-      "name": "Area Zero",
-      "kind": "dungeon",
-      "x": 0.5,
-      "y": 0.46,
-      "games": null
-    },
-    {
-      "id": "north-paldean-sea",
-      "name": "North Paldean Sea",
-      "kind": "sea",
-      "x": 0.5,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "kitakami-road",
-      "name": "Kitakami Road",
-      "kind": "route",
-      "x": 0.9,
-      "y": 0.82,
-      "games": null
-    },
-    {
-      "id": "mossui-town",
-      "name": "Mossui Town",
-      "kind": "city",
-      "x": 0.88,
-      "y": 0.9,
-      "games": null
-    },
-    {
-      "id": "apple-hills",
-      "name": "Apple Hills",
-      "kind": "route",
-      "x": 0.842,
-      "y": 0.852,
-      "games": null
-    },
-    {
-      "id": "chilling-waterhead",
-      "name": "Chilling Waterhead",
-      "kind": "route",
-      "x": 0.803,
-      "y": 0.868,
-      "games": null
-    },
-    {
-      "id": "loyalty-plaza",
-      "name": "Loyalty Plaza",
-      "kind": "route",
-      "x": 0.818,
-      "y": 0.782,
-      "games": null
-    },
-    {
-      "id": "revelers-road",
-      "name": "Reveler's Road",
-      "kind": "route",
-      "x": 0.82,
-      "y": 0.716,
-      "games": null
-    },
-    {
-      "id": "kitakami-hall",
-      "name": "Kitakami Hall",
-      "kind": "building",
-      "x": 0.858,
-      "y": 0.765,
-      "games": null
-    },
-    {
-      "id": "onis-maw",
-      "name": "Oni's Maw",
-      "kind": "route",
-      "x": 0.877,
-      "y": 0.706,
-      "games": null
-    },
-    {
-      "id": "oni-mountain",
-      "name": "Oni Mountain",
-      "kind": "route",
-      "x": 0.96,
-      "y": 0.74,
-      "games": null
-    },
-    {
-      "id": "dreaded-den",
-      "name": "Dreaded Den",
-      "kind": "dungeon",
-      "x": 0.99,
-      "y": 0.7,
-      "games": null
-    },
-    {
-      "id": "infernal-pass",
-      "name": "Infernal Pass",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "crystal-pool",
-      "name": "Crystal Pool",
-      "kind": "route",
-      "x": 0.967,
-      "y": 0.829,
-      "games": null
-    },
-    {
-      "id": "mossfell-confluence",
-      "name": "Mossfell Confluence",
-      "kind": "route",
-      "x": 0.945,
-      "y": 0.939,
-      "games": null
-    },
-    {
-      "id": "fellhorn-gorge",
-      "name": "Fellhorn Gorge",
-      "kind": "route",
-      "x": 0.916,
-      "y": 0.908,
-      "games": null
-    },
-    {
-      "id": "wistful-fields",
-      "name": "Wistful Fields",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.907,
-      "games": null
-    },
-    {
-      "id": "kitakami-wilds",
-      "name": "Kitakami Wilds",
-      "kind": "route",
-      "x": 0.832,
-      "y": 0.942,
-      "games": null
-    },
-    {
-      "id": "paradise-barrens",
-      "name": "Paradise Barrens",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.949,
-      "games": null
-    },
-    {
-      "id": "timeless-woods",
-      "name": "Timeless Woods",
-      "kind": "route",
-      "x": 0.8,
-      "y": 0.96,
-      "games": null
-    },
-    {
-      "id": "blueberry-academy",
-      "name": "Blueberry Academy",
-      "kind": "building",
-      "x": 0.08,
-      "y": 0.88,
-      "games": null
-    },
-    {
-      "id": "terarium-central",
-      "name": "Central Plaza",
-      "kind": "route",
-      "x": 0.1,
-      "y": 0.94,
-      "games": null
-    },
-    {
-      "id": "savanna-biome",
-      "name": "Savanna Biome",
-      "kind": "route",
-      "x": 0.18,
-      "y": 0.86,
-      "games": null
-    },
-    {
-      "id": "coastal-biome",
-      "name": "Coastal Biome",
-      "kind": "route",
-      "x": 0.02,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "canyon-biome",
-      "name": "Canyon Biome",
-      "kind": "route",
-      "x": 0.18,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "polar-biome",
-      "name": "Polar Biome",
-      "kind": "route",
-      "x": 0.02,
-      "y": 0.98,
-      "games": null
-    },
-    {
-      "id": "chargestone-cavern",
-      "name": "Chargestone Cavern",
-      "kind": "dungeon",
-      "x": 0.06,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "torchlit-labyrinth",
-      "name": "Torchlit Labyrinth",
-      "kind": "dungeon",
-      "x": 0.14,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "area-zero-underdepths",
-      "name": "Area Zero Underdepths",
-      "kind": "dungeon",
-      "x": 0.52,
-      "y": 0.54,
-      "games": null
-    }
+  "grid": {"cols": 64, "rows": 39},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [64, 0], [64, 39], [0, 39]]},
+    {"kind": "land", "polygon": [[1.4, 2.7], [2.1, 2.0], [40.9, 2.0], [41.6, 2.7], [41.6, 31.7], [41.12, 32.91], [38.88, 35.29], [37.7, 35.8], [6.1, 35.8], [5.4, 35.1], [5.4, 17.9], [4.7, 17.2], [2.1, 17.2], [1.4, 16.5]]},
+    {"kind": "sand", "polygon": [[5.8, 19.1], [6.5, 18.4], [9.7, 18.4], [10.4, 19.1], [10.4, 21.7], [9.7, 22.4], [6.5, 22.4], [5.8, 21.7]]},
+    {"kind": "mountain", "polygon": [[24.4, 5.3], [25.1, 4.6], [31.7, 4.6], [32.4, 5.3], [32.4, 8.9], [31.7, 9.6], [25.1, 9.6], [24.4, 8.9]]},
+    {"kind": "land", "polygon": [[46.6, 1.3], [47.3, 0.6], [61.7, 0.6], [62.4, 1.3], [62.4, 14.9], [61.7, 15.6], [47.3, 15.6], [46.6, 14.9]]},
+    {"kind": "mountain", "polygon": [[54.4, 1.5], [55.1, 0.8], [56.9, 0.8], [57.6, 1.5], [57.6, 5.5], [56.9, 6.2], [55.1, 6.2], [54.4, 5.5]]},
+    {"kind": "land", "polygon": [[48.6, 20.3], [49.3, 19.6], [59.7, 19.6], [60.4, 20.3], [60.4, 31.9], [59.7, 32.6], [49.3, 32.6], [48.6, 31.9]]}
   ],
-  "edges": [
-    {
-      "from": "cabo-poco",
-      "to": "poco-path"
-    },
-    {
-      "from": "poco-path",
-      "to": "inleth-grotto"
-    },
-    {
-      "from": "poco-path",
-      "to": "los-platos"
-    },
-    {
-      "from": "los-platos",
-      "to": "south-province-area-one"
-    },
-    {
-      "from": "south-province-area-one",
-      "to": "mesagoza"
-    },
-    {
-      "from": "cabo-poco",
-      "to": "south-paldean-sea"
-    },
-    {
-      "from": "south-province-area-one",
-      "to": "south-province-area-two"
-    },
-    {
-      "from": "south-province-area-two",
-      "to": "cortondo"
-    },
-    {
-      "from": "cortondo",
-      "to": "south-province-area-three"
-    },
-    {
-      "from": "south-province-area-two",
-      "to": "artazon"
-    },
-    {
-      "from": "artazon",
-      "to": "south-province-area-five"
-    },
-    {
-      "from": "south-province-area-three",
-      "to": "south-province-area-four"
-    },
-    {
-      "from": "south-province-area-four",
-      "to": "alfornada"
-    },
-    {
-      "from": "south-province-area-four",
-      "to": "south-province-area-six"
-    },
-    {
-      "from": "south-province-area-six",
-      "to": "alfornada"
-    },
-    {
-      "from": "south-province-area-six",
-      "to": "alfornada-cavern"
-    },
-    {
-      "from": "artazon",
-      "to": "west-province-area-one"
-    },
-    {
-      "from": "west-province-area-one",
-      "to": "cascarrafa"
-    },
-    {
-      "from": "cascarrafa",
-      "to": "asado-desert"
-    },
-    {
-      "from": "asado-desert",
-      "to": "west-province-area-three"
-    },
-    {
-      "from": "cascarrafa",
-      "to": "porto-marinada"
-    },
-    {
-      "from": "porto-marinada",
-      "to": "west-paldean-sea"
-    },
-    {
-      "from": "west-province-area-one",
-      "to": "west-province-area-two"
-    },
-    {
-      "from": "west-province-area-two",
-      "to": "medali"
-    },
-    {
-      "from": "mesagoza",
-      "to": "east-province-area-one"
-    },
-    {
-      "from": "east-province-area-one",
-      "to": "levincia"
-    },
-    {
-      "from": "levincia",
-      "to": "east-province-area-two"
-    },
-    {
-      "from": "east-province-area-two",
-      "to": "east-province-area-three"
-    },
-    {
-      "from": "east-province-area-three",
-      "to": "zapapico"
-    },
-    {
-      "from": "east-province-area-one",
-      "to": "pokemon-league"
-    },
-    {
-      "from": "levincia",
-      "to": "east-paldean-sea"
-    },
-    {
-      "from": "zapapico",
-      "to": "tagtree-thicket"
-    },
-    {
-      "from": "tagtree-thicket",
-      "to": "dalizapa-passage"
-    },
-    {
-      "from": "dalizapa-passage",
-      "to": "medali"
-    },
-    {
-      "from": "west-province-area-two",
-      "to": "west-province-area-three"
-    },
-    {
-      "from": "medali",
-      "to": "glaseado-mountain"
-    },
-    {
-      "from": "glaseado-mountain",
-      "to": "montenevera"
-    },
-    {
-      "from": "zapapico",
-      "to": "montenevera"
-    },
-    {
-      "from": "glaseado-mountain",
-      "to": "north-province-area-three"
-    },
-    {
-      "from": "north-province-area-three",
-      "to": "casseroya-lake"
-    },
-    {
-      "from": "casseroya-lake",
-      "to": "socarrat-trail"
-    },
-    {
-      "from": "socarrat-trail",
-      "to": "north-province-area-one"
-    },
-    {
-      "from": "north-province-area-one",
-      "to": "north-province-area-two"
-    },
-    {
-      "from": "glaseado-mountain",
-      "to": "casseroya-lake"
-    },
-    {
-      "from": "casseroya-lake",
-      "to": "north-paldean-sea"
-    },
-    {
-      "from": "north-province-area-two",
-      "to": "north-paldean-sea"
-    },
-    {
-      "from": "area-zero",
-      "to": "zero-gate"
-    },
-    {
-      "from": "zero-gate",
-      "to": "mesagoza"
-    },
-    {
-      "from": "area-zero",
-      "to": "area-zero-underdepths"
-    },
-    {
-      "from": "area-zero",
-      "to": "glaseado-mountain"
-    },
-    {
-      "from": "mesagoza",
-      "to": "kitakami-road"
-    },
-    {
-      "from": "kitakami-road",
-      "to": "mossui-town"
-    },
-    {
-      "from": "mossui-town",
-      "to": "apple-hills"
-    },
-    {
-      "from": "kitakami-road",
-      "to": "loyalty-plaza"
-    },
-    {
-      "from": "loyalty-plaza",
-      "to": "revelers-road"
-    },
-    {
-      "from": "revelers-road",
-      "to": "onis-maw"
-    },
-    {
-      "from": "onis-maw",
-      "to": "oni-mountain"
-    },
-    {
-      "from": "oni-mountain",
-      "to": "dreaded-den"
-    },
-    {
-      "from": "mossui-town",
-      "to": "mossfell-confluence"
-    },
-    {
-      "from": "mossfell-confluence",
-      "to": "fellhorn-gorge"
-    },
-    {
-      "from": "fellhorn-gorge",
-      "to": "crystal-pool"
-    },
-    {
-      "from": "crystal-pool",
-      "to": "infernal-pass"
-    },
-    {
-      "from": "infernal-pass",
-      "to": "oni-mountain"
-    },
-    {
-      "from": "mossfell-confluence",
-      "to": "wistful-fields"
-    },
-    {
-      "from": "wistful-fields",
-      "to": "paradise-barrens"
-    },
-    {
-      "from": "mossui-town",
-      "to": "kitakami-wilds"
-    },
-    {
-      "from": "kitakami-wilds",
-      "to": "timeless-woods"
-    },
-    {
-      "from": "apple-hills",
-      "to": "chilling-waterhead"
-    },
-    {
-      "from": "loyalty-plaza",
-      "to": "kitakami-hall"
-    },
-    {
-      "from": "mesagoza",
-      "to": "blueberry-academy"
-    },
-    {
-      "from": "blueberry-academy",
-      "to": "terarium-central"
-    },
-    {
-      "from": "terarium-central",
-      "to": "savanna-biome"
-    },
-    {
-      "from": "terarium-central",
-      "to": "coastal-biome"
-    },
-    {
-      "from": "terarium-central",
-      "to": "canyon-biome"
-    },
-    {
-      "from": "terarium-central",
-      "to": "polar-biome"
-    },
-    {
-      "from": "canyon-biome",
-      "to": "torchlit-labyrinth"
-    },
-    {
-      "from": "polar-biome",
-      "to": "chargestone-cavern"
-    }
-  ]
+  "places": [
+    {"id": "cabo-poco", "name": "Cabo Poco", "kind": "city", "x": 22, "y": 34, "label": "e", "games": null},
+    {"id": "poco-path", "name": "Poco Path", "kind": "place", "x": 22, "y": 31, "label": "e", "games": null},
+    {"id": "inleth-grotto", "name": "Inleth Grotto", "kind": "place", "x": 18, "y": 31, "label": "w", "games": null},
+    {"id": "los-platos", "name": "Los Platos", "kind": "city", "x": 22, "y": 28, "label": "ne", "games": null},
+    {"id": "mesagoza", "name": "Mesagoza", "kind": "city", "x": 22, "y": 24, "label": "ne", "games": null},
+    {"id": "cortondo", "name": "Cortondo", "kind": "city", "x": 14, "y": 24, "label": "w", "games": null},
+    {"id": "artazon", "name": "Artazon", "kind": "city", "x": 14, "y": 20, "label": "e", "games": null},
+    {"id": "asado-desert", "name": "Asado Desert", "kind": "place", "x": 8, "y": 20, "label": "w", "games": null},
+    {"id": "cascarrafa", "name": "Cascarrafa", "kind": "city", "x": 8, "y": 14, "label": "e", "games": null},
+    {"id": "porto-marinada", "name": "Porto Marinada", "kind": "city", "x": 3, "y": 14, "label": "w", "games": null},
+    {"id": "medali", "name": "Medali", "kind": "city", "x": 15, "y": 8, "label": "e", "games": null},
+    {"id": "casseroya-lake", "name": "Casseroya Lake", "kind": "place", "x": 15, "y": 3, "label": "w", "games": null},
+    {"id": "socarrat-trail", "name": "Socarrat Trail", "kind": "place", "x": 21, "y": 3, "label": "s", "games": null},
+    {"id": "glaseado-mountain", "name": "Glaseado Mountain", "kind": "place", "x": 26, "y": 7, "label": "w", "games": null},
+    {"id": "dalizapa-passage", "name": "Dalizapa Passage", "kind": "place", "x": 30, "y": 7, "label": "n", "games": null},
+    {"id": "montenevera", "name": "Montenevera", "kind": "city", "x": 34, "y": 7, "label": "n", "games": null},
+    {"id": "tagtree-thicket", "name": "Tagtree Thicket", "kind": "place", "x": 39, "y": 12, "label": "e", "games": null},
+    {"id": "zapapico", "name": "Zapapico", "kind": "city", "x": 34, "y": 16, "label": "w", "games": null},
+    {"id": "levincia", "name": "Levincia", "kind": "city", "x": 39, "y": 24, "label": "s", "games": null},
+    {"id": "pokemon-league", "name": "Pokémon League", "kind": "building", "x": 29, "y": 24, "label": "n", "games": null},
+    {"id": "alfornada", "name": "Alfornada", "kind": "city", "x": 34, "y": 28, "label": "e", "games": null},
+    {"id": "alfornada-cavern", "name": "Alfornada Cavern", "kind": "place", "x": 34, "y": 31, "label": "e", "games": null},
+    {"id": "zero-gate", "name": "Zero Gate", "kind": "building", "x": 22, "y": 19, "label": "e", "games": null},
+    {"id": "area-zero", "name": "Area Zero", "kind": "place", "x": 22, "y": 14, "label": "e", "games": null},
+    {"id": "area-zero-underdepths", "name": "Area Zero Underdepths", "kind": "place", "x": 22, "y": 11, "label": "e", "games": null},
+    {"id": "north-paldean-sea", "name": "North Paldean Sea", "kind": "place", "x": 21, "y": 1, "label": "e", "games": null},
+    {"id": "south-paldean-sea", "name": "South Paldean Sea", "kind": "place", "x": 22, "y": 37, "label": "e", "games": null},
+    {"id": "west-paldean-sea", "name": "West Paldean Sea", "kind": "place", "x": 3, "y": 20, "label": "w", "games": null},
+    {"id": "east-paldean-sea", "name": "East Paldean Sea", "kind": "place", "x": 43, "y": 24, "label": "e", "games": null},
+    {"id": "revelers-road", "name": "Reveler's Road", "kind": "place", "x": 48, "y": 2, "label": "e", "games": null},
+    {"id": "loyalty-plaza", "name": "Loyalty Plaza", "kind": "place", "x": 48, "y": 5, "label": "w", "games": null},
+    {"id": "kitakami-hall", "name": "Kitakami Hall", "kind": "building", "x": 52, "y": 5, "label": "ne", "games": null},
+    {"id": "onis-maw", "name": "Oni's Maw", "kind": "place", "x": 52, "y": 2, "label": "n", "games": null},
+    {"id": "dreaded-den", "name": "Dreaded Den", "kind": "place", "x": 56, "y": 2, "label": "e", "games": null},
+    {"id": "oni-mountain", "name": "Oni Mountain", "kind": "place", "x": 56, "y": 5, "label": "s", "games": null},
+    {"id": "infernal-pass", "name": "Infernal Pass", "kind": "place", "x": 60, "y": 5, "label": "e", "games": null},
+    {"id": "crystal-pool", "name": "Crystal Pool", "kind": "place", "x": 60, "y": 8, "label": "e", "games": null},
+    {"id": "kitakami-road", "name": "Kitakami Road", "kind": "place", "x": 52, "y": 8, "label": "e", "games": null},
+    {"id": "apple-hills", "name": "Apple Hills", "kind": "place", "x": 48, "y": 8, "label": "w", "games": null},
+    {"id": "chilling-waterhead", "name": "Chilling Waterhead", "kind": "place", "x": 48, "y": 11, "label": "w", "games": null},
+    {"id": "mossui-town", "name": "Mossui Town", "kind": "city", "x": 52, "y": 11, "label": "ne", "games": null},
+    {"id": "kitakami-wilds", "name": "Kitakami Wilds", "kind": "place", "x": 52, "y": 14, "label": "e", "games": null},
+    {"id": "timeless-woods", "name": "Timeless Woods", "kind": "place", "x": 48, "y": 14, "label": "w", "games": null},
+    {"id": "fellhorn-gorge", "name": "Fellhorn Gorge", "kind": "place", "x": 56, "y": 11, "label": "n", "games": null},
+    {"id": "mossfell-confluence", "name": "Mossfell Confluence", "kind": "place", "x": 56, "y": 14, "label": "e", "games": null},
+    {"id": "wistful-fields", "name": "Wistful Fields", "kind": "place", "x": 60, "y": 11, "label": "e", "games": null},
+    {"id": "paradise-barrens", "name": "Paradise Barrens", "kind": "place", "x": 60, "y": 14, "label": "e", "games": null},
+    {"id": "blueberry-academy", "name": "Blueberry Academy", "kind": "building", "x": 54, "y": 21, "label": "e", "games": null},
+    {"id": "terarium-central", "name": "Central Plaza", "kind": "place", "x": 54, "y": 24, "label": "s", "games": null},
+    {"id": "coastal-biome", "name": "Coastal Biome", "kind": "place", "x": 50, "y": 24, "label": "w", "games": null},
+    {"id": "savanna-biome", "name": "Savanna Biome", "kind": "place", "x": 58, "y": 24, "label": "e", "games": null},
+    {"id": "polar-biome", "name": "Polar Biome", "kind": "place", "x": 50, "y": 28, "label": "w", "games": null},
+    {"id": "canyon-biome", "name": "Canyon Biome", "kind": "place", "x": 58, "y": 28, "label": "e", "games": null},
+    {"id": "chargestone-cavern", "name": "Chargestone Cavern", "kind": "place", "x": 50, "y": 31, "label": "e", "games": null},
+    {"id": "torchlit-labyrinth", "name": "Torchlit Labyrinth", "kind": "place", "x": 58, "y": 31, "label": "e", "games": null}
+  ],
+  "routes": [
+    {"id": "link-cabo-poco-poco-path", "name": "cabo-poco ↔ poco-path", "number": null, "water": false, "path": [[22, 34], [22, 31]], "games": null},
+    {"id": "link-inleth-grotto-poco-path", "name": "inleth-grotto ↔ poco-path", "number": null, "water": false, "path": [[22, 31], [18, 31]], "games": null},
+    {"id": "link-los-platos-poco-path", "name": "los-platos ↔ poco-path", "number": null, "water": false, "path": [[22, 31], [22, 28]], "games": null},
+    {"id": "south-province-area-one", "name": "South Province (Area One)", "number": "S1", "water": false, "path": [[22, 28], [22, 24]], "games": null},
+    {"id": "south-province-area-two", "name": "South Province (Area Two)", "number": "S2", "water": false, "path": [[22, 24], [14, 24]], "games": null},
+    {"id": "south-province-area-three", "name": "South Province (Area Three)", "number": "S3", "water": false, "path": [[22, 28], [14, 28], [14, 24]], "games": null},
+    {"id": "south-province-area-five", "name": "South Province (Area Five)", "number": "S5", "water": false, "path": [[14, 24], [14, 20]], "games": null},
+    {"id": "west-province-area-one", "name": "West Province (Area One)", "number": "W1", "water": false, "path": [[14, 20], [8, 20]], "games": null},
+    {"id": "link-asado-desert-cascarrafa", "name": "asado-desert ↔ cascarrafa", "number": null, "water": false, "path": [[8, 20], [8, 14]], "games": null},
+    {"id": "west-province-area-three", "name": "West Province (Area Three)", "number": "W3", "water": false, "path": [[8, 14], [3, 14]], "games": null},
+    {"id": "west-province-area-two", "name": "West Province (Area Two)", "number": "W2", "water": false, "path": [[8, 14], [8, 8], [15, 8]], "games": null},
+    {"id": "north-province-area-three", "name": "North Province (Area Three)", "number": "N3", "water": false, "path": [[15, 8], [15, 3]], "games": null},
+    {"id": "link-casseroya-lake-socarrat-trail", "name": "casseroya-lake ↔ socarrat-trail", "number": null, "water": false, "path": [[15, 3], [21, 3]], "games": null},
+    {"id": "north-province-area-two", "name": "North Province (Area Two)", "number": "N2", "water": false, "path": [[21, 3], [26, 3], [26, 7]], "games": null},
+    {"id": "link-dalizapa-passage-glaseado-mountain", "name": "dalizapa-passage ↔ glaseado-mountain", "number": null, "water": false, "path": [[26, 7], [30, 7]], "games": null},
+    {"id": "link-dalizapa-passage-montenevera", "name": "dalizapa-passage ↔ montenevera", "number": null, "water": false, "path": [[30, 7], [34, 7]], "games": null},
+    {"id": "north-province-area-one", "name": "North Province (Area One)", "number": "N1", "water": false, "path": [[39, 12], [39, 7], [34, 7]], "games": null},
+    {"id": "east-province-area-three", "name": "East Province (Area Three)", "number": "E3", "water": false, "path": [[34, 16], [34, 12], [39, 12]], "games": null},
+    {"id": "east-province-area-two", "name": "East Province (Area Two)", "number": "E2", "water": false, "path": [[39, 24], [39, 16], [34, 16]], "games": null},
+    {"id": "east-province-area-one", "name": "East Province (Area One)", "number": "E1", "water": false, "path": [[29, 24], [39, 24]], "games": null},
+    {"id": "link-mesagoza-pokemon-league", "name": "mesagoza ↔ pokemon-league", "number": null, "water": false, "path": [[22, 24], [29, 24]], "games": null},
+    {"id": "south-province-area-four", "name": "South Province (Area Four)", "number": "S4", "water": false, "path": [[22, 28], [29, 28], [29, 24]], "games": null},
+    {"id": "south-province-area-six", "name": "South Province (Area Six)", "number": "S6", "water": false, "path": [[29, 28], [34, 28]], "games": null},
+    {"id": "link-alfornada-alfornada-cavern", "name": "alfornada ↔ alfornada-cavern", "number": null, "water": false, "path": [[34, 28], [34, 31]], "games": null},
+    {"id": "link-mesagoza-zero-gate", "name": "mesagoza ↔ zero-gate", "number": null, "water": false, "path": [[22, 24], [22, 19]], "games": null},
+    {"id": "link-area-zero-zero-gate", "name": "area-zero ↔ zero-gate", "number": null, "water": false, "path": [[22, 19], [22, 14]], "games": null},
+    {"id": "link-area-zero-area-zero-underdepths", "name": "area-zero ↔ area-zero-underdepths", "number": null, "water": false, "path": [[22, 14], [22, 11]], "games": null},
+    {"id": "link-north-paldean-sea-socarrat-trail", "name": "north-paldean-sea ↔ socarrat-trail", "number": null, "water": true, "path": [[21, 3], [21, 1]], "games": null},
+    {"id": "link-cabo-poco-south-paldean-sea", "name": "cabo-poco ↔ south-paldean-sea", "number": null, "water": true, "path": [[22, 34], [22, 37]], "games": null},
+    {"id": "link-porto-marinada-west-paldean-sea", "name": "porto-marinada ↔ west-paldean-sea", "number": null, "water": true, "path": [[3, 14], [3, 20]], "games": null},
+    {"id": "link-east-paldean-sea-levincia", "name": "east-paldean-sea ↔ levincia", "number": null, "water": true, "path": [[39, 24], [43, 24]], "games": null},
+    {"id": "link-loyalty-plaza-revelers-road", "name": "loyalty-plaza ↔ revelers-road", "number": null, "water": false, "path": [[48, 2], [48, 5]], "games": null},
+    {"id": "link-kitakami-hall-loyalty-plaza", "name": "kitakami-hall ↔ loyalty-plaza", "number": null, "water": false, "path": [[48, 5], [52, 5]], "games": null},
+    {"id": "link-kitakami-hall-onis-maw", "name": "kitakami-hall ↔ onis-maw", "number": null, "water": false, "path": [[52, 5], [52, 2]], "games": null},
+    {"id": "link-dreaded-den-onis-maw", "name": "dreaded-den ↔ onis-maw", "number": null, "water": false, "path": [[52, 2], [56, 2]], "games": null},
+    {"id": "link-dreaded-den-oni-mountain", "name": "dreaded-den ↔ oni-mountain", "number": null, "water": false, "path": [[56, 2], [56, 5]], "games": null},
+    {"id": "link-kitakami-hall-oni-mountain", "name": "kitakami-hall ↔ oni-mountain", "number": null, "water": false, "path": [[52, 5], [56, 5]], "games": null},
+    {"id": "link-infernal-pass-oni-mountain", "name": "infernal-pass ↔ oni-mountain", "number": null, "water": false, "path": [[56, 5], [60, 5]], "games": null},
+    {"id": "link-crystal-pool-infernal-pass", "name": "crystal-pool ↔ infernal-pass", "number": null, "water": false, "path": [[60, 5], [60, 8]], "games": null},
+    {"id": "link-kitakami-hall-kitakami-road", "name": "kitakami-hall ↔ kitakami-road", "number": null, "water": false, "path": [[52, 5], [52, 8]], "games": null},
+    {"id": "link-apple-hills-kitakami-road", "name": "apple-hills ↔ kitakami-road", "number": null, "water": false, "path": [[52, 8], [48, 8]], "games": null},
+    {"id": "link-apple-hills-chilling-waterhead", "name": "apple-hills ↔ chilling-waterhead", "number": null, "water": false, "path": [[48, 8], [48, 11]], "games": null},
+    {"id": "link-kitakami-road-mossui-town", "name": "kitakami-road ↔ mossui-town", "number": null, "water": false, "path": [[52, 8], [52, 11]], "games": null},
+    {"id": "link-chilling-waterhead-mossui-town", "name": "chilling-waterhead ↔ mossui-town", "number": null, "water": false, "path": [[48, 11], [52, 11]], "games": null},
+    {"id": "link-kitakami-wilds-mossui-town", "name": "kitakami-wilds ↔ mossui-town", "number": null, "water": false, "path": [[52, 11], [52, 14]], "games": null},
+    {"id": "link-kitakami-wilds-timeless-woods", "name": "kitakami-wilds ↔ timeless-woods", "number": null, "water": false, "path": [[52, 14], [48, 14]], "games": null},
+    {"id": "link-fellhorn-gorge-mossui-town", "name": "fellhorn-gorge ↔ mossui-town", "number": null, "water": false, "path": [[52, 11], [56, 11]], "games": null},
+    {"id": "link-fellhorn-gorge-mossfell-confluence", "name": "fellhorn-gorge ↔ mossfell-confluence", "number": null, "water": false, "path": [[56, 11], [56, 14]], "games": null},
+    {"id": "link-fellhorn-gorge-wistful-fields", "name": "fellhorn-gorge ↔ wistful-fields", "number": null, "water": false, "path": [[56, 11], [60, 11]], "games": null},
+    {"id": "link-paradise-barrens-wistful-fields", "name": "paradise-barrens ↔ wistful-fields", "number": null, "water": false, "path": [[60, 11], [60, 14]], "games": null},
+    {"id": "link-crystal-pool-wistful-fields", "name": "crystal-pool ↔ wistful-fields", "number": null, "water": false, "path": [[60, 8], [60, 11]], "games": null},
+    {"id": "link-blueberry-academy-terarium-central", "name": "blueberry-academy ↔ terarium-central", "number": null, "water": false, "path": [[54, 21], [54, 24]], "games": null},
+    {"id": "link-coastal-biome-terarium-central", "name": "coastal-biome ↔ terarium-central", "number": null, "water": false, "path": [[54, 24], [50, 24]], "games": null},
+    {"id": "link-savanna-biome-terarium-central", "name": "savanna-biome ↔ terarium-central", "number": null, "water": false, "path": [[54, 24], [58, 24]], "games": null},
+    {"id": "link-coastal-biome-polar-biome", "name": "coastal-biome ↔ polar-biome", "number": null, "water": false, "path": [[50, 24], [50, 28]], "games": null},
+    {"id": "link-canyon-biome-savanna-biome", "name": "canyon-biome ↔ savanna-biome", "number": null, "water": false, "path": [[58, 24], [58, 28]], "games": null},
+    {"id": "link-canyon-biome-polar-biome", "name": "canyon-biome ↔ polar-biome", "number": null, "water": false, "path": [[50, 28], [58, 28]], "games": null},
+    {"id": "link-chargestone-cavern-polar-biome", "name": "chargestone-cavern ↔ polar-biome", "number": null, "water": false, "path": [[50, 28], [50, 31]], "games": null},
+    {"id": "link-canyon-biome-torchlit-labyrinth", "name": "canyon-biome ↔ torchlit-labyrinth", "number": null, "water": false, "path": [[58, 28], [58, 31]], "games": null}
+  ],
+  "unmapped": []
 }

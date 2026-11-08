@@ -1,7 +1,7 @@
 namespace TradeRock.Core.GameData;
 
 // Dados dos jogos embutidos em assets/data (JSON em snake_case). Cada arquivo tem "source" (URLs e decompilações
-// consultadas) e "items"; os mapas têm "region", "nodes" e "edges" no lugar de "items".
+// consultadas) e "items"; os mapas têm "region", "grid", "terrain", "places", "routes" e "unmapped" no lugar de "items".
 
 /// <summary>Um método de caça de shiny. As odds são o denominador: 4096 quer dizer 1/4096.</summary>
 /// <remarks>
@@ -133,15 +133,66 @@ public sealed record OwnEncounter(
     bool Alpha,
     bool Verified);
 
-public sealed record MapGraph(string Region, IReadOnlyList<MapNode> Nodes, IReadOnlyList<MapEdge> Edges);
+/// <summary>
+/// Mapa da região em estilo metrô (<c>assets/data/maps/&lt;região&gt;.json</c>; manual em
+/// <c>.superpowers/sdd/2026-11-05-rockassistent/mapas-manual.md</c>). Coordenadas inteiras numa grade de
+/// <see cref="MapGrid.Cols"/> × <see cref="MapGrid.Rows"/> (y para baixo). Lugares são pontos; rotas são linhas só
+/// horizontais e verticais entre lugares. A área do jogo cai no lugar ou na rota de id <c>map_node ?? id</c>, ou fica em
+/// <see cref="Unmapped"/> com o motivo.
+/// </summary>
+public sealed record MapGraph(
+    string Region,
+    MapGrid Grid,
+    IReadOnlyList<MapTerrain> Terrain,
+    IReadOnlyList<MapPlace> Places,
+    IReadOnlyList<MapRoute> Routes,
+    IReadOnlyList<MapUnmapped> Unmapped);
 
-/// <summary>Nó do mapa. X e Y de 0 a 1. <see cref="Games"/> nulo = todos os jogos da região.</summary>
-public sealed record MapNode(string Id, string Name, string Kind, double X, double Y, IReadOnlyList<string>? Games);
+public sealed record MapGrid(int Cols, int Rows);
 
-public sealed record MapEdge(string From, string To);
+/// <summary>Área do fundo (<c>land</c>, <c>sea</c>, <c>mountain</c>, <c>sand</c>), desenhada na ordem do arquivo.</summary>
+public sealed record MapTerrain(string Kind, IReadOnlyList<IReadOnlyList<double>> Polygon);
+
+/// <summary>
+/// Cidade (quadrado), lugar (círculo: caverna, floresta, ilha...) ou construção (quadrado pequeno). <see cref="Label"/>:
+/// lado do rótulo (<c>n s e w ne nw se sw</c>); <see cref="LabelOffset"/>: ajuste fino [dx, dy] em unidades da grade.
+/// <see cref="Games"/> nulo = todos os jogos da região.
+/// </summary>
+public sealed record MapPlace(
+    string Id,
+    string Name,
+    string Kind,
+    int X,
+    int Y,
+    string Label,
+    IReadOnlyList<string>? Games,
+    IReadOnlyList<double>? LabelOffset = null);
+
+/// <summary>
+/// Rota: linha grossa pelos pontos de <see cref="Path"/> (segmentos só horizontais ou verticais), com
+/// <see cref="Number"/> escrito no maior segmento (nulo = sem etiqueta). Sem área com o mesmo id, é só uma ligação.
+/// </summary>
+public sealed record MapRoute(
+    string Id,
+    string Name,
+    string? Number,
+    bool Water,
+    IReadOnlyList<IReadOnlyList<int>> Path,
+    IReadOnlyList<string>? Games);
+
+/// <summary>Área do jogo que fica fora do mapa (prédio sem lugar próprio, ilha de evento...), com o motivo.</summary>
+public sealed record MapUnmapped(string Id, string Reason);
 
 /// <summary>Formato de um arquivo de lista.</summary>
 internal sealed record DataFile<T>(IReadOnlyList<string> Source, IReadOnlyList<T> Items);
 
 /// <summary>Formato de um arquivo de mapa.</summary>
-internal sealed record MapFile(IReadOnlyList<string> Source, string Region, IReadOnlyList<MapNode> Nodes, IReadOnlyList<MapEdge> Edges);
+internal sealed record MapFile(
+    IReadOnlyList<string> Source,
+    string Region,
+    MapGrid Grid,
+    IReadOnlyList<MapTerrain> Terrain,
+    IReadOnlyList<MapPlace> Places,
+    IReadOnlyList<MapRoute> Routes,
+    IReadOnlyList<MapUnmapped> Unmapped);
+

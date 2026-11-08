@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Badge } from '../../components/ui'
 import { spriteUrl } from '../../lib/api'
-import { titleCase } from '../../lib/dex'
+import { dexHref, titleCase } from '../../lib/dex'
 import type { BossPokemon, MonInfo, RunView } from './nuzlocke'
 
 /** O que os cartões da run recebem para alterar a run: devolve o RunView novo (ou lança o ApiError). */
@@ -12,11 +12,11 @@ export type Mutate = (request: Promise<RunView>) => Promise<RunView>
 export const monName = (m: MonInfo, names: Map<number, string>) => m.nickname || names.get(m.species) || `#${m.species}`
 
 /** Pokémon de um time de chefe ou treinador: sprite, nível, golpes, habilidade, item e tera. */
-export function BattlePokemon({ p, names }: { p: BossPokemon; names: Map<number, string> }) {
+export function BattlePokemon({ p, names, game }: { p: BossPokemon; names: Map<number, string>; game?: string }) {
   const { t } = useTranslation()
   return (
     <div className="flex items-start gap-2 rounded-lg bg-surface2 px-2 py-1.5">
-      <Link to={`/pokedex/${p.species}`} className="shrink-0">
+      <Link to={dexHref(`/pokedex/${p.species}`, game)} className="shrink-0">
         <img src={spriteUrl(p.species)} alt="" className="pixelated h-11 w-11" loading="lazy" />
       </Link>
       <div className="min-w-0 flex-1 text-[12.5px]">

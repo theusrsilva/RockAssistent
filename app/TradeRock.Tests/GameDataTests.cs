@@ -509,11 +509,7 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     {
         var files = new Dictionary<string, string>
         {
-            ["maps/kanto.json"] = $$"""
-                { {{Source}}, "region": "kanto", "nodes": [ { "id": "pallet", "name": "Pallet Town", "kind": "city",
-                  "x": 0.1, "y": 0.9, "games": null }, { "id": "route-1", "name": "Route 1", "kind": "route",
-                  "x": 0.1, "y": 0.8, "games": ["frlg"] } ], "edges": [ { "from": "pallet", "to": "route-1" } ] }
-                """,
+            ["maps/kanto.json"] = KantoMap(),
             ["trainers/frlg.json"] = $$"""{ {{Source}}, "items": [] }""",
         };
         var store = FromFiles(files);
@@ -524,7 +520,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Null(store.Map(Region.Johto));
         var kanto = store.Map(Region.Kanto);
         Assert.NotNull(kanto);
-        Assert.Equal(2, kanto.Nodes.Count);
+        Assert.Equal(2, kanto.Places.Count);
+        Assert.Equal("1", kanto.Routes.Single().Number);
+        Assert.Equal(new MapGrid(10, 10), kanto.Grid);
     }
 
     [Theory]
@@ -571,14 +569,10 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         foreach (var a in areas.Where(a => a.PokeApiLocationId is not null))
             Assert.True(locations.Contains(a.PokeApiLocationId!.Value), $"{game}/{a.Id}: location {a.PokeApiLocationId} não existe no dex");
 
-        var map = store.Map(GameVersions.ByKey(game).Region);
+        var region = GameVersions.ByKey(game).Region;
+        var map = store.Map(region);
         Assert.NotNull(map);
-        var nodes = map.Nodes.ToDictionary(n => n.Id);
-        foreach (var a in areas.Where(a => a.MapNode is not null))
-        {
-            Assert.True(nodes.TryGetValue(a.MapNode!, out var n), $"{game}/{a.Id}: nó {a.MapNode} não existe");
-            Assert.True(n.Games is null || n.Games.Contains(game), $"{game}/{a.Id}: nó {a.MapNode} não é deste jogo");
-        }
+        AssertAreasOnMap(game, areas, map);
 
         var bosses = store.Bosses(game);
         var ids = bosses.Select(b => b.Id).ToHashSet();
@@ -676,30 +670,175 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
-    public void Mapas_sem_aresta_repetida()
+    public void Toda_regiao_tem_mapa()
     {
         var store = FromFiles(GameDataStore.EmbeddedFiles());
         foreach (var region in Enum.GetValues<Region>())
+            Assert.True(store.Map(region) is not null, $"{region} sem mapa");
+    }
+
+    /// <summary>Os 22 jogos: cada um com o mapa da sua região e toda área ligada a um lugar/rota do jogo ou em unmapped.</summary>
+    [Fact]
+    public void Todo_jogo_tem_as_areas_no_mapa_da_regiao()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        Assert.Equal(22, GameVersions.All.Count);
+        foreach (var game in GameVersions.All)
         {
-            var map = store.Map(region);
-            Assert.NotNull(map);
-            var keys = map.Edges.Select(e => string.CompareOrdinal(e.From, e.To) < 0 ? (e.From, e.To) : (e.To, e.From)).ToList();
-            Assert.Equal(keys.Count, keys.Distinct().Count());
+            var map = store.Map(game.Region);
+            Assert.True(map is not null, $"{game.Key}: região {game.Region} sem mapa");
+            var areas = store.Areas(game.Key);
+            Assert.True(areas.Count > 0, $"{game.Key}: sem áreas");
+            AssertAreasOnMap(game.Key, areas, map);
         }
     }
 
+    /// <summary>Toda área cai num lugar ou numa rota visível no jogo (map_node ?? id), ou está em unmapped com motivo.</summary>
+    private static void AssertAreasOnMap(string game, IReadOnlyList<GameArea> areas, MapGraph map)
+    {
+        var games = map.Places.Select(p => (p.Id, p.Games)).Concat(map.Routes.Select(r => (r.Id, r.Games))).ToDictionary(x => x.Id, x => x.Games);
+        var unmapped = map.Unmapped.Select(u => u.Id).ToHashSet();
+        foreach (var a in areas)
+        {
+            var target = a.MapNode ?? a.Id;
+            if (games.TryGetValue(target, out var g))
+                Assert.True(g is null || g.Contains(game), $"{game}/{a.Id}: {target} não aparece no mapa do jogo");
+            else
+                Assert.True(a.MapNode is null && unmapped.Contains(a.Id), $"{game}/{a.Id}: {target} não está no mapa nem em unmapped");
+        }
+    }
+
+    /// <summary>Mapa metrô mínimo de Kanto (Pallet e Viridian ligadas pela Route 1), com trechos trocáveis.</summary>
+    private static string KantoMap(string? places = null, string? routes = null, string unmapped = "[]", string grid = "{ \"cols\": 10, \"rows\": 10 }") => $$"""
+        { {{Source}}, "region": "kanto", "grid": {{grid}},
+          "terrain": [ { "kind": "sea", "polygon": [[0, 0], [10, 0], [10, 10], [0, 10]] } ],
+          "places": {{places ?? """
+            [ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 5, "y": 8, "label": "e", "games": null },
+              { "id": "viridian", "name": "Viridian City", "kind": "city", "x": 5, "y": 4, "label": "w", "games": ["frlg"],
+                "label_offset": [0, -0.5] } ]
+            """}},
+          "routes": {{routes ?? """
+            [ { "id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[5, 8], [5, 4]], "games": null } ]
+            """}},
+          "unmapped": {{unmapped}} }
+        """;
+
+    public static TheoryData<string, string> MapasInvalidos => new()
+    {
+        {
+            KantoMap(routes: """[ { "id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[5, 8], [7, 4]], "games": null } ]"""),
+            "diagonal"
+        },
+        {
+            KantoMap(routes: """[ { "id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[5, 8], [5, 6]], "games": null } ]"""),
+            "não está num lugar"
+        },
+        {
+            KantoMap(routes: """[ { "id": "pallet", "name": "Route 1", "number": "1", "water": false, "path": [[5, 8], [5, 4]], "games": null } ]"""),
+            "id repetido pallet"
+        },
+        {
+            KantoMap(places: """
+                [ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 5, "y": 8, "label": "e", "games": null },
+                  { "id": "viridian", "name": "Viridian City", "kind": "city", "x": 5, "y": 8, "label": "w", "games": null } ]
+                """, routes: "[]"),
+            "no mesmo ponto"
+        },
+        {
+            KantoMap(places: """[ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 9, "y": 8, "label": "e", "games": null } ]""", routes: "[]"),
+            "rótulo sai da grade"
+        },
+        {
+            KantoMap(places: """[ { "id": "pallet", "name": "Pallet Town", "kind": "town", "x": 5, "y": 8, "label": "up", "games": ["sv"] } ]""", routes: "[]"),
+            "kind town"
+        },
+        {
+            KantoMap(places: """[ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 5, "y": 8, "label": "up", "games": null } ]""", routes: "[]"),
+            "label up"
+        },
+        {
+            KantoMap(places: """[ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 5, "y": 8, "label": "e", "games": ["sv"] } ]""", routes: "[]"),
+            "jogo sv não usa o mapa kanto"
+        },
+        {
+            KantoMap(places: """[ { "id": "pallet", "name": "Pallet Town", "kind": "city", "x": 12, "y": 8, "label": "e", "games": null } ]""", routes: "[]"),
+            "fora da grade"
+        },
+        { KantoMap(unmapped: """[ { "id": "atlantis", "reason": "não existe" } ]"""), "unmapped atlantis" },
+        { KantoMap(unmapped: """[ { "id": "pallet", "reason": "" } ]"""), "sem motivo" },
+    };
+
+    [Theory]
+    [MemberData(nameof(MapasInvalidos))]
+    public void Mapa_invalido_falha(string json, string message)
+    {
+        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(new Dictionary<string, string> { ["maps/kanto.json"] = json }));
+        Assert.Contains(message, ex.Message);
+    }
+
     [Fact]
-    public void Mapa_com_aresta_para_no_inexistente_falha()
+    public void Area_fora_do_mapa_falha_e_unmapped_libera()
+    {
+        var areas = $$"""
+            { {{Source}}, "items": [
+              { "id": "pallet", "name": "Pallet Town", "kind": "city", "order": 1, "map_node": null, "poke_api_location_id": null, "bosses_before": [] },
+              { "id": "oaks-lab", "name": "Oak's Lab", "kind": "building", "order": 2, "map_node": "pallet", "poke_api_location_id": null, "bosses_before": [] },
+              { "id": "route-1", "name": "Route 1", "kind": "route", "order": 3, "map_node": null, "poke_api_location_id": null, "bosses_before": [] },
+              { "id": "navel-rock", "name": "Navel Rock", "kind": "dungeon", "order": 4, "map_node": null, "poke_api_location_id": null, "bosses_before": [] },
+              { "id": "viridian", "name": "Viridian City", "kind": "city", "order": 5, "map_node": null, "poke_api_location_id": null, "bosses_before": [] } ] }
+            """;
+        Assert.NotNull(FromFiles(new Dictionary<string, string>
+        {
+            ["maps/kanto.json"] = KantoMap(unmapped: """[ { "id": "navel-rock", "reason": "ilha de evento" } ]"""),
+            ["areas/frlg.json"] = areas,
+        }).Map(Region.Kanto));
+
+        var missing = Assert.Throws<InvalidDataException>(() => FromFiles(new Dictionary<string, string>
+        {
+            ["maps/kanto.json"] = KantoMap(),
+            ["areas/frlg.json"] = areas,
+        }));
+        Assert.Contains("areas/frlg/navel-rock: navel-rock não é lugar nem rota", missing.Message);
+
+        // Viridian só existe no mapa do frlg: no rb, a área cai fora.
+        var otherGame = Assert.Throws<InvalidDataException>(() => FromFiles(new Dictionary<string, string>
+        {
+            ["maps/kanto.json"] = KantoMap(unmapped: """[ { "id": "navel-rock", "reason": "ilha de evento" } ]"""),
+            ["areas/rb.json"] = areas,
+        }));
+        Assert.Contains("areas/rb/viridian: viridian não aparece no mapa do rb", otherGame.Message);
+    }
+
+    [Fact]
+    public void Rota_pode_terminar_na_borda_ou_em_outra_rota()
+    {
+        var routes = """
+            [ { "id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[5, 8], [5, 4]], "games": null },
+              { "id": "route-22", "name": "Route 22", "number": "22", "water": false, "path": [[5, 6], [0, 6]], "games": null },
+              { "id": "link", "name": "Gate", "number": null, "water": true, "path": [[5, 8], [5, 10]], "games": null } ]
+            """;
+        Assert.Equal(3, FromFiles(new Dictionary<string, string> { ["maps/kanto.json"] = KantoMap(routes: routes) }).Map(Region.Kanto)!.Routes.Count);
+    }
+
+    [Fact]
+    public void Rotulo_quebra_e_cidade_sem_sufixo()
+    {
+        Assert.Equal(["Pallet"], MapLabels.Lines("city", "Pallet Town"));
+        Assert.Equal(["Underground", "Path (5-6)"], MapLabels.Lines("place", "Underground Path (5-6)"));
+        Assert.Equal(["Mt. Moon"], MapLabels.Lines("place", "Mt. Moon"));
+    }
+
+    [Fact]
+    public void Mapa_no_formato_antigo_falha()
     {
         var files = new Dictionary<string, string>
         {
-            ["maps/kanto.json"] = $$"""
-                { {{Source}}, "region": "kanto", "nodes": [ { "id": "pallet", "name": "Pallet Town", "kind": "city",
-                  "x": 0, "y": 0, "games": null } ], "edges": [ { "from": "pallet", "to": "viridian" } ] }
+            ["maps/hoenn.json"] = $$"""
+                { {{Source}}, "region": "hoenn", "nodes": [ { "id": "pallet", "name": "Pallet Town", "kind": "city",
+                  "x": 0, "y": 0, "games": null } ], "edges": [] }
                 """,
         };
-        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(files));
-        Assert.Contains("viridian", ex.Message);
+        Assert.Throws<InvalidDataException>(() => FromFiles(files));
     }
 }
 
@@ -752,6 +891,12 @@ public sealed class GameDataApiTests : IAsyncLifetime
         // Toda região tem mapa desde a Task 13: o 404 não tem mais como aparecer com os dados embutidos.
         var unova = await _client.GetFromJsonAsync<JsonElement>("/api/data/maps/unova");
         Assert.Equal("unova", unova.GetProperty("region").GetString());
+        // Formato metrô: grade, terreno, lugares e rotas (com o número).
+        var johto = await _client.GetFromJsonAsync<JsonElement>("/api/data/maps/johto");
+        Assert.True(johto.GetProperty("grid").GetProperty("cols").GetInt32() > 0);
+        Assert.Contains(johto.GetProperty("routes").EnumerateArray(), r => r.GetProperty("id").GetString() == "route-29"
+            && r.GetProperty("number").GetString() == "29" && r.GetProperty("path").GetArrayLength() >= 2);
+        Assert.Contains(johto.GetProperty("places").EnumerateArray(), p => p.GetProperty("id").GetString() == "new-bark-town");
         Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/data/maps/5")).StatusCode);
     }
 

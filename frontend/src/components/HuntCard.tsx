@@ -38,7 +38,7 @@ export function HuntCard({ hunt, name }: { hunt: Hunt; name?: string }) {
         </div>
       </div>
       <div className="text-right">
-        <div className="font-display text-2xl leading-none font-bold tabular-nums">{hunt.count.toLocaleString(i18n.language)}</div>
+        <div className="font-display text-2xl leading-none font-extrabold tabular-nums">{hunt.count.toLocaleString(i18n.language)}</div>
         <div className="text-[11.5px] text-muted">{t('hunt.encounters')}</div>
       </div>
     </Link>

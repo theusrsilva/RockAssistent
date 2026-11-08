@@ -27,7 +27,7 @@ public static class GameDataValidator
         var errors = new List<string>();
         ShinyMethods(store.ShinyMethods, errors);
         foreach (var map in store.Maps)
-            Map(map, errors);
+            Map(store, map, errors);
         foreach (var game in store.GameKeys.OrderBy(k => k))
             Game(store, GameVersions.ByKey(game), moveExists, errors);
         return errors;
@@ -102,22 +102,133 @@ public static class GameDataValidator
             errors.Add($"{at}: odds {odds} não batem com as rolagens ({m.BaseRolls} + {extra} de 1/{m.RollOdds} = 1/{expected:0.##})");
     }
 
-    private static void Map(MapGraph map, List<string> errors)
+    public static readonly IReadOnlySet<string> PlaceKinds = new HashSet<string> { "city", "place", "building" };
+    public static readonly IReadOnlySet<string> TerrainKinds = new HashSet<string> { "land", "sea", "mountain", "sand" };
+
+    /// <summary>Jogos que usam o mapa da região (o de Johto também serve ao gs, c e hgss com a parte de Kanto).</summary>
+    public static IReadOnlyList<string> RegionGames(string region) =>
+        GameVersions.All.Where(g => string.Equals(g.Region.ToString(), region, StringComparison.OrdinalIgnoreCase)).Select(g => g.Key).ToList();
+
+    /// <summary>
+    /// Mapa metrô: ids únicos (lugares e rotas juntos), lugares e pontos dentro da grade, rótulo dentro da grade, sem dois
+    /// lugares do mesmo jogo no mesmo ponto, rotas só com segmentos horizontais/verticais e pontas num lugar, na borda ou
+    /// em outra rota, terreno com polígono, jogos da região e <c>unmapped</c> só com áreas que existem.
+    /// </summary>
+    private static void Map(GameDataStore store, MapGraph map, List<string> errors)
     {
         var at = $"maps/{map.Region}";
-        foreach (var dup in Duplicates(map.Nodes.Select(n => n.Id)))
-            errors.Add($"{at}: nó repetido {dup}");
-        var ids = map.Nodes.Select(n => n.Id).ToHashSet();
-        foreach (var e in map.Edges)
-            foreach (var end in new[] { e.From, e.To }.Where(x => !ids.Contains(x)))
-                errors.Add($"{at}: aresta {e.From}->{e.To} aponta para o nó {end}, que não existe");
-        foreach (var n in map.Nodes)
+        int cols = map.Grid.Cols, rows = map.Grid.Rows;
+        if (cols < 1 || rows < 1)
         {
-            if (n.X is < 0 or > 1 || n.Y is < 0 or > 1)
-                errors.Add($"{at}/{n.Id}: x e y vão de 0 a 1");
-            foreach (var g in (n.Games ?? []).Where(g => !IsGame(g)))
-                errors.Add($"{at}/{n.Id}: jogo desconhecido {g}");
+            errors.Add($"{at}: grid {cols}x{rows} inválida");
+            return;
         }
+        var games = RegionGames(map.Region);
+        bool Inside(double x, double y) => x >= 0 && y >= 0 && x <= cols && y <= rows;
+        void Games(string where, IReadOnlyList<string>? list)
+        {
+            if (list is { Count: 0 })
+                errors.Add($"{where}: games vazio (use null para todos)");
+            foreach (var g in (list ?? []).Where(g => !games.Contains(g)))
+                errors.Add($"{where}: jogo {g} não usa o mapa {map.Region}");
+        }
+
+        foreach (var dup in Duplicates(map.Places.Select(p => p.Id).Concat(map.Routes.Select(r => r.Id))))
+            errors.Add($"{at}: id repetido {dup}");
+        foreach (var t in map.Terrain)
+        {
+            if (!TerrainKinds.Contains(t.Kind))
+                errors.Add($"{at}: terreno {t.Kind} (land, sea, mountain ou sand)");
+            if (t.Polygon.Count < 3 || t.Polygon.Any(pt => pt.Count != 2))
+                errors.Add($"{at}: terreno {t.Kind} precisa de 3 pontos [x, y] ou mais");
+            else if (t.Polygon.Any(pt => !Inside(pt[0], pt[1])))
+                errors.Add($"{at}: terreno {t.Kind} sai da grade");
+        }
+        foreach (var p in map.Places)
+        {
+            var pat = $"{at}/{p.Id}";
+            if (!PlaceKinds.Contains(p.Kind))
+                errors.Add($"{pat}: kind {p.Kind} (city, place ou building)");
+            if (!Inside(p.X, p.Y))
+                errors.Add($"{pat}: ({p.X}, {p.Y}) fora da grade {cols}x{rows}");
+            if (!MapLabels.Positions.Contains(p.Label))
+                errors.Add($"{pat}: label {p.Label} (n, s, e, w, ne, nw, se ou sw)");
+            else
+            {
+                var b = MapLabels.Box(p);
+                if (!Inside(b.X, b.Y) || !Inside(b.X + b.W, b.Y + b.H))
+                    errors.Add($"{pat}: o rótulo sai da grade (mude label ou label_offset)");
+            }
+            if (p.LabelOffset is { Count: not 2 })
+                errors.Add($"{pat}: label_offset é [dx, dy]");
+            Games(pat, p.Games);
+        }
+        foreach (var g in games)
+            foreach (var same in map.Places.Where(p => p.Games is null || p.Games.Contains(g)).GroupBy(p => (p.X, p.Y)).Where(x => x.Count() > 1))
+                errors.Add($"{at}: {string.Join(" e ", same.Select(p => p.Id))} no mesmo ponto ({same.Key.X}, {same.Key.Y}) no {g}");
+
+        var points = map.Places.Select(p => (p.X, p.Y)).ToHashSet();
+        foreach (var r in map.Routes)
+        {
+            var rat = $"{at}/{r.Id}";
+            if (string.IsNullOrWhiteSpace(r.Name))
+                errors.Add($"{rat}: sem name");
+            if (r.Number is { } n && string.IsNullOrWhiteSpace(n))
+                errors.Add($"{rat}: number vazio (use null)");
+            Games(rat, r.Games);
+            if (r.Path.Count < 2 || r.Path.Any(pt => pt.Count != 2))
+            {
+                errors.Add($"{rat}: path precisa de 2 pontos [x, y] ou mais");
+                continue;
+            }
+            foreach (var pt in r.Path.Where(pt => !Inside(pt[0], pt[1])))
+                errors.Add($"{rat}: ponto ({pt[0]}, {pt[1]}) fora da grade");
+            for (var i = 1; i < r.Path.Count; i++)
+            {
+                var (a, b) = (r.Path[i - 1], r.Path[i]);
+                if (a[0] == b[0] && a[1] == b[1])
+                    errors.Add($"{rat}: ponto repetido ({a[0]}, {a[1]})");
+                else if (a[0] != b[0] && a[1] != b[1])
+                    errors.Add($"{rat}: segmento ({a[0]}, {a[1]})→({b[0]}, {b[1]}) em diagonal (só horizontal ou vertical)");
+            }
+            foreach (var end in new[] { r.Path[0], r.Path[^1] })
+            {
+                var (x, y) = (end[0], end[1]);
+                var onBorder = x == 0 || y == 0 || x == cols || y == rows;
+                var onRoute = map.Routes.Any(o => o != r && OnPath(o.Path, x, y));
+                if (!points.Contains((x, y)) && !onBorder && !onRoute)
+                    errors.Add($"{rat}: a ponta ({x}, {y}) não está num lugar, na borda nem em outra rota");
+            }
+        }
+
+        var ids = map.Places.Select(p => p.Id).Concat(map.Routes.Select(r => r.Id)).ToHashSet();
+        var areaIds = games.SelectMany(g => store.Areas(g)).Select(a => a.Id).ToHashSet();
+        foreach (var dup in Duplicates(map.Unmapped.Select(u => u.Id)))
+            errors.Add($"{at}: unmapped repetido {dup}");
+        foreach (var u in map.Unmapped)
+        {
+            if (string.IsNullOrWhiteSpace(u.Reason))
+                errors.Add($"{at}: unmapped {u.Id} sem motivo");
+            if (ids.Contains(u.Id))
+                errors.Add($"{at}: {u.Id} está em unmapped e no mapa");
+            if (!areaIds.Contains(u.Id))
+                errors.Add($"{at}: unmapped {u.Id} não é área de nenhum jogo do mapa");
+        }
+    }
+
+    /// <summary>O ponto está num dos segmentos do caminho.</summary>
+    private static bool OnPath(IReadOnlyList<IReadOnlyList<int>> path, int x, int y)
+    {
+        for (var i = 1; i < path.Count; i++)
+        {
+            if (path[i - 1].Count != 2 || path[i].Count != 2)
+                return false;
+            int x1 = path[i - 1][0], y1 = path[i - 1][1], x2 = path[i][0], y2 = path[i][1];
+            if (x >= Math.Min(x1, x2) && x <= Math.Max(x1, x2) && y >= Math.Min(y1, y2) && y <= Math.Max(y1, y2)
+                && (x1 == x2 || y1 == y2))
+                return true;
+        }
+        return false;
     }
 
     private static void Game(GameDataStore store, GameVersionGroup game, Func<string, bool>? moveExists, List<string> errors)
@@ -128,6 +239,7 @@ public static class GameDataValidator
         var bossIds = bosses.Select(b => b.Id).ToHashSet();
         var areaIds = areas.Select(a => a.Id).ToHashSet();
         var map = store.Map(game.Region);
+        var unmapped = map?.Unmapped.Select(u => u.Id).ToHashSet() ?? [];
 
         foreach (var dup in Duplicates(bosses.Select(b => b.Id)))
             errors.Add($"bosses/{key}: id repetido {dup}");
@@ -161,6 +273,8 @@ public static class GameDataValidator
             Party(at, t.Party, moveExists, errors);
         }
 
+        if (map is null && areas.Count > 0)
+            errors.Add($"areas/{key}: a região {game.Region} não tem mapa (maps/{game.Region.ToString().ToLowerInvariant()}.json)");
         foreach (var dup in Duplicates(areas.Select(a => a.Id)))
             errors.Add($"areas/{key}: id repetido {dup}");
         foreach (var a in areas)
@@ -170,13 +284,20 @@ public static class GameDataValidator
                 errors.Add($"{at}: kind {a.Kind}");
             foreach (var id in a.BossesBefore.Where(id => !bossIds.Contains(id)))
                 errors.Add($"{at}: chefe {id} não existe em bosses/{key}");
-            if (a.MapNode is { } node)
+            if (map is not null)
             {
-                var n = map?.Nodes.FirstOrDefault(x => x.Id == node);
-                if (n is null)
-                    errors.Add($"{at}: nó {node} não existe no mapa {game.Region}");
-                else if (n.Games is { } games && !games.Contains(key))
-                    errors.Add($"{at}: nó {node} não é deste jogo");
+                // Toda área cai num lugar ou numa rota do jogo (map_node ?? id), ou está em unmapped.
+                var target = a.MapNode ?? a.Id;
+                var place = map.Places.FirstOrDefault(p => p.Id == target);
+                var route = map.Routes.FirstOrDefault(r => r.Id == target);
+                var games = place?.Games ?? route?.Games;
+                if (place is null && route is null)
+                {
+                    if (a.MapNode is not null || !unmapped.Contains(a.Id))
+                        errors.Add($"{at}: {target} não é lugar nem rota do mapa {game.Region} (ou ponha a área em unmapped)");
+                }
+                else if (games is not null && !games.Contains(key))
+                    errors.Add($"{at}: {target} não aparece no mapa do {key} (games)");
             }
         }
 

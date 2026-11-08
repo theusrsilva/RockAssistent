@@ -15,7 +15,7 @@ import { areaStates, formatRules, isFinished, nuzlockeErrorMessage, runStats, so
 import { CardTitle, monName, type Mutate } from './parts'
 import RegionMap from './RegionMap'
 import { StarterPicker, starterName, useStarters } from './StarterPicker'
-import type { MapGraph } from './regionMap'
+import type { RegionMapData } from './regionMap'
 import { gameVersionByKey } from '../../lib/gameVersions'
 
 type Tab = 'run' | 'graveyard' | 'stats'
@@ -54,7 +54,7 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
   const names = useMemo(() => new Map((speciesOptions ?? []).map((s) => [s.value, s.text])), [speciesOptions])
   const areasData = useApiGet<GameArea[]>(`/api/data/${run.gameKey}/areas`)
   const areas = useMemo(() => sortAreas(areasData.data ?? []), [areasData.data])
-  const mapData = useApiGet<MapGraph>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
+  const mapData = useApiGet<RegionMapData>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
   const states = useMemo(() => areaStates(view), [view])
   const areaName = useMemo(() => new Map(areas.map((a) => [a.id, a.name])), [areas])
   const starters = useStarters(run.gameKey)
@@ -69,6 +69,13 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
       setError(nuzlockeErrorMessage(t, e))
     }
   }
+
+  /** Clique no mapa: troca a área atual (run terminada: sem clique). */
+  const selectArea = readOnly
+    ? undefined
+    : (areaId: string) => {
+        if (areaId !== view.currentArea?.id) void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}/area`, { areaId }))
+      }
 
   async function confirmAction(kind: Confirm) {
     setConfirm(null)
@@ -167,23 +174,10 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
 
       {tab === 'run' && (
         <>
-          {mapData.data && mapData.data.nodes.length > 0 && (
+          {mapData.data && mapData.data.places.length > 0 && (
             <Card className="flex flex-col gap-2 p-3! sm:p-4!">
               <CardTitle icon="map">{t('nuzlocke.map.title')}</CardTitle>
-              <RegionMap
-                graph={mapData.data}
-                game={run.gameKey}
-                areas={areas}
-                states={states}
-                current={view.currentArea?.id ?? null}
-                onSelect={
-                  readOnly
-                    ? undefined
-                    : (areaId) => {
-                        if (areaId !== view.currentArea?.id) void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}/area`, { areaId }))
-                      }
-                }
-              />
+              <RegionMap map={mapData.data} game={run.gameKey} areas={areas} states={states} current={view.currentArea?.id ?? null} onSelect={selectArea} />
             </Card>
           )}
           <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
@@ -297,7 +291,7 @@ function Stats({ view }: { view: RunView }) {
             </span>
             {t(`nuzlocke.stats.${key}`)}
           </span>
-          <span className="font-display text-3xl leading-none font-bold tabular-nums">{value}</span>
+          <span className="font-display text-3xl leading-none font-extrabold tabular-nums">{value}</span>
         </Card>
       ))}
     </div>

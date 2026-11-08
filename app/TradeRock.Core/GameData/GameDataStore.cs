@@ -111,6 +111,7 @@ public sealed class GameDataStore
             .ToList();
     }
 
+    /// <summary>Mapa da região no formato metrô; nulo sem arquivo.</summary>
     public MapGraph? Map(Region region) => _maps.GetValueOrDefault(region);
 
     /// <summary>Times sugeridos do VGC (<c>vgc/teams.json</c>).</summary>
@@ -152,7 +153,7 @@ public sealed class GameDataStore
             "trainers" => Read<DataFile<TrainerBattle>>(json),
             "areas" => Read<DataFile<GameArea>>(json),
             "encounters" => Read<DataFile<OwnEncounter>>(json),
-            "maps" => Read<MapFile>(json) is { } m ? new MapGraph(m.Region, m.Nodes, m.Edges) : null,
+            "maps" => ReadMap(json),
             "vgc" when key == "teams" => Read<DataFile<VgcTeam>>(json),
             "vgc" when key == "regulation" => Read<VgcRegulation>(json),
             _ => throw new InvalidDataException("arquivo fora do formato conhecido"),
@@ -164,13 +165,17 @@ public sealed class GameDataStore
         if (folder == "maps")
         {
             var region = ParseRegion(key!);
-            if (!string.Equals(((MapGraph)result).Region, region.ToString(), StringComparison.OrdinalIgnoreCase))
-                throw new InvalidDataException($"região do arquivo ({((MapGraph)result).Region}) diferente do nome");
+            var fileRegion = ((MapGraph)result).Region;
+            if (!string.Equals(fileRegion, region.ToString(), StringComparison.OrdinalIgnoreCase))
+                throw new InvalidDataException($"região do arquivo ({fileRegion}) diferente do nome");
         }
         return result;
     }
 
     private static T? Read<T>(string json) where T : class => JsonSerializer.Deserialize<T>(json, Json);
+
+    private static MapGraph? ReadMap(string json) =>
+        Read<MapFile>(json) is { } m ? new MapGraph(m.Region, m.Grid, m.Terrain, m.Places, m.Routes, m.Unmapped) : null;
 
     private static (string? Folder, string? Key) Split(string path)
     {

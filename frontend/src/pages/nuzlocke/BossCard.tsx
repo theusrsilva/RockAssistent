@@ -30,7 +30,7 @@ export default function BossCard({ view, names, readOnly, onDefeat }: { view: Ru
             {view.levelCap != null && (
               <div className="rounded-lg bg-accent-soft px-3 py-1.5 text-center">
                 <div className="text-[11px] font-bold tracking-wide text-muted uppercase">{t('nuzlocke.boss.cap')}</div>
-                <div className="font-display text-2xl leading-none font-bold tabular-nums">{view.levelCap}</div>
+                <div className="font-display text-2xl leading-none font-extrabold tabular-nums">{view.levelCap}</div>
               </div>
             )}
           </div>
