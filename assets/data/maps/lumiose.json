@@ -1,455 +1,57 @@
 {
   "source": [
-    "https://bulbapedia.bulbagarden.net/wiki/Lumiose",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+    "https://bulbapedia.bulbagarden.net/wiki/Lumiose_City",
+    "Mapa metrô feito à mão pela geografia do Legends: Z-A: Lumiose como um anel de avenidas, bulevares e distritos com a Centrico Plaza no meio. Cada Wild Zone é uma linha com o número dela, do lado do distrito onde fica; ligações sem número (link-*) são ruas sem área."
   ],
   "region": "lumiose",
-  "nodes": [
-    {
-      "id": "gare-de-lumiose",
-      "name": "Gare de Lumiose",
-      "kind": "building",
-      "x": 0.5,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "vert-district",
-      "name": "Vert District",
-      "kind": "city",
-      "x": 0.684,
-      "y": 0.786,
-      "games": null
-    },
-    {
-      "id": "wild-zone-1",
-      "name": "Wild Zone 1",
-      "kind": "route",
-      "x": 0.644,
-      "y": 0.826,
-      "games": null
-    },
-    {
-      "id": "bleu-district",
-      "name": "Bleu District",
-      "kind": "city",
-      "x": 0.837,
-      "y": 0.452,
-      "games": null
-    },
-    {
-      "id": "rouge-district",
-      "name": "Rouge District",
-      "kind": "city",
-      "x": 0.163,
-      "y": 0.452,
-      "games": null
-    },
-    {
-      "id": "south-boulevard",
-      "name": "South Boulevard",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "wild-zone-2",
-      "name": "Wild Zone 2",
-      "kind": "route",
-      "x": 0.724,
-      "y": 0.826,
-      "games": null
-    },
-    {
-      "id": "wild-zone-3",
-      "name": "Wild Zone 3",
-      "kind": "route",
-      "x": 0.203,
-      "y": 0.492,
-      "games": null
-    },
-    {
-      "id": "wild-zone-4",
-      "name": "Wild Zone 4",
-      "kind": "route",
-      "x": 0.123,
-      "y": 0.412,
-      "games": null
-    },
-    {
-      "id": "wild-zone-5",
-      "name": "Wild Zone 5",
-      "kind": "route",
-      "x": 0.877,
-      "y": 0.412,
-      "games": null
-    },
-    {
-      "id": "wild-zone-6",
-      "name": "Wild Zone 6",
-      "kind": "route",
-      "x": 0.276,
-      "y": 0.746,
-      "games": null
-    },
-    {
-      "id": "magenta-district",
-      "name": "Magenta District",
-      "kind": "city",
-      "x": 0.596,
-      "y": 0.174,
-      "games": null
-    },
-    {
-      "id": "jaune-district",
-      "name": "Jaune District",
-      "kind": "city",
-      "x": 0.316,
-      "y": 0.786,
-      "games": null
-    },
-    {
-      "id": "wild-zone-7",
-      "name": "Wild Zone 7",
-      "kind": "route",
-      "x": 0.556,
-      "y": 0.214,
-      "games": null
-    },
-    {
-      "id": "wild-zone-8",
-      "name": "Wild Zone 8",
-      "kind": "route",
-      "x": 0.356,
-      "y": 0.746,
-      "games": null
-    },
-    {
-      "id": "wild-zone-9",
-      "name": "Wild Zone 9",
-      "kind": "route",
-      "x": 0.556,
-      "y": 0.134,
-      "games": null
-    },
-    {
-      "id": "wild-zone-10",
-      "name": "Wild Zone 10",
-      "kind": "route",
-      "x": 0.797,
-      "y": 0.492,
-      "games": null
-    },
-    {
-      "id": "wild-zone-14",
-      "name": "Wild Zone 14",
-      "kind": "route",
-      "x": 0.636,
-      "y": 0.214,
-      "games": null
-    },
-    {
-      "id": "wild-zone-11",
-      "name": "Wild Zone 11",
-      "kind": "route",
-      "x": 0.356,
-      "y": 0.826,
-      "games": null
-    },
-    {
-      "id": "wild-zone-12",
-      "name": "Wild Zone 12",
-      "kind": "route",
-      "x": 0.877,
-      "y": 0.492,
-      "games": null
-    },
-    {
-      "id": "wild-zone-13",
-      "name": "Wild Zone 13",
-      "kind": "route",
-      "x": 0.364,
-      "y": 0.214,
-      "games": null
-    },
-    {
-      "id": "sewers",
-      "name": "The Sewers",
-      "kind": "dungeon",
-      "x": 0.08,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "wild-zone-15",
-      "name": "Wild Zone 15",
-      "kind": "route",
-      "x": 0.444,
-      "y": 0.214,
-      "games": null
-    },
-    {
-      "id": "vernal-avenue",
-      "name": "Vernal Avenue",
-      "kind": "city",
-      "x": 0.809,
-      "y": 0.641,
-      "games": null
-    },
-    {
-      "id": "autumnal-avenue",
-      "name": "Autumnal Avenue",
-      "kind": "city",
-      "x": 0.757,
-      "y": 0.277,
-      "games": null
-    },
-    {
-      "id": "hibernal-avenue",
-      "name": "Hibernal Avenue",
-      "kind": "city",
-      "x": 0.243,
-      "y": 0.277,
-      "games": null
-    },
-    {
-      "id": "estival-avenue",
-      "name": "Estival Avenue",
-      "kind": "city",
-      "x": 0.191,
-      "y": 0.641,
-      "games": null
-    },
-    {
-      "id": "north-boulevard",
-      "name": "North Boulevard",
-      "kind": "city",
-      "x": 0.404,
-      "y": 0.174,
-      "games": null
-    },
-    {
-      "id": "wild-zone-16",
-      "name": "Wild Zone 16",
-      "kind": "route",
-      "x": 0.797,
-      "y": 0.412,
-      "games": null
-    },
-    {
-      "id": "wild-zone-17",
-      "name": "Wild Zone 17",
-      "kind": "route",
-      "x": 0.644,
-      "y": 0.746,
-      "games": null
-    },
-    {
-      "id": "wild-zone-18",
-      "name": "Wild Zone 18",
-      "kind": "route",
-      "x": 0.636,
-      "y": 0.134,
-      "games": null
-    },
-    {
-      "id": "wild-zone-19",
-      "name": "Wild Zone 19",
-      "kind": "route",
-      "x": 0.276,
-      "y": 0.826,
-      "games": null
-    },
-    {
-      "id": "centrico-plaza",
-      "name": "Centrico Plaza",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "lysandre-labs",
-      "name": "Lysandre Labs",
-      "kind": "dungeon",
-      "x": 0.6,
-      "y": 0.56,
-      "games": null
-    },
-    {
-      "id": "wild-zone-20",
-      "name": "Wild Zone 20",
-      "kind": "route",
-      "x": 0.44,
-      "y": 0.44,
-      "games": null
-    }
+  "grid": {"cols": 40, "rows": 28},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [40, 0], [40, 28], [0, 28]]},
+    {"kind": "land", "polygon": [[7.44, 0.82], [8.7, 0.4], [31.3, 0.4], [32.56, 0.82], [38.84, 5.58], [39.4, 6.7], [39.4, 21.3], [38.84, 22.42], [32.56, 27.18], [31.3, 27.6], [8.7, 27.6], [7.44, 27.18], [1.16, 22.42], [0.6, 21.3], [0.6, 6.7], [1.16, 5.58]]}
   ],
-  "edges": [
-    {
-      "from": "south-boulevard",
-      "to": "vert-district"
-    },
-    {
-      "from": "vert-district",
-      "to": "vernal-avenue"
-    },
-    {
-      "from": "vernal-avenue",
-      "to": "bleu-district"
-    },
-    {
-      "from": "bleu-district",
-      "to": "autumnal-avenue"
-    },
-    {
-      "from": "autumnal-avenue",
-      "to": "magenta-district"
-    },
-    {
-      "from": "magenta-district",
-      "to": "north-boulevard"
-    },
-    {
-      "from": "north-boulevard",
-      "to": "hibernal-avenue"
-    },
-    {
-      "from": "hibernal-avenue",
-      "to": "rouge-district"
-    },
-    {
-      "from": "rouge-district",
-      "to": "estival-avenue"
-    },
-    {
-      "from": "estival-avenue",
-      "to": "jaune-district"
-    },
-    {
-      "from": "jaune-district",
-      "to": "south-boulevard"
-    },
-    {
-      "from": "gare-de-lumiose",
-      "to": "south-boulevard"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "wild-zone-20"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "lysandre-labs"
-    },
-    {
-      "from": "bleu-district",
-      "to": "sewers"
-    },
-    {
-      "from": "vert-district",
-      "to": "sewers"
-    },
-    {
-      "from": "vert-district",
-      "to": "wild-zone-1"
-    },
-    {
-      "from": "vert-district",
-      "to": "wild-zone-2"
-    },
-    {
-      "from": "rouge-district",
-      "to": "wild-zone-3"
-    },
-    {
-      "from": "rouge-district",
-      "to": "wild-zone-4"
-    },
-    {
-      "from": "bleu-district",
-      "to": "wild-zone-5"
-    },
-    {
-      "from": "jaune-district",
-      "to": "wild-zone-6"
-    },
-    {
-      "from": "magenta-district",
-      "to": "wild-zone-7"
-    },
-    {
-      "from": "jaune-district",
-      "to": "wild-zone-8"
-    },
-    {
-      "from": "magenta-district",
-      "to": "wild-zone-9"
-    },
-    {
-      "from": "bleu-district",
-      "to": "wild-zone-10"
-    },
-    {
-      "from": "jaune-district",
-      "to": "wild-zone-11"
-    },
-    {
-      "from": "bleu-district",
-      "to": "wild-zone-12"
-    },
-    {
-      "from": "north-boulevard",
-      "to": "wild-zone-13"
-    },
-    {
-      "from": "magenta-district",
-      "to": "wild-zone-14"
-    },
-    {
-      "from": "north-boulevard",
-      "to": "wild-zone-15"
-    },
-    {
-      "from": "bleu-district",
-      "to": "wild-zone-16"
-    },
-    {
-      "from": "vert-district",
-      "to": "wild-zone-17"
-    },
-    {
-      "from": "magenta-district",
-      "to": "wild-zone-18"
-    },
-    {
-      "from": "jaune-district",
-      "to": "wild-zone-19"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "vernal-avenue"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "autumnal-avenue"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "hibernal-avenue"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "estival-avenue"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "north-boulevard"
-    },
-    {
-      "from": "centrico-plaza",
-      "to": "south-boulevard"
-    }
-  ]
+  "places": [
+    {"id": "hibernal-avenue", "name": "Hibernal Avenue", "kind": "city", "x": 5, "y": 4, "label": "w", "games": null},
+    {"id": "north-boulevard", "name": "North Boulevard", "kind": "city", "x": 13, "y": 4, "label": "s", "games": null},
+    {"id": "magenta-district", "name": "Magenta District", "kind": "city", "x": 25, "y": 4, "label": "ne", "games": null},
+    {"id": "autumnal-avenue", "name": "Autumnal Avenue", "kind": "city", "x": 34, "y": 4, "label": "e", "games": null},
+    {"id": "rouge-district", "name": "Rouge District", "kind": "city", "x": 5, "y": 13, "label": "w", "games": null},
+    {"id": "centrico-plaza", "name": "Centrico Plaza", "kind": "city", "x": 19, "y": 13, "label": "ne", "games": null},
+    {"id": "lysandre-labs", "name": "Lysandre Labs", "kind": "place", "x": 25, "y": 13, "label": "ne", "games": null},
+    {"id": "bleu-district", "name": "Bleu District", "kind": "city", "x": 34, "y": 13, "label": "ne", "games": null},
+    {"id": "estival-avenue", "name": "Estival Avenue", "kind": "city", "x": 5, "y": 22, "label": "w", "games": null},
+    {"id": "jaune-district", "name": "Jaune District", "kind": "city", "x": 11, "y": 22, "label": "ne", "games": null},
+    {"id": "south-boulevard", "name": "South Boulevard", "kind": "city", "x": 19, "y": 22, "label": "ne", "games": null},
+    {"id": "vert-district", "name": "Vert District", "kind": "city", "x": 27, "y": 22, "label": "s", "games": null},
+    {"id": "vernal-avenue", "name": "Vernal Avenue", "kind": "city", "x": 34, "y": 22, "label": "e", "games": null},
+    {"id": "gare-de-lumiose", "name": "Gare de Lumiose", "kind": "building", "x": 19, "y": 26, "label": "e", "games": null},
+    {"id": "sewers", "name": "The Sewers", "kind": "place", "x": 2, "y": 17, "label": "n", "games": null}
+  ],
+  "routes": [
+    {"id": "wild-zone-13", "name": "Wild Zone 13", "number": "13", "water": false, "path": [[5, 4], [13, 4]], "games": null},
+    {"id": "wild-zone-15", "name": "Wild Zone 15", "number": "15", "water": false, "path": [[13, 4], [19, 4], [25, 4]], "games": null},
+    {"id": "wild-zone-14", "name": "Wild Zone 14", "number": "14", "water": false, "path": [[25, 4], [34, 4]], "games": null},
+    {"id": "wild-zone-16", "name": "Wild Zone 16", "number": "16", "water": false, "path": [[34, 4], [34, 13]], "games": null},
+    {"id": "wild-zone-12", "name": "Wild Zone 12", "number": "12", "water": false, "path": [[34, 13], [34, 22]], "games": null},
+    {"id": "wild-zone-2", "name": "Wild Zone 2", "number": "2", "water": false, "path": [[34, 22], [27, 22]], "games": null},
+    {"id": "wild-zone-1", "name": "Wild Zone 1", "number": "1", "water": false, "path": [[27, 22], [19, 22]], "games": null},
+    {"id": "wild-zone-11", "name": "Wild Zone 11", "number": "11", "water": false, "path": [[19, 22], [11, 22]], "games": null},
+    {"id": "wild-zone-19", "name": "Wild Zone 19", "number": "19", "water": false, "path": [[11, 22], [5, 22]], "games": null},
+    {"id": "wild-zone-3", "name": "Wild Zone 3", "number": "3", "water": false, "path": [[5, 22], [5, 13]], "games": null},
+    {"id": "wild-zone-4", "name": "Wild Zone 4", "number": "4", "water": false, "path": [[5, 13], [5, 4]], "games": null},
+    {"id": "wild-zone-20", "name": "Wild Zone 20", "number": "20", "water": false, "path": [[19, 13], [25, 13]], "games": null},
+    {"id": "wild-zone-10", "name": "Wild Zone 10", "number": "10", "water": false, "path": [[25, 13], [34, 13]], "games": null},
+    {"id": "wild-zone-7", "name": "Wild Zone 7", "number": "7", "water": false, "path": [[25, 4], [25, 13]], "games": null},
+    {"id": "wild-zone-17", "name": "Wild Zone 17", "number": "17", "water": false, "path": [[27, 22], [27, 17], [25, 17], [25, 13]], "games": null},
+    {"id": "wild-zone-8", "name": "Wild Zone 8", "number": "8", "water": false, "path": [[11, 22], [11, 13]], "games": null},
+    {"id": "wild-zone-5", "name": "Wild Zone 5", "number": "5", "water": false, "path": [[34, 13], [38, 13], [38, 8], [34, 8]], "games": null},
+    {"id": "wild-zone-9", "name": "Wild Zone 9", "number": "9", "water": false, "path": [[25, 4], [25, 1], [13, 1], [13, 4]], "games": null},
+    {"id": "wild-zone-18", "name": "Wild Zone 18", "number": "18", "water": false, "path": [[25, 1], [34, 1], [34, 4]], "games": null},
+    {"id": "wild-zone-6", "name": "Wild Zone 6", "number": "6", "water": false, "path": [[11, 22], [11, 26], [5, 26], [5, 22]], "games": null},
+    {"id": "link-centrico-plaza-rouge-district", "name": "centrico-plaza ↔ rouge-district", "number": null, "water": false, "path": [[19, 13], [5, 13]], "games": null},
+    {"id": "link-centrico-plaza-north-boulevard", "name": "centrico-plaza ↔ north-boulevard", "number": null, "water": false, "path": [[19, 13], [19, 4]], "games": null},
+    {"id": "link-centrico-plaza-south-boulevard", "name": "centrico-plaza ↔ south-boulevard", "number": null, "water": false, "path": [[19, 13], [19, 22]], "games": null},
+    {"id": "link-gare-de-lumiose-south-boulevard", "name": "gare-de-lumiose ↔ south-boulevard", "number": null, "water": false, "path": [[19, 22], [19, 26]], "games": null},
+    {"id": "link-rouge-district-sewers", "name": "rouge-district ↔ sewers", "number": null, "water": false, "path": [[5, 17], [2, 17]], "games": null}
+  ],
+  "unmapped": []
 }

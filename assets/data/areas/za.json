@@ -254,7 +254,7 @@
       "name": "Académie Étoile",
       "kind": "building",
       "order": 26,
-      "map_node": null,
+      "map_node": "rouge-district",
       "poke_api_location_id": null,
       "bosses_before": []
     },
@@ -263,7 +263,7 @@
       "name": "Lumiose Museum",
       "kind": "building",
       "order": 27,
-      "map_node": null,
+      "map_node": "rouge-district",
       "poke_api_location_id": null,
       "bosses_before": []
     },
