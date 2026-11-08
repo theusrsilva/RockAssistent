@@ -265,7 +265,7 @@ export default function HuntCounter() {
       )}
 
       <Card className="flex flex-col items-center gap-4 text-center">
-        <div className="font-display text-[72px] leading-none font-bold tabular-nums md:text-[96px]" aria-live="polite">
+        <div className="font-display text-[72px] leading-none font-extrabold tabular-nums md:text-[96px]" aria-live="polite">
           {count.toLocaleString(lang)}
         </div>
         <div className="text-sm text-muted">{t('hunt.encounters')}</div>

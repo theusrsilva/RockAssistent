@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
-import { sortMoves, type LearnedMove, type MoveSortKey, type SortDir, type SpeciesDetail, type SpeciesMoves } from '../../../lib/dex'
+import { dexHref, sortMoves, type LearnedMove, type MoveSortKey, type SortDir, type SpeciesDetail, type SpeciesMoves } from '../../../lib/dex'
 import { Callout, Icon, Segmented, useIsMobile } from '../../../components/ui'
 import { TypeBadge } from '../TypeBadge'
 
@@ -10,7 +10,7 @@ type Group = keyof SpeciesMoves
 const firstColumn: Record<Group, MoveSortKey | null> = { levelUp: 'level', machine: 'machine', tutor: null, egg: null }
 
 /** Golpes do jogo por jeito de aprender, com tabela ordenável (no celular, lista compacta). */
-export function MovesTab({ detail }: { detail: SpeciesDetail }) {
+export function MovesTab({ detail, game }: { detail: SpeciesDetail; game: string }) {
   const { t } = useTranslation()
   const mobile = useIsMobile()
   const [group, setGroup] = useState<Group>('levelUp')
@@ -59,7 +59,7 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
             <li key={`${m.id}-${i}`} className="flex items-center gap-2 px-3 py-2 text-sm">
               {lead && <span className="w-10 shrink-0 font-mono text-xs text-muted">{leadCell(m)}</span>}
               <div className="min-w-0 flex-1">
-                <Link to={`/pokedex/golpe/${m.id}`} className="block truncate font-semibold hover:text-accent">
+                <Link to={dexHref(`/pokedex/golpe/${m.id}`, game)} className="block truncate font-semibold hover:text-accent">
                   {m.name}
                 </Link>
                 <div className="text-xs text-muted">
@@ -91,7 +91,7 @@ export function MovesTab({ detail }: { detail: SpeciesDetail }) {
                 <tr key={`${m.id}-${i}`}>
                   {lead && <td className="px-2 py-1.5 font-mono text-xs text-muted">{leadCell(m)}</td>}
                   <td className="px-2 py-1.5 font-semibold">
-                    <Link to={`/pokedex/golpe/${m.id}`} className="hover:text-accent hover:underline">
+                    <Link to={dexHref(`/pokedex/golpe/${m.id}`, game)} className="hover:text-accent hover:underline">
                       {m.name}
                     </Link>
                   </td>

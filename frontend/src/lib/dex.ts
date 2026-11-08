@@ -1,6 +1,7 @@
 // Pokédex offline: tipos espelho dos DTOs de GET /api/dex/* (TradeRock.Core/Dex/DexModels.cs) e funções puras.
 
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router'
 import { api, ApiError } from './api'
 import { GAME_VERSIONS } from './gameVersions'
 
@@ -223,6 +224,53 @@ export function saveDexGame(key: string) {
   } catch {
     // sem armazenamento: vale só nesta visita
   }
+}
+
+/** Chave de um jogo que a Pokédex conhece. */
+export const isDexGame = (key: string | null | undefined): key is string => !!key && GAME_VERSIONS.some((g) => g.key === key)
+
+/**
+ * Endereço de uma página da Pokédex ("/pokedex/25", "/pokedex/golpe/33") aberta no jogo <game>: acrescenta
+ * "?game=". Outros endereços, jogo desconhecido ou um "?game=" já escrito ficam como estão.
+ */
+export function dexHref(href: string, game?: string | null): string {
+  if (!isDexGame(game) || !href.startsWith('/pokedex/')) return href
+  const hashAt = href.indexOf('#')
+  const hash = hashAt >= 0 ? href.slice(hashAt) : ''
+  const rest = hashAt >= 0 ? href.slice(0, hashAt) : href
+  const queryAt = rest.indexOf('?')
+  const path = queryAt >= 0 ? rest.slice(0, queryAt) : rest
+  const query = new URLSearchParams(queryAt >= 0 ? rest.slice(queryAt + 1) : '')
+  if (query.has('game')) return href
+  query.set('game', game)
+  return `${path}?${query}${hash}`
+}
+
+/**
+ * Jogo da página da Pokédex: o "?game=" do endereço (link de um guia, por exemplo) vem antes do jogo salvo,
+ * sem trocá-lo. Escolher outro jogo no seletor salva a preferência (e atualiza o "?game=", se houver).
+ */
+export function useDexGame(): [string, (key: string) => void] {
+  const [params, setParams] = useSearchParams()
+  const fromUrl = params.get('game')
+  const [saved, setSaved] = useState(() => {
+    const key = loadDexGame()
+    return isDexGame(key) ? key : 'frlg'
+  })
+  const choose = (key: string) => {
+    setSaved(key)
+    saveDexGame(key)
+    if (params.has('game'))
+      setParams(
+        (p) => {
+          const n = new URLSearchParams(p)
+          n.set('game', key)
+          return n
+        },
+        { replace: true },
+      )
+  }
+  return [isDexGame(fromUrl) ? fromUrl : saved, choose]
 }
 
 // ---- Carregamento ----

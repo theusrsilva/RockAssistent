@@ -65,7 +65,7 @@ export function GeneralTab({ detail, game }: { detail: SpeciesDetail; game: stri
       )}
 
       <Section title={t('dex.general.evolution')}>
-        <EvolutionChain chain={detail.evolutionChain} current={detail.id} />
+        <EvolutionChain chain={detail.evolutionChain} current={detail.id} game={game} />
       </Section>
 
       <Section title={t('dex.general.damageTaken')}>

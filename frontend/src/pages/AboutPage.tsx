@@ -46,7 +46,7 @@ export default function AboutPage() {
         <div className="flex items-center gap-3.5">
           <Logo size={48} />
           <div className="flex-1">
-            <div className="font-display text-[22px] font-bold">{t('app.name')}</div>
+            <div className="font-logo text-[22px] font-bold">{t('app.name')}</div>
             <div className="text-[13px] text-muted">
               {t('about.version', { version: info?.version.split('+')[0] ?? '…' })}
               {os && ` · ${os}`} · AGPL-3.0

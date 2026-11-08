@@ -31,7 +31,7 @@ export default function LoginPage({ onLogin }: { onLogin: () => Promise<void> })
       <div className="flex w-full max-w-[380px] flex-col gap-4">
         <div className="flex flex-col items-center gap-2.5 text-center">
           <Logo size={56} />
-          <h1 className="font-display text-[26px] font-bold">{t('app.name')}</h1>
+          <h1 className="font-logo text-[26px] font-bold">{t('app.name')}</h1>
           <p className="text-sm text-muted">{t('login.intro')}</p>
         </div>
         <form className="flex flex-col gap-3 rounded-xl border border-line bg-surface p-5" onSubmit={(e) => void submit(e)}>

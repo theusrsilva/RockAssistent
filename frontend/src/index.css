@@ -3,7 +3,6 @@
 @import '@fontsource/nunito/600.css';
 @import '@fontsource/nunito/700.css';
 @import '@fontsource/nunito/800.css';
-@import '@fontsource/pixelify-sans/600.css';
 @import '@fontsource/pixelify-sans/700.css';
 @import '@fontsource/jetbrains-mono/400.css';
 
@@ -18,7 +17,7 @@
   src: url('./assets/fonts/material-symbols-rounded.woff2') format('woff2');
 }
 
-/* Visual "Caixa do PC": tons quentes, títulos em fonte pixel. Cores do tema claro e do escuro. */
+/* Visual "Caixa do PC": tons quentes, fonte pixel só no logo. Cores do tema claro e do escuro. */
 :root {
   --tr-bg: #f3ebe0;
   --tr-surface: #fbf7f1;
@@ -90,7 +89,9 @@
 
 @theme inline {
   --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Pixelify Sans', 'Nunito', sans-serif;
+  /* Títulos na mesma fonte do resto (legível), com peso forte. A pixel fica só no logo. */
+  --font-display: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+  --font-logo: 'Pixelify Sans', 'Nunito', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --color-bg: var(--tr-bg);
@@ -167,8 +168,8 @@ body {
   line-height: 1.45;
 }
 
-/* A fonte pixel dos títulos (Pixelify Sans) não tem o glifo da ligadura "fi": sem ligaduras nela. */
-.font-display {
+/* A fonte pixel do logo (Pixelify Sans) não tem o glifo da ligadura "fi": sem ligaduras nela. */
+.font-logo {
   font-variant-ligatures: none;
 }
 

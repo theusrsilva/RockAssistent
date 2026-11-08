@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Badge } from '../../../components/ui'
-import { useApiGet } from '../../../lib/dex'
+import { dexHref, useApiGet } from '../../../lib/dex'
 import { TypeBadge } from '../../dex/TypeBadge'
 import { BlockState, BlockTable, cell, type BlockProps } from './common'
 
@@ -40,7 +40,7 @@ export default function TmTable({ args: [game] }: BlockProps) {
                 )}
               </td>
               <td className={cell}>
-                <Link to={`/pokedex/golpe/${m.moveId}`} className="font-semibold whitespace-nowrap hover:text-accent">
+                <Link to={dexHref(`/pokedex/golpe/${m.moveId}`, game)} className="font-semibold whitespace-nowrap hover:text-accent">
                   {m.moveName}
                 </Link>
               </td>
