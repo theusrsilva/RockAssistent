@@ -29,8 +29,6 @@ public sealed class GameDataStore
     private readonly Dictionary<string, IReadOnlyList<GameArea>> _areas = [];
     private readonly Dictionary<string, IReadOnlyList<OwnEncounter>> _encounters = [];
     private readonly Dictionary<Region, MapGraph> _maps = [];
-    // TODO(mapas): mapas no formato antigo, até as 11 regiões passarem para o novo.
-    private readonly Dictionary<Region, LegacyMapGraph> _legacyMaps = [];
     private IReadOnlyList<VgcTeam> _vgcTeams = [];
 
     public GameDataStore(DexService dex, ILogger<GameDataStore> logger)
@@ -66,7 +64,6 @@ public sealed class GameDataStore
                 case DataFile<GameArea> f: _areas[key!] = f.Items; break;
                 case DataFile<OwnEncounter> f: _encounters[key!] = f.Items; break;
                 case MapGraph m: _maps[ParseRegion(key!)] = m; break;
-                case LegacyMapGraph m: _legacyMaps[ParseRegion(key!)] = m; break;
                 case DataFile<VgcTeam> f: _vgcTeams = f.Items; break;
                 case VgcRegulation r: VgcRegulation = r; break;
                 default: errors.Add($"{path}: pasta desconhecida ({folder})"); break;
@@ -114,11 +111,8 @@ public sealed class GameDataStore
             .ToList();
     }
 
-    /// <summary>Mapa da região no formato metrô; nulo sem arquivo (ou com o arquivo ainda no formato antigo).</summary>
+    /// <summary>Mapa da região no formato metrô; nulo sem arquivo.</summary>
     public MapGraph? Map(Region region) => _maps.GetValueOrDefault(region);
-
-    /// <summary>TODO(mapas): mapa no formato antigo, até as 11 regiões passarem para o novo.</summary>
-    public LegacyMapGraph? LegacyMap(Region region) => _legacyMaps.GetValueOrDefault(region);
 
     /// <summary>Times sugeridos do VGC (<c>vgc/teams.json</c>).</summary>
     public IReadOnlyList<VgcTeam> VgcTeams => _vgcTeams;
@@ -130,8 +124,6 @@ public sealed class GameDataStore
         _bosses.Keys.Concat(_trainers.Keys).Concat(_areas.Keys).Concat(_encounters.Keys).Distinct();
 
     internal IEnumerable<MapGraph> Maps => _maps.Values;
-
-    internal IEnumerable<LegacyMapGraph> LegacyMaps => _legacyMaps.Values;
 
     /// <summary>Os JSON embutidos, pelo caminho relativo a <c>assets/data</c>.</summary>
     public static IReadOnlyDictionary<string, string> EmbeddedFiles()
@@ -173,7 +165,7 @@ public sealed class GameDataStore
         if (folder == "maps")
         {
             var region = ParseRegion(key!);
-            var fileRegion = result is MapGraph g ? g.Region : ((LegacyMapGraph)result).Region;
+            var fileRegion = ((MapGraph)result).Region;
             if (!string.Equals(fileRegion, region.ToString(), StringComparison.OrdinalIgnoreCase))
                 throw new InvalidDataException($"região do arquivo ({fileRegion}) diferente do nome");
         }
@@ -182,16 +174,8 @@ public sealed class GameDataStore
 
     private static T? Read<T>(string json) where T : class => JsonSerializer.Deserialize<T>(json, Json);
 
-    /// <summary>Mapa no formato novo; com "nodes" no lugar de "places", o antigo (TODO(mapas): tirar o antigo).</summary>
-    private static object? ReadMap(string json)
-    {
-        bool legacy;
-        using (var doc = JsonDocument.Parse(json))
-            legacy = doc.RootElement.ValueKind == JsonValueKind.Object && doc.RootElement.TryGetProperty("nodes", out _);
-        if (legacy)
-            return Read<LegacyMapFile>(json) is { } l ? new LegacyMapGraph(l.Region, l.Nodes, l.Edges) : null;
-        return Read<MapFile>(json) is { } m ? new MapGraph(m.Region, m.Grid, m.Terrain, m.Places, m.Routes, m.Unmapped) : null;
-    }
+    private static MapGraph? ReadMap(string json) =>
+        Read<MapFile>(json) is { } m ? new MapGraph(m.Region, m.Grid, m.Terrain, m.Places, m.Routes, m.Unmapped) : null;
 
     private static (string? Folder, string? Key) Split(string path)
     {

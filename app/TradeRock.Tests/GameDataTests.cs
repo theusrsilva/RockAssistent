@@ -570,32 +570,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
             Assert.True(locations.Contains(a.PokeApiLocationId!.Value), $"{game}/{a.Id}: location {a.PokeApiLocationId} não existe no dex");
 
         var region = GameVersions.ByKey(game).Region;
-        if (store.Map(region) is { } map)
-        {
-            // Toda área cai num lugar ou numa rota do jogo, ou está em unmapped com motivo.
-            var games = map.Places.Select(p => (p.Id, p.Games)).Concat(map.Routes.Select(r => (r.Id, r.Games))).ToDictionary(x => x.Id, x => x.Games);
-            var unmapped = map.Unmapped.Select(u => u.Id).ToHashSet();
-            foreach (var a in areas)
-            {
-                var target = a.MapNode ?? a.Id;
-                if (games.TryGetValue(target, out var g))
-                    Assert.True(g is null || g.Contains(game), $"{game}/{a.Id}: {target} não aparece no mapa do jogo");
-                else
-                    Assert.True(unmapped.Contains(a.Id), $"{game}/{a.Id}: {target} não está no mapa nem em unmapped");
-            }
-        }
-        else
-        {
-            // TODO(mapas): formato antigo, até as 11 regiões passarem para o metrô.
-            var legacy = store.LegacyMap(region);
-            Assert.NotNull(legacy);
-            var nodes = legacy.Nodes.ToDictionary(n => n.Id);
-            foreach (var a in areas.Where(a => a.MapNode is not null))
-            {
-                Assert.True(nodes.TryGetValue(a.MapNode!, out var n), $"{game}/{a.Id}: nó {a.MapNode} não existe");
-                Assert.True(n.Games is null || n.Games.Contains(game), $"{game}/{a.Id}: nó {a.MapNode} não é deste jogo");
-            }
-        }
+        var map = store.Map(region);
+        Assert.NotNull(map);
+        AssertAreasOnMap(game, areas, map);
 
         var bosses = store.Bosses(game);
         var ids = bosses.Select(b => b.Id).ToHashSet();
@@ -697,10 +674,38 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
     {
         var store = FromFiles(GameDataStore.EmbeddedFiles());
         foreach (var region in Enum.GetValues<Region>())
-            // TODO(mapas): no fim, só store.Map.
-            Assert.True(store.Map(region) is not null || store.LegacyMap(region) is not null, $"{region} sem mapa");
-        Assert.NotNull(store.Map(Region.Johto));
-        Assert.NotNull(store.Map(Region.Kanto));
+            Assert.True(store.Map(region) is not null, $"{region} sem mapa");
+    }
+
+    /// <summary>Os 22 jogos: cada um com o mapa da sua região e toda área ligada a um lugar/rota do jogo ou em unmapped.</summary>
+    [Fact]
+    public void Todo_jogo_tem_as_areas_no_mapa_da_regiao()
+    {
+        var store = FromFiles(GameDataStore.EmbeddedFiles());
+        Assert.Equal(22, GameVersions.All.Count);
+        foreach (var game in GameVersions.All)
+        {
+            var map = store.Map(game.Region);
+            Assert.True(map is not null, $"{game.Key}: região {game.Region} sem mapa");
+            var areas = store.Areas(game.Key);
+            Assert.True(areas.Count > 0, $"{game.Key}: sem áreas");
+            AssertAreasOnMap(game.Key, areas, map);
+        }
+    }
+
+    /// <summary>Toda área cai num lugar ou numa rota visível no jogo (map_node ?? id), ou está em unmapped com motivo.</summary>
+    private static void AssertAreasOnMap(string game, IReadOnlyList<GameArea> areas, MapGraph map)
+    {
+        var games = map.Places.Select(p => (p.Id, p.Games)).Concat(map.Routes.Select(r => (r.Id, r.Games))).ToDictionary(x => x.Id, x => x.Games);
+        var unmapped = map.Unmapped.Select(u => u.Id).ToHashSet();
+        foreach (var a in areas)
+        {
+            var target = a.MapNode ?? a.Id;
+            if (games.TryGetValue(target, out var g))
+                Assert.True(g is null || g.Contains(game), $"{game}/{a.Id}: {target} não aparece no mapa do jogo");
+            else
+                Assert.True(a.MapNode is null && unmapped.Contains(a.Id), $"{game}/{a.Id}: {target} não está no mapa nem em unmapped");
+        }
     }
 
     /// <summary>Mapa metrô mínimo de Kanto (Pallet e Viridian ligadas pela Route 1), com trechos trocáveis.</summary>
@@ -823,32 +828,17 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(["Mt. Moon"], MapLabels.Lines("place", "Mt. Moon"));
     }
 
-    // TODO(mapas): testes do formato antigo; saem com ele.
     [Fact]
-    public void Mapa_antigo_com_aresta_para_no_inexistente_falha()
+    public void Mapa_no_formato_antigo_falha()
     {
         var files = new Dictionary<string, string>
         {
             ["maps/hoenn.json"] = $$"""
                 { {{Source}}, "region": "hoenn", "nodes": [ { "id": "pallet", "name": "Pallet Town", "kind": "city",
-                  "x": 0, "y": 0, "games": null } ], "edges": [ { "from": "pallet", "to": "viridian" } ] }
+                  "x": 0, "y": 0, "games": null } ], "edges": [] }
                 """,
         };
-        var ex = Assert.Throws<InvalidDataException>(() => FromFiles(files));
-        Assert.Contains("viridian", ex.Message);
-    }
-
-    [Fact]
-    public void Mapas_antigos_sem_aresta_repetida()
-    {
-        var store = FromFiles(GameDataStore.EmbeddedFiles());
-        foreach (var region in Enum.GetValues<Region>())
-        {
-            if (store.LegacyMap(region) is not { } map)
-                continue;
-            var keys = map.Edges.Select(e => string.CompareOrdinal(e.From, e.To) < 0 ? (e.From, e.To) : (e.To, e.From)).ToList();
-            Assert.Equal(keys.Count, keys.Distinct().Count());
-        }
+        Assert.Throws<InvalidDataException>(() => FromFiles(files));
     }
 }
 

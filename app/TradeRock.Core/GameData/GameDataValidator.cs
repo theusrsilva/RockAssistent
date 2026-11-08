@@ -28,8 +28,6 @@ public static class GameDataValidator
         ShinyMethods(store.ShinyMethods, errors);
         foreach (var map in store.Maps)
             Map(store, map, errors);
-        foreach (var map in store.LegacyMaps)
-            LegacyMap(map, errors);
         foreach (var game in store.GameKeys.OrderBy(k => k))
             Game(store, GameVersions.ByKey(game), moveExists, errors);
         return errors;
@@ -233,25 +231,6 @@ public static class GameDataValidator
         return false;
     }
 
-    // TODO(mapas): validação do formato antigo; sai quando as 11 regiões estiverem no novo.
-    private static void LegacyMap(LegacyMapGraph map, List<string> errors)
-    {
-        var at = $"maps/{map.Region}";
-        foreach (var dup in Duplicates(map.Nodes.Select(n => n.Id)))
-            errors.Add($"{at}: nó repetido {dup}");
-        var ids = map.Nodes.Select(n => n.Id).ToHashSet();
-        foreach (var e in map.Edges)
-            foreach (var end in new[] { e.From, e.To }.Where(x => !ids.Contains(x)))
-                errors.Add($"{at}: aresta {e.From}->{e.To} aponta para o nó {end}, que não existe");
-        foreach (var n in map.Nodes)
-        {
-            if (n.X is < 0 or > 1 || n.Y is < 0 or > 1)
-                errors.Add($"{at}/{n.Id}: x e y vão de 0 a 1");
-            foreach (var g in (n.Games ?? []).Where(g => !IsGame(g)))
-                errors.Add($"{at}/{n.Id}: jogo desconhecido {g}");
-        }
-    }
-
     private static void Game(GameDataStore store, GameVersionGroup game, Func<string, bool>? moveExists, List<string> errors)
     {
         var key = game.Key;
@@ -260,7 +239,6 @@ public static class GameDataValidator
         var bossIds = bosses.Select(b => b.Id).ToHashSet();
         var areaIds = areas.Select(a => a.Id).ToHashSet();
         var map = store.Map(game.Region);
-        var legacy = store.LegacyMap(game.Region);
         var unmapped = map?.Unmapped.Select(u => u.Id).ToHashSet() ?? [];
 
         foreach (var dup in Duplicates(bosses.Select(b => b.Id)))
@@ -295,6 +273,8 @@ public static class GameDataValidator
             Party(at, t.Party, moveExists, errors);
         }
 
+        if (map is null && areas.Count > 0)
+            errors.Add($"areas/{key}: a região {game.Region} não tem mapa (maps/{game.Region.ToString().ToLowerInvariant()}.json)");
         foreach (var dup in Duplicates(areas.Select(a => a.Id)))
             errors.Add($"areas/{key}: id repetido {dup}");
         foreach (var a in areas)
@@ -318,15 +298,6 @@ public static class GameDataValidator
                 }
                 else if (games is not null && !games.Contains(key))
                     errors.Add($"{at}: {target} não aparece no mapa do {key} (games)");
-            }
-            else if (a.MapNode is { } node)
-            {
-                // TODO(mapas): ligação do formato antigo.
-                var n = legacy?.Nodes.FirstOrDefault(x => x.Id == node);
-                if (n is null)
-                    errors.Add($"{at}: nó {node} não existe no mapa {game.Region}");
-                else if (n.Games is { } games && !games.Contains(key))
-                    errors.Add($"{at}: nó {node} não é deste jogo");
             }
         }
 

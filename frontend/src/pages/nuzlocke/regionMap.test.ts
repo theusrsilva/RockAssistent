@@ -139,19 +139,36 @@ const camel = (value: unknown): unknown =>
     : value && typeof value === 'object'
       ? Object.fromEntries(Object.entries(value).map(([k, v]) => [k.replace(/_([a-z])/g, (_, c: string) => c.toUpperCase()), camel(v)]))
       : value
-// TODO(mapas): só os arquivos já no formato metrô ("places"); no fim, todos.
-const realMaps = readdirSync(mapsDir)
-  .filter((f) => f.endsWith('.json'))
-  .map((f) => camel(JSON.parse(readFileSync(new URL(f, mapsDir), 'utf8'))) as RegionMapData)
-  .filter((m) => 'places' in m)
+const realMaps = new Map(
+  readdirSync(mapsDir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => camel(JSON.parse(readFileSync(new URL(f, mapsDir), 'utf8'))) as RegionMapData)
+    .map((m) => [m.region, m] as const),
+)
+const areasDir = new URL('../../../../assets/data/areas/', import.meta.url)
+const realAreas = (game: string) =>
+  (camel(JSON.parse(readFileSync(new URL(`${game}.json`, areasDir), 'utf8'))) as { items: GameArea[] }).items
 
 describe('mapas embutidos', () => {
-  it('Johto e Kanto já estão no formato metrô', () => {
-    expect(realMaps.map((m) => m.region).sort()).toEqual(expect.arrayContaining(['johto', 'kanto']))
+  it('as 11 regiões estão no formato metrô', () => {
+    expect([...realMaps.keys()].sort()).toEqual([...new Set(GAME_VERSIONS.map((g) => g.region))].sort())
+    for (const map of realMaps.values()) expect(map.grid.cols).toBeGreaterThan(0)
   })
-  for (const map of realMaps)
-    for (const game of GAME_VERSIONS.filter((g) => g.region === map.region).map((g) => g.key))
-      it(`${map.region} no ${game}: nada sobreposto`, () => {
-        expect(overlaps(mapForGame(map, game))).toEqual([])
-      })
+  it('os 22 jogos', () => expect(GAME_VERSIONS).toHaveLength(22))
+  for (const { key: game, region } of GAME_VERSIONS) {
+    it(`${region} no ${game}: nada sobreposto`, () => {
+      const map = realMaps.get(region)
+      expect(map, `${region} sem mapa`).toBeDefined()
+      expect(overlaps(mapForGame(map!, game))).toEqual([])
+    })
+    it(`${region} no ${game}: toda área ligada a um lugar/rota ou em unmapped`, () => {
+      const map = mapForGame(realMaps.get(region)!, game)
+      const ids = new Set([...map.places.map((p) => p.id), ...map.routes.map((r) => r.id)])
+      const unmapped = new Set(map.unmapped.map((u) => u.id))
+      const areas = realAreas(game)
+      expect(areas.length).toBeGreaterThan(0)
+      const missing = areas.filter((a) => !ids.has(areaNodeId(a)) && (a.mapNode || !unmapped.has(a.id))).map((a) => `${a.id} → ${areaNodeId(a)}`)
+      expect(missing).toEqual([])
+    })
+  }
 })

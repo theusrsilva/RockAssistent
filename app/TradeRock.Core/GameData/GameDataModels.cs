@@ -183,15 +183,6 @@ public sealed record MapRoute(
 /// <summary>Área do jogo que fica fora do mapa (prédio sem lugar próprio, ilha de evento...), com o motivo.</summary>
 public sealed record MapUnmapped(string Id, string Reason);
 
-// TODO(mapas): formato antigo (nós x/y de 0 a 1 e arestas), aceito só até as 11 regiões passarem para o formato novo.
-// O controlador remove LegacyMapGraph, MapNode, MapEdge e LegacyMapFile no fim.
-public sealed record LegacyMapGraph(string Region, IReadOnlyList<MapNode> Nodes, IReadOnlyList<MapEdge> Edges);
-
-/// <summary>Nó do mapa antigo. X e Y de 0 a 1. <see cref="Games"/> nulo = todos os jogos da região.</summary>
-public sealed record MapNode(string Id, string Name, string Kind, double X, double Y, IReadOnlyList<string>? Games);
-
-public sealed record MapEdge(string From, string To);
-
 /// <summary>Formato de um arquivo de lista.</summary>
 internal sealed record DataFile<T>(IReadOnlyList<string> Source, IReadOnlyList<T> Items);
 
@@ -205,5 +196,3 @@ internal sealed record MapFile(
     IReadOnlyList<MapRoute> Routes,
     IReadOnlyList<MapUnmapped> Unmapped);
 
-// TODO(mapas): formato antigo; sai com o LegacyMapGraph.
-internal sealed record LegacyMapFile(IReadOnlyList<string> Source, string Region, IReadOnlyList<MapNode> Nodes, IReadOnlyList<MapEdge> Edges);

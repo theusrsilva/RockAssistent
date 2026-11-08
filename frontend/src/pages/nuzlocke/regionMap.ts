@@ -321,6 +321,3 @@ export function currentNodeId(areas: GameArea[], current: string | null): string
   const area = areas.find((a) => a.id === current)
   return area ? areaNodeId(area) : current
 }
-
-/** TODO(mapas): o mapa veio no formato antigo (nós e arestas)? Sai quando as 11 regiões estiverem no novo. */
-export const isRegionMap = (data: unknown): data is RegionMapData => typeof data === 'object' && data !== null && 'places' in data

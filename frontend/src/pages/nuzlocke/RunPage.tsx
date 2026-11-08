@@ -15,9 +15,7 @@ import { areaStates, formatRules, isFinished, nuzlockeErrorMessage, runStats, so
 import { CardTitle, monName, type Mutate } from './parts'
 import RegionMap from './RegionMap'
 import { StarterPicker, starterName, useStarters } from './StarterPicker'
-import type { MapGraph } from './legacyRegionMap'
-import LegacyRegionMap from './LegacyRegionMap'
-import { isRegionMap, type RegionMapData } from './regionMap'
+import type { RegionMapData } from './regionMap'
 import { gameVersionByKey } from '../../lib/gameVersions'
 
 type Tab = 'run' | 'graveyard' | 'stats'
@@ -56,7 +54,7 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
   const names = useMemo(() => new Map((speciesOptions ?? []).map((s) => [s.value, s.text])), [speciesOptions])
   const areasData = useApiGet<GameArea[]>(`/api/data/${run.gameKey}/areas`)
   const areas = useMemo(() => sortAreas(areasData.data ?? []), [areasData.data])
-  const mapData = useApiGet<RegionMapData | MapGraph>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
+  const mapData = useApiGet<RegionMapData>(`/api/data/maps/${gameVersionByKey(run.gameKey)?.region ?? 'kanto'}`)
   const states = useMemo(() => areaStates(view), [view])
   const areaName = useMemo(() => new Map(areas.map((a) => [a.id, a.name])), [areas])
   const starters = useStarters(run.gameKey)
@@ -176,15 +174,10 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
 
       {tab === 'run' && (
         <>
-          {mapData.data && (isRegionMap(mapData.data) ? mapData.data.places.length > 0 : mapData.data.nodes.length > 0) && (
+          {mapData.data && mapData.data.places.length > 0 && (
             <Card className="flex flex-col gap-2 p-3! sm:p-4!">
               <CardTitle icon="map">{t('nuzlocke.map.title')}</CardTitle>
-              {isRegionMap(mapData.data) ? (
-                <RegionMap map={mapData.data} game={run.gameKey} areas={areas} states={states} current={view.currentArea?.id ?? null} onSelect={selectArea} />
-              ) : (
-                // TODO(mapas): formato antigo, até as 11 regiões passarem para o metrô.
-                <LegacyRegionMap graph={mapData.data} game={run.gameKey} areas={areas} states={states} current={view.currentArea?.id ?? null} onSelect={selectArea} />
-              )}
+              <RegionMap map={mapData.data} game={run.gameKey} areas={areas} states={states} current={view.currentArea?.id ?? null} onSelect={selectArea} />
             </Card>
           )}
           <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
