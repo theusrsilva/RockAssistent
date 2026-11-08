@@ -1,1071 +1,180 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Galar",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+    "https://bulbapedia.bulbagarden.net/wiki/Isle_of_Armor",
+    "https://bulbapedia.bulbagarden.net/wiki/Crown_Tundra",
+    "Mapa metrô feito à mão pela geografia do Town Map de Sword/Shield: Galar à esquerda (Postwick ao sul, Wyndon ao norte) com a Wild Area como zona grande no meio, a Isle of Armor (nordeste) e a Crown Tundra (sudeste) à parte. Rotas como linhas horizontais e verticais; ligações sem número (link-*) são caminhos sem área."
   ],
   "region": "galar",
-  "nodes": [
-    {
-      "id": "postwick",
-      "name": "Postwick",
-      "kind": "city",
-      "x": 0.54,
-      "y": 0.72,
-      "games": null
-    },
-    {
-      "id": "slumbering-weald",
-      "name": "Slumbering Weald",
-      "kind": "dungeon",
-      "x": 0.5,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "route-1",
-      "name": "Route 1",
-      "kind": "route",
-      "x": 0.58,
-      "y": 0.68,
-      "games": null
-    },
-    {
-      "id": "wedgehurst",
-      "name": "Wedgehurst",
-      "kind": "city",
-      "x": 0.54,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "route-2",
-      "name": "Route 2",
-      "kind": "route",
-      "x": 0.5,
-      "y": 0.651,
-      "games": null
-    },
-    {
-      "id": "meetup-spot",
-      "name": "Meetup Spot",
-      "kind": "route",
-      "x": 0.56,
-      "y": 0.46,
-      "games": null
-    },
-    {
-      "id": "rolling-fields",
-      "name": "Rolling Fields",
-      "kind": "route",
-      "x": 0.596,
-      "y": 0.456,
-      "games": null
-    },
-    {
-      "id": "dappled-grove",
-      "name": "Dappled Grove",
-      "kind": "route",
-      "x": 0.665,
-      "y": 0.507,
-      "games": null
-    },
-    {
-      "id": "watchtower-ruins",
-      "name": "Watchtower Ruins",
-      "kind": "route",
-      "x": 0.691,
-      "y": 0.531,
-      "games": null
-    },
-    {
-      "id": "east-lake-axewell",
-      "name": "East Lake Axewell",
-      "kind": "route",
-      "x": 0.608,
-      "y": 0.532,
-      "games": null
-    },
-    {
-      "id": "west-lake-axewell",
-      "name": "West Lake Axewell",
-      "kind": "route",
-      "x": 0.618,
-      "y": 0.569,
-      "games": null
-    },
-    {
-      "id": "axews-eye",
-      "name": "Axews Eye",
-      "kind": "route",
-      "x": 0.527,
-      "y": 0.563,
-      "games": null
-    },
-    {
-      "id": "south-lake-miloch",
-      "name": "South Lake Miloch",
-      "kind": "route",
-      "x": 0.506,
-      "y": 0.592,
-      "games": null
-    },
-    {
-      "id": "giants-seat",
-      "name": "Giants Seat",
-      "kind": "route",
-      "x": 0.436,
-      "y": 0.604,
-      "games": null
-    },
-    {
-      "id": "north-lake-miloch",
-      "name": "North Lake Miloch",
-      "kind": "route",
-      "x": 0.405,
-      "y": 0.562,
-      "games": null
-    },
-    {
-      "id": "motostoke-riverbank",
-      "name": "Motostoke Riverbank",
-      "kind": "route",
-      "x": 0.445,
-      "y": 0.499,
-      "games": null
-    },
-    {
-      "id": "bridge-field",
-      "name": "Bridge Field",
-      "kind": "route",
-      "x": 0.41,
-      "y": 0.506,
-      "games": null
-    },
-    {
-      "id": "stony-wilderness",
-      "name": "Stony Wilderness",
-      "kind": "route",
-      "x": 0.436,
-      "y": 0.452,
-      "games": null
-    },
-    {
-      "id": "dusty-bowl",
-      "name": "Dusty Bowl",
-      "kind": "route",
-      "x": 0.406,
-      "y": 0.388,
-      "games": null
-    },
-    {
-      "id": "giants-mirror",
-      "name": "Giants Mirror",
-      "kind": "route",
-      "x": 0.464,
-      "y": 0.352,
-      "games": null
-    },
-    {
-      "id": "hammerlocke-hills",
-      "name": "Hammerlocke Hills",
-      "kind": "route",
-      "x": 0.461,
-      "y": 0.284,
-      "games": null
-    },
-    {
-      "id": "giants-cap",
-      "name": "Giants Cap",
-      "kind": "route",
-      "x": 0.381,
-      "y": 0.306,
-      "games": null
-    },
-    {
-      "id": "lake-of-outrage",
-      "name": "Lake Of Outrage",
-      "kind": "route",
-      "x": 0.34,
-      "y": 0.34,
-      "games": null
-    },
-    {
-      "id": "motostoke",
-      "name": "Motostoke",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.5,
-      "games": null
-    },
-    {
-      "id": "route-3",
-      "name": "Route 3",
-      "kind": "route",
-      "x": 0.379,
-      "y": 0.488,
-      "games": null
-    },
-    {
-      "id": "galar-mine",
-      "name": "Galar Mine",
-      "kind": "dungeon",
-      "x": 0.306,
-      "y": 0.434,
-      "games": null
-    },
-    {
-      "id": "route-4",
-      "name": "Route 4",
-      "kind": "route",
-      "x": 0.272,
-      "y": 0.468,
-      "games": null
-    },
-    {
-      "id": "turffield",
-      "name": "Turffield",
-      "kind": "city",
-      "x": 0.18,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "route-5",
-      "name": "Route 5",
-      "kind": "route",
-      "x": 0.487,
-      "y": 0.422,
-      "games": null
-    },
-    {
-      "id": "hulbury",
-      "name": "Hulbury",
-      "kind": "city",
-      "x": 0.82,
-      "y": 0.44,
-      "games": null
-    },
-    {
-      "id": "galar-mine-2",
-      "name": "Galar Mine No. 2",
-      "kind": "dungeon",
-      "x": 0.713,
-      "y": 0.387,
-      "games": null
-    },
-    {
-      "id": "motostoke-outskirts",
-      "name": "Motostoke Outskirts",
-      "kind": "route",
-      "x": 0.607,
-      "y": 0.333,
-      "games": null
-    },
-    {
-      "id": "hammerlocke",
-      "name": "Hammerlocke",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "route-6",
-      "name": "Route 6",
-      "kind": "route",
-      "x": 0.367,
-      "y": 0.241,
-      "games": null
-    },
-    {
-      "id": "stow-on-side",
-      "name": "Stow-on-Side",
-      "kind": "city",
-      "x": 0.28,
-      "y": 0.28,
-      "games": null
-    },
-    {
-      "id": "glimwood-tangle",
-      "name": "Glimwood Tangle",
-      "kind": "dungeon",
-      "x": 0.228,
-      "y": 0.207,
-      "games": null
-    },
-    {
-      "id": "ballonlea",
-      "name": "Ballonlea",
-      "kind": "city",
-      "x": 0.2,
-      "y": 0.16,
-      "games": null
-    },
-    {
-      "id": "route-7",
-      "name": "Route 7",
-      "kind": "route",
-      "x": 0.531,
-      "y": 0.243,
-      "games": null
-    },
-    {
-      "id": "route-8",
-      "name": "Route 8",
-      "kind": "route",
-      "x": 0.609,
-      "y": 0.157,
-      "games": null
-    },
-    {
-      "id": "circhester",
-      "name": "Circhester",
-      "kind": "city",
-      "x": 0.64,
-      "y": 0.12,
-      "games": null
-    },
-    {
-      "id": "route-9",
-      "name": "Route 9",
-      "kind": "route",
-      "x": 0.71,
-      "y": 0.18,
-      "games": null
-    },
-    {
-      "id": "route-9-tunnel",
-      "name": "Route 9 Tunnel",
-      "kind": "dungeon",
-      "x": 0.75,
-      "y": 0.14,
-      "games": null
-    },
-    {
-      "id": "spikemuth",
-      "name": "Spikemuth",
-      "kind": "city",
-      "x": 0.86,
-      "y": 0.16,
-      "games": null
-    },
-    {
-      "id": "route-10",
-      "name": "Route 10",
-      "kind": "route",
-      "x": 0.5,
-      "y": 0.15,
-      "games": null
-    },
-    {
-      "id": "wyndon",
-      "name": "Wyndon",
-      "kind": "city",
-      "x": 0.5,
-      "y": 0.02,
-      "games": null
-    },
-    {
-      "id": "armor-station",
-      "name": "Armor Station",
-      "kind": "route",
-      "x": 0.96,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "master-dojo",
-      "name": "Master Dojo",
-      "kind": "building",
-      "x": 0.92,
-      "y": 0.64,
-      "games": null
-    },
-    {
-      "id": "warm-up-tunnel",
-      "name": "Warm-Up Tunnel",
-      "kind": "dungeon",
-      "x": 0.949,
-      "y": 0.709,
-      "games": null
-    },
-    {
-      "id": "forest-of-focus",
-      "name": "Forest of Focus",
-      "kind": "route",
-      "x": 0.78,
-      "y": 0.688,
-      "games": null
-    },
-    {
-      "id": "fields-of-honor",
-      "name": "Fields Of Honor",
-      "kind": "route",
-      "x": 0.87,
-      "y": 0.688,
-      "games": null
-    },
-    {
-      "id": "soothing-wetlands",
-      "name": "Soothing Wetlands",
-      "kind": "route",
-      "x": 0.833,
-      "y": 0.724,
-      "games": null
-    },
-    {
-      "id": "challenge-beach",
-      "name": "Challenge Beach",
-      "kind": "route",
-      "x": 0.904,
-      "y": 0.736,
-      "games": null
-    },
-    {
-      "id": "brawlers-cave",
-      "name": "Brawlers Cave",
-      "kind": "dungeon",
-      "x": 0.869,
-      "y": 0.804,
-      "games": null
-    },
-    {
-      "id": "challenge-road",
-      "name": "Challenge Road",
-      "kind": "route",
-      "x": 0.849,
-      "y": 0.834,
-      "games": null
-    },
-    {
-      "id": "courageous-cavern",
-      "name": "Courageous Cavern",
-      "kind": "dungeon",
-      "x": 0.89,
-      "y": 0.908,
-      "games": null
-    },
-    {
-      "id": "loop-lagoon",
-      "name": "Loop Lagoon",
-      "kind": "route",
-      "x": 0.869,
-      "y": 0.947,
-      "games": null
-    },
-    {
-      "id": "training-lowlands",
-      "name": "Training Lowlands",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.742,
-      "games": null
-    },
-    {
-      "id": "workout-sea",
-      "name": "Workout Sea",
-      "kind": "sea",
-      "x": 0.783,
-      "y": 0.908,
-      "games": null
-    },
-    {
-      "id": "stepping-stone-sea",
-      "name": "Stepping Stone Sea",
-      "kind": "sea",
-      "x": 0.818,
-      "y": 0.908,
-      "games": null
-    },
-    {
-      "id": "insular-sea",
-      "name": "Insular Sea",
-      "kind": "sea",
-      "x": 0.775,
-      "y": 0.846,
-      "games": null
-    },
-    {
-      "id": "honeycalm-sea",
-      "name": "Honeycalm Sea",
-      "kind": "sea",
-      "x": 0.705,
-      "y": 0.889,
-      "games": null
-    },
-    {
-      "id": "isle-of-armor-caves",
-      "name": "Isle of Armor Caves",
-      "kind": "dungeon",
-      "x": 0.868,
-      "y": 0.734,
-      "games": null
-    },
-    {
-      "id": "towers-of-two-fists",
-      "name": "Tower of Darkness / Tower of Waters",
-      "kind": "building",
-      "x": 0.893,
-      "y": 0.832,
-      "games": null
-    },
-    {
-      "id": "honeycalm-island",
-      "name": "Honeycalm Island",
-      "kind": "route",
-      "x": 0.691,
-      "y": 0.85,
-      "games": null
-    },
-    {
-      "id": "potbottom-desert",
-      "name": "Potbottom Desert",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.706,
-      "games": null
-    },
-    {
-      "id": "crown-tundra-station",
-      "name": "Crown Tundra Station",
-      "kind": "route",
-      "x": 0.34,
-      "y": 0.82,
-      "games": null
-    },
-    {
-      "id": "max-lair",
-      "name": "Max Lair",
-      "kind": "dungeon",
-      "x": 0.32,
-      "y": 0.98,
-      "games": null
-    },
-    {
-      "id": "freezington",
-      "name": "Freezington",
-      "kind": "city",
-      "x": 0.18,
-      "y": 0.88,
-      "games": null
-    },
-    {
-      "id": "frostpoint-field",
-      "name": "Frostpoint Field",
-      "kind": "route",
-      "x": 0.235,
-      "y": 0.864,
-      "games": null
-    },
-    {
-      "id": "slippery-slope",
-      "name": "Slippery Slope",
-      "kind": "route",
-      "x": 0.248,
-      "y": 0.81,
-      "games": null
-    },
-    {
-      "id": "giants-bed",
-      "name": "Giant's Bed",
-      "kind": "route",
-      "x": 0.24,
-      "y": 0.94,
-      "games": null
-    },
-    {
-      "id": "giants-foot",
-      "name": "Giant's Foot",
-      "kind": "route",
-      "x": 0.189,
-      "y": 0.978,
-      "games": null
-    },
-    {
-      "id": "old-cemetery",
-      "name": "Old Cemetery",
-      "kind": "route",
-      "x": 0.193,
-      "y": 0.932,
-      "games": null
-    },
-    {
-      "id": "snowslide-slope",
-      "name": "Snowslide Slope",
-      "kind": "route",
-      "x": 0.101,
-      "y": 0.874,
-      "games": null
-    },
-    {
-      "id": "tunnel-to-the-top",
-      "name": "Tunnel to the Top",
-      "kind": "dungeon",
-      "x": 0.078,
-      "y": 0.902,
-      "games": null
-    },
-    {
-      "id": "path-to-the-peak",
-      "name": "Path to the Peak",
-      "kind": "route",
-      "x": 0.019,
-      "y": 0.837,
-      "games": null
-    },
-    {
-      "id": "crown-shrine",
-      "name": "Crown Shrine",
-      "kind": "building",
-      "x": 0.06,
-      "y": 0.8,
-      "games": null
-    },
-    {
-      "id": "ballimere-lake",
-      "name": "Ballimere Lake",
-      "kind": "route",
-      "x": 0.46,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "lakeside-cave",
-      "name": "Lakeside Cave",
-      "kind": "dungeon",
-      "x": 0.42,
-      "y": 0.96,
-      "games": null
-    },
-    {
-      "id": "dyna-tree-hill",
-      "name": "Dyna Tree Hill",
-      "kind": "route",
-      "x": 0.56,
-      "y": 0.96,
-      "games": null
-    },
-    {
-      "id": "rock-peak-ruins",
-      "name": "Rock Peak Ruins",
-      "kind": "dungeon",
-      "x": 0.282,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "iceberg-ruins",
-      "name": "Iceberg Ruins",
-      "kind": "dungeon",
-      "x": 0.11,
-      "y": 0.918,
-      "games": null
-    },
-    {
-      "id": "iron-ruins",
-      "name": "Iron Ruins",
-      "kind": "dungeon",
-      "x": 0.256,
-      "y": 0.894,
-      "games": null
-    },
-    {
-      "id": "split-decision-ruins",
-      "name": "Split-Decision Ruins",
-      "kind": "dungeon",
-      "x": 0.249,
-      "y": 0.99,
-      "games": null
-    },
-    {
-      "id": "frigid-sea",
-      "name": "Frigid Sea",
-      "kind": "sea",
-      "x": 0.04,
-      "y": 0.98,
-      "games": null
-    },
-    {
-      "id": "roaring-sea-caves",
-      "name": "Roaring-Sea Caves",
-      "kind": "dungeon",
-      "x": 0.091,
-      "y": 0.988,
-      "games": null
-    },
-    {
-      "id": "three-point-pass",
-      "name": "Three-Point Pass",
-      "kind": "route",
-      "x": 0.286,
-      "y": 0.99,
-      "games": null
-    }
+  "grid": {"cols": 50, "rows": 33},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [50, 0], [50, 33], [0, 33]]},
+    {"kind": "land", "polygon": [[0.0, 1.3], [0.7, 0.6], [25.7, 0.6], [26.4, 1.3], [26.4, 28.7], [25.7, 29.4], [0.7, 29.4], [0.0, 28.7]]},
+    {"kind": "land", "polygon": [[30.8, 1.9], [31.5, 1.2], [43.7, 1.2], [44.4, 1.9], [44.4, 11.7], [43.7, 12.4], [34.3, 12.4], [33.6, 11.7], [33.6, 10.3], [32.9, 9.6], [31.5, 9.6], [30.8, 8.9]]},
+    {"kind": "land", "polygon": [[31, 13.4], [33.2, 13.4], [33.2, 14.6], [31, 14.6]]},
+    {"kind": "land", "polygon": [[28.8, 15.5], [29.5, 14.8], [44.3, 14.8], [45.0, 15.5], [45.0, 22.9], [45.7, 23.6], [47.7, 23.6], [48.4, 24.3], [48.4, 31.5], [47.7, 32.2], [29.5, 32.2], [28.8, 31.5]]},
+    {"kind": "sand", "polygon": [[3.6, 12.6], [4.3, 11.9], [18.9, 11.9], [19.6, 12.6], [19.6, 21.9], [18.9, 22.6], [4.3, 22.6], [3.6, 21.9]]},
+    {"kind": "mountain", "polygon": [[11.8, 4.1], [12.5, 3.4], [13.5, 3.4], [14.2, 4.1], [14.2, 5.7], [13.5, 6.4], [12.5, 6.4], [11.8, 5.7]]},
+    {"kind": "sand", "polygon": [[30.9, 7.9], [31.6, 7.2], [32.5, 7.2], [33.2, 7.9], [33.2, 8.7], [32.5, 9.4], [31.6, 9.4], [30.9, 8.7]]},
+    {"kind": "mountain", "polygon": [[28.9, 15.7], [29.6, 15.0], [34.9, 15.0], [35.6, 15.7], [35.6, 19.7], [34.9, 20.4], [29.6, 20.4], [28.9, 19.7]]}
   ],
-  "edges": [
-    {
-      "from": "postwick",
-      "to": "slumbering-weald"
-    },
-    {
-      "from": "postwick",
-      "to": "route-1"
-    },
-    {
-      "from": "route-1",
-      "to": "wedgehurst"
-    },
-    {
-      "from": "wedgehurst",
-      "to": "route-2"
-    },
-    {
-      "from": "wedgehurst",
-      "to": "meetup-spot"
-    },
-    {
-      "from": "meetup-spot",
-      "to": "motostoke"
-    },
-    {
-      "from": "meetup-spot",
-      "to": "rolling-fields"
-    },
-    {
-      "from": "rolling-fields",
-      "to": "dappled-grove"
-    },
-    {
-      "from": "dappled-grove",
-      "to": "watchtower-ruins"
-    },
-    {
-      "from": "watchtower-ruins",
-      "to": "west-lake-axewell"
-    },
-    {
-      "from": "west-lake-axewell",
-      "to": "east-lake-axewell"
-    },
-    {
-      "from": "east-lake-axewell",
-      "to": "axews-eye"
-    },
-    {
-      "from": "axews-eye",
-      "to": "south-lake-miloch"
-    },
-    {
-      "from": "south-lake-miloch",
-      "to": "giants-seat"
-    },
-    {
-      "from": "giants-seat",
-      "to": "north-lake-miloch"
-    },
-    {
-      "from": "north-lake-miloch",
-      "to": "motostoke-riverbank"
-    },
-    {
-      "from": "motostoke-riverbank",
-      "to": "bridge-field"
-    },
-    {
-      "from": "rolling-fields",
-      "to": "east-lake-axewell"
-    },
-    {
-      "from": "north-lake-miloch",
-      "to": "bridge-field"
-    },
-    {
-      "from": "bridge-field",
-      "to": "stony-wilderness"
-    },
-    {
-      "from": "stony-wilderness",
-      "to": "dusty-bowl"
-    },
-    {
-      "from": "dusty-bowl",
-      "to": "giants-mirror"
-    },
-    {
-      "from": "giants-mirror",
-      "to": "hammerlocke-hills"
-    },
-    {
-      "from": "hammerlocke-hills",
-      "to": "hammerlocke"
-    },
-    {
-      "from": "dusty-bowl",
-      "to": "giants-cap"
-    },
-    {
-      "from": "giants-cap",
-      "to": "lake-of-outrage"
-    },
-    {
-      "from": "giants-cap",
-      "to": "hammerlocke-hills"
-    },
-    {
-      "from": "motostoke",
-      "to": "motostoke-riverbank"
-    },
-    {
-      "from": "motostoke",
-      "to": "route-3"
-    },
-    {
-      "from": "route-3",
-      "to": "galar-mine"
-    },
-    {
-      "from": "galar-mine",
-      "to": "route-4"
-    },
-    {
-      "from": "route-4",
-      "to": "turffield"
-    },
-    {
-      "from": "turffield",
-      "to": "route-5"
-    },
-    {
-      "from": "route-5",
-      "to": "hulbury"
-    },
-    {
-      "from": "hulbury",
-      "to": "galar-mine-2"
-    },
-    {
-      "from": "galar-mine-2",
-      "to": "motostoke-outskirts"
-    },
-    {
-      "from": "motostoke-outskirts",
-      "to": "hammerlocke"
-    },
-    {
-      "from": "hammerlocke",
-      "to": "route-6"
-    },
-    {
-      "from": "route-6",
-      "to": "stow-on-side"
-    },
-    {
-      "from": "stow-on-side",
-      "to": "glimwood-tangle"
-    },
-    {
-      "from": "glimwood-tangle",
-      "to": "ballonlea"
-    },
-    {
-      "from": "hammerlocke",
-      "to": "route-7"
-    },
-    {
-      "from": "route-7",
-      "to": "route-8"
-    },
-    {
-      "from": "route-8",
-      "to": "circhester"
-    },
-    {
-      "from": "circhester",
-      "to": "route-9"
-    },
-    {
-      "from": "route-9",
-      "to": "spikemuth"
-    },
-    {
-      "from": "route-9",
-      "to": "route-9-tunnel"
-    },
-    {
-      "from": "hammerlocke",
-      "to": "route-10"
-    },
-    {
-      "from": "route-10",
-      "to": "wyndon"
-    },
-    {
-      "from": "wedgehurst",
-      "to": "armor-station"
-    },
-    {
-      "from": "armor-station",
-      "to": "fields-of-honor"
-    },
-    {
-      "from": "fields-of-honor",
-      "to": "soothing-wetlands"
-    },
-    {
-      "from": "soothing-wetlands",
-      "to": "forest-of-focus"
-    },
-    {
-      "from": "fields-of-honor",
-      "to": "master-dojo"
-    },
-    {
-      "from": "fields-of-honor",
-      "to": "challenge-beach"
-    },
-    {
-      "from": "challenge-beach",
-      "to": "brawlers-cave"
-    },
-    {
-      "from": "brawlers-cave",
-      "to": "challenge-road"
-    },
-    {
-      "from": "challenge-road",
-      "to": "courageous-cavern"
-    },
-    {
-      "from": "courageous-cavern",
-      "to": "loop-lagoon"
-    },
-    {
-      "from": "challenge-beach",
-      "to": "training-lowlands"
-    },
-    {
-      "from": "training-lowlands",
-      "to": "warm-up-tunnel"
-    },
-    {
-      "from": "training-lowlands",
-      "to": "potbottom-desert"
-    },
-    {
-      "from": "loop-lagoon",
-      "to": "workout-sea"
-    },
-    {
-      "from": "workout-sea",
-      "to": "stepping-stone-sea"
-    },
-    {
-      "from": "stepping-stone-sea",
-      "to": "insular-sea"
-    },
-    {
-      "from": "insular-sea",
-      "to": "honeycalm-sea"
-    },
-    {
-      "from": "honeycalm-sea",
-      "to": "honeycalm-island"
-    },
-    {
-      "from": "challenge-road",
-      "to": "towers-of-two-fists"
-    },
-    {
-      "from": "challenge-beach",
-      "to": "isle-of-armor-caves"
-    },
-    {
-      "from": "wedgehurst",
-      "to": "crown-tundra-station"
-    },
-    {
-      "from": "crown-tundra-station",
-      "to": "slippery-slope"
-    },
-    {
-      "from": "slippery-slope",
-      "to": "freezington"
-    },
-    {
-      "from": "freezington",
-      "to": "frostpoint-field"
-    },
-    {
-      "from": "frostpoint-field",
-      "to": "giants-bed"
-    },
-    {
-      "from": "giants-bed",
-      "to": "old-cemetery"
-    },
-    {
-      "from": "old-cemetery",
-      "to": "snowslide-slope"
-    },
-    {
-      "from": "snowslide-slope",
-      "to": "tunnel-to-the-top"
-    },
-    {
-      "from": "tunnel-to-the-top",
-      "to": "path-to-the-peak"
-    },
-    {
-      "from": "path-to-the-peak",
-      "to": "crown-shrine"
-    },
-    {
-      "from": "giants-bed",
-      "to": "giants-foot"
-    },
-    {
-      "from": "giants-foot",
-      "to": "roaring-sea-caves"
-    },
-    {
-      "from": "roaring-sea-caves",
-      "to": "frigid-sea"
-    },
-    {
-      "from": "frigid-sea",
-      "to": "three-point-pass"
-    },
-    {
-      "from": "three-point-pass",
-      "to": "ballimere-lake"
-    },
-    {
-      "from": "ballimere-lake",
-      "to": "lakeside-cave"
-    },
-    {
-      "from": "ballimere-lake",
-      "to": "dyna-tree-hill"
-    },
-    {
-      "from": "giants-bed",
-      "to": "max-lair"
-    },
-    {
-      "from": "giants-bed",
-      "to": "rock-peak-ruins"
-    },
-    {
-      "from": "snowslide-slope",
-      "to": "iceberg-ruins"
-    },
-    {
-      "from": "frostpoint-field",
-      "to": "iron-ruins"
-    },
-    {
-      "from": "three-point-pass",
-      "to": "split-decision-ruins"
-    }
-  ]
+  "places": [
+    {"id": "wyndon", "name": "Wyndon", "kind": "city", "x": 13, "y": 2, "label": "e", "games": null},
+    {"id": "circhester", "name": "Circhester", "kind": "city", "x": 18, "y": 4, "label": "w", "games": null},
+    {"id": "route-9-tunnel", "name": "Route 9 Tunnel", "kind": "place", "x": 22, "y": 6, "label": "e", "games": null},
+    {"id": "spikemuth", "name": "Spikemuth", "kind": "city", "x": 22, "y": 9, "label": "e", "games": null},
+    {"id": "hammerlocke", "name": "Hammerlocke", "kind": "city", "x": 13, "y": 10, "label": "e", "games": null},
+    {"id": "stow-on-side", "name": "Stow-on-Side", "kind": "city", "x": 8, "y": 10, "label": "w", "games": null},
+    {"id": "glimwood-tangle", "name": "Glimwood Tangle", "kind": "place", "x": 8, "y": 7, "label": "e", "games": null},
+    {"id": "ballonlea", "name": "Ballonlea", "kind": "city", "x": 4, "y": 7, "label": "n", "games": null},
+    {"id": "motostoke", "name": "Motostoke", "kind": "city", "x": 21, "y": 17, "label": "n", "games": null},
+    {"id": "galar-mine", "name": "Galar Mine", "kind": "place", "x": 21, "y": 21, "label": "e", "games": null},
+    {"id": "turffield", "name": "Turffield", "kind": "city", "x": 18, "y": 25, "label": "w", "games": null},
+    {"id": "hulbury", "name": "Hulbury", "kind": "city", "x": 25, "y": 28, "label": "e", "games": null},
+    {"id": "galar-mine-2", "name": "Galar Mine No. 2", "kind": "place", "x": 25, "y": 24, "label": "e", "games": null},
+    {"id": "motostoke-outskirts", "name": "Motostoke Outskirts", "kind": "place", "x": 25, "y": 20, "label": "e", "games": null},
+    {"id": "wedgehurst", "name": "Wedgehurst", "kind": "city", "x": 5, "y": 25, "label": "n", "games": null},
+    {"id": "postwick", "name": "Postwick", "kind": "city", "x": 5, "y": 28, "label": "e", "games": null},
+    {"id": "slumbering-weald", "name": "Slumbering Weald", "kind": "place", "x": 2, "y": 28, "label": "n", "games": null},
+    {"id": "lake-of-outrage", "name": "Lake of Outrage", "kind": "place", "x": 5, "y": 13, "label": "e", "games": null},
+    {"id": "stony-wilderness", "name": "Stony Wilderness", "kind": "place", "x": 5, "y": 15, "label": "e", "games": null},
+    {"id": "watchtower-ruins", "name": "Watchtower Ruins", "kind": "place", "x": 5, "y": 17, "label": "e", "games": null},
+    {"id": "dappled-grove", "name": "Dappled Grove", "kind": "place", "x": 5, "y": 19, "label": "e", "games": null},
+    {"id": "west-lake-axewell", "name": "West Lake Axewell", "kind": "place", "x": 5, "y": 21, "label": "s", "games": null},
+    {"id": "giants-cap", "name": "Giant's Cap", "kind": "place", "x": 9, "y": 13, "label": "e", "games": null},
+    {"id": "giants-mirror", "name": "Giant's Mirror", "kind": "place", "x": 9, "y": 15, "label": "e", "games": null},
+    {"id": "north-lake-miloch", "name": "North Lake Miloch", "kind": "place", "x": 9, "y": 17, "label": "e", "games": null},
+    {"id": "rolling-fields", "name": "Rolling Fields", "kind": "place", "x": 9, "y": 19, "label": "e", "games": null},
+    {"id": "east-lake-axewell", "name": "East Lake Axewell", "kind": "place", "x": 9, "y": 21, "label": "s", "games": null},
+    {"id": "hammerlocke-hills", "name": "Hammerlocke Hills", "kind": "place", "x": 13, "y": 13, "label": "e", "games": null},
+    {"id": "dusty-bowl", "name": "Dusty Bowl", "kind": "place", "x": 13, "y": 15, "label": "e", "games": null},
+    {"id": "giants-seat", "name": "Giant's Seat", "kind": "place", "x": 13, "y": 17, "label": "e", "games": null},
+    {"id": "south-lake-miloch", "name": "South Lake Miloch", "kind": "place", "x": 13, "y": 19, "label": "e", "games": null},
+    {"id": "meetup-spot", "name": "Meetup Spot", "kind": "place", "x": 13, "y": 21, "label": "se", "games": null},
+    {"id": "bridge-field", "name": "Bridge Field", "kind": "place", "x": 17, "y": 15, "label": "e", "games": null},
+    {"id": "motostoke-riverbank", "name": "Motostoke Riverbank", "kind": "place", "x": 17, "y": 17, "label": "s", "games": null},
+    {"id": "axews-eye", "name": "Axew's Eye", "kind": "place", "x": 17, "y": 21, "label": "e", "games": null},
+    {"id": "armor-station", "name": "Armor Station", "kind": "place", "x": 41, "y": 11, "label": "s", "games": null},
+    {"id": "fields-of-honor", "name": "Fields of Honor", "kind": "place", "x": 41, "y": 8, "label": "e", "games": null},
+    {"id": "master-dojo", "name": "Master Dojo", "kind": "building", "x": 38, "y": 8, "label": "n", "games": null},
+    {"id": "towers-of-two-fists", "name": "Towers of Two Fists", "kind": "building", "x": 38, "y": 11, "label": "s", "games": null},
+    {"id": "forest-of-focus", "name": "Forest of Focus", "kind": "place", "x": 35, "y": 8, "label": "nw", "games": null},
+    {"id": "soothing-wetlands", "name": "Soothing Wetlands", "kind": "place", "x": 35, "y": 11, "label": "s", "games": null},
+    {"id": "warm-up-tunnel", "name": "Warm-Up Tunnel", "kind": "place", "x": 35, "y": 5, "label": "e", "games": null},
+    {"id": "training-lowlands", "name": "Training Lowlands", "kind": "place", "x": 32, "y": 5, "label": "ne", "games": null},
+    {"id": "potbottom-desert", "name": "Potbottom Desert", "kind": "place", "x": 32, "y": 8, "label": "se", "games": null},
+    {"id": "loop-lagoon", "name": "Loop Lagoon", "kind": "place", "x": 32, "y": 2, "label": "n", "games": null},
+    {"id": "courageous-cavern", "name": "Courageous Cavern", "kind": "place", "x": 35, "y": 2, "label": "n", "games": null},
+    {"id": "challenge-road", "name": "Challenge Road", "kind": "place", "x": 38, "y": 2, "label": "n", "games": null},
+    {"id": "isle-of-armor-caves", "name": "Isle of Armor Caves", "kind": "place", "x": 38, "y": 5, "label": "e", "games": null},
+    {"id": "brawlers-cave", "name": "Brawlers' Cave", "kind": "place", "x": 41, "y": 2, "label": "e", "games": null},
+    {"id": "challenge-beach", "name": "Challenge Beach", "kind": "place", "x": 41, "y": 5, "label": "e", "games": null},
+    {"id": "workout-sea", "name": "Workout Sea", "kind": "place", "x": 29, "y": 2, "label": "s", "games": null},
+    {"id": "stepping-stone-sea", "name": "Stepping-Stone Sea", "kind": "place", "x": 29, "y": 5, "label": "s", "games": null},
+    {"id": "insular-sea", "name": "Insular Sea", "kind": "place", "x": 29, "y": 8, "label": "s", "games": null},
+    {"id": "honeycalm-sea", "name": "Honeycalm Sea", "kind": "place", "x": 32, "y": 11, "label": "w", "games": null},
+    {"id": "honeycalm-island", "name": "Honeycalm Island", "kind": "place", "x": 32, "y": 14, "label": "e", "games": null},
+    {"id": "crown-shrine", "name": "Crown Shrine", "kind": "building", "x": 30, "y": 16, "label": "e", "games": null},
+    {"id": "path-to-the-peak", "name": "Path to the Peak", "kind": "place", "x": 30, "y": 19, "label": "s", "games": null},
+    {"id": "tunnel-to-the-top", "name": "Tunnel to the Top", "kind": "place", "x": 34, "y": 19, "label": "n", "games": null},
+    {"id": "snowslide-slope", "name": "Snowslide Slope", "kind": "place", "x": 34, "y": 22, "label": "e", "games": null},
+    {"id": "iceberg-ruins", "name": "Iceberg Ruins", "kind": "place", "x": 30, "y": 22, "label": "s", "games": null},
+    {"id": "old-cemetery", "name": "Old Cemetery", "kind": "place", "x": 34, "y": 25, "label": "w", "games": null},
+    {"id": "giants-bed", "name": "Giant's Bed", "kind": "place", "x": 38, "y": 25, "label": "ne", "games": null},
+    {"id": "rock-peak-ruins", "name": "Rock Peak Ruins", "kind": "place", "x": 38, "y": 22, "label": "e", "games": null},
+    {"id": "iron-ruins", "name": "Iron Ruins", "kind": "place", "x": 38, "y": 19, "label": "e", "games": null},
+    {"id": "slippery-slope", "name": "Slippery Slope", "kind": "place", "x": 38, "y": 28, "label": "e", "games": null},
+    {"id": "crown-tundra-station", "name": "Crown Tundra Station", "kind": "place", "x": 38, "y": 31, "label": "e", "games": null},
+    {"id": "freezington", "name": "Freezington", "kind": "city", "x": 34, "y": 28, "label": "s", "games": null},
+    {"id": "frostpoint-field", "name": "Frostpoint Field", "kind": "place", "x": 30, "y": 28, "label": "s", "games": null},
+    {"id": "giants-foot", "name": "Giant's Foot", "kind": "place", "x": 42, "y": 25, "label": "ne", "games": null},
+    {"id": "max-lair", "name": "Max Lair", "kind": "place", "x": 42, "y": 22, "label": "e", "games": null},
+    {"id": "three-point-pass", "name": "Three-Point Pass", "kind": "place", "x": 42, "y": 19, "label": "e", "games": null},
+    {"id": "split-decision-ruins", "name": "Split-Decision Ruins", "kind": "place", "x": 42, "y": 16, "label": "e", "games": null},
+    {"id": "roaring-sea-caves", "name": "Roaring-Sea Caves", "kind": "place", "x": 46, "y": 25, "label": "e", "games": null},
+    {"id": "frigid-sea", "name": "Frigid Sea", "kind": "place", "x": 46, "y": 22, "label": "e", "games": null},
+    {"id": "ballimere-lake", "name": "Ballimere Lake", "kind": "place", "x": 42, "y": 28, "label": "ne", "games": null},
+    {"id": "lakeside-cave", "name": "Lakeside Cave", "kind": "place", "x": 46, "y": 28, "label": "s", "games": null},
+    {"id": "dyna-tree-hill", "name": "Dyna Tree Hill", "kind": "place", "x": 42, "y": 31, "label": "e", "games": null}
+  ],
+  "routes": [
+    {"id": "route-10", "name": "Route 10", "number": "10", "water": false, "path": [[13, 2], [13, 7]], "games": null},
+    {"id": "route-7", "name": "Route 7", "number": "7", "water": false, "path": [[13, 10], [13, 7]], "games": null},
+    {"id": "route-8", "name": "Route 8", "number": "8", "water": false, "path": [[13, 7], [18, 7], [18, 4]], "games": null},
+    {"id": "route-9", "name": "Route 9", "number": "9", "water": false, "path": [[18, 4], [22, 4], [22, 6]], "games": null},
+    {"id": "link-route-9-tunnel-spikemuth", "name": "route-9-tunnel ↔ spikemuth", "number": null, "water": false, "path": [[22, 6], [22, 9]], "games": null},
+    {"id": "route-6", "name": "Route 6", "number": "6", "water": false, "path": [[13, 10], [8, 10]], "games": null},
+    {"id": "link-stow-on-side-glimwood-tangle", "name": "stow-on-side ↔ glimwood-tangle", "number": null, "water": false, "path": [[8, 10], [8, 7]], "games": null},
+    {"id": "link-glimwood-tangle-ballonlea", "name": "glimwood-tangle ↔ ballonlea", "number": null, "water": false, "path": [[8, 7], [4, 7]], "games": null},
+    {"id": "route-3", "name": "Route 3", "number": "3", "water": false, "path": [[21, 17], [21, 21]], "games": null},
+    {"id": "route-4", "name": "Route 4", "number": "4", "water": false, "path": [[21, 21], [21, 25], [18, 25]], "games": null},
+    {"id": "route-5", "name": "Route 5", "number": "5", "water": false, "path": [[18, 25], [18, 28], [25, 28]], "games": null},
+    {"id": "link-hulbury-galar-mine-2", "name": "hulbury ↔ galar-mine-2", "number": null, "water": false, "path": [[25, 28], [25, 24]], "games": null},
+    {"id": "link-galar-mine-2-motostoke-outskirts", "name": "galar-mine-2 ↔ motostoke-outskirts", "number": null, "water": false, "path": [[25, 24], [25, 20]], "games": null},
+    {"id": "link-motostoke-outskirts-motostoke", "name": "motostoke-outskirts ↔ motostoke", "number": null, "water": false, "path": [[25, 20], [25, 17], [21, 17]], "games": null},
+    {"id": "route-1", "name": "Route 1", "number": "1", "water": false, "path": [[5, 28], [5, 25]], "games": null},
+    {"id": "route-2", "name": "Route 2", "number": "2", "water": false, "path": [[5, 25], [0, 25]], "games": null},
+    {"id": "link-postwick-slumbering-weald", "name": "postwick ↔ slumbering-weald", "number": null, "water": false, "path": [[5, 28], [2, 28]], "games": null},
+    {"id": "link-wedgehurst-meetup-spot", "name": "wedgehurst ↔ meetup-spot", "number": null, "water": false, "path": [[5, 25], [13, 25], [13, 21]], "games": null},
+    {"id": "link-lake-of-outrage-stony-wilderness", "name": "lake-of-outrage ↔ stony-wilderness", "number": null, "water": false, "path": [[5, 13], [5, 15]], "games": null},
+    {"id": "link-stony-wilderness-watchtower-ruins", "name": "stony-wilderness ↔ watchtower-ruins", "number": null, "water": false, "path": [[5, 15], [5, 17]], "games": null},
+    {"id": "link-watchtower-ruins-dappled-grove", "name": "watchtower-ruins ↔ dappled-grove", "number": null, "water": false, "path": [[5, 17], [5, 19]], "games": null},
+    {"id": "link-dappled-grove-west-lake-axewell", "name": "dappled-grove ↔ west-lake-axewell", "number": null, "water": false, "path": [[5, 19], [5, 21]], "games": null},
+    {"id": "link-giants-cap-giants-mirror", "name": "giants-cap ↔ giants-mirror", "number": null, "water": false, "path": [[9, 13], [9, 15]], "games": null},
+    {"id": "link-giants-mirror-north-lake-miloch", "name": "giants-mirror ↔ north-lake-miloch", "number": null, "water": false, "path": [[9, 15], [9, 17]], "games": null},
+    {"id": "link-north-lake-miloch-rolling-fields", "name": "north-lake-miloch ↔ rolling-fields", "number": null, "water": false, "path": [[9, 17], [9, 19]], "games": null},
+    {"id": "link-rolling-fields-east-lake-axewell", "name": "rolling-fields ↔ east-lake-axewell", "number": null, "water": false, "path": [[9, 19], [9, 21]], "games": null},
+    {"id": "link-hammerlocke-hills-dusty-bowl", "name": "hammerlocke-hills ↔ dusty-bowl", "number": null, "water": false, "path": [[13, 13], [13, 15]], "games": null},
+    {"id": "link-dusty-bowl-giants-seat", "name": "dusty-bowl ↔ giants-seat", "number": null, "water": false, "path": [[13, 15], [13, 17]], "games": null},
+    {"id": "link-giants-seat-south-lake-miloch", "name": "giants-seat ↔ south-lake-miloch", "number": null, "water": false, "path": [[13, 17], [13, 19]], "games": null},
+    {"id": "link-south-lake-miloch-meetup-spot", "name": "south-lake-miloch ↔ meetup-spot", "number": null, "water": false, "path": [[13, 19], [13, 21]], "games": null},
+    {"id": "link-bridge-field-motostoke-riverbank", "name": "bridge-field ↔ motostoke-riverbank", "number": null, "water": false, "path": [[17, 15], [17, 17]], "games": null},
+    {"id": "link-west-lake-axewell-east-lake-axewell", "name": "west-lake-axewell ↔ east-lake-axewell", "number": null, "water": false, "path": [[5, 21], [9, 21]], "games": null},
+    {"id": "link-east-lake-axewell-meetup-spot", "name": "east-lake-axewell ↔ meetup-spot", "number": null, "water": false, "path": [[9, 21], [13, 21]], "games": null},
+    {"id": "link-meetup-spot-axews-eye", "name": "meetup-spot ↔ axews-eye", "number": null, "water": false, "path": [[13, 21], [17, 21]], "games": null},
+    {"id": "link-hammerlocke-hills-hammerlocke", "name": "hammerlocke-hills ↔ hammerlocke", "number": null, "water": false, "path": [[13, 13], [13, 10]], "games": null},
+    {"id": "link-motostoke-riverbank-motostoke", "name": "motostoke-riverbank ↔ motostoke", "number": null, "water": false, "path": [[17, 17], [21, 17]], "games": null},
+    {"id": "link-armor-station-fields-of-honor", "name": "armor-station ↔ fields-of-honor", "number": null, "water": false, "path": [[41, 11], [41, 8]], "games": null},
+    {"id": "link-fields-of-honor-master-dojo", "name": "fields-of-honor ↔ master-dojo", "number": null, "water": false, "path": [[41, 8], [38, 8]], "games": null},
+    {"id": "link-master-dojo-forest-of-focus", "name": "master-dojo ↔ forest-of-focus", "number": null, "water": false, "path": [[38, 8], [35, 8]], "games": null},
+    {"id": "link-fields-of-honor-challenge-beach", "name": "fields-of-honor ↔ challenge-beach", "number": null, "water": false, "path": [[41, 8], [41, 5]], "games": null},
+    {"id": "link-challenge-beach-brawlers-cave", "name": "challenge-beach ↔ brawlers-cave", "number": null, "water": false, "path": [[41, 5], [41, 2]], "games": null},
+    {"id": "link-brawlers-cave-challenge-road", "name": "brawlers-cave ↔ challenge-road", "number": null, "water": false, "path": [[41, 2], [38, 2]], "games": null},
+    {"id": "link-challenge-road-courageous-cavern", "name": "challenge-road ↔ courageous-cavern", "number": null, "water": false, "path": [[38, 2], [35, 2]], "games": null},
+    {"id": "link-courageous-cavern-loop-lagoon", "name": "courageous-cavern ↔ loop-lagoon", "number": null, "water": false, "path": [[35, 2], [32, 2]], "games": null},
+    {"id": "link-loop-lagoon-training-lowlands", "name": "loop-lagoon ↔ training-lowlands", "number": null, "water": false, "path": [[32, 2], [32, 5]], "games": null},
+    {"id": "link-training-lowlands-potbottom-desert", "name": "training-lowlands ↔ potbottom-desert", "number": null, "water": false, "path": [[32, 5], [32, 8]], "games": null},
+    {"id": "link-master-dojo-towers-of-two-fists", "name": "master-dojo ↔ towers-of-two-fists", "number": null, "water": false, "path": [[38, 8], [38, 11]], "games": null},
+    {"id": "link-forest-of-focus-soothing-wetlands", "name": "forest-of-focus ↔ soothing-wetlands", "number": null, "water": false, "path": [[35, 8], [35, 11]], "games": null},
+    {"id": "link-forest-of-focus-warm-up-tunnel", "name": "forest-of-focus ↔ warm-up-tunnel", "number": null, "water": false, "path": [[35, 8], [35, 5]], "games": null},
+    {"id": "link-warm-up-tunnel-training-lowlands", "name": "warm-up-tunnel ↔ training-lowlands", "number": null, "water": false, "path": [[35, 5], [32, 5]], "games": null},
+    {"id": "link-challenge-road-isle-of-armor-caves", "name": "challenge-road ↔ isle-of-armor-caves", "number": null, "water": false, "path": [[38, 2], [38, 5]], "games": null},
+    {"id": "link-loop-lagoon-workout-sea", "name": "loop-lagoon ↔ workout-sea", "number": null, "water": true, "path": [[32, 2], [29, 2]], "games": null},
+    {"id": "link-training-lowlands-stepping-stone-sea", "name": "training-lowlands ↔ stepping-stone-sea", "number": null, "water": true, "path": [[32, 5], [29, 5]], "games": null},
+    {"id": "link-potbottom-desert-insular-sea", "name": "potbottom-desert ↔ insular-sea", "number": null, "water": true, "path": [[32, 8], [29, 8]], "games": null},
+    {"id": "link-potbottom-desert-honeycalm-sea", "name": "potbottom-desert ↔ honeycalm-sea", "number": null, "water": true, "path": [[32, 8], [32, 11]], "games": null},
+    {"id": "link-honeycalm-sea-honeycalm-island", "name": "honeycalm-sea ↔ honeycalm-island", "number": null, "water": true, "path": [[32, 11], [32, 14]], "games": null},
+    {"id": "link-crown-shrine-path-to-the-peak", "name": "crown-shrine ↔ path-to-the-peak", "number": null, "water": false, "path": [[30, 16], [30, 19]], "games": null},
+    {"id": "link-path-to-the-peak-tunnel-to-the-top", "name": "path-to-the-peak ↔ tunnel-to-the-top", "number": null, "water": false, "path": [[30, 19], [34, 19]], "games": null},
+    {"id": "link-tunnel-to-the-top-snowslide-slope", "name": "tunnel-to-the-top ↔ snowslide-slope", "number": null, "water": false, "path": [[34, 19], [34, 22]], "games": null},
+    {"id": "link-snowslide-slope-old-cemetery", "name": "snowslide-slope ↔ old-cemetery", "number": null, "water": false, "path": [[34, 22], [34, 25]], "games": null},
+    {"id": "link-old-cemetery-giants-bed", "name": "old-cemetery ↔ giants-bed", "number": null, "water": false, "path": [[34, 25], [38, 25]], "games": null},
+    {"id": "link-giants-bed-giants-foot", "name": "giants-bed ↔ giants-foot", "number": null, "water": false, "path": [[38, 25], [42, 25]], "games": null},
+    {"id": "link-giants-foot-roaring-sea-caves", "name": "giants-foot ↔ roaring-sea-caves", "number": null, "water": false, "path": [[42, 25], [46, 25]], "games": null},
+    {"id": "link-iron-ruins-rock-peak-ruins", "name": "iron-ruins ↔ rock-peak-ruins", "number": null, "water": false, "path": [[38, 19], [38, 22]], "games": null},
+    {"id": "link-rock-peak-ruins-giants-bed", "name": "rock-peak-ruins ↔ giants-bed", "number": null, "water": false, "path": [[38, 22], [38, 25]], "games": null},
+    {"id": "link-giants-bed-slippery-slope", "name": "giants-bed ↔ slippery-slope", "number": null, "water": false, "path": [[38, 25], [38, 28]], "games": null},
+    {"id": "link-slippery-slope-crown-tundra-station", "name": "slippery-slope ↔ crown-tundra-station", "number": null, "water": false, "path": [[38, 28], [38, 31]], "games": null},
+    {"id": "link-split-decision-ruins-three-point-pass", "name": "split-decision-ruins ↔ three-point-pass", "number": null, "water": false, "path": [[42, 16], [42, 19]], "games": null},
+    {"id": "link-three-point-pass-max-lair", "name": "three-point-pass ↔ max-lair", "number": null, "water": false, "path": [[42, 19], [42, 22]], "games": null},
+    {"id": "link-max-lair-giants-foot", "name": "max-lair ↔ giants-foot", "number": null, "water": false, "path": [[42, 22], [42, 25]], "games": null},
+    {"id": "link-giants-foot-ballimere-lake", "name": "giants-foot ↔ ballimere-lake", "number": null, "water": false, "path": [[42, 25], [42, 28]], "games": null},
+    {"id": "link-ballimere-lake-dyna-tree-hill", "name": "ballimere-lake ↔ dyna-tree-hill", "number": null, "water": false, "path": [[42, 28], [42, 31]], "games": null},
+    {"id": "link-snowslide-slope-iceberg-ruins", "name": "snowslide-slope ↔ iceberg-ruins", "number": null, "water": false, "path": [[34, 22], [30, 22]], "games": null},
+    {"id": "link-slippery-slope-freezington", "name": "slippery-slope ↔ freezington", "number": null, "water": false, "path": [[38, 28], [34, 28]], "games": null},
+    {"id": "link-freezington-frostpoint-field", "name": "freezington ↔ frostpoint-field", "number": null, "water": false, "path": [[34, 28], [30, 28]], "games": null},
+    {"id": "link-roaring-sea-caves-frigid-sea", "name": "roaring-sea-caves ↔ frigid-sea", "number": null, "water": true, "path": [[46, 25], [46, 22]], "games": null},
+    {"id": "link-ballimere-lake-lakeside-cave", "name": "ballimere-lake ↔ lakeside-cave", "number": null, "water": false, "path": [[42, 28], [46, 28]], "games": null}
+  ],
+  "unmapped": []
 }

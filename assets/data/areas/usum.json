@@ -824,7 +824,7 @@
       "name": "Ultra Megalopolis",
       "kind": "route",
       "order": 85,
-      "map_node": "ultra-megalopolis",
+      "map_node": null,
       "poke_api_location_id": 1050,
       "bosses_before": [
         "necrozma-1-um"
@@ -929,7 +929,7 @@
       "name": "Ultra Space Wilds",
       "kind": "route",
       "order": 92,
-      "map_node": "ultra-space",
+      "map_node": null,
       "poke_api_location_id": 1051,
       "bosses_before": []
     },
@@ -938,7 +938,7 @@
       "name": "Reverse World",
       "kind": "route",
       "order": 93,
-      "map_node": "reverse-world",
+      "map_node": null,
       "poke_api_location_id": null,
       "bosses_before": []
     },

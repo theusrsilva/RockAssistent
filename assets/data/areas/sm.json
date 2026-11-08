@@ -699,7 +699,7 @@
       "name": "Ultra Space",
       "kind": "route",
       "order": 71,
-      "map_node": "ultra-space",
+      "map_node": null,
       "poke_api_location_id": 797,
       "bosses_before": []
     },
