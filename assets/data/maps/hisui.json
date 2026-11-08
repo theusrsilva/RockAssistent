@@ -1,1259 +1,228 @@
 {
   "source": [
     "https://bulbapedia.bulbagarden.net/wiki/Hisui",
-    "Mapa esquemático (só vizinhança e direção aproximada), x e y de 0 a 1 com y para baixo; cidades fixadas à mão e o resto posicionado pelos vizinhos."
+    "Mapa metrô feito à mão pela geografia do Legends: Arceus: Jubilife Village no meio, ligada às 5 áreas (Obsidian Fieldlands a oeste, Alabaster Icelands ao norte, Coronet Highlands no centro-norte, Crimson Mirelands ao sul e Cobalt Coastlands a leste). O acampamento de cada área é o quadrado grande; as sub-áreas são círculos ligados por linhas sem número (link-*), que só mostram a vizinhança."
   ],
   "region": "hisui",
-  "nodes": [
-    {
-      "id": "jubilife-village",
-      "name": "Jubilife Village",
-      "kind": "city",
-      "x": 0.04,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "prelude-beach",
-      "name": "Prelude Beach",
-      "kind": "route",
-      "x": 0.06,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "practice-field",
-      "name": "Practice Field",
-      "kind": "route",
-      "x": 0.02,
-      "y": 0.88,
-      "games": null
-    },
-    {
-      "id": "fieldlands-camp",
-      "name": "Fieldlands Camp",
-      "kind": "building",
-      "x": 0.22,
-      "y": 0.72,
-      "games": null
-    },
-    {
-      "id": "aspiration-hill",
-      "name": "Aspiration Hill",
-      "kind": "route",
-      "x": 0.198,
-      "y": 0.749,
-      "games": null
-    },
-    {
-      "id": "horseshoe-plains",
-      "name": "Horseshoe Plains",
-      "kind": "route",
-      "x": 0.167,
-      "y": 0.692,
-      "games": null
-    },
-    {
-      "id": "floaro-gardens",
-      "name": "Floaro Gardens",
-      "kind": "route",
-      "x": 0.117,
-      "y": 0.735,
-      "games": null
-    },
-    {
-      "id": "deertrack-path",
-      "name": "Deertrack Path",
-      "kind": "route",
-      "x": 0.193,
-      "y": 0.646,
-      "games": null
-    },
-    {
-      "id": "windswept-run",
-      "name": "Windswept Run",
-      "kind": "route",
-      "x": 0.27,
-      "y": 0.586,
-      "games": null
-    },
-    {
-      "id": "natures-pantry",
-      "name": "Nature's Pantry",
-      "kind": "route",
-      "x": 0.281,
-      "y": 0.621,
-      "games": null
-    },
-    {
-      "id": "deertrack-heights",
-      "name": "Deertrack Heights",
-      "kind": "route",
-      "x": 0.199,
-      "y": 0.54,
-      "games": null
-    },
-    {
-      "id": "worn-bridge",
-      "name": "Worn Bridge",
-      "kind": "route",
-      "x": 0.129,
-      "y": 0.646,
-      "games": null
-    },
-    {
-      "id": "grueling-grove",
-      "name": "Grueling Grove",
-      "kind": "route",
-      "x": 0.153,
-      "y": 0.606,
-      "games": null
-    },
-    {
-      "id": "oreburrow-tunnel",
-      "name": "Oreburrow Tunnel",
-      "kind": "dungeon",
-      "x": 0.115,
-      "y": 0.595,
-      "games": null
-    },
-    {
-      "id": "the-heartwood",
-      "name": "The Heartwood",
-      "kind": "route",
-      "x": 0.117,
-      "y": 0.518,
-      "games": null
-    },
-    {
-      "id": "grandtree-arena",
-      "name": "Grandtree Arena",
-      "kind": "building",
-      "x": 0.16,
-      "y": 0.48,
-      "games": null
-    },
-    {
-      "id": "tidewater-dam",
-      "name": "Tidewater Dam",
-      "kind": "route",
-      "x": 0.088,
-      "y": 0.685,
-      "games": null
-    },
-    {
-      "id": "obsidian-falls",
-      "name": "Obsidian Falls",
-      "kind": "route",
-      "x": 0.037,
-      "y": 0.643,
-      "games": null
-    },
-    {
-      "id": "lake-verity",
-      "name": "Lake Verity",
-      "kind": "sea",
-      "x": 0.2,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "sandgem-flats",
-      "name": "Sandgem Flats",
-      "kind": "route",
-      "x": 0.131,
-      "y": 0.865,
-      "games": null
-    },
-    {
-      "id": "ramanas-island",
-      "name": "Ramanas Island",
-      "kind": "route",
-      "x": 0.04,
-      "y": 0.98,
-      "games": null
-    },
-    {
-      "id": "mirelands-camp",
-      "name": "Mirelands Camp",
-      "kind": "building",
-      "x": 0.5,
-      "y": 0.76,
-      "games": null
-    },
-    {
-      "id": "golden-lowlands",
-      "name": "Golden Lowlands",
-      "kind": "route",
-      "x": 0.525,
-      "y": 0.823,
-      "games": null
-    },
-    {
-      "id": "bolderoll-slope",
-      "name": "Bolderoll Slope",
-      "kind": "route",
-      "x": 0.489,
-      "y": 0.85,
-      "games": null
-    },
-    {
-      "id": "gapejaw-bog",
-      "name": "Gapejaw Bog",
-      "kind": "route",
-      "x": 0.447,
-      "y": 0.816,
-      "games": null
-    },
-    {
-      "id": "scarlet-bog",
-      "name": "Scarlet Bog",
-      "kind": "route",
-      "x": 0.423,
-      "y": 0.789,
-      "games": null
-    },
-    {
-      "id": "bogbound-camp",
-      "name": "Bogbound Camp",
-      "kind": "building",
-      "x": 0.388,
-      "y": 0.777,
-      "games": null
-    },
-    {
-      "id": "sludge-mound",
-      "name": "Sludge Mound",
-      "kind": "route",
-      "x": 0.363,
-      "y": 0.73,
-      "games": null
-    },
-    {
-      "id": "ursas-ring",
-      "name": "Ursa's Ring",
-      "kind": "route",
-      "x": 0.379,
-      "y": 0.867,
-      "games": null
-    },
-    {
-      "id": "holm-of-trials",
-      "name": "Holm of Trials",
-      "kind": "route",
-      "x": 0.344,
-      "y": 0.857,
-      "games": null
-    },
-    {
-      "id": "diamond-settlement",
-      "name": "Diamond Settlement",
-      "kind": "city",
-      "x": 0.62,
-      "y": 0.62,
-      "games": null
-    },
-    {
-      "id": "diamond-heath",
-      "name": "Diamond Heath",
-      "kind": "route",
-      "x": 0.603,
-      "y": 0.652,
-      "games": null
-    },
-    {
-      "id": "cloudpool-ridge",
-      "name": "Cloudpool Ridge",
-      "kind": "route",
-      "x": 0.667,
-      "y": 0.612,
-      "games": null
-    },
-    {
-      "id": "shrouded-ruins",
-      "name": "Shrouded Ruins",
-      "kind": "dungeon",
-      "x": 0.669,
-      "y": 0.648,
-      "games": null
-    },
-    {
-      "id": "cottonsedge-prairie",
-      "name": "Cottonsedge Prairie",
-      "kind": "route",
-      "x": 0.654,
-      "y": 0.732,
-      "games": null
-    },
-    {
-      "id": "droning-meadow",
-      "name": "Droning Meadow",
-      "kind": "route",
-      "x": 0.617,
-      "y": 0.763,
-      "games": null
-    },
-    {
-      "id": "lake-valor",
-      "name": "Lake Valor",
-      "kind": "sea",
-      "x": 0.66,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "solaceon-ruins",
-      "name": "Solaceon Ruins",
-      "kind": "dungeon",
-      "x": 0.614,
-      "y": 0.725,
-      "games": null
-    },
-    {
-      "id": "brava-arena",
-      "name": "Brava Arena",
-      "kind": "building",
-      "x": 0.74,
-      "y": 0.66,
-      "games": null
-    },
-    {
-      "id": "beachside-camp",
-      "name": "Beachside Camp",
-      "kind": "building",
-      "x": 0.82,
-      "y": 0.78,
-      "games": null
-    },
-    {
-      "id": "ginkgo-landing",
-      "name": "Ginkgo Landing",
-      "kind": "route",
-      "x": 0.889,
-      "y": 0.78,
-      "games": null
-    },
-    {
-      "id": "crossing-slope",
-      "name": "Crossing Slope",
-      "kind": "route",
-      "x": 0.873,
-      "y": 0.699,
-      "games": null
-    },
-    {
-      "id": "aipom-hill",
-      "name": "Aipom Hill",
-      "kind": "route",
-      "x": 0.933,
-      "y": 0.667,
-      "games": null
-    },
-    {
-      "id": "coastlands-camp",
-      "name": "Coastlands Camp",
-      "kind": "building",
-      "x": 0.88,
-      "y": 0.6,
-      "games": null
-    },
-    {
-      "id": "bathers-lagoon",
-      "name": "Bathers' Lagoon",
-      "kind": "route",
-      "x": 0.819,
-      "y": 0.593,
-      "games": null
-    },
-    {
-      "id": "hideaway-bay",
-      "name": "Hideaway Bay",
-      "kind": "route",
-      "x": 0.805,
-      "y": 0.559,
-      "games": null
-    },
-    {
-      "id": "deadwood-haunt",
-      "name": "Deadwood Haunt",
-      "kind": "route",
-      "x": 0.837,
-      "y": 0.703,
-      "games": null
-    },
-    {
-      "id": "sands-reach",
-      "name": "Sand's Reach",
-      "kind": "route",
-      "x": 0.875,
-      "y": 0.814,
-      "games": null
-    },
-    {
-      "id": "tombolo-walk",
-      "name": "Tombolo Walk",
-      "kind": "route",
-      "x": 0.823,
-      "y": 0.889,
-      "games": null
-    },
-    {
-      "id": "castaway-shore",
-      "name": "Castaway Shore",
-      "kind": "route",
-      "x": 0.809,
-      "y": 0.855,
-      "games": null
-    },
-    {
-      "id": "windbreak-stand",
-      "name": "Windbreak Stand",
-      "kind": "route",
-      "x": 0.749,
-      "y": 0.809,
-      "games": null
-    },
-    {
-      "id": "veilstone-cape",
-      "name": "Veilstone Cape",
-      "kind": "route",
-      "x": 0.741,
-      "y": 0.854,
-      "games": null
-    },
-    {
-      "id": "tranquility-cove",
-      "name": "Tranquility Cove",
-      "kind": "sea",
-      "x": 0.859,
-      "y": 0.659,
-      "games": null
-    },
-    {
-      "id": "tidal-passage",
-      "name": "Tidal Passage",
-      "kind": "route",
-      "x": 0.815,
-      "y": 0.649,
-      "games": null
-    },
-    {
-      "id": "lunkers-lair",
-      "name": "Lunker's Lair",
-      "kind": "sea",
-      "x": 0.897,
-      "y": 0.673,
-      "games": null
-    },
-    {
-      "id": "seagrass-haven",
-      "name": "Seagrass Haven",
-      "kind": "sea",
-      "x": 0.966,
-      "y": 0.755,
-      "games": null
-    },
-    {
-      "id": "seaside-hollow",
-      "name": "Seaside Hollow",
-      "kind": "dungeon",
-      "x": 0.99,
-      "y": 0.728,
-      "games": null
-    },
-    {
-      "id": "islespy-shore",
-      "name": "Islespy Shore",
-      "kind": "route",
-      "x": 0.99,
-      "y": 0.782,
-      "games": null
-    },
-    {
-      "id": "spring-path",
-      "name": "Spring Path",
-      "kind": "route",
-      "x": 0.92,
-      "y": 0.56,
-      "games": null
-    },
-    {
-      "id": "firespit-island",
-      "name": "Firespit Island",
-      "kind": "route",
-      "x": 0.96,
-      "y": 0.84,
-      "games": null
-    },
-    {
-      "id": "molten-arena",
-      "name": "Molten Arena",
-      "kind": "building",
-      "x": 0.98,
-      "y": 0.92,
-      "games": null
-    },
-    {
-      "id": "lava-dome-sanctum",
-      "name": "Lava Dome Sanctum",
-      "kind": "dungeon",
-      "x": 0.926,
-      "y": 0.872,
-      "games": null
-    },
-    {
-      "id": "highlands-camp",
-      "name": "Highlands Camp",
-      "kind": "building",
-      "x": 0.5,
-      "y": 0.48,
-      "games": null
-    },
-    {
-      "id": "heavenward-lookout",
-      "name": "Heavenward Lookout",
-      "kind": "route",
-      "x": 0.461,
-      "y": 0.524,
-      "games": null
-    },
-    {
-      "id": "wayward-cave",
-      "name": "Wayward Cave",
-      "kind": "dungeon",
-      "x": 0.501,
-      "y": 0.53,
-      "games": null
-    },
-    {
-      "id": "wayward-wood",
-      "name": "Wayward Wood",
-      "kind": "route",
-      "x": 0.505,
-      "y": 0.603,
-      "games": null
-    },
-    {
-      "id": "ancient-quarry",
-      "name": "Ancient Quarry",
-      "kind": "dungeon",
-      "x": 0.467,
-      "y": 0.62,
-      "games": null
-    },
-    {
-      "id": "sonorous-path",
-      "name": "Sonorous Path",
-      "kind": "route",
-      "x": 0.476,
-      "y": 0.438,
-      "games": null
-    },
-    {
-      "id": "lonely-spring",
-      "name": "Lonely Spring",
-      "kind": "route",
-      "x": 0.517,
-      "y": 0.448,
-      "games": null
-    },
-    {
-      "id": "mountain-camp",
-      "name": "Mountain Camp",
-      "kind": "building",
-      "x": 0.48,
-      "y": 0.34,
-      "games": null
-    },
-    {
-      "id": "clamberclaw-cliffs",
-      "name": "Clamberclaw Cliffs",
-      "kind": "route",
-      "x": 0.455,
-      "y": 0.379,
-      "games": null
-    },
-    {
-      "id": "celestica-ruins",
-      "name": "Celestica Ruins",
-      "kind": "dungeon",
-      "x": 0.377,
-      "y": 0.333,
-      "games": null
-    },
-    {
-      "id": "primeval-grotto",
-      "name": "Primeval Grotto",
-      "kind": "dungeon",
-      "x": 0.364,
-      "y": 0.375,
-      "games": null
-    },
-    {
-      "id": "celestica-trail",
-      "name": "Celestica Trail",
-      "kind": "route",
-      "x": 0.409,
-      "y": 0.316,
-      "games": null
-    },
-    {
-      "id": "fabled-spring",
-      "name": "Fabled Spring",
-      "kind": "route",
-      "x": 0.374,
-      "y": 0.264,
-      "games": null
-    },
-    {
-      "id": "bolderoll-ravine",
-      "name": "Bolderoll Ravine",
-      "kind": "route",
-      "x": 0.508,
-      "y": 0.364,
-      "games": null
-    },
-    {
-      "id": "stonetooth-rows",
-      "name": "Stonetooth Rows",
-      "kind": "route",
-      "x": 0.54,
-      "y": 0.349,
-      "games": null
-    },
-    {
-      "id": "sacred-plaza",
-      "name": "Sacred Plaza",
-      "kind": "route",
-      "x": 0.609,
-      "y": 0.403,
-      "games": null
-    },
-    {
-      "id": "cloudcap-pass",
-      "name": "Cloudcap Pass",
-      "kind": "route",
-      "x": 0.604,
-      "y": 0.363,
-      "games": null
-    },
-    {
-      "id": "moonview-arena",
-      "name": "Moonview Arena",
-      "kind": "building",
-      "x": 0.64,
-      "y": 0.38,
-      "games": null
-    },
-    {
-      "id": "snowfields-camp",
-      "name": "Snowfields Camp",
-      "kind": "building",
-      "x": 0.34,
-      "y": 0.18,
-      "games": null
-    },
-    {
-      "id": "whiteout-valley",
-      "name": "Whiteout Valley",
-      "kind": "route",
-      "x": 0.402,
-      "y": 0.12,
-      "games": null
-    },
-    {
-      "id": "crevasse-passage",
-      "name": "Crevasse Passage",
-      "kind": "dungeon",
-      "x": 0.373,
-      "y": 0.089,
-      "games": null
-    },
-    {
-      "id": "bonechill-wastes",
-      "name": "Bonechill Wastes",
-      "kind": "route",
-      "x": 0.354,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "icebound-falls",
-      "name": "Icebound Falls",
-      "kind": "route",
-      "x": 0.458,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "avalanche-slopes",
-      "name": "Avalanche Slopes",
-      "kind": "route",
-      "x": 0.491,
-      "y": 0.025,
-      "games": null
-    },
-    {
-      "id": "ice-column-chamber",
-      "name": "Ice Column Chamber",
-      "kind": "dungeon",
-      "x": 0.543,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "arenas-approach",
-      "name": "Arena's Approach",
-      "kind": "route",
-      "x": 0.311,
-      "y": 0.01,
-      "games": null
-    },
-    {
-      "id": "snowfall-hot-spring",
-      "name": "Snowfall Hot Spring",
-      "kind": "route",
-      "x": 0.524,
-      "y": 0.06,
-      "games": null
-    },
-    {
-      "id": "glacier-terrace",
-      "name": "Glacier Terrace",
-      "kind": "route",
-      "x": 0.46,
-      "y": 0.097,
-      "games": null
-    },
-    {
-      "id": "lake-acuity",
-      "name": "Lake Acuity",
-      "kind": "sea",
-      "x": 0.44,
-      "y": 0.04,
-      "games": null
-    },
-    {
-      "id": "icepeak-camp",
-      "name": "Icepeak Camp",
-      "kind": "building",
-      "x": 0.28,
-      "y": 0.08,
-      "games": null
-    },
-    {
-      "id": "icepeak-cavern",
-      "name": "Icepeak Cavern",
-      "kind": "dungeon",
-      "x": 0.204,
-      "y": 0.07,
-      "games": null
-    },
-    {
-      "id": "hearts-crag",
-      "name": "Heart's Crag",
-      "kind": "route",
-      "x": 0.17,
-      "y": 0.1,
-      "games": null
-    },
-    {
-      "id": "pearl-settlement",
-      "name": "Pearl Settlement",
-      "kind": "city",
-      "x": 0.16,
-      "y": 0.06,
-      "games": null
-    },
-    {
-      "id": "avaluggs-legacy",
-      "name": "Avalugg's Legacy",
-      "kind": "route",
-      "x": 0.324,
-      "y": 0.056,
-      "games": null
-    },
-    {
-      "id": "snowpoint-temple",
-      "name": "Snowpoint Temple",
-      "kind": "building",
-      "x": 0.334,
-      "y": 0.101,
-      "games": null
-    },
-    {
-      "id": "icepeak-arena",
-      "name": "Icepeak Arena",
-      "kind": "building",
-      "x": 0.22,
-      "y": 0.02,
-      "games": null
-    },
-    {
-      "id": "secret-hollow",
-      "name": "Secret Hollow",
-      "kind": "dungeon",
-      "x": 0.213,
-      "y": 0.105,
-      "games": null
-    },
-    {
-      "id": "ancient-retreat",
-      "name": "Ancient Retreat",
-      "kind": "building",
-      "x": 0.12,
-      "y": 0.02,
-      "games": null
-    },
-    {
-      "id": "summit-camp",
-      "name": "Summit Camp",
-      "kind": "building",
-      "x": 0.5,
-      "y": 0.26,
-      "games": null
-    },
-    {
-      "id": "stone-portal",
-      "name": "Stone Portal",
-      "kind": "dungeon",
-      "x": 0.455,
-      "y": 0.247,
-      "games": null
-    },
-    {
-      "id": "temple-of-sinnoh",
-      "name": "Temple of Sinnoh",
-      "kind": "building",
-      "x": 0.46,
-      "y": 0.2,
-      "games": null
-    },
-    {
-      "id": "turnback-cave",
-      "name": "Turnback Cave",
-      "kind": "dungeon",
-      "x": 0.253,
-      "y": 0.12,
-      "games": null
-    }
+  "grid": {"cols": 74, "rows": 45},
+  "terrain": [
+    {"kind": "sea", "polygon": [[0, 0], [74, 0], [74, 45], [0, 45]]},
+    {"kind": "land", "polygon": [[0.6, 1.1], [1.3, 0.4], [64.5, 0.4], [65.2, 1.1], [65.2, 25.7], [65.9, 26.4], [67.9, 26.4], [68.6, 27.1], [68.6, 32.5], [67.9, 33.2], [65.3, 33.2], [64.6, 33.9], [64.6, 43.7], [63.9, 44.4], [24.1, 44.4], [23.4, 43.7], [23.4, 34.3], [22.7, 33.6], [1.3, 33.6], [0.6, 32.9]]},
+    {"kind": "land", "polygon": [[11.6, 34.9], [12.3, 34.2], [13.7, 34.2], [14.4, 34.9], [14.4, 35.7], [13.7, 36.4], [12.3, 36.4], [11.6, 35.7]]},
+    {"kind": "land", "polygon": [[69.6, 24.5], [70.3, 23.8], [71.9, 23.8], [72.6, 24.5], [72.6, 31.5], [71.9, 32.2], [70.3, 32.2], [69.6, 31.5]]},
+    {"kind": "land", "polygon": [[65.6, 34.7], [66.3, 34.0], [71.9, 34.0], [72.6, 34.7], [72.6, 38.9], [71.9, 39.6], [66.3, 39.6], [65.6, 38.9]]},
+    {"kind": "mountain", "polygon": [[44.4, 1.1], [45.1, 0.4], [49.7, 0.4], [50.4, 1.1], [50.4, 12.9], [49.7, 13.6], [45.1, 13.6], [44.4, 12.9]]}
   ],
-  "edges": [
-    {
-      "from": "jubilife-village",
-      "to": "prelude-beach"
-    },
-    {
-      "from": "prelude-beach",
-      "to": "practice-field"
-    },
-    {
-      "from": "jubilife-village",
-      "to": "fieldlands-camp"
-    },
-    {
-      "from": "fieldlands-camp",
-      "to": "aspiration-hill"
-    },
-    {
-      "from": "aspiration-hill",
-      "to": "horseshoe-plains"
-    },
-    {
-      "from": "horseshoe-plains",
-      "to": "floaro-gardens"
-    },
-    {
-      "from": "horseshoe-plains",
-      "to": "deertrack-path"
-    },
-    {
-      "from": "deertrack-path",
-      "to": "deertrack-heights"
-    },
-    {
-      "from": "deertrack-heights",
-      "to": "grandtree-arena"
-    },
-    {
-      "from": "deertrack-path",
-      "to": "windswept-run"
-    },
-    {
-      "from": "windswept-run",
-      "to": "natures-pantry"
-    },
-    {
-      "from": "horseshoe-plains",
-      "to": "worn-bridge"
-    },
-    {
-      "from": "worn-bridge",
-      "to": "grueling-grove"
-    },
-    {
-      "from": "grueling-grove",
-      "to": "oreburrow-tunnel"
-    },
-    {
-      "from": "grueling-grove",
-      "to": "the-heartwood"
-    },
-    {
-      "from": "the-heartwood",
-      "to": "grandtree-arena"
-    },
-    {
-      "from": "worn-bridge",
-      "to": "tidewater-dam"
-    },
-    {
-      "from": "tidewater-dam",
-      "to": "obsidian-falls"
-    },
-    {
-      "from": "horseshoe-plains",
-      "to": "sandgem-flats"
-    },
-    {
-      "from": "sandgem-flats",
-      "to": "lake-verity"
-    },
-    {
-      "from": "sandgem-flats",
-      "to": "ramanas-island"
-    },
-    {
-      "from": "jubilife-village",
-      "to": "mirelands-camp"
-    },
-    {
-      "from": "mirelands-camp",
-      "to": "golden-lowlands"
-    },
-    {
-      "from": "golden-lowlands",
-      "to": "bolderoll-slope"
-    },
-    {
-      "from": "bolderoll-slope",
-      "to": "gapejaw-bog"
-    },
-    {
-      "from": "gapejaw-bog",
-      "to": "scarlet-bog"
-    },
-    {
-      "from": "scarlet-bog",
-      "to": "bogbound-camp"
-    },
-    {
-      "from": "bogbound-camp",
-      "to": "sludge-mound"
-    },
-    {
-      "from": "gapejaw-bog",
-      "to": "ursas-ring"
-    },
-    {
-      "from": "ursas-ring",
-      "to": "holm-of-trials"
-    },
-    {
-      "from": "mirelands-camp",
-      "to": "diamond-settlement"
-    },
-    {
-      "from": "diamond-settlement",
-      "to": "diamond-heath"
-    },
-    {
-      "from": "diamond-heath",
-      "to": "cloudpool-ridge"
-    },
-    {
-      "from": "cloudpool-ridge",
-      "to": "shrouded-ruins"
-    },
-    {
-      "from": "diamond-heath",
-      "to": "cottonsedge-prairie"
-    },
-    {
-      "from": "cottonsedge-prairie",
-      "to": "droning-meadow"
-    },
-    {
-      "from": "droning-meadow",
-      "to": "lake-valor"
-    },
-    {
-      "from": "cottonsedge-prairie",
-      "to": "solaceon-ruins"
-    },
-    {
-      "from": "cloudpool-ridge",
-      "to": "brava-arena"
-    },
-    {
-      "from": "jubilife-village",
-      "to": "beachside-camp"
-    },
-    {
-      "from": "beachside-camp",
-      "to": "ginkgo-landing"
-    },
-    {
-      "from": "ginkgo-landing",
-      "to": "crossing-slope"
-    },
-    {
-      "from": "crossing-slope",
-      "to": "aipom-hill"
-    },
-    {
-      "from": "aipom-hill",
-      "to": "coastlands-camp"
-    },
-    {
-      "from": "coastlands-camp",
-      "to": "bathers-lagoon"
-    },
-    {
-      "from": "bathers-lagoon",
-      "to": "hideaway-bay"
-    },
-    {
-      "from": "crossing-slope",
-      "to": "deadwood-haunt"
-    },
-    {
-      "from": "ginkgo-landing",
-      "to": "sands-reach"
-    },
-    {
-      "from": "sands-reach",
-      "to": "tombolo-walk"
-    },
-    {
-      "from": "tombolo-walk",
-      "to": "castaway-shore"
-    },
-    {
-      "from": "castaway-shore",
-      "to": "windbreak-stand"
-    },
-    {
-      "from": "windbreak-stand",
-      "to": "veilstone-cape"
-    },
-    {
-      "from": "bathers-lagoon",
-      "to": "tranquility-cove"
-    },
-    {
-      "from": "tranquility-cove",
-      "to": "lunkers-lair"
-    },
-    {
-      "from": "lunkers-lair",
-      "to": "seagrass-haven"
-    },
-    {
-      "from": "seagrass-haven",
-      "to": "seaside-hollow"
-    },
-    {
-      "from": "seagrass-haven",
-      "to": "islespy-shore"
-    },
-    {
-      "from": "islespy-shore",
-      "to": "firespit-island"
-    },
-    {
-      "from": "firespit-island",
-      "to": "molten-arena"
-    },
-    {
-      "from": "firespit-island",
-      "to": "lava-dome-sanctum"
-    },
-    {
-      "from": "coastlands-camp",
-      "to": "spring-path"
-    },
-    {
-      "from": "tranquility-cove",
-      "to": "tidal-passage"
-    },
-    {
-      "from": "jubilife-village",
-      "to": "highlands-camp"
-    },
-    {
-      "from": "highlands-camp",
-      "to": "heavenward-lookout"
-    },
-    {
-      "from": "heavenward-lookout",
-      "to": "wayward-cave"
-    },
-    {
-      "from": "heavenward-lookout",
-      "to": "wayward-wood"
-    },
-    {
-      "from": "wayward-wood",
-      "to": "ancient-quarry"
-    },
-    {
-      "from": "highlands-camp",
-      "to": "sonorous-path"
-    },
-    {
-      "from": "sonorous-path",
-      "to": "lonely-spring"
-    },
-    {
-      "from": "highlands-camp",
-      "to": "mountain-camp"
-    },
-    {
-      "from": "mountain-camp",
-      "to": "clamberclaw-cliffs"
-    },
-    {
-      "from": "clamberclaw-cliffs",
-      "to": "celestica-ruins"
-    },
-    {
-      "from": "celestica-ruins",
-      "to": "primeval-grotto"
-    },
-    {
-      "from": "celestica-ruins",
-      "to": "celestica-trail"
-    },
-    {
-      "from": "celestica-trail",
-      "to": "fabled-spring"
-    },
-    {
-      "from": "mountain-camp",
-      "to": "bolderoll-ravine"
-    },
-    {
-      "from": "bolderoll-ravine",
-      "to": "stonetooth-rows"
-    },
-    {
-      "from": "stonetooth-rows",
-      "to": "sacred-plaza"
-    },
-    {
-      "from": "sacred-plaza",
-      "to": "moonview-arena"
-    },
-    {
-      "from": "sacred-plaza",
-      "to": "cloudcap-pass"
-    },
-    {
-      "from": "mountain-camp",
-      "to": "summit-camp"
-    },
-    {
-      "from": "summit-camp",
-      "to": "stone-portal"
-    },
-    {
-      "from": "stone-portal",
-      "to": "temple-of-sinnoh"
-    },
-    {
-      "from": "jubilife-village",
-      "to": "snowfields-camp"
-    },
-    {
-      "from": "snowfields-camp",
-      "to": "whiteout-valley"
-    },
-    {
-      "from": "whiteout-valley",
-      "to": "crevasse-passage"
-    },
-    {
-      "from": "crevasse-passage",
-      "to": "bonechill-wastes"
-    },
-    {
-      "from": "bonechill-wastes",
-      "to": "icebound-falls"
-    },
-    {
-      "from": "icebound-falls",
-      "to": "avalanche-slopes"
-    },
-    {
-      "from": "avalanche-slopes",
-      "to": "ice-column-chamber"
-    },
-    {
-      "from": "bonechill-wastes",
-      "to": "arenas-approach"
-    },
-    {
-      "from": "arenas-approach",
-      "to": "icepeak-arena"
-    },
-    {
-      "from": "avalanche-slopes",
-      "to": "snowfall-hot-spring"
-    },
-    {
-      "from": "snowfall-hot-spring",
-      "to": "glacier-terrace"
-    },
-    {
-      "from": "glacier-terrace",
-      "to": "lake-acuity"
-    },
-    {
-      "from": "snowfields-camp",
-      "to": "icepeak-camp"
-    },
-    {
-      "from": "icepeak-camp",
-      "to": "icepeak-cavern"
-    },
-    {
-      "from": "icepeak-cavern",
-      "to": "hearts-crag"
-    },
-    {
-      "from": "hearts-crag",
-      "to": "pearl-settlement"
-    },
-    {
-      "from": "icepeak-camp",
-      "to": "avaluggs-legacy"
-    },
-    {
-      "from": "avaluggs-legacy",
-      "to": "snowpoint-temple"
-    },
-    {
-      "from": "icepeak-cavern",
-      "to": "secret-hollow"
-    },
-    {
-      "from": "pearl-settlement",
-      "to": "ancient-retreat"
-    },
-    {
-      "from": "icepeak-camp",
-      "to": "turnback-cave"
-    }
-  ]
+  "places": [
+    {"id": "jubilife-village", "name": "Jubilife Village", "kind": "city", "x": 31, "y": 28, "label": "ne", "games": null},
+    {"id": "prelude-beach", "name": "Prelude Beach", "kind": "place", "x": 31, "y": 31, "label": "e", "games": null},
+    {"id": "practice-field", "name": "Practice Field", "kind": "place", "x": 27, "y": 31, "label": "e", "games": null},
+    {"id": "fieldlands-camp", "name": "Fieldlands Camp", "kind": "city", "x": 13, "y": 28, "label": "ne", "games": null},
+    {"id": "aspiration-hill", "name": "Aspiration Hill", "kind": "place", "x": 17, "y": 28, "label": "n", "games": null},
+    {"id": "floaro-gardens", "name": "Floaro Gardens", "kind": "place", "x": 9, "y": 28, "label": "n", "games": null},
+    {"id": "tidewater-dam", "name": "Tidewater Dam", "kind": "place", "x": 5, "y": 28, "label": "w", "games": null},
+    {"id": "obsidian-falls", "name": "Obsidian Falls", "kind": "place", "x": 5, "y": 24, "label": "e", "games": null},
+    {"id": "horseshoe-plains", "name": "Horseshoe Plains", "kind": "place", "x": 13, "y": 24, "label": "n", "games": null},
+    {"id": "worn-bridge", "name": "Worn Bridge", "kind": "place", "x": 9, "y": 24, "label": "s", "games": null},
+    {"id": "grueling-grove", "name": "Grueling Grove", "kind": "place", "x": 9, "y": 20, "label": "e", "games": null},
+    {"id": "oreburrow-tunnel", "name": "Oreburrow Tunnel", "kind": "place", "x": 5, "y": 20, "label": "w", "games": null},
+    {"id": "the-heartwood", "name": "The Heartwood", "kind": "place", "x": 9, "y": 17, "label": "e", "games": null},
+    {"id": "grandtree-arena", "name": "Grandtree Arena", "kind": "building", "x": 9, "y": 14, "label": "e", "games": null},
+    {"id": "deertrack-path", "name": "Deertrack Path", "kind": "place", "x": 17, "y": 24, "label": "s", "games": null},
+    {"id": "deertrack-heights", "name": "Deertrack Heights", "kind": "place", "x": 17, "y": 20, "label": "e", "games": null},
+    {"id": "natures-pantry", "name": "Nature's Pantry", "kind": "place", "x": 21, "y": 24, "label": "e", "games": null},
+    {"id": "windswept-run", "name": "Windswept Run", "kind": "place", "x": 21, "y": 20, "label": "e", "games": null},
+    {"id": "sandgem-flats", "name": "Sandgem Flats", "kind": "place", "x": 13, "y": 32, "label": "w", "games": null},
+    {"id": "lake-verity", "name": "Lake Verity", "kind": "place", "x": 17, "y": 32, "label": "e", "games": null},
+    {"id": "ramanas-island", "name": "Ramanas Island", "kind": "place", "x": 13, "y": 35, "label": "e", "games": null},
+    {"id": "snowfields-camp", "name": "Snowfields Camp", "kind": "city", "x": 21, "y": 11, "label": "w", "games": null},
+    {"id": "whiteout-valley", "name": "Whiteout Valley", "kind": "place", "x": 25, "y": 11, "label": "e", "games": null},
+    {"id": "crevasse-passage", "name": "Crevasse Passage", "kind": "place", "x": 25, "y": 8, "label": "w", "games": null},
+    {"id": "glacier-terrace", "name": "Glacier Terrace", "kind": "place", "x": 29, "y": 8, "label": "s", "games": null},
+    {"id": "lake-acuity", "name": "Lake Acuity", "kind": "place", "x": 29, "y": 5, "label": "e", "games": null},
+    {"id": "icebound-falls", "name": "Icebound Falls", "kind": "place", "x": 29, "y": 2, "label": "e", "games": null},
+    {"id": "snowfall-hot-spring", "name": "Snowfall Hot Spring", "kind": "place", "x": 33, "y": 8, "label": "e", "games": null},
+    {"id": "avalanche-slopes", "name": "Avalanche Slopes", "kind": "place", "x": 33, "y": 5, "label": "e", "games": null},
+    {"id": "ice-column-chamber", "name": "Ice Column Chamber", "kind": "place", "x": 33, "y": 2, "label": "e", "games": null},
+    {"id": "avaluggs-legacy", "name": "Avalugg's Legacy", "kind": "place", "x": 21, "y": 8, "label": "nw", "games": null},
+    {"id": "bonechill-wastes", "name": "Bonechill Wastes", "kind": "place", "x": 21, "y": 5, "label": "e", "games": null},
+    {"id": "icepeak-camp", "name": "Icepeak Camp", "kind": "city", "x": 17, "y": 8, "label": "nw", "games": null},
+    {"id": "arenas-approach", "name": "Arena's Approach", "kind": "place", "x": 17, "y": 5, "label": "e", "games": null},
+    {"id": "icepeak-arena", "name": "Icepeak Arena", "kind": "building", "x": 17, "y": 2, "label": "e", "games": null},
+    {"id": "icepeak-cavern", "name": "Icepeak Cavern", "kind": "place", "x": 13, "y": 8, "label": "nw", "games": null},
+    {"id": "pearl-settlement", "name": "Pearl Settlement", "kind": "city", "x": 9, "y": 8, "label": "n", "games": null},
+    {"id": "ancient-retreat", "name": "Ancient Retreat", "kind": "building", "x": 5, "y": 8, "label": "w", "games": null},
+    {"id": "snowpoint-temple", "name": "Snowpoint Temple", "kind": "building", "x": 17, "y": 11, "label": "w", "games": null},
+    {"id": "secret-hollow", "name": "Secret Hollow", "kind": "place", "x": 13, "y": 11, "label": "e", "games": null},
+    {"id": "hearts-crag", "name": "Heart's Crag", "kind": "place", "x": 9, "y": 11, "label": "e", "games": null},
+    {"id": "turnback-cave", "name": "Turnback Cave", "kind": "place", "x": 5, "y": 11, "label": "e", "games": null},
+    {"id": "temple-of-sinnoh", "name": "Temple of Sinnoh", "kind": "building", "x": 47, "y": 2, "label": "e", "games": null},
+    {"id": "stone-portal", "name": "Stone Portal", "kind": "place", "x": 47, "y": 5, "label": "e", "games": null},
+    {"id": "summit-camp", "name": "Summit Camp", "kind": "city", "x": 47, "y": 8, "label": "e", "games": null},
+    {"id": "mountain-camp", "name": "Mountain Camp", "kind": "city", "x": 47, "y": 11, "label": "ne", "games": null},
+    {"id": "clamberclaw-cliffs", "name": "Clamberclaw Cliffs", "kind": "place", "x": 43, "y": 11, "label": "s", "games": null},
+    {"id": "celestica-trail", "name": "Celestica Trail", "kind": "place", "x": 43, "y": 8, "label": "e", "games": null},
+    {"id": "fabled-spring", "name": "Fabled Spring", "kind": "place", "x": 43, "y": 5, "label": "e", "games": null},
+    {"id": "celestica-ruins", "name": "Celestica Ruins", "kind": "place", "x": 39, "y": 11, "label": "w", "games": null},
+    {"id": "primeval-grotto", "name": "Primeval Grotto", "kind": "place", "x": 39, "y": 14, "label": "e", "games": null},
+    {"id": "bolderoll-ravine", "name": "Bolderoll Ravine", "kind": "place", "x": 51, "y": 11, "label": "n", "games": null},
+    {"id": "stonetooth-rows", "name": "Stonetooth Rows", "kind": "place", "x": 55, "y": 11, "label": "n", "games": null},
+    {"id": "cloudcap-pass", "name": "Cloudcap Pass", "kind": "place", "x": 59, "y": 11, "label": "n", "games": null},
+    {"id": "moonview-arena", "name": "Moonview Arena", "kind": "building", "x": 63, "y": 11, "label": "e", "games": null},
+    {"id": "sacred-plaza", "name": "Sacred Plaza", "kind": "place", "x": 59, "y": 14, "label": "e", "games": null},
+    {"id": "sonorous-path", "name": "Sonorous Path", "kind": "place", "x": 47, "y": 15, "label": "w", "games": null},
+    {"id": "lonely-spring", "name": "Lonely Spring", "kind": "place", "x": 51, "y": 15, "label": "e", "games": null},
+    {"id": "highlands-camp", "name": "Highlands Camp", "kind": "city", "x": 47, "y": 18, "label": "ne", "games": null},
+    {"id": "heavenward-lookout", "name": "Heavenward Lookout", "kind": "place", "x": 43, "y": 18, "label": "w", "games": null},
+    {"id": "ancient-quarry", "name": "Ancient Quarry", "kind": "place", "x": 43, "y": 21, "label": "e", "games": null},
+    {"id": "wayward-cave", "name": "Wayward Cave", "kind": "place", "x": 51, "y": 18, "label": "e", "games": null},
+    {"id": "wayward-wood", "name": "Wayward Wood", "kind": "place", "x": 51, "y": 21, "label": "e", "games": null},
+    {"id": "mirelands-camp", "name": "Mirelands Camp", "kind": "city", "x": 38, "y": 34, "label": "n", "games": null},
+    {"id": "golden-lowlands", "name": "Golden Lowlands", "kind": "place", "x": 38, "y": 38, "label": "e", "games": null},
+    {"id": "bolderoll-slope", "name": "Bolderoll Slope", "kind": "place", "x": 38, "y": 42, "label": "e", "games": null},
+    {"id": "gapejaw-bog", "name": "Gapejaw Bog", "kind": "place", "x": 34, "y": 38, "label": "n", "games": null},
+    {"id": "scarlet-bog", "name": "Scarlet Bog", "kind": "place", "x": 30, "y": 38, "label": "n", "games": null},
+    {"id": "bogbound-camp", "name": "Bogbound Camp", "kind": "city", "x": 26, "y": 38, "label": "w", "games": null},
+    {"id": "sludge-mound", "name": "Sludge Mound", "kind": "place", "x": 26, "y": 34, "label": "e", "games": null},
+    {"id": "ursas-ring", "name": "Ursa's Ring", "kind": "place", "x": 30, "y": 42, "label": "e", "games": null},
+    {"id": "holm-of-trials", "name": "Holm of Trials", "kind": "place", "x": 26, "y": 42, "label": "w", "games": null},
+    {"id": "diamond-heath", "name": "Diamond Heath", "kind": "place", "x": 42, "y": 34, "label": "ne", "games": null},
+    {"id": "diamond-settlement", "name": "Diamond Settlement", "kind": "city", "x": 42, "y": 31, "label": "e", "games": null},
+    {"id": "shrouded-ruins", "name": "Shrouded Ruins", "kind": "place", "x": 46, "y": 34, "label": "s", "games": null},
+    {"id": "cloudpool-ridge", "name": "Cloudpool Ridge", "kind": "place", "x": 46, "y": 31, "label": "e", "games": null},
+    {"id": "brava-arena", "name": "Brava Arena", "kind": "building", "x": 50, "y": 34, "label": "e", "games": null},
+    {"id": "solaceon-ruins", "name": "Solaceon Ruins", "kind": "place", "x": 42, "y": 38, "label": "ne", "games": null},
+    {"id": "cottonsedge-prairie", "name": "Cottonsedge Prairie", "kind": "place", "x": 46, "y": 38, "label": "e", "games": null},
+    {"id": "droning-meadow", "name": "Droning Meadow", "kind": "place", "x": 42, "y": 42, "label": "s", "games": null},
+    {"id": "lake-valor", "name": "Lake Valor", "kind": "place", "x": 46, "y": 42, "label": "e", "games": null},
+    {"id": "beachside-camp", "name": "Beachside Camp", "kind": "city", "x": 59, "y": 32, "label": "ne", "games": null},
+    {"id": "windbreak-stand", "name": "Windbreak Stand", "kind": "place", "x": 55, "y": 32, "label": "w", "games": null},
+    {"id": "veilstone-cape", "name": "Veilstone Cape", "kind": "place", "x": 55, "y": 35, "label": "e", "games": null},
+    {"id": "castaway-shore", "name": "Castaway Shore", "kind": "place", "x": 59, "y": 35, "label": "e", "games": null},
+    {"id": "tombolo-walk", "name": "Tombolo Walk", "kind": "place", "x": 59, "y": 38, "label": "e", "games": null},
+    {"id": "ginkgo-landing", "name": "Ginkgo Landing", "kind": "place", "x": 63, "y": 32, "label": "e", "games": null},
+    {"id": "sands-reach", "name": "Sand's Reach", "kind": "place", "x": 63, "y": 35, "label": "s", "games": null},
+    {"id": "deadwood-haunt", "name": "Deadwood Haunt", "kind": "place", "x": 59, "y": 28, "label": "w", "games": null},
+    {"id": "tidal-passage", "name": "Tidal Passage", "kind": "place", "x": 59, "y": 25, "label": "e", "games": null},
+    {"id": "bathers-lagoon", "name": "Bathers' Lagoon", "kind": "place", "x": 59, "y": 22, "label": "e", "games": null},
+    {"id": "hideaway-bay", "name": "Hideaway Bay", "kind": "place", "x": 59, "y": 19, "label": "e", "games": null},
+    {"id": "crossing-slope", "name": "Crossing Slope", "kind": "place", "x": 63, "y": 28, "label": "s", "games": null},
+    {"id": "tranquility-cove", "name": "Tranquility Cove", "kind": "place", "x": 63, "y": 25, "label": "ne", "games": null},
+    {"id": "coastlands-camp", "name": "Coastlands Camp", "kind": "city", "x": 63, "y": 22, "label": "e", "games": null},
+    {"id": "spring-path", "name": "Spring Path", "kind": "place", "x": 63, "y": 19, "label": "e", "games": null},
+    {"id": "aipom-hill", "name": "Aipom Hill", "kind": "place", "x": 67, "y": 28, "label": "n", "games": null},
+    {"id": "lunkers-lair", "name": "Lunker's Lair", "kind": "place", "x": 67, "y": 25, "label": "e", "games": null},
+    {"id": "seagrass-haven", "name": "Seagrass Haven", "kind": "place", "x": 71, "y": 28, "label": "e", "games": null},
+    {"id": "seaside-hollow", "name": "Seaside Hollow", "kind": "place", "x": 71, "y": 25, "label": "e", "games": null},
+    {"id": "islespy-shore", "name": "Islespy Shore", "kind": "place", "x": 71, "y": 31, "label": "e", "games": null},
+    {"id": "firespit-island", "name": "Firespit Island", "kind": "place", "x": 67, "y": 35, "label": "e", "games": null},
+    {"id": "lava-dome-sanctum", "name": "Lava Dome Sanctum", "kind": "place", "x": 67, "y": 38, "label": "w", "games": null},
+    {"id": "molten-arena", "name": "Molten Arena", "kind": "building", "x": 71, "y": 38, "label": "e", "games": null}
+  ],
+  "routes": [
+    {"id": "link-aspiration-hill-jubilife-village", "name": "aspiration-hill ↔ jubilife-village", "number": null, "water": false, "path": [[31, 28], [17, 28]], "games": null},
+    {"id": "link-jubilife-village-prelude-beach", "name": "jubilife-village ↔ prelude-beach", "number": null, "water": false, "path": [[31, 28], [31, 31]], "games": null},
+    {"id": "link-jubilife-village-practice-field", "name": "jubilife-village ↔ practice-field", "number": null, "water": false, "path": [[27, 28], [27, 31]], "games": null},
+    {"id": "link-highlands-camp-jubilife-village", "name": "highlands-camp ↔ jubilife-village", "number": null, "water": false, "path": [[31, 28], [31, 24], [47, 24], [47, 18]], "games": null},
+    {"id": "link-jubilife-village-snowfields-camp", "name": "jubilife-village ↔ snowfields-camp", "number": null, "water": false, "path": [[31, 24], [31, 14], [21, 14], [21, 11]], "games": null},
+    {"id": "link-jubilife-village-mirelands-camp", "name": "jubilife-village ↔ mirelands-camp", "number": null, "water": false, "path": [[35, 28], [35, 34], [38, 34]], "games": null},
+    {"id": "link-jubilife-village-windbreak-stand", "name": "jubilife-village ↔ windbreak-stand", "number": null, "water": false, "path": [[31, 28], [55, 28], [55, 32]], "games": null},
+    {"id": "link-aspiration-hill-fieldlands-camp", "name": "aspiration-hill ↔ fieldlands-camp", "number": null, "water": false, "path": [[17, 28], [13, 28]], "games": null},
+    {"id": "link-fieldlands-camp-floaro-gardens", "name": "fieldlands-camp ↔ floaro-gardens", "number": null, "water": false, "path": [[13, 28], [9, 28]], "games": null},
+    {"id": "link-floaro-gardens-tidewater-dam", "name": "floaro-gardens ↔ tidewater-dam", "number": null, "water": false, "path": [[9, 28], [5, 28]], "games": null},
+    {"id": "link-obsidian-falls-tidewater-dam", "name": "obsidian-falls ↔ tidewater-dam", "number": null, "water": false, "path": [[5, 28], [5, 24]], "games": null},
+    {"id": "link-fieldlands-camp-horseshoe-plains", "name": "fieldlands-camp ↔ horseshoe-plains", "number": null, "water": false, "path": [[13, 28], [13, 24]], "games": null},
+    {"id": "link-horseshoe-plains-worn-bridge", "name": "horseshoe-plains ↔ worn-bridge", "number": null, "water": false, "path": [[13, 24], [9, 24]], "games": null},
+    {"id": "link-grueling-grove-worn-bridge", "name": "grueling-grove ↔ worn-bridge", "number": null, "water": false, "path": [[9, 24], [9, 20]], "games": null},
+    {"id": "link-grueling-grove-oreburrow-tunnel", "name": "grueling-grove ↔ oreburrow-tunnel", "number": null, "water": false, "path": [[9, 20], [5, 20]], "games": null},
+    {"id": "link-grueling-grove-the-heartwood", "name": "grueling-grove ↔ the-heartwood", "number": null, "water": false, "path": [[9, 20], [9, 17]], "games": null},
+    {"id": "link-grandtree-arena-the-heartwood", "name": "grandtree-arena ↔ the-heartwood", "number": null, "water": false, "path": [[9, 17], [9, 14]], "games": null},
+    {"id": "link-deertrack-path-horseshoe-plains", "name": "deertrack-path ↔ horseshoe-plains", "number": null, "water": false, "path": [[13, 24], [17, 24]], "games": null},
+    {"id": "link-deertrack-heights-deertrack-path", "name": "deertrack-heights ↔ deertrack-path", "number": null, "water": false, "path": [[17, 24], [17, 20]], "games": null},
+    {"id": "link-deertrack-path-natures-pantry", "name": "deertrack-path ↔ natures-pantry", "number": null, "water": false, "path": [[17, 24], [21, 24]], "games": null},
+    {"id": "link-natures-pantry-windswept-run", "name": "natures-pantry ↔ windswept-run", "number": null, "water": false, "path": [[21, 24], [21, 20]], "games": null},
+    {"id": "link-fieldlands-camp-sandgem-flats", "name": "fieldlands-camp ↔ sandgem-flats", "number": null, "water": false, "path": [[13, 28], [13, 32]], "games": null},
+    {"id": "link-lake-verity-sandgem-flats", "name": "lake-verity ↔ sandgem-flats", "number": null, "water": false, "path": [[13, 32], [17, 32]], "games": null},
+    {"id": "link-ramanas-island-sandgem-flats", "name": "ramanas-island ↔ sandgem-flats", "number": null, "water": true, "path": [[13, 32], [13, 35]], "games": null},
+    {"id": "link-snowfields-camp-whiteout-valley", "name": "snowfields-camp ↔ whiteout-valley", "number": null, "water": false, "path": [[21, 11], [25, 11]], "games": null},
+    {"id": "link-crevasse-passage-whiteout-valley", "name": "crevasse-passage ↔ whiteout-valley", "number": null, "water": false, "path": [[25, 11], [25, 8]], "games": null},
+    {"id": "link-crevasse-passage-glacier-terrace", "name": "crevasse-passage ↔ glacier-terrace", "number": null, "water": false, "path": [[25, 8], [29, 8]], "games": null},
+    {"id": "link-glacier-terrace-lake-acuity", "name": "glacier-terrace ↔ lake-acuity", "number": null, "water": false, "path": [[29, 8], [29, 5]], "games": null},
+    {"id": "link-icebound-falls-lake-acuity", "name": "icebound-falls ↔ lake-acuity", "number": null, "water": false, "path": [[29, 5], [29, 2]], "games": null},
+    {"id": "link-glacier-terrace-snowfall-hot-spring", "name": "glacier-terrace ↔ snowfall-hot-spring", "number": null, "water": false, "path": [[29, 8], [33, 8]], "games": null},
+    {"id": "link-avalanche-slopes-snowfall-hot-spring", "name": "avalanche-slopes ↔ snowfall-hot-spring", "number": null, "water": false, "path": [[33, 8], [33, 5]], "games": null},
+    {"id": "link-avalanche-slopes-ice-column-chamber", "name": "avalanche-slopes ↔ ice-column-chamber", "number": null, "water": false, "path": [[33, 5], [33, 2]], "games": null},
+    {"id": "link-avaluggs-legacy-snowfields-camp", "name": "avaluggs-legacy ↔ snowfields-camp", "number": null, "water": false, "path": [[21, 11], [21, 8]], "games": null},
+    {"id": "link-avaluggs-legacy-bonechill-wastes", "name": "avaluggs-legacy ↔ bonechill-wastes", "number": null, "water": false, "path": [[21, 8], [21, 5]], "games": null},
+    {"id": "link-avaluggs-legacy-icepeak-camp", "name": "avaluggs-legacy ↔ icepeak-camp", "number": null, "water": false, "path": [[21, 8], [17, 8]], "games": null},
+    {"id": "link-arenas-approach-icepeak-camp", "name": "arenas-approach ↔ icepeak-camp", "number": null, "water": false, "path": [[17, 8], [17, 5]], "games": null},
+    {"id": "link-arenas-approach-icepeak-arena", "name": "arenas-approach ↔ icepeak-arena", "number": null, "water": false, "path": [[17, 5], [17, 2]], "games": null},
+    {"id": "link-icepeak-camp-icepeak-cavern", "name": "icepeak-camp ↔ icepeak-cavern", "number": null, "water": false, "path": [[17, 8], [13, 8]], "games": null},
+    {"id": "link-icepeak-cavern-pearl-settlement", "name": "icepeak-cavern ↔ pearl-settlement", "number": null, "water": false, "path": [[13, 8], [9, 8]], "games": null},
+    {"id": "link-ancient-retreat-pearl-settlement", "name": "ancient-retreat ↔ pearl-settlement", "number": null, "water": false, "path": [[9, 8], [5, 8]], "games": null},
+    {"id": "link-icepeak-camp-snowpoint-temple", "name": "icepeak-camp ↔ snowpoint-temple", "number": null, "water": false, "path": [[17, 8], [17, 11]], "games": null},
+    {"id": "link-icepeak-cavern-secret-hollow", "name": "icepeak-cavern ↔ secret-hollow", "number": null, "water": false, "path": [[13, 8], [13, 11]], "games": null},
+    {"id": "link-hearts-crag-pearl-settlement", "name": "hearts-crag ↔ pearl-settlement", "number": null, "water": false, "path": [[9, 8], [9, 11]], "games": null},
+    {"id": "link-ancient-retreat-turnback-cave", "name": "ancient-retreat ↔ turnback-cave", "number": null, "water": false, "path": [[5, 8], [5, 11]], "games": null},
+    {"id": "link-stone-portal-temple-of-sinnoh", "name": "stone-portal ↔ temple-of-sinnoh", "number": null, "water": false, "path": [[47, 2], [47, 5]], "games": null},
+    {"id": "link-stone-portal-summit-camp", "name": "stone-portal ↔ summit-camp", "number": null, "water": false, "path": [[47, 5], [47, 8]], "games": null},
+    {"id": "link-mountain-camp-summit-camp", "name": "mountain-camp ↔ summit-camp", "number": null, "water": false, "path": [[47, 8], [47, 11]], "games": null},
+    {"id": "link-clamberclaw-cliffs-mountain-camp", "name": "clamberclaw-cliffs ↔ mountain-camp", "number": null, "water": false, "path": [[47, 11], [43, 11]], "games": null},
+    {"id": "link-celestica-trail-clamberclaw-cliffs", "name": "celestica-trail ↔ clamberclaw-cliffs", "number": null, "water": false, "path": [[43, 11], [43, 8]], "games": null},
+    {"id": "link-celestica-trail-fabled-spring", "name": "celestica-trail ↔ fabled-spring", "number": null, "water": false, "path": [[43, 8], [43, 5]], "games": null},
+    {"id": "link-celestica-ruins-clamberclaw-cliffs", "name": "celestica-ruins ↔ clamberclaw-cliffs", "number": null, "water": false, "path": [[43, 11], [39, 11]], "games": null},
+    {"id": "link-celestica-ruins-primeval-grotto", "name": "celestica-ruins ↔ primeval-grotto", "number": null, "water": false, "path": [[39, 11], [39, 14]], "games": null},
+    {"id": "link-bolderoll-ravine-mountain-camp", "name": "bolderoll-ravine ↔ mountain-camp", "number": null, "water": false, "path": [[47, 11], [51, 11]], "games": null},
+    {"id": "link-bolderoll-ravine-stonetooth-rows", "name": "bolderoll-ravine ↔ stonetooth-rows", "number": null, "water": false, "path": [[51, 11], [55, 11]], "games": null},
+    {"id": "link-cloudcap-pass-stonetooth-rows", "name": "cloudcap-pass ↔ stonetooth-rows", "number": null, "water": false, "path": [[55, 11], [59, 11]], "games": null},
+    {"id": "link-cloudcap-pass-moonview-arena", "name": "cloudcap-pass ↔ moonview-arena", "number": null, "water": false, "path": [[59, 11], [63, 11]], "games": null},
+    {"id": "link-cloudcap-pass-sacred-plaza", "name": "cloudcap-pass ↔ sacred-plaza", "number": null, "water": false, "path": [[59, 11], [59, 14]], "games": null},
+    {"id": "link-mountain-camp-sonorous-path", "name": "mountain-camp ↔ sonorous-path", "number": null, "water": false, "path": [[47, 11], [47, 15]], "games": null},
+    {"id": "link-lonely-spring-sonorous-path", "name": "lonely-spring ↔ sonorous-path", "number": null, "water": false, "path": [[47, 15], [51, 15]], "games": null},
+    {"id": "link-highlands-camp-sonorous-path", "name": "highlands-camp ↔ sonorous-path", "number": null, "water": false, "path": [[47, 15], [47, 18]], "games": null},
+    {"id": "link-heavenward-lookout-highlands-camp", "name": "heavenward-lookout ↔ highlands-camp", "number": null, "water": false, "path": [[47, 18], [43, 18]], "games": null},
+    {"id": "link-ancient-quarry-heavenward-lookout", "name": "ancient-quarry ↔ heavenward-lookout", "number": null, "water": false, "path": [[43, 18], [43, 21]], "games": null},
+    {"id": "link-highlands-camp-wayward-cave", "name": "highlands-camp ↔ wayward-cave", "number": null, "water": false, "path": [[47, 18], [51, 18]], "games": null},
+    {"id": "link-wayward-cave-wayward-wood", "name": "wayward-cave ↔ wayward-wood", "number": null, "water": false, "path": [[51, 18], [51, 21]], "games": null},
+    {"id": "link-golden-lowlands-mirelands-camp", "name": "golden-lowlands ↔ mirelands-camp", "number": null, "water": false, "path": [[38, 34], [38, 38]], "games": null},
+    {"id": "link-bolderoll-slope-golden-lowlands", "name": "bolderoll-slope ↔ golden-lowlands", "number": null, "water": false, "path": [[38, 38], [38, 42]], "games": null},
+    {"id": "link-gapejaw-bog-golden-lowlands", "name": "gapejaw-bog ↔ golden-lowlands", "number": null, "water": false, "path": [[38, 38], [34, 38]], "games": null},
+    {"id": "link-gapejaw-bog-scarlet-bog", "name": "gapejaw-bog ↔ scarlet-bog", "number": null, "water": false, "path": [[34, 38], [30, 38]], "games": null},
+    {"id": "link-bogbound-camp-scarlet-bog", "name": "bogbound-camp ↔ scarlet-bog", "number": null, "water": false, "path": [[30, 38], [26, 38]], "games": null},
+    {"id": "link-bogbound-camp-sludge-mound", "name": "bogbound-camp ↔ sludge-mound", "number": null, "water": false, "path": [[26, 38], [26, 34]], "games": null},
+    {"id": "link-scarlet-bog-ursas-ring", "name": "scarlet-bog ↔ ursas-ring", "number": null, "water": false, "path": [[30, 38], [30, 42]], "games": null},
+    {"id": "link-holm-of-trials-ursas-ring", "name": "holm-of-trials ↔ ursas-ring", "number": null, "water": false, "path": [[30, 42], [26, 42]], "games": null},
+    {"id": "link-diamond-heath-mirelands-camp", "name": "diamond-heath ↔ mirelands-camp", "number": null, "water": false, "path": [[38, 34], [42, 34]], "games": null},
+    {"id": "link-diamond-heath-diamond-settlement", "name": "diamond-heath ↔ diamond-settlement", "number": null, "water": false, "path": [[42, 34], [42, 31]], "games": null},
+    {"id": "link-diamond-heath-shrouded-ruins", "name": "diamond-heath ↔ shrouded-ruins", "number": null, "water": false, "path": [[42, 34], [46, 34]], "games": null},
+    {"id": "link-cloudpool-ridge-shrouded-ruins", "name": "cloudpool-ridge ↔ shrouded-ruins", "number": null, "water": false, "path": [[46, 34], [46, 31]], "games": null},
+    {"id": "link-brava-arena-shrouded-ruins", "name": "brava-arena ↔ shrouded-ruins", "number": null, "water": false, "path": [[46, 34], [50, 34]], "games": null},
+    {"id": "link-diamond-heath-solaceon-ruins", "name": "diamond-heath ↔ solaceon-ruins", "number": null, "water": false, "path": [[42, 34], [42, 38]], "games": null},
+    {"id": "link-cottonsedge-prairie-solaceon-ruins", "name": "cottonsedge-prairie ↔ solaceon-ruins", "number": null, "water": false, "path": [[42, 38], [46, 38]], "games": null},
+    {"id": "link-droning-meadow-solaceon-ruins", "name": "droning-meadow ↔ solaceon-ruins", "number": null, "water": false, "path": [[42, 38], [42, 42]], "games": null},
+    {"id": "link-droning-meadow-lake-valor", "name": "droning-meadow ↔ lake-valor", "number": null, "water": false, "path": [[42, 42], [46, 42]], "games": null},
+    {"id": "link-beachside-camp-windbreak-stand", "name": "beachside-camp ↔ windbreak-stand", "number": null, "water": false, "path": [[55, 32], [59, 32]], "games": null},
+    {"id": "link-veilstone-cape-windbreak-stand", "name": "veilstone-cape ↔ windbreak-stand", "number": null, "water": false, "path": [[55, 32], [55, 35]], "games": null},
+    {"id": "link-beachside-camp-castaway-shore", "name": "beachside-camp ↔ castaway-shore", "number": null, "water": false, "path": [[59, 32], [59, 35]], "games": null},
+    {"id": "link-castaway-shore-tombolo-walk", "name": "castaway-shore ↔ tombolo-walk", "number": null, "water": false, "path": [[59, 35], [59, 38]], "games": null},
+    {"id": "link-beachside-camp-ginkgo-landing", "name": "beachside-camp ↔ ginkgo-landing", "number": null, "water": false, "path": [[59, 32], [63, 32]], "games": null},
+    {"id": "link-ginkgo-landing-sands-reach", "name": "ginkgo-landing ↔ sands-reach", "number": null, "water": false, "path": [[63, 32], [63, 35]], "games": null},
+    {"id": "link-beachside-camp-deadwood-haunt", "name": "beachside-camp ↔ deadwood-haunt", "number": null, "water": false, "path": [[59, 32], [59, 28]], "games": null},
+    {"id": "link-deadwood-haunt-tidal-passage", "name": "deadwood-haunt ↔ tidal-passage", "number": null, "water": false, "path": [[59, 28], [59, 25]], "games": null},
+    {"id": "link-bathers-lagoon-tidal-passage", "name": "bathers-lagoon ↔ tidal-passage", "number": null, "water": false, "path": [[59, 25], [59, 22]], "games": null},
+    {"id": "link-bathers-lagoon-hideaway-bay", "name": "bathers-lagoon ↔ hideaway-bay", "number": null, "water": false, "path": [[59, 22], [59, 19]], "games": null},
+    {"id": "link-crossing-slope-deadwood-haunt", "name": "crossing-slope ↔ deadwood-haunt", "number": null, "water": false, "path": [[59, 28], [63, 28]], "games": null},
+    {"id": "link-crossing-slope-tranquility-cove", "name": "crossing-slope ↔ tranquility-cove", "number": null, "water": false, "path": [[63, 28], [63, 25]], "games": null},
+    {"id": "link-coastlands-camp-tranquility-cove", "name": "coastlands-camp ↔ tranquility-cove", "number": null, "water": false, "path": [[63, 25], [63, 22]], "games": null},
+    {"id": "link-coastlands-camp-spring-path", "name": "coastlands-camp ↔ spring-path", "number": null, "water": false, "path": [[63, 22], [63, 19]], "games": null},
+    {"id": "link-aipom-hill-crossing-slope", "name": "aipom-hill ↔ crossing-slope", "number": null, "water": false, "path": [[63, 28], [67, 28]], "games": null},
+    {"id": "link-lunkers-lair-tranquility-cove", "name": "lunkers-lair ↔ tranquility-cove", "number": null, "water": true, "path": [[63, 25], [67, 25]], "games": null},
+    {"id": "link-aipom-hill-seagrass-haven", "name": "aipom-hill ↔ seagrass-haven", "number": null, "water": true, "path": [[67, 28], [71, 28]], "games": null},
+    {"id": "link-seagrass-haven-seaside-hollow", "name": "seagrass-haven ↔ seaside-hollow", "number": null, "water": true, "path": [[71, 28], [71, 25]], "games": null},
+    {"id": "link-islespy-shore-seagrass-haven", "name": "islespy-shore ↔ seagrass-haven", "number": null, "water": true, "path": [[71, 28], [71, 31]], "games": null},
+    {"id": "link-firespit-island-sands-reach", "name": "firespit-island ↔ sands-reach", "number": null, "water": true, "path": [[63, 35], [67, 35]], "games": null},
+    {"id": "link-firespit-island-lava-dome-sanctum", "name": "firespit-island ↔ lava-dome-sanctum", "number": null, "water": false, "path": [[67, 35], [67, 38]], "games": null},
+    {"id": "link-lava-dome-sanctum-molten-arena", "name": "lava-dome-sanctum ↔ molten-arena", "number": null, "water": false, "path": [[67, 38], [71, 38]], "games": null}
+  ],
+  "unmapped": []
 }
