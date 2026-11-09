@@ -69,24 +69,6 @@ extraídas do seu próprio console. O Sword/Shield também troca pela rede de ca
 O cofre, as hunts, os Nuzlockes, o histórico e as configurações ficam num banco SQLite nessa pasta e continuam lá
 quando você fecha o app ou atualiza.
 
-## Desenvolvimento
-
-```bash
-git clone --recurse-submodules https://github.com/theusrsilva/TradeRock.git
-scripts/dev-host.sh     # Linux: .NET 10 SDK, Node 24 e libwebkit2gtk-4.1-0 + libnotify4
-scripts/ci.sh           # build e todos os testes, igual ao CI
-make tag                # publica uma versão nova (o CI gera os pacotes e o Release)
-```
-
-Também há um Dev Container (VS Code → **Reopen in Container**) e o `docker compose -f docker-compose.dev.yml up`
-com hot reload em <http://localhost:5173>.
-
-- Roteiro de teste no PC, com placa e ESP32: [docs/dev-host.md](docs/dev-host.md)
-- Decisões técnicas (D1–D34): [docs/decisions.md](docs/decisions.md)
-- Especificação original da troca: [docs/spec.md](docs/spec.md). Design do RockAssistent:
-  [docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md)
-- Instruções para o Claude Code: [CLAUDE.md](CLAUDE.md)
-
 ## Licença e créditos
 
 O RockAssistent é software livre sob a **GNU AGPL-3.0**. Veja [LICENSE](LICENSE),
