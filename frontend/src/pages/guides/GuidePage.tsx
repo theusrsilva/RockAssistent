@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate, useParams } from 'react-router'
 import { Button, Callout, Icon, selectClass } from '../../components/ui'
 import { gameVersionByKey } from '../../lib/gameVersions'
 import { findGuide, guideIndex, loadGuide, type GuideEntry, type GuideSection } from '../../lib/guides'
-import { countMatches, normalizeQuery } from '../../lib/textSearch'
+import { countNormalized, normalizeForSearch, normalizeQuery } from '../../lib/textSearch'
 import { GuideMarkdown } from './GuideMarkdown'
 import { GuideSearchBar, useGuideSearch } from './GuideSearch'
 
@@ -38,15 +38,18 @@ function usePageCounts(lang: string, guide: GuideEntry | null, query: string): M
     if (!active || !guide || texts?.key === key) return
     let alive = true
     void Promise.all(guide.sections.map((p) => loadGuide(lang, p.file).catch(() => null))).then((list) => {
-      if (alive) setTexts({ key, byId: new Map(guide.sections.map((p, i) => [p.id, list[i] ?? ''])) })
+      // Normaliza uma vez por carga; cada tecla só conta.
+      if (alive) setTexts({ key, byId: new Map(guide.sections.map((p, i) => [p.id, normalizeForSearch(list[i] ?? '').text])) })
     })
     return () => {
       alive = false
     }
   }, [active, guide, key, lang, texts?.key])
-  const counts = new Map<string, number>()
-  if (active && texts?.key === key) for (const [id, text] of texts.byId) counts.set(id, countMatches(text, query))
-  return counts
+  return useMemo(() => {
+    const counts = new Map<string, number>()
+    if (active && texts?.key === key) for (const [id, text] of texts.byId) counts.set(id, countNormalized(text, query))
+    return counts
+  }, [active, texts, key, query])
 }
 
 /** Um guia: breadcrumb, título, sumário (lateral; seletor no celular), a página e anterior/próxima. */

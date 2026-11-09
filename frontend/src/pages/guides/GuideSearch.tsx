@@ -6,12 +6,73 @@ import { findMatches, locate, normalizeQuery } from '../../lib/textSearch'
 const ALL = 'guide-search'
 const CURRENT = 'guide-search-current'
 
-/** Destaque sem mexer no DOM do React (CSS Custom Highlight API); sem suporte, só conta e rola até o resultado. */
+/**
+ * Destaque sem mexer no DOM do React (CSS Custom Highlight API). Sem ela (WebKitGTK < 2.44, Firefox < 140), só o
+ * resultado atual ganha uma caixa por cima (<see Overlay>).
+ */
 const highlights = (): HighlightRegistry | null => (typeof CSS !== 'undefined' && 'highlights' in CSS ? CSS.highlights : null)
+
+/**
+ * Caixas fixas (uma por linha do resultado) sobre o resultado atual, nas posições de <c>range.getClientRects()</c>.
+ * Recalcula a cada rolagem (do <main> ou de qualquer lugar, na captura) e a cada resize, num rAF.
+ */
+class Overlay {
+  private boxes: HTMLDivElement[] = []
+  private range: Range | null = null
+  private frame = 0
+  private readonly schedule = () => {
+    cancelAnimationFrame(this.frame)
+    this.frame = requestAnimationFrame(() => this.place())
+  }
+
+  show(range: Range | null) {
+    this.range = range
+    if (range) {
+      window.addEventListener('scroll', this.schedule, { capture: true, passive: true })
+      window.addEventListener('resize', this.schedule)
+    } else this.unlisten()
+    this.place()
+  }
+
+  dispose() {
+    this.show(null)
+  }
+
+  private unlisten() {
+    cancelAnimationFrame(this.frame)
+    window.removeEventListener('scroll', this.schedule, { capture: true })
+    window.removeEventListener('resize', this.schedule)
+  }
+
+  private place() {
+    const rects = this.range ? Array.from(this.range.getClientRects()).filter((r) => r.width > 0 && r.height > 0) : []
+    while (this.boxes.length > rects.length) this.boxes.pop()?.remove()
+    while (this.boxes.length < rects.length) {
+      const box = document.createElement('div')
+      box.setAttribute('aria-hidden', 'true')
+      box.style.cssText = 'position:fixed;pointer-events:none;z-index:5;border-radius:2px;background:var(--tr-warn);opacity:0.4'
+      document.body.appendChild(box)
+      this.boxes.push(box)
+    }
+    rects.forEach((r, i) => {
+      const s = this.boxes[i].style
+      s.left = `${r.left}px`
+      s.top = `${r.top}px`
+      s.width = `${r.width}px`
+      s.height = `${r.height}px`
+    })
+  }
+}
+
+let overlay: Overlay | null = null
 
 function paint(ranges: Range[], index: number) {
   const registry = highlights()
-  if (!registry) return
+  if (!registry) {
+    if (!overlay) overlay = new Overlay()
+    overlay.show(ranges[index] ?? null)
+    return
+  }
   if (ranges.length === 0) {
     registry.delete(ALL)
     registry.delete(CURRENT)
@@ -104,7 +165,13 @@ export function useGuideSearch(root: RefObject<HTMLElement | null>, query: strin
     scrollNext.current = false
   }, [ranges, index])
 
-  useEffect(() => () => paint([], 0), [])
+  useEffect(
+    () => () => {
+      paint([], 0)
+      overlay?.dispose()
+    },
+    [],
+  )
 
   const go = (step: number) => {
     if (ranges.length === 0) return

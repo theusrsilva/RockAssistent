@@ -47,6 +47,18 @@ export function findMatches(text: string, query: string): TextMatch[] {
 export const countMatches = (text: string, query: string): number => findMatches(text, query).length
 
 /**
+ * Quantas vezes a consulta aparece num texto já normalizado (<see normalizeForSearch>): para contar no mesmo texto com
+ * várias consultas sem normalizar de novo.
+ */
+export function countNormalized(normalized: string, query: string): number {
+  const q = normalizeQuery(query)
+  if (!q) return 0
+  let count = 0
+  for (let i = normalized.indexOf(q); i >= 0; i = normalized.indexOf(q, i + q.length)) count++
+  return count
+}
+
+/**
  * Converte uma posição do texto juntado (os nós de texto um atrás do outro) em nó e posição dentro dele.
  * <starts>: onde cada nó começa no texto juntado, em ordem crescente.
  */

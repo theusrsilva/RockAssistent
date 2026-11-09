@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { countMatches, findMatches, locate, normalizeForSearch, normalizeQuery } from './textSearch'
+import { countMatches, countNormalized, findMatches, locate, normalizeForSearch, normalizeQuery } from './textSearch'
 
 describe('busca no guia', () => {
   it('ignora acentos e maiúsculas', () => {
@@ -24,6 +24,7 @@ describe('busca no guia', () => {
     ])
     expect(countMatches('Brock, depois Misty; Brock de novo', 'brock')).toBe(2)
     expect(findMatches('qualquer', '   ')).toEqual([])
+    expect(countNormalized(normalizeForSearch('Brock e BROCK, Bróck').text, 'brock')).toBe(3)
   })
 
   it('acha o nó de uma posição do texto juntado', () => {
