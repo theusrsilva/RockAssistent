@@ -126,6 +126,9 @@ namespace TradeRock.Core.Storage.Migrations
                     b.Property<int>("Form")
                         .HasColumnType("INTEGER");
 
+                    b.Property<bool>("IsStarter")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Level")
                         .HasColumnType("INTEGER");
 
@@ -337,15 +340,15 @@ namespace TradeRock.Core.Storage.Migrations
                     b.Property<long?>("DeletedAt")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Family")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<bool>("Fateful")
                         .HasColumnType("INTEGER");
 
                     b.Property<byte>("Form")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Format")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.Property<byte>("Gender")
                         .HasColumnType("INTEGER");

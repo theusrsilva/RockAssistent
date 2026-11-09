@@ -27,6 +27,9 @@ public static class VaultEndpoints
 
     /// <summary>Jogo de destino (chave do catálogo: sv, swsh, za...).</summary>
     public sealed record TransferDto(string? Game);
+
+    /// <summary>Formato de destino (chave: gen4 a gen7, swsh, bdsp, pla, sv, za) e o idioma das mensagens de legalidade.</summary>
+    public sealed record AdaptDto(string? Target, string? Language = null);
     public sealed record ExportDto(IReadOnlyList<Guid> Ids, string Format = "pk3", int Size = 100);
 
     public static void MapVault(this IEndpointRouteBuilder api)
@@ -54,7 +57,7 @@ public static class VaultEndpoints
                     .Select(t => Guid.TryParse(t, out var g) ? g : Guid.Empty).Where(g => g != Guid.Empty).ToList(),
                 MinLevel = byte.TryParse(q["minLevel"], out var min) ? min : null,
                 MaxLevel = byte.TryParse(q["maxLevel"], out var max) ? max : null,
-                Family = q["game"].FirstOrDefault() is { } key ? GameCatalog.ByKey(key)?.Family : null,
+                Format = q["game"].FirstOrDefault() is { } key ? VaultFormats.ByKey(key)?.Format : null,
             };
             var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
             return await Run(async () =>
@@ -95,13 +98,23 @@ public static class VaultEndpoints
             }
         });
 
+        // Resumo de leitura de qualquer formato (D34): o construtor só abre os jogos do catálogo de troca, então o painel
+        // do cofre usa isto nos Pokémon da Gen 1, 2 e 4 a 7. Nomes em inglês, como os golpes e itens no resto do app.
+        vault.MapGet("/pokemon/{id:guid}/view", async (Guid id, PokemonStore store, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { } p)
+                return Results.NotFound();
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Format);
+            return Results.Ok(ViewDto(pk));
+        });
+
         // Evoluir por troca sem trocar (Tarefa 18). A entrada continua a mesma (id, caixa, etiquetas, histórico); o
         // Pokémon de antes vai para a lixeira, de onde dá para recuperar.
         vault.MapGet("/pokemon/{id:guid}/evolve-options", async (Guid id, PokemonStore store, CancellationToken ct) =>
         {
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound(new { error = "pokemon_not_found" });
-            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Family);
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Format);
             return Results.Ok(EvolveOptions(pk));
         });
 
@@ -111,13 +124,13 @@ public static class VaultEndpoints
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound(new { error = "pokemon_not_found" });
             var original = await store.ReadDataAsync(p, ct);
-            var pk = PokemonReader.ToEntity(original, p.Family);
+            var pk = PokemonReader.ToEntity(original, p.Format);
             try
             {
                 var evolved = TradeEvolution.Apply(pk, body.Species, body.Form);
                 var replaced = await store.ReplaceAsync(id, SameSize(evolved, original.Length), ct);
                 // Cópia do Pokémon de antes na lixeira (o SHA antigo ficou livre com a troca dos dados).
-                var backup = await store.ImportAsync(original, p.Origin, p.SourceFileName, ct, p.Family);
+                var backup = await store.ImportAsync(original, p.Format, p.Origin, p.SourceFileName, ct);
                 if (backup.Pokemon.Id != id)
                     await vault.TrashAsync([backup.Pokemon.Id], ct);
                 var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
@@ -147,8 +160,8 @@ public static class VaultEndpoints
             var original = await store.ReadDataAsync(p, ct);
             try
             {
-                var clone = PokemonClone.Clone(PokemonReader.ToEntity(original, p.Family));
-                var result = await store.ImportAsync(SameSize(clone, original.Length), p.Origin, p.SourceFileName, ct, p.Family);
+                var clone = PokemonClone.Clone(PokemonReader.ToEntity(original, p.Format));
+                var result = await store.ImportAsync(SameSize(clone, original.Length), p.Format, p.Origin, p.SourceFileName, ct);
                 if (!result.Created)
                     return Results.Conflict(new { error = "clone_exists" });
                 var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
@@ -199,6 +212,61 @@ public static class VaultEndpoints
                 var (moved, notes) = await store.TransferAsync(id, to.Family, owner, ct);
                 var mine = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
                 return Results.Ok(new { pokemon = PokemonEndpoints.PokemonDto.From(moved, mine), notes });
+            }
+            catch (VaultException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
+        });
+
+        // Adaptar para um jogo mais novo (D34): caminhos oficiais, o original fica e a cópia vai para a Caixa de entrada.
+        vault.MapGet("/pokemon/{id:guid}/adapt-options", async (Guid id, PokemonStore store, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            return Results.Ok((await store.AdaptOptionsAsync(p, ct)).Select(o =>
+            {
+                var format = VaultFormats.Get(o.Target);
+                return new
+                {
+                    target = format.Key,
+                    generation = format.Generation,
+                    tradable = format.Family is not null,
+                    steps = o.Steps.Select(StepKey).ToList(),
+                    refusal = o.Refusal,
+                    refusedAt = o.RefusedAt is { } at && Enum.TryParse<TransferStep>(at, out var step) ? StepKey(step) : null,
+                };
+            }));
+        });
+
+        vault.MapPost("/pokemon/{id:guid}/adapt", async (Guid id, AdaptDto body, PokemonStore store, SettingsStore settings,
+            CancellationToken ct) =>
+        {
+            if (VaultFormats.ByKey(body.Target ?? "") is not { } to)
+                return Results.BadRequest(new { error = "target_invalid" });
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null })
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            // Quem recebe: o "Meu treinador" do jogo de destino; nas Gen 4 a 7 (fora do catálogo), o "Meu treinador" geral.
+            var key = to.Family is { } family ? BuilderEndpoints.MyTrainerKeyFor(family) : BuilderEndpoints.MyTrainerKey;
+            var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(key), null, ct);
+            var owner = new SimpleTrainerInfo(to.Context.GetSingleGameVersion())
+            {
+                OT = me?.Name ?? TradeRock.Core.Trading.TrainerProfile.Default.Name,
+                TID16 = me?.Tid ?? TradeRock.Core.Trading.TrainerProfile.Default.Tid,
+                SID16 = me?.Sid ?? TradeRock.Core.Trading.TrainerProfile.Default.Sid ?? 0,
+                Gender = me?.Gender ?? 0,
+                Language = (int)LanguageID.English, // o "Meu treinador" não guarda o idioma do jogo
+            };
+            try
+            {
+                var (adapted, notes, pk) = await store.AdaptAsync(id, to.Format, owner, ct);
+                var mine = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
+                return Results.Ok(new
+                {
+                    pokemon = PokemonEndpoints.PokemonDto.From(adapted, mine),
+                    notes,
+                    legality = LegalityDto(pk, body.Language),
+                });
             }
             catch (VaultException ex)
             {
@@ -270,6 +338,43 @@ public static class VaultEndpoints
         });
     }
 
+    /// <summary>Etapa em snake_case, como os enums do JSON.</summary>
+    private static string StepKey(TransferStep step) => step switch
+    {
+        TransferStep.VirtualConsole => "virtual_console",
+        TransferStep.PalPark => "pal_park",
+        TransferStep.PokeTransfer => "poke_transfer",
+        TransferStep.PokeTransporter => "poke_transporter",
+        TransferStep.PokemonBank => "pokemon_bank",
+        _ => "home",
+    };
+
+    /// <summary>Dados para o painel (texto pronto) de um Pokémon de qualquer geração.</summary>
+    internal static object ViewDto(PKM pk)
+    {
+        var strings = GameInfo.GetStrings("en");
+        var items = strings.GetItemStrings(pk.Context, pk.Version);
+        string? Text(IReadOnlyList<string> list, int index) => index > 0 && index < list.Count ? list[index] : null;
+        var ivs = new int[6];
+        pk.GetIVs(ivs);
+        var evs = new int[6];
+        pk.GetEVs(evs);
+        return new
+        {
+            moves = pk.Moves.Where(m => m > 0).Select(m => Text(strings.movelist, m) ?? $"#{m}").ToList(),
+            ivs,
+            evs,
+            maxEv = pk.Format <= 2 ? 65535 : 255,
+            // A Gen 1 e 2 não têm natureza nem habilidade.
+            nature = pk.Format >= 3 ? Text(strings.natures, (int)pk.Nature) ?? strings.natures[0] : null,
+            ability = pk.Format >= 3 ? Text(strings.abilitylist, pk.Ability) : null,
+            heldItem = Text(items, pk.HeldItem),
+            ball = pk.Format >= 3 ? Text(strings.balllist, pk.Ball) : null,
+            language = ((LanguageID)pk.Language).ToString(),
+            metLevel = pk.Format >= 3 ? (int?)pk.MetLevel : null,
+        };
+    }
+
     /// <summary>Opções de evolução por troca para a tela (nomes em inglês, como os itens no resto do app).</summary>
     internal static IReadOnlyList<object> EvolveOptions(PKM pk)
     {
@@ -321,7 +426,7 @@ public static class VaultEndpoints
         {
             if (await store.GetAsync(id, ct) is not { } p)
                 continue;
-            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Family, body.Format, body.Size);
+            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Format, body.Format, body.Size);
             var name = Pk3Export.FileName(p.Species, string.IsNullOrWhiteSpace(p.Nickname) ? p.SpeciesName : p.Nickname, extension);
             var unique = name;
             for (var i = 2; !names.Add(unique); i++)

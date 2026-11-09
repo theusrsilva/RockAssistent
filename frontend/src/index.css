@@ -219,3 +219,13 @@ body {
 .tr-pulse {
   animation: tr-pulse 1.6s ease-out infinite;
 }
+
+/* Busca dentro do guia (CSS Custom Highlight API: o destaque não mexe no DOM do React). */
+::highlight(guide-search) {
+  background-color: var(--tr-warn-soft);
+  color: inherit;
+}
+::highlight(guide-search-current) {
+  background-color: var(--tr-warn);
+  color: var(--tr-bg);
+}

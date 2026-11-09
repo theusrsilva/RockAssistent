@@ -142,7 +142,6 @@ export function planDrop(source: DragSource, target: DropTarget, mode: MoveMode)
     }
   }
   if (source.kind === 'save' && target.kind === 'vault') {
-    if (source.family === null) return { kind: 'refuse', code: 'save_game_unsupported' }
     if (target.occupied) return { kind: 'refuse', code: 'slot_occupied' }
   }
   if (source.kind === 'vault' && target.kind === 'save' && target.data !== null) return { kind: 'refuse', code: 'slot_occupied' }
@@ -169,8 +168,9 @@ export interface TabState {
   savesBlocked: boolean
 }
 
-export function initialTab({ remote, wantsVault }: { remote: boolean; wantsVault: boolean }): TabState {
-  return { tab: remote || wantsVault ? 'vault' : 'saves', savesBlocked: remote }
+/** A tela abre no cofre; só `?aba=saves` (na janela do PC) abre nos saves. */
+export function initialTab({ remote, wantsSaves }: { remote: boolean; wantsSaves: boolean }): TabState {
+  return { tab: wantsSaves && !remote ? 'saves' : 'vault', savesBlocked: remote }
 }
 
 export function tabReducer(state: TabState, action: { type: 'select'; tab: BoxesTab } | { type: 'forbidden' }): TabState {

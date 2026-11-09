@@ -19,7 +19,11 @@ public sealed record RunInfo(
     DateTimeOffset? EndedAt,
     string? CurrentAreaId);
 
-/// <summary>Pokémon da run como vai para a API. <see cref="Moves"/>: identificadores do PokeAPI.</summary>
+/// <summary>
+/// Pokémon da run como vai para a API. <see cref="Moves"/>: identificadores do PokeAPI. <see cref="IsStarter"/>: o inicial
+/// que a run pôs sozinha (só usa a área quando ela é uma cidade). <see cref="Form"/>: posição da forma no PokeAPI (0 = a
+/// padrão); <see cref="FormId"/>: o id do <c>pokemon</c> dela, para o sprite (null na padrão).
+/// </summary>
 public sealed record MonInfo(
     Guid Id,
     string AreaId,
@@ -32,9 +36,14 @@ public sealed record MonInfo(
     DateTimeOffset CaughtAt,
     DateTimeOffset? DiedAt,
     IReadOnlyList<string> Moves,
-    bool Shiny);
+    bool Shiny,
+    bool IsStarter = false,
+    int? FormId = null);
 
-/// <summary>Uma espécie que aparece na área, com os métodos, as versões e a faixa de nível juntados.</summary>
+/// <summary>
+/// Uma espécie que aparece na área, com os métodos, as versões e a faixa de nível juntados. <see cref="FormId"/>: id do
+/// <c>pokemon</c> da forma, para o sprite (null na padrão).
+/// </summary>
 public sealed record SpeciesEncounterOption(
     int Species,
     int Form,
@@ -42,7 +51,8 @@ public sealed record SpeciesEncounterOption(
     IReadOnlyList<string> Methods,
     int MinLevel,
     int MaxLevel,
-    IReadOnlyList<string> Versions);
+    IReadOnlyList<string> Versions,
+    int? FormId = null);
 
 /// <summary>
 /// A tela da run. <see cref="CurrentArea"/>: a área atual (a primeira do jogo se a run ainda não mudou; null só se o
@@ -94,7 +104,8 @@ public static class RunProgress
         var boss = NextBoss(data.Bosses(run.GameKey), defeated, run.Version, run.Starter);
         int? cap = boss is { LevelCap: > 0 } ? boss.LevelCap : null;
 
-        var all = mons.OrderBy(m => m.CaughtAt).Select(Info).ToList();
+        var all = mons.OrderBy(m => m.CaughtAt).Select(Info)
+            .Select(m => m.Form > 0 && DexDatabase.ResourceExists ? m with { FormId = dex.FormPokemonId(m.Species, m.Form) } : m).ToList();
         var party = all.Where(m => m.Status == NuzlockeStatus.Party).ToList();
         var trainersAvailable = data.GamesWithTrainers.Contains(run.GameKey);
         var trainers = area is null || !trainersAvailable
@@ -156,7 +167,7 @@ public static class RunProgress
         JsonSerializer.Deserialize<NuzlockeRules>(run.RulesJson, Json) ?? NuzlockeRules.Default;
 
     public static MonInfo Info(NuzlockeMon m) => new(m.Id, m.AreaId, m.Species, m.Form, m.Nickname, m.Level, m.Status,
-        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? [], m.Shiny);
+        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? [], m.Shiny, m.IsStarter);
 
     public static IReadOnlyList<string> DefeatedBosses(IReadOnlyList<NuzlockeEvent> events) =>
         events.OrderBy(e => e.At).Where(e => e.Kind == NuzlockeEvents.BossDefeated).Select(e => Read(e, "bossId"))
@@ -204,7 +215,8 @@ public static class RunProgress
                 g.Select(r => r.Method).Distinct().ToList(),
                 g.Min(r => r.Min),
                 g.Max(r => r.Max),
-                g.SelectMany(r => r.Versions).Distinct().OrderBy(v => order.IndexOf(v) is var i and >= 0 ? i : int.MaxValue).ToList()))
+                g.SelectMany(r => r.Versions).Distinct().OrderBy(v => order.IndexOf(v) is var i and >= 0 ? i : int.MaxValue).ToList(),
+                g.Key.Form > 0 && DexDatabase.ResourceExists ? dex.FormPokemonId(g.Key.Species, g.Key.Form) : null))
             .OrderBy(o => o.Species)
             .ThenBy(o => o.Form)
             .ToList();

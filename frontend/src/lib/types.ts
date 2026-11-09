@@ -15,6 +15,11 @@ export type TradeGame =
   | 'legends_za'
 /** Jogo do Switch (as duas versões de um par juntas), como o backend agrupa (GameCatalog). */
 export type GameFamily = 'frlg' | 'lgpe' | 'swsh' | 'bdsp' | 'pla' | 'sv' | 'za'
+/**
+ * Formato de um Pokémon do cofre (D34). Os jogos do catálogo de troca usam a própria chave; os outros ficam no cofre,
+ * mas não trocam com o Switch (adapte para um jogo do Switch para trocar).
+ */
+export type VaultFormatKey = GameFamily | 'gen1' | 'gen2' | 'gen4' | 'gen5' | 'gen6' | 'gen7'
 export type PokemonOrigin = 'imported' | 'received' | 'demo' | 'created'
 export type LegalityStatus = 'legal' | 'illegal' | 'unverifiable'
 export type TradeSessionStatus = 'running' | 'completed' | 'partially_completed' | 'failed' | 'cancelled'
@@ -61,7 +66,11 @@ export interface Health {
 
 export interface Pokemon {
   id: string
-  family: GameFamily
+  /** Formato do arquivo (chave do jogo de troca ou gen1, gen2, gen4 a gen7). */
+  family: VaultFormatKey
+  generation: number
+  /** O formato troca com o Switch (é de um jogo do catálogo de troca). */
+  tradable: boolean
   species: number
   form: number
   speciesName: string

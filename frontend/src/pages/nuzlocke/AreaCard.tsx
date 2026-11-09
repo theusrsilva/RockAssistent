@@ -2,11 +2,11 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { SearchSelect } from '../../components/SearchSelect'
-import { Badge, Button, Callout, Card, Field, Modal, Segmented, Toggle, inputClass, useToast } from '../../components/ui'
+import { Badge, Button, Callout, Card, Field, IconButton, Modal, Segmented, Toggle, inputClass, useToast } from '../../components/ui'
 import { api, spriteUrl } from '../../lib/api'
 import { titleCase, versionName } from '../../lib/dex'
 import type { Option } from '../../lib/types'
-import { areaUsed, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
+import { areaUsed, formSprite, neighborAreas, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 type CatchStatus = Exclude<MonStatus, 'dead'>
@@ -31,7 +31,7 @@ export default function AreaCard({
 }) {
   const { t } = useTranslation()
   const toast = useToast()
-  const [catching, setCatching] = useState<{ species: number | null; level: number } | null>(null)
+  const [catching, setCatching] = useState<{ species: number | null; form?: number; formId?: number | null; level: number } | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [confirmNone, setConfirmNone] = useState(false)
   const area = view.currentArea
@@ -47,11 +47,15 @@ export default function AreaCard({
       setError(nuzlockeErrorMessage(t, e))
     }
   }
-  const used = area ? areaUsed(view, area.id) : false
+  const used = area ? areaUsed(view, area) : false
+  // Pela regra do primeiro encontro, área usada não pede mais "Capturei" (o inicial já vem capturado na área dele).
+  const closed = used && view.run.rules.firstEncounterOnly
+  const caughtHere = new Set(area ? [...view.party, ...view.box, ...view.graveyard].filter((m) => m.areaId === area.id).map((m) => m.species) : [])
   const runId = view.run.id
 
   const areaOptions = useMemo(() => areas.map((a, i) => ({ value: i, text: a.name })), [areas])
   const areaIndex = area ? areas.findIndex((a) => a.id === area.id) : -1
+  const { prev, next } = neighborAreas(areas, area?.id)
 
   async function changeArea(index: number | null) {
     if (index == null || !areas[index] || areas[index].id === area?.id) return
@@ -83,9 +87,27 @@ export default function AreaCard({
       {areas.length === 0 && !area ? (
         <p className="text-sm text-muted">{t('nuzlocke.area.noAreas')}</p>
       ) : (
-        <Field label={t('nuzlocke.area.change')}>
-          <SearchSelect options={areaOptions} value={areaIndex >= 0 ? areaIndex : null} onChange={(i) => void changeArea(i)} placeholder={t('nuzlocke.area.search')} />
-        </Field>
+        <div className="flex items-end gap-1.5">
+          <IconButton
+            name="chevron_left"
+            label={prev ? t('nuzlocke.area.prev', { name: prev.name }) : t('nuzlocke.area.prevNone')}
+            className="h-10 w-10"
+            disabled={!prev || readOnly}
+            onClick={() => void changeArea(areaIndex - 1)}
+          />
+          <div className="min-w-0 flex-1">
+            <Field label={t('nuzlocke.area.change')}>
+              <SearchSelect options={areaOptions} value={areaIndex >= 0 ? areaIndex : null} onChange={(i) => void changeArea(i)} placeholder={t('nuzlocke.area.search')} />
+            </Field>
+          </div>
+          <IconButton
+            name="chevron_right"
+            label={next ? t('nuzlocke.area.next', { name: next.name }) : t('nuzlocke.area.nextNone')}
+            className="h-10 w-10"
+            disabled={!next || readOnly}
+            onClick={() => void changeArea(areaIndex + 1)}
+          />
+        </div>
       )}
       {error && (
         <Callout tone="red" icon="error">
@@ -101,7 +123,14 @@ export default function AreaCard({
           ) : (
             <ul className="flex flex-col gap-1.5">
               {view.areaEncounters.map((e) => (
-                <EncounterRow key={`${e.species}-${e.form}`} e={e} showVersions={!view.run.version} readOnly={readOnly} onCatch={() => setCatching({ species: e.species, level: e.minLevel })} />
+                <EncounterRow
+                  key={`${e.species}-${e.form}`}
+                  e={e}
+                  showVersions={!view.run.version}
+                  readOnly={readOnly}
+                  caught={caughtHere.has(e.species)}
+                  closed={closed}
+                  onCatch={() => setCatching({ species: e.species, form: e.form, formId: e.formId, level: e.minLevel })} />
               ))}
             </ul>
           )}
@@ -122,7 +151,7 @@ export default function AreaCard({
                 {lostHere.map((m) => (
                   <li key={m.id} className="flex flex-wrap items-center gap-2">
                     {m.species > 0 ? (
-                      <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9 opacity-70" loading="lazy" />
+                      <img src={formSprite(m)} alt="" className="pixelated h-9 w-9 opacity-70" loading="lazy" />
                     ) : (
                       <span aria-hidden className="icon flex h-9 w-9 items-center justify-center text-muted">
                         block
@@ -184,13 +213,29 @@ export default function AreaCard({
   )
 }
 
-function EncounterRow({ e, showVersions, readOnly, onCatch }: { e: SpeciesEncounterOption; showVersions: boolean; readOnly: boolean; onCatch: () => void }) {
+function EncounterRow({
+  e,
+  showVersions,
+  readOnly,
+  caught,
+  closed,
+  onCatch,
+}: {
+  e: SpeciesEncounterOption
+  showVersions: boolean
+  readOnly: boolean
+  /** Já capturado nesta área (ex.: o inicial). */
+  caught: boolean
+  /** Área já usada pela regra do primeiro encontro: sem "Capturei". */
+  closed: boolean
+  onCatch: () => void
+}) {
   const { t } = useTranslation()
   const method = (m: string) => t(`dex.method.${m}`, { defaultValue: titleCase(m) })
   return (
     <li className="flex items-center gap-2 rounded-lg bg-surface2 px-2 py-1.5">
       <Link to={`/pokedex/${e.species}`} className="shrink-0">
-        <img src={spriteUrl(e.species)} alt="" className="pixelated h-11 w-11" loading="lazy" />
+        <img src={formSprite(e)} alt="" className="pixelated h-11 w-11" loading="lazy" />
       </Link>
       <div className="min-w-0 flex-1 text-[12.5px]">
         <div className="font-bold text-ink">{e.name}</div>
@@ -207,10 +252,17 @@ function EncounterRow({ e, showVersions, readOnly, onCatch }: { e: SpeciesEncoun
           </div>
         )}
       </div>
-      {!readOnly && (
-        <Button size="sm" icon="radio_button_checked" onClick={onCatch}>
-          {t('nuzlocke.area.caught')}
-        </Button>
+      {caught ? (
+        <Badge tone="emerald" icon="check">
+          {t('nuzlocke.area.caughtHere')}
+        </Badge>
+      ) : (
+        !readOnly &&
+        !closed && (
+          <Button size="sm" icon="radio_button_checked" onClick={onCatch}>
+            {t('nuzlocke.area.caught')}
+          </Button>
+        )
       )}
     </li>
   )
@@ -228,7 +280,8 @@ function CatchDialog({
 }: {
   view: RunView
   areaId: string
-  initial: { species: number | null; level: number }
+  /** Da lista de encontros: espécie e forma (regionais) já escolhidas. */
+  initial: { species: number | null; form?: number; formId?: number | null; level: number }
   names: Map<number, string>
   speciesOptions: Option[]
   mutate: Mutate
@@ -255,7 +308,7 @@ function CatchDialog({
         api.post<RunView>(`/api/nuzlocke/${view.run.id}/encounter`, {
           areaId,
           species,
-          form: 0,
+          form: species === initial.species ? (initial.form ?? 0) : 0,
           nickname: nickname.trim() || null,
           level: Number(level) || 0,
           status,
@@ -287,7 +340,7 @@ function CatchDialog({
       <div className="flex flex-col gap-3">
         {initial.species ? (
           <div className="flex items-center gap-2">
-            <img src={spriteUrl(initial.species, { shiny })} alt="" className="pixelated h-14 w-14" />
+            <img src={formSprite({ species: initial.species, formId: initial.formId, shiny })} alt="" className="pixelated h-14 w-14" />
             <span className="font-bold">{names.get(initial.species) ?? `#${initial.species}`}</span>
           </div>
         ) : (

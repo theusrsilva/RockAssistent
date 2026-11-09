@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, formatRule, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
+import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, conditionParts, evolveHow, evolveOptions, formatRule, neighborAreas, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
 
 const mon = (over: Partial<MonInfo>): MonInfo => ({
   id: over.id ?? 'm',
@@ -48,6 +48,9 @@ const view = (over: Partial<RunView>): RunView => ({
 
 /** t falso: devolve a chave e os valores, para conferir o que foi pedido. */
 const t = ((key: string, opts?: Record<string, unknown>) => (opts ? `${key}:${JSON.stringify(opts)}` : key)) as never
+
+const route1 = { id: 'route-1', kind: 'route' }
+const route2 = { id: 'route-2', kind: 'route' }
 
 describe('overCap', () => {
   it('lista quem passou do cap', () => {
@@ -105,10 +108,13 @@ describe('areaStates (mapa)', () => {
 
 describe('áreas', () => {
   it('área usada ignora o missed', () => {
-    expect(areaUsed(view({ lost: [mon({ status: 'missed' })] }), 'route-1')).toBe(false)
-    expect(areaUsed(view({ lost: [mon({ status: 'failed' })] }), 'route-1')).toBe(true)
-    expect(areaUsed(view({ graveyard: [mon({ status: 'dead' })] }), 'route-1')).toBe(true)
-    expect(areaUsed(view({ party: [mon({})] }), 'route-2')).toBe(false)
+    expect(areaUsed(view({ lost: [mon({ status: 'missed' })] }), route1)).toBe(false)
+    expect(areaUsed(view({ lost: [mon({ status: 'failed' })] }), route1)).toBe(true)
+    expect(areaUsed(view({ graveyard: [mon({ status: 'dead' })] }), route1)).toBe(true)
+    expect(areaUsed(view({ party: [mon({})] }), route2)).toBe(false)
+    // Inicial automático: usa a cidade, não a rota.
+    expect(areaUsed(view({ party: [mon({ isStarter: true })] }), route1)).toBe(false)
+    expect(areaUsed(view({ party: [mon({ isStarter: true, areaId: 'pallet-town' })] }), { id: 'pallet-town', kind: 'city' })).toBe(true)
   })
   it('ordena pela ordem do jogo', () => {
     const a = (id: string, order: number) => ({ id, name: id, kind: 'route', order, mapNode: null, pokeApiLocationId: null, bossesBefore: [] })
@@ -186,5 +192,62 @@ describe('variantes por inicial', () => {
     const gym = { ...rival, variants: null }
     expect(chosenVariant(gym, 'chikorita')).toBeNull()
     expect(bossTeam(gym, 'chikorita').party[0].species).toBe(158)
+  })
+})
+
+describe('evolveOptions', () => {
+  const ev = (species: number, name: string, conditions: string[]) => ({ species, name, conditions, onEvolve: [], upcoming: [] })
+
+  it('por nível: pronta só a partir do nível', () => {
+    const pidgey = [ev(17, 'Pidgeotto', ['level 18'])]
+    expect(evolveOptions(pidgey, 18)).toEqual([{ species: 17, form: 0, formId: null, name: 'Pidgeotto', how: { kind: 'level', level: 18 }, ready: true }])
+    // Forma regional do destino (Raticate de Alola).
+    expect(evolveOptions([{ ...ev(20, 'Raticate', ['level 20']), form: 1, formId: 10092 }], 20)[0]).toMatchObject({ form: 1, formId: 10092 })
+    expect(evolveOptions(pidgey, 17)[0].ready).toBe(false)
+  })
+
+  it('por pedra: uma opção por evolução, sempre disponível', () => {
+    const eevee = [ev(134, 'Vaporeon', ['use Water Stone']), ev(135, 'Jolteon', ['use Thunder Stone']), ev(136, 'Flareon', ['use Fire Stone'])]
+    const options = evolveOptions(eevee, 5)
+    expect(options).toHaveLength(3)
+    expect(options.every((o) => o.ready && o.how.kind === 'item')).toBe(true)
+    expect(options[1].how).toEqual({ kind: 'item', item: 'Thunder Stone' })
+  })
+
+  it('por troca e por amizade', () => {
+    expect(evolveOptions([ev(94, 'Gengar', ['trade'])], 30)[0]).toMatchObject({ how: { kind: 'trade', detail: null }, ready: true })
+    expect(evolveHow('trade holding Metal Coat')).toEqual({ kind: 'trade', detail: 'holding Metal Coat' })
+    expect(evolveHow('level up friendship 220')).toEqual({ kind: 'friendship' })
+    expect(evolveHow('level up at night friendship 160')).toEqual({ kind: 'other', text: 'level up at night friendship 160' })
+  })
+})
+
+describe('neighborAreas', () => {
+  const area = (id: string, order: number) => ({ id, name: id, kind: 'route', order, mapNode: null, pokeApiLocationId: null, bossesBefore: [] })
+  const areas = [area('pallet-town', 1), area('route-1', 2), area('viridian-city', 3)]
+
+  it('acha a anterior e a próxima', () => {
+    expect(neighborAreas(areas, 'route-1')).toEqual({ prev: areas[0], next: areas[2] })
+  })
+
+  it('pontas e área desconhecida', () => {
+    expect(neighborAreas(areas, 'pallet-town')).toEqual({ prev: null, next: areas[1] })
+    expect(neighborAreas(areas, 'viridian-city')).toEqual({ prev: areas[1], next: null })
+    expect(neighborAreas(areas, 'x')).toEqual({ prev: null, next: null })
+    expect(neighborAreas(areas, null)).toEqual({ prev: null, next: null })
+  })
+})
+
+describe('conditionParts', () => {
+  it('entende os casos comuns', () => {
+    expect(conditionParts('level up at night friendship 160')).toEqual([{ key: 'friendship' }, { key: 'night' }])
+    expect(conditionParts('level up knowing Ancient Power')).toEqual([{ key: 'knowing', values: { move: 'Ancient Power' } }])
+    expect(conditionParts('level up beauty 171')).toEqual([{ key: 'beauty' }])
+    expect(conditionParts('level up at day holding Oval Stone')).toEqual([{ key: 'day' }, { key: 'holding', values: { item: 'Oval Stone' } }])
+    expect(conditionParts('level up at Mt. Coronet')).toEqual([{ key: 'place', values: { place: 'Mt. Coronet' } }])
+  })
+
+  it('sem nada conhecido, vazio (texto genérico)', () => {
+    expect(conditionParts('spin')).toEqual([])
   })
 })

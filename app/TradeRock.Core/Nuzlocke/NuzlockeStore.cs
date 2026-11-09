@@ -44,14 +44,20 @@ public static class NuzlockeEvents
     public const string RunFinished = "run_finished";
 }
 
-/// <summary><see cref="Starter"/>: inicial do jogador (<c>GameStarters</c>), opcional.</summary>
-public sealed record NewRun(string? Name, string GameKey, string? Version, NuzlockeRules? Rules, string? Starter = null);
+/// <summary>
+/// <see cref="Starter"/>: inicial do jogador (<c>GameStarters</c>), opcional. Com ele, a run já começa com o inicial na
+/// equipe (apelido <see cref="StarterNickname"/>; obrigatório se a regra pede apelido).
+/// </summary>
+public sealed record NewRun(string? Name, string GameKey, string? Version, NuzlockeRules? Rules, string? Starter = null,
+    string? StarterNickname = null);
 
 /// <summary>
 /// Campos nulos ficam como estão. <see cref="Status"/>: só <c>active</c> ou <c>paused</c> (o fim é pelo finish).
-/// <see cref="Starter"/>: texto vazio apaga o inicial.
+/// <see cref="Starter"/>: texto vazio apaga o inicial. <see cref="StarterNickname"/>: apelido do inicial quando ele entra
+/// na equipe agora (inicial informado pela primeira vez).
 /// </summary>
-public sealed record RunChanges(string? Name, string? Status, NuzlockeRules? Rules, string? Starter = null);
+public sealed record RunChanges(string? Name, string? Status, NuzlockeRules? Rules, string? Starter = null,
+    string? StarterNickname = null);
 
 /// <summary>Encontro registrado. <see cref="Species"/> 0 = sem encontro (só com <c>missed</c>/<c>failed</c>).</summary>
 public sealed record NewEncounter(string AreaId, int Species, int Form, string? Nickname, int Level, string Status, bool Shiny = false);
@@ -63,9 +69,12 @@ public sealed record MonChanges(string? Status, int? Level, string? Nickname, st
 /// <summary>Golpe por nível: identificador do PokeAPI, nome em inglês, tipo e nível (0 = ao evoluir).</summary>
 public sealed record LearnsetMove(string Move, string Name, string Type, int Level);
 
-/// <summary>Próxima evolução: como evolui, o que aprende ao evoluir e os golpes por nível acima do nível atual.</summary>
+/// <summary>
+/// Próxima evolução: como evolui, o que aprende ao evoluir e os golpes por nível acima do nível atual. <see cref="Form"/>:
+/// forma do destino (posição no PokeAPI, 0 = a padrão; o Rattata de Alola vira o Raticate de Alola).
+/// </summary>
 public sealed record EvolutionLearnset(int Species, string Name, IReadOnlyList<string> Conditions, IReadOnlyList<LearnsetMove> OnEvolve,
-    IReadOnlyList<LearnsetMove> Upcoming);
+    IReadOnlyList<LearnsetMove> Upcoming, int Form = 0, int? FormId = null);
 
 /// <summary>
 /// Golpes do Pokémon da run, no grupo de versões da run. <see cref="Known"/>: os por nível até o nível atual (para mostrar
@@ -125,6 +134,9 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             throw new NuzlockeException("invalid_name");
         var rules = (body.Rules ?? NuzlockeRules.Default).Normalize();
         var starter = Starter(game.Key, body.Starter);
+        var starterNickname = Nickname(body.StarterNickname);
+        if (starter is not null && rules.NicknameRequired && starterNickname is null)
+            throw new NuzlockeException("nickname_required");
 
         var now = time.GetUtcNow();
         var run = new NuzlockeRun
@@ -142,6 +154,8 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         await using var db = await dbFactory.CreateDbContextAsync(ct);
         db.NuzlockeRuns.Add(run);
         AddEvent(db, run, NuzlockeEvents.RunStarted, new { gameKey = run.GameKey, version, name, starter });
+        if (starter is not null)
+            AddStarterMon(db, run, starter, starterNickname);
         await db.SaveChangesAsync(ct);
         return await ViewAsync(db, run, ct);
     }
@@ -160,9 +174,133 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         if (changes.Rules is { } rules)
             run.RulesJson = JsonSerializer.Serialize(rules.Normalize(), RunProgress.Json);
         if (changes.Starter is { } starter)
-            run.Starter = Starter(run.GameKey, starter);
+        {
+            var id2 = Starter(run.GameKey, starter);
+            if (id2 is not null && id2 != run.Starter)
+                await PlaceStarterAsync(db, run, id2, Nickname(changes.StarterNickname), ct);
+            run.Starter = id2;
+        }
         await db.SaveChangesAsync(ct);
         return await ViewAsync(db, run, ct);
+    }
+
+    /// <summary>
+    /// Inicial informado ou trocado depois da criação. Se o Pokémon que a run pôs sozinha na equipe
+    /// (<see cref="NuzlockeMon.IsStarter"/>) ainda está lá e nunca foi mexido (nenhum <c>mon_updated</c> da pessoa), ele
+    /// vira o novo inicial: espécie, área e nível do presente mudam, o apelido fica, e as cláusulas valem como numa
+    /// captura (sem contar ele mesmo). Se a run nunca teve esse Pokémon, ele entra agora (apelido obrigatório se a regra
+    /// pede; nada entra se a área do presente já foi usada, a espécie já foi pega ou a equipe está cheia). Nos outros casos
+    /// só o inicial da run muda (o time do rival), sem mexer nos Pokémon.
+    /// </summary>
+    private async Task PlaceStarterAsync(TradeRockDb db, NuzlockeRun run, string starter, string? nickname, CancellationToken ct)
+    {
+        var mons = await db.NuzlockeMons.Where(m => m.RunId == run.Id).ToListAsync(ct);
+        var info = GameStarters.For(run.GameKey).First(s => s.Id == starter);
+        var (area, level) = StarterGift(run, info);
+        if (area is null)
+            return;
+        var rules = RunProgress.Rules(run);
+
+        if (mons.LastOrDefault(m => m.IsStarter) is { } auto)
+        {
+            var edited = (await db.NuzlockeEvents.Where(e => e.RunId == run.Id && e.Kind == NuzlockeEvents.MonUpdated).ToListAsync(ct))
+                .Where(e => !IsStarterEvent(e)).Select(e => ReadGuid(e, "monId")).ToHashSet();
+            if (auto.Status != NuzlockeStatus.Party || edited.Contains(auto.Id))
+                return;
+            CheckClauses(rules, mons.Where(m => m.Id != auto.Id), area, info.Species, shiny: false);
+            (auto.Species, auto.Form, auto.Level, auto.AreaId) = (info.Species, 0, level, area.Id);
+            AddEvent(db, run, NuzlockeEvents.MonUpdated, new { monId = auto.Id, species = info.Species, form = 0, starter = true });
+            return;
+        }
+        if ((area.Kind == "city" && mons.Any(m => m.AreaId == area.Id && UsesArea(m, area)))
+            || mons.Any(m => NuzlockeStatus.Caught(m.Status) && m.Species == info.Species)
+            || mons.Count(m => m.Status == NuzlockeStatus.Party) >= MaxPartySize)
+            return;
+        if (rules.NicknameRequired && nickname is null)
+            throw new NuzlockeException("nickname_required");
+        AddStarterMon(db, run, starter, nickname);
+    }
+
+    /// <summary>Põe o inicial na equipe (status <c>party</c>, forma padrão, sem shiny, <c>IsStarter</c>) e grava o <c>encounter</c> com <c>starter: true</c>.</summary>
+    private void AddStarterMon(TradeRockDb db, NuzlockeRun run, string starter, string? nickname)
+    {
+        var info = GameStarters.For(run.GameKey).First(s => s.Id == starter);
+        var (area, level) = StarterGift(run, info);
+        if (area is null)
+            return;
+        var mon = new NuzlockeMon
+        {
+            Id = Guid.CreateVersion7(),
+            RunId = run.Id,
+            AreaId = area.Id,
+            Species = info.Species,
+            Form = 0,
+            Nickname = nickname,
+            Level = level,
+            Status = NuzlockeStatus.Party,
+            Shiny = false,
+            IsStarter = true,
+            CaughtAt = time.GetUtcNow(),
+            MovesJson = "[]",
+        };
+        db.NuzlockeMons.Add(mon);
+        AddEvent(db, run, NuzlockeEvents.Encounter, new
+        {
+            monId = mon.Id, areaId = area.Id, species = mon.Species, form = 0, status = mon.Status, shiny = false, starter = true,
+        });
+    }
+
+    /// <summary>
+    /// Onde o jogo dá o inicial quando o PokeAPI erra (conferido nos detonados): Platinum no Lake Verity (o PokeAPI diz
+    /// Route 201). O Z-A usa os nossos encontros (Serebii: "Lumiose City", no Vert District, onde se chega).
+    /// </summary>
+    private static readonly Dictionary<string, string> StarterAreaOverrides = new() { ["pt"] = "lake-verity" };
+
+    /// <summary>
+    /// Área e nível em que o jogo dá o inicial: a exceção nossa (<see cref="StarterAreaOverrides"/>), senão o encontro
+    /// <c>gift</c> da espécie (nossos encontros nos jogos que os têm, senão o PokeAPI), na área de menor ordem; sem dado, a
+    /// primeira área do jogo. Nível do presente (padrão 5).
+    /// </summary>
+    internal (GameArea? Area, int Level) StarterGift(NuzlockeRun run, StarterInfo starter)
+    {
+        var areas = data.Areas(run.GameKey);
+        var gifts = new List<(string AreaId, int Level)>();
+        var own = data.Encounters(run.GameKey);
+        if (own.Count > 0)
+        {
+            gifts.AddRange(own.Where(e => e.Species == starter.Species && e.Method == "gift" && RunProgress.InVersion(e.Versions, run.Version))
+                .Select(e => (e.Area, e.MinLevel)));
+        }
+        else if (DexDatabase.ResourceExists)
+        {
+            foreach (var (location, lvl) in dex.GiftLocations(starter.Species, run.GameKey, run.Version))
+                gifts.AddRange(areas.Where(a => a.PokeApiLocationId == location).Select(a => (a.Id, lvl)));
+        }
+        var best = gifts.Select(g => (Area: areas.FirstOrDefault(a => a.Id == g.AreaId), g.Level)).Where(g => g.Area is not null)
+            .OrderBy(g => g.Area!.Order).FirstOrDefault();
+        var level = best.Level is >= 1 and <= 100 ? best.Level : 5;
+        if (StarterAreaOverrides.TryGetValue(run.GameKey, out var fixedArea) && areas.FirstOrDefault(a => a.Id == fixedArea) is { } overridden)
+            return (overridden, level);
+        return best.Area is not null ? (best.Area, level) : (areas.MinBy(a => a.Order), 5);
+    }
+
+    /// <summary>
+    /// O Pokémon usa a área (regra do primeiro encontro)? Encontro que não conta (<c>missed</c>) não usa; o inicial
+    /// automático só usa quando a área é uma cidade (dado numa rota, o primeiro selvagem dela ainda vale).
+    /// </summary>
+    internal static bool UsesArea(NuzlockeMon mon, GameArea area) =>
+        mon.Status != NuzlockeStatus.Missed && !(mon.IsStarter && area.Kind != "city");
+
+    private static bool IsStarterEvent(NuzlockeEvent e)
+    {
+        using var doc = JsonDocument.Parse(e.Json);
+        return doc.RootElement.TryGetProperty("starter", out var v) && v.ValueKind == JsonValueKind.True;
+    }
+
+    private static Guid? ReadGuid(NuzlockeEvent e, string property)
+    {
+        using var doc = JsonDocument.Parse(e.Json);
+        return doc.RootElement.TryGetProperty(property, out var v) && v.ValueKind == JsonValueKind.String && v.TryGetGuid(out var g) ? g : null;
     }
 
     /// <summary>O inicial normalizado (vazio = null); fora dos iniciais do jogo → <c>invalid_starter</c>.</summary>
@@ -212,7 +350,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         {
             if (rules.NicknameRequired && nickname is null)
                 throw new NuzlockeException("nickname_required");
-            CheckClauses(rules, mons, area.Id, body.Species, body.Shiny);
+            CheckClauses(rules, mons, area, body.Species, body.Shiny);
             if (status == NuzlockeStatus.Party && mons.Count(m => m.Status == NuzlockeStatus.Party) >= MaxPartySize)
                 throw new NuzlockeException("party_full");
         }
@@ -277,7 +415,7 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
             {
                 CheckSpecies(mon.Species, mon.Form, caught: true);
                 var others = await db.NuzlockeMons.Where(m => m.RunId == run.Id && m.Id != mon.Id).ToListAsync(ct);
-                CheckClauses(rules, others, mon.AreaId, mon.Species, mon.Shiny);
+                CheckClauses(rules, others, Area(run, mon.AreaId), mon.Species, mon.Shiny);
             }
             if (status == NuzlockeStatus.Party
                 && await db.NuzlockeMons.CountAsync(m => m.RunId == run.Id && m.Id != mon.Id && m.Status == NuzlockeStatus.Party, ct) >= MaxPartySize)
@@ -357,14 +495,23 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         if (detail is null)
             return new MonLearnset(mon.Species, mon.Level, [], [], []);
 
+        // A cadeia do PokeAPI dá as condições; a tabela do PKHeX do jogo diz quais valem para a forma (e a forma do destino).
+        var valid = NuzlockeEvolutions.Next(dex, gameKey, mon.Species, mon.Form);
         var evolutions = new List<EvolutionLearnset>();
         foreach (var step in detail.EvolutionChain.Where(s => s.FromSpeciesId == mon.Species))
         {
             var next = await dex.GetAsync(step.SpeciesId, gameKey, "en", ct);
             if (next is null || !next.ExistsInGame)
                 continue;
+            var form = 0;
+            if (valid is not null)
+            {
+                if (!valid.Any(v => v.Species == step.SpeciesId))
+                    continue;
+                form = valid.First(v => v.Species == step.SpeciesId).Form;
+            }
             evolutions.Add(new EvolutionLearnset(step.SpeciesId, next.Name, step.Conditions,
-                LevelMoves(next, l => l == 0), LevelMoves(next, l => l > mon.Level)));
+                LevelMoves(next, l => l == 0), LevelMoves(next, l => l > mon.Level), form, dex.FormPokemonId(step.SpeciesId, form)));
         }
         return new MonLearnset(mon.Species, mon.Level, LevelMoves(detail, l => l <= mon.Level), LevelMoves(detail, l => l > mon.Level),
             evolutions);
@@ -381,12 +528,12 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
     /// já capturada (<c>dupe</c>). Shiny com a cláusula de shiny passa pelas duas. <paramref name="others"/>: os outros
     /// Pokémon da run (sem o próprio).
     /// </summary>
-    private void CheckClauses(NuzlockeRules rules, IEnumerable<NuzlockeMon> others, string areaId, int species, bool shiny)
+    private void CheckClauses(NuzlockeRules rules, IEnumerable<NuzlockeMon> others, GameArea area, int species, bool shiny)
     {
         if (rules.ShinyClause && shiny)
             return;
         var list = others.ToList();
-        if (rules.FirstEncounterOnly && list.Any(m => m.AreaId == areaId && m.Status != NuzlockeStatus.Missed))
+        if (rules.FirstEncounterOnly && list.Any(m => m.AreaId == area.Id && UsesArea(m, area)))
             throw new NuzlockeException("area_already_used");
         if ((rules.SpeciesClause || rules.DupesClause)
             && list.Any(m => NuzlockeStatus.Caught(m.Status) && SameLine(m.Species, species, rules.DupesClause)))

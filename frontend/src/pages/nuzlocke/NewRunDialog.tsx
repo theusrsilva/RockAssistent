@@ -14,6 +14,7 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
   const [gameKey, setGameKey] = useState('frlg')
   const [version, setVersion] = useState<string | null>(null)
   const [starter, setStarter] = useState<string | null>(null)
+  const [starterNickname, setStarterNickname] = useState('')
   const [rules, setRules] = useState<NuzlockeRules>(DEFAULT_RULES)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -30,6 +31,11 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
   }
 
   async function create() {
+    // Com inicial, a run já começa com ele na equipe: a regra do apelido vale para ele também.
+    if (starter && rules.nicknameRequired && !starterNickname.trim()) {
+      setError(t('nuzlocke.starter.nicknameRequired'))
+      return
+    }
     setBusy(true)
     setError(null)
     try {
@@ -38,6 +44,7 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
         gameKey,
         version: needsVersion ? version : null,
         starter,
+        starterNickname: starter ? starterNickname.trim() || null : null,
         rules: { ...rules, custom: rules.custom?.trim() || null },
       })
       onCreated(view.run.id)
@@ -96,6 +103,14 @@ export default function NewRunDialog({ onClose, onCreated }: { onClose: () => vo
             <span className="font-bold">{t('nuzlocke.starter.label')}</span>
             <StarterPicker starters={starters} value={starter} onChange={setStarter} allowNone />
             <span className="text-[12.5px] text-muted">{t('nuzlocke.starter.help')}</span>
+            {starter && (
+              <Field
+                label={rules.nicknameRequired ? t('nuzlocke.starter.nickname') : `${t('nuzlocke.starter.nickname')} (${t('common.optional')})`}
+                help={t('nuzlocke.starter.nicknameHelp')}
+              >
+                <input className={inputClass} value={starterNickname} maxLength={12} onChange={(e) => setStarterNickname(e.target.value)} />
+              </Field>
+            )}
           </div>
         )}
         <div className="flex flex-col gap-2.5">

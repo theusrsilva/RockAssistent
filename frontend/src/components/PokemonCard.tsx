@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { spriteUrl } from '../lib/api'
 import type { Pokemon } from '../lib/types'
 import { LegalityBadge, WarningList } from './Legality'
-import { familyOf, gameByFamily } from '../lib/games'
+import { familyOf, formatName } from '../lib/games'
 import { Badge } from './ui'
 
 export function PokemonCard({
@@ -46,7 +46,7 @@ export function PokemonCard({
           {pokemon.isShiny && <Badge tone="amber">★ {t('pokemon.shiny')}</Badge>}
           <Badge tone={pokemon.origin === 'received' ? 'emerald' : 'slate'}>{t(`pokemon.origin.${pokemon.origin}`)}</Badge>
           <LegalityBadge status={pokemon.legality} />
-          {familyOf(pokemon) !== 'frlg' && <Badge tone="sky">{gameByFamily(familyOf(pokemon)).name}</Badge>}
+          {familyOf(pokemon) !== 'frlg' && <Badge tone="sky">{formatName(familyOf(pokemon))}</Badge>}
         </div>
         {!compact && (
           <p className="truncate text-xs text-muted">{t('pokemon.ot', { name: pokemon.otName })}</p>

@@ -22,8 +22,11 @@ public sealed class StoredPokemon : IOwned
     public required string Sha256 { get; set; }
     public int Size { get; set; }
 
-    /// <summary>Jogo do formato do arquivo (Entrega 14). Os anteriores são todos do FireRed/LeafGreen.</summary>
-    public GameFamily Family { get; set; }
+    /// <summary>Formato do arquivo (D34; de pk1 a pa9). Antes era o jogo do catálogo de troca (coluna Family).</summary>
+    public StorageFormat Format { get; set; }
+
+    /// <summary>Jogo do catálogo de troca do formato, ou null: Gen 1, 2 e 4 a 7 ficam no cofre, mas não trocam.</summary>
+    public GameFamily? Family => VaultFormats.Get(Format).Family;
 
     public ushort Species { get; set; }
 
@@ -289,6 +292,12 @@ public sealed class NuzlockeMon
     public string? DeathCause { get; set; }
     public DateTimeOffset CaughtAt { get; set; }
     public DateTimeOffset? DiedAt { get; set; }
+
+    /// <summary>
+    /// Inicial que a run pôs na equipe sozinha. Só conta como o encontro da área quando o jogo o dá numa cidade
+    /// (<c>kind: city</c>); dado numa rota ou lago (Route 101, Lake Verity), o primeiro selvagem ainda vale.
+    /// </summary>
+    public bool IsStarter { get; set; }
 
     /// <summary>Golpes atuais em JSON: lista de identificadores do PokeAPI (<c>["thunder-shock"]</c>).</summary>
     public required string MovesJson { get; set; }

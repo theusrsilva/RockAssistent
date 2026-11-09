@@ -167,9 +167,13 @@ public static class GameCatalog
 /// </summary>
 public static class TrainerIds
 {
-    public static (uint Tid, uint Sid) Display(SwitchGame game, ushort tid16, ushort sid16)
+    public static (uint Tid, uint Sid) Display(SwitchGame game, ushort tid16, ushort sid16) =>
+        Display(game.SixDigitTrainerId, tid16, sid16);
+
+    /// <param name="sixDigits">Gen 7 em diante (<see cref="VaultFormat.Generation"/> &gt;= 7).</param>
+    public static (uint Tid, uint Sid) Display(bool sixDigits, ushort tid16, ushort sid16)
     {
-        if (!game.SixDigitTrainerId)
+        if (!sixDigits)
             return (tid16, sid16);
         var id32 = ((uint)sid16 << 16) | tid16;
         return (id32 % 1_000_000, id32 / 1_000_000);

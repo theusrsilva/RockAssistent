@@ -43,18 +43,21 @@ public static class Pk3Export
 
 /// <summary>
 /// Exportação de qualquer jogo. FireRed/LeafGreen seguem o <see cref="Pk3Export"/> (.pk3/.ek3, 80 ou 100 bytes).
-/// Os outros saem no formato do próprio jogo (.pb7, .pk8, .pb8, .pa8, .pk9, .pa9), decriptados, como o PKHeX
+/// Os outros saem no formato do próprio jogo (.pk1, .pk2, .pk4 a .pk7, .pb7, .pk8, .pb8, .pa8, .pk9, .pa9), decriptados, como o PKHeX
 /// abre: "ek3" e o tamanho escolhidos para a Gen 3 não se aplicam (a forma de caixa é a guardada).
 /// </summary>
 public static class PokemonExport
 {
-    public static (byte[] Data, string Extension) ToFile(byte[] stored, GameFamily family, string format, int size)
+    public static (byte[] Data, string Extension) ToFile(byte[] stored, StorageFormat storage, string format, int size)
     {
-        if (family == GameFamily.Frlg)
+        if (storage == StorageFormat.Pk3)
             return (Pk3Export.ToFile(stored, format, size), format);
-        var pk = PokemonReader.ToEntity(stored, family);
+        var pk = PokemonReader.ToEntity(stored, storage);
         var data = new byte[pk.SIZE_STORED];
         pk.WriteDecryptedDataStored(data);
-        return (data, GameCatalog.Get(family).Extension);
+        return (data, VaultFormats.Get(storage).Extension);
     }
+
+    public static (byte[] Data, string Extension) ToFile(byte[] stored, GameFamily family, string format, int size) =>
+        ToFile(stored, VaultFormats.FormatOf(family), format, size);
 }

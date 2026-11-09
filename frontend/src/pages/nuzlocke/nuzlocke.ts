@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { TFunction } from 'i18next'
-import { api, ApiError } from '../../lib/api'
+import { api, ApiError, spriteUrl } from '../../lib/api'
 
 export interface NuzlockeRules {
   firstEncounterOnly: boolean
@@ -70,7 +70,15 @@ export interface MonInfo {
   /** Identificadores do PokeAPI ("thunder-shock"). */
   moves: string[]
   shiny: boolean
+  /** Inicial que a run pôs sozinha: só usa a área quando ela é uma cidade. */
+  isStarter?: boolean
+  /** Id do pokemon do PokeAPI da forma (regionais...), para o sprite; null na padrão. */
+  formId?: number | null
 }
+
+/** Sprite de quem tem espécie, forma (formId) e talvez shiny. */
+export const formSprite = (m: { species: number; formId?: number | null; shiny?: boolean }) =>
+  spriteUrl(m.species, { shiny: m.shiny, form: m.formId ?? undefined })
 
 export interface GameArea {
   id: string
@@ -158,6 +166,7 @@ export interface SpeciesEncounterOption {
   minLevel: number
   maxLevel: number
   versions: string[]
+  formId?: number | null
 }
 
 export interface RunView {
@@ -200,6 +209,9 @@ export interface LearnsetMove {
 
 export interface EvolutionLearnset {
   species: number
+  /** Forma do destino (posição no PokeAPI, 0 = padrão) e o id dela para o sprite. */
+  form?: number
+  formId?: number | null
   name: string
   conditions: string[]
   onEvolve: LearnsetMove[]
@@ -258,9 +270,14 @@ export function areaStates(view: RunView): Record<string, AreaState> {
   return states
 }
 
-/** Área já usada: tem algum registro que não seja "pulado" (missed). Igual ao backend. */
-export function areaUsed(view: RunView, areaId: string): boolean {
-  return [...view.party, ...view.box, ...view.graveyard, ...view.lost].some((m) => m.areaId === areaId && m.status !== 'missed')
+/**
+ * Área já usada: tem algum registro que não seja "pulado" (missed). O inicial automático só conta numa cidade (dado numa
+ * rota, o primeiro selvagem ainda vale). Igual ao backend.
+ */
+export function areaUsed(view: RunView, area: Pick<GameArea, 'id' | 'kind'>): boolean {
+  return [...view.party, ...view.box, ...view.graveyard, ...view.lost].some(
+    (m) => m.areaId === area.id && m.status !== 'missed' && !(m.isStarter && area.kind !== 'city'),
+  )
 }
 
 export const sortAreas = (areas: GameArea[]): GameArea[] => [...areas].sort((a, b) => a.order - b.order)
@@ -363,4 +380,93 @@ export function useRun(id: string) {
   )
 
   return { view: state.id === id ? state.view : null, error: state.id === id ? state.error : null, mutate }
+}
+
+/** Como uma evolução acontece, para o botão "Evoluir": por nível, por item, por troca, por amizade ou outra condição. */
+export type EvolveHow =
+  | { kind: 'level'; level: number }
+  | { kind: 'item'; item: string }
+  | { kind: 'trade'; detail: string | null }
+  | { kind: 'friendship' }
+  | { kind: 'other'; text: string }
+
+export interface EvolveOption {
+  species: number
+  form: number
+  formId: number | null
+  name: string
+  how: EvolveHow
+  /** Por nível: o nível já chegou. As outras ficam sempre disponíveis (o app não sabe do item, da troca...). */
+  ready: boolean
+}
+
+/** Lê uma condição do PokeAPI (frase curta em inglês, como "level 18", "use Thunder Stone", "trade holding Metal Coat"). */
+export function evolveHow(condition: string): EvolveHow {
+  const c = condition.trim()
+  const level = /^level (\d+)$/.exec(c)
+  if (level) return { kind: 'level', level: Number(level[1]) }
+  const item = /^use (.+)$/.exec(c)
+  if (item) return { kind: 'item', item: item[1] }
+  if (c === 'trade' || c.startsWith('trade ')) return { kind: 'trade', detail: c.slice(5).trim() || null }
+  if (/^level up friendship \d+$/.test(c)) return { kind: 'friendship' }
+  return { kind: 'other', text: c }
+}
+
+/**
+ * Evoluções possíveis de quem está no nível dado: uma por espécie. Com várias condições (jeitos diferentes no mesmo
+ * jogo), vale a primeira por nível (pronta se alguma já chegou); sem condição por nível, a primeira condição.
+ */
+export function evolveOptions(evolutions: EvolutionLearnset[], level: number): EvolveOption[] {
+  return evolutions.map((ev) => {
+    const hows = ev.conditions.map(evolveHow)
+    const levels = hows.filter((h): h is { kind: 'level'; level: number } => h.kind === 'level').sort((a, b) => a.level - b.level)
+    const target = { species: ev.species, form: ev.form ?? 0, formId: ev.formId ?? null, name: ev.name }
+    if (levels.length > 0) return { ...target, how: levels[0], ready: level >= levels[0].level }
+    return { ...target, how: hows[0] ?? { kind: 'other', text: '' }, ready: true }
+  })
+}
+
+/** Área anterior e próxima da atual, na ordem do seletor (null nas pontas ou sem área atual). */
+export function neighborAreas(areas: GameArea[], currentId: string | null | undefined): { prev: GameArea | null; next: GameArea | null } {
+  const i = currentId ? areas.findIndex((a) => a.id === currentId) : -1
+  if (i < 0) return { prev: null, next: null }
+  return { prev: areas[i - 1] ?? null, next: areas[i + 1] ?? null }
+}
+
+/** Pedaço de uma condição de evolução já entendida: chave em nuzlocke.evolve.parts.* e os valores. */
+export interface ConditionPart {
+  key: string
+  values?: Record<string, string | number>
+}
+
+/**
+ * Partes conhecidas de uma condição "outra" do PokeAPI (frase em inglês: "level up at night friendship 160",
+ * "level up knowing Ancient Power", "level up beauty 171"). O que não reconhece fica de fora; vazio = texto genérico.
+ */
+export function conditionParts(condition: string): ConditionPart[] {
+  let rest = ` ${condition.trim()} `
+  const parts: ConditionPart[] = []
+  const take = (re: RegExp, make: (m: RegExpExecArray) => ConditionPart) => {
+    const m = re.exec(rest)
+    if (!m) return
+    parts.push(make(m))
+    rest = rest.slice(0, m.index) + ' ' + rest.slice(m.index + m[0].length)
+  }
+  take(/ friendship \d+ /, () => ({ key: 'friendship' }))
+  take(/ affection \d+ /, () => ({ key: 'affection' }))
+  take(/ beauty \d+ /, () => ({ key: 'beauty' }))
+  take(/ at (day|night|dusk) /, (m) => ({ key: m[1] }))
+  take(/ knowing an? (\w+) move /, (m) => ({ key: 'knowingType', values: { type: m[1] } }))
+  take(/ knowing (.+?)(?= at | with | holding | in rain | upside down | (?:fe)?male |\s*$)/, (m) => ({ key: 'knowing', values: { move: m[1].trim() } }))
+  take(/ holding (.+?)(?= at | with | knowing | in rain | upside down | (?:fe)?male |\s*$)/, (m) => ({ key: 'holding', values: { item: m[1].trim() } }))
+  take(/ with an? (\w+) type in party /, (m) => ({ key: 'typeInParty', values: { type: m[1] } }))
+  take(/ with (.+?) in party /, (m) => ({ key: 'inParty', values: { name: m[1].trim() } }))
+  take(/ level (\d+) /, (m) => ({ key: 'level', values: { level: Number(m[1]) } }))
+  take(/ (female|male) /, (m) => ({ key: m[1] }))
+  take(/ in rain /, () => ({ key: 'rain' }))
+  take(/ upside down /, () => ({ key: 'upsideDown' }))
+  take(/ Attack ([<>=]) Defense /, (m) => ({ key: m[1] === '>' ? 'attackHigher' : m[1] === '<' ? 'defenseHigher' : 'attackEqual' }))
+  take(/ for (.+?)\s*$/, (m) => ({ key: 'tradeFor', values: { name: m[1].trim() } }))
+  take(/ at (.+?)\s*$/, (m) => ({ key: 'place', values: { place: m[1].trim() } }))
+  return parts
 }

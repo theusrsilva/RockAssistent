@@ -52,7 +52,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     public async Task Inicial_da_run_escolhe_o_time_do_rival()
     {
         // HeartGold com Chikorita: o Silver pega o Cyndaquil (e não o Totodile do time padrão).
-        var chikorita = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, " Chikorita "), Ct);
+        var chikorita = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, " Chikorita ", "Chico"), Ct);
         Assert.Equal("chikorita", chikorita.Run.Starter);
         Assert.Equal("rival-cherrygrove", chikorita.NextBoss!.Id);
         Assert.Equal(155, Assert.Single(chikorita.NextBoss.Party).Species);
@@ -68,12 +68,126 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         Assert.Equal(32, underground.ForStarter("cyndaquil").LevelCap);
 
         // Trocar o inicial muda o time; texto vazio apaga.
-        var totodile = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "totodile"), Ct);
+        var totodile = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "totodile", "Toto"), Ct);
         Assert.Equal(152, Assert.Single(totodile.NextBoss!.Party).Species);
         Assert.Null((await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, ""), Ct)).Run.Starter);
 
         Assert.Equal("invalid_starter", await Fails(() => _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, "bulbasaur"), Ct)));
         Assert.Equal("invalid_starter", await Fails(() => _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "piplup"), Ct)));
+    }
+
+    [Fact]
+    public async Task Run_com_inicial_ja_comeca_com_ele_na_equipe()
+    {
+        // FRLG com Charmander: nível 5, na área do presente do PokeAPI (Pallet Town), forma padrão, sem shiny.
+        var view = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander", "Char"), Ct);
+        var mon = Assert.Single(view.Party);
+        Assert.Equal((4, 0, 5, "Char", false), (mon.Species, mon.Form, mon.Level, mon.Nickname, mon.Shiny));
+        Assert.Equal("pallet-town", mon.AreaId);
+        Assert.True(mon.IsStarter);
+        // Dado numa cidade, o inicial conta como o encontro da área (primeiro encontro).
+        Assert.Equal("area_already_used", await Fails(() => _store.EncounterAsync(view.Run.Id,
+            new NewEncounter("pallet-town", 7, 0, "Squirt", 5, NuzlockeStatus.Party), Ct)));
+        await using (var db = await _db.CreateDbContextAsync(Ct))
+            Assert.Single(db.NuzlockeEvents.Where(e => e.RunId == view.Run.Id && e.Kind == NuzlockeEvents.Encounter));
+
+        // "Não sei": nada automático.
+        Assert.Empty((await _store.CreateAsync(new NewRun(null, "frlg", "firered", null), Ct)).Party);
+
+        // Apelido obrigatório sem apelido → nickname_required; sem a regra, o apelido é opcional.
+        Assert.Equal("nickname_required", await Fails(() => _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander"), Ct)));
+        var free = await _store.CreateAsync(new NewRun(null, "frlg", "firered", NuzlockeRules.Default with { NicknameRequired = false }, "squirtle"), Ct);
+        Assert.Null(Assert.Single(free.Party).Nickname);
+
+        // HGSS com Chikorita: New Bark Town.
+        var hgss = await _store.CreateAsync(new NewRun(null, "hgss", "soulsilver", null, "chikorita", "Leafy"), Ct);
+        Assert.Equal((152, "new-bark-town", 5), (hgss.Party[0].Species, hgss.Party[0].AreaId, hgss.Party[0].Level));
+
+        // Jogo novo: os nossos encontros de presente (SV: Cabo Poco).
+        var sv = await _store.CreateAsync(new NewRun(null, "sv", "scarlet", null, "fuecoco", "Croc"), Ct);
+        Assert.Equal((909, "cabo-poco", 5), (sv.Party[0].Species, sv.Party[0].AreaId, sv.Party[0].Level));
+    }
+
+    [Fact]
+    public async Task Inicial_dado_numa_rota_nao_gasta_a_area()
+    {
+        // Emerald: o Torchic é da Route 101, e o primeiro selvagem dela ainda vale.
+        var e = await _store.CreateAsync(new NewRun(null, "e", "emerald", null, "torchic", "Tochi"), Ct);
+        Assert.Equal((255, "route-101"), (e.Party[0].Species, e.Party[0].AreaId));
+        e = await _store.EncounterAsync(e.Run.Id, new NewEncounter("route-101", 265, 0, "Wurm", 3, NuzlockeStatus.Party), Ct);
+        Assert.Equal(2, e.Party.Count);
+        Assert.Equal("area_already_used", await Fails(() => _store.EncounterAsync(e.Run.Id,
+            new NewEncounter("route-101", 261, 0, "Pooch", 3, NuzlockeStatus.Box), Ct)));
+
+        // Ultra Sun: Route 1 (o PokeAPI), livre.
+        var usum = await _store.CreateAsync(new NewRun(null, "usum", "ultra-sun", null, "litten", "Kit"), Ct);
+        Assert.Equal("route-1", usum.Party[0].AreaId);
+        usum = await _store.EncounterAsync(usum.Run.Id, new NewEncounter("route-1", 734, 0, "Gumshoe", 3, NuzlockeStatus.Box), Ct);
+        Assert.Single(usum.Box);
+
+        // Platinum: exceção nossa, Lake Verity (o PokeAPI diz Route 201), e o lago continua livre.
+        var pt = await _store.CreateAsync(new NewRun(null, "pt", null, null, "piplup", "Pip"), Ct);
+        Assert.Equal((393, "lake-verity"), (pt.Party[0].Species, pt.Party[0].AreaId));
+        await _store.EncounterAsync(pt.Run.Id, new NewEncounter("lake-verity", 399, 0, "Bibi", 3, NuzlockeStatus.Box), Ct);
+    }
+
+    private async Task<MonLearnset> LearnsetOf(string game, string? version, int species, string formIdentifier)
+    {
+        var form = fx.Service.PokemonForms(species).ToList().IndexOf(formIdentifier);
+        Assert.True(form >= 0, formIdentifier);
+        var run = await _store.CreateAsync(new NewRun(null, game, version, NuzlockeRules.Default with { NicknameRequired = false }), Ct);
+        var area = _data.Areas(game).OrderBy(a => a.Order).Skip(1).First().Id;
+        var view = await _store.EncounterAsync(run.Run.Id, new NewEncounter(area, species, form, null, 30, NuzlockeStatus.Box), Ct);
+        Assert.Equal(form, view.Box[0].Form);
+        return await _store.LearnsetAsync(run.Run.Id, view.Box[0].Id, Ct);
+    }
+
+    private int FormIndex(int species, string identifier) => fx.Service.PokemonForms(species).ToList().IndexOf(identifier);
+
+    [Fact]
+    public async Task Evolucao_respeita_a_forma_regional()
+    {
+        // Meowth de Galar só vira Perrserker; o de Kanto só Persian (Sword/Shield).
+        Assert.Equal([(863, 0)], (await LearnsetOf("swsh", "sword", 52, "meowth-galar")).Evolutions.Select(e => (e.Species, e.Form)));
+        Assert.Equal([(53, 0)], (await LearnsetOf("swsh", "sword", 52, "meowth")).Evolutions.Select(e => (e.Species, e.Form)));
+        // Rattata de Alola → Raticate de Alola (Sun/Moon).
+        Assert.Equal([(20, FormIndex(20, "raticate-alola"))],
+            (await LearnsetOf("sm", "sun", 19, "rattata-alola")).Evolutions.Select(e => (e.Species, e.Form)));
+        // Arceus: Quilava → Typhlosion de Hisui (o Cyndaquil vira Quilava, que vira o de Hisui).
+        Assert.Equal([(157, FormIndex(157, "typhlosion-hisui"))],
+            (await LearnsetOf("pla", null, 156, "quilava")).Evolutions.Select(e => (e.Species, e.Form)));
+        Assert.Equal([(156, 0)], (await LearnsetOf("pla", null, 155, "cyndaquil")).Evolutions.Select(e => (e.Species, e.Form)));
+    }
+
+    [Fact]
+    public async Task Trocar_o_inicial_troca_o_pokemon_automatico_so_se_ele_nao_foi_mexido()
+    {
+        var view = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander", "Char"), Ct);
+        var id = view.Run.Id;
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "bulbasaur"), Ct);
+        var mon = Assert.Single(view.Party);
+        // O apelido fica.
+        Assert.Equal((1, "Char", "bulbasaur"), (mon.Species, mon.Nickname, view.Run.Starter));
+        // De novo (a troca automática não conta como edição).
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "squirtle"), Ct);
+        Assert.Equal(7, Assert.Single(view.Party).Species);
+
+        // Depois de editado, só o inicial da run muda.
+        await _store.UpdateMonAsync(id, mon.Id, new MonChanges(null, 6, null, null, null), Ct);
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "charmander"), Ct);
+        Assert.Equal(("charmander", 7), (view.Run.Starter, Assert.Single(view.Party).Species));
+
+        // Run sem inicial: informar depois põe o inicial na equipe; com apelido obrigatório e sem apelido → 400, nada muda.
+        var none = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null), Ct);
+        Assert.Equal("nickname_required", await Fails(() => _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "squirtle"), Ct)));
+        Assert.Null((await _store.GetAsync(none.Run.Id, Ct)).Run.Starter);
+        view = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "squirtle", "Squirt"), Ct);
+        Assert.Equal((7, "Squirt", "pallet-town"), (view.Party[0].Species, view.Party[0].Nickname, view.Party[0].AreaId));
+
+        // A troca passa pelas cláusulas: com a cláusula de espécie, trocar para uma espécie já pega → dupe.
+        var clause = await _store.CreateAsync(new NewRun(null, "frlg", "firered", NuzlockeRules.Default with { SpeciesClause = true }, "charmander", "Char"), Ct);
+        await _store.EncounterAsync(clause.Run.Id, new NewEncounter("route-1", 1, 0, "Bulba", 5, NuzlockeStatus.Box), Ct);
+        Assert.Equal("dupe", await Fails(() => _store.UpdateAsync(clause.Run.Id, new RunChanges(null, null, null, "bulbasaur"), Ct)));
     }
 
     [Fact]
@@ -385,6 +499,46 @@ public sealed class RunStarterMigrationTests
             Assert.Null(run.Starter);
         }
     }
+
+    [Fact]
+    public async Task Migracao_marca_os_iniciais_automaticos_pelo_evento()
+    {
+        using var dir = new TestDataDir();
+        var options = new DbContextOptionsBuilder<TradeRockDb>()
+            .UseSqlite($"Data Source={dir.Paths.DatabasePath};Pooling=False").Options;
+        var ct = TestContext.Current.CancellationToken;
+        const string run = "0190A0A0-0000-7000-8000-000000000001";
+        const string auto = "0190A0A0-0000-7000-8000-0000000000AA";
+        const string wild = "0190A0A0-0000-7000-8000-0000000000BB";
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.GetService<IMigrator>().MigrateAsync("RunStarter", ct);
+            await db.Database.ExecuteSqlAsync($"""
+                INSERT INTO NuzlockeRuns (Id, OwnerId, Name, GameKey, Version, Starter, RulesJson, Status, StartedAt)
+                VALUES ({run}, '00000000-0000-0000-0000-000000000000', 'Kanto', 'frlg', 'firered', 'charmander', {"{}"}, 'active', 0)
+                """, ct);
+            foreach (var (id, species) in new[] { (auto, 4), (wild, 16) })
+                await db.Database.ExecuteSqlAsync($"""
+                    INSERT INTO NuzlockeMons (Id, RunId, AreaId, Species, Form, Level, Status, Shiny, CaughtAt, MovesJson)
+                    VALUES ({id}, {run}, 'pallet-town', {species}, 0, 5, 'party', 0, 0, '[]')
+                    """, ct);
+            var events = new[]
+            {
+                ("0190A0A0-0000-7000-8000-0000000000E1", $$"""{"monId":"{{auto.ToLowerInvariant()}}","starter":true}"""),
+                ("0190A0A0-0000-7000-8000-0000000000E2", $$"""{"monId":"{{wild.ToLowerInvariant()}}"}"""),
+            };
+            foreach (var (id, json) in events)
+                await db.Database.ExecuteSqlAsync($"INSERT INTO NuzlockeEvents (Id, RunId, At, Kind, Json) VALUES ({id}, {run}, 0, 'encounter', {json})", ct);
+        }
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.Database.MigrateAsync(ct);
+            var mons = await db.NuzlockeMons.OrderBy(m => m.Species).ToListAsync(ct);
+            Assert.Equal([(4, true), (16, false)], mons.Select(m => (m.Species, m.IsStarter)));
+        }
+    }
 }
 
 public sealed class NuzlockeMigrationTests
@@ -400,11 +554,8 @@ public sealed class NuzlockeMigrationTests
         await using (var db = new TradeRockDb(options))
         {
             await db.GetService<IMigrator>().MigrateAsync("ShinyHunts", ct);
-            db.Pokemon.Add(new StoredPokemon
-            {
-                Id = Guid.NewGuid(), Sha256 = "ab", Size = 100, Species = 25, SpeciesName = "Pikachu", Nickname = "PIKA",
-                OtName = "RED", OriginGame = "FireRed", AddedAt = DateTimeOffset.UtcNow, Family = GameFamily.Frlg,
-            });
+            // Banco de antes da D34: a coluna ainda se chama Family.
+            await LegacyVault.InsertPokemonAsync(db, "Frlg", "ab", ct);
             db.Hunts.Add(new ShinyHunt { GameKey = "sv", MethodId = "masuda", ModifiersJson = "{}", Species = 906 });
             await db.SaveChangesAsync(ct);
         }
@@ -553,6 +704,33 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Evoluir_pela_api_mantem_apelido_nivel_e_golpes_sem_dupe()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
+        var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke", new
+        {
+            gameKey = "frlg", version = "firered",
+            rules = new { firstEncounterOnly = true, nicknameRequired = true, speciesClause = true, dupesClause = true },
+        }, Ct));
+        var id = view.GetProperty("run").GetProperty("id").GetGuid();
+        view = await Ok(await _client.PostAsJsonAsync($"/api/nuzlocke/{id}/encounter",
+            new { areaId = "route-1", species = 16, form = 0, nickname = "Pidge", level = 18, status = "party" }, Ct));
+        var monId = view.GetProperty("party")[0].GetProperty("id").GetGuid();
+        await Ok(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}/mon/{monId}", new { moves = new[] { "gust", "quick-attack" } }, Ct));
+        var learnset = await Ok(await _client.GetAsync($"/api/nuzlocke/{id}/mon/{monId}/learnset", Ct));
+        Assert.Equal("level 18", learnset.GetProperty("evolutions")[0].GetProperty("conditions")[0].GetString());
+
+        view = await Ok(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}/mon/{monId}", new { species = 17 }, Ct));
+        var mon = view.GetProperty("party")[0];
+        Assert.Equal((17, "Pidge", 18, "party"), (mon.GetProperty("species").GetInt32(), mon.GetProperty("nickname").GetString(),
+            mon.GetProperty("level").GetInt32(), mon.GetProperty("status").GetString()));
+        Assert.Equal(["gust", "quick-attack"], mon.GetProperty("moves").EnumerateArray().Select(m => m.GetString()));
+        // O learnset agora é o do Pidgeotto (próxima: Pidgeot).
+        learnset = await Ok(await _client.GetAsync($"/api/nuzlocke/{id}/mon/{monId}/learnset", Ct));
+        Assert.Equal(18, learnset.GetProperty("evolutions")[0].GetProperty("species").GetInt32());
+    }
+
+    [Fact]
     public async Task Inicial_pela_api()
     {
         Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
@@ -561,7 +739,8 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
         Assert.Equal(152, starters[0].GetProperty("species").GetInt32());
 
         var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke",
-            new { gameKey = "hgss", version = "heartgold", starter = "chikorita" }, Ct));
+            new { gameKey = "hgss", version = "heartgold", starter = "chikorita", starterNickname = "Chico" }, Ct));
+        Assert.Equal("Chico", view.GetProperty("party")[0].GetProperty("nickname").GetString());
         var id = view.GetProperty("run").GetProperty("id").GetGuid();
         Assert.Equal("chikorita", view.GetProperty("run").GetProperty("starter").GetString());
         Assert.Equal(155, view.GetProperty("nextBoss").GetProperty("party")[0].GetProperty("species").GetInt32());

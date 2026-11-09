@@ -123,6 +123,60 @@ public sealed class DexService(DexDatabase db)
     }
 
     /// <summary>
+    /// Identificadores do PokeAPI das formas da espécie (<c>meowth</c>, <c>meowth-alola</c>, <c>meowth-galar</c>), na ordem
+    /// em que o índice de forma dos encontros e do Nuzlocke conta (0 = a padrão).
+    /// </summary>
+    public IReadOnlyList<string> PokemonForms(int speciesId)
+    {
+        using var c = db.Open();
+        return Strings(c, "SELECT identifier FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order, id", ("$s", speciesId));
+    }
+
+    /// <summary>Id do <c>pokemon</c> do PokeAPI da forma (posição em <see cref="PokemonForms"/>), para o sprite; null na forma padrão ou fora da lista.</summary>
+    public int? FormPokemonId(int speciesId, int form)
+    {
+        if (form <= 0)
+            return null;
+        using var c = db.Open();
+        using var cmd = Command(c, "SELECT id FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order, id LIMIT 1 OFFSET $f",
+            ("$s", speciesId), ("$f", form));
+        return cmd.ExecuteScalar() is long id ? (int)id : null;
+    }
+
+    /// <summary>Identificador do PokeAPI da espécie (<c>meowth</c>); null se não existe.</summary>
+    public string? SpeciesIdentifier(int speciesId)
+    {
+        using var c = db.Open();
+        return Strings(c, "SELECT identifier FROM species WHERE id = $s", ("$s", speciesId)).FirstOrDefault();
+    }
+
+    /// <summary>
+    /// Locais do PokeAPI (<c>locations.id</c>) onde a espécie (forma padrão) é dada de presente (método <c>gift</c>)
+    /// nas versões do jogo (ou só em <paramref name="version"/>), com o menor nível. Usado para pôr o inicial na área
+    /// certa do Nuzlocke.
+    /// </summary>
+    public IReadOnlyList<(int LocationId, int Level)> GiftLocations(int speciesId, string gameKey, string? version)
+    {
+        var game = Data.Game(gameKey);
+        using var c = db.Open();
+        using var cmd = Command(c, $"""
+            SELECT a.location_id, min(e.min_level)
+            FROM encounters e
+            JOIN pokemon p ON p.id = e.pokemon_id
+            JOIN location_areas a ON a.id = e.location_area_id
+            JOIN versions v ON v.id = e.version_id
+            WHERE p.species_id = $s AND p.is_default = 1 AND e.method = 'gift' AND e.version_id IN ({game.VersionIdList})
+              AND ($v IS NULL OR v.identifier = $v)
+            GROUP BY a.location_id
+            """, ("$s", speciesId), ("$v", version));
+        using var r = cmd.ExecuteReader();
+        var result = new List<(int, int)>();
+        while (r.Read())
+            result.Add((r.GetInt32(0), Int(r, 1) ?? 0));
+        return result;
+    }
+
+    /// <summary>
     /// TMs, HMs e TRs do jogo em ordem de número, com os das DLCs (<see cref="ExtraGroups"/>): número que só existe no grupo
     /// da DLC sai com <c>Dlc = true</c> (Z-A: TM108–TM160 do Mega Dimension); o mesmo número no jogo base vale mais.
     /// Jogo sem máquinas no PokeAPI (Arceus) = lista vazia; o BDSP está incompleto no PokeAPI (17 linhas).
