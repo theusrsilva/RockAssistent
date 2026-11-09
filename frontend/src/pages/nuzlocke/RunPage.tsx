@@ -11,7 +11,7 @@ import BossCard from './BossCard'
 import { runGameLabel, statusTone } from '../../components/RunCard'
 import TeamCard from './TeamCard'
 import TrainersCard from './TrainersCard'
-import { areaStates, formatRules, isFinished, nuzlockeErrorMessage, runStats, sortAreas, useRun, type GameArea, type RunView } from './nuzlocke'
+import { areaStates, formSprite, formatRules, isFinished, nuzlockeErrorMessage, runStats, sortAreas, useRun, type GameArea, type RunView } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 import RegionMap from './RegionMap'
 import { StarterPicker, starterName, useStarters } from './StarterPicker'
@@ -203,7 +203,7 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
             <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {view.graveyard.map((m) => (
                 <li key={m.id} className="flex items-center gap-3 rounded-lg bg-surface2 px-3 py-2">
-                  <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-12 w-12 grayscale" loading="lazy" />
+                  <img src={formSprite(m)} alt="" className="pixelated h-12 w-12 grayscale" loading="lazy" />
                   <div className="min-w-0 flex-1 text-[12.5px]">
                     <div className="text-sm font-bold">
                       {monName(m, names)} <span className="font-normal text-muted">{t('nuzlocke.boss.level', { level: m.level })}</span>

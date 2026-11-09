@@ -200,7 +200,9 @@ describe('evolveOptions', () => {
 
   it('por nível: pronta só a partir do nível', () => {
     const pidgey = [ev(17, 'Pidgeotto', ['level 18'])]
-    expect(evolveOptions(pidgey, 18)).toEqual([{ species: 17, name: 'Pidgeotto', how: { kind: 'level', level: 18 }, ready: true }])
+    expect(evolveOptions(pidgey, 18)).toEqual([{ species: 17, form: 0, formId: null, name: 'Pidgeotto', how: { kind: 'level', level: 18 }, ready: true }])
+    // Forma regional do destino (Raticate de Alola).
+    expect(evolveOptions([{ ...ev(20, 'Raticate', ['level 20']), form: 1, formId: 10092 }], 20)[0]).toMatchObject({ form: 1, formId: 10092 })
     expect(evolveOptions(pidgey, 17)[0].ready).toBe(false)
   })
 

@@ -69,9 +69,12 @@ public sealed record MonChanges(string? Status, int? Level, string? Nickname, st
 /// <summary>Golpe por nível: identificador do PokeAPI, nome em inglês, tipo e nível (0 = ao evoluir).</summary>
 public sealed record LearnsetMove(string Move, string Name, string Type, int Level);
 
-/// <summary>Próxima evolução: como evolui, o que aprende ao evoluir e os golpes por nível acima do nível atual.</summary>
+/// <summary>
+/// Próxima evolução: como evolui, o que aprende ao evoluir e os golpes por nível acima do nível atual. <see cref="Form"/>:
+/// forma do destino (posição no PokeAPI, 0 = a padrão; o Rattata de Alola vira o Raticate de Alola).
+/// </summary>
 public sealed record EvolutionLearnset(int Species, string Name, IReadOnlyList<string> Conditions, IReadOnlyList<LearnsetMove> OnEvolve,
-    IReadOnlyList<LearnsetMove> Upcoming);
+    IReadOnlyList<LearnsetMove> Upcoming, int Form = 0, int? FormId = null);
 
 /// <summary>
 /// Golpes do Pokémon da run, no grupo de versões da run. <see cref="Known"/>: os por nível até o nível atual (para mostrar
@@ -492,14 +495,23 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         if (detail is null)
             return new MonLearnset(mon.Species, mon.Level, [], [], []);
 
+        // A cadeia do PokeAPI dá as condições; a tabela do PKHeX do jogo diz quais valem para a forma (e a forma do destino).
+        var valid = NuzlockeEvolutions.Next(dex, gameKey, mon.Species, mon.Form);
         var evolutions = new List<EvolutionLearnset>();
         foreach (var step in detail.EvolutionChain.Where(s => s.FromSpeciesId == mon.Species))
         {
             var next = await dex.GetAsync(step.SpeciesId, gameKey, "en", ct);
             if (next is null || !next.ExistsInGame)
                 continue;
+            var form = 0;
+            if (valid is not null)
+            {
+                if (!valid.Any(v => v.Species == step.SpeciesId))
+                    continue;
+                form = valid.First(v => v.Species == step.SpeciesId).Form;
+            }
             evolutions.Add(new EvolutionLearnset(step.SpeciesId, next.Name, step.Conditions,
-                LevelMoves(next, l => l == 0), LevelMoves(next, l => l > mon.Level)));
+                LevelMoves(next, l => l == 0), LevelMoves(next, l => l > mon.Level), form, dex.FormPokemonId(step.SpeciesId, form)));
         }
         return new MonLearnset(mon.Species, mon.Level, LevelMoves(detail, l => l <= mon.Level), LevelMoves(detail, l => l > mon.Level),
             evolutions);

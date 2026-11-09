@@ -131,6 +131,34 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         await _store.EncounterAsync(pt.Run.Id, new NewEncounter("lake-verity", 399, 0, "Bibi", 3, NuzlockeStatus.Box), Ct);
     }
 
+    private async Task<MonLearnset> LearnsetOf(string game, string? version, int species, string formIdentifier)
+    {
+        var form = fx.Service.PokemonForms(species).ToList().IndexOf(formIdentifier);
+        Assert.True(form >= 0, formIdentifier);
+        var run = await _store.CreateAsync(new NewRun(null, game, version, NuzlockeRules.Default with { NicknameRequired = false }), Ct);
+        var area = _data.Areas(game).OrderBy(a => a.Order).Skip(1).First().Id;
+        var view = await _store.EncounterAsync(run.Run.Id, new NewEncounter(area, species, form, null, 30, NuzlockeStatus.Box), Ct);
+        Assert.Equal(form, view.Box[0].Form);
+        return await _store.LearnsetAsync(run.Run.Id, view.Box[0].Id, Ct);
+    }
+
+    private int FormIndex(int species, string identifier) => fx.Service.PokemonForms(species).ToList().IndexOf(identifier);
+
+    [Fact]
+    public async Task Evolucao_respeita_a_forma_regional()
+    {
+        // Meowth de Galar só vira Perrserker; o de Kanto só Persian (Sword/Shield).
+        Assert.Equal([(863, 0)], (await LearnsetOf("swsh", "sword", 52, "meowth-galar")).Evolutions.Select(e => (e.Species, e.Form)));
+        Assert.Equal([(53, 0)], (await LearnsetOf("swsh", "sword", 52, "meowth")).Evolutions.Select(e => (e.Species, e.Form)));
+        // Rattata de Alola → Raticate de Alola (Sun/Moon).
+        Assert.Equal([(20, FormIndex(20, "raticate-alola"))],
+            (await LearnsetOf("sm", "sun", 19, "rattata-alola")).Evolutions.Select(e => (e.Species, e.Form)));
+        // Arceus: Quilava → Typhlosion de Hisui (o Cyndaquil vira Quilava, que vira o de Hisui).
+        Assert.Equal([(157, FormIndex(157, "typhlosion-hisui"))],
+            (await LearnsetOf("pla", null, 156, "quilava")).Evolutions.Select(e => (e.Species, e.Form)));
+        Assert.Equal([(156, 0)], (await LearnsetOf("pla", null, 155, "cyndaquil")).Evolutions.Select(e => (e.Species, e.Form)));
+    }
+
     [Fact]
     public async Task Trocar_o_inicial_troca_o_pokemon_automatico_so_se_ele_nao_foi_mexido()
     {

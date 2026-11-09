@@ -7,7 +7,7 @@ import { api, spriteUrl } from '../../lib/api'
 import { titleCase, useApiGet } from '../../lib/dex'
 import type { Option } from '../../lib/types'
 import { TypeBadge } from '../dex/TypeBadge'
-import { defaultMoves, evolveOptions, nuzlockeErrorMessage, overCap, type EvolveOption, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
+import { defaultMoves, evolveOptions, formSprite, nuzlockeErrorMessage, overCap, type EvolveOption, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 /**
@@ -40,9 +40,9 @@ export default function TeamCard({
   const over = new Set(overCap(view.party, view.levelCap).map((m) => m.id))
 
   const toast = useToast()
-  /** Evoluir: só a espécie muda (apelido, nível, golpes e situação ficam). */
+  /** Evoluir: espécie e forma mudam (apelido, nível, golpes e situação ficam). */
   const evolve = async (mon: MonInfo, option: EvolveOption) => {
-    if (await update(mon, { species: option.species })) toast(t('nuzlocke.evolve.done', { from: monName(mon, names), name: option.name }))
+    if (await update(mon, { species: option.species, form: option.form })) toast(t('nuzlocke.evolve.done', { from: monName(mon, names), name: option.name }))
   }
 
   const update = async (mon: MonInfo, body: Record<string, unknown>) => {
@@ -108,7 +108,7 @@ export default function TeamCard({
             {view.box.map((m) => (
               <li key={m.id} className="flex flex-col gap-1">
                 <div className="flex items-center gap-2">
-                  <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9" loading="lazy" />
+                  <img src={formSprite(m)} alt="" className="pixelated h-9 w-9" loading="lazy" />
                   <span className="min-w-0 flex-1 truncate font-semibold">
                     {monName(m, names)} <span className="font-normal text-muted">{t('nuzlocke.boss.level', { level: m.level })}</span>
                   </span>
@@ -171,7 +171,7 @@ function MonRow({
     <li className={`flex flex-col gap-2 rounded-lg border px-2.5 py-2 ${cap != null ? 'border-bad bg-bad-soft' : 'border-line bg-surface2'}`}>
       <div className="flex items-center gap-2">
         <Link to={`/pokedex/${mon.species}`} className="shrink-0">
-          <img src={spriteUrl(mon.species, { shiny: mon.shiny })} alt="" className="pixelated h-12 w-12" loading="lazy" />
+          <img src={formSprite(mon)} alt="" className="pixelated h-12 w-12" loading="lazy" />
         </Link>
         <div className="min-w-0 flex-1">
           <div className="truncate font-bold">
@@ -313,7 +313,7 @@ function Upcoming({ learnset }: { learnset: MonLearnset }) {
       {learnset.evolutions.map((ev) => (
         <div key={ev.species} className="flex flex-col gap-1 rounded-md border border-dashed border-line p-1.5">
           <div className="flex items-center gap-1.5">
-            <img src={spriteUrl(ev.species)} alt="" className="pixelated h-8 w-8" loading="lazy" />
+            <img src={formSprite(ev)} alt="" className="pixelated h-8 w-8" loading="lazy" />
             <span className="font-semibold">{t('nuzlocke.team.evolution', { name: ev.name })}</span>
             {ev.conditions.length > 0 && <span className="text-muted">({ev.conditions.join(', ')})</span>}
           </div>
@@ -366,7 +366,7 @@ function DeathDialog({ mon, names, onClose, onConfirm }: { mon: MonInfo; names: 
       }
     >
       <div className="flex items-center gap-3">
-        <img src={spriteUrl(mon.species, { shiny: mon.shiny })} alt="" className="pixelated h-14 w-14 grayscale" />
+        <img src={formSprite(mon)} alt="" className="pixelated h-14 w-14 grayscale" />
         <Field label={t('nuzlocke.team.death.cause')}>
           <input className={inputClass} value={cause} maxLength={200} placeholder={t('nuzlocke.team.death.causePlaceholder')} onChange={(e) => setCause(e.target.value)} />
         </Field>

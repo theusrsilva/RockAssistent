@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { TFunction } from 'i18next'
-import { api, ApiError } from '../../lib/api'
+import { api, ApiError, spriteUrl } from '../../lib/api'
 
 export interface NuzlockeRules {
   firstEncounterOnly: boolean
@@ -72,7 +72,13 @@ export interface MonInfo {
   shiny: boolean
   /** Inicial que a run pôs sozinha: só usa a área quando ela é uma cidade. */
   isStarter?: boolean
+  /** Id do pokemon do PokeAPI da forma (regionais...), para o sprite; null na padrão. */
+  formId?: number | null
 }
+
+/** Sprite de quem tem espécie, forma (formId) e talvez shiny. */
+export const formSprite = (m: { species: number; formId?: number | null; shiny?: boolean }) =>
+  spriteUrl(m.species, { shiny: m.shiny, form: m.formId ?? undefined })
 
 export interface GameArea {
   id: string
@@ -160,6 +166,7 @@ export interface SpeciesEncounterOption {
   minLevel: number
   maxLevel: number
   versions: string[]
+  formId?: number | null
 }
 
 export interface RunView {
@@ -202,6 +209,9 @@ export interface LearnsetMove {
 
 export interface EvolutionLearnset {
   species: number
+  /** Forma do destino (posição no PokeAPI, 0 = padrão) e o id dela para o sprite. */
+  form?: number
+  formId?: number | null
   name: string
   conditions: string[]
   onEvolve: LearnsetMove[]
@@ -382,6 +392,8 @@ export type EvolveHow =
 
 export interface EvolveOption {
   species: number
+  form: number
+  formId: number | null
   name: string
   how: EvolveHow
   /** Por nível: o nível já chegou. As outras ficam sempre disponíveis (o app não sabe do item, da troca...). */
@@ -408,8 +420,9 @@ export function evolveOptions(evolutions: EvolutionLearnset[], level: number): E
   return evolutions.map((ev) => {
     const hows = ev.conditions.map(evolveHow)
     const levels = hows.filter((h): h is { kind: 'level'; level: number } => h.kind === 'level').sort((a, b) => a.level - b.level)
-    if (levels.length > 0) return { species: ev.species, name: ev.name, how: levels[0], ready: level >= levels[0].level }
-    return { species: ev.species, name: ev.name, how: hows[0] ?? { kind: 'other', text: '' }, ready: true }
+    const target = { species: ev.species, form: ev.form ?? 0, formId: ev.formId ?? null, name: ev.name }
+    if (levels.length > 0) return { ...target, how: levels[0], ready: level >= levels[0].level }
+    return { ...target, how: hows[0] ?? { kind: 'other', text: '' }, ready: true }
   })
 }
 

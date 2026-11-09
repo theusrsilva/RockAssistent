@@ -6,7 +6,7 @@ import { Badge, Button, Callout, Card, Field, IconButton, Modal, Segmented, Togg
 import { api, spriteUrl } from '../../lib/api'
 import { titleCase, versionName } from '../../lib/dex'
 import type { Option } from '../../lib/types'
-import { areaUsed, neighborAreas, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
+import { areaUsed, formSprite, neighborAreas, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 type CatchStatus = Exclude<MonStatus, 'dead'>
@@ -31,7 +31,7 @@ export default function AreaCard({
 }) {
   const { t } = useTranslation()
   const toast = useToast()
-  const [catching, setCatching] = useState<{ species: number | null; level: number } | null>(null)
+  const [catching, setCatching] = useState<{ species: number | null; form?: number; formId?: number | null; level: number } | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [confirmNone, setConfirmNone] = useState(false)
   const area = view.currentArea
@@ -130,7 +130,7 @@ export default function AreaCard({
                   readOnly={readOnly}
                   caught={caughtHere.has(e.species)}
                   closed={closed}
-                  onCatch={() => setCatching({ species: e.species, level: e.minLevel })} />
+                  onCatch={() => setCatching({ species: e.species, form: e.form, formId: e.formId, level: e.minLevel })} />
               ))}
             </ul>
           )}
@@ -151,7 +151,7 @@ export default function AreaCard({
                 {lostHere.map((m) => (
                   <li key={m.id} className="flex flex-wrap items-center gap-2">
                     {m.species > 0 ? (
-                      <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9 opacity-70" loading="lazy" />
+                      <img src={formSprite(m)} alt="" className="pixelated h-9 w-9 opacity-70" loading="lazy" />
                     ) : (
                       <span aria-hidden className="icon flex h-9 w-9 items-center justify-center text-muted">
                         block
@@ -235,7 +235,7 @@ function EncounterRow({
   return (
     <li className="flex items-center gap-2 rounded-lg bg-surface2 px-2 py-1.5">
       <Link to={`/pokedex/${e.species}`} className="shrink-0">
-        <img src={spriteUrl(e.species)} alt="" className="pixelated h-11 w-11" loading="lazy" />
+        <img src={formSprite(e)} alt="" className="pixelated h-11 w-11" loading="lazy" />
       </Link>
       <div className="min-w-0 flex-1 text-[12.5px]">
         <div className="font-bold text-ink">{e.name}</div>
@@ -280,7 +280,8 @@ function CatchDialog({
 }: {
   view: RunView
   areaId: string
-  initial: { species: number | null; level: number }
+  /** Da lista de encontros: espécie e forma (regionais) já escolhidas. */
+  initial: { species: number | null; form?: number; formId?: number | null; level: number }
   names: Map<number, string>
   speciesOptions: Option[]
   mutate: Mutate
@@ -307,7 +308,7 @@ function CatchDialog({
         api.post<RunView>(`/api/nuzlocke/${view.run.id}/encounter`, {
           areaId,
           species,
-          form: 0,
+          form: species === initial.species ? (initial.form ?? 0) : 0,
           nickname: nickname.trim() || null,
           level: Number(level) || 0,
           status,
@@ -339,7 +340,7 @@ function CatchDialog({
       <div className="flex flex-col gap-3">
         {initial.species ? (
           <div className="flex items-center gap-2">
-            <img src={spriteUrl(initial.species, { shiny })} alt="" className="pixelated h-14 w-14" />
+            <img src={formSprite({ species: initial.species, formId: initial.formId, shiny })} alt="" className="pixelated h-14 w-14" />
             <span className="font-bold">{names.get(initial.species) ?? `#${initial.species}`}</span>
           </div>
         ) : (
