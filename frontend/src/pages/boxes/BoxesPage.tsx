@@ -9,15 +9,15 @@ import { VaultTab } from './VaultTab'
 
 /**
  * Boxes: os saves das pastas do PC ("Saves") e o cofre do app ("Cofre do app"). Pela rede (modo servidor) os
- * saves não existem (rotas só da janela local): a aba abre só para explicar, e a tela começa no cofre.
+ * saves não existem (rotas só da janela local): a aba abre só para explicar. A tela sempre começa no cofre.
  */
 export default function BoxesPage() {
   const { t } = useTranslation()
   const { me } = useAuth()
   const [params] = useSearchParams()
   const remote = me?.local === false
-  // "Ver no cofre" (/boxes?pokemon=id) e ?aba=cofre abrem direto no cofre.
-  const [state, dispatch] = useReducer(tabReducer, { remote, wantsVault: params.has('pokemon') || params.get('aba') === 'cofre' }, initialTab)
+  // Abre no cofre (também "Ver no cofre", /boxes?pokemon=id, e ?aba=cofre); ?aba=saves abre nos saves.
+  const [state, dispatch] = useReducer(tabReducer, { remote, wantsSaves: !params.has('pokemon') && params.get('aba') === 'saves' }, initialTab)
   // Identidade estável: o SavesTab usa no efeito de montagem (senão refaria os GETs a cada render).
   const onForbidden = useCallback(() => dispatch({ type: 'forbidden' }), [])
 
@@ -29,8 +29,8 @@ export default function BoxesPage() {
         value={state.tab}
         onChange={(tab) => dispatch({ type: 'select', tab })}
         options={[
-          { value: 'saves', label: t('boxes.tabs.saves') },
           { value: 'vault', label: t('boxes.tabs.vault') },
+          { value: 'saves', label: t('boxes.tabs.saves') },
         ]}
       />
       {state.tab === 'saves' ? (

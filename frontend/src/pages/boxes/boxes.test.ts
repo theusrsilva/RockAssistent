@@ -75,10 +75,11 @@ describe('respostas do move', () => {
 })
 
 describe('abas do Boxes', () => {
-  it('pela rede começa no cofre e deixa os saves bloqueados', () => {
-    expect(initialTab({ remote: true, wantsVault: false })).toEqual({ tab: 'vault', savesBlocked: true })
-    expect(initialTab({ remote: false, wantsVault: false })).toEqual({ tab: 'saves', savesBlocked: false })
-    expect(initialTab({ remote: false, wantsVault: true })).toEqual({ tab: 'vault', savesBlocked: false })
+  it('começa no cofre; pela rede os saves ficam bloqueados', () => {
+    expect(initialTab({ remote: true, wantsSaves: false })).toEqual({ tab: 'vault', savesBlocked: true })
+    expect(initialTab({ remote: true, wantsSaves: true })).toEqual({ tab: 'vault', savesBlocked: true })
+    expect(initialTab({ remote: false, wantsSaves: false })).toEqual({ tab: 'vault', savesBlocked: false })
+    expect(initialTab({ remote: false, wantsSaves: true })).toEqual({ tab: 'saves', savesBlocked: false })
   })
 
   it('403 dos saves desliga a aba e seleciona o cofre', () => {
