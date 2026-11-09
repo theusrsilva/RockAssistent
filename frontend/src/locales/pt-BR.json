@@ -2400,7 +2400,11 @@
       "caughtAfterAll": "Capturei afinal",
       "toParty": "Equipe",
       "toBox": "Caixa",
-      "caughtHere": "Capturado"
+      "caughtHere": "Capturado",
+      "prev": "Área anterior: {{name}}",
+      "next": "Próxima área: {{name}}",
+      "prevNone": "Esta é a primeira área",
+      "nextNone": "Esta é a última área"
     },
     "team": {
       "title": "Equipe",

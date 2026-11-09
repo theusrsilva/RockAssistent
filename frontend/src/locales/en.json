@@ -2400,7 +2400,11 @@
       "caughtAfterAll": "Caught it after all",
       "toParty": "Team",
       "toBox": "Box",
-      "caughtHere": "Caught"
+      "caughtHere": "Caught",
+      "prev": "Previous area: {{name}}",
+      "next": "Next area: {{name}}",
+      "prevNone": "This is the first area",
+      "nextNone": "This is the last area"
     },
     "team": {
       "title": "Team",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, evolveHow, evolveOptions, formatRule, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
+import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, evolveHow, evolveOptions, formatRule, neighborAreas, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
 
 const mon = (over: Partial<MonInfo>): MonInfo => ({
   id: over.id ?? 'm',
@@ -211,5 +211,21 @@ describe('evolveOptions', () => {
     expect(evolveHow('trade holding Metal Coat')).toEqual({ kind: 'trade', detail: 'holding Metal Coat' })
     expect(evolveHow('level up friendship 220')).toEqual({ kind: 'friendship' })
     expect(evolveHow('level up at night friendship 160')).toEqual({ kind: 'other', text: 'level up at night friendship 160' })
+  })
+})
+
+describe('neighborAreas', () => {
+  const area = (id: string, order: number) => ({ id, name: id, kind: 'route', order, mapNode: null, pokeApiLocationId: null, bossesBefore: [] })
+  const areas = [area('pallet-town', 1), area('route-1', 2), area('viridian-city', 3)]
+
+  it('acha a anterior e a próxima', () => {
+    expect(neighborAreas(areas, 'route-1')).toEqual({ prev: areas[0], next: areas[2] })
+  })
+
+  it('pontas e área desconhecida', () => {
+    expect(neighborAreas(areas, 'pallet-town')).toEqual({ prev: null, next: areas[1] })
+    expect(neighborAreas(areas, 'viridian-city')).toEqual({ prev: areas[1], next: null })
+    expect(neighborAreas(areas, 'x')).toEqual({ prev: null, next: null })
+    expect(neighborAreas(areas, null)).toEqual({ prev: null, next: null })
   })
 })

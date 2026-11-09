@@ -405,3 +405,10 @@ export function evolveOptions(evolutions: EvolutionLearnset[], level: number): E
     return { species: ev.species, name: ev.name, how: hows[0] ?? { kind: 'other', text: '' }, ready: true }
   })
 }
+
+/** Área anterior e próxima da atual, na ordem do seletor (null nas pontas ou sem área atual). */
+export function neighborAreas(areas: GameArea[], currentId: string | null | undefined): { prev: GameArea | null; next: GameArea | null } {
+  const i = currentId ? areas.findIndex((a) => a.id === currentId) : -1
+  if (i < 0) return { prev: null, next: null }
+  return { prev: areas[i - 1] ?? null, next: areas[i + 1] ?? null }
+}

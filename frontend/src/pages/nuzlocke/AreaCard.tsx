@@ -2,11 +2,11 @@ import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { SearchSelect } from '../../components/SearchSelect'
-import { Badge, Button, Callout, Card, Field, Modal, Segmented, Toggle, inputClass, useToast } from '../../components/ui'
+import { Badge, Button, Callout, Card, Field, IconButton, Modal, Segmented, Toggle, inputClass, useToast } from '../../components/ui'
 import { api, spriteUrl } from '../../lib/api'
 import { titleCase, versionName } from '../../lib/dex'
 import type { Option } from '../../lib/types'
-import { areaUsed, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
+import { areaUsed, neighborAreas, nuzlockeErrorMessage, type GameArea, type MonInfo, type MonStatus, type RunView, type SpeciesEncounterOption } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 type CatchStatus = Exclude<MonStatus, 'dead'>
@@ -55,6 +55,7 @@ export default function AreaCard({
 
   const areaOptions = useMemo(() => areas.map((a, i) => ({ value: i, text: a.name })), [areas])
   const areaIndex = area ? areas.findIndex((a) => a.id === area.id) : -1
+  const { prev, next } = neighborAreas(areas, area?.id)
 
   async function changeArea(index: number | null) {
     if (index == null || !areas[index] || areas[index].id === area?.id) return
@@ -86,9 +87,27 @@ export default function AreaCard({
       {areas.length === 0 && !area ? (
         <p className="text-sm text-muted">{t('nuzlocke.area.noAreas')}</p>
       ) : (
-        <Field label={t('nuzlocke.area.change')}>
-          <SearchSelect options={areaOptions} value={areaIndex >= 0 ? areaIndex : null} onChange={(i) => void changeArea(i)} placeholder={t('nuzlocke.area.search')} />
-        </Field>
+        <div className="flex items-end gap-1.5">
+          <IconButton
+            name="chevron_left"
+            label={prev ? t('nuzlocke.area.prev', { name: prev.name }) : t('nuzlocke.area.prevNone')}
+            className="h-10 w-10"
+            disabled={!prev || readOnly}
+            onClick={() => void changeArea(areaIndex - 1)}
+          />
+          <div className="min-w-0 flex-1">
+            <Field label={t('nuzlocke.area.change')}>
+              <SearchSelect options={areaOptions} value={areaIndex >= 0 ? areaIndex : null} onChange={(i) => void changeArea(i)} placeholder={t('nuzlocke.area.search')} />
+            </Field>
+          </div>
+          <IconButton
+            name="chevron_right"
+            label={next ? t('nuzlocke.area.next', { name: next.name }) : t('nuzlocke.area.nextNone')}
+            className="h-10 w-10"
+            disabled={!next || readOnly}
+            onClick={() => void changeArea(areaIndex + 1)}
+          />
+        </div>
       )}
       {error && (
         <Callout tone="red" icon="error">
