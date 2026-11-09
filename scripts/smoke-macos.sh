@@ -51,10 +51,11 @@ api() { curl -fsS -H "X-TradeRock-Token: $token" "$base$1"; }
 
 api /api/health | json 'd["os"]' | grep -qx macos || fail "o app não se viu no macOS"
 api /sobre | grep -q '<div id="root">' || fail "o frontend não foi servido"
-api /api/setup/ | json 'd["system"]["os"], d["advice"]["situation"]' | grep -qx "('macos', 'macos')" || fail "leitura do sistema"
+setup=$(api /api/setup | json 'd["system"]["os"] + " " + d["advice"]["situation"]')
+[[ $setup == "macos macos" ]] || fail "leitura do sistema: $setup"
 # O pokeldn embutido (Contents/Resources/esp32-runtime) foi achado: nenhum motor reclama dele.
-api /api/engines | json '[e["id"] for e in d if e.get("reasonCode") == "pokeldn_missing"]' | grep -qx '\[\]' \
-  || fail "o app não achou o pokeldn embutido"
+missing=$(api /api/engines | json '",".join(e["id"] for e in d if e.get("reasonCode") == "pokeldn_missing")')
+[[ -z $missing ]] || fail "o app não achou o pokeldn embutido: $missing"
 [[ -f "$WORK/home/Library/Application Support/TradeRock/traderock.db" ]] || fail "o banco não está no Application Support"
 [[ $(stat -f %Lp "$WORK/home/Library/Application Support/TradeRock") == 700 ]] || fail "a pasta de dados não é só do usuário"
 echo "==> fumaça ok"
