@@ -219,6 +219,7 @@ public sealed class RadioAdvisorTests
     [InlineData("vm", "vm", "esp32", false)]
     [InlineData("linux-esp32", "wifi_problematic", "esp32", false)]
     [InlineData("windows-esp32", "windows", "esp32", false)]
+    [InlineData("macos-esp32", "macos", "esp32", false)]
     public void Recomendacao_por_cenario(string scenario, string situation, string recommended, bool wifiAvailable)
     {
         var advice = Advise(scenario);

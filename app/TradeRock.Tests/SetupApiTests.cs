@@ -76,7 +76,7 @@ public sealed class SetupApiTests : IAsyncLifetime
 
         var (dev, _) = await Start(development: true);
         var list = await Json(await dev.GetAsync("/api/setup/scenarios"));
-        Assert.Equal(9, list.GetProperty("scenarios").GetArrayLength());
+        Assert.Equal(10, list.GetProperty("scenarios").GetArrayLength());
 
         var simulated = await Json(await dev.PutAsJsonAsync("/api/setup/simulation", new { scenario = "linux-problematic" }));
         Assert.Equal("wifi_problematic", simulated.GetProperty("advice").GetProperty("situation").GetString());

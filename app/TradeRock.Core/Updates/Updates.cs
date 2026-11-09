@@ -16,6 +16,8 @@ public enum InstallKind
     WindowsInstaller,
     AppImage,
     Deb,
+    /// <summary>macOS: o RockAssistent.app, trocado pelo do .dmg (D35).</summary>
+    MacApp,
 }
 
 public sealed record ReleaseAsset(string Name, string Url, long Size);
@@ -84,6 +86,7 @@ public static class AppVersions
         InstallKind.WindowsInstaller => [$"RockAssistent-Setup-{version}.exe", $"TradeRock-Setup-{version}.exe"],
         InstallKind.AppImage => [$"RockAssistent-{version}-x86_64.AppImage", $"TradeRock-{version}-x86_64.AppImage"],
         InstallKind.Deb => [$"traderock_{version.Replace('-', '~')}_amd64.deb"],
+        InstallKind.MacApp => [$"RockAssistent-{version}-macOS-arm64.dmg"],
         _ => [],
     };
 

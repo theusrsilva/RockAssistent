@@ -44,6 +44,11 @@ public sealed class PythonEsp32Flasher(Func<string?> runtimeRoot, string tempDir
             var bundled = Path.Combine(AppContext.BaseDirectory, WindowsRuntimeDir);
             return IsRuntime(bundled) ? bundled : null;
         }
+        // macOS: o runtime fica em Contents/Resources do RockAssistent.app (scripts/package-macos.sh, D35); rodando do
+        // código, vale o build/worker/stage.
+        if (OperatingSystem.IsMacOS())
+            return new[] { MacBundleRuntime(AppContext.BaseDirectory), devStage }
+                .FirstOrDefault(root => root is not null && IsRuntime(root));
 
         var candidates = new List<string?> { appImagePayload };
         var installs = WorkerLocator.Candidates.Select(c => c.Prefix).ToList();
@@ -54,10 +59,14 @@ public sealed class PythonEsp32Flasher(Func<string?> runtimeRoot, string tempDir
         return candidates.FirstOrDefault(root => root is not null && IsRuntime(root));
     }
 
-    /// <summary>Pasta do runtime do esptool no Windows, ao lado do traderock.exe.</summary>
+    /// <summary>Pasta do runtime do esptool: no Windows, ao lado do traderock.exe; no macOS, em Contents/Resources.</summary>
     public const string WindowsRuntimeDir = "esp32-runtime";
 
-    /// <summary>python/bin/python3 (Linux) ou python/python.exe (Windows, python-build-standalone).</summary>
+    /// <summary>Contents/Resources/esp32-runtime de um .app, a partir da pasta do executável (Contents/MacOS).</summary>
+    public static string MacBundleRuntime(string baseDirectory) =>
+        Path.GetFullPath(Path.Combine(baseDirectory, "..", "Resources", WindowsRuntimeDir));
+
+    /// <summary>python/bin/python3 (Linux e macOS) ou python/python.exe (Windows, python-build-standalone).</summary>
     public static string PythonPath(string root) => OperatingSystem.IsWindows()
         ? Path.Combine(root, "python", "python.exe")
         : Path.Combine(root, "python", "bin", "python3");
@@ -148,7 +157,8 @@ public sealed class PythonEsp32Flasher(Func<string?> runtimeRoot, string tempDir
         else
         {
             start.Environment["PATH"] = "/usr/bin:/bin";
-            start.Environment["LANG"] = "C.UTF-8";
+            // O macOS não tem o locale C.UTF-8 em todas as versões; o en_US.UTF-8 vem sempre.
+            start.Environment["LANG"] = OperatingSystem.IsMacOS() ? "en_US.UTF-8" : "C.UTF-8";
             start.Environment["HOME"] = tempDir; // idem no Linux (esptool e pokeldn)
         }
         return start;

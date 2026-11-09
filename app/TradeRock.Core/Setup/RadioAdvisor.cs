@@ -10,7 +10,7 @@ public sealed record RadioOption(string Engine, bool Available, bool Recommended
 
 /// <summary>
 /// Recomendação de "rádio" (placa Wi-Fi do PC ou ESP32). Situation:
-/// windows | wsl | vm | no_wifi | wifi_compatible | wifi_test_first | wifi_problematic.
+/// windows | macos | wsl | vm | no_wifi | wifi_compatible | wifi_test_first | wifi_problematic.
 /// </summary>
 public sealed record RadioAdvice(
     string Situation,
@@ -57,8 +57,9 @@ public static class RadioAdvisor
             best,
             suggestAdapters ? usbAdapters : []);
 
-        if (system.Os == "windows")
-            return new RadioAdvice("windows", [new RadioOption(Wifi, false, false, "windows"), new RadioOption(Esp32, true, true, null)], cards, null, []);
+        // Windows e macOS não dão o acesso de baixo nível ao Wi-Fi: só o ESP32.
+        if (system.Os is "windows" or "macos")
+            return new RadioAdvice(system.Os, [new RadioOption(Wifi, false, false, system.Os), new RadioOption(Esp32, true, true, null)], cards, null, []);
         if (system.IsWsl)
             return Build("wsl", false, false, "wsl", false);
         if (system.VirtualMachine is not null)

@@ -21,18 +21,25 @@ local.
 | **Windows 10 ou 11** (64 bits) | `RockAssistent-Setup-{{VERSION}}.exe` | Abra e siga os passos. Veja o aviso abaixo. |
 | **Ubuntu, Debian** e derivados | `traderock_{{DEB_VERSION}}_amd64.deb` | `sudo apt install ./traderock_{{DEB_VERSION}}_amd64.deb` |
 | **Outras distribuições Linux** | `RockAssistent-{{VERSION}}-x86_64.AppImage` | `chmod +x` no arquivo e abra |
+| **Mac com chip Apple** (M1 ou mais novo, macOS 14 ou mais novo) | `RockAssistent-{{VERSION}}-macOS-arm64.dmg` | Abra e arraste o RockAssistent para Aplicativos. Veja o aviso abaixo. |
 
 - **Windows:** o instalador ainda não tem assinatura digital, então o Windows mostra "O Windows
   protegeu o computador". Clique em **Mais informações → Executar assim mesmo**. No Windows, o rádio é
   sempre um **ESP32** ligado no USB.
 - **Linux:** o rádio pode ser a placa Wi-Fi do próprio PC ou um ESP32.
+- **Mac:** o app ainda não tem a assinatura da Apple, então o macOS bloqueia a primeira abertura ("A Apple não pôde
+  verificar…"). Clique em **OK**, abra **Ajustes do Sistema → Privacidade e Segurança**, desça até o aviso do
+  RockAssistent e clique em **Abrir Mesmo Assim** (o Mac pede a sua senha). Isso só é preciso uma vez. Abra o app
+  pela pasta **Aplicativos**, não de dentro do disco, para ele conseguir se atualizar sozinho. No Mac, o rádio é
+  sempre um **ESP32** ligado no USB, e o atalho global do Contador Hunt ainda não funciona (use o atalho da janela).
 - **Tem o TradeRock instalado?** As versões antigas, de antes da troca de nome, não acham mais a atualização sozinhas.
   Baixe o RockAssistent uma vez por esta página e instale por cima: seus Pokémon, contas e chaves continuam. Depois
   disso, ele volta a se atualizar sozinho.
 - **Para atualizar,** use a tela **Sobre** do app (ele também avisa no Início quando há versão nova), ou baixe a versão nova e instale por cima. Seus Pokémon, contas e chaves continuam.
 - **Conferir o download (opcional):** compare com o `SHA256SUMS`. No Linux, rode
   `sha256sum -c SHA256SUMS --ignore-missing`. No Windows, rode
-  `Get-FileHash RockAssistent-Setup-{{VERSION}}.exe` no PowerShell.
+  `Get-FileHash RockAssistent-Setup-{{VERSION}}.exe` no PowerShell. No Mac, rode
+  `grep macOS SHA256SUMS | shasum -a 256 -c` no Terminal, na pasta dos downloads.
 
 Nunca distribuímos prod.keys nem ROMs: use só as chaves extraídas do seu próprio Switch. O
 código-fonte completo (AGPL-3.0) está nos arquivos `.tar.gz` deste Release.

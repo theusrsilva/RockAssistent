@@ -202,10 +202,61 @@ jobs:
           path: dist/
           if-no-files-found: error
 
+  # macOS (Apple Silicon, só ESP32, D35): testes, RockAssistent.app assinado ad-hoc, .dmg e fumaça, tudo num Mac do
+  # GitHub (o hdiutil e o codesign só existem no macOS).
+  macos:
+    needs: build-test
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Versão
+        id: version
+        run: |
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then
+            echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          else
+            base=$(sed -n 's|.*<Version>\(.*\)</Version>.*|\1|p' Directory.Build.props)
+            echo "version=$base-ci.$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.21.0"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache de downloads
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/traderock
+          key: traderock-macos-${{ hashFiles('scripts/package-macos.sh', 'scripts/build-dex.py', 'worker/requirements.lock', 'worker/requirements-esp32-macos.lock') }}
+
+      - name: Pacote
+        run: scripts/package-macos.sh "${{ steps.version.outputs.version }}"
+
+      - name: Testes
+        run: dotnet test --project app/TradeRock.Tests -c Release
+
+      - name: Fumaça
+        run: scripts/smoke-macos.sh "dist/RockAssistent-${{ steps.version.outputs.version }}-macOS-arm64.dmg" "${{ steps.version.outputs.version }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: traderock-macos
+          path: dist/*.dmg
+          if-no-files-found: error
+
   # Tag v*: publica o Release (direto, sem rascunho) com os pacotes, o código-fonte e os checksums.
   release:
     if: github.ref_type == 'tag'
-    needs: [package, smoke-deb, smoke-appimage, windows]
+    needs: [package, smoke-deb, smoke-appimage, windows, macos]
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -219,10 +270,14 @@ jobs:
         with:
           name: traderock-windows
           path: dist
-      - name: Checksums com o instalador do Windows
+      - uses: actions/download-artifact@v4
+        with:
+          name: traderock-macos
+          path: dist
+      - name: Checksums com o instalador do Windows e o .dmg do macOS
         run: |
           cd dist && sha256sum -c SHA256SUMS
-          sha256sum -- RockAssistent-Setup-*.exe >> SHA256SUMS
+          sha256sum -- RockAssistent-Setup-*.exe RockAssistent-*-macOS-arm64.dmg >> SHA256SUMS
       # Texto do Release: as novidades (mensagem da tag anotada), o "qual arquivo baixar"
       # (packaging/release-notes.md) e, no fim, a lista automática de mudanças do GitHub.
       - name: Notas

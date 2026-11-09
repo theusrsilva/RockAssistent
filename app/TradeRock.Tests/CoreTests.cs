@@ -27,7 +27,7 @@ public sealed class CoreTests
     [Fact]
     public void Linux_usa_xdg_data_home()
     {
-        if (OperatingSystem.IsWindows())
+        if (!OperatingSystem.IsLinux())
             return;
 
         var paths = AppPaths.ForCurrentUser(env: name => name == "XDG_DATA_HOME" ? "/tmp/xdg" : null);
@@ -37,11 +37,21 @@ public sealed class CoreTests
     [Fact]
     public void Linux_ignora_xdg_relativo()
     {
-        if (OperatingSystem.IsWindows())
+        if (!OperatingSystem.IsLinux())
             return;
 
         var paths = AppPaths.ForCurrentUser(env: name => name == "XDG_DATA_HOME" ? "relativo" : null);
         Assert.EndsWith("/.local/share/traderock", paths.DataDir);
+    }
+
+    [Fact]
+    public void Mac_usa_o_application_support()
+    {
+        if (!OperatingSystem.IsMacOS())
+            return;
+
+        var paths = AppPaths.ForCurrentUser(env: name => name == "XDG_DATA_HOME" ? "/tmp/xdg" : null);
+        Assert.EndsWith("/Library/Application Support/TradeRock", paths.DataDir);
     }
 
     [Fact]

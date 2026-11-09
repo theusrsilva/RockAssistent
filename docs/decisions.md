@@ -1273,3 +1273,45 @@ servidor não mudaram de comportamento, só de lugar no menu.
     (`bank/poketransporter.shtml`) diz que o Transporter "will remove any items from the Pokémon and place them in the
     bag" e desempata: o item volta para a mochila (nota `held_item_removed`).
 - **Não verificado:** a tela num navegador e saves reais das Gen 1, 2 e 4 a 7.
+
+## D35. Versão para macOS (Entrega 22)
+
+Decisões do autor (09/11/2026): um amigo testa num Mac de verdade; assinatura só **ad-hoc** (sem conta de
+desenvolvedor da Apple nem notarização); só **Apple Silicon** (M1 ou mais novo); atalho global do Contador Hunt
+**desligado** no Mac por enquanto; o **modo servidor** vai junto; arquivo `RockAssistent-<versão>-macOS-arm64.dmg`.
+
+- **Rádio:** como no Windows, só o **ESP32** (e o modo LAN do Sword/Shield). O macOS não dá o acesso de baixo nível ao
+  Wi-Fi que o LDN exige; o worker com root e o polkit ficam só no Linux. `SystemSnapshot.Os = "macos"`, situação e
+  motivo `macos` no `RadioAdvisor`, `not_native_macos` na verificação da placa, cenário simulado `macos-esp32`.
+- **Portas:** `MacProbe` lista `/dev/cu.*` (sem Bluetooth e console de depuração) e tira VID/PID e nome do
+  `ioreg -r -c IOUSBHostDevice -l` (`IOCalloutDevice` dentro do bloco de cada aparelho USB); sem o `ioreg`, só o nome.
+  Sem grupo de permissão nem regra do udev (coisa do Linux). O worker já aceitava `/dev/...` (`PORT_RE`).
+- **Dados:** `~/Library/Application Support/TradeRock`, com a pasta de dados e a de chaves em 700 (mesmo código do Linux).
+- **Pacote** (`scripts/package-macos.sh`, só roda num Mac arm64): `RockAssistent.app` com o .NET self-contained
+  `osx-arm64` em `Contents/MacOS` (o Photino.Native e o SQLite têm a biblioteca nativa do osx-arm64 nos pacotes NuGet),
+  `Info.plist` de `packaging/macos` (mínimo macOS 14, o suportado pelo .NET 10; `NSAllowsLocalNetworking` para a janela
+  abrir o servidor local; `NSLocalNetworkUsageDescription` para o modo servidor e o LAN), ícone `traderock.icns`
+  (`packaging/macos/make-icns.py`, mesmo desenho do `.ico`) e o runtime do ESP32/pokeldn em
+  `Contents/Resources/esp32-runtime` (Python 3.12 do python-build-standalone `aarch64-apple-darwin` com sha256 fixo e as
+  rodas de `worker/requirements-esp32-macos.lock`, as mesmas versões do Windows, sem o colorama). O
+  `PythonEsp32Flasher.FindRuntime` acha esse runtime a partir de `Contents/MacOS`.
+- **Assinatura:** cada Mach-O é assinado ad-hoc e depois o pacote (`codesign --sign -`, sem `--deep` e sem o hardened
+  runtime, que pediria permissões extras para o .NET). O Mac com chip Apple só roda código assinado; sem notarização,
+  o Gatekeeper pede o "Abrir Mesmo Assim" uma vez (Release e README explicam).
+- **Disco:** `.dmg` (UDZO) com o app e um atalho "Aplicativos" para arrastar.
+- **Atualização** (`InstallKind.MacApp`, D29): vale quando o app roda de um `X.app/Contents/MacOS` fora de `/Volumes` e
+  sem a translocação do Gatekeeper (app aberto sem ser arrastado para Aplicativos: aí é manual). Baixa o `.dmg`, confere
+  o SHA256SUMS, monta só para leitura (`hdiutil attach -nobrowse -readonly`), copia com o `ditto` para
+  `.<nome>.new` ao lado, tira a quarentena (`xattr -dr com.apple.quarantine`), troca as pastas e reabre com o `open`
+  quando o processo antigo termina. Sem senha: Aplicativos aceita escrita dos administradores do Mac; sem permissão,
+  `update_no_permission` e o app antigo fica.
+- **Modo servidor:** igual aos outros sistemas. Sem regra de firewall (o do macOS vem desligado; se estiver ligado, o
+  sistema pergunta na primeira conexão, e a tela do modo servidor avisa). Interfaces `bridge*`, `utun*` e `vmenet*`
+  contam como virtuais.
+- **Atalho global:** `NoHotkeys("macos")`, com o texto "ainda não disponível no Mac"; o atalho da janela funciona.
+- **CI:** job `macos` no `macos-15` do GitHub: pacote, testes .NET, fumaça (`scripts/smoke-macos.sh`: monta o `.dmg`,
+  confere a assinatura, roda sem janela com uma pasta pessoal temporária e confere a API, o pokeldn embutido e a pasta
+  de dados) e o `.dmg` entra no Release e no SHA256SUMS.
+- **Não verificado:** nada disso rodou num Mac ainda (nem a janela do Photino com o WebKit do macOS, o ESP32, o
+  Gatekeeper com o app ad-hoc, a atualização, o modo servidor nem o `ioreg`). O primeiro teste de verdade é o CI
+  `macos` e depois o roteiro de [docs/macos-teste.md](macos-teste.md).

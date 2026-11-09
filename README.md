@@ -35,10 +35,13 @@ Baixe o arquivo da versão mais recente na página de
 | **Windows 10 (1809+) ou 11**, 64 bits | `RockAssistent-Setup-<versão>.exe` | Abra e siga os passos |
 | **Ubuntu 22.04+, Debian 12+** e derivados | `traderock_<versão>_amd64.deb` | `sudo apt install ./traderock_<versão>_amd64.deb` |
 | **Outras distribuições Linux** | `RockAssistent-<versão>-x86_64.AppImage` | `chmod +x` no arquivo e abra |
+| **Mac com chip Apple** (M1+, macOS 14+) | `RockAssistent-<versão>-macOS-arm64.dmg` | Abra e arraste para Aplicativos |
 
 - **Windows:** o instalador ainda não tem assinatura digital, então o Windows mostra "O Windows protegeu o
   computador". Clique em **Mais informações → Executar assim mesmo**. O instalador pede administrador só para
   instalar e liberar o firewall em redes privadas; o app roda sempre como o seu usuário.
+- **Mac:** o app ainda não tem a assinatura da Apple. Na primeira vez, o macOS bloqueia; vá em **Ajustes do
+  Sistema → Privacidade e Segurança → Abrir Mesmo Assim**. Só é preciso uma vez.
 - **AppImage:** precisa do WebKitGTK 4.1, do libnotify e do `pkexec`. Se faltar alguma coisa, o app mostra o
   comando para instalar. Para trocar pela placa Wi-Fi, use **Configurações → Conexão → Componente de rede**.
 - **Atualizar:** o app procura versões novas sozinho uma vez por dia (dá para desligar) e se atualiza pela tela
@@ -46,7 +49,7 @@ Baixe o arquivo da versão mais recente na página de
 - **Já tinha o TradeRock?** Baixe o RockAssistent uma vez e instale por cima. Depois disso, ele volta a se
   atualizar sozinho.
 - **Conferir o download (opcional):** no Linux, `sha256sum -c SHA256SUMS --ignore-missing`. No Windows,
-  `Get-FileHash <arquivo>` no PowerShell.
+  `Get-FileHash <arquivo>` no PowerShell. No Mac, `grep macOS SHA256SUMS | shasum -a 256 -c`.
 
 ### Para trocar com o Switch
 
@@ -54,6 +57,7 @@ Baixe o arquivo da versão mais recente na página de
 | --- | --- |
 | Linux | A placa Wi-Fi do próprio PC ou um ESP32 no USB |
 | Windows | Só um ESP32 no USB (o Windows não deixa usar o Wi-Fi do jeito que o LDN precisa) |
+| Mac | Só um ESP32 no USB, pelo mesmo motivo |
 
 **Configurações → Conexão** confere tudo e mostra o que falta: a placa ou o ESP32 (o app grava o firmware sozinho)
 e o `prod.keys`. O RockAssistent **nunca** baixa, sugere fontes nem distribui `prod.keys` ou ROMs. Use só as chaves
@@ -65,6 +69,7 @@ extraídas do seu próprio console. O Sword/Shield também troca pela rede de ca
 | --- | --- |
 | Linux | `~/.local/share/traderock` |
 | Windows | `%LOCALAPPDATA%\TradeRock` (só o seu usuário tem acesso) |
+| Mac | `~/Library/Application Support/TradeRock` (só o seu usuário tem acesso) |
 
 O cofre, as hunts, os Nuzlockes, o histórico e as configurações ficam num banco SQLite nessa pasta e continuam lá
 quando você fecha o app ou atualiza.

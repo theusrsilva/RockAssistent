@@ -62,5 +62,11 @@ public static class SetupScenarios
             [new SerialPortInfo(@"USB\VID_1A86&PID_7523\5&2A8F0B1&0&3", "1a86", "7523", "USB-SERIAL CH340", DriverMissing: true),
              new SerialPortInfo("COM4", "303a", "1001", "Dispositivo serial USB")],
             null, false, false),
+
+        // macOS com um ESP32-S3 pela USB nativa e um CP2102 (D35).
+        ["macos-esp32"] = new("macos", false, null, null, [],
+            [new SerialPortInfo("/dev/cu.usbmodem1101", "303a", "1001", "USB JTAG/serial debug unit"),
+             new SerialPortInfo("/dev/cu.usbserial-0001", "10c4", "ea60", "CP2102 USB to UART Bridge Controller")],
+            null, false, false),
     }.ToDictionary(kv => kv.Key, kv => kv.Value with { SimulatedScenario = kv.Key });
 }

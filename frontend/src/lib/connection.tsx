@@ -59,7 +59,7 @@ export function connectionItems(setup: SetupStatus | null): Record<ConnectionKey
   const by = (id: string) => setup.checks.filter((c) => c.id === id)
   const sys = by('native_linux')
   // Sem placa Wi-Fi possível (Windows, WSL, máquina virtual) o sistema só serve com ESP32.
-  const noWifi = ['windows', 'wsl', 'vm'].includes(setup.advice.situation)
+  const noWifi = ['windows', 'macos', 'wsl', 'vm'].includes(setup.advice.situation)
   const systemState: ItemState =
     sys.length > 0 ? toState(worst(sys), 'ok') : setup.state.radio === 'esp32' ? 'ok' : noWifi ? 'warn' : 'ok'
   const step4 = setup.checks.filter((c) => c.step === 4 && !systemCheckIds.includes(c.id))

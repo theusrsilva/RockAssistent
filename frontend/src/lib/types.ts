@@ -59,7 +59,7 @@ export type TradeEventKind =
 export interface Health {
   app: string
   version: string
-  os: 'linux' | 'windows' | 'other'
+  os: 'linux' | 'windows' | 'macos' | 'other'
   environment: string
   window: boolean
 }
@@ -619,7 +619,7 @@ export interface WorkerInfo {
 
 export interface SetupStatus {
   system: {
-    os: 'linux' | 'windows' | 'other'
+    os: 'linux' | 'windows' | 'macos' | 'other'
     isWsl: boolean
     virtualMachine: string | null
     distro: { id: string; idLike: string; name: string } | null

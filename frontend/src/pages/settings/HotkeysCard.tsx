@@ -18,7 +18,7 @@ const KNOWN_ERRORS = [
 ]
 
 /** Motivos do atalho global com texto (hunt.hotkeys.global.reasons.*). */
-const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'remote', 'text_key']
+const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'macos', 'remote', 'text_key']
 
 /**
  * Atalhos do Contador Hunt (Configurações → Preferências). "Gravar" pega a próxima tecla apertada; Esc cancela.

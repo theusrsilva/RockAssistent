@@ -20,7 +20,7 @@ compatíveis com a AGPL-3.0. Licenças conferidas no código-fonte em 2026-09-29
 | [Photino.NET](https://github.com/tryphotino/photino.NET) | Janela nativa (NuGet) | Apache-2.0 |
 | [pret/pokefirered](https://github.com/pret/pokefirered) | Referência das regras do jogo (não distribuído) | sem código incorporado |
 | [ImaEternal/FRLG-LDN-Trade-Console](https://github.com/ImaEternal/FRLG-LDN-Trade-Console) | Os dois patches do motor em `engines/patches/frlg-ldn-trade` (sem alteração) e referência de UX/diagnóstico | Patches: AGPL-3.0 (mudam código AGPL); o resto do projeto é EUPL-1.2 e não foi incorporado |
-| [python-build-standalone](https://github.com/astral-sh/python-build-standalone) | CPython 3.12 embutido no worker (Linux) e na gravação do ESP32 (Windows, `esp32-runtime/python`) | Python: PSF-2.0; bibliotecas incluídas com as próprias licenças (ver a pasta `python/`) |
+| [python-build-standalone](https://github.com/astral-sh/python-build-standalone) | CPython 3.12 embutido no worker (Linux) e na gravação do ESP32 e no pokeldn (Windows, `esp32-runtime/python`; macOS, `RockAssistent.app/Contents/Resources/esp32-runtime/python`) | Python: PSF-2.0; bibliotecas incluídas com as próprias licenças (ver a pasta `python/`) |
 | [python-netlink](https://pypi.org/project/python-netlink/) | Dependência da biblioteca LDN | GPL-3.0 |
 | [trio](https://github.com/python-trio/trio), outcome, sniffio | Dependências da biblioteca LDN | MIT ou Apache-2.0 |
 | attrs, idna, sortedcontainers | Dependências do trio | MIT; BSD-3-Clause; Apache-2.0 |

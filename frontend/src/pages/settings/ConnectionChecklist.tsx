@@ -112,7 +112,9 @@ export function ConnectionChecklist() {
       items.system === 'ok'
         ? system.os === 'windows'
           ? t('ui.conn.desc.systemWindows')
-          : t('ui.conn.desc.systemOk')
+          : system.os === 'macos'
+            ? t('ui.conn.desc.systemMacos')
+            : t('ui.conn.desc.systemOk')
         : (checkText(firstProblem(setup.checks.filter((c) => systemCheckIds.includes(c.id)))) ||
           t(`ui.conn.desc.system_${advice.situation}`, { defaultValue: t('ui.conn.desc.systemWarn') })),
     keys:
@@ -168,7 +170,7 @@ export function ConnectionChecklist() {
             })}
           </Callout>
           <CheckList checks={setup.checks.filter((c) => systemCheckIds.includes(c.id))} />
-          <FullText names={['wizard/01-boas-vindas', 'wizard/01-precisa-todos', system.os === 'windows' ? 'wizard/01-precisa-windows' : 'wizard/01-precisa-linux']} />
+          <FullText names={['wizard/01-boas-vindas', 'wizard/01-precisa-todos', system.os === 'windows' ? 'wizard/01-precisa-windows' : system.os === 'macos' ? 'wizard/01-precisa-macos' : 'wizard/01-precisa-linux']} />
         </>
       ),
     },
@@ -444,7 +446,8 @@ function RadioPanel({
   const { t } = useTranslation()
   const [showKnown, setShowKnown] = useState(false)
   const { advice, state, system } = status
-  const windows = system.os === 'windows'
+  // Windows e macOS: só o ESP32 (D35).
+  const windows = system.os === 'windows' || system.os === 'macos'
   const detectedDrivers = advice.cards.flatMap((c) => [c.card.module, c.card.driver]).filter((d): d is string => !!d)
   // No Linux, a placa Wi-Fi aparece primeiro; no Windows, só o ESP32.
   const options = windows ? advice.options.filter((o) => o.engine === 'esp32') : advice.options
@@ -575,7 +578,7 @@ function RadioPanel({
           {t('wizard.refresh')}
         </Button>
       </div>
-      <FullText names={[windows ? 'wizard/03-radio-windows' : 'wizard/03-radio-linux']} />
+      <FullText names={[system.os === 'macos' ? 'wizard/03-radio-macos' : windows ? 'wizard/03-radio-windows' : 'wizard/03-radio-linux']} />
       {showKnown && (
         <div className="flex flex-col gap-2 rounded-lg border border-line p-3">
           <CatalogNotice catalog={catalog} />

@@ -16,7 +16,7 @@ public static class AppEndpoints
         {
             app = "RockAssistent",
             version,
-            os = OperatingSystem.IsWindows() ? "windows" : OperatingSystem.IsLinux() ? "linux" : "other",
+            os = OperatingSystem.IsWindows() ? "windows" : OperatingSystem.IsLinux() ? "linux" : OperatingSystem.IsMacOS() ? "macos" : "other",
             environment = env.EnvironmentName,
             window = window.HasWindow && Caller.Find(context) is { IsLocal: true },
         }));

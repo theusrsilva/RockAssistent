@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- RockAssistent.app (D35). {{VERSION}} e {{FULL_VERSION}} vêm do scripts/package-macos.sh. -->
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>pt-BR</string>
+  <key>CFBundleDisplayName</key>
+  <string>RockAssistent</string>
+  <key>CFBundleName</key>
+  <string>RockAssistent</string>
+  <key>CFBundleExecutable</key>
+  <string>traderock</string>
+  <key>CFBundleIconFile</key>
+  <string>traderock</string>
+  <key>CFBundleIdentifier</key>
+  <string>io.github.traderock.TradeRock</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>{{VERSION}}</string>
+  <key>CFBundleVersion</key>
+  <string>{{FULL_VERSION}}</string>
+  <key>LSApplicationCategoryType</key>
+  <string>public.app-category.utilities</string>
+  <!-- O .NET 10 é suportado a partir do macOS 14 (Sonoma). -->
+  <key>LSMinimumSystemVersion</key>
+  <string>14.0</string>
+  <key>LSArchitecturePriority</key>
+  <array>
+    <string>arm64</string>
+  </array>
+  <key>NSHighResolutionCapable</key>
+  <true/>
+  <key>NSHumanReadableCopyright</key>
+  <string>AGPL-3.0</string>
+  <!-- A janela abre o servidor local (http://127.0.0.1). -->
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsLocalNetworking</key>
+    <true/>
+  </dict>
+  <!-- macOS 15: a troca pela rede de casa (modo LAN do Sword/Shield) e o modo servidor usam a rede local. -->
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>O RockAssistent usa a rede de casa para o modo servidor (celulares) e para a troca com o Sword/Shield pela rede.</string>
+</dict>
+</plist>

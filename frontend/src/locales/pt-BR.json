@@ -756,7 +756,8 @@
       "no_wifi": "Não encontramos placa Wi-Fi neste PC. Um ESP32 (ou um adaptador USB compatível) resolve.",
       "wsl": "Você está no WSL: a placa Wi-Fi não fica acessível aqui. Use um ESP32 ou instale o Linux de verdade.",
       "vm": "Você está numa máquina virtual ({{vm}}): a placa Wi-Fi não fica acessível. Use um ESP32 ou o Linux de verdade.",
-      "windows": "No Windows, o rádio é um ESP32 ligado no USB."
+      "windows": "No Windows, o rádio é um ESP32 ligado no USB.",
+      "macos": "No Mac, o rádio é um ESP32 ligado no USB."
     },
     "why": {
       "untested": "não está na nossa lista de testadas",
@@ -778,6 +779,7 @@
     "unavailable": "Indisponível neste PC",
     "reasons": {
       "windows": "O Windows não permite o acesso ao Wi-Fi que a troca exige.",
+      "macos": "O macOS não permite o acesso ao Wi-Fi que a troca exige.",
       "wsl": "No WSL a placa Wi-Fi do PC não fica acessível.",
       "vm": "Numa máquina virtual a placa Wi-Fi do PC não fica acessível.",
       "no_wifi": "Nenhuma placa Wi-Fi encontrada.",
@@ -850,6 +852,7 @@
       "radio_wifi": "Rádio: placa Wi-Fi do PC.",
       "radio_esp32": "Rádio: ESP32 via USB.",
       "not_native_windows": "A placa Wi-Fi só funciona no Linux.",
+      "not_native_macos": "A placa Wi-Fi só funciona no Linux.",
       "not_native_wsl": "O WSL não dá acesso à placa Wi-Fi: use o Linux instalado de verdade ou um ESP32.",
       "not_native_vm": "Máquinas virtuais não dão acesso à placa Wi-Fi: use o Linux de verdade ou um ESP32.",
       "native_linux_ok": "Linux instalado de verdade.",
@@ -1138,7 +1141,8 @@
     },
     "localOnly": "Esta tela só abre na janela do RockAssistent no próprio PC.",
     "virtual": "virtual (não é a rede da casa)",
-    "windowsFirewall": "No Windows, o instalador já liberou o RockAssistent no Firewall, só em redes \"Privadas\". Se o celular não conseguir abrir, confira em Configurações do Windows → Rede e Internet se a rede da casa está como \"Rede privada\"."
+    "windowsFirewall": "No Windows, o instalador já liberou o RockAssistent no Firewall, só em redes \"Privadas\". Se o celular não conseguir abrir, confira em Configurações do Windows → Rede e Internet se a rede da casa está como \"Rede privada\".",
+    "macFirewall": "No Mac, se o firewall estiver ligado, o macOS pergunta na primeira vez se o RockAssistent pode aceitar conexões: clique em Permitir. Dá para conferir depois em Ajustes do Sistema → Rede → Firewall."
   },
   "accounts": {
     "title": "Contas",
@@ -1280,10 +1284,12 @@
       "desc": {
         "systemOk": "Linux instalado de verdade",
         "systemWindows": "Windows: as trocas usam um ESP32 via USB",
+        "systemMacos": "Mac: as trocas usam um ESP32 via USB",
         "systemWarn": "A placa Wi-Fi não funciona aqui. Use um ESP32.",
         "system_wsl": "Você está no WSL: a placa Wi-Fi não funciona aqui. Use um ESP32 ou o Linux de verdade.",
         "system_vm": "Máquina virtual: a placa Wi-Fi não funciona aqui. Use um ESP32.",
         "system_windows": "Windows: as trocas usam um ESP32 via USB",
+        "system_macos": "Mac: as trocas usam um ESP32 via USB",
         "keysOk": "Arquivo guardado com segurança",
         "keysSkipped": "Pulado: as trocas ficam só na demonstração",
         "keysMissing": "Arquivo extraído do seu próprio Switch",
@@ -1752,6 +1758,7 @@
       "windows_installer": "O RockAssistent baixa o instalador, confere o arquivo e roda a instalação. O Windows pede a permissão de administrador, como na primeira instalação. O app fecha e abre de novo sozinho no fim.",
       "app_image": "O RockAssistent baixa o AppImage novo, confere o arquivo, troca o atual e abre de novo.",
       "deb": "O RockAssistent baixa o pacote, confere o arquivo e instala. O sistema pede a sua senha de administrador. O app fecha e abre de novo sozinho no fim.",
+      "mac_app": "O RockAssistent baixa o .dmg, confere o arquivo e troca o app em Aplicativos. O app fecha e abre de novo sozinho no fim.",
       "none": ""
     },
     "stages": {
@@ -2694,6 +2701,7 @@
           "no_x11": "Não foi possível falar com o X11 (sem tela gráfica X); use o atalho da janela.",
           "in_use": "Outro programa já usa uma dessas teclas. Escolha outra e ligue de novo.",
           "unsupported_os": "Este sistema não tem atalho global; use o atalho da janela.",
+          "macos": "No Mac, o atalho global ainda não está disponível; use o atalho da janela.",
           "remote": "O atalho global só pode ser ligado na janela do PC.",
           "text_key": "Uma das teclas escreve ou apaga texto e não vale como atalho global. Grave F1–F12 ou Ctrl/Alt + uma tecla; por enquanto vale o atalho da janela."
         }

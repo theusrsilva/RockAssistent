@@ -16,7 +16,7 @@ public sealed record WifiCard(
     string? ProductName,
     bool IsInternetConnection);
 
-/// <summary>Porta serial (ttyUSB/ttyACM no Linux, COMx no Windows).</summary>
+/// <summary>Porta serial (ttyUSB/ttyACM no Linux, COMx no Windows, /dev/cu.* no macOS).</summary>
 public sealed record SerialPortInfo(
     string Path,
     string? VendorId,
@@ -37,7 +37,7 @@ public sealed record UserInfo(string Name, IReadOnlyList<string> Groups, IReadOn
 /// (<see cref="LinuxProbe"/>) ou de um cenário simulado (<see cref="SetupScenarios"/>).
 /// </summary>
 public sealed record SystemSnapshot(
-    string Os, // linux | windows | other
+    string Os, // linux | windows | macos | other
     bool IsWsl,
     string? VirtualMachine,
     DistroInfo? Distro,
