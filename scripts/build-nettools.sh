@@ -29,7 +29,7 @@ fetch() { # url sha256 arquivo
   local url=$1 sha=$2 file="$SRC/$3"
   if [[ ! -f "$file" ]]; then
     echo "==> baixando $3" >&2
-    curl -fsSL -o "$file.part" "$url"
+    curl -fsSL --retry 4 --retry-all-errors --retry-delay 5 -o "$file.part" "$url"
     mv "$file.part" "$file"
   fi
   echo "$sha  $file" | sha256sum -c --quiet

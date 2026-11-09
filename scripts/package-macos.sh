@@ -43,19 +43,27 @@ RUNTIME=$APP/Contents/Resources/esp32-runtime
 DIST=dist
 DMG=$DIST/RockAssistent-$VERSION-macOS-arm64.dmg
 
-# O macOS traz o shasum; o sha256sum só em algumas versões. O stage-pokeldn.sh também usa o sha256sum.
-if ! command -v sha256sum >/dev/null; then
-  SHIM=$BUILD/shim
-  mkdir -p "$SHIM"
-  printf '#!/bin/sh\nexec shasum -a 256 "$@"\n' > "$SHIM/sha256sum"
-  chmod +x "$SHIM/sha256sum"
-  export PATH="$PWD/$SHIM:$PATH"
-fi
+# Os scripts usam o "sha256sum -c --quiet" do GNU. O macOS 15 traz um sha256sum próprio, sem o --quiet, e as versões
+# antigas não trazem nenhum: aqui ele vira sempre o shasum (que tem o -c, e o -s no lugar do --quiet). O
+# stage-pokeldn.sh também usa o sha256sum e herda o PATH.
+SHIM=$BUILD/shim
+mkdir -p "$SHIM"
+cat > "$SHIM/sha256sum" <<'SH'
+#!/bin/sh
+for a; do
+  shift
+  [ "$a" = --quiet ] && a=-s
+  set -- "$@" "$a"
+done
+exec shasum -a 256 "$@"
+SH
+chmod +x "$SHIM/sha256sum"
+export PATH="$PWD/$SHIM:$PATH"
 
 fetch() { # arquivo sha256
   if [[ ! -f "$CACHE/$1" ]]; then
     echo "==> baixando $1"
-    curl -fsSL -o "$CACHE/$1.part" "https://github.com/astral-sh/python-build-standalone/releases/download/$PY_RELEASE/${1//+/%2B}"
+    curl -fsSL --retry 4 --retry-all-errors --retry-delay 5 -o "$CACHE/$1.part" "https://github.com/astral-sh/python-build-standalone/releases/download/$PY_RELEASE/${1//+/%2B}"
     mv "$CACHE/$1.part" "$CACHE/$1"
   fi
   echo "$2  $CACHE/$1" | sha256sum -c --quiet
