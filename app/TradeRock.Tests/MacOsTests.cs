@@ -8,6 +8,9 @@ namespace TradeRock.Tests;
 /// <summary>macOS (D35): o que dá para conferir fora de um Mac.</summary>
 public class MacOsTests
 {
+    /// <summary>Os caminhos do macOS viram "D:\..." no Windows (Path.GetFullPath e Path.Combine).</summary>
+    private const string UnixPaths = "Caminhos do macOS não valem no Windows.";
+
     // Trecho no formato do "ioreg -r -c IOUSBHostDevice -l": um ESP32-S3 pela USB nativa e um CP2102.
     private const string Ioreg = """
         +-o USB JTAG/serial debug unit@01100000  <class IOUSBHostDevice, id 0x100000a1b, registered, matched, active, busy 0 (5 ms), retain 30>
@@ -83,13 +86,19 @@ public class MacOsTests
     }
 
     [Fact]
-    public void Pasta_de_dados_no_application_support() =>
+    public void Pasta_de_dados_no_application_support()
+    {
+        Assert.SkipWhen(OperatingSystem.IsWindows(), UnixPaths);
         Assert.Equal("/Users/ash/Library/Application Support/TradeRock", AppPaths.MacDataDir("/Users/ash"));
+    }
 
     [Fact]
-    public void Runtime_do_esp32_em_contents_resources() =>
+    public void Runtime_do_esp32_em_contents_resources()
+    {
+        Assert.SkipWhen(OperatingSystem.IsWindows(), UnixPaths);
         Assert.Equal("/Applications/RockAssistent.app/Contents/Resources/esp32-runtime",
             PythonEsp32Flasher.MacBundleRuntime("/Applications/RockAssistent.app/Contents/MacOS/"));
+    }
 
     [Theory]
     [InlineData("/Applications/RockAssistent.app/Contents/MacOS/", "/Applications/RockAssistent.app")]
@@ -97,8 +106,11 @@ public class MacOsTests
     [InlineData("/Volumes/RockAssistent/RockAssistent.app/Contents/MacOS/", null)] // rodando de dentro do .dmg
     [InlineData("/private/var/folders/x/AppTranslocation/ABC/d/RockAssistent.app/Contents/MacOS/", null)]
     [InlineData("/home/ash/traderock/", null)]
-    public void Pacote_app_do_executavel(string baseDirectory, string? bundle) =>
+    public void Pacote_app_do_executavel(string baseDirectory, string? bundle)
+    {
+        Assert.SkipWhen(OperatingSystem.IsWindows(), UnixPaths);
         Assert.Equal(bundle, UpdateInstallers.MacBundleOf(baseDirectory));
+    }
 
     [Fact]
     public void Arquivo_do_release_do_mac() =>

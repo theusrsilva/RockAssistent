@@ -695,6 +695,8 @@ public sealed class KestrelServerModeTests : IAsyncLifetime
     [Fact]
     public async Task Endpoint_da_rede_liga_e_desliga_sem_reiniciar()
     {
+        // O macOS só tem o 127.0.0.1 no lo0 (o Linux e o Windows aceitam todo o 127.0.0.0/8).
+        Assert.SkipWhen(OperatingSystem.IsMacOS(), "Sem o 127.0.0.2 no macOS.");
         var ct = TestContext.Current.CancellationToken;
         var port = FreePort();
         using var local = new HttpClient { BaseAddress = TradeRockServer.GetListeningUri(_app) };
@@ -719,6 +721,8 @@ public sealed class KestrelServerModeTests : IAsyncLifetime
     [Fact]
     public async Task Porta_ocupada_avisa_e_nao_liga()
     {
+        // O macOS só tem o 127.0.0.1 no lo0 (o Linux e o Windows aceitam todo o 127.0.0.0/8).
+        Assert.SkipWhen(OperatingSystem.IsMacOS(), "Sem o 127.0.0.2 no macOS.");
         var ct = TestContext.Current.CancellationToken;
         using var busy = new TcpListener(IPAddress.Parse("127.0.0.2"), 0);
         busy.Start();
