@@ -656,7 +656,48 @@
     },
     "legacy": "Gen {{generation}} Pokémon ({{game}}): it stays in the vault, but it can't trade with the Switch or open in the builder. Use \"Adapt to…\" to bring it to a newer game, like Poké Transporter and HOME do.",
     "legacyNoEdit": "The builder only edits Pokémon from the trade games. Adapt it to a Switch game to edit it.",
-    "legacyNoTrade": "Adapt it to a Switch game to trade it."
+    "legacyNoTrade": "Adapt it to a Switch game to trade it.",
+    "adapt": {
+      "action": "Adapt to…",
+      "title": "Adapt to a newer game",
+      "help": "Brings the Pokémon forward through the official routes (Virtual Console, Pal Park, Poké Transfer, Poké Transporter, Pokémon Bank and HOME), with each step's rules. Your \"My trainer\" of the target game becomes the current trainer.",
+      "keeps": "The original stays in the vault, in its current format. The adapted copy goes to the Inbox.",
+      "confirm": "Adapt",
+      "none": "There is no newer game to bring this Pokémon to.",
+      "done": "Done: the {{game}} copy is in the Inbox.",
+      "illegal": "PKHeX found problems in the copy (it was created anyway):",
+      "steps": {
+        "virtual_console": "Poké Transporter (Virtual Console)",
+        "pal_park": "Pal Park",
+        "poke_transfer": "Poké Transfer",
+        "poke_transporter": "Poké Transporter",
+        "pokemon_bank": "Pokémon Bank",
+        "home": "Pokémon HOME"
+      },
+      "notes": {
+        "held_item_removed": "The held item went back to the Bag, like in the game: the copy has no item.",
+        "moves_replaced": "Moves the new game doesn't have were replaced by PKHeX's suggestion."
+      },
+      "refusal": {
+        "egg": "Eggs can't be transferred",
+        "no_route": "There is no official route to that game",
+        "lgpe_no_receive": "Let's Go doesn't receive Pokémon from other games",
+        "species_not_in_game": "That species (or form) doesn't exist in that game",
+        "vc_held_item": "Remove the held item first (Poké Transporter leaves Gen 2 Pokémon holding items in the game)",
+        "vc_dizzy_punch": "Forget Dizzy Punch first (Poké Transporter refuses Odd Egg Pokémon with that move)",
+        "vc_mew_event": "Only the Virtual Console event Mew goes through Poké Transporter",
+        "pal_park_hm": "Forget the HM moves first (Pal Park refuses them)",
+        "pal_park_mail": "Remove the Mail first (Pal Park refuses it)",
+        "poke_transfer_hm": "Forget the HM moves first (Poké Transfer refuses them)",
+        "poke_transfer_spiky_pichu": "The Spiky-eared Pichu can't be transferred",
+        "kyurem_fused": "Separate Kyurem first (only the normal form is transferred)",
+        "cosplay_pikachu": "Cosplay Pikachu can't go to Pokémon Bank",
+        "adapted_exists": "That copy is already in the vault",
+        "target_invalid": "Choose a game from the list",
+        "pokemon_in_trash": "It is in the trash",
+        "pokemon_not_found": "The Pokémon wasn't found"
+      }
+    }
   },
   "inject": {
     "title": "Inject into a GBA save",

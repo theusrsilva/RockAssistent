@@ -22,6 +22,7 @@ import type {
   VaultPokemon,
 } from '../../lib/types'
 import { tagClass, tagColors } from './tagColors'
+import { AdaptDialog } from './AdaptDialog'
 import { TransferDialog } from './TransferDialog'
 import { ComingSoonActions } from '../boxes/ComingSoonActions'
 import { EvolveDialog } from '../boxes/EvolveDialog'
@@ -96,6 +97,7 @@ export function Details({
   const [saving, setSaving] = useState(false)
   const [editError, setEditError] = useState<string | null>(null)
   const [transferOpen, setTransferOpen] = useState(false)
+  const [adaptOpen, setAdaptOpen] = useState(false)
   const [evolveOpen, setEvolveOpen] = useState(false)
   const [cloning, setCloning] = useState(false)
 
@@ -301,6 +303,7 @@ export function Details({
           onClose={() => setEvolveOpen(false)}
         />
       )}
+      {adaptOpen && <AdaptDialog pokemon={pokemon} onDone={() => onChanged()} onClose={() => setAdaptOpen(false)} />}
       {transferOpen && (
         <TransferDialog
           pokemon={pokemon}
@@ -558,6 +561,12 @@ export function Details({
                     {t('ui.vault.useInTrade')}
                   </Button>
                 </div>
+                {/* Gen 1 a 7 e Let's Go: caminhos oficiais para um jogo mais novo (D34); o original fica. */}
+                {(pokemon.generation ?? 3) <= 7 && (
+                  <Button className="h-9" variant="secondary" size="sm" icon="upgrade" disabled={pokemon.isEgg} title={pokemon.isEgg ? t('vault.adapt.refusal.egg') : undefined} onClick={() => setAdaptOpen(true)}>
+                    {t('vault.adapt.action')}
+                  </Button>
+                )}
                 {onMoveToSave && (
                   <Button className="h-9" variant="secondary" size="sm" icon="drive_file_move" onClick={onMoveToSave}>
                     {t('boxes.moveToSave')}

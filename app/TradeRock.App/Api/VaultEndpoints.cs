@@ -27,6 +27,9 @@ public static class VaultEndpoints
 
     /// <summary>Jogo de destino (chave do catálogo: sv, swsh, za...).</summary>
     public sealed record TransferDto(string? Game);
+
+    /// <summary>Formato de destino (chave: gen4 a gen7, swsh, bdsp, pla, sv, za) e o idioma das mensagens de legalidade.</summary>
+    public sealed record AdaptDto(string? Target, string? Language = null);
     public sealed record ExportDto(IReadOnlyList<Guid> Ids, string Format = "pk3", int Size = 100);
 
     public static void MapVault(this IEndpointRouteBuilder api)
@@ -216,6 +219,61 @@ public static class VaultEndpoints
             }
         });
 
+        // Adaptar para um jogo mais novo (D34): caminhos oficiais, o original fica e a cópia vai para a Caixa de entrada.
+        vault.MapGet("/pokemon/{id:guid}/adapt-options", async (Guid id, PokemonStore store, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            return Results.Ok((await store.AdaptOptionsAsync(p, ct)).Select(o =>
+            {
+                var format = VaultFormats.Get(o.Target);
+                return new
+                {
+                    target = format.Key,
+                    generation = format.Generation,
+                    tradable = format.Family is not null,
+                    steps = o.Steps.Select(StepKey).ToList(),
+                    refusal = o.Refusal,
+                    refusedAt = o.RefusedAt is { } at && Enum.TryParse<TransferStep>(at, out var step) ? StepKey(step) : null,
+                };
+            }));
+        });
+
+        vault.MapPost("/pokemon/{id:guid}/adapt", async (Guid id, AdaptDto body, PokemonStore store, SettingsStore settings,
+            CancellationToken ct) =>
+        {
+            if (VaultFormats.ByKey(body.Target ?? "") is not { } to)
+                return Results.BadRequest(new { error = "target_invalid" });
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null })
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            // Quem recebe: o "Meu treinador" do jogo de destino; nas Gen 4 a 7 (fora do catálogo), o "Meu treinador" geral.
+            var key = to.Family is { } family ? BuilderEndpoints.MyTrainerKeyFor(family) : BuilderEndpoints.MyTrainerKey;
+            var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(key), null, ct);
+            var owner = new SimpleTrainerInfo(to.Context.GetSingleGameVersion())
+            {
+                OT = me?.Name ?? TradeRock.Core.Trading.TrainerProfile.Default.Name,
+                TID16 = me?.Tid ?? TradeRock.Core.Trading.TrainerProfile.Default.Tid,
+                SID16 = me?.Sid ?? TradeRock.Core.Trading.TrainerProfile.Default.Sid ?? 0,
+                Gender = me?.Gender ?? 0,
+                Language = (int)LanguageID.English, // o "Meu treinador" não guarda o idioma do jogo
+            };
+            try
+            {
+                var (adapted, notes, pk) = await store.AdaptAsync(id, to.Format, owner, ct);
+                var mine = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
+                return Results.Ok(new
+                {
+                    pokemon = PokemonEndpoints.PokemonDto.From(adapted, mine),
+                    notes,
+                    legality = LegalityDto(pk, body.Language),
+                });
+            }
+            catch (VaultException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code });
+            }
+        });
+
         vault.MapPost("/trash", (IdsDto body, VaultStore store, CancellationToken ct) => Run(() => store.TrashAsync(body.Ids, ct)));
         vault.MapPost("/restore", (IdsDto body, VaultStore store, CancellationToken ct) => Run(() => store.RestoreAsync(body.Ids, ct)));
         vault.MapPost("/trash/empty", (VaultStore store, CancellationToken ct) => Run(() => store.EmptyTrashAsync(ct)));
@@ -279,6 +337,17 @@ public static class VaultEndpoints
             return Results.Ok(new { written });
         });
     }
+
+    /// <summary>Etapa em snake_case, como os enums do JSON.</summary>
+    private static string StepKey(TransferStep step) => step switch
+    {
+        TransferStep.VirtualConsole => "virtual_console",
+        TransferStep.PalPark => "pal_park",
+        TransferStep.PokeTransfer => "poke_transfer",
+        TransferStep.PokeTransporter => "poke_transporter",
+        TransferStep.PokemonBank => "pokemon_bank",
+        _ => "home",
+    };
 
     /// <summary>Dados para o painel (texto pronto) de um Pokémon de qualquer geração.</summary>
     internal static object ViewDto(PKM pk)

@@ -210,6 +210,36 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
         return (stored, moved.Notes);
     }
 
+    /// <summary>
+    /// "Adaptar para um jogo mais novo" (D34, <see cref="TransferChain"/>): o original continua no cofre e a cópia
+    /// adaptada entra na Caixa de entrada. Recusa com <see cref="VaultException"/> (código da etapa que recusou);
+    /// "adapted_exists" quando a mesma cópia já está no cofre.
+    /// </summary>
+    public async Task<(StoredPokemon Pokemon, IReadOnlyList<string> Notes, PKM Adapted)> AdaptAsync(
+        Guid id, StorageFormat to, ITrainerInfo owner, CancellationToken ct)
+    {
+        if (await GetAsync(id, ct) is not { } stored)
+            throw new VaultException("pokemon_not_found");
+        if (stored.DeletedAt is not null)
+            throw new VaultException("pokemon_in_trash");
+
+        var source = PokemonReader.ToEntity(await ReadDataAsync(stored, ct), stored.Format);
+        var adapted = TransferChain.Adapt(source, stored.Format, to, owner);
+        if (!adapted.Ok)
+            throw new VaultException(adapted.Refusal ?? "no_route");
+
+        var data = new byte[adapted.Pokemon!.SIZE_STORED];
+        adapted.Pokemon.WriteDecryptedDataStored(data);
+        var result = await ImportFileAsync(PokemonReader.Read(data, to), stored.Origin, stored.SourceFileName, ct);
+        if (!result.Created && !result.Restored)
+            throw new VaultException("adapted_exists");
+        return (result.Pokemon, adapted.Notes, adapted.Pokemon);
+    }
+
+    /// <summary>Destinos de "Adaptar" (formatos mais novos), com o caminho e o motivo de cada recusa.</summary>
+    public async Task<IReadOnlyList<AdaptOption>> AdaptOptionsAsync(StoredPokemon pokemon, CancellationToken ct) =>
+        TransferChain.Options(PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format), pokemon.Format);
+
     /// <summary>Para quais jogos o Pokémon pode ir (null = pode; senão o código da recusa).</summary>
     public async Task<IReadOnlyDictionary<GameFamily, string?>> DestinationsAsync(StoredPokemon pokemon, CancellationToken ct) =>
         pokemon.Family is { } family

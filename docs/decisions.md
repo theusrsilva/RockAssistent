@@ -1230,3 +1230,37 @@ servidor não mudaram de comportamento, só de lugar no menu.
 - **Verificado:** testes do .NET, do frontend e dos scripts Python (build-dex, check-guides); atalho global no WSLg (grab
   e `BadAccess`); arquivo real do Smogon (D32). **Não verificado:** as telas novas num navegador, a tecla global
   apertada de verdade no Windows e no X11, saves reais de emulador e a janela com o nome novo nos pacotes.
+
+## D34. Cofre de todas as gerações e "Adaptar para um jogo mais novo"
+
+- **Formato do cofre** (`Core/Games/StorageFormat.cs`): `StorageFormat` (pk1, pk2, pk3, pk4, pk5, pk6, pk7, pb7, pk8,
+  pb8, pa8, pk9, pa9), separado do catálogo de troca (`GameFamily` não mudou). `StoredPokemon.Format` substitui a
+  coluna `Family` (migração `VaultFormats`, que renomeia e mapeia Frlg→Pk3, Lgpe→Pb7, Swsh→Pk8, Bdsp→Pb8, Pla→Pa8,
+  Sv→Pk9, Za→Pa9); `Family` virou derivada e é null na Gen 1, 2 e 4 a 7.
+  - Save → cofre aceita todas as gerações; cofre → save, só no mesmo formato (ou pelo HOME, como antes). Exporta
+    `.pk1`…`.pk7`. Filtro do cofre por formato (`?game=gen1…gen7` e as chaves dos jogos de troca).
+  - Os formatos novos não trocam, não abrem no construtor nem se editam: o painel usa `GET /api/vault/pokemon/{id}/view`
+    (só leitura) e diz "adapte para um jogo do Switch para trocar".
+- **Adaptar** (`Core/Pokemon/TransferChain.cs`, decisão do autor: **manter os dois**): o original fica, a cópia adaptada
+  entra na Caixa de entrada, a legalidade só avisa. `GET /api/vault/pokemon/{id}/adapt-options` (destinos mais novos,
+  caminho e motivo da recusa) e `POST /api/vault/pokemon/{id}/adapt {target, language}`. Conversões do PKHeX:
+  `PK1/PK2.ConvertToPK7`, `PK3.ConvertToPK4`, `PK4.ConvertToPK5`, `PK5.ConvertToPK6`, `PK6.ConvertToPK7` e o HOME pelo
+  `HomeTransfer` (`EntityConverter.ConvertToType`). Caminhos, sempre para a frente e com as regras de todas as etapas
+  aplicadas de uma vez (ovo nunca passa; a espécie e a forma precisam existir em cada formato do caminho):
+  - **Gen 1/2 → Poké Transporter (Virtual Console) → Gen 7:** na Gen 2, item segurado recusa (o Pokémon fica no jogo) e
+    Dizzy Punch (Ovo Estranho) recusa; Mew só o do evento do VC (OT "GF", TID 22796). Na Gen 1 o "item" se perde.
+  - **Gen 3 → Pal Park → Gen 4:** HMs da Gen 3 (Cut, Fly, Surf, Strength, Flash, Rock Smash, Waterfall, Dive) e Mail
+    recusam; o item segue.
+  - **Gen 4 → Poké Transfer → Gen 5:** HMs dos dois pares (Cut, Fly, Surf, Strength, Rock Smash, Waterfall, Rock
+    Climb) recusam; Defog passa (sai pelo HGSS) e Whirlpool também (sai pelo DPPt); Pichu de orelha espetada recusa; o
+    item volta para a mochila.
+  - **Gen 5 → Poké Transporter → Gen 6 → Pokémon Bank → Gen 7:** HMs passam; Kyurem fundido e Pikachu fantasiado
+    recusam; o item volta para a mochila.
+  - **Gen 7 e Let's Go → HOME → Sword/Shield, BDSP, Arceus, Scarlet/Violet, Z-A:** o Let's Go não recebe; o item volta
+    para a mochila; o resto é o `HomeTransfer` da D22.
+  - Quem recebe: o "Meu treinador" do jogo de destino (Gen 4 a 7: o geral).
+- **Fontes** (regra do autor: maioria das fontes, Serebii vence empate): Bulbapedia (Pal Park, Poké Transfer, Poké
+  Transporter, Transfer, HM; por busca, a página bloqueia leitura direta), Serebii (`blackwhite/poketransfer.shtml`,
+  `heartgoldsoulsilver/palpark.shtml`), Smogon (guia do Pal Park: HM e Mail) e PokéBase. Divergências: o Serebii não cita
+  Rock Smash nem HM no Pal Park; Bulbapedia e Smogon citam (maioria). Pikachu fantasiado e Mew do VC só pela Bulbapedia.
+- **Não verificado:** a tela num navegador e saves reais das Gen 1, 2 e 4 a 7.
