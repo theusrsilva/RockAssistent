@@ -47,7 +47,7 @@ export default function AreaCard({
       setError(nuzlockeErrorMessage(t, e))
     }
   }
-  const used = area ? areaUsed(view, area.id) : false
+  const used = area ? areaUsed(view, area) : false
   // Pela regra do primeiro encontro, área usada não pede mais "Capturei" (o inicial já vem capturado na área dele).
   const closed = used && view.run.rules.firstEncounterOnly
   const caughtHere = new Set(area ? [...view.party, ...view.box, ...view.graveyard].filter((m) => m.areaId === area.id).map((m) => m.species) : [])

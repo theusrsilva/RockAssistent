@@ -49,6 +49,9 @@ const view = (over: Partial<RunView>): RunView => ({
 /** t falso: devolve a chave e os valores, para conferir o que foi pedido. */
 const t = ((key: string, opts?: Record<string, unknown>) => (opts ? `${key}:${JSON.stringify(opts)}` : key)) as never
 
+const route1 = { id: 'route-1', kind: 'route' }
+const route2 = { id: 'route-2', kind: 'route' }
+
 describe('overCap', () => {
   it('lista quem passou do cap', () => {
     const party = [mon({ id: 'a', level: 14 }), mon({ id: 'b', level: 15 }), mon({ id: 'c', level: 16 })]
@@ -105,10 +108,13 @@ describe('areaStates (mapa)', () => {
 
 describe('áreas', () => {
   it('área usada ignora o missed', () => {
-    expect(areaUsed(view({ lost: [mon({ status: 'missed' })] }), 'route-1')).toBe(false)
-    expect(areaUsed(view({ lost: [mon({ status: 'failed' })] }), 'route-1')).toBe(true)
-    expect(areaUsed(view({ graveyard: [mon({ status: 'dead' })] }), 'route-1')).toBe(true)
-    expect(areaUsed(view({ party: [mon({})] }), 'route-2')).toBe(false)
+    expect(areaUsed(view({ lost: [mon({ status: 'missed' })] }), route1)).toBe(false)
+    expect(areaUsed(view({ lost: [mon({ status: 'failed' })] }), route1)).toBe(true)
+    expect(areaUsed(view({ graveyard: [mon({ status: 'dead' })] }), route1)).toBe(true)
+    expect(areaUsed(view({ party: [mon({})] }), route2)).toBe(false)
+    // Inicial automático: usa a cidade, não a rota.
+    expect(areaUsed(view({ party: [mon({ isStarter: true })] }), route1)).toBe(false)
+    expect(areaUsed(view({ party: [mon({ isStarter: true, areaId: 'pallet-town' })] }), { id: 'pallet-town', kind: 'city' })).toBe(true)
   })
   it('ordena pela ordem do jogo', () => {
     const a = (id: string, order: number) => ({ id, name: id, kind: 'route', order, mapNode: null, pokeApiLocationId: null, bossesBefore: [] })

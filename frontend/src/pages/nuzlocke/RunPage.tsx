@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate, useParams } from 'react-router'
-import { Badge, Button, Callout, Card, Modal, PageTitle, Segmented } from '../../components/ui'
+import { Badge, Button, Callout, Card, Field, Modal, PageTitle, Segmented, inputClass } from '../../components/ui'
 import { api, ApiError, spriteUrl } from '../../lib/api'
 import { useApiGet } from '../../lib/dex'
 import { useSpeciesOptions } from '../../lib/hunts'
@@ -224,30 +224,7 @@ function Run({ view, mutate }: { view: RunView; mutate: Mutate }) {
 
       {tab === 'stats' && <Stats view={view} />}
 
-      {pickStarter && (
-        <Modal
-          title={t('nuzlocke.starter.label')}
-          actions={
-            <Button variant="secondary" onClick={() => setPickStarter(false)}>
-              {t('common.cancel')}
-            </Button>
-          }
-        >
-          <div className="flex flex-col gap-2 text-sm">
-            <StarterPicker
-              starters={starters}
-              value={run.starter}
-              names={names}
-              allowNone
-              onChange={(s) => {
-                setPickStarter(false)
-                void act(() => api.put<RunView>(`/api/nuzlocke/${run.id}`, { starter: s ?? '' }))
-              }}
-            />
-            <span className="text-[12.5px] text-muted">{t('nuzlocke.starter.help')}</span>
-          </div>
-        </Modal>
-      )}
+      {pickStarter && <StarterDialog view={view} names={names} mutate={mutate} onClose={() => setPickStarter(false)} />}
 
       {confirm && (
         <Modal
@@ -295,5 +272,81 @@ function Stats({ view }: { view: RunView }) {
         </Card>
       ))}
     </div>
+  )
+}
+
+/**
+ * Trocar o inicial. Run que ainda não tem inicial: o escolhido entra na equipe agora, então pede o apelido (obrigatório se
+ * a regra pede). Run que já tem: troca na hora (o Pokémon automático muda junto enquanto não foi mexido).
+ */
+function StarterDialog({ view, names, mutate, onClose }: { view: RunView; names: Map<number, string>; mutate: Mutate; onClose: () => void }) {
+  const { t } = useTranslation()
+  const run = view.run
+  const starters = useStarters(run.gameKey)
+  const first = run.starter == null
+  const [chosen, setChosen] = useState<string | null>(run.starter)
+  const [nickname, setNickname] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function save(starter: string | null) {
+    if (first && starter && run.rules.nicknameRequired && !nickname.trim()) {
+      setError(t('nuzlocke.starter.nicknameRequired'))
+      return
+    }
+    setBusy(true)
+    setError(null)
+    try {
+      await mutate(api.put<RunView>(`/api/nuzlocke/${run.id}`, { starter: starter ?? '', starterNickname: first && starter ? nickname.trim() || null : null }))
+      onClose()
+    } catch (e) {
+      setError(nuzlockeErrorMessage(t, e))
+      setBusy(false)
+    }
+  }
+
+  return (
+    <Modal
+      title={t('nuzlocke.starter.label')}
+      actions={
+        <>
+          <Button variant="secondary" onClick={onClose}>
+            {t('common.cancel')}
+          </Button>
+          {first && (
+            <Button icon="check" disabled={busy || !chosen} onClick={() => void save(chosen)}>
+              {t('nuzlocke.starter.save')}
+            </Button>
+          )}
+        </>
+      }
+    >
+      <div className="flex flex-col gap-2 text-sm">
+        <StarterPicker
+          starters={starters}
+          value={chosen}
+          names={names}
+          allowNone={!first}
+          onChange={(s) => {
+            setChosen(s)
+            if (!first) void save(s)
+          }}
+        />
+        <span className="text-[12.5px] text-muted">{t('nuzlocke.starter.help')}</span>
+        {first && chosen && (
+          <Field
+            label={run.rules.nicknameRequired ? t('nuzlocke.starter.nickname') : `${t('nuzlocke.starter.nickname')} (${t('common.optional')})`}
+            help={t('nuzlocke.starter.nicknameHelp')}
+          >
+            <input className={inputClass} value={nickname} maxLength={12} onChange={(e) => setNickname(e.target.value)} />
+          </Field>
+        )}
+        {error && (
+          <Callout tone="red" icon="error">
+            {error}
+          </Callout>
+        )}
+      </div>
+    </Modal>
   )
 }

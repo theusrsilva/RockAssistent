@@ -19,7 +19,10 @@ public sealed record RunInfo(
     DateTimeOffset? EndedAt,
     string? CurrentAreaId);
 
-/// <summary>Pokémon da run como vai para a API. <see cref="Moves"/>: identificadores do PokeAPI.</summary>
+/// <summary>
+/// Pokémon da run como vai para a API. <see cref="Moves"/>: identificadores do PokeAPI. <see cref="IsStarter"/>: o inicial
+/// que a run pôs sozinha (só usa a área quando ela é uma cidade).
+/// </summary>
 public sealed record MonInfo(
     Guid Id,
     string AreaId,
@@ -32,7 +35,8 @@ public sealed record MonInfo(
     DateTimeOffset CaughtAt,
     DateTimeOffset? DiedAt,
     IReadOnlyList<string> Moves,
-    bool Shiny);
+    bool Shiny,
+    bool IsStarter = false);
 
 /// <summary>Uma espécie que aparece na área, com os métodos, as versões e a faixa de nível juntados.</summary>
 public sealed record SpeciesEncounterOption(
@@ -156,7 +160,7 @@ public static class RunProgress
         JsonSerializer.Deserialize<NuzlockeRules>(run.RulesJson, Json) ?? NuzlockeRules.Default;
 
     public static MonInfo Info(NuzlockeMon m) => new(m.Id, m.AreaId, m.Species, m.Form, m.Nickname, m.Level, m.Status,
-        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? [], m.Shiny);
+        m.DeathCause, m.CaughtAt, m.DiedAt, JsonSerializer.Deserialize<List<string>>(m.MovesJson, Json) ?? [], m.Shiny, m.IsStarter);
 
     public static IReadOnlyList<string> DefeatedBosses(IReadOnlyList<NuzlockeEvent> events) =>
         events.OrderBy(e => e.At).Where(e => e.Kind == NuzlockeEvents.BossDefeated).Select(e => Read(e, "bossId"))

@@ -2333,8 +2333,9 @@
       "change": "Trocar",
       "bossHint": "O time deste chefe muda conforme o seu inicial. Informe o inicial no topo da run para ver o time certo.",
       "nickname": "Apelido do inicial",
-      "nicknameHelp": "Ele já entra na sua equipe, capturado na cidade em que o jogo o dá.",
-      "nicknameRequired": "As regras pedem um apelido: dê um apelido ao inicial."
+      "nicknameHelp": "Ele já entra na sua equipe, capturado no lugar em que o jogo o dá.",
+      "nicknameRequired": "As regras pedem um apelido: dê um apelido ao inicial.",
+      "save": "Salvar inicial"
     },
     "run": {
       "pause": "Pausar",

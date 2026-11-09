@@ -68,7 +68,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         Assert.Equal(32, underground.ForStarter("cyndaquil").LevelCap);
 
         // Trocar o inicial muda o time; texto vazio apaga.
-        var totodile = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "totodile"), Ct);
+        var totodile = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "totodile", "Toto"), Ct);
         Assert.Equal(152, Assert.Single(totodile.NextBoss!.Party).Species);
         Assert.Null((await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, ""), Ct)).Run.Starter);
 
@@ -84,7 +84,8 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         var mon = Assert.Single(view.Party);
         Assert.Equal((4, 0, 5, "Char", false), (mon.Species, mon.Form, mon.Level, mon.Nickname, mon.Shiny));
         Assert.Equal("pallet-town", mon.AreaId);
-        // A área do presente já conta como usada (primeiro encontro).
+        Assert.True(mon.IsStarter);
+        // Dado numa cidade, o inicial conta como o encontro da área (primeiro encontro).
         Assert.Equal("area_already_used", await Fails(() => _store.EncounterAsync(view.Run.Id,
             new NewEncounter("pallet-town", 7, 0, "Squirt", 5, NuzlockeStatus.Party), Ct)));
         await using (var db = await _db.CreateDbContextAsync(Ct))
@@ -108,12 +109,36 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     }
 
     [Fact]
+    public async Task Inicial_dado_numa_rota_nao_gasta_a_area()
+    {
+        // Emerald: o Torchic é da Route 101, e o primeiro selvagem dela ainda vale.
+        var e = await _store.CreateAsync(new NewRun(null, "e", "emerald", null, "torchic", "Tochi"), Ct);
+        Assert.Equal((255, "route-101"), (e.Party[0].Species, e.Party[0].AreaId));
+        e = await _store.EncounterAsync(e.Run.Id, new NewEncounter("route-101", 265, 0, "Wurm", 3, NuzlockeStatus.Party), Ct);
+        Assert.Equal(2, e.Party.Count);
+        Assert.Equal("area_already_used", await Fails(() => _store.EncounterAsync(e.Run.Id,
+            new NewEncounter("route-101", 261, 0, "Pooch", 3, NuzlockeStatus.Box), Ct)));
+
+        // Ultra Sun: Route 1 (o PokeAPI), livre.
+        var usum = await _store.CreateAsync(new NewRun(null, "usum", "ultra-sun", null, "litten", "Kit"), Ct);
+        Assert.Equal("route-1", usum.Party[0].AreaId);
+        usum = await _store.EncounterAsync(usum.Run.Id, new NewEncounter("route-1", 734, 0, "Gumshoe", 3, NuzlockeStatus.Box), Ct);
+        Assert.Single(usum.Box);
+
+        // Platinum: exceção nossa, Lake Verity (o PokeAPI diz Route 201), e o lago continua livre.
+        var pt = await _store.CreateAsync(new NewRun(null, "pt", null, null, "piplup", "Pip"), Ct);
+        Assert.Equal((393, "lake-verity"), (pt.Party[0].Species, pt.Party[0].AreaId));
+        await _store.EncounterAsync(pt.Run.Id, new NewEncounter("lake-verity", 399, 0, "Bibi", 3, NuzlockeStatus.Box), Ct);
+    }
+
+    [Fact]
     public async Task Trocar_o_inicial_troca_o_pokemon_automatico_so_se_ele_nao_foi_mexido()
     {
         var view = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander", "Char"), Ct);
         var id = view.Run.Id;
         view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "bulbasaur"), Ct);
         var mon = Assert.Single(view.Party);
+        // O apelido fica.
         Assert.Equal((1, "Char", "bulbasaur"), (mon.Species, mon.Nickname, view.Run.Starter));
         // De novo (a troca automática não conta como edição).
         view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "squirtle"), Ct);
@@ -124,10 +149,17 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
         view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "charmander"), Ct);
         Assert.Equal(("charmander", 7), (view.Run.Starter, Assert.Single(view.Party).Species));
 
-        // Run sem inicial: informar depois põe o inicial na equipe (uma vez só).
+        // Run sem inicial: informar depois põe o inicial na equipe; com apelido obrigatório e sem apelido → 400, nada muda.
         var none = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null), Ct);
+        Assert.Equal("nickname_required", await Fails(() => _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "squirtle"), Ct)));
+        Assert.Null((await _store.GetAsync(none.Run.Id, Ct)).Run.Starter);
         view = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "squirtle", "Squirt"), Ct);
         Assert.Equal((7, "Squirt", "pallet-town"), (view.Party[0].Species, view.Party[0].Nickname, view.Party[0].AreaId));
+
+        // A troca passa pelas cláusulas: com a cláusula de espécie, trocar para uma espécie já pega → dupe.
+        var clause = await _store.CreateAsync(new NewRun(null, "frlg", "firered", NuzlockeRules.Default with { SpeciesClause = true }, "charmander", "Char"), Ct);
+        await _store.EncounterAsync(clause.Run.Id, new NewEncounter("route-1", 1, 0, "Bulba", 5, NuzlockeStatus.Box), Ct);
+        Assert.Equal("dupe", await Fails(() => _store.UpdateAsync(clause.Run.Id, new RunChanges(null, null, null, "bulbasaur"), Ct)));
     }
 
     [Fact]
@@ -437,6 +469,46 @@ public sealed class RunStarterMigrationTests
             var run = await db.NuzlockeRuns.IgnoreQueryFilters().SingleAsync(ct);
             Assert.Equal("Johto", run.Name);
             Assert.Null(run.Starter);
+        }
+    }
+
+    [Fact]
+    public async Task Migracao_marca_os_iniciais_automaticos_pelo_evento()
+    {
+        using var dir = new TestDataDir();
+        var options = new DbContextOptionsBuilder<TradeRockDb>()
+            .UseSqlite($"Data Source={dir.Paths.DatabasePath};Pooling=False").Options;
+        var ct = TestContext.Current.CancellationToken;
+        const string run = "0190A0A0-0000-7000-8000-000000000001";
+        const string auto = "0190A0A0-0000-7000-8000-0000000000AA";
+        const string wild = "0190A0A0-0000-7000-8000-0000000000BB";
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.GetService<IMigrator>().MigrateAsync("RunStarter", ct);
+            await db.Database.ExecuteSqlAsync($"""
+                INSERT INTO NuzlockeRuns (Id, OwnerId, Name, GameKey, Version, Starter, RulesJson, Status, StartedAt)
+                VALUES ({run}, '00000000-0000-0000-0000-000000000000', 'Kanto', 'frlg', 'firered', 'charmander', {"{}"}, 'active', 0)
+                """, ct);
+            foreach (var (id, species) in new[] { (auto, 4), (wild, 16) })
+                await db.Database.ExecuteSqlAsync($"""
+                    INSERT INTO NuzlockeMons (Id, RunId, AreaId, Species, Form, Level, Status, Shiny, CaughtAt, MovesJson)
+                    VALUES ({id}, {run}, 'pallet-town', {species}, 0, 5, 'party', 0, 0, '[]')
+                    """, ct);
+            var events = new[]
+            {
+                ("0190A0A0-0000-7000-8000-0000000000E1", $$"""{"monId":"{{auto.ToLowerInvariant()}}","starter":true}"""),
+                ("0190A0A0-0000-7000-8000-0000000000E2", $$"""{"monId":"{{wild.ToLowerInvariant()}}"}"""),
+            };
+            foreach (var (id, json) in events)
+                await db.Database.ExecuteSqlAsync($"INSERT INTO NuzlockeEvents (Id, RunId, At, Kind, Json) VALUES ({id}, {run}, 0, 'encounter', {json})", ct);
+        }
+
+        await using (var db = new TradeRockDb(options))
+        {
+            await db.Database.MigrateAsync(ct);
+            var mons = await db.NuzlockeMons.OrderBy(m => m.Species).ToListAsync(ct);
+            Assert.Equal([(4, true), (16, false)], mons.Select(m => (m.Species, m.IsStarter)));
         }
     }
 }

@@ -2333,8 +2333,9 @@
       "change": "Change",
       "bossHint": "This boss's team depends on your starter. Set your starter at the top of the run to see the right team.",
       "nickname": "Starter nickname",
-      "nicknameHelp": "It joins your team right away, caught in the town where the game gives it.",
-      "nicknameRequired": "The rules ask for a nickname: give your starter one."
+      "nicknameHelp": "It joins your team right away, caught in the place where the game gives it.",
+      "nicknameRequired": "The rules ask for a nickname: give your starter one.",
+      "save": "Save starter"
     },
     "run": {
       "pause": "Pause",

@@ -290,6 +290,12 @@ public sealed class NuzlockeMon
     public DateTimeOffset CaughtAt { get; set; }
     public DateTimeOffset? DiedAt { get; set; }
 
+    /// <summary>
+    /// Inicial que a run pôs na equipe sozinha. Só conta como o encontro da área quando o jogo o dá numa cidade
+    /// (<c>kind: city</c>); dado numa rota ou lago (Route 101, Lake Verity), o primeiro selvagem ainda vale.
+    /// </summary>
+    public bool IsStarter { get; set; }
+
     /// <summary>Golpes atuais em JSON: lista de identificadores do PokeAPI (<c>["thunder-shock"]</c>).</summary>
     public required string MovesJson { get; set; }
 }

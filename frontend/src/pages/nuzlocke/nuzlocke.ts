@@ -70,6 +70,8 @@ export interface MonInfo {
   /** Identificadores do PokeAPI ("thunder-shock"). */
   moves: string[]
   shiny: boolean
+  /** Inicial que a run pôs sozinha: só usa a área quando ela é uma cidade. */
+  isStarter?: boolean
 }
 
 export interface GameArea {
@@ -258,9 +260,14 @@ export function areaStates(view: RunView): Record<string, AreaState> {
   return states
 }
 
-/** Área já usada: tem algum registro que não seja "pulado" (missed). Igual ao backend. */
-export function areaUsed(view: RunView, areaId: string): boolean {
-  return [...view.party, ...view.box, ...view.graveyard, ...view.lost].some((m) => m.areaId === areaId && m.status !== 'missed')
+/**
+ * Área já usada: tem algum registro que não seja "pulado" (missed). O inicial automático só conta numa cidade (dado numa
+ * rota, o primeiro selvagem ainda vale). Igual ao backend.
+ */
+export function areaUsed(view: RunView, area: Pick<GameArea, 'id' | 'kind'>): boolean {
+  return [...view.party, ...view.box, ...view.graveyard, ...view.lost].some(
+    (m) => m.areaId === area.id && m.status !== 'missed' && !(m.isStarter && area.kind !== 'city'),
+  )
 }
 
 export const sortAreas = (areas: GameArea[]): GameArea[] => [...areas].sort((a, b) => a.order - b.order)
