@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, formatRule, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
+import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, evolveHow, evolveOptions, formatRule, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
 
 const mon = (over: Partial<MonInfo>): MonInfo => ({
   id: over.id ?? 'm',
@@ -186,5 +186,30 @@ describe('variantes por inicial', () => {
     const gym = { ...rival, variants: null }
     expect(chosenVariant(gym, 'chikorita')).toBeNull()
     expect(bossTeam(gym, 'chikorita').party[0].species).toBe(158)
+  })
+})
+
+describe('evolveOptions', () => {
+  const ev = (species: number, name: string, conditions: string[]) => ({ species, name, conditions, onEvolve: [], upcoming: [] })
+
+  it('por nível: pronta só a partir do nível', () => {
+    const pidgey = [ev(17, 'Pidgeotto', ['level 18'])]
+    expect(evolveOptions(pidgey, 18)).toEqual([{ species: 17, name: 'Pidgeotto', how: { kind: 'level', level: 18 }, ready: true }])
+    expect(evolveOptions(pidgey, 17)[0].ready).toBe(false)
+  })
+
+  it('por pedra: uma opção por evolução, sempre disponível', () => {
+    const eevee = [ev(134, 'Vaporeon', ['use Water Stone']), ev(135, 'Jolteon', ['use Thunder Stone']), ev(136, 'Flareon', ['use Fire Stone'])]
+    const options = evolveOptions(eevee, 5)
+    expect(options).toHaveLength(3)
+    expect(options.every((o) => o.ready && o.how.kind === 'item')).toBe(true)
+    expect(options[1].how).toEqual({ kind: 'item', item: 'Thunder Stone' })
+  })
+
+  it('por troca e por amizade', () => {
+    expect(evolveOptions([ev(94, 'Gengar', ['trade'])], 30)[0]).toMatchObject({ how: { kind: 'trade', detail: null }, ready: true })
+    expect(evolveHow('trade holding Metal Coat')).toEqual({ kind: 'trade', detail: 'holding Metal Coat' })
+    expect(evolveHow('level up friendship 220')).toEqual({ kind: 'friendship' })
+    expect(evolveHow('level up at night friendship 160')).toEqual({ kind: 'other', text: 'level up at night friendship 160' })
   })
 })

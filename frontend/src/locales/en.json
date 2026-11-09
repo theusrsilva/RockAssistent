@@ -2497,6 +2497,14 @@
         "route": "Route",
         "water": "Water route"
       }
+    },
+    "evolve": {
+      "to": "Evolve into {{name}}",
+      "item": "with {{item}}",
+      "trade": "by trade",
+      "tradeDetail": "by trade ({{detail}})",
+      "friendship": "with high friendship",
+      "done": "{{from}} evolved into {{name}}!"
     }
   },
   "hunt": {

@@ -7,7 +7,7 @@ import { api, spriteUrl } from '../../lib/api'
 import { titleCase, useApiGet } from '../../lib/dex'
 import type { Option } from '../../lib/types'
 import { TypeBadge } from '../dex/TypeBadge'
-import { defaultMoves, nuzlockeErrorMessage, overCap, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
+import { defaultMoves, evolveOptions, nuzlockeErrorMessage, overCap, type EvolveOption, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 /**
@@ -38,6 +38,12 @@ export default function TeamCard({
   /** Pokémon com mudança de nível em voo: os botões −/+ esperam a resposta (dois cliques não mandam o mesmo valor). */
   const [leveling, setLeveling] = useState<Set<string>>(new Set())
   const over = new Set(overCap(view.party, view.levelCap).map((m) => m.id))
+
+  const toast = useToast()
+  /** Evoluir: só a espécie muda (apelido, nível, golpes e situação ficam). */
+  const evolve = async (mon: MonInfo, option: EvolveOption) => {
+    if (await update(mon, { species: option.species })) toast(t('nuzlocke.evolve.done', { from: monName(mon, names), name: option.name }))
+  }
 
   const update = async (mon: MonInfo, body: Record<string, unknown>) => {
     setError(null)
@@ -85,6 +91,7 @@ export default function TeamCard({
               onBox={() => void update(m, { status: 'box' })}
               onDie={() => setDying(m)}
               onEdit={() => setEditing(m)}
+              onEvolve={(o) => void evolve(m, o)}
             />
           ))}
         </ul>
@@ -99,19 +106,22 @@ export default function TeamCard({
         ) : (
           <ul className="mt-1.5 flex flex-col gap-1">
             {view.box.map((m) => (
-              <li key={m.id} className="flex items-center gap-2">
-                <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9" loading="lazy" />
-                <span className="min-w-0 flex-1 truncate font-semibold">
-                  {monName(m, names)} <span className="font-normal text-muted">{t('nuzlocke.boss.level', { level: m.level })}</span>
-                </span>
-                {!readOnly && (
-                  <>
-                    <IconButton name="edit" label={t('nuzlocke.team.edit')} className="h-8 w-8" onClick={() => setEditing(m)} />
-                    <Button size="sm" variant="secondary" disabled={view.party.length >= 6} onClick={() => void update(m, { status: 'party' })}>
-                      {t('nuzlocke.team.toParty')}
-                    </Button>
-                  </>
-                )}
+              <li key={m.id} className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <img src={spriteUrl(m.species, { shiny: m.shiny })} alt="" className="pixelated h-9 w-9" loading="lazy" />
+                  <span className="min-w-0 flex-1 truncate font-semibold">
+                    {monName(m, names)} <span className="font-normal text-muted">{t('nuzlocke.boss.level', { level: m.level })}</span>
+                  </span>
+                  {!readOnly && (
+                    <>
+                      <IconButton name="edit" label={t('nuzlocke.team.edit')} className="h-8 w-8" onClick={() => setEditing(m)} />
+                      <Button size="sm" variant="secondary" disabled={view.party.length >= 6} onClick={() => void update(m, { status: 'party' })}>
+                        {t('nuzlocke.team.toParty')}
+                      </Button>
+                    </>
+                  )}
+                </div>
+                <BoxEvolve runId={view.run.id} mon={m} readOnly={readOnly} onEvolve={(o) => void evolve(m, o)} />
               </li>
             ))}
           </ul>
@@ -135,6 +145,7 @@ function MonRow({
   onBox,
   onDie,
   onEdit,
+  onEvolve,
 }: {
   runId: string
   mon: MonInfo
@@ -147,6 +158,7 @@ function MonRow({
   onBox: () => void
   onDie: () => void
   onEdit: () => void
+  onEvolve: (option: EvolveOption) => void
 }) {
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
@@ -195,6 +207,7 @@ function MonRow({
         )}
       </div>
       {open && learnset.data && <Upcoming learnset={learnset.data} />}
+      {learnset.data && <EvolveButtons options={evolveOptions(learnset.data.evolutions, mon.level)} disabled={readOnly} onEvolve={onEvolve} />}
       <div className="flex flex-wrap gap-1.5">
         <Button size="sm" variant="ghost" icon={open ? 'expand_less' : 'expand_more'} onClick={() => setOpen((o) => !o)}>
           {open ? t('nuzlocke.team.hideMoves') : t('nuzlocke.team.showMoves')}
@@ -214,6 +227,58 @@ function MonRow({
         )}
       </div>
     </li>
+  )
+}
+
+/** Pokémon da caixa: busca o learnset só para os botões de evoluir. */
+function BoxEvolve({ runId, mon, readOnly, onEvolve }: { runId: string; mon: MonInfo; readOnly: boolean; onEvolve: (option: EvolveOption) => void }) {
+  const learnset = useLearnset(runId, mon, true)
+  if (!learnset.data) return null
+  return <EvolveButtons options={evolveOptions(learnset.data.evolutions, mon.level)} disabled={readOnly} onEvolve={onEvolve} />
+}
+
+/**
+ * Um botão por evolução. Por nível: só aparece quando o nível chegou (em destaque). Por item, troca, amizade etc.: sempre
+ * disponível, com a condição escrita curta (o app não sabe se a pessoa tem a pedra ou fez a troca).
+ */
+function EvolveButtons({ options, disabled, onEvolve }: { options: EvolveOption[]; disabled: boolean; onEvolve: (option: EvolveOption) => void }) {
+  const { t } = useTranslation()
+  const shown = options.filter((o) => o.ready)
+  if (shown.length === 0) return null
+  const how = (o: EvolveOption) => {
+    switch (o.how.kind) {
+      case 'level':
+        return null
+      case 'item':
+        return t('nuzlocke.evolve.item', { item: o.how.item })
+      case 'trade':
+        return o.how.detail ? t('nuzlocke.evolve.tradeDetail', { detail: o.how.detail }) : t('nuzlocke.evolve.trade')
+      case 'friendship':
+        return t('nuzlocke.evolve.friendship')
+      default:
+        return o.how.text || null
+    }
+  }
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {shown.map((o) => {
+        const condition = how(o)
+        return (
+          <Button
+            key={o.species}
+            size="sm"
+            variant={o.how.kind === 'level' ? 'primary' : 'secondary'}
+            icon="arrow_upward"
+            disabled={disabled}
+            title={condition ? `${t('nuzlocke.evolve.to', { name: o.name })} (${condition})` : undefined}
+            onClick={() => onEvolve(o)}
+          >
+            {t('nuzlocke.evolve.to', { name: o.name })}
+            {condition && <span className="font-normal opacity-80"> · {condition}</span>}
+          </Button>
+        )
+      })}
+    </div>
   )
 }
 

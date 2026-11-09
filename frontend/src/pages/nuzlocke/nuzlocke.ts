@@ -364,3 +364,44 @@ export function useRun(id: string) {
 
   return { view: state.id === id ? state.view : null, error: state.id === id ? state.error : null, mutate }
 }
+
+/** Como uma evolução acontece, para o botão "Evoluir": por nível, por item, por troca, por amizade ou outra condição. */
+export type EvolveHow =
+  | { kind: 'level'; level: number }
+  | { kind: 'item'; item: string }
+  | { kind: 'trade'; detail: string | null }
+  | { kind: 'friendship' }
+  | { kind: 'other'; text: string }
+
+export interface EvolveOption {
+  species: number
+  name: string
+  how: EvolveHow
+  /** Por nível: o nível já chegou. As outras ficam sempre disponíveis (o app não sabe do item, da troca...). */
+  ready: boolean
+}
+
+/** Lê uma condição do PokeAPI (frase curta em inglês, como "level 18", "use Thunder Stone", "trade holding Metal Coat"). */
+export function evolveHow(condition: string): EvolveHow {
+  const c = condition.trim()
+  const level = /^level (\d+)$/.exec(c)
+  if (level) return { kind: 'level', level: Number(level[1]) }
+  const item = /^use (.+)$/.exec(c)
+  if (item) return { kind: 'item', item: item[1] }
+  if (c === 'trade' || c.startsWith('trade ')) return { kind: 'trade', detail: c.slice(5).trim() || null }
+  if (/^level up friendship \d+$/.test(c)) return { kind: 'friendship' }
+  return { kind: 'other', text: c }
+}
+
+/**
+ * Evoluções possíveis de quem está no nível dado: uma por espécie. Com várias condições (jeitos diferentes no mesmo
+ * jogo), vale a primeira por nível (pronta se alguma já chegou); sem condição por nível, a primeira condição.
+ */
+export function evolveOptions(evolutions: EvolutionLearnset[], level: number): EvolveOption[] {
+  return evolutions.map((ev) => {
+    const hows = ev.conditions.map(evolveHow)
+    const levels = hows.filter((h): h is { kind: 'level'; level: number } => h.kind === 'level').sort((a, b) => a.level - b.level)
+    if (levels.length > 0) return { species: ev.species, name: ev.name, how: levels[0], ready: level >= levels[0].level }
+    return { species: ev.species, name: ev.name, how: hows[0] ?? { kind: 'other', text: '' }, ready: true }
+  })
+}

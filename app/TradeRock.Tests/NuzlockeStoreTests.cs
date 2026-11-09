@@ -607,6 +607,33 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Evoluir_pela_api_mantem_apelido_nivel_e_golpes_sem_dupe()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
+        var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke", new
+        {
+            gameKey = "frlg", version = "firered",
+            rules = new { firstEncounterOnly = true, nicknameRequired = true, speciesClause = true, dupesClause = true },
+        }, Ct));
+        var id = view.GetProperty("run").GetProperty("id").GetGuid();
+        view = await Ok(await _client.PostAsJsonAsync($"/api/nuzlocke/{id}/encounter",
+            new { areaId = "route-1", species = 16, form = 0, nickname = "Pidge", level = 18, status = "party" }, Ct));
+        var monId = view.GetProperty("party")[0].GetProperty("id").GetGuid();
+        await Ok(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}/mon/{monId}", new { moves = new[] { "gust", "quick-attack" } }, Ct));
+        var learnset = await Ok(await _client.GetAsync($"/api/nuzlocke/{id}/mon/{monId}/learnset", Ct));
+        Assert.Equal("level 18", learnset.GetProperty("evolutions")[0].GetProperty("conditions")[0].GetString());
+
+        view = await Ok(await _client.PutAsJsonAsync($"/api/nuzlocke/{id}/mon/{monId}", new { species = 17 }, Ct));
+        var mon = view.GetProperty("party")[0];
+        Assert.Equal((17, "Pidge", 18, "party"), (mon.GetProperty("species").GetInt32(), mon.GetProperty("nickname").GetString(),
+            mon.GetProperty("level").GetInt32(), mon.GetProperty("status").GetString()));
+        Assert.Equal(["gust", "quick-attack"], mon.GetProperty("moves").EnumerateArray().Select(m => m.GetString()));
+        // O learnset agora é o do Pidgeotto (próxima: Pidgeot).
+        learnset = await Ok(await _client.GetAsync($"/api/nuzlocke/{id}/mon/{monId}/learnset", Ct));
+        Assert.Equal(18, learnset.GetProperty("evolutions")[0].GetProperty("species").GetInt32());
+    }
+
+    [Fact]
     public async Task Inicial_pela_api()
     {
         Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");

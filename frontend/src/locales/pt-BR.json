@@ -2497,6 +2497,14 @@
         "route": "Rota",
         "water": "Rota de água"
       }
+    },
+    "evolve": {
+      "to": "Evoluir para {{name}}",
+      "item": "com {{item}}",
+      "trade": "por troca",
+      "tradeDetail": "por troca ({{detail}})",
+      "friendship": "com amizade alta",
+      "done": "{{from}} evoluiu para {{name}}!"
     }
   },
   "hunt": {
