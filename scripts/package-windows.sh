@@ -55,7 +55,7 @@ DIST=dist
 fetch() { # arquivo sha256
   if [[ ! -f "$CACHE/$1" ]]; then
     echo "==> baixando $1"
-    curl -fsSL -o "$CACHE/$1.part" "https://github.com/astral-sh/python-build-standalone/releases/download/$PY_RELEASE/${1//+/%2B}"
+    curl -fsSL --retry 4 --retry-all-errors --retry-delay 5 -o "$CACHE/$1.part" "https://github.com/astral-sh/python-build-standalone/releases/download/$PY_RELEASE/${1//+/%2B}"
     mv "$CACHE/$1.part" "$CACHE/$1"
   fi
   echo "$2  $CACHE/$1" | sha256sum -c --quiet

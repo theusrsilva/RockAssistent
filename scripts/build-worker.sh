@@ -24,7 +24,7 @@ STAGE=build/worker/stage
 mkdir -p "$CACHE"
 if [[ ! -f "$CACHE/$PY_FILE" ]]; then
   echo "==> baixando $PY_FILE"
-  curl -fsSL -o "$CACHE/$PY_FILE.part" \
+  curl -fsSL --retry 4 --retry-all-errors --retry-delay 5 -o "$CACHE/$PY_FILE.part" \
     "https://github.com/astral-sh/python-build-standalone/releases/download/$PY_RELEASE/${PY_FILE//+/%2B}"
   mv "$CACHE/$PY_FILE.part" "$CACHE/$PY_FILE"
 fi

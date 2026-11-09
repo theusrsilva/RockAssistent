@@ -132,7 +132,7 @@ echo "    $DEB_FILE ($(du -h "$DEB_FILE" | cut -f1))"
 echo "==> AppImage"
 RUNTIME="$CACHE/appimage-runtime-$RUNTIME_SHA256"
 if [[ ! -f "$RUNTIME" ]]; then
-  curl -fsSL -o "$RUNTIME.part" "$RUNTIME_URL"
+  curl -fsSL --retry 4 --retry-all-errors --retry-delay 5 -o "$RUNTIME.part" "$RUNTIME_URL"
   if ! echo "$RUNTIME_SHA256  $RUNTIME.part" | sha256sum -c --quiet; then
     echo "O runtime do AppImage mudou no upstream ($RUNTIME_URL)." >&2
     echo "Confira a origem e atualize RUNTIME_SHA256 (ou TRADEROCK_APPIMAGE_RUNTIME_SHA256)." >&2
