@@ -683,19 +683,20 @@
         "no_route": "Não há caminho oficial até esse jogo",
         "lgpe_no_receive": "O Let's Go não recebe Pokémon de outros jogos",
         "species_not_in_game": "Essa espécie (ou forma) não existe nesse jogo",
-        "vc_held_item": "Tire o item segurado antes (o Poké Transporter deixa no jogo os Pokémon da Gen 2 com item)",
+        "vc_celebi": "Só o Celebi do evento do Crystal do Virtual Console (nível 30 ou mais) passa pelo Poké Transporter",
         "vc_dizzy_punch": "Esqueça o Dizzy Punch antes (o Poké Transporter recusa os Pokémon do Ovo Estranho com esse golpe)",
         "vc_mew_event": "Só o Mew do evento do Virtual Console passa pelo Poké Transporter",
         "pal_park_hm": "Esqueça os golpes de HM antes (o Pal Park recusa)",
         "pal_park_mail": "Tire a carta (Mail) antes (o Pal Park recusa)",
-        "poke_transfer_hm": "Esqueça os golpes de HM antes (o Poké Transfer recusa)",
+        "poke_transfer_hm": "Esqueça os golpes de HM antes (o Poké Transfer recusa; Defog e Whirlpool passam, porque cada um sai pelo par em que não é HM)",
         "poke_transfer_spiky_pichu": "O Pichu de orelha espetada não pode ser transferido",
         "kyurem_fused": "Separe o Kyurem antes (só a forma normal é transferida)",
         "cosplay_pikachu": "O Pikachu fantasiado não pode ir para o Pokémon Bank",
         "adapted_exists": "Essa cópia já está no cofre",
         "target_invalid": "Escolha um jogo da lista",
         "pokemon_in_trash": "Está na lixeira",
-        "pokemon_not_found": "O Pokémon não foi encontrado"
+        "pokemon_not_found": "O Pokémon não foi encontrado",
+        "convert_failed": "O PKHeX não conseguiu converter os dados deste Pokémon"
       }
     }
   },

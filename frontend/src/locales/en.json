@@ -683,19 +683,20 @@
         "no_route": "There is no official route to that game",
         "lgpe_no_receive": "Let's Go doesn't receive Pokémon from other games",
         "species_not_in_game": "That species (or form) doesn't exist in that game",
-        "vc_held_item": "Remove the held item first (Poké Transporter leaves Gen 2 Pokémon holding items in the game)",
+        "vc_celebi": "Only the Crystal Virtual Console event Celebi (level 30 or higher) goes through Poké Transporter",
         "vc_dizzy_punch": "Forget Dizzy Punch first (Poké Transporter refuses Odd Egg Pokémon with that move)",
         "vc_mew_event": "Only the Virtual Console event Mew goes through Poké Transporter",
         "pal_park_hm": "Forget the HM moves first (Pal Park refuses them)",
         "pal_park_mail": "Remove the Mail first (Pal Park refuses it)",
-        "poke_transfer_hm": "Forget the HM moves first (Poké Transfer refuses them)",
+        "poke_transfer_hm": "Forget the HM moves first (Poké Transfer refuses them; Defog and Whirlpool pass, since each one can be sent from the pair where it isn't an HM)",
         "poke_transfer_spiky_pichu": "The Spiky-eared Pichu can't be transferred",
         "kyurem_fused": "Separate Kyurem first (only the normal form is transferred)",
         "cosplay_pikachu": "Cosplay Pikachu can't go to Pokémon Bank",
         "adapted_exists": "That copy is already in the vault",
         "target_invalid": "Choose a game from the list",
         "pokemon_in_trash": "It is in the trash",
-        "pokemon_not_found": "The Pokémon wasn't found"
+        "pokemon_not_found": "The Pokémon wasn't found",
+        "convert_failed": "PKHeX couldn't convert this Pokémon's data"
       }
     }
   },

@@ -12,6 +12,7 @@ using TradeRock.Core;
 using TradeRock.Core.Builder;
 using TradeRock.Core.Games;
 using TradeRock.Core.Pokemon;
+using TradeRock.Core.Saves;
 using TradeRock.Core.Storage;
 
 namespace TradeRock.Tests;
@@ -24,7 +25,8 @@ public sealed class AdaptTests : IAsyncLifetime
     private readonly TestDataDir _dir = new();
     private PokemonStore _pokemon = null!;
 
-    private static readonly SimpleTrainerInfo Owner = new(GameVersion.SL)
+    /// <summary>O mesmo dono que o endpoint monta: a versão do formato de destino.</summary>
+    internal static SimpleTrainerInfo OwnerFor(StorageFormat to) => new(VaultFormats.Get(to).Context.GetSingleGameVersion())
     {
         OT = "ROCHA", TID16 = 1234, SID16 = 5678, Language = (int)LanguageID.English,
     };
@@ -84,7 +86,7 @@ public sealed class AdaptTests : IAsyncLifetime
         Assert.Equal("no_route", options.Single(o => o.Target == StorageFormat.Pk4).Refusal);
         Assert.Equal("lgpe_no_receive", options.Single(o => o.Target == StorageFormat.Pb7).Refusal);
 
-        var (gen7, _, pk7) = await _pokemon.AdaptAsync(original.Id, StorageFormat.Pk7, Owner, default);
+        var (gen7, _, pk7) = await _pokemon.AdaptAsync(original.Id, StorageFormat.Pk7, OwnerFor(StorageFormat.Pk7), default);
         Assert.Equal(StorageFormat.Pk7, gen7.Format);
         Assert.NotEqual(original.Id, gen7.Id);
         Assert.Null(gen7.BoxId); // Caixa de entrada
@@ -96,7 +98,7 @@ public sealed class AdaptTests : IAsyncLifetime
         Assert.Null(still.DeletedAt);
         Assert.Equal(StorageFormat.Pk1, still.Format);
 
-        var (gen9, _, pk9) = await _pokemon.AdaptAsync(gen7.Id, StorageFormat.Pk9, Owner, default);
+        var (gen9, _, pk9) = await _pokemon.AdaptAsync(gen7.Id, StorageFormat.Pk9, OwnerFor(StorageFormat.Pk9), default);
         Assert.Equal(StorageFormat.Pk9, gen9.Format);
         Assert.Equal(GameFamily.Sv, gen9.Family);
         Assert.Equal(25, gen9.Species);
@@ -104,6 +106,18 @@ public sealed class AdaptTests : IAsyncLifetime
         var report = LegalityReporter.Analyze(pk9);
         Assert.NotEqual(LegalityStatus.Illegal, report.Status);
         Assert.Equal(report.Status.ToString().ToLowerInvariant(), gen9.Legality);
+    }
+
+    [Fact]
+    public async Task Mewtwo_da_Gen_3_chega_legal_na_Gen_6()
+    {
+        var demo = new PK3(DemoPokemon.All.Single(d => d.Name == "mewtwo.pk3").Data.ToArray());
+        Assert.True(new LegalityAnalysis(demo).Valid);
+        var stored = await Store(demo, StorageFormat.Pk3);
+        var (gen6, _, pk6) = await _pokemon.AdaptAsync(stored.Id, StorageFormat.Pk6, OwnerFor(StorageFormat.Pk6), default);
+        Assert.Equal(StorageFormat.Pk6, gen6.Format);
+        var la = new LegalityAnalysis(pk6);
+        Assert.True(la.Valid, string.Join("; ", la.Results.Where(r => !r.Valid).Select(r => $"{r.Identifier} {r.Result}")));
     }
 
     [Fact]
@@ -117,7 +131,7 @@ public sealed class AdaptTests : IAsyncLifetime
             Assert.Equal("pal_park_hm", option.Refusal);
             Assert.Equal(nameof(TransferStep.PalPark), option.RefusedAt);
         }
-        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(surfer.Id, StorageFormat.Pk4, Owner, default));
+        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(surfer.Id, StorageFormat.Pk4, OwnerFor(StorageFormat.Pk4), default));
         Assert.Equal("pal_park_hm", ex.Code);
     }
 
@@ -126,18 +140,18 @@ public sealed class AdaptTests : IAsyncLifetime
     {
         const int Potion3 = 13, OrangeMail3 = 121;
         var holder = await Store(Pk3(item: Potion3), StorageFormat.Pk3);
-        var (gen4, notes4, pk4) = await _pokemon.AdaptAsync(holder.Id, StorageFormat.Pk4, Owner, default);
+        var (gen4, notes4, pk4) = await _pokemon.AdaptAsync(holder.Id, StorageFormat.Pk4, OwnerFor(StorageFormat.Pk4), default);
         Assert.Empty(notes4);
         Assert.NotEqual(0, pk4.HeldItem); // Pal Park: o item vai junto
         Assert.NotEqual(0, gen4.HeldItem);
 
-        var (gen5, notes5, pk5) = await _pokemon.AdaptAsync(gen4.Id, StorageFormat.Pk5, Owner, default);
+        var (gen5, notes5, pk5) = await _pokemon.AdaptAsync(gen4.Id, StorageFormat.Pk5, OwnerFor(StorageFormat.Pk5), default);
         Assert.Contains("held_item_removed", notes5);
         Assert.Equal(0, pk5.HeldItem);
         Assert.Equal(0, gen5.HeldItem);
 
         var mail = await Store(Pk3(species: 26, item: OrangeMail3), StorageFormat.Pk3);
-        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(mail.Id, StorageFormat.Pk4, Owner, default));
+        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(mail.Id, StorageFormat.Pk4, OwnerFor(StorageFormat.Pk4), default));
         Assert.Equal("pal_park_mail", ex.Code);
     }
 
@@ -150,7 +164,7 @@ public sealed class AdaptTests : IAsyncLifetime
         var egg = await Store(pk, StorageFormat.Pk4);
         Assert.All((await _pokemon.AdaptOptionsAsync(egg, default)).Where(o => o.Target != StorageFormat.Pb7),
             o => Assert.Equal("egg", o.Refusal));
-        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(egg.Id, StorageFormat.Pk5, Owner, default));
+        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(egg.Id, StorageFormat.Pk5, OwnerFor(StorageFormat.Pk5), default));
         Assert.Equal("egg", ex.Code);
     }
 
@@ -166,7 +180,7 @@ public sealed class AdaptTests : IAsyncLifetime
         var options = await _pokemon.AdaptOptionsAsync(pidgey, default);
         Assert.Equal("species_not_in_game", options.Single(o => o.Target == StorageFormat.Pk9).Refusal);
         Assert.Null(options.Single(o => o.Target == StorageFormat.Pb8).Refusal); // o BDSP tem o Pidgey
-        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(pidgey.Id, StorageFormat.Pk9, Owner, default));
+        var ex = await Assert.ThrowsAsync<VaultException>(() => _pokemon.AdaptAsync(pidgey.Id, StorageFormat.Pk9, OwnerFor(StorageFormat.Pk9), default));
         Assert.Equal("species_not_in_game", ex.Code);
     }
 
@@ -176,25 +190,38 @@ public sealed class AdaptTests : IAsyncLifetime
         var mew = Pikachu1();
         mew.Species = 151;
         mew.RefreshChecksum();
-        Assert.Equal("vc_mew_event", TransferChain.Adapt(mew, StorageFormat.Pk1, StorageFormat.Pk7, Owner).Refusal);
+        Assert.Equal("vc_mew_event", TransferChain.Adapt(mew, StorageFormat.Pk1, StorageFormat.Pk7, OwnerFor(StorageFormat.Pk7)).Refusal);
 
         var holder = new PK2 { Species = 25, CurrentLevel = 5, OriginalTrainerName = "GOLD", TID16 = 1, HeldItem = 1, Nickname = "PIKACHU" };
         holder.Move1 = ThunderShock;
         holder.RefreshChecksum();
-        Assert.Equal("vc_held_item", TransferChain.Adapt(holder, StorageFormat.Pk2, StorageFormat.Pk7, Owner).Refusal);
+        // O item volta para a mochila do jogo do Virtual Console (D34).
+        var held = TransferChain.Adapt(holder, StorageFormat.Pk2, StorageFormat.Pk7, OwnerFor(StorageFormat.Pk7));
+        Assert.True(held.Ok);
+        Assert.Contains("held_item_removed", held.Notes);
+        Assert.Equal(0, held.Pokemon!.HeldItem);
+
+        // Celebi: só o do evento do Crystal do VC (nível 30).
+        var celebi = new PK2 { Species = 251, CurrentLevel = 5, OriginalTrainerName = "GOLD", TID16 = 1, Nickname = "CELEBI" };
+        celebi.Move1 = 73; // Leech Seed
+        celebi.RefreshChecksum();
+        Assert.Equal("vc_celebi", TransferChain.Adapt(celebi, StorageFormat.Pk2, StorageFormat.Pk7, OwnerFor(StorageFormat.Pk7)).Refusal);
+        celebi.CurrentLevel = 30;
+        celebi.RefreshChecksum();
+        Assert.True(TransferChain.Adapt(celebi, StorageFormat.Pk2, StorageFormat.Pk7, OwnerFor(StorageFormat.Pk7)).Ok);
 
         var cutter = new PK4 { Species = 25, CurrentLevel = 30, Version = GameVersion.HG, Language = 2, OriginalTrainerName = "ROCHA" };
         cutter.Move1 = 249; // Rock Smash: HM nos dois pares da Gen 4
         cutter.RefreshChecksum();
-        Assert.Equal("poke_transfer_hm", TransferChain.Adapt(cutter, StorageFormat.Pk4, StorageFormat.Pk5, Owner).Refusal);
+        Assert.Equal("poke_transfer_hm", TransferChain.Adapt(cutter, StorageFormat.Pk4, StorageFormat.Pk5, OwnerFor(StorageFormat.Pk5)).Refusal);
         cutter.Move1 = 432; // Defog: HM só no DPPt, sai pelo HGSS
         cutter.RefreshChecksum();
-        Assert.True(TransferChain.Adapt(cutter, StorageFormat.Pk4, StorageFormat.Pk5, Owner).Ok);
+        Assert.True(TransferChain.Adapt(cutter, StorageFormat.Pk4, StorageFormat.Pk5, OwnerFor(StorageFormat.Pk5)).Ok);
 
         var kyurem = new PK5 { Species = 646, Form = 1, CurrentLevel = 70, Version = GameVersion.B2, Language = 2, OriginalTrainerName = "ROCHA" };
         kyurem.Move1 = Tackle;
         kyurem.RefreshChecksum();
-        Assert.Equal("kyurem_fused", TransferChain.Adapt(kyurem, StorageFormat.Pk5, StorageFormat.Pk6, Owner).Refusal);
+        Assert.Equal("kyurem_fused", TransferChain.Adapt(kyurem, StorageFormat.Pk5, StorageFormat.Pk6, OwnerFor(StorageFormat.Pk6)).Refusal);
     }
 }
 
@@ -261,5 +288,61 @@ public sealed class AdaptApiTests : IAsyncLifetime
         Assert.Contains("no_route", await bad.Content.ReadAsStringAsync());
         var invalid = await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/adapt", new { target = "nope" });
         Assert.Contains("target_invalid", await invalid.Content.ReadAsStringAsync());
+    }
+
+    private async Task<Guid> UploadAsync(PKM pk, string name)
+    {
+        var data = new byte[pk.SIZE_STORED];
+        pk.WriteDecryptedDataStored(data);
+        using var form = new MultipartFormDataContent { { new ByteArrayContent(data), "file", name } };
+        return (await Json(await _client.PostAsync("/api/pokemon", form)))[0].GetProperty("pokemon").GetProperty("id").GetGuid();
+    }
+
+    [Fact]
+    public async Task Arrastar_do_cofre_para_um_save_do_Switch_segue_o_caminho_oficial()
+    {
+        var saves = Directory.CreateDirectory(Path.Combine(_dir, "saves")).FullName;
+        var bdsp = BlankSaveFile.Get(GameVersion.BD, "ROCHA", LanguageID.English);
+        File.WriteAllBytes(Path.Combine(saves, "bd.sav"), SaveFileAccess.Export(bdsp));
+        await Json(await _client.PutAsJsonAsync("/api/settings/save-folders", new[] { new { path = saves, pattern = "" } }));
+        var saveId = (await Json(await _client.GetAsync("/api/boxes/saves?refresh=1"))).EnumerateArray()
+            .Single(e => e.GetProperty("path").GetString()!.EndsWith("bd.sav")).GetProperty("id").GetString();
+
+        PK4 Gen4(ushort species, byte form)
+        {
+            var pk = new PK4
+            {
+                Species = species, Form = form, CurrentLevel = 30, Version = GameVersion.HG, Language = 2,
+                OriginalTrainerName = "ROCHA", Nickname = species == 25 ? "PIKACHU" : "PICHU",
+            };
+            pk.Move1 = 84; // Thunder Shock
+            pk.RefreshChecksum();
+            return pk;
+        }
+
+        // Pichu de orelha espetada: o Poké Transfer recusa, então o arrastar também.
+        var spiky = await UploadAsync(Gen4(172, 1), "pichu.pk4");
+        var refused = await _client.PostAsJsonAsync("/api/boxes/move", new
+        {
+            from = new { kind = "vault", pokemonId = spiky },
+            to = new { kind = "save", saveId, box = 0, slot = 0 },
+            mode = "copy",
+        });
+        Assert.Equal(HttpStatusCode.BadRequest, refused.StatusCode);
+        var body = await refused.Content.ReadAsStringAsync();
+        Assert.Contains("save_wrong_game", body);
+        Assert.Contains("poke_transfer_spiky_pichu", body);
+
+        // Pikachu comum: passa pelos caminhos (Poké Transfer, Transporter, Bank, HOME) e entra no save.
+        var pikachu = await UploadAsync(Gen4(25, 0), "pikachu.pk4");
+        var moved = await Json(await _client.PostAsJsonAsync("/api/boxes/move", new
+        {
+            from = new { kind = "vault", pokemonId = pikachu },
+            to = new { kind = "save", saveId, box = 0, slot = 0 },
+            mode = "copy",
+        }));
+        Assert.True(moved.GetProperty("converted").GetBoolean());
+        var slots = (await Json(await _client.GetAsync($"/api/boxes/saves/{saveId}"))).GetProperty("slots");
+        Assert.Contains(slots.EnumerateArray(), e => e.GetProperty("summary").GetProperty("species").GetInt32() == 25);
     }
 }

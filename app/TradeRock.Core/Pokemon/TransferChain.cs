@@ -34,8 +34,9 @@ public sealed record AdaptOption(StorageFormat Target, IReadOnlyList<TransferSte
 /// (<c>PK1/PK2.ConvertToPK7</c>, <c>PK3.ConvertToPK4</c>, <c>PK4.ConvertToPK5</c>, <c>PK5.ConvertToPK6</c>,
 /// <c>PK6.ConvertToPK7</c>; o HOME pelo <see cref="HomeTransfer"/>, que usa o <c>EntityConverter.ConvertToType</c>).
 /// Regras (fontes na D34):
-/// - Virtual Console: ovos não; na Gen 2, Pokémon com item segurado fica no jogo e Dizzy Punch (Ovo Estranho) bloqueia;
-///   Mew só o do evento do Virtual Console (OT "GF", TID 22796). Na Gen 1, o "item" é a taxa de captura e se perde.
+/// - Virtual Console: ovos não; Dizzy Punch (Ovo Estranho) bloqueia; Mew só o do evento do Virtual Console (OT "GF",
+///   TID 22796); Celebi só a partir do nível 30 (o do evento do Crystal do VC). Na Gen 2 o item volta para a mochila do
+///   jogo; na Gen 1, o "item" é a taxa de captura e se perde.
 /// - Pal Park: ovos não, golpes de HM da Gen 3 não, Mail não; os outros itens seguem com o Pokémon.
 /// - Poké Transfer: ovos não, HMs da Gen 4 (as dos dois pares: Cut, Fly, Surf, Strength, Rock Smash, Waterfall, Rock
 ///   Climb; Defog sai do HGSS e Whirlpool do DPPt) não, Pichu de orelha espetada não; o item volta para a mochila.
@@ -45,7 +46,7 @@ public sealed record AdaptOption(StorageFormat Target, IReadOnlyList<TransferSte
 /// </summary>
 public static class TransferChain
 {
-    private const ushort Mew = 151, Pichu = 172, Kyurem = 646, Pikachu = 25;
+    private const ushort Mew = 151, Celebi = 251, Pichu = 172, Kyurem = 646, Pikachu = 25;
     private const ushort DizzyPunch = 146;
 
     /// <summary>HMs da Gen 3 (RSE e FRLG): Cut, Fly, Surf, Strength, Flash, Rock Smash, Waterfall e Dive.</summary>
@@ -131,12 +132,25 @@ public static class TransferChain
             return new HomeTransferResult(null, "no_route", []);
         if (Refusal(source, from, path).Code is { } refusal)
             return new HomeTransferResult(null, refusal, []);
+        try
+        {
+            return Convert(source, path, owner);
+        }
+        catch (Exception e) when (e is IndexOutOfRangeException or ArgumentException or InvalidOperationException)
+        {
+            // Dados que o PKHeX não consegue converter (nomes sem terminador, campos fora da faixa): não há o que levar.
+            return new HomeTransferResult(null, "convert_failed", []);
+        }
+    }
 
+    private static HomeTransferResult Convert(PKM source, IReadOnlyList<(StorageFormat Format, TransferStep Step)> path,
+        ITrainerInfo owner)
+    {
         var notes = new List<string>();
         var pk = source.Clone();
         foreach (var (format, step) in path)
         {
-            if (DropsItem(step) && pk.HeldItem != 0)
+            if (DropsItem(step, pk) && pk.HeldItem != 0)
             {
                 pk.HeldItem = 0;
                 if (!notes.Contains("held_item_removed"))
@@ -173,9 +187,10 @@ public static class TransferChain
         return new HomeTransferResult(pk, null, notes);
     }
 
-    /// <summary>Etapas que devolvem o item para a mochila (no Virtual Console a Gen 2 recusa e a Gen 1 não tem item).</summary>
-    private static bool DropsItem(TransferStep step) =>
-        step is TransferStep.PokeTransfer or TransferStep.PokeTransporter or TransferStep.PokemonBank or TransferStep.Home;
+    /// <summary>Etapas que devolvem o item para a mochila (no Virtual Console só a Gen 2: na Gen 1 não há item).</summary>
+    private static bool DropsItem(TransferStep step, PKM pk) =>
+        step is TransferStep.PokeTransfer or TransferStep.PokeTransporter or TransferStep.PokemonBank or TransferStep.Home
+        || (step == TransferStep.VirtualConsole && pk is PK2);
 
     /// <summary>Primeira recusa pelo caminho (código estável e a etapa).</summary>
     private static (string? Code, string? Step) Refusal(PKM source, StorageFormat from,
@@ -195,7 +210,7 @@ public static class TransferChain
 
     private static string? StepRefusal(PKM pk, StorageFormat from, TransferStep step) => step switch
     {
-        TransferStep.VirtualConsole when from == StorageFormat.Pk2 && pk.HeldItem != 0 => "vc_held_item",
+        TransferStep.VirtualConsole when pk.Species == Celebi && pk.CurrentLevel < 30 => "vc_celebi",
         TransferStep.VirtualConsole when from == StorageFormat.Pk2 && pk.HasMove(DizzyPunch) => "vc_dizzy_punch",
         TransferStep.VirtualConsole when pk.Species == Mew && !(pk.OriginalTrainerName == "GF" && pk.TID16 == 22796) => "vc_mew_event",
         TransferStep.PalPark when pk.Moves.Any(HiddenMoves3.Contains) => "pal_park_hm",

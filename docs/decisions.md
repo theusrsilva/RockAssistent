@@ -1237,7 +1237,9 @@ servidor não mudaram de comportamento, só de lugar no menu.
   pb8, pa8, pk9, pa9), separado do catálogo de troca (`GameFamily` não mudou). `StoredPokemon.Format` substitui a
   coluna `Family` (migração `VaultFormats`, que renomeia e mapeia Frlg→Pk3, Lgpe→Pb7, Swsh→Pk8, Bdsp→Pb8, Pla→Pa8,
   Sv→Pk9, Za→Pa9); `Family` virou derivada e é null na Gen 1, 2 e 4 a 7.
-  - Save → cofre aceita todas as gerações; cofre → save, só no mesmo formato (ou pelo HOME, como antes). Exporta
+  - Save → cofre aceita todas as gerações; cofre → save, só no mesmo formato, ou convertido. Arrastar para um save (do
+    cofre ou de outro save) com origem ou destino fora do catálogo de troca segue o mesmo `TransferChain` do "Adaptar"
+    (mesmas regras e códigos, `save_wrong_game` com o motivo); entre jogos do catálogo continua o `HomeTransfer`. Exporta
     `.pk1`…`.pk7`. Filtro do cofre por formato (`?game=gen1…gen7` e as chaves dos jogos de troca).
   - Os formatos novos não trocam, não abrem no construtor nem se editam: o painel usa `GET /api/vault/pokemon/{id}/view`
     (só leitura) e diz "adapte para um jogo do Switch para trocar".
@@ -1247,20 +1249,27 @@ servidor não mudaram de comportamento, só de lugar no menu.
   `PK1/PK2.ConvertToPK7`, `PK3.ConvertToPK4`, `PK4.ConvertToPK5`, `PK5.ConvertToPK6`, `PK6.ConvertToPK7` e o HOME pelo
   `HomeTransfer` (`EntityConverter.ConvertToType`). Caminhos, sempre para a frente e com as regras de todas as etapas
   aplicadas de uma vez (ovo nunca passa; a espécie e a forma precisam existir em cada formato do caminho):
-  - **Gen 1/2 → Poké Transporter (Virtual Console) → Gen 7:** na Gen 2, item segurado recusa (o Pokémon fica no jogo) e
-    Dizzy Punch (Ovo Estranho) recusa; Mew só o do evento do VC (OT "GF", TID 22796). Na Gen 1 o "item" se perde.
+  - **Gen 1/2 → Poké Transporter (Virtual Console) → Gen 7:** Dizzy Punch (Ovo Estranho) recusa; Mew só o do evento do
+    VC (OT "GF", TID 22796); Celebi só a partir do nível 30 (o do evento do Crystal do VC; a Gen 1 não tem Celebi). Na
+    Gen 2 o item volta para a mochila do jogo; na Gen 1 o "item" se perde.
   - **Gen 3 → Pal Park → Gen 4:** HMs da Gen 3 (Cut, Fly, Surf, Strength, Flash, Rock Smash, Waterfall, Dive) e Mail
     recusam; o item segue.
   - **Gen 4 → Poké Transfer → Gen 5:** HMs dos dois pares (Cut, Fly, Surf, Strength, Rock Smash, Waterfall, Rock
-    Climb) recusam; Defog passa (sai pelo HGSS) e Whirlpool também (sai pelo DPPt); Pichu de orelha espetada recusa; o
-    item volta para a mochila.
+    Climb) recusam. Defog e Whirlpool passam, uma simplificação: cada um é HM só num par, e o Pokémon pode sair pelo
+    outro (Defog pelo HGSS, Whirlpool pelo DPPt). Pichu de orelha espetada recusa; o item volta para a mochila.
   - **Gen 5 → Poké Transporter → Gen 6 → Pokémon Bank → Gen 7:** HMs passam; Kyurem fundido e Pikachu fantasiado
     recusam; o item volta para a mochila.
   - **Gen 7 e Let's Go → HOME → Sword/Shield, BDSP, Arceus, Scarlet/Violet, Z-A:** o Let's Go não recebe; o item volta
     para a mochila; o resto é o `HomeTransfer` da D22.
-  - Quem recebe: o "Meu treinador" do jogo de destino (Gen 4 a 7: o geral).
+  - Quem recebe: o "Meu treinador" do jogo de destino (Gen 4 a 7: o geral), com a versão do formato de destino; no
+    arrastar, o próprio save. Dados que o PKHeX não converte dão `convert_failed`.
 - **Fontes** (regra do autor: maioria das fontes, Serebii vence empate): Bulbapedia (Pal Park, Poké Transfer, Poké
   Transporter, Transfer, HM; por busca, a página bloqueia leitura direta), Serebii (`blackwhite/poketransfer.shtml`,
   `heartgoldsoulsilver/palpark.shtml`), Smogon (guia do Pal Park: HM e Mail) e PokéBase. Divergências: o Serebii não cita
   Rock Smash nem HM no Pal Park; Bulbapedia e Smogon citam (maioria). Pikachu fantasiado e Mew do VC só pela Bulbapedia.
+  - **Item na Gen 2 do VC** (empate): Bulbapedia (Poké Transporter) e um guia do fórum do Smogon dizem que o Pokémon com
+    item fica na Caixa 1; o Thonky (guias "trade from Gold/Crystal to…", citando o aviso do jogo "those items will go
+    back to your bag in Pokémon Gold") e a PokéBase dizem que o item volta para a mochila. O Serebii
+    (`bank/poketransporter.shtml`) diz que o Transporter "will remove any items from the Pokémon and place them in the
+    bag" e desempata: o item volta para a mochila (nota `held_item_removed`).
 - **Não verificado:** a tela num navegador e saves reais das Gen 1, 2 e 4 a 7.

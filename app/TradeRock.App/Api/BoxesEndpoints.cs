@@ -277,13 +277,26 @@ public static class BoxesEndpoints
     }
 
     /// <summary>
-    /// Pokémon no formato do save. Mesmo formato: direto. Formato diferente: conversão do HOME (<see cref="HomeTransfer"/>)
-    /// quando o save é de um jogo do catálogo; senão (ou se o HOME recusar) "save_wrong_game" com o motivo.
+    /// Pokémon no formato do save. Mesmo formato: direto. Origem ou destino fora do catálogo de troca (Gen 1, 2, 4 a 7):
+    /// os caminhos oficiais do "Adaptar" (<see cref="TransferChain"/>, D34), com as mesmas regras e códigos. Entre jogos
+    /// do catálogo: conversão do HOME (<see cref="HomeTransfer"/>). Recusa: "save_wrong_game" com o motivo.
     /// </summary>
     private static (PKM Pokemon, IReadOnlyList<string> Notes, bool Converted) Convert(PKM source, SaveFile sav)
     {
         if (source.Context == sav.Context && source.GetType() == sav.BlankPKM.GetType())
             return (source, [], false);
+        var from = VaultFormats.ByContext(source.Context) is { } f && f.EntityType == source.GetType() ? f : null;
+        var to = VaultFormats.ByContext(sav.Context) is { } t && t.EntityType == sav.BlankPKM.GetType() ? t : null;
+        if (from is null || to is null)
+            throw new BoxesException("save_wrong_game", reason: "no_route");
+        if (from.Family is null || to.Family is null)
+        {
+            // O próprio save faz o papel de quem recebe (treinador atual).
+            var adapted = TransferChain.Adapt(source, from.Format, to.Format, sav);
+            if (!adapted.Ok)
+                throw new BoxesException("save_wrong_game", reason: adapted.Refusal ?? "no_route");
+            return (adapted.Pokemon!, adapted.Notes, true);
+        }
         if (GameCatalog.ByContext(sav.Context) is not { } game)
             throw new BoxesException("save_wrong_game", reason: "home_no_destination");
         var moved = HomeTransfer.Move(source, game, sav);
