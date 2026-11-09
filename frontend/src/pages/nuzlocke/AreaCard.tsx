@@ -48,6 +48,9 @@ export default function AreaCard({
     }
   }
   const used = area ? areaUsed(view, area.id) : false
+  // Pela regra do primeiro encontro, área usada não pede mais "Capturei" (o inicial já vem capturado na área dele).
+  const closed = used && view.run.rules.firstEncounterOnly
+  const caughtHere = new Set(area ? [...view.party, ...view.box, ...view.graveyard].filter((m) => m.areaId === area.id).map((m) => m.species) : [])
   const runId = view.run.id
 
   const areaOptions = useMemo(() => areas.map((a, i) => ({ value: i, text: a.name })), [areas])
@@ -101,7 +104,14 @@ export default function AreaCard({
           ) : (
             <ul className="flex flex-col gap-1.5">
               {view.areaEncounters.map((e) => (
-                <EncounterRow key={`${e.species}-${e.form}`} e={e} showVersions={!view.run.version} readOnly={readOnly} onCatch={() => setCatching({ species: e.species, level: e.minLevel })} />
+                <EncounterRow
+                  key={`${e.species}-${e.form}`}
+                  e={e}
+                  showVersions={!view.run.version}
+                  readOnly={readOnly}
+                  caught={caughtHere.has(e.species)}
+                  closed={closed}
+                  onCatch={() => setCatching({ species: e.species, level: e.minLevel })} />
               ))}
             </ul>
           )}
@@ -184,7 +194,23 @@ export default function AreaCard({
   )
 }
 
-function EncounterRow({ e, showVersions, readOnly, onCatch }: { e: SpeciesEncounterOption; showVersions: boolean; readOnly: boolean; onCatch: () => void }) {
+function EncounterRow({
+  e,
+  showVersions,
+  readOnly,
+  caught,
+  closed,
+  onCatch,
+}: {
+  e: SpeciesEncounterOption
+  showVersions: boolean
+  readOnly: boolean
+  /** Já capturado nesta área (ex.: o inicial). */
+  caught: boolean
+  /** Área já usada pela regra do primeiro encontro: sem "Capturei". */
+  closed: boolean
+  onCatch: () => void
+}) {
   const { t } = useTranslation()
   const method = (m: string) => t(`dex.method.${m}`, { defaultValue: titleCase(m) })
   return (
@@ -207,10 +233,17 @@ function EncounterRow({ e, showVersions, readOnly, onCatch }: { e: SpeciesEncoun
           </div>
         )}
       </div>
-      {!readOnly && (
-        <Button size="sm" icon="radio_button_checked" onClick={onCatch}>
-          {t('nuzlocke.area.caught')}
-        </Button>
+      {caught ? (
+        <Badge tone="emerald" icon="check">
+          {t('nuzlocke.area.caughtHere')}
+        </Badge>
+      ) : (
+        !readOnly &&
+        !closed && (
+          <Button size="sm" icon="radio_button_checked" onClick={onCatch}>
+            {t('nuzlocke.area.caught')}
+          </Button>
+        )
       )}
     </li>
   )

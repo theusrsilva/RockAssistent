@@ -2321,7 +2321,10 @@
       "yours": "Starter: {{name}}",
       "unknown": "Starter not set",
       "change": "Change",
-      "bossHint": "This boss's team depends on your starter. Set your starter at the top of the run to see the right team."
+      "bossHint": "This boss's team depends on your starter. Set your starter at the top of the run to see the right team.",
+      "nickname": "Starter nickname",
+      "nicknameHelp": "It joins your team right away, caught in the town where the game gives it.",
+      "nicknameRequired": "The rules ask for a nickname: give your starter one."
     },
     "run": {
       "pause": "Pause",
@@ -2396,7 +2399,8 @@
       "lostTitle": "Lost in this area ({{count}})",
       "caughtAfterAll": "Caught it after all",
       "toParty": "Team",
-      "toBox": "Box"
+      "toBox": "Box",
+      "caughtHere": "Caught"
     },
     "team": {
       "title": "Team",

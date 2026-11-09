@@ -52,7 +52,7 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
     public async Task Inicial_da_run_escolhe_o_time_do_rival()
     {
         // HeartGold com Chikorita: o Silver pega o Cyndaquil (e não o Totodile do time padrão).
-        var chikorita = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, " Chikorita "), Ct);
+        var chikorita = await _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, " Chikorita ", "Chico"), Ct);
         Assert.Equal("chikorita", chikorita.Run.Starter);
         Assert.Equal("rival-cherrygrove", chikorita.NextBoss!.Id);
         Assert.Equal(155, Assert.Single(chikorita.NextBoss.Party).Species);
@@ -74,6 +74,60 @@ public sealed class NuzlockeStoreTests(DexFixture fx) : IClassFixture<DexFixture
 
         Assert.Equal("invalid_starter", await Fails(() => _store.CreateAsync(new NewRun(null, "hgss", "heartgold", null, "bulbasaur"), Ct)));
         Assert.Equal("invalid_starter", await Fails(() => _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "piplup"), Ct)));
+    }
+
+    [Fact]
+    public async Task Run_com_inicial_ja_comeca_com_ele_na_equipe()
+    {
+        // FRLG com Charmander: nível 5, na área do presente do PokeAPI (Pallet Town), forma padrão, sem shiny.
+        var view = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander", "Char"), Ct);
+        var mon = Assert.Single(view.Party);
+        Assert.Equal((4, 0, 5, "Char", false), (mon.Species, mon.Form, mon.Level, mon.Nickname, mon.Shiny));
+        Assert.Equal("pallet-town", mon.AreaId);
+        // A área do presente já conta como usada (primeiro encontro).
+        Assert.Equal("area_already_used", await Fails(() => _store.EncounterAsync(view.Run.Id,
+            new NewEncounter("pallet-town", 7, 0, "Squirt", 5, NuzlockeStatus.Party), Ct)));
+        await using (var db = await _db.CreateDbContextAsync(Ct))
+            Assert.Single(db.NuzlockeEvents.Where(e => e.RunId == view.Run.Id && e.Kind == NuzlockeEvents.Encounter));
+
+        // "Não sei": nada automático.
+        Assert.Empty((await _store.CreateAsync(new NewRun(null, "frlg", "firered", null), Ct)).Party);
+
+        // Apelido obrigatório sem apelido → nickname_required; sem a regra, o apelido é opcional.
+        Assert.Equal("nickname_required", await Fails(() => _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander"), Ct)));
+        var free = await _store.CreateAsync(new NewRun(null, "frlg", "firered", NuzlockeRules.Default with { NicknameRequired = false }, "squirtle"), Ct);
+        Assert.Null(Assert.Single(free.Party).Nickname);
+
+        // HGSS com Chikorita: New Bark Town.
+        var hgss = await _store.CreateAsync(new NewRun(null, "hgss", "soulsilver", null, "chikorita", "Leafy"), Ct);
+        Assert.Equal((152, "new-bark-town", 5), (hgss.Party[0].Species, hgss.Party[0].AreaId, hgss.Party[0].Level));
+
+        // Jogo novo: os nossos encontros de presente (SV: Cabo Poco).
+        var sv = await _store.CreateAsync(new NewRun(null, "sv", "scarlet", null, "fuecoco", "Croc"), Ct);
+        Assert.Equal((909, "cabo-poco", 5), (sv.Party[0].Species, sv.Party[0].AreaId, sv.Party[0].Level));
+    }
+
+    [Fact]
+    public async Task Trocar_o_inicial_troca_o_pokemon_automatico_so_se_ele_nao_foi_mexido()
+    {
+        var view = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null, "charmander", "Char"), Ct);
+        var id = view.Run.Id;
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "bulbasaur"), Ct);
+        var mon = Assert.Single(view.Party);
+        Assert.Equal((1, "Char", "bulbasaur"), (mon.Species, mon.Nickname, view.Run.Starter));
+        // De novo (a troca automática não conta como edição).
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "squirtle"), Ct);
+        Assert.Equal(7, Assert.Single(view.Party).Species);
+
+        // Depois de editado, só o inicial da run muda.
+        await _store.UpdateMonAsync(id, mon.Id, new MonChanges(null, 6, null, null, null), Ct);
+        view = await _store.UpdateAsync(id, new RunChanges(null, null, null, "charmander"), Ct);
+        Assert.Equal(("charmander", 7), (view.Run.Starter, Assert.Single(view.Party).Species));
+
+        // Run sem inicial: informar depois põe o inicial na equipe (uma vez só).
+        var none = await _store.CreateAsync(new NewRun(null, "frlg", "firered", null), Ct);
+        view = await _store.UpdateAsync(none.Run.Id, new RunChanges(null, null, null, "squirtle", "Squirt"), Ct);
+        Assert.Equal((7, "Squirt", "pallet-town"), (view.Party[0].Species, view.Party[0].Nickname, view.Party[0].AreaId));
     }
 
     [Fact]
@@ -561,7 +615,8 @@ public sealed class NuzlockeApiTests : IAsyncLifetime
         Assert.Equal(152, starters[0].GetProperty("species").GetInt32());
 
         var view = await Ok(await _client.PostAsJsonAsync("/api/nuzlocke",
-            new { gameKey = "hgss", version = "heartgold", starter = "chikorita" }, Ct));
+            new { gameKey = "hgss", version = "heartgold", starter = "chikorita", starterNickname = "Chico" }, Ct));
+        Assert.Equal("Chico", view.GetProperty("party")[0].GetProperty("nickname").GetString());
         var id = view.GetProperty("run").GetProperty("id").GetGuid();
         Assert.Equal("chikorita", view.GetProperty("run").GetProperty("starter").GetString());
         Assert.Equal(155, view.GetProperty("nextBoss").GetProperty("party")[0].GetProperty("species").GetInt32());

@@ -2321,7 +2321,10 @@
       "yours": "Inicial: {{name}}",
       "unknown": "Inicial não informado",
       "change": "Trocar",
-      "bossHint": "O time deste chefe muda conforme o seu inicial. Informe o inicial no topo da run para ver o time certo."
+      "bossHint": "O time deste chefe muda conforme o seu inicial. Informe o inicial no topo da run para ver o time certo.",
+      "nickname": "Apelido do inicial",
+      "nicknameHelp": "Ele já entra na sua equipe, capturado na cidade em que o jogo o dá.",
+      "nicknameRequired": "As regras pedem um apelido: dê um apelido ao inicial."
     },
     "run": {
       "pause": "Pausar",
@@ -2396,7 +2399,8 @@
       "lostTitle": "Perdidos nesta área ({{count}})",
       "caughtAfterAll": "Capturei afinal",
       "toParty": "Equipe",
-      "toBox": "Caixa"
+      "toBox": "Caixa",
+      "caughtHere": "Capturado"
     },
     "team": {
       "title": "Equipe",

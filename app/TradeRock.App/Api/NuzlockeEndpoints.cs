@@ -8,8 +8,9 @@ namespace TradeRock.App.Api;
 /// </summary>
 public static class NuzlockeEndpoints
 {
-    public sealed record CreateDto(string? Name, string GameKey, string? Version, NuzlockeRules? Rules, string? Starter = null);
-    public sealed record UpdateDto(string? Name, string? Status, NuzlockeRules? Rules, string? Starter = null);
+    public sealed record CreateDto(string? Name, string GameKey, string? Version, NuzlockeRules? Rules, string? Starter = null,
+        string? StarterNickname = null);
+    public sealed record UpdateDto(string? Name, string? Status, NuzlockeRules? Rules, string? Starter = null, string? StarterNickname = null);
     public sealed record AreaDto(string AreaId);
     public sealed record EncounterDto(string AreaId, int Species, int Form, string? Nickname, int Level, string Status, bool Shiny);
     public sealed record MonDto(string? Status, int? Level, string? Nickname, string? DeathCause, IReadOnlyList<string>? Moves,
@@ -22,10 +23,10 @@ public static class NuzlockeEndpoints
 
         runs.MapGet("/", (NuzlockeStore store, CancellationToken ct) => Run(() => store.ListAsync(ct)));
         runs.MapPost("/", (CreateDto body, NuzlockeStore store, CancellationToken ct) =>
-            Run(() => store.CreateAsync(new NewRun(body.Name, body.GameKey, body.Version, body.Rules, body.Starter), ct)));
+            Run(() => store.CreateAsync(new NewRun(body.Name, body.GameKey, body.Version, body.Rules, body.Starter, body.StarterNickname), ct)));
         runs.MapGet("/{id:guid}", (Guid id, NuzlockeStore store, CancellationToken ct) => Run(() => store.GetAsync(id, ct)));
         runs.MapPut("/{id:guid}", (Guid id, UpdateDto body, NuzlockeStore store, CancellationToken ct) =>
-            Run(() => store.UpdateAsync(id, new RunChanges(body.Name, body.Status, body.Rules, body.Starter), ct)));
+            Run(() => store.UpdateAsync(id, new RunChanges(body.Name, body.Status, body.Rules, body.Starter, body.StarterNickname), ct)));
         runs.MapPut("/{id:guid}/area", (Guid id, AreaDto body, NuzlockeStore store, CancellationToken ct) =>
             Run(() => store.SetAreaAsync(id, body.AreaId, ct)));
         runs.MapPost("/{id:guid}/encounter", (Guid id, EncounterDto body, NuzlockeStore store, CancellationToken ct) =>
