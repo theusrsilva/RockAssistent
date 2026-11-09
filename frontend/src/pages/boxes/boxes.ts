@@ -142,7 +142,6 @@ export function planDrop(source: DragSource, target: DropTarget, mode: MoveMode)
     }
   }
   if (source.kind === 'save' && target.kind === 'vault') {
-    if (source.family === null) return { kind: 'refuse', code: 'save_game_unsupported' }
     if (target.occupied) return { kind: 'refuse', code: 'slot_occupied' }
   }
   if (source.kind === 'vault' && target.kind === 'save' && target.data !== null) return { kind: 'refuse', code: 'slot_occupied' }

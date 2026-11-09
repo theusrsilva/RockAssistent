@@ -7,7 +7,7 @@ import { ContentFile } from '../../components/Markdown'
 import { Button, Callout, Icon } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
 import { useConnection } from '../../lib/connection'
-import { gameByFamily, gameOf, linkCodeErrors, versionName } from '../../lib/games'
+import { gameByFamily, gameOf, linkCodeErrors, tradeFamilyOf, versionName } from '../../lib/games'
 import { DEFAULT_TRAINER, trainerNameErrors } from '../../lib/trainer'
 import type { MyTrainer, Pokemon, QueuedTrade, StartTrade, TradeGame, TradeQueue, TradeSession, TradeSettings } from '../../lib/types'
 import { useAuth } from '../../lib/auth'
@@ -135,8 +135,9 @@ export default function TradePage() {
   // "Usar na troca" no cofre: o jogo é o do Pokémon escolhido.
   useEffect(() => {
     const first = pokemon.find((p) => p.id === party.party[0])
-    if (first && step === GAME && first.family && gameOf(trainer.game).family !== first.family) {
-      void chooseGame(gameByFamily(first.family).versions[0].id)
+    const firstFamily = first ? tradeFamilyOf(first) : null
+    if (first && step === GAME && firstFamily && gameOf(trainer.game).family !== firstFamily) {
+      void chooseGame(gameByFamily(firstFamily).versions[0].id)
       setStep(PARTY)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

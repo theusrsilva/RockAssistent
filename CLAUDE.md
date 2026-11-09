@@ -6,7 +6,7 @@ do Switch via wireless local (LDN). O nome visível é **RockAssistent**; namesp
 `traderock`, worker e pasta de dados continuam **TradeRock** (D33). Especificação original da troca:
 [docs/spec.md](docs/spec.md) (o projeto se chamava "FRLG Trade Studio"); do RockAssistent:
 [docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md).
-Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D33).
+Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
 
 ## Regras de trabalho (pedidas pelo autor, valem sempre)
 
@@ -71,6 +71,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D33).
 | Jogos do Switch | Todos os jogos com troca local (FRLG, Let's Go, SwSh, BDSP, Arceus, SV, Z-A) pelo pokeldn (submódulo, D21). Escopo todo (troca, raids, Mystery Gift, Union Circle). ESP32 passa a usar o firmware do pokeldn. Python embutido no Windows. Modo LAN só no SwSh. Legalidade avisa e não bloqueia nos jogos novos. Cofre único com filtro por jogo. "Meu treinador" por jogo. Mover entre jogos como o HOME (D22) |
 | Internet opcional | Estatísticas do Smogon (formato do Champions, só ao clicar em Atualizar) e links do pokepast.es. Desligadas por padrão, só GET, mudar só na janela do PC (D32) |
 | RockAssistent | Nome só visível. Menu: Início, Pokédex, Guias, Boxes, Trocas, Mystery Gift, Nuzlocke, Contador Hunt, Histórico, Configurações, Sobre (celular: Início, Pokédex, Boxes, Trocas + "Mais"). Pokédex do PokeAPI (`dex.sqlite` gerado no build). Dados nossos em `assets/data` (JSON estrito, validador). Boxes com saves de pastas (backup automático; Gen 1/2 compactam caixas; mover entre gerações com aviso; clone só em saves). Hunt com odds por rolagens e atalho global opcional (Windows, X11). Nuzlocke com versão obrigatória nos jogos duplos e mapa SVG. Histórico unificado (`ActivityRecord`) (D33) |
+| Cofre de todas as gerações | Formato próprio do cofre (pk1 a pa9), separado do catálogo de troca. Gen 1, 2 e 4 a 7 ficam no cofre, mas não trocam nem se editam. "Adaptar para…" segue os caminhos oficiais (VC, Pal Park, Poké Transfer, Poké Transporter, Bank, HOME) com as regras de cada etapa; o original fica e a cópia vai para a Caixa de entrada (D34) |
 
 ## Estado das entregas
 

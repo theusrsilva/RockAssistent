@@ -22,10 +22,9 @@ describe('arrastar no Boxes', () => {
     expect(plan).toMatchObject({ kind: 'move', body: { to: { kind: 'vault', boxId: null, slot: null }, mode: 'copy' } })
   })
 
-  it('save de jogo fora do catálogo não vai para o cofre', () => {
-    expect(planDrop({ ...fromSave, family: null }, { kind: 'vault', boxId: 'b1', slot: 0, occupied: false }, 'move')).toEqual({
-      kind: 'refuse',
-      code: 'save_game_unsupported',
+  it('save de jogo fora do catálogo de troca também vai para o cofre (D34)', () => {
+    expect(planDrop({ ...fromSave, family: null }, { kind: 'vault', boxId: 'b1', slot: 0, occupied: false }, 'move')).toMatchObject({
+      kind: 'move',
     })
   })
 

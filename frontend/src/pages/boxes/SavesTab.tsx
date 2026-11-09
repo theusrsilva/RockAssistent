@@ -456,7 +456,6 @@ export function SavesTab({ onForbidden }: { onForbidden: () => void }) {
         <MoveDialog
           source={sourceOf(moving)}
           title={t('boxes.moveTitle', { name: (moving.summary.nickname || moving.summary.speciesName).toUpperCase() })}
-          allowVault={moving.family !== null}
           onStale={reloadStale}
           onClose={() => setMoving(null)}
           onDone={(r) => {
@@ -648,7 +647,7 @@ function SlotPanel({
       <div className="flex flex-col gap-2 border-t border-line px-4 py-3.5">
         <div className="flex gap-2">
           <Button className="h-[42px] flex-1" icon="drive_file_move" disabled={!canMove} onClick={onMove}>
-            {entry.family === null ? t('boxes.moveOtherSave') : t('boxes.moveAction')}
+            {t('boxes.moveAction')}
           </Button>
         </div>
         <ComingSoonActions onClone={onClone} onEvolve={onEvolve} cloneHint={cloneHint} evolveHint={evolveHint} />

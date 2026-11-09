@@ -634,7 +634,7 @@
     },
     "game": "Jogo",
     "anyGame": "Qualquer jogo",
-    "exportSwitchNote": "Pokémon dos jogos do Switch (Let's Go a Legends: Z-A) saem no formato do próprio jogo (.pb7, .pk8, .pb8, .pa8, .pk9 ou .pa9), decriptados.",
+    "exportSwitchNote": "Pokémon dos outros jogos (Gen 1, 2, 4 a 7 e os do Switch) saem no formato do próprio jogo (.pk1, .pk2, .pk4 a .pk7, .pb7, .pk8, .pb8, .pa8, .pk9 ou .pa9), decriptados.",
     "transfer": {
       "action": "Mover para outro jogo",
       "title": "Mover para outro jogo",
@@ -652,6 +652,51 @@
         "no_route": "O PKHeX não achou um jeito de converter",
         "pokemon_duplicate": "Já existe um Pokémon igual no cofre",
         "pokemon_in_trash": "Está na lixeira"
+      }
+    },
+    "legacy": "Pokémon da Gen {{generation}} ({{game}}): fica guardado no cofre, mas não troca com o Switch nem abre no construtor. Use \"Adaptar para…\" para levá-lo a um jogo mais novo, como o Poké Transporter e o HOME fazem.",
+    "legacyNoEdit": "O construtor só edita Pokémon dos jogos de troca. Adapte para um jogo do Switch para editar.",
+    "legacyNoTrade": "Adapte para um jogo do Switch para trocar.",
+    "adapt": {
+      "action": "Adaptar para…",
+      "title": "Adaptar para um jogo mais novo",
+      "help": "Leva o Pokémon para a frente pelos caminhos oficiais (Virtual Console, Pal Park, Poké Transfer, Poké Transporter, Pokémon Bank e HOME), com as regras de cada etapa. O seu \"Meu treinador\" do jogo de destino passa a ser o treinador atual.",
+      "keeps": "O original continua no cofre, no formato de agora. A cópia adaptada entra na Caixa de entrada.",
+      "confirm": "Adaptar",
+      "none": "Não há jogo mais novo para onde levar este Pokémon.",
+      "done": "Pronto: a cópia do {{game}} está na Caixa de entrada.",
+      "illegal": "O PKHeX achou problemas na cópia (ela foi criada mesmo assim):",
+      "steps": {
+        "virtual_console": "Poké Transporter (Virtual Console)",
+        "pal_park": "Pal Park",
+        "poke_transfer": "Poké Transfer",
+        "poke_transporter": "Poké Transporter",
+        "pokemon_bank": "Pokémon Bank",
+        "home": "Pokémon HOME"
+      },
+      "notes": {
+        "held_item_removed": "O item segurado voltou para a mochila, como no jogo: a cópia está sem item.",
+        "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX."
+      },
+      "refusal": {
+        "egg": "Ovos não passam pela transferência",
+        "no_route": "Não há caminho oficial até esse jogo",
+        "lgpe_no_receive": "O Let's Go não recebe Pokémon de outros jogos",
+        "species_not_in_game": "Essa espécie (ou forma) não existe nesse jogo",
+        "vc_celebi": "Só o Celebi do evento do Crystal do Virtual Console (nível 30 ou mais) passa pelo Poké Transporter",
+        "vc_dizzy_punch": "Esqueça o Dizzy Punch antes (o Poké Transporter recusa os Pokémon do Ovo Estranho com esse golpe)",
+        "vc_mew_event": "Só o Mew do evento do Virtual Console passa pelo Poké Transporter",
+        "pal_park_hm": "Esqueça os golpes de HM antes (o Pal Park recusa)",
+        "pal_park_mail": "Tire a carta (Mail) antes (o Pal Park recusa)",
+        "poke_transfer_hm": "Esqueça os golpes de HM antes (o Poké Transfer recusa; Defog e Whirlpool passam, porque cada um sai pelo par em que não é HM)",
+        "poke_transfer_spiky_pichu": "O Pichu de orelha espetada não pode ser transferido",
+        "kyurem_fused": "Separe o Kyurem antes (só a forma normal é transferida)",
+        "cosplay_pikachu": "O Pikachu fantasiado não pode ir para o Pokémon Bank",
+        "adapted_exists": "Essa cópia já está no cofre",
+        "target_invalid": "Escolha um jogo da lista",
+        "pokemon_in_trash": "Está na lixeira",
+        "pokemon_not_found": "O Pokémon não foi encontrado",
+        "convert_failed": "O PKHeX não conseguiu converter os dados deste Pokémon"
       }
     }
   },
@@ -1404,6 +1449,7 @@
       "offersTip": "Cada Pokémon escolhido vai para o Switch, um por troca, nesta ordem. Nesse jogo não precisa de Pokémon de preenchimento.",
       "tradeNumber": "Troca {{n}}",
       "otherGame": "É do {{game}}: dá para mover de jogo no cofre",
+      "adaptToTrade": "É do {{game}}: adapte para um jogo do Switch no cofre para trocar",
       "tradeBack": "Trocar de volta para evoluir",
       "tradeBackTip": "Para o Pokémon do Switch que evolui por troca: depois de cada troca, o RockAssistent devolve na hora o Pokémon que recebeu (ele evolui no Switch) e recebe de volta o que tinha mandado. No fim, nada muda no cofre."
     },
@@ -2167,13 +2213,13 @@
     "done": "Pronto!",
     "doneWithBackup_one": "Pronto! O save antigo ficou guardado como backup.",
     "doneWithBackup_other": "Pronto! Os saves antigos ficaram guardados como backup ({{count}}).",
-    "noFamily": "Este jogo não troca com o RockAssistent, então o Pokémon não vai para o cofre nem para a troca. Dá para copiar para outro save do mesmo tipo.",
-    "noFamilyShort": "Fora dos jogos de troca",
+    "noFamily": "Este jogo não troca com o Switch. O Pokémon pode ir para o cofre; para trocar, adapte-o lá para um jogo do Switch.",
+    "noFamilyShort": "Não troca com o Switch",
     "errors": {
       "save_unwritable": "Não deu para gravar o save (pasta sem permissão ou arquivo em uso). Nada foi alterado.",
       "save_read_only": "Este save é só para ver: o RockAssistent não consegue gravar neste formato.",
       "save_wrong_game": "Esse Pokémon não pode ir para o jogo deste save",
-      "save_game_unsupported": "Pokémon deste jogo não vão para o cofre (o jogo não troca com o RockAssistent).",
+      "save_game_unsupported": "Pokémon deste jogo não vão para o cofre.",
       "save_changed": "O save mudou no disco (o emulador gravou?). Recarregamos as caixas: confira e tente de novo.",
       "save_not_found": "O save não foi encontrado. Toque em \"Procurar de novo\".",
       "slot_occupied": "Essa posição já está ocupada. Escolha uma vazia.",

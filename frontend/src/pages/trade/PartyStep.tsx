@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { UploadArea } from '../../components/UploadArea'
 import { HelpTip, Icon } from '../../components/ui'
 import { spriteUrl } from '../../lib/api'
-import { familyOf, gameByFamily, type GameDef } from '../../lib/games'
+import { familyOf, formatName, type GameDef } from '../../lib/games'
 import type { Pokemon } from '../../lib/types'
 
 export interface PartyState {
@@ -169,7 +169,10 @@ export function PartyStep({
             const inTeam = state.party.includes(p.id)
             const warn = p.warnings?.[0] ? t(`warnings.${p.warnings[0].code}`, p.warnings[0].args) : null
             // Pokémon de outro jogo aparece esmaecido, com o motivo (dá para mover no cofre).
-            const other = fits(p) ? null : t('ui.trade.otherGame', { game: gameByFamily(familyOf(p)).name })
+            // Gen 1, 2 e 4 a 7: só depois de adaptar para um jogo do Switch (D34).
+            const other = fits(p)
+              ? null
+              : t(p.tradable === false ? 'ui.trade.adaptToTrade' : 'ui.trade.otherGame', { game: formatName(familyOf(p)) })
             return (
               <button
                 key={p.id}

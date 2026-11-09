@@ -209,7 +209,7 @@ public sealed class MultiGameStoreTests : IAsyncLifetime
 
         Assert.Equal(GameFamily.Za, imported.Pokemon.Family);
         Assert.NotNull(imported.Pokemon.Legality);
-        var path = _store.FilePath(imported.Pokemon.Sha256, GameFamily.Za);
+        var path = _store.FilePath(imported.Pokemon.Sha256, StorageFormat.Pa9);
         Assert.EndsWith(".pa9", path);
         Assert.True(File.Exists(path));
         Assert.Equal(SwitchPokemon.Stored(pk), await _store.ReadDataAsync(imported.Pokemon, default));

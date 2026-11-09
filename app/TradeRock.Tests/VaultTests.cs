@@ -205,8 +205,8 @@ public sealed class VaultTests : IAsyncLifetime
 
         Assert.Equal(1, result.Deleted);
         Assert.Equal(1, result.KeptBecauseOfHistory);
-        Assert.False(File.Exists(_pokemon.FilePath(gone.Sha256, GameFamily.Frlg)));
-        Assert.True(File.Exists(_pokemon.FilePath(kept.Sha256, GameFamily.Frlg)));
+        Assert.False(File.Exists(_pokemon.FilePath(gone.Sha256, StorageFormat.Pk3)));
+        Assert.True(File.Exists(_pokemon.FilePath(kept.Sha256, StorageFormat.Pk3)));
         Assert.NotNull(await _pokemon.GetAsync(kept.Id, default));
     }
 

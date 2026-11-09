@@ -7,8 +7,8 @@ import { ApiError, api } from '../../lib/api'
 import { PENDING_SAVE } from '../../components/GlobalDrop'
 import { VAULT_CHANGED, takePendingSave } from '../../lib/pendingDrop'
 import { requestTrade } from '../../lib/tradeRequest'
-import { GAMES } from '../../lib/games'
-import type { GameFamily, LegalityStatus, PokemonOrigin, Tag, VaultOverview, VaultPokemon } from '../../lib/types'
+import { formatName, VAULT_FORMATS } from '../../lib/games'
+import type { LegalityStatus, PokemonOrigin, Tag, VaultFormatKey, VaultOverview, VaultPokemon } from '../../lib/types'
 import { BoxGrid, PokemonTile } from './BoxGrid'
 import { Details } from './Details'
 import { ExportDialog } from './ExportDialog'
@@ -23,7 +23,7 @@ interface Filters {
   text: string
   legality: LegalityStatus | 'unknown' | ''
   origin: PokemonOrigin | ''
-  game: GameFamily | ''
+  game: VaultFormatKey | ''
   shiny: boolean
   warnings: boolean
   duplicates: boolean
@@ -365,9 +365,9 @@ export default function VaultPage({ embedded = false, savesAvailable = false }: 
             aria-label={t('vault.game')}
           >
             <option value="">{t('vault.anyGame')}</option>
-            {GAMES.map((g) => (
-              <option key={g.family} value={g.family}>
-                {g.name}
+            {VAULT_FORMATS.map((f) => (
+              <option key={f.key} value={f.key}>
+                {`Gen ${f.generation} · ${formatName(f.key)}`}
               </option>
             ))}
           </select>
