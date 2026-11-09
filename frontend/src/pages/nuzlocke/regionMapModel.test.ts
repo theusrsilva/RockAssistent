@@ -18,7 +18,7 @@ import {
   viewBoxFor,
   type MapPlace,
   type RegionMapData,
-} from './regionMap'
+} from './regionMapModel'
 
 const place = (id: string, x: number, y: number, label: MapPlace['label'] = 's', kind: MapPlace['kind'] = 'city', games: string[] | null = null): MapPlace => ({
   id,
