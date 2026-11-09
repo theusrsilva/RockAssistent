@@ -18,6 +18,8 @@ public static class UpdateInstallers
             var root = Path.GetFullPath(baseDirectory);
             return File.Exists(Path.Combine(root, "unins000.exe")) ? InstallKind.WindowsInstaller : InstallKind.None;
         }
+        if (OperatingSystem.IsMacOS())
+            return MacBundleOf(baseDirectory) is not null ? InstallKind.MacApp : InstallKind.None;
         if (OperatingSystem.IsLinux())
         {
             if (env("APPIMAGE") is { Length: > 0 } image && File.Exists(image))
@@ -33,8 +35,27 @@ public static class UpdateInstallers
         InstallKind.WindowsInstaller => new WindowsInstaller(),
         InstallKind.AppImage when !OperatingSystem.IsWindows() => new AppImageInstaller(Environment.GetEnvironmentVariable("APPIMAGE")!),
         InstallKind.Deb => new DebInstaller(shell),
+        InstallKind.MacApp => new MacAppInstaller(MacBundleOf(AppContext.BaseDirectory)!, MacAppInstaller.RunAsync, MacAppInstaller.RelaunchAfterExit),
         _ => new NoInstaller(),
     };
+
+    /// <summary>
+    /// O RockAssistent.app que contém o executável (<c>…/X.app/Contents/MacOS</c>). Fora de um .app, rodando de
+    /// dentro do .dmg (/Volumes) ou "transladado" pelo Gatekeeper (cópia só de leitura, quando o app não foi
+    /// arrastado para Aplicativos), devolve null: aí a atualização é manual.
+    /// </summary>
+    public static string? MacBundleOf(string baseDirectory)
+    {
+        var dir = Path.TrimEndingDirectorySeparator(Path.GetFullPath(baseDirectory));
+        const string tail = "/Contents/MacOS";
+        if (!dir.EndsWith(tail, StringComparison.Ordinal))
+            return null;
+        var bundle = dir[..^tail.Length];
+        if (!bundle.EndsWith(".app", StringComparison.Ordinal) || bundle.StartsWith("/Volumes/", StringComparison.Ordinal)
+            || bundle.Contains("/AppTranslocation/", StringComparison.Ordinal))
+            return null;
+        return bundle;
+    }
 
     /// <summary>Abre o app novo depois que este fechar (o banco e a pasta de dados são os mesmos).</summary>
     internal static void RelaunchLater(string program)
@@ -130,5 +151,113 @@ internal sealed class DebInstaller(IPrivilegedShell shell) : IUpdateInstaller
         if (code != 0)
             throw new UpdateException("update_failed", $"dpkg terminou com o código {code}: {error}");
         UpdateInstallers.RelaunchLater("/usr/bin/traderock");
+    }
+}
+
+/// <summary>
+/// macOS (D35): monta o .dmg só para leitura, copia o RockAssistent.app dele (ditto) para a pasta do app atual, tira a
+/// quarentena, troca as pastas e abre o app novo quando este fechar. Sem senha: a pasta Aplicativos aceita escrita
+/// dos administradores do Mac; sem permissão, a atualização é manual.
+/// </summary>
+internal sealed class MacAppInstaller(
+    string bundle,
+    Func<string, IReadOnlyList<string>, Task<(int Code, string Error)>> run,
+    Action<string> relaunch) : IUpdateInstaller
+{
+    public const string AppName = "RockAssistent.app";
+
+    public InstallKind Kind => InstallKind.MacApp;
+
+    public async Task InstallAsync(string file, string sha256, CancellationToken ct)
+    {
+        var parent = Path.GetDirectoryName(bundle)!;
+        var name = Path.GetFileName(bundle);
+        var staging = Path.Combine(parent, $".{name}.new");
+        var old = Path.Combine(parent, $".{name}.old");
+        var mount = Path.Combine(Path.GetTempPath(), "traderock-update-" + Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(mount);
+        try
+        {
+            var (code, error) = await run("/usr/bin/hdiutil", ["attach", "-nobrowse", "-readonly", "-noautoopen", "-mountpoint", mount, file]);
+            if (code != 0)
+                throw new UpdateException("update_failed", $"hdiutil attach terminou com o código {code}: {error}");
+            try
+            {
+                var source = Path.Combine(mount, AppName);
+                if (!Directory.Exists(source))
+                    throw new UpdateException("update_failed", $"O .dmg não tem o {AppName}.");
+                DeleteQuietly(staging);
+                (code, error) = await run("/usr/bin/ditto", [source, staging]);
+                if (code != 0)
+                {
+                    DeleteQuietly(staging);
+                    throw new UpdateException("update_no_permission", $"Sem permissão para escrever em {parent}: {error}");
+                }
+            }
+            finally
+            {
+                if ((await run("/usr/bin/hdiutil", ["detach", mount])).Code != 0)
+                    await run("/usr/bin/hdiutil", ["detach", "-force", mount]);
+            }
+
+            // Baixado pelo próprio app, o arquivo não costuma vir com a quarentena; se vier, o Gatekeeper bloquearia.
+            await run("/usr/bin/xattr", ["-dr", "com.apple.quarantine", staging]);
+
+            try
+            {
+                DeleteQuietly(old);
+                Directory.Move(bundle, old);
+                Directory.Move(staging, bundle);
+            }
+            catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+            {
+                if (!Directory.Exists(bundle) && Directory.Exists(old))
+                    Directory.Move(old, bundle);
+                DeleteQuietly(staging);
+                throw new UpdateException("update_no_permission", $"Sem permissão para trocar {bundle}: {e.Message}");
+            }
+            // O app aberto continua com os arquivos que já abriu.
+            DeleteQuietly(old);
+        }
+        finally
+        {
+            try { Directory.Delete(mount); } catch (IOException) { }
+        }
+        relaunch(bundle);
+    }
+
+    private static void DeleteQuietly(string dir)
+    {
+        try
+        {
+            if (Directory.Exists(dir))
+                Directory.Delete(dir, recursive: true);
+        }
+        catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+        {
+        }
+    }
+
+    public static async Task<(int Code, string Error)> RunAsync(string program, IReadOnlyList<string> args)
+    {
+        var start = new ProcessStartInfo(program) { UseShellExecute = false, RedirectStandardOutput = true, RedirectStandardError = true };
+        foreach (var arg in args)
+            start.ArgumentList.Add(arg);
+        using var process = Process.Start(start) ?? throw new UpdateException("update_failed", $"Não deu para rodar {program}.");
+        var output = process.StandardOutput.ReadToEndAsync();
+        var error = await process.StandardError.ReadToEndAsync();
+        await output;
+        await process.WaitForExitAsync();
+        return (process.ExitCode, error.Trim());
+    }
+
+    /// <summary>Espera este processo terminar e abre o .app pelo "open" (como um clique no Finder).</summary>
+    public static void RelaunchAfterExit(string bundle)
+    {
+        var start = new ProcessStartInfo("/bin/sh") { UseShellExecute = false };
+        foreach (var arg in new[] { "-c", "while kill -0 \"$1\" 2>/dev/null; do sleep 1; done; exec /usr/bin/open \"$0\" >/dev/null 2>&1",
+                     bundle, Environment.ProcessId.ToString(System.Globalization.CultureInfo.InvariantCulture) })
+            start.ArgumentList.Add(arg);
+        Process.Start(start);
     }
 }

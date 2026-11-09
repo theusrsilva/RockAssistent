@@ -33,7 +33,7 @@ export default function AboutPage() {
   const info = useAppInfo()
   const rows = noticeRows(notices)
   const [credits, setCredits] = useState(false)
-  const os = info?.os === 'windows' ? 'Windows' : info?.os === 'linux' ? 'Linux' : null
+  const os = info?.os === 'windows' ? 'Windows' : info?.os === 'linux' ? 'Linux' : info?.os === 'macos' ? 'macOS' : null
   const facts = [
     { icon: 'lock', title: t('ui.about.keysTitle'), sub: t('ui.about.keysSub') },
     { icon: 'wifi_off', title: t('ui.about.offlineTitle'), sub: t('ui.about.offlineSub') },

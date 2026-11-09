@@ -180,7 +180,7 @@ public static class SetupChecks
     {
         if (system.Os != "linux" || system.IsWsl || system.VirtualMachine is not null)
         {
-            var reason = system.Os != "linux" ? "windows" : system.IsWsl ? "wsl" : "vm";
+            var reason = system.Os != "linux" ? (system.Os == "macos" ? "macos" : "windows") : system.IsWsl ? "wsl" : "vm";
             yield return new SetupCheck("native_linux", 4, CheckStatus.Error, true, $"not_native_{reason}",
                 Args(("vm", system.VirtualMachine ?? "")));
             yield break;

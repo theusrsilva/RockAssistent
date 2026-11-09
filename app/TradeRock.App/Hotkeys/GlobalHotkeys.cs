@@ -176,6 +176,9 @@ public static class GlobalHotkeys
             return new WindowsHotkeys(logs.CreateLogger<WindowsHotkeys>());
         if (OperatingSystem.IsLinux())
             return new X11Hotkeys(logs.CreateLogger<X11Hotkeys>());
+        // macOS: fica para depois (D35); o atalho da janela continua.
+        if (OperatingSystem.IsMacOS())
+            return new NoHotkeys("macos");
         return new NoHotkeys("unsupported_os");
     }
 }

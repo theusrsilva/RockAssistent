@@ -6,7 +6,7 @@ do Switch via wireless local (LDN). O nome visível é **RockAssistent**; namesp
 `traderock`, worker e pasta de dados continuam **TradeRock** (D33). Especificação original da troca:
 [docs/spec.md](docs/spec.md) (o projeto se chamava "FRLG Trade Studio"); do RockAssistent:
 [docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md).
-Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
+Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D35).
 
 ## Regras de trabalho (pedidas pelo autor, valem sempre)
 
@@ -73,6 +73,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
 | Jogos do Switch | Todos os jogos com troca local (FRLG, Let's Go, SwSh, BDSP, Arceus, SV, Z-A) pelo pokeldn (submódulo, D21). Escopo todo (troca, raids, Mystery Gift, Union Circle). ESP32 passa a usar o firmware do pokeldn. Python embutido no Windows. Modo LAN só no SwSh. Legalidade avisa e não bloqueia nos jogos novos. Cofre único com filtro por jogo. "Meu treinador" por jogo. Mover entre jogos como o HOME (D22) |
 | Internet opcional | Estatísticas do Smogon (formato do Champions, só ao clicar em Atualizar) e links do pokepast.es. Desligadas por padrão, só GET, mudar só na janela do PC (D32) |
 | RockAssistent | Nome só visível. Menu: Início, Pokédex, Guias, Boxes, Trocas, Mystery Gift, Nuzlocke, Contador Hunt, Histórico, Configurações, Sobre (celular: Início, Pokédex, Boxes, Trocas + "Mais"). Pokédex do PokeAPI (`dex.sqlite` gerado no build). Dados nossos em `assets/data` (JSON estrito, validador). Boxes com saves de pastas (backup automático; Gen 1/2 compactam caixas; mover entre gerações com aviso; clone só em saves). Hunt com odds por rolagens e atalho global opcional (Windows, X11). Nuzlocke com versão obrigatória nos jogos duplos e mapa SVG. Histórico unificado (`ActivityRecord`) (D33) |
+| macOS | Só Apple Silicon (M1+, macOS 14+), só ESP32 (e o LAN do SwSh), como no Windows. `.app` assinado ad-hoc (sem conta da Apple nem notarização) num `.dmg` `RockAssistent-<versão>-macOS-arm64.dmg`. Atualização troca o `.app` pelo do `.dmg`. Modo servidor vai junto. Atalho global desligado no Mac por enquanto. Um amigo do autor testa (D35) |
 | Cofre de todas as gerações | Formato próprio do cofre (pk1 a pa9), separado do catálogo de troca. Gen 1, 2 e 4 a 7 ficam no cofre, mas não trocam nem se editam. "Adaptar para…" segue os caminhos oficiais (VC, Pal Park, Poké Transfer, Poké Transporter, Bank, HOME) com as regras de cada etapa; o original fica e a cópia vai para a Caixa de entrada (D34) |
 
 ## Estado das entregas
@@ -100,6 +101,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
 | 19 | Modo servidor com os jogos novos: troca de qualquer jogo pela fila, "Meu treinador" por jogo e por conta; outras atividades só na janela do PC (D27) | feita, **sem celular real** |
 | 20 | RockAssistent: rebranding visível, menu novo, Pokédex offline, Guias dos 22 jogos, Boxes com saves por pasta, Contador Hunt, Nuzlocke, VGC Champions, Histórico unificado, Início, internet opcional (D32, D33) | feita (PR #14), **sem hardware real** |
 | 21 | Rodadas de ajuste do RockAssistent (PRs #15–#18): Pokédex com PokeAPI ∪ JSON ∪ PKHeX e travas de shiny; time do rival por inicial; mapas do Nuzlocke em estilo metrô; fonte pixel só na logo; guia → Pokédex no jogo do guia e busca no guia; inicial já capturado no Nuzlocke (conta a área só em cidade), botão evoluir e setas de área; cofre com Gen 1–9 e "Adaptar para…" (D34) | feita, tag `v02.00.02` |
+| 22 | Versão para macOS: `MacProbe`, dados no Application Support, `.app`/`.dmg` (`scripts/package-macos.sh`), atualização `MacApp`, job `macos` no CI, roteiro [docs/macos-teste.md](docs/macos-teste.md) (D35) | feita, **sem Mac real** |
 
 Todas as entregas estão na `main` (até o PR #18). O primeiro pré-lançamento foi a tag `v0.00.01`; a última tag é a
 `v02.00.02` (09/11/2026). As branches das entregas foram apagadas depois do merge.
@@ -120,6 +122,8 @@ Todas as entregas estão na `main` (até o PR #18). O primeiro pré-lançamento 
   - modo servidor com um celular de verdade na rede (Entrega 10, D19);
   - ESP32 com conversor CH340/CP210x no Windows (o ESP32-S3 usa a USB nativa). O app, a janela, o instalador e os
     testes foram verificados num Windows 11 real, pelo WSL.
+  - Entrega 22 (macOS): tudo. O primeiro teste é o job `macos` do CI; depois o roteiro de
+    [docs/macos-teste.md](docs/macos-teste.md) no Mac do amigo do autor (janela, Gatekeeper, ESP32, servidor, atualização).
   - Entrega 20: as telas novas num navegador (nenhuma foi vista); o atalho global com tecla apertada de verdade no
     Windows e no X11 (só o grab no WSLg); saves reais de emulador nas Boxes; Smogon e pokepast.es com rede real (só o
     arquivo do Smogon de 2026-10 foi baixado e lido).
@@ -144,9 +148,10 @@ Todas as entregas estão na `main` (até o PR #18). O primeiro pré-lançamento 
 | `content/*/guides` | Guias em markdown (`index.json`, `games/<jogo>/`, `mechanics/`, `vgc/`, `mythology/`) com diretivas `:::bosses`, `:::boss`, `:::encounters`, `:::tms`, `:::shiny-methods`, `:::vgc-*` |
 | `docs/superpowers/` | Spec e plano do RockAssistent, `data-doubts.md` e `sources/` (fatos tirados dos detonados do autor, nunca a prosa) |
 | `engines/` | Submódulos (frlg-ldn-trade, pokeldn, PKHeX-Plugins) e `patches/` |
-| `scripts/` | `ci.sh`, `build-dex.py` (Pokédex do PokeAPI), `check-guides.py` (`--strict`), `dev-host.sh`, `build-worker.sh`, `stage-pokeldn.sh`, `test-pokeldn.sh`, `build-nettools.sh`, `install-worker.sh`, `package-linux.sh`, `smoke-linux.sh`, `package-windows.sh`, `smoke-windows.ps1` |
+| `scripts/` | `ci.sh`, `build-dex.py` (Pokédex do PokeAPI), `check-guides.py` (`--strict`), `dev-host.sh`, `build-worker.sh`, `stage-pokeldn.sh`, `test-pokeldn.sh`, `build-nettools.sh`, `install-worker.sh`, `package-linux.sh`, `smoke-linux.sh`, `package-windows.sh`, `smoke-windows.ps1`, `package-macos.sh`, `smoke-macos.sh` |
 | `packaging/linux/` | Atalho, ícone e `worker-setup.sh` (instalação do worker do AppImage como root) |
 | `packaging/windows/` | `traderock.iss` (Inno Setup), `traderock.ico` e `make-icon.py` |
+| `packaging/macos/` | `Info.plist` do `.app`, `traderock.icns` e `make-icns.py` |
 
 ## Ambiente
 

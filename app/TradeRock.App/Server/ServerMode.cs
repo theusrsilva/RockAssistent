@@ -61,7 +61,10 @@ public sealed class SystemNetworkInterfaces : INetworkInterfaces
     private static bool IsVirtual(NetworkInterface n) =>
         VirtualHints.Any(h => n.Name.Contains(h, StringComparison.OrdinalIgnoreCase) || n.Description.Contains(h, StringComparison.OrdinalIgnoreCase))
         || (OperatingSystem.IsLinux() && (n.Name.StartsWith("docker", StringComparison.Ordinal) || n.Name.StartsWith("br-", StringComparison.Ordinal)
-            || n.Name.StartsWith("veth", StringComparison.Ordinal) || n.Name.StartsWith("virbr", StringComparison.Ordinal)));
+            || n.Name.StartsWith("veth", StringComparison.Ordinal) || n.Name.StartsWith("virbr", StringComparison.Ordinal)))
+        // macOS: compartilhamento e máquinas virtuais (bridge), VPN (utun) e o Virtualization.framework (vmenet).
+        || (OperatingSystem.IsMacOS() && (n.Name.StartsWith("bridge", StringComparison.Ordinal) || n.Name.StartsWith("utun", StringComparison.Ordinal)
+            || n.Name.StartsWith("vmenet", StringComparison.Ordinal)));
 }
 
 /// <summary>Liga e desliga o endereço da rede no servidor web (trocável nos testes).</summary>

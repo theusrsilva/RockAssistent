@@ -9,7 +9,7 @@ public interface ISystemProbe
     SystemSnapshot Read();
 }
 
-/// <summary>Leitura do sistema real: Linux (placa Wi-Fi e ESP32) ou Windows (só ESP32).</summary>
+/// <summary>Leitura do sistema real: Linux (placa Wi-Fi e ESP32), Windows ou macOS (só ESP32).</summary>
 public sealed class RealSystemProbe : ISystemProbe
 {
     public SystemSnapshot Read()
@@ -18,6 +18,8 @@ public sealed class RealSystemProbe : ISystemProbe
             return new LinuxProbe().Read();
         if (OperatingSystem.IsWindows())
             return WindowsProbe.Read();
+        if (OperatingSystem.IsMacOS())
+            return MacProbe.Read();
         return new SystemSnapshot("other", false, null, null, [], [], null, false, false);
     }
 }

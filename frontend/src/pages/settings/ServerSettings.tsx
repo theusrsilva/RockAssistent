@@ -64,6 +64,7 @@ export function ServerModeCard() {
         <p>{t('server.warningHttp')}</p>
       </Callout>
       {info?.os === 'windows' && <p className="text-sm text-muted">{t('server.windowsFirewall')}</p>}
+      {info?.os === 'macos' && <p className="text-sm text-muted">{t('server.macFirewall')}</p>}
 
       {status.enabled && status.url ? (
         <div className="flex flex-wrap items-center gap-4">

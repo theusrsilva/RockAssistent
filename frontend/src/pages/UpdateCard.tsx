@@ -6,7 +6,7 @@ import { Button, Callout, Toggle } from '../components/ui'
 import { api, ApiError } from '../lib/api'
 import { useAuth } from '../lib/auth'
 
-export type InstallKind = 'none' | 'windows_installer' | 'app_image' | 'deb'
+export type InstallKind = 'none' | 'windows_installer' | 'app_image' | 'deb' | 'mac_app'
 
 export interface UpdateStatus {
   current: string

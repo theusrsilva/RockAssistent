@@ -8,6 +8,7 @@ namespace TradeRock.Core;
 /// Pastas do usuário onde o TradeRock guarda banco, cofre, chaves e logs.
 /// Linux: $XDG_DATA_HOME/traderock (padrão ~/.local/share/traderock).
 /// Windows: %LOCALAPPDATA%\TradeRock (não o %APPDATA%, que acompanha o perfil móvel: o prod.keys não viaja).
+/// macOS: ~/Library/Application Support/TradeRock (D35).
 /// </summary>
 public sealed class AppPaths
 {
@@ -36,6 +37,9 @@ public sealed class AppPaths
             return new AppPaths(Path.Combine(localAppData, "TradeRock"));
         }
 
+        if (OperatingSystem.IsMacOS())
+            return new AppPaths(MacDataDir(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)));
+
         var xdg = env("XDG_DATA_HOME");
         var baseDir = !string.IsNullOrWhiteSpace(xdg) && Path.IsPathRooted(xdg)
             ? xdg
@@ -43,8 +47,11 @@ public sealed class AppPaths
         return new AppPaths(Path.Combine(baseDir, "traderock"));
     }
 
+    /// <summary>A pasta de dados do macOS dentro da pasta pessoal <paramref name="home"/>.</summary>
+    public static string MacDataDir(string home) => Path.Combine(home, "Library", "Application Support", "TradeRock");
+
     /// <summary>
-    /// Cria as pastas. A pasta de dados e a de chaves ficam só do usuário: 700 no Linux e, no Windows, uma
+    /// Cria as pastas. A pasta de dados e a de chaves ficam só do usuário: 700 no Linux e no macOS e, no Windows, uma
     /// ACL sem herança só com o usuário atual (o que for criado dentro herda a mesma regra).
     /// </summary>
     public void EnsureCreated()

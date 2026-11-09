@@ -756,7 +756,8 @@
       "no_wifi": "We didn't find a Wi-Fi card on this PC. An ESP32 (or a compatible USB adapter) solves it.",
       "wsl": "You're on WSL: the Wi-Fi card isn't reachable here. Use an ESP32 or install real Linux.",
       "vm": "You're in a virtual machine ({{vm}}): the Wi-Fi card isn't reachable. Use an ESP32 or real Linux.",
-      "windows": "On Windows, the radio is an ESP32 on USB."
+      "windows": "On Windows, the radio is an ESP32 on USB.",
+      "macos": "On a Mac, the radio is an ESP32 on USB."
     },
     "why": {
       "untested": "isn't on our tested list",
@@ -778,6 +779,7 @@
     "unavailable": "Unavailable on this PC",
     "reasons": {
       "windows": "Windows doesn't allow the Wi-Fi access trading needs.",
+      "macos": "macOS doesn't allow the Wi-Fi access trading needs.",
       "wsl": "On WSL the PC's Wi-Fi card isn't reachable.",
       "vm": "In a virtual machine the PC's Wi-Fi card isn't reachable.",
       "no_wifi": "No Wi-Fi card found.",
@@ -850,6 +852,7 @@
       "radio_wifi": "Radio: PC Wi-Fi card.",
       "radio_esp32": "Radio: ESP32 over USB.",
       "not_native_windows": "The Wi-Fi card only works on Linux.",
+      "not_native_macos": "The Wi-Fi card only works on Linux.",
       "not_native_wsl": "WSL doesn't reach the Wi-Fi card: use real Linux or an ESP32.",
       "not_native_vm": "Virtual machines don't reach the Wi-Fi card: use real Linux or an ESP32.",
       "native_linux_ok": "Real Linux install.",
@@ -1138,7 +1141,8 @@
     },
     "localOnly": "This screen only opens in the RockAssistent window on the PC itself.",
     "virtual": "virtual (not the home network)",
-    "windowsFirewall": "On Windows, the installer already allowed RockAssistent through the Firewall, on \"Private\" networks only. If the phone can't open it, check in Windows Settings → Network & internet that the home network is set to \"Private network\"."
+    "windowsFirewall": "On Windows, the installer already allowed RockAssistent through the Firewall, on \"Private\" networks only. If the phone can't open it, check in Windows Settings → Network & internet that the home network is set to \"Private network\".",
+    "macFirewall": "On a Mac, if the firewall is on, macOS asks the first time whether RockAssistent may accept connections: click Allow. You can check it later in System Settings → Network → Firewall."
   },
   "accounts": {
     "title": "Accounts",
@@ -1280,10 +1284,12 @@
       "desc": {
         "systemOk": "Linux installed for real",
         "systemWindows": "Windows: trades use an ESP32 over USB",
+        "systemMacos": "Mac: trades use an ESP32 over USB",
         "systemWarn": "The Wi-Fi card does not work here. Use an ESP32.",
         "system_wsl": "You are on WSL: the Wi-Fi card does not work here. Use an ESP32 or real Linux.",
         "system_vm": "Virtual machine: the Wi-Fi card does not work here. Use an ESP32.",
         "system_windows": "Windows: trades use an ESP32 over USB",
+        "system_macos": "Mac: trades use an ESP32 over USB",
         "keysOk": "File stored safely",
         "keysSkipped": "Skipped: trades stay in demo mode",
         "keysMissing": "File extracted from your own Switch",
@@ -1752,6 +1758,7 @@
       "windows_installer": "RockAssistent downloads the installer, checks the file and runs the setup. Windows asks for administrator permission, as in the first install. The app closes and opens again on its own at the end.",
       "app_image": "RockAssistent downloads the new AppImage, checks the file, replaces the current one and opens again.",
       "deb": "RockAssistent downloads the package, checks the file and installs it. The system asks for your administrator password. The app closes and opens again on its own at the end.",
+      "mac_app": "RockAssistent downloads the .dmg, checks the file and replaces the app in Applications. The app closes and opens again on its own at the end.",
       "none": ""
     },
     "stages": {
@@ -2694,6 +2701,7 @@
           "no_x11": "Couldn't talk to X11 (no X display); use the window shortcut.",
           "in_use": "Another program already uses one of these keys. Pick another and turn it on again.",
           "unsupported_os": "This system has no global shortcuts; use the window shortcut.",
+          "macos": "On a Mac, the global shortcut is not available yet; use the window shortcut.",
           "remote": "The global shortcut can only be turned on in the PC window.",
           "text_key": "One of the keys types or deletes text and cannot be a global shortcut. Record F1–F12 or Ctrl/Alt + a key; for now the window shortcut applies."
         }
