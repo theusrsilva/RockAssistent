@@ -2085,6 +2085,16 @@
       "baseOdds": "Chance base",
       "modifiers": "Modificadores",
       "games": "Jogos"
+    },
+    "search": {
+      "placeholder": "Buscar neste guia",
+      "count": "{{current}} de {{total}}",
+      "none": "Nada encontrado",
+      "prev": "Resultado anterior",
+      "next": "Próximo resultado",
+      "clear": "Limpar a busca",
+      "inPage_one": "{{count}} resultado nesta página",
+      "inPage_other": "{{count}} resultados nesta página"
     }
   },
   "boxes": {

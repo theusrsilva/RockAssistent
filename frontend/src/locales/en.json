@@ -2085,6 +2085,16 @@
       "baseOdds": "Base odds",
       "modifiers": "Modifiers",
       "games": "Games"
+    },
+    "search": {
+      "placeholder": "Search this guide",
+      "count": "{{current}} of {{total}}",
+      "none": "No matches",
+      "prev": "Previous match",
+      "next": "Next match",
+      "clear": "Clear search",
+      "inPage_one": "{{count}} match on this page",
+      "inPage_other": "{{count}} matches on this page"
     }
   },
   "boxes": {
