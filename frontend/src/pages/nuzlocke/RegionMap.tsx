@@ -22,7 +22,7 @@ import {
   type MapRoute,
   type RegionMapData,
   type TerrainKind,
-} from './regionMap'
+} from './regionMapModel'
 
 const terrainClass: Record<TerrainKind, string> = {
   land: 'fill-map-land',

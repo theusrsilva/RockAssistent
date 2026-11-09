@@ -12,6 +12,12 @@ echo "::group::Guias (scripts/check-guides.py --strict)"
 python3 -I scripts/check-guides.py --strict
 echo "::endgroup::"
 
+echo "::group::Nomes que só mudam em maiúsculas (o macOS e o Windows não diferenciam)"
+# Ex.: RegionMap.tsx e regionMap.ts: no Mac, "./regionMap" e "./RegionMap" viram o mesmo arquivo.
+dups=$(git ls-files | sed -E 's/\.(tsx?|jsx?)$//' | sort -u | awk '{ k = tolower($0); if (k in seen) print seen[k] " / " $0; else seen[k] = $0 }')
+if [[ -n $dups ]]; then echo "$dups" >&2; exit 1; fi
+echo "::endgroup::"
+
 echo "::group::Frontend"
 (cd frontend && npm ci && npm run typecheck && npm test && npm run build)
 echo "::endgroup::"

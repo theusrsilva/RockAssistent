@@ -15,7 +15,7 @@ import { areaStates, formSprite, formatRules, isFinished, nuzlockeErrorMessage, 
 import { CardTitle, monName, type Mutate } from './parts'
 import RegionMap from './RegionMap'
 import { StarterPicker, starterName, useStarters } from './StarterPicker'
-import type { RegionMapData } from './regionMap'
+import type { RegionMapData } from './regionMapModel'
 import { gameVersionByKey } from '../../lib/gameVersions'
 
 type Tab = 'run' | 'graveyard' | 'stats'
