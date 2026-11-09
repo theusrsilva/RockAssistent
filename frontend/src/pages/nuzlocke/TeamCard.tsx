@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import type { TFunction } from 'i18next'
 import { Link } from 'react-router'
 import { SearchSelect } from '../../components/SearchSelect'
 import { Badge, Button, Callout, Card, Field, IconButton, Modal, inputClass, useToast } from '../../components/ui'
@@ -7,7 +8,7 @@ import { api, spriteUrl } from '../../lib/api'
 import { titleCase, useApiGet } from '../../lib/dex'
 import type { Option } from '../../lib/types'
 import { TypeBadge } from '../dex/TypeBadge'
-import { defaultMoves, evolveOptions, formSprite, nuzlockeErrorMessage, overCap, type EvolveOption, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
+import { conditionParts, defaultMoves, evolveHow, evolveOptions, formSprite, type EvolveHow, nuzlockeErrorMessage, overCap, type EvolveOption, type LearnsetMove, type MonInfo, type MonLearnset, type RunView } from './nuzlocke'
 import { CardTitle, monName, type Mutate } from './parts'
 
 /**
@@ -35,6 +36,8 @@ export default function TeamCard({
   const [error, setError] = useState<string | null>(null)
   const [dying, setDying] = useState<MonInfo | null>(null)
   const [editing, setEditing] = useState<MonInfo | null>(null)
+  /** Pokémon da caixa com as opções de evoluir abertas (o learnset só é buscado ao abrir). */
+  const [evolvingBox, setEvolvingBox] = useState<string | null>(null)
   /** Pokémon com mudança de nível em voo: os botões −/+ esperam a resposta (dois cliques não mandam o mesmo valor). */
   const [leveling, setLeveling] = useState<Set<string>>(new Set())
   const over = new Set(overCap(view.party, view.levelCap).map((m) => m.id))
@@ -114,6 +117,13 @@ export default function TeamCard({
                   </span>
                   {!readOnly && (
                     <>
+                      <IconButton
+                        name="arrow_upward"
+                        label={t('nuzlocke.evolve.action')}
+                        className="h-8 w-8"
+                        aria-expanded={evolvingBox === m.id}
+                        onClick={() => setEvolvingBox((id) => (id === m.id ? null : m.id))}
+                      />
                       <IconButton name="edit" label={t('nuzlocke.team.edit')} className="h-8 w-8" onClick={() => setEditing(m)} />
                       <Button size="sm" variant="secondary" disabled={view.party.length >= 6} onClick={() => void update(m, { status: 'party' })}>
                         {t('nuzlocke.team.toParty')}
@@ -121,7 +131,7 @@ export default function TeamCard({
                     </>
                   )}
                 </div>
-                <BoxEvolve runId={view.run.id} mon={m} readOnly={readOnly} onEvolve={(o) => void evolve(m, o)} />
+                {evolvingBox === m.id && !readOnly && <BoxEvolve runId={view.run.id} mon={m} readOnly={readOnly} onEvolve={(o) => void evolve(m, o)} />}
               </li>
             ))}
           </ul>
@@ -232,9 +242,34 @@ function MonRow({
 
 /** Pokémon da caixa: busca o learnset só para os botões de evoluir. */
 function BoxEvolve({ runId, mon, readOnly, onEvolve }: { runId: string; mon: MonInfo; readOnly: boolean; onEvolve: (option: EvolveOption) => void }) {
+  const { t } = useTranslation()
   const learnset = useLearnset(runId, mon, true)
-  if (!learnset.data) return null
-  return <EvolveButtons options={evolveOptions(learnset.data.evolutions, mon.level)} disabled={readOnly} onEvolve={onEvolve} />
+  if (learnset.loading) return <span className="text-[12px] text-muted">{t('common.loading')}</span>
+  const options = learnset.data ? evolveOptions(learnset.data.evolutions, mon.level).filter((o) => o.ready) : []
+  if (options.length === 0) return <span className="text-[12px] text-muted">{t('nuzlocke.evolve.none')}</span>
+  return <EvolveButtons options={options} disabled={readOnly} onEvolve={onEvolve} />
+}
+
+/** Condição de evolução em texto curto, traduzido (nada de frase do PokeAPI em inglês). */
+function describeHow(t: TFunction, how: EvolveHow): string {
+  const parts = (text: string) =>
+    conditionParts(text)
+      .map((p) => t(`nuzlocke.evolve.parts.${p.key}`, p.values ?? {}))
+      .join(', ')
+  switch (how.kind) {
+    case 'level':
+      return t('nuzlocke.evolve.level', { level: how.level })
+    case 'item':
+      return t('nuzlocke.evolve.item', { item: how.item })
+    case 'trade': {
+      const detail = how.detail ? parts(how.detail) : ''
+      return detail ? t('nuzlocke.evolve.tradeDetail', { detail }) : t('nuzlocke.evolve.trade')
+    }
+    case 'friendship':
+      return t('nuzlocke.evolve.friendship')
+    default:
+      return parts(how.text) || t('nuzlocke.evolve.other')
+  }
 }
 
 /**
@@ -245,20 +280,7 @@ function EvolveButtons({ options, disabled, onEvolve }: { options: EvolveOption[
   const { t } = useTranslation()
   const shown = options.filter((o) => o.ready)
   if (shown.length === 0) return null
-  const how = (o: EvolveOption) => {
-    switch (o.how.kind) {
-      case 'level':
-        return null
-      case 'item':
-        return t('nuzlocke.evolve.item', { item: o.how.item })
-      case 'trade':
-        return o.how.detail ? t('nuzlocke.evolve.tradeDetail', { detail: o.how.detail }) : t('nuzlocke.evolve.trade')
-      case 'friendship':
-        return t('nuzlocke.evolve.friendship')
-      default:
-        return o.how.text || null
-    }
-  }
+  const how = (o: EvolveOption) => (o.how.kind === 'level' ? null : describeHow(t, o.how))
   return (
     <div className="flex flex-wrap gap-1.5">
       {shown.map((o) => {
@@ -315,7 +337,7 @@ function Upcoming({ learnset }: { learnset: MonLearnset }) {
           <div className="flex items-center gap-1.5">
             <img src={formSprite(ev)} alt="" className="pixelated h-8 w-8" loading="lazy" />
             <span className="font-semibold">{t('nuzlocke.team.evolution', { name: ev.name })}</span>
-            {ev.conditions.length > 0 && <span className="text-muted">({ev.conditions.join(', ')})</span>}
+            {ev.conditions.length > 0 && <span className="text-muted">({ev.conditions.map((c) => describeHow(t, evolveHow(c))).join('; ')})</span>}
           </div>
           {ev.onEvolve.length > 0 && (
             <div className="flex flex-wrap items-center gap-1">

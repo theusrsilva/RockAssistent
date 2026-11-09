@@ -432,3 +432,41 @@ export function neighborAreas(areas: GameArea[], currentId: string | null | unde
   if (i < 0) return { prev: null, next: null }
   return { prev: areas[i - 1] ?? null, next: areas[i + 1] ?? null }
 }
+
+/** Pedaço de uma condição de evolução já entendida: chave em nuzlocke.evolve.parts.* e os valores. */
+export interface ConditionPart {
+  key: string
+  values?: Record<string, string | number>
+}
+
+/**
+ * Partes conhecidas de uma condição "outra" do PokeAPI (frase em inglês: "level up at night friendship 160",
+ * "level up knowing Ancient Power", "level up beauty 171"). O que não reconhece fica de fora; vazio = texto genérico.
+ */
+export function conditionParts(condition: string): ConditionPart[] {
+  let rest = ` ${condition.trim()} `
+  const parts: ConditionPart[] = []
+  const take = (re: RegExp, make: (m: RegExpExecArray) => ConditionPart) => {
+    const m = re.exec(rest)
+    if (!m) return
+    parts.push(make(m))
+    rest = rest.slice(0, m.index) + ' ' + rest.slice(m.index + m[0].length)
+  }
+  take(/ friendship \d+ /, () => ({ key: 'friendship' }))
+  take(/ affection \d+ /, () => ({ key: 'affection' }))
+  take(/ beauty \d+ /, () => ({ key: 'beauty' }))
+  take(/ at (day|night|dusk) /, (m) => ({ key: m[1] }))
+  take(/ knowing an? (\w+) move /, (m) => ({ key: 'knowingType', values: { type: m[1] } }))
+  take(/ knowing (.+?)(?= at | with | holding | in rain | upside down | (?:fe)?male |\s*$)/, (m) => ({ key: 'knowing', values: { move: m[1].trim() } }))
+  take(/ holding (.+?)(?= at | with | knowing | in rain | upside down | (?:fe)?male |\s*$)/, (m) => ({ key: 'holding', values: { item: m[1].trim() } }))
+  take(/ with an? (\w+) type in party /, (m) => ({ key: 'typeInParty', values: { type: m[1] } }))
+  take(/ with (.+?) in party /, (m) => ({ key: 'inParty', values: { name: m[1].trim() } }))
+  take(/ level (\d+) /, (m) => ({ key: 'level', values: { level: Number(m[1]) } }))
+  take(/ (female|male) /, (m) => ({ key: m[1] }))
+  take(/ in rain /, () => ({ key: 'rain' }))
+  take(/ upside down /, () => ({ key: 'upsideDown' }))
+  take(/ Attack ([<>=]) Defense /, (m) => ({ key: m[1] === '>' ? 'attackHigher' : m[1] === '<' ? 'defenseHigher' : 'attackEqual' }))
+  take(/ for (.+?)\s*$/, (m) => ({ key: 'tradeFor', values: { name: m[1].trim() } }))
+  take(/ at (.+?)\s*$/, (m) => ({ key: 'place', values: { place: m[1].trim() } }))
+  return parts
+}

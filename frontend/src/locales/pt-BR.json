@@ -2519,7 +2519,34 @@
       "trade": "por troca",
       "tradeDetail": "por troca ({{detail}})",
       "friendship": "com amizade alta",
-      "done": "{{from}} evoluiu para {{name}}!"
+      "done": "{{from}} evoluiu para {{name}}!",
+      "action": "Evoluir",
+      "none": "Nenhuma evolução disponível agora.",
+      "level": "no nível {{level}}",
+      "other": "com uma condição especial",
+      "parts": {
+        "friendship": "com amizade alta",
+        "affection": "com afeto alto",
+        "beauty": "com Beauty alta",
+        "day": "de dia",
+        "night": "à noite",
+        "dusk": "ao entardecer",
+        "knowing": "sabendo {{move}}",
+        "knowingType": "sabendo um golpe {{type}}",
+        "holding": "segurando {{item}}",
+        "typeInParty": "com um Pokémon {{type}} na equipe",
+        "inParty": "com {{name}} na equipe",
+        "level": "a partir do nível {{level}}",
+        "female": "fêmea",
+        "male": "macho",
+        "rain": "na chuva",
+        "upsideDown": "com o console de cabeça para baixo",
+        "attackHigher": "Ataque maior que a Defesa",
+        "defenseHigher": "Defesa maior que o Ataque",
+        "attackEqual": "Ataque igual à Defesa",
+        "tradeFor": "por {{name}}",
+        "place": "em {{place}}"
+      }
     }
   },
   "hunt": {

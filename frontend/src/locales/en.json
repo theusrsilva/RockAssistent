@@ -2519,7 +2519,34 @@
       "trade": "by trade",
       "tradeDetail": "by trade ({{detail}})",
       "friendship": "with high friendship",
-      "done": "{{from}} evolved into {{name}}!"
+      "done": "{{from}} evolved into {{name}}!",
+      "action": "Evolve",
+      "none": "No evolution available right now.",
+      "level": "at level {{level}}",
+      "other": "with a special condition",
+      "parts": {
+        "friendship": "with high friendship",
+        "affection": "with high affection",
+        "beauty": "with high Beauty",
+        "day": "during the day",
+        "night": "at night",
+        "dusk": "at dusk",
+        "knowing": "knowing {{move}}",
+        "knowingType": "knowing a {{type}} move",
+        "holding": "holding {{item}}",
+        "typeInParty": "with a {{type}} Pokémon in the party",
+        "inParty": "with {{name}} in the party",
+        "level": "from level {{level}}",
+        "female": "female",
+        "male": "male",
+        "rain": "in the rain",
+        "upsideDown": "with the console upside down",
+        "attackHigher": "Attack higher than Defense",
+        "defenseHigher": "Defense higher than Attack",
+        "attackEqual": "Attack equal to Defense",
+        "tradeFor": "for {{name}}",
+        "place": "at {{place}}"
+      }
     }
   },
   "hunt": {

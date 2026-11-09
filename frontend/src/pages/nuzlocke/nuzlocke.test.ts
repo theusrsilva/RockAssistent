@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, evolveHow, evolveOptions, formatRule, neighborAreas, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
+import { activeRules, areaStates, areaUsed, bossTeam, chosenVariant, defaultMoves, conditionParts, evolveHow, evolveOptions, formatRule, neighborAreas, formatRules, overCap, runStats, sortAreas, type BossBattle, type MonInfo, type NuzlockeRules, type RunView } from './nuzlocke'
 
 const mon = (over: Partial<MonInfo>): MonInfo => ({
   id: over.id ?? 'm',
@@ -235,5 +235,19 @@ describe('neighborAreas', () => {
     expect(neighborAreas(areas, 'viridian-city')).toEqual({ prev: areas[1], next: null })
     expect(neighborAreas(areas, 'x')).toEqual({ prev: null, next: null })
     expect(neighborAreas(areas, null)).toEqual({ prev: null, next: null })
+  })
+})
+
+describe('conditionParts', () => {
+  it('entende os casos comuns', () => {
+    expect(conditionParts('level up at night friendship 160')).toEqual([{ key: 'friendship' }, { key: 'night' }])
+    expect(conditionParts('level up knowing Ancient Power')).toEqual([{ key: 'knowing', values: { move: 'Ancient Power' } }])
+    expect(conditionParts('level up beauty 171')).toEqual([{ key: 'beauty' }])
+    expect(conditionParts('level up at day holding Oval Stone')).toEqual([{ key: 'day' }, { key: 'holding', values: { item: 'Oval Stone' } }])
+    expect(conditionParts('level up at Mt. Coronet')).toEqual([{ key: 'place', values: { place: 'Mt. Coronet' } }])
+  })
+
+  it('sem nada conhecido, vazio (texto genérico)', () => {
+    expect(conditionParts('spin')).toEqual([])
   })
 })
