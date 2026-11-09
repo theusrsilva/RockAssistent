@@ -129,7 +129,7 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
             var trades = await vault.Trades.Select(t => t.Id).ToListAsync(ct);
             await vault.TradeEntries.Where(e => trades.Contains(e.TradeRecordId)).ExecuteDeleteAsync(ct);
             await vault.Trades.ExecuteDeleteAsync(ct);
-            var mine = await vault.Pokemon.Select(p => new { p.Id, p.Sha256, p.Family }).ToListAsync(ct);
+            var mine = await vault.Pokemon.Select(p => new { p.Id, p.Sha256, p.Format }).ToListAsync(ct);
             var ids = mine.Select(p => p.Id).ToList();
             await vault.SaveAttachments.ExecuteDeleteAsync(ct);
             await vault.Hunts.ExecuteDeleteAsync(ct);
@@ -151,7 +151,7 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
                 .Select(p => p.Sha256).Distinct().ToListAsync(ct);
             foreach (var p in mine.Where(p => !stillUsed.Contains(p.Sha256)).DistinctBy(p => p.Sha256))
             {
-                var path = pokemon.FilePath(p.Sha256, p.Family);
+                var path = pokemon.FilePath(p.Sha256, p.Format);
                 if (File.Exists(path))
                     File.Delete(path);
             }

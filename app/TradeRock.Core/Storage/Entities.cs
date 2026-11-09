@@ -22,8 +22,11 @@ public sealed class StoredPokemon : IOwned
     public required string Sha256 { get; set; }
     public int Size { get; set; }
 
-    /// <summary>Jogo do formato do arquivo (Entrega 14). Os anteriores são todos do FireRed/LeafGreen.</summary>
-    public GameFamily Family { get; set; }
+    /// <summary>Formato do arquivo (D34; de pk1 a pa9). Antes era o jogo do catálogo de troca (coluna Family).</summary>
+    public StorageFormat Format { get; set; }
+
+    /// <summary>Jogo do catálogo de troca do formato, ou null: Gen 1, 2 e 4 a 7 ficam no cofre, mas não trocam.</summary>
+    public GameFamily? Family => VaultFormats.Get(Format).Family;
 
     public ushort Species { get; set; }
 

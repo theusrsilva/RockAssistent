@@ -634,7 +634,7 @@
     },
     "game": "Jogo",
     "anyGame": "Qualquer jogo",
-    "exportSwitchNote": "Pokémon dos jogos do Switch (Let's Go a Legends: Z-A) saem no formato do próprio jogo (.pb7, .pk8, .pb8, .pa8, .pk9 ou .pa9), decriptados.",
+    "exportSwitchNote": "Pokémon dos outros jogos (Gen 1, 2, 4 a 7 e os do Switch) saem no formato do próprio jogo (.pk1, .pk2, .pk4 a .pk7, .pb7, .pk8, .pb8, .pa8, .pk9 ou .pa9), decriptados.",
     "transfer": {
       "action": "Mover para outro jogo",
       "title": "Mover para outro jogo",
@@ -653,7 +653,10 @@
         "pokemon_duplicate": "Já existe um Pokémon igual no cofre",
         "pokemon_in_trash": "Está na lixeira"
       }
-    }
+    },
+    "legacy": "Pokémon da Gen {{generation}} ({{game}}): fica guardado no cofre, mas não troca com o Switch nem abre no construtor. Use \"Adaptar para…\" para levá-lo a um jogo mais novo, como o Poké Transporter e o HOME fazem.",
+    "legacyNoEdit": "O construtor só edita Pokémon dos jogos de troca. Adapte para um jogo do Switch para editar.",
+    "legacyNoTrade": "Adapte para um jogo do Switch para trocar."
   },
   "inject": {
     "title": "Injetar num save de GBA",
@@ -1404,6 +1407,7 @@
       "offersTip": "Cada Pokémon escolhido vai para o Switch, um por troca, nesta ordem. Nesse jogo não precisa de Pokémon de preenchimento.",
       "tradeNumber": "Troca {{n}}",
       "otherGame": "É do {{game}}: dá para mover de jogo no cofre",
+      "adaptToTrade": "É do {{game}}: adapte para um jogo do Switch no cofre para trocar",
       "tradeBack": "Trocar de volta para evoluir",
       "tradeBackTip": "Para o Pokémon do Switch que evolui por troca: depois de cada troca, o RockAssistent devolve na hora o Pokémon que recebeu (ele evolui no Switch) e recebe de volta o que tinha mandado. No fim, nada muda no cofre."
     },
@@ -2157,13 +2161,13 @@
     "done": "Pronto!",
     "doneWithBackup_one": "Pronto! O save antigo ficou guardado como backup.",
     "doneWithBackup_other": "Pronto! Os saves antigos ficaram guardados como backup ({{count}}).",
-    "noFamily": "Este jogo não troca com o RockAssistent, então o Pokémon não vai para o cofre nem para a troca. Dá para copiar para outro save do mesmo tipo.",
-    "noFamilyShort": "Fora dos jogos de troca",
+    "noFamily": "Este jogo não troca com o Switch. O Pokémon pode ir para o cofre; para trocar, adapte-o lá para um jogo do Switch.",
+    "noFamilyShort": "Não troca com o Switch",
     "errors": {
       "save_unwritable": "Não deu para gravar o save (pasta sem permissão ou arquivo em uso). Nada foi alterado.",
       "save_read_only": "Este save é só para ver: o RockAssistent não consegue gravar neste formato.",
       "save_wrong_game": "Esse Pokémon não pode ir para o jogo deste save",
-      "save_game_unsupported": "Pokémon deste jogo não vão para o cofre (o jogo não troca com o RockAssistent).",
+      "save_game_unsupported": "Pokémon deste jogo não vão para o cofre.",
       "save_changed": "O save mudou no disco (o emulador gravou?). Recarregamos as caixas: confira e tente de novo.",
       "save_not_found": "O save não foi encontrado. Toque em \"Procurar de novo\".",
       "slot_occupied": "Essa posição já está ocupada. Escolha uma vazia.",

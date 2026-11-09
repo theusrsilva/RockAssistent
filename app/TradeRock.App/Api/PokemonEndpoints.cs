@@ -13,9 +13,11 @@ public static class PokemonEndpoints
     /// <summary>
     /// Pokémon do cofre. <see cref="Tid"/>/<see cref="Sid"/> são os números que o jogo mostra (6 e 4 dígitos da
     /// Gen 7 em diante). Avisos de troca e evolução por troca são regras da Gen 3: só no FireRed/LeafGreen.
+    /// <see cref="Family"/> é a chave do formato (D34): a do jogo nos formatos do catálogo de troca ("frlg", "sv"...) e
+    /// "gen1", "gen2", "gen4" a "gen7" nos outros, que ficam no cofre mas não trocam (<see cref="Tradable"/> falso).
     /// </summary>
     public sealed record PokemonDto(
-        Guid Id, GameFamily Family, ushort Species, byte Form, string SpeciesName, string Nickname, byte Level, bool IsShiny, bool IsEgg,
+        Guid Id, string Family, int Generation, bool Tradable, ushort Species, byte Form, string SpeciesName, string Nickname, byte Level, bool IsShiny, bool IsEgg,
         byte Gender, string OtName, uint Tid, uint Sid, string OriginGame, PokemonOrigin Origin,
         string? SourceFileName, int Size, string Sha256, DateTimeOffset AddedAt, ushort HeldItem,
         ushort? EvolvesOnTradeInto, bool Fateful, string? Legality, IReadOnlyList<TradeWarning> Warnings,
@@ -24,9 +26,10 @@ public static class PokemonEndpoints
         public static PokemonDto From(StoredPokemon p, MyTrainer? me, bool possibleDuplicate = false)
         {
             var gen3 = p.Family == GameFamily.Frlg;
-            var (tid, sid) = TrainerIds.Display(GameCatalog.Get(p.Family), p.Tid, p.Sid);
+            var format = VaultFormats.Get(p.Format);
+            var (tid, sid) = TrainerIds.Display(format.Generation >= 7, p.Tid, p.Sid);
             return new(
-                p.Id, p.Family, p.Species, p.Form, p.SpeciesName, p.Nickname, p.Level, p.IsShiny, p.IsEgg, p.Gender, p.OtName,
+                p.Id, format.Key, format.Generation, format.Family is not null, p.Species, p.Form, p.SpeciesName, p.Nickname, p.Level, p.IsShiny, p.IsEgg, p.Gender, p.OtName,
                 tid, sid, p.OriginGame, p.Origin, p.SourceFileName, p.Size, p.Sha256, p.AddedAt, p.HeldItem,
                 gen3 ? Gen3TradeEvolution.EvolvesInto(p.Species, p.HeldItem) : null, p.Fateful, p.Legality,
                 gen3 ? TradeRules.For(new TradeRuleInput(p.Species, p.IsEgg, p.Fateful, p.Level, p.OtName, p.Tid, p.Sid, p.HeldItem), me) : [],
@@ -63,7 +66,7 @@ public static class PokemonEndpoints
             var bytes = size ?? Pk3Reader.PartySize;
             if (!Pk3Export.Formats.Contains(format) || bytes is not (Pk3Reader.StoredSize or Pk3Reader.PartySize))
                 return Results.BadRequest(new { error = "export_invalid" });
-            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Family, format, bytes);
+            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Format, format, bytes);
             var name = Pk3Export.FileName(p.Species, string.IsNullOrWhiteSpace(p.Nickname) ? p.SpeciesName : p.Nickname, extension);
             return Results.File(data, "application/octet-stream", name);
         });

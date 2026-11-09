@@ -6,7 +6,7 @@ import { SearchSelect } from '../../components/SearchSelect'
 import { Badge, Button, Callout, HelpTip, Icon, IconButton, inputClass, selectClass, useToast } from '../../components/ui'
 import { ApiError, api, spriteUrl } from '../../lib/api'
 import { optionText, useBuilderData } from '../../lib/builderData'
-import { familyOf, gameByFamily } from '../../lib/games'
+import { familyOf, formatName } from '../../lib/games'
 import { requestTrade } from '../../lib/tradeRequest'
 import type {
   AdvancedResult,
@@ -29,6 +29,20 @@ import { errorMessage, evolveBody, type EvolveLegality } from '../boxes/boxes'
 
 type TabKey = 'resumo' | 'golpes' | 'status' | 'origem'
 const STAT_KEYS = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'] as const
+
+/** Resumo de leitura dos formatos que o construtor não abre (Gen 1, 2 e 4 a 7; D34). */
+interface LegacyView {
+  moves: string[]
+  ivs: number[]
+  evs: number[]
+  maxEv: number
+  nature: string | null
+  ability: string | null
+  heldItem: string | null
+  ball: string | null
+  language: string
+  metLevel: number | null
+}
 
 interface Draft {
   nickname: string
@@ -70,6 +84,9 @@ export function Details({
   const [loaded, setLoaded] = useState<{ id: string; spec: PokemonSpec; raw: RawPokemon | null } | null>(null)
   const data = useBuilderData(loaded?.spec.game ?? 'fire_red')
   const gen3 = familyOf(pokemon) === 'frlg'
+  // Gen 1, 2 e 4 a 7: ficam no cofre, mas não trocam nem abrem no construtor (adapte para um jogo do Switch).
+  const legacy = pokemon.tradable === false
+  const [legacyView, setLegacyView] = useState<{ id: string; view: LegacyView } | null>(null)
   const [species, setSpecies] = useState<SpeciesDetails | null>(null)
   const [locations, setLocations] = useState<Option[]>([])
   const [report, setReport] = useState<LegalityReport | null>(null)
@@ -104,15 +121,22 @@ export function Details({
     setDraft(null)
     setEditError(null)
     setLoaded(null)
+    setLegacyView(null)
     let alive = true
-    api
-      .get<{ spec: PokemonSpec; raw: RawPokemon | null }>(`/api/builder/from/${pokemon.id}`)
-      .then((r) => alive && setLoaded({ id: pokemon.id, ...r }))
-      .catch(() => undefined)
+    if (legacy)
+      api
+        .get<LegacyView>(`/api/vault/pokemon/${pokemon.id}/view`)
+        .then((view) => alive && setLegacyView({ id: pokemon.id, view }))
+        .catch(() => undefined)
+    else
+      api
+        .get<{ spec: PokemonSpec; raw: RawPokemon | null }>(`/api/builder/from/${pokemon.id}`)
+        .then((r) => alive && setLoaded({ id: pokemon.id, ...r }))
+        .catch(() => undefined)
     return () => {
       alive = false
     }
-  }, [pokemon.id, pokemon.sha256])
+  }, [pokemon.id, pokemon.sha256, legacy])
 
   const specGame = loaded?.spec.game
   useEffect(() => {
@@ -153,6 +177,9 @@ export function Details({
           : { tone: 'slate' as const, icon: 'help', label: t('legality.unknown') }
   const gender = pokemon.gender === 0 ? '♂' : pokemon.gender === 1 ? '♀' : '—'
   const dash = '—'
+  // Da Gen 7 em diante o jogo mostra o TID de 6 dígitos.
+  const sixDigits = (pokemon.generation ?? (gen3 ? 3 : 8)) >= 7
+  const shownLegacy = legacyView?.id === pokemon.id ? legacyView.view : null
 
   async function toggleTag(tagId: string, add: boolean) {
     await api.post('/api/vault/tags/assign', { pokemonIds: [pokemon.id], add: add ? [tagId] : [], remove: add ? [] : [tagId] })
@@ -281,7 +308,7 @@ export function Details({
           onDone={(moved) => {
             setTransferOpen(false)
             onChanged()
-            toast(t('vault.transfer.done', { game: gameByFamily(moved.family).name }))
+            toast(t('vault.transfer.done', { game: formatName(moved.family) }))
           }}
         />
       )}
@@ -316,7 +343,7 @@ export function Details({
               </Badge>
             )}
             <Badge>{t(`pokemon.origin.${pokemon.origin}`)}</Badge>
-            <Badge icon="sports_esports">{gameByFamily(familyOf(pokemon)).name}</Badge>
+            <Badge icon="sports_esports">{formatName(familyOf(pokemon))}</Badge>
           </div>
         </div>
       </div>
@@ -327,6 +354,11 @@ export function Details({
             {t(`warnings.${w.code}`, w.args)}
           </Callout>
         ))}
+        {legacy && (
+          <Callout tone="sky" icon="history" className="py-2 text-[13px]">
+            {t('vault.legacy', { game: formatName(familyOf(pokemon)), generation: pokemon.generation })}
+          </Callout>
+        )}
         {pokemon.possibleDuplicate && (
           <Callout tone="violet" icon="content_copy" className="py-2 text-[13px]">
             <b>{t('vault.duplicate')}:</b> {t('vault.duplicateHelp')}
@@ -351,7 +383,25 @@ export function Details({
             ))}
           </div>
           <div className="flex min-h-[190px] flex-col gap-2 px-4 py-3.5">
-            {!spec || !view ? (
+            {legacy ? (
+              !shownLegacy ? (
+                <p className="text-sm text-muted">{t('common.loading')}</p>
+              ) : (
+                <LegacyTab
+                  tab={tab}
+                  view={shownLegacy}
+                  pokemon={pokemon}
+                  row={row}
+                  gender={gender}
+                  sixDigits={sixDigits}
+                  statLabel={statLabel}
+                  report={report}
+                  onToggleReport={() =>
+                    report ? setReport(null) : void api.get<LegalityReport>(`/api/pokemon/${pokemon.id}/legality?lang=${i18n.language}`).then(setReport)
+                  }
+                />
+              )
+            ) : !spec || !view ? (
               <p className="text-sm text-muted">{t('common.loading')}</p>
             ) : tab === 'resumo' ? (
               <>
@@ -359,9 +409,9 @@ export function Details({
                 {row(t('builder.fields.ability'), species?.abilities.find((a) => a.value === view.abilitySlot)?.text ?? dash)}
                 {row(t('builder.fields.heldItem'), view.heldItem ? (optionText(data?.items, view.heldItem) ?? `#${view.heldItem}`) : t('ui.vault.none'))}
                 {row(t('builder.fields.gender'), gender)}
-                {row(t('ui.vault.ot'), `${pokemon.otName} (${String(pokemon.tid).padStart(gen3 ? 5 : 6, '0')})`)}
+                {row(t('ui.vault.ot'), `${pokemon.otName} (${String(pokemon.tid).padStart(sixDigits ? 6 : 5, '0')})`)}
                 {row(t('builder.fields.language'), optionText(data?.languages, view.language) ?? dash)}
-                {row(t('vault.game'), gameByFamily(familyOf(pokemon)).name)}
+                {row(t('vault.game'), formatName(familyOf(pokemon)))}
               </>
             ) : tab === 'golpes' ? (
               view.moves.filter((m) => m > 0).length === 0 ? (
@@ -488,10 +538,23 @@ export function Details({
             ) : (
               <>
                 <div className="flex gap-2">
-                  <Button className="h-[42px] flex-1" icon="edit" disabled={!spec || !view || pokemon.isEgg} onClick={startEdit}>
+                  <Button
+                    className="h-[42px] flex-1"
+                    icon="edit"
+                    disabled={legacy || !spec || !view || pokemon.isEgg}
+                    title={legacy ? t('vault.legacyNoEdit') : undefined}
+                    onClick={startEdit}
+                  >
                     {t('ui.vault.edit')}
                   </Button>
-                  <Button className="h-[42px] flex-1" variant="secondary" icon="swap_horiz" onClick={useInTrade}>
+                  <Button
+                    className="h-[42px] flex-1"
+                    variant="secondary"
+                    icon="swap_horiz"
+                    disabled={legacy}
+                    title={legacy ? t('vault.legacyNoTrade') : undefined}
+                    onClick={useInTrade}
+                  >
                     {t('ui.vault.useInTrade')}
                   </Button>
                 </div>
@@ -525,8 +588,8 @@ export function Details({
                       ))}
                   </select>
                   <IconButton name="file_download" label={gen3 ? t('ui.vault.exportPk3') : t('ui.vault.exportFile')} onClick={() => onExport([pokemon.id])} />
-                  <IconButton name="move_up" label={t('vault.transfer.action')} onClick={() => setTransferOpen(true)} />
-                  <IconButton name="tune" label={t('pokemon.editInBuilder')} onClick={() => navigate(`/criar/${pokemon.id}`)} />
+                  {!legacy && <IconButton name="move_up" label={t('vault.transfer.action')} onClick={() => setTransferOpen(true)} />}
+                  {!legacy && <IconButton name="tune" label={t('pokemon.editInBuilder')} onClick={() => navigate(`/criar/${pokemon.id}`)} />}
                   <IconButton name="menu_book" label={t('boxes.viewDex')} onClick={() => navigate(`/pokedex/${pokemon.species}`)} />
                   <IconButton
                     name="delete"
@@ -644,5 +707,100 @@ export function Details({
         </>
       )}
     </div>
+  )
+}
+
+/** Abas do painel para os formatos que o construtor não abre (Gen 1, 2 e 4 a 7): só leitura. */
+function LegacyTab({
+  tab,
+  view,
+  pokemon,
+  row,
+  gender,
+  sixDigits,
+  statLabel,
+  report,
+  onToggleReport,
+}: {
+  tab: TabKey
+  view: LegacyView
+  pokemon: VaultPokemon
+  row: (k: string, v: React.ReactNode) => React.ReactNode
+  gender: string
+  sixDigits: boolean
+  statLabel: (i: number) => string
+  report: LegalityReport | null
+  onToggleReport: () => void
+}) {
+  const { t, i18n } = useTranslation()
+  const dash = '—'
+  if (tab === 'resumo')
+    return (
+      <>
+        {view.nature && row(t('builder.fields.nature'), view.nature)}
+        {view.ability && row(t('builder.fields.ability'), view.ability)}
+        {row(t('builder.fields.heldItem'), view.heldItem ?? t('ui.vault.none'))}
+        {row(t('builder.fields.gender'), gender)}
+        {row(t('ui.vault.ot'), `${pokemon.otName} (${String(pokemon.tid).padStart(sixDigits ? 6 : 5, '0')})`)}
+        {row(t('builder.fields.language'), view.language)}
+        {row(t('vault.game'), formatName(familyOf(pokemon)))}
+      </>
+    )
+  if (tab === 'golpes')
+    return view.moves.length === 0 ? (
+      <p className="text-sm text-muted">{dash}</p>
+    ) : (
+      <>
+        {view.moves.map((m, i) => (
+          <div key={`${m}-${i}`} className="flex h-[38px] items-center rounded-lg bg-surface2 px-3 text-sm font-semibold">
+            {m}
+          </div>
+        ))}
+      </>
+    )
+  if (tab === 'status')
+    return (
+      <>
+        <div className="flex items-center gap-2 text-[11.5px] text-muted">
+          <span className="w-11" />
+          <span className="flex-1">{t('ui.vault.ivEv')}</span>
+          <HelpTip>{t('ui.vault.ivEvTip')}</HelpTip>
+        </div>
+        {STAT_KEYS.map((_, i) => (
+          <div key={i} className="flex items-center gap-2 text-[13px]">
+            <span className="w-11 text-muted">{statLabel(i)}</span>
+            <div className="flex flex-1 flex-col gap-[3px]">
+              <div className="h-1.5 rounded-sm bg-surface2">
+                <div className="h-full rounded-sm bg-accent" style={{ width: `${Math.min(100, (view.ivs[i] / (pokemon.generation <= 2 ? 15 : 31)) * 100)}%` }} />
+              </div>
+              <div className="h-1.5 rounded-sm bg-surface2">
+                <div className="h-full rounded-sm bg-info" style={{ width: `${Math.min(100, (view.evs[i] / view.maxEv) * 100)}%` }} />
+              </div>
+            </div>
+            <span className="w-14 text-right font-mono text-xs">
+              {view.ivs[i]}·{view.evs[i]}
+            </span>
+          </div>
+        ))}
+      </>
+    )
+  return (
+    <>
+      {row(t('ui.vault.originLabel'), t(`pokemon.origin.${pokemon.origin}`))}
+      {row(t('builder.fields.version'), pokemon.originGame)}
+      {view.metLevel !== null && row(t('builder.fields.metLevel'), view.metLevel || t('ui.vault.hatched'))}
+      {view.ball && row(t('builder.fields.ball'), view.ball)}
+      {pokemon.sourceFileName && row(t('ui.vault.file'), pokemon.sourceFileName)}
+      {row(t('ui.vault.added'), new Date(pokemon.addedAt).toLocaleString(i18n.language, { dateStyle: 'short', timeStyle: 'short' }))}
+      <button type="button" className="mt-1 flex cursor-pointer items-center gap-1 self-start text-[13.5px] font-semibold text-accent" onClick={onToggleReport}>
+        <Icon name={report ? 'expand_less' : 'expand_more'} className="text-[18px]" />
+        {report ? t('legality.hide') : t('legality.view')}
+      </button>
+      {report && (
+        <div className="rounded-lg bg-surface2 p-3">
+          <LegalityPanel report={report} />
+        </div>
+      )}
+    </>
   )
 }

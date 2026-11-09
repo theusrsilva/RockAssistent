@@ -634,7 +634,7 @@
     },
     "game": "Game",
     "anyGame": "Any game",
-    "exportSwitchNote": "Pokémon from the Switch games (Let's Go to Legends: Z-A) are saved in their own game's format (.pb7, .pk8, .pb8, .pa8, .pk9 or .pa9), decrypted.",
+    "exportSwitchNote": "Pokémon from the other games (Gen 1, 2, 4 to 7 and the Switch games) are saved in their own format (.pk1, .pk2, .pk4 to .pk7, .pb7, .pk8, .pb8, .pa8, .pk9 or .pa9), decrypted.",
     "transfer": {
       "action": "Move to another game",
       "title": "Move to another game",
@@ -653,7 +653,10 @@
         "pokemon_duplicate": "An identical Pokémon is already in the vault",
         "pokemon_in_trash": "It is in the trash"
       }
-    }
+    },
+    "legacy": "Gen {{generation}} Pokémon ({{game}}): it stays in the vault, but it can't trade with the Switch or open in the builder. Use \"Adapt to…\" to bring it to a newer game, like Poké Transporter and HOME do.",
+    "legacyNoEdit": "The builder only edits Pokémon from the trade games. Adapt it to a Switch game to edit it.",
+    "legacyNoTrade": "Adapt it to a Switch game to trade it."
   },
   "inject": {
     "title": "Inject into a GBA save",
@@ -1404,6 +1407,7 @@
       "offersTip": "Each Pokémon you pick goes to the Switch, one per trade, in this order. This game needs no filler Pokémon.",
       "tradeNumber": "Trade {{n}}",
       "otherGame": "It is from {{game}}: you can move it to another game in the vault",
+      "adaptToTrade": "It is from {{game}}: adapt it to a Switch game in the vault to trade it",
       "tradeBack": "Trade back to evolve",
       "tradeBackTip": "For a Switch Pokémon that evolves by trade: after each trade, RockAssistent sends the Pokémon it received straight back (it evolves on the Switch) and gets back the one it sent. In the end, the vault is unchanged."
     },
@@ -2157,13 +2161,13 @@
     "done": "Done!",
     "doneWithBackup_one": "Done! The old save was kept as a backup.",
     "doneWithBackup_other": "Done! The old saves were kept as backups ({{count}}).",
-    "noFamily": "This game doesn't trade with RockAssistent, so the Pokémon can't go to the vault or to a trade. You can copy it to another save of the same kind.",
-    "noFamilyShort": "Not a trade game",
+    "noFamily": "This game doesn't trade with the Switch. The Pokémon can go to the vault; to trade it, adapt it there to a Switch game.",
+    "noFamilyShort": "Doesn't trade with the Switch",
     "errors": {
       "save_unwritable": "Couldn't write the save (folder without permission or file in use). Nothing was changed.",
       "save_read_only": "This save is view only: RockAssistent can't write this format.",
       "save_wrong_game": "This Pokémon can't go to this save's game",
-      "save_game_unsupported": "Pokémon from this game don't go to the vault (the game doesn't trade with RockAssistent).",
+      "save_game_unsupported": "Pokémon from this game can't go to the vault.",
       "save_changed": "The save changed on disk (did the emulator save?). We reloaded the boxes: check and try again.",
       "save_not_found": "The save wasn't found. Tap \"Look again\".",
       "slot_occupied": "That slot is already taken. Pick an empty one.",

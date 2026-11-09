@@ -235,11 +235,8 @@ public sealed class HuntMigrationTests
         await using (var db = new TradeRockDb(options))
         {
             await db.GetService<IMigrator>().MigrateAsync("SaveAttachments", ct);
-            db.Pokemon.Add(new StoredPokemon
-            {
-                Id = Guid.NewGuid(), Sha256 = "ab", Size = 100, Species = 25, SpeciesName = "Pikachu", Nickname = "PIKA",
-                OtName = "RED", OriginGame = "FireRed", AddedAt = DateTimeOffset.UtcNow, Family = GameFamily.Frlg,
-            });
+            // Banco de antes da D34: a coluna ainda se chama Family.
+            await LegacyVault.InsertPokemonAsync(db, "Frlg", "ab", ct);
             await db.SaveChangesAsync(ct);
         }
 

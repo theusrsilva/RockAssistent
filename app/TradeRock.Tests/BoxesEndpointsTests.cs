@@ -329,7 +329,7 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
     }
 
     [Fact]
-    public async Task Save_para_cofre_de_jogo_fora_do_catalogo_e_recusado()
+    public async Task Crystal_vai_para_o_cofre_como_pk2_e_volta_para_o_save()
     {
         var sav = BlankSaveFile.Get(GameVersion.C, "ROCHA", LanguageID.English);
         var pk = sav.BlankPKM;
@@ -341,19 +341,54 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
         File.WriteAllBytes(Path.Combine(_saves, "crystal.sav"), SaveFileAccess.Export(sav));
         var saveId = await AddFireRedAsync();
         var crystal = (await Get("/api/boxes/saves")).EnumerateArray()
-            .Single(e => e.GetProperty("path").GetString()!.EndsWith("crystal.sav")).GetProperty("id").GetString();
+            .Single(e => e.GetProperty("path").GetString()!.EndsWith("crystal.sav")).GetProperty("id").GetString()!;
 
-        var response = await _client.PostAsJsonAsync("/api/boxes/move", new
+        // Save → cofre: todas as gerações cabem no cofre (D34).
+        var moved = await Post("/api/boxes/move", new
         {
             from = new { kind = "save", saveId = crystal, box = 0, slot = 0 },
             to = new { kind = "vault" },
             mode = "copy",
         });
-        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-        Assert.Contains("save_game_unsupported", await response.Content.ReadAsStringAsync());
+        var id = moved.GetProperty("to").GetProperty("pokemonId").GetGuid();
+        var stored = await Get($"/api/pokemon/{id}");
+        Assert.Equal("gen2", stored.GetProperty("family").GetString());
+        Assert.Equal(2, stored.GetProperty("generation").GetInt32());
+        Assert.False(stored.GetProperty("tradable").GetBoolean());
+        Assert.Single((await Get("/api/vault/pokemon?game=gen2")).EnumerateArray());
+        Assert.Empty((await Get("/api/vault/pokemon?game=gen4")).EnumerateArray());
+
+        // Exporta como .pk2 e não troca com o Switch.
+        var file = await _client.GetAsync($"/api/pokemon/{id}/file");
+        Assert.True(file.IsSuccessStatusCode);
+        Assert.EndsWith(".pk2", file.Content.Headers.ContentDisposition!.FileName!.Trim('"'));
+        var builder = await _client.GetAsync($"/api/builder/from/{id}");
+        Assert.Equal(HttpStatusCode.BadRequest, builder.StatusCode);
+        var view = await Get($"/api/vault/pokemon/{id}/view");
+        Assert.Equal(JsonValueKind.Null, view.GetProperty("nature").ValueKind);
+        Assert.Equal(6, view.GetProperty("ivs").GetArrayLength());
+
+        // Cofre → save do mesmo formato: grava direto (Gen 2 compacta a caixa: a próxima posição livre é a 1).
+        var back = await Post("/api/boxes/move", new
+        {
+            from = new { kind = "vault", pokemonId = id },
+            to = new { kind = "save", saveId = crystal, box = 0, slot = 1 },
+            mode = "copy",
+        });
+        Assert.False(back.GetProperty("converted").GetBoolean());
+        Assert.Equal(2, (await SlotsAsync(crystal)).EnumerateArray().Count(e => e.GetProperty("box").GetInt32() == 0));
+
+        // Cofre (pk2) → save da Gen 3: não há caminho para trás.
+        var cross = await _client.PostAsJsonAsync("/api/boxes/move", new
+        {
+            from = new { kind = "vault", pokemonId = id },
+            to = new { kind = "save", saveId, box = 0, slot = 0 },
+            mode = "copy",
+        });
+        Assert.Contains("save_wrong_game", await cross.Content.ReadAsStringAsync());
 
         // Entre saves de formatos diferentes sem conversão do HOME: save_wrong_game.
-        var cross = await _client.PostAsJsonAsync("/api/boxes/move", new
+        cross = await _client.PostAsJsonAsync("/api/boxes/move", new
         {
             from = new { kind = "save", saveId = crystal, box = 0, slot = 0 },
             to = new { kind = "save", saveId, box = 0, slot = 0 },

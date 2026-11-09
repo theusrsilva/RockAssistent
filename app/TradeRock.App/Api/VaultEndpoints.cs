@@ -54,7 +54,7 @@ public static class VaultEndpoints
                     .Select(t => Guid.TryParse(t, out var g) ? g : Guid.Empty).Where(g => g != Guid.Empty).ToList(),
                 MinLevel = byte.TryParse(q["minLevel"], out var min) ? min : null,
                 MaxLevel = byte.TryParse(q["maxLevel"], out var max) ? max : null,
-                Family = q["game"].FirstOrDefault() is { } key ? GameCatalog.ByKey(key)?.Family : null,
+                Format = q["game"].FirstOrDefault() is { } key ? VaultFormats.ByKey(key)?.Format : null,
             };
             var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
             return await Run(async () =>
@@ -95,13 +95,23 @@ public static class VaultEndpoints
             }
         });
 
+        // Resumo de leitura de qualquer formato (D34): o construtor só abre os jogos do catálogo de troca, então o painel
+        // do cofre usa isto nos Pokémon da Gen 1, 2 e 4 a 7. Nomes em inglês, como os golpes e itens no resto do app.
+        vault.MapGet("/pokemon/{id:guid}/view", async (Guid id, PokemonStore store, CancellationToken ct) =>
+        {
+            if (await store.GetAsync(id, ct) is not { } p)
+                return Results.NotFound();
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Format);
+            return Results.Ok(ViewDto(pk));
+        });
+
         // Evoluir por troca sem trocar (Tarefa 18). A entrada continua a mesma (id, caixa, etiquetas, histórico); o
         // Pokémon de antes vai para a lixeira, de onde dá para recuperar.
         vault.MapGet("/pokemon/{id:guid}/evolve-options", async (Guid id, PokemonStore store, CancellationToken ct) =>
         {
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound(new { error = "pokemon_not_found" });
-            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Family);
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Format);
             return Results.Ok(EvolveOptions(pk));
         });
 
@@ -111,13 +121,13 @@ public static class VaultEndpoints
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound(new { error = "pokemon_not_found" });
             var original = await store.ReadDataAsync(p, ct);
-            var pk = PokemonReader.ToEntity(original, p.Family);
+            var pk = PokemonReader.ToEntity(original, p.Format);
             try
             {
                 var evolved = TradeEvolution.Apply(pk, body.Species, body.Form);
                 var replaced = await store.ReplaceAsync(id, SameSize(evolved, original.Length), ct);
                 // Cópia do Pokémon de antes na lixeira (o SHA antigo ficou livre com a troca dos dados).
-                var backup = await store.ImportAsync(original, p.Origin, p.SourceFileName, ct, p.Family);
+                var backup = await store.ImportAsync(original, p.Format, p.Origin, p.SourceFileName, ct);
                 if (backup.Pokemon.Id != id)
                     await vault.TrashAsync([backup.Pokemon.Id], ct);
                 var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
@@ -147,8 +157,8 @@ public static class VaultEndpoints
             var original = await store.ReadDataAsync(p, ct);
             try
             {
-                var clone = PokemonClone.Clone(PokemonReader.ToEntity(original, p.Family));
-                var result = await store.ImportAsync(SameSize(clone, original.Length), p.Origin, p.SourceFileName, ct, p.Family);
+                var clone = PokemonClone.Clone(PokemonReader.ToEntity(original, p.Format));
+                var result = await store.ImportAsync(SameSize(clone, original.Length), p.Format, p.Origin, p.SourceFileName, ct);
                 if (!result.Created)
                     return Results.Conflict(new { error = "clone_exists" });
                 var me = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
@@ -270,6 +280,32 @@ public static class VaultEndpoints
         });
     }
 
+    /// <summary>Dados para o painel (texto pronto) de um Pokémon de qualquer geração.</summary>
+    internal static object ViewDto(PKM pk)
+    {
+        var strings = GameInfo.GetStrings("en");
+        var items = strings.GetItemStrings(pk.Context, pk.Version);
+        string? Text(IReadOnlyList<string> list, int index) => index > 0 && index < list.Count ? list[index] : null;
+        var ivs = new int[6];
+        pk.GetIVs(ivs);
+        var evs = new int[6];
+        pk.GetEVs(evs);
+        return new
+        {
+            moves = pk.Moves.Where(m => m > 0).Select(m => Text(strings.movelist, m) ?? $"#{m}").ToList(),
+            ivs,
+            evs,
+            maxEv = pk.Format <= 2 ? 65535 : 255,
+            // A Gen 1 e 2 não têm natureza nem habilidade.
+            nature = pk.Format >= 3 ? Text(strings.natures, (int)pk.Nature) ?? strings.natures[0] : null,
+            ability = pk.Format >= 3 ? Text(strings.abilitylist, pk.Ability) : null,
+            heldItem = Text(items, pk.HeldItem),
+            ball = pk.Format >= 3 ? Text(strings.balllist, pk.Ball) : null,
+            language = ((LanguageID)pk.Language).ToString(),
+            metLevel = pk.Format >= 3 ? (int?)pk.MetLevel : null,
+        };
+    }
+
     /// <summary>Opções de evolução por troca para a tela (nomes em inglês, como os itens no resto do app).</summary>
     internal static IReadOnlyList<object> EvolveOptions(PKM pk)
     {
@@ -321,7 +357,7 @@ public static class VaultEndpoints
         {
             if (await store.GetAsync(id, ct) is not { } p)
                 continue;
-            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Family, body.Format, body.Size);
+            var (data, extension) = PokemonExport.ToFile(await store.ReadDataAsync(p, ct), p.Format, body.Format, body.Size);
             var name = Pk3Export.FileName(p.Species, string.IsNullOrWhiteSpace(p.Nickname) ? p.SpeciesName : p.Nickname, extension);
             var unique = name;
             for (var i = 2; !names.Add(unique); i++)

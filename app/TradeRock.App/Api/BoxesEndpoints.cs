@@ -157,7 +157,7 @@ public static class BoxesEndpoints
 
         var (sav, info) = await library.OpenAsync(saveId, ct);
         await EnsureEmptyAsync(library, saveId, box, slot, ct);
-        var source = PokemonReader.ToEntity(await store.ReadDataAsync(stored, ct), stored.Family);
+        var source = PokemonReader.ToEntity(await store.ReadDataAsync(stored, ct), stored.Format);
         var (pk, notes, converted) = Convert(source, sav);
         if (mode == "attach" && converted)
             throw new BoxesException("attach_wrong_game");
@@ -188,7 +188,8 @@ public static class BoxesEndpoints
         var (saveId, box, slot) = Source(from);
         var boxes = await library.ReadAsync(saveId, ct);
         var entry = boxes.Slots.FirstOrDefault(e => e.Box == box && e.Slot == slot) ?? throw new BoxesException("slot_empty");
-        if (entry.Family is not { } family)
+        // Todas as gerações cabem no cofre (D34); só saves fora da série principal ficam de fora.
+        if (VaultFormats.ByContext(entry.Context) is not { } format)
             throw new BoxesException("save_game_unsupported");
 
         if (to.BoxId is { } boxId && to.Slot is { } vaultSlot)
@@ -201,7 +202,7 @@ public static class BoxesEndpoints
         StoredPokemon imported;
         try
         {
-            imported = (await store.ImportAsync(entry.Data, PokemonOrigin.Imported, Path.GetFileName(boxes.Info.Path), ct, family)).Pokemon;
+            imported = (await store.ImportAsync(entry.Data, format.Format, PokemonOrigin.Imported, Path.GetFileName(boxes.Info.Path), ct)).Pokemon;
         }
         catch (InvalidPokemonFileException ex)
         {
@@ -350,7 +351,7 @@ public static class BoxesEndpoints
             {
                 kind = "vault", saveId = (string?)null, pokemonId = (Guid?)p.Id,
                 name = p.BoxId is { } id && boxNames.TryGetValue(id, out var n) ? n : null,
-                game = GameCatalog.Get(p.Family).Key, box = (int?)null, boxId = p.BoxId, slot = p.Slot,
+                game = VaultFormats.Get(p.Format).Key, box = (int?)null, boxId = p.BoxId, slot = p.Slot,
                 level = p.Level, shiny = p.IsShiny,
             });
         return result;
@@ -400,10 +401,10 @@ public static class BoxesEndpoints
             return "missing";
         }
         var slot = boxes.Slots.FirstOrDefault(e => e.Box == a.Box && e.Slot == a.Slot);
-        if (slot is null || slot.Family != stored.Family)
+        if (slot is null || VaultFormats.ByContext(slot.Context)?.Format != stored.Format)
             return "slot_changed";
 
-        var current = PokemonReader.ToEntity(await store.ReadDataAsync(stored, ct), stored.Family);
+        var current = PokemonReader.ToEntity(await store.ReadDataAsync(stored, ct), stored.Format);
         var (sav, _) = await library.OpenAsync(entry.Id, ct);
         var inSave = SaveFileAccess.ToEntity(sav, slot.Data);
         if (inSave.PID != current.PID || inSave.TID16 != current.TID16 || inSave.OriginalTrainerName != current.OriginalTrainerName)

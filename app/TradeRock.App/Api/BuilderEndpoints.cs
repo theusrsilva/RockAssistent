@@ -103,8 +103,11 @@ public static class BuilderEndpoints
         {
             if (await store.GetAsync(id, ct) is not { } p)
                 return Results.NotFound();
-            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Family);
-            var info = GameCatalog.Get(p.Family);
+            // O construtor só conhece os jogos do catálogo de troca (D34): Gen 1, 2 e 4 a 7 não se editam.
+            if (p.Family is not { } family)
+                return Results.BadRequest(new { error = "game_unsupported" });
+            var pk = PokemonReader.ToEntity(await store.ReadDataAsync(p, ct), p.Format);
+            var info = GameCatalog.Get(family);
             // A versão do próprio Pokémon quando é do jogo (Scarlet ou Violet...), senão a primeira do par.
             var version = info.Versions.FirstOrDefault(v => GameCatalog.ToVersion(v) == pk.Version, info.Versions[0]);
             return Results.Ok(new { spec = PokemonSpec.FromPk(pk, version), raw = pk is PK3 pk3 ? RawPokemon.FromPk(pk3) : null });
@@ -216,11 +219,13 @@ public static class BuilderEndpoints
         {
             if (await store.GetAsync(id, ct) is not { } p)
                 return Results.NotFound();
-            var key = UserSettings.Key(MyTrainerKeyFor(p.Family));
+            if (p.Family is not { } family)
+                return Results.BadRequest(new { error = "game_unsupported" });
+            var key = UserSettings.Key(MyTrainerKeyFor(family));
             var current = await settings.GetAsync<MyTrainer?>(key, null, ct);
             var me = new MyTrainer(p.OtName, p.Tid, p.Sid, current?.Gender ?? 0, current?.Badges ?? 8, current?.HasNationalDex ?? true);
             await settings.SetAsync(key, me, ct);
-            return Results.Ok(ToDto(GameCatalog.Get(p.Family), me));
+            return Results.Ok(ToDto(GameCatalog.Get(family), me));
         });
     }
 
