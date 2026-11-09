@@ -75,6 +75,7 @@ quando você fecha o app ou atualiza.
 git clone --recurse-submodules https://github.com/theusrsilva/TradeRock.git
 scripts/dev-host.sh     # Linux: .NET 10 SDK, Node 24 e libwebkit2gtk-4.1-0 + libnotify4
 scripts/ci.sh           # build e todos os testes, igual ao CI
+make tag                # publica uma versão nova (o CI gera os pacotes e o Release)
 ```
 
 Também há um Dev Container (VS Code → **Reopen in Container**) e o `docker compose -f docker-compose.dev.yml up`

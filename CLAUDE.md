@@ -21,7 +21,9 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
   o padrão combinado é commitar cada entrega ao terminá-la. Antes de commitar, confira a branch atual
   (o autor faz merge e troca de branch pelo VS Code).
 - **Tags de versão:** sempre na `main` do GitHub (`git tag -a vX origin/main`), com a versão que o autor
-  disser (nunca escolha nem sugira o número). A mensagem da tag vira as "Novidades" do Release; a marca
+  disser (nunca escolha nem sugira o número). O autor gera a tag com `make tag` (`scripts/tag.sh`): o script busca a
+  `origin/main`, mostra os commits desde a última tag, pergunta o tipo (Atualização, Feature, Fix ou versão digitada)
+  e o pré-lançamento, monta as Novidades com os commits (sem `chore`/`docs`/`test`) e envia a tag. A mensagem da tag vira as "Novidades" do Release; a marca
   `[pré-lançamento]` só quando o autor pedir (versões com sufixo, como `v1.0.0-rc.1`, também saem
   como pré-lançamento). O CI roda só nas tags `v*` e publica o Release com o texto de
   `packaging/release-notes.md` e a lista automática do GitHub.
