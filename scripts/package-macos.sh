@@ -141,11 +141,19 @@ echo "==> conferência do runtime"
 "$APP/Contents/MacOS/traderock" --version
 
 echo "==> assinatura ad-hoc"
-# Primeiro cada binário de dentro (Mach-O), depois o pacote, que lacra o resto. Sem --deep: ele só assina pacotes
-# aninhados, e aqui os binários estão soltos. Sem o "hardened runtime": ele exigiria permissões extras para o .NET.
-find "$APP/Contents" -type f -print0 | while IFS= read -r -d '' f; do
+# Primeiro o que está dentro, depois o pacote, que lacra o resto e assina o executável principal (por isso o
+# traderock fica de fora do laço). Sem --deep: ele só assina pacotes aninhados, e aqui os arquivos estão soltos. Sem o
+# "hardened runtime": ele exigiria permissões extras para o .NET.
+#  - Contents/MacOS é lugar de código: o codesign exige assinatura em tudo ali, inclusive nas DLLs e nos .json do
+#    .NET (que não são Mach-O: a assinatura deles vai nos atributos estendidos, que o .dmg e o ditto preservam).
+#  - Contents/Resources: só os Mach-O (o Python embutido e as bibliotecas das rodas); o resto é lacrado como recurso.
+sign() { codesign --force --sign - --timestamp=none "$1" 2>&1 | grep -v 'replacing existing signature' || true; }
+find "$APP/Contents/MacOS" -type f ! -path "$APP/Contents/MacOS/traderock" -print0 | while IFS= read -r -d '' f; do
+  sign "$f"
+done
+find "$APP/Contents/Resources" -type f -print0 | while IFS= read -r -d '' f; do
   if file -b "$f" | grep -q '^Mach-O'; then
-    codesign --force --sign - --timestamp=none "$f"
+    sign "$f"
   fi
 done
 codesign --force --sign - --timestamp=none "$APP"
