@@ -21,7 +21,9 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
   o padrão combinado é commitar cada entrega ao terminá-la. Antes de commitar, confira a branch atual
   (o autor faz merge e troca de branch pelo VS Code).
 - **Tags de versão:** sempre na `main` do GitHub (`git tag -a vX origin/main`), com a versão que o autor
-  disser (nunca escolha nem sugira o número). A mensagem da tag vira as "Novidades" do Release; a marca
+  disser (nunca escolha nem sugira o número). O autor gera a tag com `make tag` (`scripts/tag.sh`): o script busca a
+  `origin/main`, mostra os commits desde a última tag, pergunta o tipo (Atualização, Feature, Fix ou versão digitada)
+  e o pré-lançamento, monta as Novidades com os commits (sem `chore`/`docs`/`test`) e envia a tag. A mensagem da tag vira as "Novidades" do Release; a marca
   `[pré-lançamento]` só quando o autor pedir (versões com sufixo, como `v1.0.0-rc.1`, também saem
   como pré-lançamento). O CI roda só nas tags `v*` e publica o Release com o texto de
   `packaging/release-notes.md` e a lista automática do GitHub.
@@ -89,16 +91,18 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D34).
 | 10 | Modo servidor na rede (contas, cofre por conta, fila) | feita, **sem celular real** |
 | 11 | Build e instalador Windows (só ESP32) | feita, **sem ESP32 real no Windows** |
 | 12 | Nova interface (protótipo "TradeRock v2" do Claude Design, visual A claro/escuro, celular). O assistente de 7 etapas virou a lista de Configurações → Conexão; edição no painel do cofre (`POST /api/vault/pokemon/{id}/replace`) | feita |
-| 13 | Integração do pokeldn (submódulo, patch do modo TradeRock, trava de rede, testes no CI, D21) | em PR |
-| 14 | Base multijogo: catálogo, cofre e construtor por jogo, "Meu treinador" por jogo, mover entre jogos (HOME), sprites até a Gen 9 (D22) | em PR; troca real com os jogos novos só na 15 |
-| 15 | Motor pokeldn: ESP32 com o firmware do pokeldn (todos os jogos, Linux e Windows) e placa Wi-Fi (jogos novos pelo worker); o TradeRock é sempre o anfitrião (D23) | em PR, **sem placa nem console reais** |
-| 16 | Modo LAN do Sword/Shield pela rede de casa: motor `lan`, cartão em Conexão, regra UDP no firewall do Windows (D24) | em PR, **sem console real** |
-| 17 | Sem o motor e o submódulo do easyworld; catálogo de ESP32 com os dados do pokeldn; teste do modo AP da placa Wi-Fi (D25) | em PR, **AP sem placa real** |
-| 18 | Outras atividades (D26): 18a Mystery Gift do FRLG e do SwSh (tela Atividades); 18b raids do SwSh (Max Raid e Dynamax Adventure, também pela rede de casa) e Tera Raid do SV, com as raids de evento embutidas; 18c Union Circle do SV (missões e encontros) | em PR, **sem console real** |
-| 19 | Modo servidor com os jogos novos: troca de qualquer jogo pela fila, "Meu treinador" por jogo e por conta; outras atividades só na janela do PC (D27) | em PR, **sem celular real** |
-| 20 | RockAssistent: rebranding visível, menu novo, Pokédex offline, Guias dos 22 jogos, Boxes com saves por pasta, Contador Hunt, Nuzlocke, VGC Champions, Histórico unificado, Início, internet opcional (D32, D33) | em PR, **sem teste no navegador nem com hardware** |
+| 13 | Integração do pokeldn (submódulo, patch do modo TradeRock, trava de rede, testes no CI, D21) | feita |
+| 14 | Base multijogo: catálogo, cofre e construtor por jogo, "Meu treinador" por jogo, mover entre jogos (HOME), sprites até a Gen 9 (D22) | feita; troca real com os jogos novos só na 15 |
+| 15 | Motor pokeldn: ESP32 com o firmware do pokeldn (todos os jogos, Linux e Windows) e placa Wi-Fi (jogos novos pelo worker); o TradeRock é sempre o anfitrião (D23) | feita, **sem placa nem console reais** |
+| 16 | Modo LAN do Sword/Shield pela rede de casa: motor `lan`, cartão em Conexão, regra UDP no firewall do Windows (D24) | feita, **sem console real** |
+| 17 | Sem o motor e o submódulo do easyworld; catálogo de ESP32 com os dados do pokeldn; teste do modo AP da placa Wi-Fi (D25) | feita, **AP sem placa real** |
+| 18 | Outras atividades (D26): 18a Mystery Gift do FRLG e do SwSh (tela Atividades); 18b raids do SwSh (Max Raid e Dynamax Adventure, também pela rede de casa) e Tera Raid do SV, com as raids de evento embutidas; 18c Union Circle do SV (missões e encontros) | feita, **sem console real** |
+| 19 | Modo servidor com os jogos novos: troca de qualquer jogo pela fila, "Meu treinador" por jogo e por conta; outras atividades só na janela do PC (D27) | feita, **sem celular real** |
+| 20 | RockAssistent: rebranding visível, menu novo, Pokédex offline, Guias dos 22 jogos, Boxes com saves por pasta, Contador Hunt, Nuzlocke, VGC Champions, Histórico unificado, Início, internet opcional (D32, D33) | feita (PR #14), **sem hardware real** |
+| 21 | Rodadas de ajuste do RockAssistent (PRs #15–#18): Pokédex com PokeAPI ∪ JSON ∪ PKHeX e travas de shiny; time do rival por inicial; mapas do Nuzlocke em estilo metrô; fonte pixel só na logo; guia → Pokédex no jogo do guia e busca no guia; inicial já capturado no Nuzlocke (conta a área só em cidade), botão evoluir e setas de área; cofre com Gen 1–9 e "Adaptar para…" (D34) | feita, tag `v02.00.02` |
 
-Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-lançamento é a tag `v0.00.01`. As branches das entregas foram apagadas depois do merge.
+Todas as entregas estão na `main` (até o PR #18). O primeiro pré-lançamento foi a tag `v0.00.01`; a última tag é a
+`v02.00.02` (09/11/2026). As branches das entregas foram apagadas depois do merge.
 
 ## Pendências já combinadas
 
@@ -119,8 +123,10 @@ Todas as entregas da especificação estão na `main` (PR #1). O primeiro pré-l
   - Entrega 20: as telas novas num navegador (nenhuma foi vista); o atalho global com tecla apertada de verdade no
     Windows e no X11 (só o grab no WSLg); saves reais de emulador nas Boxes; Smogon e pokepast.es com rede real (só o
     arquivo do Smogon de 2026-10 foi baixado e lido).
-- Dados e guias: dúvidas e correções conhecidas dos JSON em
-  [docs/superpowers/data-doubts.md](docs/superpowers/data-doubts.md), para perguntar ao autor.
+- Dados e guias: as dúvidas dos JSON e o que foi decidido estão em
+  [docs/superpowers/data-doubts.md](docs/superpowers/data-doubts.md) e
+  [docs/superpowers/data-decisions.md](docs/superpowers/data-decisions.md). Regra do autor para dados: vale o que
+  tiver mais fontes; o **Serebii** pesa mais e desempata.
 
   O roteiro de teste no host está em [docs/dev-host.md](docs/dev-host.md).
 
