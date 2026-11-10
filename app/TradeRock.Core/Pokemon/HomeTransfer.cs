@@ -24,6 +24,13 @@ public sealed record HomeTransferResult(PKM? Pokemon, string? Refusal, IReadOnly
 ///   (hoje, os nascidos no Legends: Z-A) e "no_route" nos outros casos;
 /// - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá
 ///   ("origin_lost_in_swsh", ver <see cref="OriginLostInSwsh"/>).
+/// - forma que depende do item segurado (Giratina, Arceus, Silvally...) volta à forma normal quando o item fica para
+///   trás na conversão, como no HOME (nota "form_reverted");
+/// - os golpes de "relembrar" que o formato do meio do caminho não guarda voltam a ser os do encontro;
+/// - um Pokémon válido nunca sai inválido: se, depois dos ajustes, o PKHeX reprova o resultado (dados do jogo de
+///   origem que o formato anterior não guarda, origem que o destino não reconhece), a recusa é
+///   "illegal_after_move" (ou "origin_not_accepted", se nasceu num jogo mais novo que o destino). Quem já era
+///   inválido continua sendo movido como antes: a legalidade avisa, não bloqueia (D22).
 /// <see cref="Destinations"/> ensaia a mesma conversão de <see cref="Move"/>: um destino só aparece como "pode" se
 /// mover der certo. Nenhuma exceção do PKHeX sai daqui: vira recusa.
 /// O rastreador do HOME fica vazio: o HOME recusa um inventado, e os jogos não o conferem.
@@ -38,6 +45,12 @@ public static class HomeTransfer
 
     /// <summary>Recusa quando o formato do Sword/Shield já não guarda os dados de origem do Pokémon.</summary>
     public const string OriginLostInSwshRefusal = "origin_lost_in_swsh";
+
+    /// <summary>
+    /// Recusa quando o Pokémon era válido e sairia inválido no destino: a conversão não leva algum dado que o jogo
+    /// confere (ver <see cref="Move"/>). Não há o que consertar sem inventar esse dado.
+    /// </summary>
+    public const string IllegalAfterMove = "illegal_after_move";
 
     /// <summary>
     /// Pokémon no formato do Sword/Shield que nasceu no BDSP, no Arceus ou no Scarlet/Violet. O Sword/Shield não
@@ -99,10 +112,12 @@ public static class HomeTransfer
         // Seguir daqui lança exceção nos golpes e deixa no cofre um Pokémon que nenhuma tela consegue analisar.
         if (!la.Parsed)
             return new HomeTransferResult(null, ConversionRefusal(source, to), ["analysis_failed"]);
-        bool Accepted(LegalityAnalysis check, PKM entity) => check.Valid || LegalityReporter.OnlyHomeTrackerMissing(entity, check);
+        static bool Accepted(LegalityAnalysis check, PKM entity) => LegalityReporter.IsAcceptable(entity, check);
         // O Sword/Shield quer um Pokémon de outro jogo com treinador atual, mesmo que seja o próprio dono.
-        if (!Accepted(la, pk) && pk.CurrentHandler == 0)
+        void WithHandler()
         {
+            if (Accepted(la, pk) || pk.CurrentHandler != 0)
+                return;
             var handled = pk.Clone();
             handled.CurrentHandler = 1;
             handled.HandlingTrainerName = owner.OT;
@@ -114,6 +129,27 @@ public static class HomeTransfer
             if (Accepted(check, handled))
                 (pk, la) = (handled, check);
         }
+        WithHandler();
+        // Forma que depende do item segurado (Giratina, Dialga, Arceus, Silvally...): a conversão devolve o item à
+        // mochila, como o HOME, e a forma volta a ser a que o item de agora dá (sem item, a normal).
+        if (!Accepted(la, pk) && la.Results.Any(r => r.Result == LegalityCheckResultCode.FormItemInvalid)
+            && ItemForm(pk) is var form && form != pk.Form && to.HasSpecies(pk.Species, form))
+        {
+            pk.Form = form;
+            pk.RefreshAbility(pk.AbilityNumber >> 1);
+            pk.ResetPartyStats();
+            pk.RefreshChecksum();
+            la = new LegalityAnalysis(pk);
+            notes.Add("form_reverted");
+        }
+        // Golpes de "relembrar": o formato do meio do caminho pode não guardar (o HOME guarda do lado dele). São os do
+        // encontro, então dá para refazer sem inventar.
+        if (!Accepted(la, pk) && la.Info.Relearn.Any(m => !m.Valid))
+        {
+            pk.SetRelearnMoves(la);
+            pk.RefreshChecksum();
+            la = new LegalityAnalysis(pk);
+        }
         // Golpe que o jogo novo não tem: os jogos do HOME trocam os golpes; fica a sugestão do PKHeX.
         if (!Accepted(la, pk) && la.Info.Moves.Any(m => !m.Valid))
         {
@@ -121,9 +157,38 @@ public static class HomeTransfer
             pk.SetRelearnMoves(new LegalityAnalysis(pk));
             Permit(pk);
             pk.RefreshChecksum();
+            la = new LegalityAnalysis(pk);
             notes.Add("moves_replaced");
         }
+        // Com a forma e os golpes acertados, o treinador atual pode ser o que faltava (quando quem move é o próprio dono).
+        WithHandler();
+        // Um Pokémon válido não pode sair inválido: o que falta é dado que a conversão não leva, e inventar não vale.
+        if (!Accepted(la, pk) && WasAcceptable(source))
+        {
+            string[] problems = [.. la.Results.Where(r => !r.Valid).Select(r => r.Result.ToString()).Distinct()];
+            // Sem encontro reconhecido e nascido num jogo mais novo: é a origem que o destino não conhece.
+            var origin = BornInNewerGame(source, to) && la.Results.Any(r => r.Result == LegalityCheckResultCode.EncInvalid);
+            return new HomeTransferResult(null, origin ? OriginNotAccepted : IllegalAfterMove, problems);
+        }
         return new HomeTransferResult(pk, null, notes);
+    }
+
+    /// <summary>A forma que o item segurado dá à espécie (Arceus, Silvally, Genesect, Ogerpon); nas outras, a normal.</summary>
+    private static byte ItemForm(PKM pk) =>
+        pk.HeldItem != 0 && FormItem.TryGetForm(pk.Species, pk.HeldItem, pk.Format, out var form) ? form : (byte)0;
+
+    /// <summary>O Pokémon, como está agora, é válido (ou só falta o rastreador do HOME). Nunca lança exceção.</summary>
+    private static bool WasAcceptable(PKM source)
+    {
+        try
+        {
+            var la = new LegalityAnalysis(source);
+            return la.Parsed && LegalityReporter.IsAcceptable(source, la);
+        }
+        catch (Exception e) when (e is not OutOfMemoryException)
+        {
+            return false;
+        }
     }
 
     /// <summary>
@@ -131,10 +196,13 @@ public static class HomeTransfer
     /// nasceu, não o formato de agora) é de um jogo do catálogo mais novo que o destino, ou não há caminho.
     /// O catálogo está na ordem de lançamento.
     /// </summary>
-    private static string ConversionRefusal(PKM source, SwitchGame to)
+    private static string ConversionRefusal(PKM source, SwitchGame to) =>
+        BornInNewerGame(source, to) ? OriginNotAccepted : "no_route";
+
+    private static bool BornInNewerGame(PKM source, SwitchGame to)
     {
         var origin = GameCatalog.All.FirstOrDefault(g => g.Versions.Any(v => GameCatalog.ToVersion(v) == source.Version));
-        return origin is not null && origin.Family > to.Family ? OriginNotAccepted : "no_route";
+        return origin is not null && origin.Family > to.Family;
     }
 
     private static string? Refusal(PKM source, SwitchGame to)

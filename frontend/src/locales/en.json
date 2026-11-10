@@ -652,6 +652,7 @@
         "origin_not_accepted": "It was born in a newer game, which that game does not know",
         "origin_lost_in_swsh": "It came to Sword/Shield from another game, and Sword/Shield does not keep where it was caught. Without that, it cannot leave Sword/Shield",
         "no_route": "PKHeX found no way to convert it",
+        "illegal_after_move": "It would be invalid in that game: it depends on data that does not come along in the move, or that was lost in a game it already went through",
         "pokemon_duplicate": "An identical Pokémon is already in the vault",
         "pokemon_in_trash": "It is in the trash"
       }
@@ -731,7 +732,8 @@
       },
       "notes": {
         "held_item_removed": "The held item went back to the Bag, like in the game: the copy has no item.",
-        "moves_replaced": "Moves the new game doesn't have were replaced by PKHeX's suggestion."
+        "moves_replaced": "Moves the new game doesn't have were replaced by PKHeX's suggestion.",
+        "form_reverted": "Its form depended on the held item. The item went back to the Bag and it returned to its normal form, like in the game."
       },
       "refusal": {
         "egg": "Eggs can't be transferred",
@@ -740,6 +742,7 @@
         "species_not_in_game": "That species (or form) doesn't exist in that game",
         "origin_not_accepted": "This Pokémon was born in a newer game that this game doesn't know. It can't go there.",
         "origin_lost_in_swsh": "This Pokémon came to Sword/Shield from another game, and Sword/Shield doesn't keep where it was caught. Without that, it can't leave Sword/Shield.",
+        "illegal_after_move": "This Pokémon would be invalid in that game: it depends on data that doesn't come along in the move, or that was lost in a game it already went through.",
         "vc_celebi": "Only the Crystal Virtual Console event Celebi (level 30 or higher) goes through Poké Transporter",
         "vc_dizzy_punch": "Forget Dizzy Punch first (Poké Transporter refuses Odd Egg Pokémon with that move)",
         "vc_mew_event": "Only the Virtual Console event Mew goes through Poké Transporter",
