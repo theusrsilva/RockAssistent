@@ -76,7 +76,10 @@ public static class LegalityReporter
                 null));
         }
 
-        var moves = la.Info.Moves;
+        // Análise que o PKHeX não terminou (Parsed falso, com o erro genérico já na lista acima): os golpes não foram
+        // conferidos, e descrever cada um lança exceção (visto com Pokémon nascido no Legends: Z-A posto num formato
+        // mais antigo, que o PKHeX 26.8.26 não conhece). Fica ilegal só com o erro genérico.
+        var moves = la.Parsed ? la.Info.Moves : [];
         for (var i = 0; i < moves.Length; i++)
         {
             var m = moves[i];
