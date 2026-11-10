@@ -395,7 +395,9 @@ public sealed class MultiGameApiTests : IAsyncLifetime
         var swsh = destinations.EnumerateArray().Single(d => d.GetProperty("game").GetString() == "swsh");
         Assert.Equal(JsonValueKind.Null, swsh.GetProperty("refusal").ValueKind);
 
-        await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 4321 });
+        // SID até 4294: o ID de 32 bits é SID × 1.000.000 + TID (4321 não cabe, e a rota recusaria).
+        var trainer = await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 1234 });
+        trainer.EnsureSuccessStatusCode();
         var moved = await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/transfer", new { game = "swsh" });
         moved.EnsureSuccessStatusCode();
         var pokemon = (await moved.Content.ReadFromJsonAsync<JsonElement>()).GetProperty("pokemon");
@@ -557,5 +559,189 @@ public sealed class HomeTransferTests
         pk.HeldItem = 0;
         pk.Move1 = 148; // Flash
         Assert.Equal("frlg_hm_move", HomeTransfer.Move(pk, GameCatalog.Get(GameFamily.Sv), Owner).Refusal);
+    }
+
+    /// <summary>
+    /// O PKHeX 26.8.26 não aceita a origem Z-A nos formatos mais antigos: para o Sword/Shield e o BDSP ele converte,
+    /// mas a análise quebra (ArgumentOutOfRangeException em EvolutionGroupHOME2); para o Scarlet/Violet e o Arceus
+    /// devolve IncompatibleSpecies, mesmo com a espécie presente. Tudo vira "origin_not_accepted", sem exceção.
+    /// </summary>
+    [Theory]
+    [InlineData(25)]
+    [InlineData(448)]
+    public async Task Nascido_no_za_nao_vai_para_os_jogos_antigos(ushort species)
+    {
+        var pk = await LegalAsync(TradeGame.LegendsZA, species, 50);
+        Assert.Equal(GameVersion.ZA, pk.Version);
+
+        var destinations = HomeTransfer.Destinations(pk, GameFamily.Za);
+        foreach (var family in new[] { GameFamily.Swsh, GameFamily.Bdsp, GameFamily.Sv, GameFamily.Pla })
+        {
+            Assert.True(GameCatalog.Get(family).HasSpecies(species)); // a espécie existe lá: a recusa é pela origem
+            Assert.Equal("origin_not_accepted", destinations[family]);
+            var moved = HomeTransfer.Move(pk, GameCatalog.Get(family), Owner);
+            Assert.False(moved.Ok);
+            Assert.Null(moved.Pokemon);
+            Assert.Equal("origin_not_accepted", moved.Refusal);
+        }
+        Assert.Equal("same_game", destinations[GameFamily.Za]);
+        Assert.Equal("home_no_destination", destinations[GameFamily.Lgpe]);
+    }
+
+    [Fact]
+    public async Task Do_sword_para_o_za_e_de_volta()
+    {
+        var pk = await LegalAsync(TradeGame.Sword, 25, 50);
+        var inZa = HomeTransfer.Move(pk, GameCatalog.Get(GameFamily.Za), Owner);
+        Assert.True(inZa.Ok, inZa.Refusal);
+        Assert.IsType<PA9>(inZa.Pokemon);
+        Assert.Equal(GameVersion.SW, inZa.Pokemon!.Version); // a origem não muda com o formato
+
+        // Quem decide é a origem (Sword), não o formato de agora (Z-A).
+        var destinations = HomeTransfer.Destinations(inZa.Pokemon, GameFamily.Za);
+        Assert.Null(destinations[GameFamily.Swsh]);
+        var back = HomeTransfer.Move(inZa.Pokemon, GameCatalog.Get(GameFamily.Swsh), Owner);
+        Assert.True(back.Ok, back.Refusal);
+        Assert.IsType<PK8>(back.Pokemon);
+        var report = LegalityReporter.Analyze(back.Pokemon!, "en");
+        Assert.True(report.Status != LegalityStatus.Illegal, string.Join(" | ", report.Problems.Select(p => $"{p.Identifier}/{p.Code}: {p.Message}")));
+
+        // Do formato do Z-A o PKHeX não converte para o Scarlet/Violet nem para o Arceus, seja qual for a origem:
+        // aí não é a origem, é falta de caminho, e a lista de destinos já avisa.
+        foreach (var family in new[] { GameFamily.Sv, GameFamily.Pla })
+        {
+            Assert.Equal("no_route", destinations[family]);
+            Assert.Equal("no_route", HomeTransfer.Move(inZa.Pokemon, GameCatalog.Get(family), Owner).Refusal);
+        }
+    }
+
+    /// <summary>
+    /// Um destino só aparece como "pode" se mover der certo, para qualquer origem e em duas pernas, e todo mover que
+    /// dá certo sai legal ou "não verificável" (só o rastreador do HOME), nunca ilegal.
+    /// </summary>
+    [Theory]
+    [MemberData(nameof(OrigensEEspecies))]
+    public async Task Destinos_e_mover_concordam_e_nada_sai_ilegal(TradeGame origin, ushort species)
+    {
+        var pk = await LegalAsync(origin, species, 50);
+        var from = GameCatalog.Of(origin).Family;
+        foreach (var first in Agree(pk, from, from.ToString()))
+            Agree(first.Pokemon, first.Family, $"{from} > {first.Family}");
+
+        static List<(PKM Pokemon, GameFamily Family)> Agree(PKM source, GameFamily from, string path)
+        {
+            var moved = new List<(PKM, GameFamily)>();
+            foreach (var (family, refusal) in HomeTransfer.Destinations(source, from))
+            {
+                if (family == from)
+                    continue;
+                var result = HomeTransfer.Move(source, GameCatalog.Get(family), Owner);
+                Assert.Equal(refusal, result.Refusal);
+                if (!result.Ok)
+                    continue;
+                var report = LegalityReporter.Analyze(result.Pokemon!, "en");
+                Assert.True(report.Status != LegalityStatus.Illegal,
+                    $"{path} > {family}: " + string.Join(" | ", report.Problems.Select(p => $"{p.Identifier}/{p.Code}")));
+                moved.Add((result.Pokemon!, family));
+            }
+            return moved;
+        }
+    }
+
+    /// <summary>Pikachu, Lucario e Eevee em cada jogo que tem a espécie (o Arceus do construtor não gera o Lucario).</summary>
+    public static TheoryData<TradeGame, ushort> OrigensEEspecies()
+    {
+        var data = new TheoryData<TradeGame, ushort>();
+        TradeGame[] origins = [TradeGame.FireRed, TradeGame.LetsGoPikachu, TradeGame.Sword, TradeGame.BrilliantDiamond,
+            TradeGame.LegendsArceus, TradeGame.Scarlet, TradeGame.LegendsZA];
+        foreach (var origin in origins)
+        {
+            foreach (var species in new ushort[] { 25, 448, 133 })
+            {
+                var arceusLucario = origin == TradeGame.LegendsArceus && species == 448;
+                if (GameCatalog.Of(origin).HasSpecies(species) && !arceusLucario)
+                    data.Add(origin, species);
+            }
+        }
+        return data;
+    }
+
+    /// <summary>
+    /// A ida para o Sword/Shield de quem nasceu no BDSP, no Arceus ou no Scarlet/Violet apaga a origem (o conversor do
+    /// PKHeX grava Sword/Shield como versão, um código do HOME como local e, no Arceus, a Poké Ball). O PK8 não guarda
+    /// os dados de verdade, então dali ele não vai para nenhum outro jogo: "origin_lost_in_swsh".
+    /// </summary>
+    [Theory]
+    [InlineData(TradeGame.BrilliantDiamond, LocationsHOME.SWBD)]
+    [InlineData(TradeGame.LegendsArceus, LocationsHOME.SWLA)]
+    [InlineData(TradeGame.Scarlet, LocationsHOME.SWSL)]
+    public async Task Quem_chegou_ao_sword_de_outro_jogo_nao_sai_mais(TradeGame origin, ushort homeLocation)
+    {
+        var pk = await LegalAsync(origin, 25, 50);
+        Assert.False(HomeTransfer.OriginLostInSwsh(pk));
+
+        // A perda é da conversão do PKHeX, antes de qualquer ajuste nosso.
+        var raw = EntityConverter.ConvertToType(pk.Clone(), typeof(PK8), out _);
+        Assert.NotNull(raw);
+        Assert.Equal(GameVersion.SW, raw.Version);
+        Assert.Equal(homeLocation, raw.MetLocation);
+        Assert.NotEqual(pk.MetLocation, raw.MetLocation);
+        if (pk.EggLocation != 0)
+            Assert.Equal(LocationsHOME.SWSHEgg, raw.EggLocation);
+        if (origin == TradeGame.LegendsArceus)
+            Assert.NotEqual(pk.Ball, raw.Ball);
+
+        var inSword = HomeTransfer.Move(pk, GameCatalog.Get(GameFamily.Swsh), Owner);
+        Assert.True(inSword.Ok, inSword.Refusal);
+        Assert.Equal(homeLocation, inSword.Pokemon!.MetLocation);
+        Assert.True(HomeTransfer.OriginLostInSwsh(inSword.Pokemon));
+        Assert.Equal(LegalityStatus.Unverifiable, LegalityReporter.Analyze(inSword.Pokemon, "en").Status);
+
+        var destinations = HomeTransfer.Destinations(inSword.Pokemon, GameFamily.Swsh);
+        foreach (var family in new[] { GameFamily.Bdsp, GameFamily.Pla, GameFamily.Sv, GameFamily.Za })
+        {
+            Assert.Equal("origin_lost_in_swsh", destinations[family]);
+            var moved = HomeTransfer.Move(inSword.Pokemon, GameCatalog.Get(family), Owner);
+            Assert.False(moved.Ok);
+            Assert.Null(moved.Pokemon);
+            Assert.Equal("origin_lost_in_swsh", moved.Refusal);
+        }
+        Assert.Equal("same_game", destinations[GameFamily.Swsh]);
+        Assert.Equal("home_no_destination", destinations[GameFamily.Lgpe]);
+
+        // O "Adaptar para…" passa pela mesma etapa do HOME: a lista e a conversão dão a mesma recusa.
+        foreach (var option in TransferChain.Options(inSword.Pokemon, StorageFormat.Pk8).Where(o => o.Target != StorageFormat.Pb7))
+        {
+            Assert.Equal("origin_lost_in_swsh", option.Refusal);
+            Assert.Equal("origin_lost_in_swsh", TransferChain.Adapt(inSword.Pokemon, StorageFormat.Pk8, option.Target, Owner).Refusal);
+        }
+    }
+
+    /// <summary>Nascido no Sword/Shield, ou vindo do FireRed/LeafGreen e do Let's Go (que o Sword/Shield conhece), segue viagem.</summary>
+    [Theory]
+    [InlineData(TradeGame.FireRed)]
+    [InlineData(TradeGame.LetsGoPikachu)]
+    [InlineData(TradeGame.Sword)]
+    public async Task Do_sword_segue_viagem_quem_o_sword_conhece(TradeGame origin)
+    {
+        var pk = await LegalAsync(origin, 25, 50);
+        var inSword = origin == TradeGame.Sword ? pk : HomeTransfer.Move(pk, GameCatalog.Get(GameFamily.Swsh), Owner).Pokemon;
+        Assert.NotNull(inSword);
+        Assert.False(HomeTransfer.OriginLostInSwsh(inSword));
+        var destinations = HomeTransfer.Destinations(inSword, GameFamily.Swsh);
+        foreach (var family in new[] { GameFamily.Bdsp, GameFamily.Sv, GameFamily.Za })
+            Assert.Null(destinations[family]);
+    }
+
+    [Fact]
+    public async Task A_analise_nao_quebra_com_origem_que_o_pkhex_nao_conhece()
+    {
+        // Um .pk8 assim pode vir de fora (arquivo ou save): a análise diz "ilegal", sem exceção.
+        var za = await LegalAsync(TradeGame.LegendsZA, 25, 50);
+        var pk8 = EntityConverter.ConvertToType(za.Clone(), typeof(PK8), out _);
+        Assert.NotNull(pk8);
+        var report = LegalityReporter.Analyze(pk8, "pt-BR");
+        Assert.Equal(LegalityStatus.Illegal, report.Status);
+        Assert.NotEmpty(report.Problems);
     }
 }

@@ -230,14 +230,19 @@ public sealed class TradeCoordinator(ITradeRecorder recorder, TimeProvider time,
             status = s.TradesCompleted > 0 ? TradeSessionStatus.PartiallyCompleted : TradeSessionStatus.Failed;
         }
 
+        var finalFailure = status == TradeSessionStatus.Completed ? null : failure;
+        var endedAt = time.GetUtcNow();
+
+        // O histórico é gravado antes de a sessão aparecer como terminada: quem vê a troca concluída já a encontra
+        // no histórico (antes, a tela podia pedir o histórico entre uma coisa e outra e recebê-lo vazio).
+        await SaveHistoryAsync(s, status, finalFailure, endedAt);
+
         lock (_lock)
         {
             s.Status = status;
-            s.Failure = status == TradeSessionStatus.Completed ? null : failure;
-            s.EndedAt = time.GetUtcNow();
+            s.Failure = finalFailure;
+            s.EndedAt = endedAt;
         }
-
-        await SaveHistoryAsync(s);
 
         Publish(s, new TradeEvent(TradeEventKind.SessionFinished, time.GetUtcNow(), s.Failure?.Message)
             { Status = status, ErrorCode = s.Failure?.Code });
@@ -335,7 +340,7 @@ public sealed class TradeCoordinator(ITradeRecorder recorder, TimeProvider time,
         }
     }
 
-    private async Task SaveHistoryAsync(Session s)
+    private async Task SaveHistoryAsync(Session s, TradeSessionStatus status, TradeFailure? failure, DateTimeOffset endedAt)
     {
         try
         {
@@ -346,19 +351,19 @@ public sealed class TradeCoordinator(ITradeRecorder recorder, TimeProvider time,
                 {
                     Id = s.Id,
                     StartedAt = s.StartedAt,
-                    EndedAt = s.EndedAt,
+                    EndedAt = endedAt,
                     EngineId = s.Engine.Id,
                     IsSimulation = s.Engine.IsSimulation,
                     Game = s.Request.Game,
                     TrainerName = s.Request.Trainer.Name,
                     Tid = s.Request.Trainer.Tid,
                     Sid = s.Request.Trainer.Sid,
-                    Status = s.Status,
+                    Status = status,
                     Attempts = s.Attempt,
                     TradesPlanned = s.Request.Trades,
                     TradesCompleted = s.TradesCompleted,
-                    FailureCode = s.Failure?.Code,
-                    FailureMessage = s.Failure?.Message,
+                    FailureCode = failure?.Code,
+                    FailureMessage = failure?.Message,
                     EventsJson = JsonSerializer.Serialize(s.Events, EventJson),
                     Entries = s.Request.OfferedSlots.Select((slot, i) => new TradeRecordEntry
                     {

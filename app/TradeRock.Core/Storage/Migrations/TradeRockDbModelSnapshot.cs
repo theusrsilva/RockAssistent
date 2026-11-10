@@ -383,6 +383,12 @@ namespace TradeRock.Core.Storage.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("OriginalFormat")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginalSha256")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("OtName")
                         .IsRequired()
                         .HasColumnType("TEXT");

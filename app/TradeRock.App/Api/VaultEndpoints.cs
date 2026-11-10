@@ -28,6 +28,9 @@ public static class VaultEndpoints
     /// <summary>Jogo de destino (chave do catálogo: sv, swsh, za...).</summary>
     public sealed record TransferDto(string? Game);
 
+    /// <summary>Jogo de destino da cópia (chave do catálogo) e o idioma das mensagens de legalidade.</summary>
+    public sealed record CopyDto(string? Game, string? Language = null);
+
     /// <summary>Formato de destino (chave: gen4 a gen7, swsh, bdsp, pla, sv, za) e o idioma das mensagens de legalidade.</summary>
     public sealed record AdaptDto(string? Target, string? Language = null);
     public sealed record ExportDto(IReadOnlyList<Guid> Ids, string Format = "pk3", int Size = 100);
@@ -187,7 +190,15 @@ public static class VaultEndpoints
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound();
             var destinations = await store.DestinationsAsync(p, ct);
-            return Results.Ok(destinations.Select(d => new { game = d.Key, refusal = d.Value }));
+            // Ida ao Sword/Shield que perde a origem: a tela avisa que o original fica guardado (D37).
+            var keepsOriginal = destinations.GetValueOrDefault(GameFamily.Swsh, "none") is null
+                && await store.KeepsOriginalInSwshAsync(p, ct);
+            return Results.Ok(destinations.Select(d => new
+            {
+                game = d.Key,
+                refusal = d.Value,
+                keepsOriginal = d.Key == GameFamily.Swsh && keepsOriginal,
+            }));
         });
 
         vault.MapPost("/pokemon/{id:guid}/transfer", async (Guid id, TransferDto body, PokemonStore store, SettingsStore settings,
@@ -216,6 +227,45 @@ public static class VaultEndpoints
             catch (VaultException ex)
             {
                 return Results.BadRequest(new { error = ex.Code });
+            }
+        });
+
+        // Copiar para ser válido no jogo (D36): quando o destino recusa a origem ("origin_not_accepted"), nasce um
+        // Pokémon novo no jogo de destino, com o "Meu treinador" de lá. O original fica; a cópia vai para a Caixa de entrada.
+        vault.MapPost("/pokemon/{id:guid}/copy-for-game", async (Guid id, CopyDto body, PokemonStore store, SettingsStore settings,
+            CancellationToken ct) =>
+        {
+            if (GameCatalog.ByKey(body.Game ?? "") is not { } to)
+                return Results.BadRequest(new { error = "game_invalid" });
+            if (await store.GetAsync(id, ct) is not { DeletedAt: null })
+                return Results.NotFound(new { error = "pokemon_not_found" });
+            var language = body.Language is "en" ? "en" : "pt-BR";
+            var trainer = await BuilderEndpoints.DefaultTrainerAsync(settings, ct, to.Versions[0]);
+            try
+            {
+                var (stored, copy) = await store.CopyForGameAsync(id, to.Family, trainer, language, ct);
+                var mine = await settings.GetAsync<MyTrainer?>(UserSettings.Key(BuilderEndpoints.MyTrainerKey), null, ct);
+                var pk = copy.Pokemon!;
+                var encounter = copy.Build!.Encounter;
+                return Results.Ok(new
+                {
+                    pokemon = PokemonEndpoints.PokemonDto.From(stored, mine),
+                    notes = copy.Notes,
+                    // Onde e em que nível a cópia "nasceu": o encontro do jogo de destino que o AutoMod escolheu.
+                    met = new
+                    {
+                        location = encounter?.LocationName,
+                        level = (int)pk.MetLevel,
+                        type = encounter?.Type,
+                        version = pk.Version.ToString(),
+                        ball = ViewText(GameInfo.GetStrings("en").balllist, pk.Ball),
+                    },
+                    legality = LegalityDto(pk, language),
+                });
+            }
+            catch (GameCopyException ex)
+            {
+                return Results.BadRequest(new { error = ex.Code, reason = ex.Reason });
             }
         });
 
@@ -348,6 +398,8 @@ public static class VaultEndpoints
         TransferStep.PokemonBank => "pokemon_bank",
         _ => "home",
     };
+
+    private static string? ViewText(IReadOnlyList<string> list, int index) => index > 0 && index < list.Count ? list[index] : null;
 
     /// <summary>Dados para o painel (texto pronto) de um Pokémon de qualquer geração.</summary>
     internal static object ViewDto(PKM pk)

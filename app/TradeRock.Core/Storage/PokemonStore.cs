@@ -135,15 +135,18 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
         stored.Pid = s.Pid;
         stored.Legality = AnalyzeLegality(pk.Data, s.Format);
         stored.LegalityPkhexVersion = LegalityReporter.PkhexVersion;
+        // A edição pode ter posto outro Pokémon no registro: aí o original guardado (D37) deixa de valer.
+        var unused = new List<(string Sha256, StorageFormat Format)> { (oldSha, stored.Format) };
+        if (stored.OriginalSha256 is { } originalSha && stored.OriginalFormat is { } originalFormat
+            && await ReadOriginalAsync(stored, PokemonReader.ToEntity(pk.Data, stored.Format), ct) is null)
+        {
+            unused.Add((originalSha, originalFormat));
+            (stored.OriginalSha256, stored.OriginalFormat) = (null, null);
+        }
         await db.SaveChangesAsync(ct);
 
         // O arquivo antigo é compartilhado entre cofres: só sai quando ninguém mais o usa.
-        if (!await db.Pokemon.IgnoreQueryFilters().AnyAsync(p => p.Sha256 == oldSha, ct))
-        {
-            var path = FilePath(oldSha, stored.Format);
-            if (File.Exists(path))
-                File.Delete(path);
-        }
+        await DeleteUnusedFilesAsync(db, unused, ct);
         return stored;
     }
 
@@ -166,7 +169,11 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
             throw new VaultException("home_no_destination");
 
         var source = PokemonReader.ToEntity(await ReadDataAsync(stored, ct), stored.Format);
-        var moved = HomeTransfer.Move(source, GameCatalog.Get(to), owner);
+        // Com o original de antes da ida ao Sword/Shield guardado (D37), a saída parte dele.
+        var moved = (await ReadOriginalAsync(stored, source, ct) is { } original
+                ? KeptOriginal.Move(source, original.Pokemon, original.Family, GameCatalog.Get(to), owner)
+                : null)
+            ?? HomeTransfer.Move(source, GameCatalog.Get(to), owner);
         if (!moved.Ok)
             throw new VaultException(moved.Refusal ?? "no_route");
 
@@ -199,15 +206,23 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
         stored.Pid = s.Pid;
         stored.Legality = AnalyzeLegality(pk.Data, s.Format);
         stored.LegalityPkhexVersion = LegalityReporter.PkhexVersion;
+
+        // O original guardado só vale dentro do Sword/Shield: ao sair, o vínculo acaba (o arquivo sai se ninguém o usa).
+        var notes = moved.Notes.ToList();
+        var unused = new List<(string Sha256, StorageFormat Format)> { (oldSha, oldFormat) };
+        if (stored.OriginalSha256 is { } previousSha && stored.OriginalFormat is { } previousFormat)
+            unused.Add((previousSha, previousFormat));
+        (stored.OriginalSha256, stored.OriginalFormat) = (null, null);
+        // A ida ao Sword/Shield perdeu a origem: o arquivo de antes fica guardado para ele poder sair depois.
+        if (to == GameFamily.Swsh && HomeTransfer.OriginLostInSwsh(moved.Pokemon))
+        {
+            (stored.OriginalSha256, stored.OriginalFormat) = (oldSha, oldFormat);
+            notes.Add(KeptOriginal.KeptNote);
+        }
         await db.SaveChangesAsync(ct);
 
-        if (!await db.Pokemon.IgnoreQueryFilters().AnyAsync(p => p.Sha256 == oldSha, ct))
-        {
-            var path = FilePath(oldSha, oldFormat);
-            if (File.Exists(path))
-                File.Delete(path);
-        }
-        return (stored, moved.Notes);
+        await DeleteUnusedFilesAsync(db, unused, ct);
+        return (stored, notes);
     }
 
     /// <summary>
@@ -236,15 +251,114 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
         return (result.Pokemon, adapted.Notes, adapted.Pokemon);
     }
 
+    /// <summary>
+    /// "Copiar para ser válido no jogo" (D36, <see cref="GameCopy"/>): cria um Pokémon novo, nascido no jogo de destino,
+    /// com o que dá para copiar do original. O original continua no cofre e a cópia entra na Caixa de entrada. Recusa
+    /// com <see cref="GameCopyException"/>; "copy_exists" quando a mesma cópia já está no cofre.
+    /// </summary>
+    /// <param name="trainer">O "Meu treinador" do jogo de destino, com os números como o jogo mostra.</param>
+    public async Task<(StoredPokemon Pokemon, GameCopyResult Copy)> CopyForGameAsync(
+        Guid id, GameFamily to, TrainerSpec trainer, string language, CancellationToken ct)
+    {
+        if (await GetAsync(id, ct) is not { } stored)
+            throw new GameCopyException("pokemon_not_found");
+        if (stored.DeletedAt is not null)
+            throw new GameCopyException("pokemon_in_trash");
+        // Gen 1, 2 e 4 a 7 vão para a frente pelo "Adaptar" (AdaptAsync).
+        if (stored.Family is null)
+            throw new GameCopyException("home_no_destination");
+
+        var source = PokemonReader.ToEntity(await ReadDataAsync(stored, ct), stored.Format);
+        var copy = await GameCopy.CreateAsync(source, stored.Family, GameCatalog.Get(to), trainer, language, ct);
+        if (!copy.Ok)
+            throw new GameCopyException(copy.Refusal ?? "copy_not_possible", copy.Reason);
+
+        var result = await ImportAsync(copy.Build!.Data!, PokemonOrigin.Created, null, ct, to);
+        if (!result.Created && !result.Restored)
+            throw new GameCopyException("copy_exists");
+        return (result.Pokemon, copy);
+    }
+
     /// <summary>Destinos de "Adaptar" (formatos mais novos), com o caminho e o motivo de cada recusa.</summary>
     public async Task<IReadOnlyList<AdaptOption>> AdaptOptionsAsync(StoredPokemon pokemon, CancellationToken ct) =>
         TransferChain.Options(PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format), pokemon.Format);
 
-    /// <summary>Para quais jogos o Pokémon pode ir (null = pode; senão o código da recusa).</summary>
-    public async Task<IReadOnlyDictionary<GameFamily, string?>> DestinationsAsync(StoredPokemon pokemon, CancellationToken ct) =>
-        pokemon.Family is { } family
-            ? HomeTransfer.Destinations(PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format), family)
-            : GameCatalog.All.ToDictionary(g => g.Family, _ => (string?)"home_no_destination");
+    /// <summary>
+    /// Para quais jogos o Pokémon pode ir (null = pode; senão o código da recusa). Com o original de antes da ida ao
+    /// Sword/Shield guardado (D37), a lista é a da saída a partir dele, como o <see cref="TransferAsync"/> faz.
+    /// </summary>
+    public async Task<IReadOnlyDictionary<GameFamily, string?>> DestinationsAsync(StoredPokemon pokemon, CancellationToken ct)
+    {
+        if (pokemon.Family is not { } family)
+            return GameCatalog.All.ToDictionary(g => g.Family, _ => (string?)"home_no_destination");
+        var source = PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format);
+        return (await ReadOriginalAsync(pokemon, source, ct) is { } original
+                ? KeptOriginal.Destinations(source, original.Pokemon, original.Family)
+                : null)
+            ?? HomeTransfer.Destinations(source, family);
+    }
+
+    /// <summary>
+    /// Mover este Pokémon para o Sword/Shield perde a origem, e o cofre vai guardar o original (D37): a tela avisa
+    /// antes. Falso quando o mover é recusado ou quando o Sword/Shield conhece a origem.
+    /// </summary>
+    public async Task<bool> KeepsOriginalInSwshAsync(StoredPokemon pokemon, CancellationToken ct)
+    {
+        if (pokemon.Family is null or GameFamily.Swsh)
+            return false;
+        var source = PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format);
+        var game = GameCatalog.Get(GameFamily.Swsh);
+        var moved = HomeTransfer.Move(source, game, new SimpleTrainerInfo(GameCatalog.ToVersion(game.Versions[0])));
+        return moved.Ok && HomeTransfer.OriginLostInSwsh(moved.Pokemon!);
+    }
+
+    /// <summary>
+    /// O original guardado (D37) de um Pokémon que está no Sword/Shield, ou null: sem original, arquivo sumido ou
+    /// adulterado, ou o registro já não é o mesmo Pokémon (<see cref="KeptOriginal.SamePokemon"/>).
+    /// </summary>
+    private async Task<(PKM Pokemon, GameFamily Family)?> ReadOriginalAsync(StoredPokemon pokemon, PKM current, CancellationToken ct)
+    {
+        if (pokemon.Family != GameFamily.Swsh || pokemon.OriginalSha256 is not { } sha || pokemon.OriginalFormat is not { } format
+            || VaultFormats.Get(format).Family is not { } family)
+            return null;
+        try
+        {
+            var data = await File.ReadAllBytesAsync(FilePath(sha, format), ct);
+            if (Convert.ToHexStringLower(SHA256.HashData(data)) != sha)
+                return null;
+            var original = PokemonReader.ToEntity(data, format);
+            return KeptOriginal.SamePokemon(current, original) ? (original, family) : null;
+        }
+        catch (Exception e) when (e is IOException or InvalidPokemonFileException)
+        {
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Apaga do disco os arquivos que nenhum registro usa mais, em nenhum cofre: nem como o Pokémon de agora, nem como
+    /// o original guardado de antes da ida ao Sword/Shield (D37). Chame depois de salvar as mudanças no banco.
+    /// </summary>
+    public async Task DeleteUnusedFilesAsync(
+        TradeRockDb db, IEnumerable<(string Sha256, StorageFormat Format)> files, CancellationToken ct)
+    {
+        var candidates = files.Distinct().ToList();
+        var hashes = candidates.Select(f => f.Sha256).Distinct().ToList();
+        if (hashes.Count == 0)
+            return;
+        var current = await db.Pokemon.IgnoreQueryFilters().Where(p => hashes.Contains(p.Sha256))
+            .Select(p => p.Sha256).ToListAsync(ct);
+        var originals = await db.Pokemon.IgnoreQueryFilters()
+            .Where(p => p.OriginalSha256 != null && hashes.Contains(p.OriginalSha256))
+            .Select(p => p.OriginalSha256!).ToListAsync(ct);
+        var used = current.Concat(originals).ToHashSet();
+        foreach (var (sha, format) in candidates.Where(f => !used.Contains(f.Sha256)))
+        {
+            var path = FilePath(sha, format);
+            if (File.Exists(path))
+                File.Delete(path);
+        }
+    }
 
     public async Task<IReadOnlyList<StoredPokemon>> ListAsync(CancellationToken ct)
     {

@@ -308,6 +308,8 @@ export function Details({
         <TransferDialog
           pokemon={pokemon}
           onClose={() => setTransferOpen(false)}
+          onCopied={() => onChanged()}
+          onMoved={() => onChanged()}
           onDone={(moved) => {
             setTransferOpen(false)
             onChanged()

@@ -712,7 +712,49 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
   - do FRLG, só sem item e sem HM;
   - a espécie e a forma precisam existir no destino;
   - o "Meu treinador" do destino vira o treinador atual;
-  - golpe que o destino não tem é trocado pela sugestão do PKHeX, com as marcas de TM/TR.
+  - golpe que o destino não tem é trocado pela sugestão do PKHeX, com as marcas de TM/TR;
+  - o destino precisa aceitar a origem (nota de 10/11/2026). A lista de destinos ensaia a mesma conversão do mover,
+    então só mostra "pode" quando mover dá certo, e nenhuma exceção do PKHeX escapa. Com o PKHeX.Core 26.8.26, um
+    Pokémon nascido no Legends: Z-A não vai para nenhum jogo mais antigo: recusa `origin_not_accepted` (para o
+    Sword/Shield e o BDSP o PKHeX converte, mas não consegue analisar; para o Scarlet/Violet e o Arceus devolve
+    `IncompatibleSpecies`). O que conta é o jogo em que nasceu, não o formato de agora: um nascido no Sword que
+    foi ao Z-A volta para o Sword/Shield e o BDSP. Do formato do Z-A para o Scarlet/Violet e o Arceus o PKHeX não
+    converte nenhuma origem: aí a recusa é `no_route`;
+  - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá (nota de
+    10/11/2026): recusa `origin_lost_in_swsh` (menos quando o cofre guardou o original de antes da ida, D37). O Sword/Shield não conhece esses jogos, então a conversão do PKHeX
+    para o PK8 grava a versão como Sword ou Shield, o local de encontro como um código do HOME (59996 a 60000,
+    `LocationsHOME`), o local do ovo como 65534 e, no Arceus, a Poké Ball no lugar da bola original. O PK8 não
+    guarda os dados de verdade (o HOME guarda do lado dele), e a conversão seguinte levava esses códigos para o
+    outro formato, onde o PKHeX não acha encontro (`EncInvalid`, `BallEncMismatch`): o segundo mover saía ilegal.
+    Refazer a origem seria inventar local, ovo e bola, então o mover e o "Adaptar para…" recusam. Nascidos no
+    Sword/Shield, no FRLG e no Let's Go seguem viagem. A tela não oferece o "Copiar para ser válido" nessa recusa
+    (fica para o autor decidir).
+  - um Pokémon válido nunca sai inválido (nota de 10/11/2026, achados da matriz ampliada em
+    `HomeTransferMatrixTests`: shiny, alfa, eventos, formas, ovo, nível, item, apelido e habilidade oculta, em uma e
+    em duas pernas, com outro treinador e com o próprio dono):
+    - forma que depende do item segurado (Giratina, Dialga, Palkia, Arceus, Silvally...): a conversão do PKHeX
+      devolve o item à mochila, como o HOME, e a forma ficava sem o item (`FormItemInvalid`). Agora a forma volta à
+      normal, com a habilidade dela, e o mover avisa com a nota `form_reverted`. No Legends: Arceus a forma não
+      depende de item e fica;
+    - golpes de "relembrar": o BDSP e o Arceus não guardam os do Scarlet/Violet, e um evento que ia e voltava ficava
+      ilegal. O mover refaz os golpes de relembrar pelo encontro (`SetRelearnMoves`), e o `LegalityReporter` passou
+      a listar golpe de relembrar inválido (antes saía "ilegal" sem nenhum motivo);
+    - o resto não dá para refazer sem inventar, então o mover recusa com `illegal_after_move` (ou
+      `origin_not_accepted`, se nasceu num jogo mais novo que o destino e o PKHeX não acha o encontro; visto com o
+      Aegislash na forma Blade nascido no Z-A, que não quebra a análise como os outros). Casos vistos com o
+      PKHeX.Core 26.8.26: evento do Sword/Shield que foi ao Z-A não
+      volta (altura e peso); evento do Arceus que foi ao BDSP ou ao Scarlet/Violet não volta ("effort
+      levels" e bola do evento); evento do Scarlet/Violet com Tera Type fixo que foi ao Arceus não volta; e o
+      Typhlosion de Hisui nascido no Arceus (inicial evoluído) não vai para o Scarlet/Violet (o PKHeX não acha o
+      encontro). A lista exata dos casos da matriz está no teste `Valido_que_sairia_invalido_e_recusado_com_codigo`;
+    - **nível Dynamax** (decisão do autor, 10/11/2026): só o Sword/Shield guarda. Pokémon de raid ou de Max Lair que
+      saiu e volta chega com 0, e o encontro exige um mínimo; o mover grava o menor nível que o PKHeX aceita para o
+      encontro (nota `dynamax_level_reset`). O que passava do mínimo se perdeu;
+    - **fundidos** (decisão do autor, 10/11/2026): Kyurem, Necrozma e Calyrex fundidos não vão para outro jogo
+      (`fused_form`, `FormInfo.IsFusedForm`), como no HOME: é preciso separar no jogo antes;
+    - quem já era inválido antes continua sendo movido como antes (a legalidade avisa, não bloqueia);
+    - a tela oferece o "Copiar para ser válido" também na recusa `illegal_after_move` (D36; o `GameCopy` foi
+      conferido nesses casos pela matriz), e mostra a nota `form_reverted` depois de mover.
 
   O registro do cofre é o mesmo: id, caixa, etiquetas e histórico.
 - **Rastreador do HOME.**
@@ -1315,3 +1357,73 @@ desenvolvedor da Apple nem notarização); só **Apple Silicon** (M1 ou mais nov
 - **Não verificado:** nada disso rodou num Mac ainda (nem a janela do Photino com o WebKit do macOS, o ESP32, o
   Gatekeeper com o app ad-hoc, a atualização, o modo servidor nem o `ioreg`). O primeiro teste de verdade é o CI
   `macos` e depois o roteiro de [docs/macos-teste.md](macos-teste.md).
+
+## D36. "Copiar para ser válido no jogo": cópia nascida no jogo de destino
+
+Um Pokémon **nascido** num jogo mais novo (ex.: Legends: Z-A) não pode ser convertido para um jogo mais antigo (ex.:
+Sword/Shield), mesmo quando a espécie existe lá: o PKHeX não tem regra para essa origem, e o "Mover para outro jogo"
+(D22) recusa o destino com `origin_not_accepted`. Decisão do autor (10/11/2026): nesse caso a tela oferece o botão
+**"Copiar para ser válido no {jogo}"**.
+
+- **É cópia, não conversão.** Nasce um Pokémon novo no jogo de destino, pelo construtor (`GameCopy` sobre o
+  `PokemonBuilder`, AutoMod). O encontro (local, nível e data) é um encontro real do jogo de destino, escolhido pelo
+  AutoMod; o nível de encontro nunca passa do nível atual. A pessoa tem que clicar no botão e confirmar numa tela que
+  explica isso em linguagem simples.
+- **O original fica** onde está, sem mudar. A cópia entra na Caixa de entrada (como no "Adaptar", D34), com origem
+  "criado".
+- **Treinador:** o "Meu treinador" do jogo de destino (por conta no modo servidor); sem ele, o treinador padrão.
+- **O que é copiado** (o que o `PokemonSpec` permite): espécie, forma, shiny, natureza, habilidade, gênero, IVs, EVs,
+  nível, apelido, bola, item (se existir no destino; o Let's Go e o Arceus não têm item) e os golpes que valem no
+  destino; os lugares vagos ficam com a sugestão do construtor. O que não deu para copiar igual volta em `notes`
+  (`moves_replaced`, `item_removed`, `ball_changed`, `ability_changed`, `nature_changed`, `ivs_changed`, `evs_changed`,
+  `nickname_removed`, `language_changed`).
+- **Fica de fora** (o `PokemonSpec` não tem): menta (natureza dos atributos), Hyper Training, Tera Type, nível
+  Dynamax/Gigantamax, alfa, fitas e marcas, memórias, amizade, PP Ups, tamanho, experiência além do nível.
+- **Recusa** com código estável: `same_game`, `egg`, `species_not_in_game`, `home_no_destination` (Gen 1, 2 e 4 a 7:
+  o caminho é o "Adaptar"), `copy_exists` e `copy_not_possible` (com `reason`: `shiny`, `gender`, `level`,
+  `level_below_minimum`, `species_unobtainable`, `origin`, `trainer`, `combination`, `generation_failed`...). A cópia só
+  é aceita se o `LegalityReporter` der legal ou não verificável, se a versão de origem for do jogo de destino e se
+  espécie, forma, nível, shiny, gênero e treinador saírem como pedidos.
+- **API:** `POST /api/vault/pokemon/{id}/copy-for-game` com `{ game, language }`; devolve `pokemon`, `notes`, `met`
+  (`location`, `level`, `type`, `version`, `ball`) e `legality`. A rota não depende do `origin_not_accepted`: confere
+  por conta própria. Vale no modo servidor como o resto do cofre (cofre e "Meu treinador" da conta).
+- **Também quando a origem se perdeu no Sword/Shield** (decisão do autor, 10/11/2026): o botão aparece na recusa
+  `origin_lost_in_swsh` (D22), com um texto próprio na confirmação.
+- **Também no "sem caminho"** (decisão do autor, 10/11/2026): o botão aparece ainda quando a recusa é `no_route`
+  (a espécie existe no destino, mas o PKHeX não converte; por exemplo do formato do Z-A para o Scarlet/Violet ou o
+  Arceus). A confirmação usa um texto próprio, sem falar em origem.
+- **Boxes (saves por pasta):** a tela não lista destinos (arrasta e solta entre saves), então não ganhou o botão; a
+  recusa aparece com o mesmo texto. Copiar a partir de um save: guarde no cofre e copie de lá.
+
+## D37. O cofre guarda o original de antes da ida ao Sword/Shield
+
+A ida ao Sword/Shield de quem nasceu no BDSP, no Arceus ou no Scarlet/Violet apaga a origem (D22), e a saída era
+recusada com `origin_lost_in_swsh`. Decisão do autor (10/11/2026): o cofre guarda o arquivo de antes da ida e usa esse
+original na saída.
+
+- **Quando guarda:** só quando o mover para o Sword/Shield perde a origem (`HomeTransfer.OriginLostInSwsh` no
+  resultado). O arquivo de antes continua no mesmo armazenamento por SHA-256 do cofre, e o registro aponta para ele
+  (`StoredPokemon.OriginalSha256` e `OriginalFormat`, migration `KeptOriginal`). A lista de destinos avisa antes
+  (`keepsOriginal` no Sword/Shield) e o mover devolve a nota `original_kept`.
+- **Saída** (`KeptOriginal.Move`): parte do original, não do PK8. De volta ao próprio jogo, é o arquivo nativo, sem
+  conversão; para outro jogo, é o `HomeTransfer.Move` do original. Nota `original_restored`. Ao sair, o vínculo acaba.
+- **Volta atualizado:** "mudança" é a diferença entre o PK8 de agora e o PK8 que o original daria ao chegar (a mesma
+  conversão, refeita). Cada mudança é reaplicada sozinha e só fica se o resultado continuar legal ou "não verificável"
+  (o critério do `Move`); senão é descartada com a nota `change_dropped_<nome>`. Nenhum dado de encontro é inventado.
+  Reaplicado, nesta ordem: evolução (`species`), nível/experiência (`level`), golpes e PP Ups (`moves`; se algum golpe
+  não valer no destino, ficam só os que valem), EVs (`evs`), apelido (`nickname`), item (`item`), menta (`nature`),
+  Hyper Training (`hyper_training`), habilidade (`ability`) e as fitas do Sword/Shield (`ribbons`). O Arceus não recebe
+  EVs nem item.
+- **Fica de fora:** nível Dynamax, Gigantamax e TRs usados (só existem no Sword/Shield), memórias e amizade (dependem
+  do treinador atual, que muda no mover) e as marcações da caixa.
+- **Evolução no Sword/Shield:** vai junto quando a espécie existe no destino e a análise aceita (nos testes, Pikachu →
+  Raichu sai legal para o Scarlet/Violet e o BDSP, de origem Scarlet e Brilliant Diamond); senão sai a espécie de antes.
+- **É o mesmo Pokémon?** O original só vale se o PK8 de agora tiver a mesma constante de encriptação, o mesmo PID, o
+  mesmo treinador original (nome, TID e SID) e a espécie do original ou uma evolução dela. A edição do cofre
+  (`/replace`) que põe outro Pokémon no registro desfaz o vínculo. Arquivo do original sumido ou adulterado também.
+- **Sem original** (quem já estava no Sword/Shield, voltou de uma troca de verdade, veio de save ou arquivo, clones):
+  a recusa `origin_lost_in_swsh` e o botão de copiar (D36) continuam. O "Adaptar para…" e as Boxes também.
+- **Arquivos:** um arquivo do cofre só sai do disco quando nenhum registro o usa, nem como Pokémon atual nem como
+  original (`PokemonStore.DeleteUnusedFilesAsync`, em todos os cofres: mover, editar, esvaziar a lixeira e apagar
+  conta). O original sai junto quando o registro é apagado de vez. A exportação entrega o arquivo atual; o cofre não
+  tem backup próprio. Vale no modo servidor como o resto do cofre (por conta).
