@@ -96,6 +96,14 @@ public static class LegalityReporter
             location = enc.GetEncounterLocation();
         }
 
+        // Golpes de "relembrar" inválidos também reprovam o Pokémon: sem isto ele saía "ilegal" sem nenhum motivo na lista.
+        var relearn = la.Parsed ? la.Info.Relearn : [];
+        for (var i = 0; i < relearn.Length; i++)
+        {
+            if (!relearn[i].Valid)
+                checks.Add(new LegalityCheck("RelearnMove", "invalid", "Move", relearn[i].Summary(ctx), "moves", null));
+        }
+
         var status = la.Valid ? LegalityStatus.Legal : LegalityStatus.Illegal;
         string? reason = null;
         if (!la.Valid && Rule.Applies(pk, la))
@@ -115,6 +123,12 @@ public static class LegalityReporter
 
         return new LegalityReport(status, checks, encounter, location, reason, PkhexVersion);
     }
+
+    /// <summary>
+    /// O mesmo critério de <see cref="Analyze"/>, sem montar o relatório: válido ou "não verificável" (nunca ilegal).
+    /// </summary>
+    public static bool IsAcceptable(PKM pk, LegalityAnalysis la) =>
+        la.Valid || Rule.Applies(pk, la) || OnlyHomeTrackerMissing(pk, la);
 
     /// <summary>
     /// O único problema é o rastreador do HOME ausente: ou só o TransferTrackerMissing (com golpes válidos), ou o

@@ -729,6 +729,28 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
     Refazer a origem seria inventar local, ovo e bola, então o mover e o "Adaptar para…" recusam. Nascidos no
     Sword/Shield, no FRLG e no Let's Go seguem viagem. A tela não oferece o "Copiar para ser válido" nessa recusa
     (fica para o autor decidir).
+  - um Pokémon válido nunca sai inválido (nota de 10/11/2026, achados da matriz ampliada em
+    `HomeTransferMatrixTests`: shiny, alfa, eventos, formas, ovo, nível, item, apelido e habilidade oculta, em uma e
+    em duas pernas, com outro treinador e com o próprio dono):
+    - forma que depende do item segurado (Giratina, Dialga, Palkia, Arceus, Silvally...): a conversão do PKHeX
+      devolve o item à mochila, como o HOME, e a forma ficava sem o item (`FormItemInvalid`). Agora a forma volta à
+      normal, com a habilidade dela, e o mover avisa com a nota `form_reverted`. No Legends: Arceus a forma não
+      depende de item e fica;
+    - golpes de "relembrar": o BDSP e o Arceus não guardam os do Scarlet/Violet, e um evento que ia e voltava ficava
+      ilegal. O mover refaz os golpes de relembrar pelo encontro (`SetRelearnMoves`), e o `LegalityReporter` passou
+      a listar golpe de relembrar inválido (antes saía "ilegal" sem nenhum motivo);
+    - o resto não dá para refazer sem inventar, então o mover recusa com `illegal_after_move` (ou
+      `origin_not_accepted`, se nasceu num jogo mais novo que o destino e o PKHeX não acha o encontro; visto com o
+      Aegislash na forma Blade nascido no Z-A, que não quebra a análise como os outros). Casos vistos com o
+      PKHeX.Core 26.8.26: Pokémon de raid ou de Max Lair do Sword/Shield que foi a outro jogo não volta (o outro
+      formato não guarda o nível Dynamax, e o encontro exige um mínimo); evento do Sword/Shield que foi ao Z-A não
+      volta (nível Dynamax, altura e peso); evento do Arceus que foi ao BDSP ou ao Scarlet/Violet não volta ("effort
+      levels" e bola do evento); evento do Scarlet/Violet com Tera Type fixo que foi ao Arceus não volta; e o
+      Typhlosion de Hisui nascido no Arceus (inicial evoluído) não vai para o Scarlet/Violet (o PKHeX não acha o
+      encontro). A lista exata dos casos da matriz está no teste `Valido_que_sairia_invalido_e_recusado_com_codigo`;
+    - quem já era inválido antes continua sendo movido como antes (a legalidade avisa, não bloqueia);
+    - a tela ainda não oferece o "Copiar para ser válido" na recusa `illegal_after_move` (o `GameCopy` já foi
+      conferido nesses casos pela matriz; ligar o botão fica para o autor decidir).
 
   O registro do cofre é o mesmo: id, caixa, etiquetas e histórico.
 - **Rastreador do HOME.**
