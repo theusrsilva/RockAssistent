@@ -235,6 +235,29 @@ public sealed class GameCopyApiTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Quem_perdeu_a_origem_no_sword_ganha_copia_no_jogo_de_onde_veio()
+    {
+        // Scarlet → Sword/Shield: o PK8 fica com os códigos do HOME no lugar do encontro e não sai mais (D22). A cópia
+        // tem que nascer válida no Scarlet/Violet mesmo a partir desse arquivo.
+        var born = await GameCopyTests.BornAsync(TradeGame.Scarlet, 25, 30);
+        var id = await UploadAsync(born.Data!, "pikachu.pk9");
+        (await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/transfer", new { game = "swsh" })).EnsureSuccessStatusCode();
+
+        var destinations = await Json(await _client.GetAsync($"/api/vault/pokemon/{id}/destinations"));
+        Assert.Equal("origin_lost_in_swsh",
+            destinations.EnumerateArray().Single(d => d.GetProperty("game").GetString() == "sv").GetProperty("refusal").GetString());
+
+        foreach (var game in new[] { "sv", "bdsp", "za" })
+        {
+            var copied = await Json(await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/copy-for-game", new { game, language = "en" }));
+            Assert.Equal(game, copied.GetProperty("pokemon").GetProperty("family").GetString());
+            Assert.Equal(25, copied.GetProperty("pokemon").GetProperty("species").GetInt32());
+            Assert.NotEqual("illegal", copied.GetProperty("pokemon").GetProperty("legality").GetString());
+        }
+        Assert.Equal("swsh", (await Json(await _client.GetAsync($"/api/pokemon/{id}"))).GetProperty("family").GetString());
+    }
+
+    [Fact]
     public async Task Recusas_pela_api()
     {
         var sprigatito = await GameCopyTests.BornAsync(TradeGame.Scarlet, 906, 10);

@@ -24,10 +24,14 @@ export interface GameCopyResult {
  * "Meu treinador" do jogo de destino passa a ser o treinador atual.
  *
  * Quando o jogo de destino não aceita a origem ("origin_not_accepted": nasceu num jogo mais novo) ou não há conversão
- * ("no_route": por exemplo do formato do Z-A para o Scarlet/Violet), a linha oferece
+ * ("no_route": por exemplo do formato do Z-A para o Scarlet/Violet), ou quando a origem se perdeu no Sword/Shield
+ * ("origin_lost_in_swsh"), a linha oferece
  * "Copiar para ser válido no jogo" (D36): depois de uma confirmação, nasce um Pokémon NOVO no jogo de destino, com o
  * "Meu treinador" de lá. O original fica; a cópia entra na Caixa de entrada.
  */
+/** Recusas de mover em que a cópia nascida no jogo de destino é oferecida (D36). */
+const COPY_REFUSALS = ['origin_not_accepted', 'no_route', 'origin_lost_in_swsh']
+
 export function TransferDialog({
   pokemon,
   onDone,
@@ -88,7 +92,8 @@ export function TransferDialog({
   if (copyTo) {
     const game = gameByFamily(copyTo).name
     const name = pokemon.nickname || pokemon.speciesName
-    const noRoute = destinations?.find((d) => d.game === copyTo)?.refusal === 'no_route'
+    const why = destinations?.find((d) => d.game === copyTo)?.refusal
+    const warnKey = why === 'no_route' ? 'vault.copy.warnNoRoute' : why === 'origin_lost_in_swsh' ? 'vault.copy.warnLostOrigin' : 'vault.copy.warn'
     return (
       <Modal
         title={t('vault.copy.title', { game })}
@@ -142,7 +147,7 @@ export function TransferDialog({
             <>
               <Callout tone="amber" icon="warning" className="text-[13px]">
                 <b>{t('vault.copy.warnTitle')}</b>
-                <span className="mt-1 block">{t(noRoute ? 'vault.copy.warnNoRoute' : 'vault.copy.warn', { name, game })}</span>
+                <span className="mt-1 block">{t(warnKey, { name, game })}</span>
               </Callout>
               <ul className="list-disc pl-5 text-[13.5px]">
                 <li>{t('vault.copy.keepsOriginal', { name })}</li>
@@ -185,9 +190,9 @@ export function TransferDialog({
         {destinations === null && <p className="text-muted">{t('common.loading')}</p>}
         <div className="flex flex-col gap-1.5" role="radiogroup">
           {others.map((d) =>
-            d.refusal === 'origin_not_accepted' || d.refusal === 'no_route' ? (
-              // O jogo não aceita a origem, ou o PKHeX não converte: não dá para mover, mas dá para criar uma cópia
-              // nascida lá (com confirmação). Nos dois casos a espécie existe no jogo de destino.
+            d.refusal !== null && COPY_REFUSALS.includes(d.refusal) ? (
+              // Não dá para mover, mas dá para criar uma cópia nascida lá (com confirmação). Em todos esses casos a
+              // espécie existe no jogo de destino.
               <div key={d.game} className="flex flex-col gap-2 rounded-lg border border-line px-3 py-2">
                 <div className="flex items-center gap-2.5">
                   <Icon name="block" className="text-[20px] text-muted" />

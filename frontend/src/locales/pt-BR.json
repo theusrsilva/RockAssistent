@@ -662,6 +662,7 @@
       "warnTitle": "É uma cópia, não é o mesmo Pokémon",
       "warn": "O {{game}} não aceita Pokémon nascidos num jogo mais novo, então não dá para mover {{name}} para lá. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
       "warnNoRoute": "Não há como converter {{name}} para o {{game}}, então não dá para mover para lá. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
+      "warnLostOrigin": "{{name}} veio de outro jogo para o Sword/Shield, que não guarda onde ele foi capturado, então não dá para mover para o {{game}}. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
       "keepsOriginal": "{{name}} continua onde está, sem mudar nada.",
       "bornThere": "A cópia é um Pokémon novo: o local, o nível e a data de encontro são do {{game}}, não os do original.",
       "trainer": "O treinador da cópia é o seu \"Meu treinador\" do {{game}}.",
