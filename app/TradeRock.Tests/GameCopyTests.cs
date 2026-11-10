@@ -238,10 +238,11 @@ public sealed class GameCopyApiTests : IAsyncLifetime
     public async Task Quem_perdeu_a_origem_no_sword_ganha_copia_no_jogo_de_onde_veio()
     {
         // Scarlet → Sword/Shield: o PK8 fica com os códigos do HOME no lugar do encontro e não sai mais (D22). A cópia
-        // tem que nascer válida no Scarlet/Violet mesmo a partir desse arquivo.
+        // tem que nascer válida no Scarlet/Violet mesmo a partir desse arquivo. O PK8 chega por arquivo: movido pelo
+        // cofre, o original ficaria guardado e ele sairia sem precisar da cópia (D37).
         var born = await GameCopyTests.BornAsync(TradeGame.Scarlet, 25, 30);
-        var id = await UploadAsync(born.Data!, "pikachu.pk9");
-        (await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/transfer", new { game = "swsh" })).EnsureSuccessStatusCode();
+        var inSword = KeptOriginalSamples.InSword(PokemonReader.ToEntity(born.Data!, GameFamily.Sv));
+        var id = await UploadAsync(SwitchPokemon.Stored(inSword), "pikachu.pk8");
 
         var destinations = await Json(await _client.GetAsync($"/api/vault/pokemon/{id}/destinations"));
         Assert.Equal("origin_lost_in_swsh",

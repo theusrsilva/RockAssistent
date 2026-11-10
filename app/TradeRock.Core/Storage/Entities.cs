@@ -63,6 +63,15 @@ public sealed class StoredPokemon : IOwned
     /// <summary>PID (para achar "possíveis duplicatas": mesmo Pokémon com dados diferentes). Null = ainda não lido.</summary>
     public uint? Pid { get; set; }
 
+    /// <summary>
+    /// SHA-256 do arquivo de antes da ida ao Sword/Shield (D37), guardado no mesmo lugar dos outros arquivos do cofre.
+    /// Só existe enquanto o Pokémon está no Sword/Shield e a ida perdeu a origem; null nos outros casos.
+    /// </summary>
+    public string? OriginalSha256 { get; set; }
+
+    /// <summary>Formato do arquivo de <see cref="OriginalSha256"/>.</summary>
+    public StorageFormat? OriginalFormat { get; set; }
+
     /// <summary>Caixa do cofre; null = Caixa de entrada.</summary>
     public Guid? BoxId { get; set; }
 

@@ -642,6 +642,26 @@
       "confirm": "Mover",
       "done": "Agora ele é do {{game}}",
       "tracker": "Ele fica sem o rastreador do Pokémon HOME, que só o HOME cria. Os jogos não conferem isso, mas o HOME não aceita o Pokémon depois.",
+      "keepsOriginal": "O Sword/Shield não guarda onde este Pokémon foi capturado. Por isso o cofre guarda o original de agora: com ele, o Pokémon pode sair do Sword/Shield depois, com o encontro certo.",
+      "notes": {
+        "original_kept": "O original ficou guardado no cofre. Com ele, este Pokémon pode sair do Sword/Shield depois.",
+        "original_restored": "Voltou com o encontro original (onde e em que nível foi capturado antes de ir para o Sword/Shield).",
+        "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX."
+      },
+      "droppedTitle": "Estas mudanças feitas no Sword/Shield não puderam ser levadas:",
+      "droppedWhy": "Com elas, o Pokémon deixaria de ser válido no jogo de destino. O resto veio junto.",
+      "dropped": {
+        "species": "a evolução (ele saiu como era antes de evoluir)",
+        "level": "o nível e a experiência",
+        "moves": "os golpes que não valem no jogo de destino",
+        "evs": "os EVs",
+        "nickname": "o apelido",
+        "item": "o item segurado",
+        "nature": "a menta (natureza dos atributos)",
+        "hyper_training": "o Hyper Training",
+        "ability": "a troca de habilidade",
+        "ribbons": "as fitas ganhas no Sword/Shield"
+      },
       "refusal": {
         "same_game": "É o jogo atual",
         "home_no_destination": "O HOME não manda Pokémon para esse jogo",

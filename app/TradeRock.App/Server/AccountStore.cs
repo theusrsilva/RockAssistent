@@ -129,7 +129,7 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
             var trades = await vault.Trades.Select(t => t.Id).ToListAsync(ct);
             await vault.TradeEntries.Where(e => trades.Contains(e.TradeRecordId)).ExecuteDeleteAsync(ct);
             await vault.Trades.ExecuteDeleteAsync(ct);
-            var mine = await vault.Pokemon.Select(p => new { p.Id, p.Sha256, p.Format }).ToListAsync(ct);
+            var mine = await vault.Pokemon.Select(p => new { p.Id, p.Sha256, p.Format, p.OriginalSha256, p.OriginalFormat }).ToListAsync(ct);
             var ids = mine.Select(p => p.Id).ToList();
             await vault.SaveAttachments.ExecuteDeleteAsync(ct);
             await vault.Hunts.ExecuteDeleteAsync(ct);
@@ -145,16 +145,11 @@ public sealed partial class AccountStore(IDbContextFactory<TradeRockDb> dbFactor
             await vault.TrainerPresets.ExecuteDeleteAsync(ct);
             await vault.Settings.Where(s => s.Key.EndsWith(UserSettings.Suffix(id))).ExecuteDeleteAsync(ct);
 
-            // Arquivos que nenhum outro cofre usa.
-            var hashes = mine.Select(p => p.Sha256).Distinct().ToList();
-            var stillUsed = await vault.Pokemon.IgnoreQueryFilters().Where(p => hashes.Contains(p.Sha256))
-                .Select(p => p.Sha256).Distinct().ToListAsync(ct);
-            foreach (var p in mine.Where(p => !stillUsed.Contains(p.Sha256)).DistinctBy(p => p.Sha256))
-            {
-                var path = pokemon.FilePath(p.Sha256, p.Format);
-                if (File.Exists(path))
-                    File.Delete(path);
-            }
+            // Arquivos que nenhum outro cofre usa (com os originais guardados de antes da ida ao Sword/Shield, D37).
+            var files = mine.Select(p => (p.Sha256, p.Format))
+                .Concat(mine.Where(p => p.OriginalSha256 != null && p.OriginalFormat != null)
+                    .Select(p => (p.OriginalSha256!, p.OriginalFormat!.Value)));
+            await pokemon.DeleteUnusedFilesAsync(vault, files, ct);
         }
 
         db.Users.Remove(user);

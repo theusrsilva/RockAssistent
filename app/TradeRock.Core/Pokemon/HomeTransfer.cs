@@ -23,7 +23,8 @@ public sealed record HomeTransferResult(PKM? Pokemon, string? Refusal, IReadOnly
 ///   analisar o resultado, a recusa é "origin_not_accepted" se o Pokémon nasceu num jogo mais novo que o destino
 ///   (hoje, os nascidos no Legends: Z-A) e "no_route" nos outros casos;
 /// - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá
-///   ("origin_lost_in_swsh", ver <see cref="OriginLostInSwsh"/>).
+///   ("origin_lost_in_swsh", ver <see cref="OriginLostInSwsh"/>), a não ser que o cofre tenha guardado o original de
+///   antes da ida (<see cref="KeptOriginal"/>, D37).
 /// <see cref="Destinations"/> ensaia a mesma conversão de <see cref="Move"/>: um destino só aparece como "pode" se
 /// mover der certo. Nenhuma exceção do PKHeX sai daqui: vira recusa.
 /// O rastreador do HOME fica vazio: o HOME recusa um inventado, e os jogos não o conferem.
@@ -99,7 +100,7 @@ public static class HomeTransfer
         // Seguir daqui lança exceção nos golpes e deixa no cofre um Pokémon que nenhuma tela consegue analisar.
         if (!la.Parsed)
             return new HomeTransferResult(null, ConversionRefusal(source, to), ["analysis_failed"]);
-        bool Accepted(LegalityAnalysis check, PKM entity) => check.Valid || LegalityReporter.OnlyHomeTrackerMissing(entity, check);
+        static bool Accepted(LegalityAnalysis check, PKM entity) => HomeTransfer.Accepted(entity, check);
         // O Sword/Shield quer um Pokémon de outro jogo com treinador atual, mesmo que seja o próprio dono.
         if (!Accepted(la, pk) && pk.CurrentHandler == 0)
         {
@@ -154,8 +155,13 @@ public static class HomeTransfer
         return null;
     }
 
+    /// <summary>O critério de aceite do mover: legal ou "não verificável" só pela falta do rastreador do HOME.</summary>
+    internal static bool Accepted(PKM pk) => Accepted(pk, new LegalityAnalysis(pk));
+
+    internal static bool Accepted(PKM pk, LegalityAnalysis la) => la.Valid || LegalityReporter.OnlyHomeTrackerMissing(pk, la);
+
     /// <summary>Golpe de TM/TR da sugestão só vale com a marca do registro (TRs do Sword/Shield, Arceus, Z-A).</summary>
-    private static void Permit(PKM pk)
+    internal static void Permit(PKM pk)
     {
         if (pk is ITechRecord record)
             record.SetRecordFlags(pk, TechnicalRecordApplicatorOption.LegalCurrent);

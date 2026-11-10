@@ -343,16 +343,12 @@ public sealed class VaultStore(IDbContextFactory<TradeRockDb> dbFactory, Pokemon
         db.Pokemon.RemoveRange(deletable);
         await db.SaveChangesAsync(ct);
 
-        // O arquivo é compartilhado entre cofres com o mesmo Pokémon: só sai quando ninguém mais o usa.
-        var hashes = deletable.Select(p => p.Sha256).Distinct().ToList();
-        var stillUsed = await db.Pokemon.IgnoreQueryFilters().Where(p => hashes.Contains(p.Sha256))
-            .Select(p => p.Sha256).Distinct().ToListAsync(ct);
-        foreach (var p in deletable.Where(p => !stillUsed.Contains(p.Sha256)))
-        {
-            var path = pokemon.FilePath(p.Sha256, p.Format);
-            if (File.Exists(path))
-                File.Delete(path);
-        }
+        // O arquivo é compartilhado entre cofres com o mesmo Pokémon: só sai quando ninguém mais o usa. O original
+        // guardado de antes da ida ao Sword/Shield (D37) sai junto com o registro.
+        var files = deletable.Select(p => (p.Sha256, p.Format))
+            .Concat(deletable.Where(p => p.OriginalSha256 != null && p.OriginalFormat != null)
+                .Select(p => (p.OriginalSha256!, p.OriginalFormat!.Value)));
+        await pokemon.DeleteUnusedFilesAsync(db, files, ct);
         return new EmptyTrashResult(deletable.Count, trashed.Count - deletable.Count);
     }
 }

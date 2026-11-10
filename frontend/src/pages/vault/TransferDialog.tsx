@@ -9,7 +9,12 @@ import type { EvolveLegality } from '../boxes/boxes'
 interface Destination {
   game: GameFamily
   refusal: string | null
+  /** Só no Sword/Shield: a ida perde a origem, e o cofre guarda o original para ele poder sair depois (D37). */
+  keepsOriginal?: boolean
 }
+
+/** Prefixo das notas de mudança feita no Sword/Shield que não pôde ser levada na saída (D37). */
+const DROPPED = 'change_dropped_'
 
 /** Resposta de POST …/copy-for-game (D36): a cópia, o que não deu para copiar igual e onde ela "nasceu". */
 export interface GameCopyResult {
@@ -28,6 +33,10 @@ export interface GameCopyResult {
  * ("origin_lost_in_swsh"), a linha oferece
  * "Copiar para ser válido no jogo" (D36): depois de uma confirmação, nasce um Pokémon NOVO no jogo de destino, com o
  * "Meu treinador" de lá. O original fica; a cópia entra na Caixa de entrada.
+ *
+ * Original guardado (D37): a ida ao Sword/Shield que perde a origem avisa antes que o cofre guarda o original; depois
+ * de mover, as notas (original guardado, voltou com o encontro original, mudanças que não puderam ser levadas)
+ * aparecem aqui, e a janela só fecha quando a pessoa clica em Fechar.
  */
 /** Recusas de mover em que a cópia nascida no jogo de destino é oferecida (D36). */
 const COPY_REFUSALS = ['origin_not_accepted', 'no_route', 'origin_lost_in_swsh']
@@ -35,11 +44,15 @@ const COPY_REFUSALS = ['origin_not_accepted', 'no_route', 'origin_lost_in_swsh']
 export function TransferDialog({
   pokemon,
   onDone,
+  onMoved,
   onCopied,
   onClose,
 }: {
   pokemon: VaultPokemon
+  /** Moveu sem nada a avisar: fecha a janela. */
   onDone: (moved: VaultPokemon) => void
+  /** Moveu com notas: a janela continua aberta para mostrá-las. */
+  onMoved: (moved: VaultPokemon) => void
   onCopied: (r: GameCopyResult) => void
   onClose: () => void
 }) {
@@ -48,6 +61,8 @@ export function TransferDialog({
   const [choice, setChoice] = useState<GameFamily | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /** Mover feito, com notas a mostrar (null = ainda na lista de destinos). */
+  const [moved, setMoved] = useState<{ game: GameFamily; notes: string[] } | null>(null)
   /** Jogo da cópia em confirmação (null = a lista de destinos). */
   const [copyTo, setCopyTo] = useState<GameFamily | null>(null)
   const [copyError, setCopyError] = useState<{ code: string; reason: string | null } | null>(null)
@@ -66,7 +81,12 @@ export function TransferDialog({
     setError(null)
     try {
       const r = await api.post<{ pokemon: VaultPokemon; notes: string[] }>(`/api/vault/pokemon/${pokemon.id}/transfer`, { game: choice })
-      onDone(r.pokemon)
+      if (r.notes.length === 0) {
+        onDone(r.pokemon)
+      } else {
+        setMoved({ game: choice, notes: r.notes })
+        onMoved(r.pokemon)
+      }
     } catch (e) {
       setError(e instanceof ApiError ? (e.code ?? 'no_route') : 'no_route')
     } finally {
@@ -170,7 +190,40 @@ export function TransferDialog({
     )
   }
 
+  if (moved) {
+    const dropped = moved.notes.filter((n) => n.startsWith(DROPPED)).map((n) => n.slice(DROPPED.length))
+    const notes = moved.notes.filter((n) => !n.startsWith(DROPPED))
+    return (
+      <Modal title={t('vault.transfer.title')} actions={<Button onClick={onClose}>{t('common.close')}</Button>}>
+        <div className="flex flex-col gap-3">
+          <Callout tone="emerald" icon="check_circle" className="text-[13px]">
+            {t('vault.transfer.done', { game: gameByFamily(moved.game).name })}
+          </Callout>
+          {notes.length > 0 && (
+            <ul className="list-disc pl-5 text-[13.5px]">
+              {notes.map((n) => (
+                <li key={n}>{t(`vault.transfer.notes.${n}`, { defaultValue: n })}</li>
+              ))}
+            </ul>
+          )}
+          {dropped.length > 0 && (
+            <Callout tone="amber" icon="info" className="text-[13px]">
+              <b>{t('vault.transfer.droppedTitle')}</b>
+              <ul className="mt-1 list-disc pl-5">
+                {dropped.map((n) => (
+                  <li key={n}>{t(`vault.transfer.dropped.${n}`, { defaultValue: n })}</li>
+                ))}
+              </ul>
+              <span className="mt-1 block">{t('vault.transfer.droppedWhy')}</span>
+            </Callout>
+          )}
+        </div>
+      </Modal>
+    )
+  }
+
   const others = destinations?.filter((d) => d.refusal !== 'same_game') ?? []
+  const keepsOriginal = choice !== null && others.some((d) => d.game === choice && d.keepsOriginal)
   return (
     <Modal
       title={t('vault.transfer.title')}
@@ -226,6 +279,11 @@ export function TransferDialog({
             ),
           )}
         </div>
+        {keepsOriginal && (
+          <Callout tone="sky" icon="inventory_2" className="text-[13px]">
+            {t('vault.transfer.keepsOriginal')}
+          </Callout>
+        )}
         <Callout tone="amber" icon="info" className="text-[13px]">
           {t('vault.transfer.tracker')}
         </Callout>

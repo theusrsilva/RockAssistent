@@ -642,6 +642,26 @@
       "confirm": "Move",
       "done": "It now belongs to {{game}}",
       "tracker": "It will have no Pokémon HOME tracker, which only HOME creates. The games do not check it, but HOME will not accept the Pokémon afterwards.",
+      "keepsOriginal": "Sword/Shield does not keep where this Pokémon was caught. So the vault keeps the original as it is now: with it, the Pokémon can leave Sword/Shield later, with the right encounter.",
+      "notes": {
+        "original_kept": "The original was kept in the vault. With it, this Pokémon can leave Sword/Shield later.",
+        "original_restored": "It came back with its original encounter (where and at what level it was caught before going to Sword/Shield).",
+        "moves_replaced": "Moves the new game does not have were replaced with PKHeX's suggestion."
+      },
+      "droppedTitle": "These changes made in Sword/Shield could not be carried over:",
+      "droppedWhy": "With them, the Pokémon would no longer be valid in the destination game. Everything else came along.",
+      "dropped": {
+        "species": "the evolution (it left as it was before evolving)",
+        "level": "the level and experience",
+        "moves": "the moves that are not valid in the destination game",
+        "evs": "the EVs",
+        "nickname": "the nickname",
+        "item": "the held item",
+        "nature": "the mint (stat nature)",
+        "hyper_training": "the Hyper Training",
+        "ability": "the ability change",
+        "ribbons": "the ribbons earned in Sword/Shield"
+      },
       "refusal": {
         "same_game": "It is the current game",
         "home_no_destination": "HOME does not send Pokémon to this game",

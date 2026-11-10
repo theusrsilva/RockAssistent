@@ -721,7 +721,7 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
     foi ao Z-A volta para o Sword/Shield e o BDSP. Do formato do Z-A para o Scarlet/Violet e o Arceus o PKHeX não
     converte nenhuma origem: aí a recusa é `no_route`;
   - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá (nota de
-    10/11/2026): recusa `origin_lost_in_swsh`. O Sword/Shield não conhece esses jogos, então a conversão do PKHeX
+    10/11/2026): recusa `origin_lost_in_swsh` (menos quando o cofre guardou o original de antes da ida, D37). O Sword/Shield não conhece esses jogos, então a conversão do PKHeX
     para o PK8 grava a versão como Sword ou Shield, o local de encontro como um código do HOME (59996 a 60000,
     `LocationsHOME`), o local do ovo como 65534 e, no Arceus, a Poké Ball no lugar da bola original. O PK8 não
     guarda os dados de verdade (o HOME guarda do lado dele), e a conversão seguinte levava esses códigos para o
@@ -1368,3 +1368,36 @@ Sword/Shield), mesmo quando a espécie existe lá: o PKHeX não tem regra para e
   Arceus). A confirmação usa um texto próprio, sem falar em origem.
 - **Boxes (saves por pasta):** a tela não lista destinos (arrasta e solta entre saves), então não ganhou o botão; a
   recusa aparece com o mesmo texto. Copiar a partir de um save: guarde no cofre e copie de lá.
+
+## D37. O cofre guarda o original de antes da ida ao Sword/Shield
+
+A ida ao Sword/Shield de quem nasceu no BDSP, no Arceus ou no Scarlet/Violet apaga a origem (D22), e a saída era
+recusada com `origin_lost_in_swsh`. Decisão do autor (10/11/2026): o cofre guarda o arquivo de antes da ida e usa esse
+original na saída.
+
+- **Quando guarda:** só quando o mover para o Sword/Shield perde a origem (`HomeTransfer.OriginLostInSwsh` no
+  resultado). O arquivo de antes continua no mesmo armazenamento por SHA-256 do cofre, e o registro aponta para ele
+  (`StoredPokemon.OriginalSha256` e `OriginalFormat`, migration `KeptOriginal`). A lista de destinos avisa antes
+  (`keepsOriginal` no Sword/Shield) e o mover devolve a nota `original_kept`.
+- **Saída** (`KeptOriginal.Move`): parte do original, não do PK8. De volta ao próprio jogo, é o arquivo nativo, sem
+  conversão; para outro jogo, é o `HomeTransfer.Move` do original. Nota `original_restored`. Ao sair, o vínculo acaba.
+- **Volta atualizado:** "mudança" é a diferença entre o PK8 de agora e o PK8 que o original daria ao chegar (a mesma
+  conversão, refeita). Cada mudança é reaplicada sozinha e só fica se o resultado continuar legal ou "não verificável"
+  (o critério do `Move`); senão é descartada com a nota `change_dropped_<nome>`. Nenhum dado de encontro é inventado.
+  Reaplicado, nesta ordem: evolução (`species`), nível/experiência (`level`), golpes e PP Ups (`moves`; se algum golpe
+  não valer no destino, ficam só os que valem), EVs (`evs`), apelido (`nickname`), item (`item`), menta (`nature`),
+  Hyper Training (`hyper_training`), habilidade (`ability`) e as fitas do Sword/Shield (`ribbons`). O Arceus não recebe
+  EVs nem item.
+- **Fica de fora:** nível Dynamax, Gigantamax e TRs usados (só existem no Sword/Shield), memórias e amizade (dependem
+  do treinador atual, que muda no mover) e as marcações da caixa.
+- **Evolução no Sword/Shield:** vai junto quando a espécie existe no destino e a análise aceita (nos testes, Pikachu →
+  Raichu sai legal para o Scarlet/Violet e o BDSP, de origem Scarlet e Brilliant Diamond); senão sai a espécie de antes.
+- **É o mesmo Pokémon?** O original só vale se o PK8 de agora tiver a mesma constante de encriptação, o mesmo PID, o
+  mesmo treinador original (nome, TID e SID) e a espécie do original ou uma evolução dela. A edição do cofre
+  (`/replace`) que põe outro Pokémon no registro desfaz o vínculo. Arquivo do original sumido ou adulterado também.
+- **Sem original** (quem já estava no Sword/Shield, voltou de uma troca de verdade, veio de save ou arquivo, clones):
+  a recusa `origin_lost_in_swsh` e o botão de copiar (D36) continuam. O "Adaptar para…" e as Boxes também.
+- **Arquivos:** um arquivo do cofre só sai do disco quando nenhum registro o usa, nem como Pokémon atual nem como
+  original (`PokemonStore.DeleteUnusedFilesAsync`, em todos os cofres: mover, editar, esvaziar a lixeira e apagar
+  conta). O original sai junto quando o registro é apagado de vez. A exportação entrega o arquivo atual; o cofre não
+  tem backup próprio. Vale no modo servidor como o resto do cofre (por conta).

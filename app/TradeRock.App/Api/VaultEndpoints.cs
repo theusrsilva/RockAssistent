@@ -190,7 +190,15 @@ public static class VaultEndpoints
             if (await store.GetAsync(id, ct) is not { DeletedAt: null } p)
                 return Results.NotFound();
             var destinations = await store.DestinationsAsync(p, ct);
-            return Results.Ok(destinations.Select(d => new { game = d.Key, refusal = d.Value }));
+            // Ida ao Sword/Shield que perde a origem: a tela avisa que o original fica guardado (D37).
+            var keepsOriginal = destinations.GetValueOrDefault(GameFamily.Swsh, "none") is null
+                && await store.KeepsOriginalInSwshAsync(p, ct);
+            return Results.Ok(destinations.Select(d => new
+            {
+                game = d.Key,
+                refusal = d.Value,
+                keepsOriginal = d.Key == GameFamily.Swsh && keepsOriginal,
+            }));
         });
 
         vault.MapPost("/pokemon/{id:guid}/transfer", async (Guid id, TransferDto body, PokemonStore store, SettingsStore settings,
