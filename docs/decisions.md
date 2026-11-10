@@ -749,8 +749,8 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
       Typhlosion de Hisui nascido no Arceus (inicial evoluído) não vai para o Scarlet/Violet (o PKHeX não acha o
       encontro). A lista exata dos casos da matriz está no teste `Valido_que_sairia_invalido_e_recusado_com_codigo`;
     - quem já era inválido antes continua sendo movido como antes (a legalidade avisa, não bloqueia);
-    - a tela ainda não oferece o "Copiar para ser válido" na recusa `illegal_after_move` (o `GameCopy` já foi
-      conferido nesses casos pela matriz; ligar o botão fica para o autor decidir).
+    - a tela oferece o "Copiar para ser válido" também na recusa `illegal_after_move` (D36; o `GameCopy` foi
+      conferido nesses casos pela matriz), e mostra a nota `form_reverted` depois de mover.
 
   O registro do cofre é o mesmo: id, caixa, etiquetas e histórico.
 - **Rastreador do HOME.**

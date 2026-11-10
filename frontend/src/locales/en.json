@@ -646,7 +646,8 @@
       "notes": {
         "original_kept": "The original was kept in the vault. With it, this Pokémon can leave Sword/Shield later.",
         "original_restored": "It came back with its original encounter (where and at what level it was caught before going to Sword/Shield).",
-        "moves_replaced": "Moves the new game does not have were replaced with PKHeX's suggestion."
+        "moves_replaced": "Moves the new game does not have were replaced with PKHeX's suggestion.",
+        "form_reverted": "Its form depended on the held item. The item went back to the Bag and it returned to its normal form, like in the game."
       },
       "droppedTitle": "These changes made in Sword/Shield could not be carried over:",
       "droppedWhy": "With them, the Pokémon would no longer be valid in the destination game. Everything else came along.",
@@ -684,6 +685,7 @@
       "warn": "{{game}} does not accept Pokémon born in a newer game, so {{name}} cannot be moved there. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
       "warnNoRoute": "There is no way to convert {{name}} to {{game}}, so it cannot be moved there. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
       "warnLostOrigin": "{{name}} came to Sword/Shield from another game, and Sword/Shield does not keep where it was caught, so it cannot be moved to {{game}}. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
+      "warnIllegalAfter": "{{name}} would be invalid in {{game}}: it depends on data that does not come along in the move, so it cannot be moved there. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
       "keepsOriginal": "{{name}} stays where it is, unchanged.",
       "bornThere": "The copy is a new Pokémon: its met location, met level and met date come from {{game}}, not from the original.",
       "trainer": "The copy's trainer is your \"My trainer\" for {{game}}.",

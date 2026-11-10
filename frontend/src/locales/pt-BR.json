@@ -646,7 +646,8 @@
       "notes": {
         "original_kept": "O original ficou guardado no cofre. Com ele, este Pokémon pode sair do Sword/Shield depois.",
         "original_restored": "Voltou com o encontro original (onde e em que nível foi capturado antes de ir para o Sword/Shield).",
-        "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX."
+        "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX.",
+        "form_reverted": "A forma dependia do item segurado. O item voltou para a mochila e ele voltou à forma normal, como no jogo."
       },
       "droppedTitle": "Estas mudanças feitas no Sword/Shield não puderam ser levadas:",
       "droppedWhy": "Com elas, o Pokémon deixaria de ser válido no jogo de destino. O resto veio junto.",
@@ -684,6 +685,7 @@
       "warn": "O {{game}} não aceita Pokémon nascidos num jogo mais novo, então não dá para mover {{name}} para lá. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
       "warnNoRoute": "Não há como converter {{name}} para o {{game}}, então não dá para mover para lá. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
       "warnLostOrigin": "{{name}} veio de outro jogo para o Sword/Shield, que não guarda onde ele foi capturado, então não dá para mover para o {{game}}. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
+      "warnIllegalAfter": "{{name}} ficaria inválido no {{game}}: ele depende de um dado que não vai junto na mudança, então não dá para mover para lá. O que dá para fazer é criar um Pokémon novo, parecido com ele, que nasce no {{game}}.",
       "keepsOriginal": "{{name}} continua onde está, sem mudar nada.",
       "bornThere": "A cópia é um Pokémon novo: o local, o nível e a data de encontro são do {{game}}, não os do original.",
       "trainer": "O treinador da cópia é o seu \"Meu treinador\" do {{game}}.",

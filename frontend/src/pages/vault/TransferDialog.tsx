@@ -39,7 +39,7 @@ export interface GameCopyResult {
  * aparecem aqui, e a janela só fecha quando a pessoa clica em Fechar.
  */
 /** Recusas de mover em que a cópia nascida no jogo de destino é oferecida (D36). */
-const COPY_REFUSALS = ['origin_not_accepted', 'no_route', 'origin_lost_in_swsh']
+const COPY_REFUSALS = ['origin_not_accepted', 'no_route', 'origin_lost_in_swsh', 'illegal_after_move']
 
 export function TransferDialog({
   pokemon,
@@ -113,7 +113,14 @@ export function TransferDialog({
     const game = gameByFamily(copyTo).name
     const name = pokemon.nickname || pokemon.speciesName
     const why = destinations?.find((d) => d.game === copyTo)?.refusal
-    const warnKey = why === 'no_route' ? 'vault.copy.warnNoRoute' : why === 'origin_lost_in_swsh' ? 'vault.copy.warnLostOrigin' : 'vault.copy.warn'
+    const warnKey =
+      why === 'no_route'
+        ? 'vault.copy.warnNoRoute'
+        : why === 'origin_lost_in_swsh'
+          ? 'vault.copy.warnLostOrigin'
+          : why === 'illegal_after_move'
+            ? 'vault.copy.warnIllegalAfter'
+            : 'vault.copy.warn'
     return (
       <Modal
         title={t('vault.copy.title', { game })}
