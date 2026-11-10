@@ -647,6 +647,7 @@
         "original_kept": "The original was kept in the vault. With it, this Pokémon can leave Sword/Shield later.",
         "original_restored": "It came back with its original encounter (where and at what level it was caught before going to Sword/Shield).",
         "moves_replaced": "Moves the new game does not have were replaced with PKHeX's suggestion.",
+        "dynamax_level_reset": "The Dynamax Level went back to the encounter's minimum: the other games do not keep that data.",
         "form_reverted": "Its form depended on the held item. The item went back to the Bag and it returned to its normal form, like in the game."
       },
       "droppedTitle": "These changes made in Sword/Shield could not be carried over:",
@@ -673,6 +674,7 @@
         "origin_not_accepted": "It was born in a newer game, which that game does not know",
         "origin_lost_in_swsh": "It came to Sword/Shield from another game, and Sword/Shield does not keep where it was caught. Without that, it cannot leave Sword/Shield",
         "no_route": "PKHeX found no way to convert it",
+        "fused_form": "It is fused with another Pokémon. Separate them in the game first: HOME does not take a fused Pokémon",
         "illegal_after_move": "It would be invalid in that game: it depends on data that does not come along in the move, or that was lost in a game it already went through",
         "pokemon_duplicate": "An identical Pokémon is already in the vault",
         "pokemon_in_trash": "It is in the trash"
@@ -755,6 +757,7 @@
       "notes": {
         "held_item_removed": "The held item went back to the Bag, like in the game: the copy has no item.",
         "moves_replaced": "Moves the new game doesn't have were replaced by PKHeX's suggestion.",
+        "dynamax_level_reset": "The Dynamax Level went back to the encounter's minimum: the other games do not keep that data.",
         "form_reverted": "Its form depended on the held item. The item went back to the Bag and it returned to its normal form, like in the game."
       },
       "refusal": {
@@ -764,6 +767,7 @@
         "species_not_in_game": "That species (or form) doesn't exist in that game",
         "origin_not_accepted": "This Pokémon was born in a newer game that this game doesn't know. It can't go there.",
         "origin_lost_in_swsh": "This Pokémon came to Sword/Shield from another game, and Sword/Shield doesn't keep where it was caught. Without that, it can't leave Sword/Shield.",
+        "fused_form": "It is fused with another Pokémon. Separate them in the game first: HOME does not take a fused Pokémon",
         "illegal_after_move": "This Pokémon would be invalid in that game: it depends on data that doesn't come along in the move, or that was lost in a game it already went through.",
         "vc_celebi": "Only the Crystal Virtual Console event Celebi (level 30 or higher) goes through Poké Transporter",
         "vc_dizzy_punch": "Forget Dizzy Punch first (Poké Transporter refuses Odd Egg Pokémon with that move)",

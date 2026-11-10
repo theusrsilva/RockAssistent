@@ -670,7 +670,7 @@ public sealed class HomeTransferMatrixTests(HomeTransferMatrixFixture fixture) :
     /// um dado que o jogo de origem confere (o HOME de verdade guarda do lado dele) ou porque o PKHeX não reconhece a
     /// origem no destino. Não há o que refazer sem inventar o dado, então o mover recusa com "illegal_after_move".
     /// A lista é a de todos os casos da matriz (com o PKHeX.Core 26.8.26); o que cada um perde:
-    /// - Sword/Shield de raid ou Max Lair que foi a outro jogo: o nível Dynamax (o encontro exige um mínimo);
+    /// (O nível Dynamax de raid ou Max Lair que saiu do Sword/Shield já não está aqui: volta ao mínimo do encontro.)
     /// - evento do Sword/Shield que foi ao Z-A: nível Dynamax e altura/peso;
     /// - evento do Arceus que foi ao BDSP ou ao Scarlet/Violet: os "effort levels" (GV) e a bola do evento;
     /// - evento do Scarlet/Violet que foi ao Arceus: o Tera Type do evento;
@@ -687,14 +687,6 @@ public sealed class HomeTransferMatrixTests(HomeTransferMatrixFixture fixture) :
             "pla-forma-157-1: Pla > Sv",
             "sv-evento-zoroark-hisui: Sv > Pla > Sv",
             "swsh-evento-zeraora-home: Swsh > Za > Swsh",
-            "swsh-fixo-giratina-max-lair: Swsh > Bdsp > Swsh",
-            "swsh-fixo-giratina-max-lair: Swsh > Pla > Swsh",
-            "swsh-fixo-giratina-max-lair: Swsh > Sv > Swsh",
-            "swsh-forma-no-jogo-487-1: Swsh > Bdsp > Swsh",
-            "swsh-forma-no-jogo-487-1: Swsh > Pla > Swsh",
-            "swsh-forma-no-jogo-487-1: Swsh > Sv > Swsh",
-            "swsh-forma-no-jogo-646-1: Swsh > Sv > Swsh",
-            "swsh-forma-no-jogo-800-1: Swsh > Sv > Swsh",
         ];
         var found = new List<string>();
         foreach (var caso in Casos)
@@ -708,11 +700,11 @@ public sealed class HomeTransferMatrixTests(HomeTransferMatrixFixture fixture) :
     }
 
     /// <summary>
-    /// O que se perde está na conversão do PKHeX, antes de qualquer ajuste nosso: a volta crua é ilegal, e com o dado
-    /// de volta (aqui, o nível Dynamax do original) seria válida.
+    /// O nível Dynamax se perde na conversão do PKHeX (só o Sword/Shield guarda): a volta crua é ilegal. O mover
+    /// regrava o mínimo do encontro.
     /// </summary>
     [Fact]
-    public async Task Max_lair_que_saiu_do_sword_nao_volta_sem_o_nivel_dynamax()
+    public async Task Max_lair_que_saiu_do_sword_volta_com_o_nivel_dynamax_minimo_do_encontro()
     {
         var source = (PK8)await SourceAsync("swsh-fixo-giratina-max-lair");
         Assert.True(source.DynamaxLevel > 0);
@@ -722,16 +714,36 @@ public sealed class HomeTransferMatrixTests(HomeTransferMatrixFixture fixture) :
         var raw = (PK8)EntityConverter.ConvertToType(inScarlet.Pokemon!.Clone(), typeof(PK8), out _)!;
         Assert.Equal(0, raw.DynamaxLevel);
         Assert.False(new LegalityAnalysis(raw).Valid);
-        raw.DynamaxLevel = source.DynamaxLevel;
-        Assert.True(new LegalityAnalysis(raw).Valid);
 
+        // Decisão do autor (10/11/2026): a volta regrava o menor nível que o encontro aceita; o que passava dele se perdeu.
         var back = Move(inScarlet.Pokemon, GameFamily.Swsh);
-        Assert.False(back.Ok);
-        Assert.Null(back.Pokemon);
-        Assert.Equal(HomeTransfer.IllegalAfterMove, back.Refusal);
-        Assert.Equal(HomeTransfer.IllegalAfterMove, HomeTransfer.Destinations(inScarlet.Pokemon, GameFamily.Sv)[GameFamily.Swsh]);
-        // Para os outros jogos ele segue viagem.
-        Assert.True(Move(inScarlet.Pokemon, GameFamily.Bdsp).Ok);
+        Assert.True(back.Ok, back.Refusal);
+        Assert.Contains("dynamax_level_reset", back.Notes);
+        var returned = (PK8)back.Pokemon!;
+        Assert.InRange(returned.DynamaxLevel, 1, source.DynamaxLevel);
+        NotIllegal(returned);
+        // Um nível abaixo já não vale: é mesmo o mínimo.
+        var lower = (PK8)returned.Clone();
+        lower.DynamaxLevel--;
+        lower.RefreshChecksum();
+        Assert.False(LegalityReporter.IsAcceptable(lower, new LegalityAnalysis(lower)));
+        Assert.Null(HomeTransfer.Destinations(inScarlet.Pokemon, GameFamily.Sv)[GameFamily.Swsh]);
+    }
+
+    /// <summary>Decisão do autor (10/11/2026): fundido não vai, como no HOME; é preciso separar no jogo antes.</summary>
+    [Theory]
+    [InlineData("swsh-forma-no-jogo-646-1")] // Kyurem White
+    [InlineData("swsh-forma-no-jogo-800-1")] // Necrozma Dusk Mane
+    public async Task Fundido_nao_vai_para_outro_jogo(string caso)
+    {
+        var source = await SourceAsync(caso);
+        foreach (var (family, refusal) in HomeTransfer.Destinations(source, GameFamily.Swsh))
+        {
+            if (family is GameFamily.Swsh or GameFamily.Lgpe or GameFamily.Frlg)
+                continue;
+            Assert.Equal(HomeTransfer.FusedForm, refusal);
+            Assert.Equal(HomeTransfer.FusedForm, Move(source, family).Refusal);
+        }
     }
 
     /// <summary>

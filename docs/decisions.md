@@ -742,12 +742,16 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
     - o resto não dá para refazer sem inventar, então o mover recusa com `illegal_after_move` (ou
       `origin_not_accepted`, se nasceu num jogo mais novo que o destino e o PKHeX não acha o encontro; visto com o
       Aegislash na forma Blade nascido no Z-A, que não quebra a análise como os outros). Casos vistos com o
-      PKHeX.Core 26.8.26: Pokémon de raid ou de Max Lair do Sword/Shield que foi a outro jogo não volta (o outro
-      formato não guarda o nível Dynamax, e o encontro exige um mínimo); evento do Sword/Shield que foi ao Z-A não
-      volta (nível Dynamax, altura e peso); evento do Arceus que foi ao BDSP ou ao Scarlet/Violet não volta ("effort
+      PKHeX.Core 26.8.26: evento do Sword/Shield que foi ao Z-A não
+      volta (altura e peso); evento do Arceus que foi ao BDSP ou ao Scarlet/Violet não volta ("effort
       levels" e bola do evento); evento do Scarlet/Violet com Tera Type fixo que foi ao Arceus não volta; e o
       Typhlosion de Hisui nascido no Arceus (inicial evoluído) não vai para o Scarlet/Violet (o PKHeX não acha o
       encontro). A lista exata dos casos da matriz está no teste `Valido_que_sairia_invalido_e_recusado_com_codigo`;
+    - **nível Dynamax** (decisão do autor, 10/11/2026): só o Sword/Shield guarda. Pokémon de raid ou de Max Lair que
+      saiu e volta chega com 0, e o encontro exige um mínimo; o mover grava o menor nível que o PKHeX aceita para o
+      encontro (nota `dynamax_level_reset`). O que passava do mínimo se perdeu;
+    - **fundidos** (decisão do autor, 10/11/2026): Kyurem, Necrozma e Calyrex fundidos não vão para outro jogo
+      (`fused_form`, `FormInfo.IsFusedForm`), como no HOME: é preciso separar no jogo antes;
     - quem já era inválido antes continua sendo movido como antes (a legalidade avisa, não bloqueia);
     - a tela oferece o "Copiar para ser válido" também na recusa `illegal_after_move` (D36; o `GameCopy` foi
       conferido nesses casos pela matriz), e mostra a nota `form_reverted` depois de mover.

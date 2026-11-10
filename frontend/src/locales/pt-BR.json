@@ -647,6 +647,7 @@
         "original_kept": "O original ficou guardado no cofre. Com ele, este Pokémon pode sair do Sword/Shield depois.",
         "original_restored": "Voltou com o encontro original (onde e em que nível foi capturado antes de ir para o Sword/Shield).",
         "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX.",
+        "dynamax_level_reset": "O nível Dynamax voltou ao mínimo do encontro: os outros jogos não guardam esse dado.",
         "form_reverted": "A forma dependia do item segurado. O item voltou para a mochila e ele voltou à forma normal, como no jogo."
       },
       "droppedTitle": "Estas mudanças feitas no Sword/Shield não puderam ser levadas:",
@@ -673,6 +674,7 @@
         "origin_not_accepted": "Nasceu num jogo mais novo, que esse jogo não conhece",
         "origin_lost_in_swsh": "Veio de outro jogo para o Sword/Shield, que não guarda onde ele foi capturado. Sem isso, ele não sai mais do Sword/Shield",
         "no_route": "O PKHeX não achou um jeito de converter",
+        "fused_form": "Está fundido com outro Pokémon. Separe os dois no jogo antes: o HOME não leva Pokémon fundido",
         "illegal_after_move": "Ficaria inválido nesse jogo: ele depende de um dado que não vai junto na mudança, ou que se perdeu num jogo por onde já passou",
         "pokemon_duplicate": "Já existe um Pokémon igual no cofre",
         "pokemon_in_trash": "Está na lixeira"
@@ -755,6 +757,7 @@
       "notes": {
         "held_item_removed": "O item segurado voltou para a mochila, como no jogo: a cópia está sem item.",
         "moves_replaced": "Golpes que o jogo novo não tem foram trocados pela sugestão do PKHeX.",
+        "dynamax_level_reset": "O nível Dynamax voltou ao mínimo do encontro: os outros jogos não guardam esse dado.",
         "form_reverted": "A forma dependia do item segurado. O item voltou para a mochila e ele voltou à forma normal, como no jogo."
       },
       "refusal": {
@@ -764,6 +767,7 @@
         "species_not_in_game": "Essa espécie (ou forma) não existe nesse jogo",
         "origin_not_accepted": "Este Pokémon nasceu num jogo mais novo, que esse jogo não conhece. Ele não pode ir para lá.",
         "origin_lost_in_swsh": "Este Pokémon veio de outro jogo para o Sword/Shield, que não guarda onde ele foi capturado. Sem isso, ele não sai mais do Sword/Shield.",
+        "fused_form": "Está fundido com outro Pokémon. Separe os dois no jogo antes: o HOME não leva Pokémon fundido",
         "illegal_after_move": "Este Pokémon ficaria inválido nesse jogo: ele depende de um dado que não vai junto na mudança, ou que se perdeu num jogo por onde já passou.",
         "vc_celebi": "Só o Celebi do evento do Crystal do Virtual Console (nível 30 ou mais) passa pelo Poké Transporter",
         "vc_dizzy_punch": "Esqueça o Dizzy Punch antes (o Poké Transporter recusa os Pokémon do Ovo Estranho com esse golpe)",

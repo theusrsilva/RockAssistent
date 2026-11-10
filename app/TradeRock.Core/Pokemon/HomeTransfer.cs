@@ -28,6 +28,9 @@ public sealed record HomeTransferResult(PKM? Pokemon, string? Refusal, IReadOnly
 /// - forma que depende do item segurado (Giratina, Arceus, Silvally...) volta à forma normal quando o item fica para
 ///   trás na conversão, como no HOME (nota "form_reverted");
 /// - os golpes de "relembrar" que o formato do meio do caminho não guarda voltam a ser os do encontro;
+/// - o nível Dynamax, que só o Sword/Shield guarda, volta ao mínimo do encontro (raid, Max Lair) na volta para lá
+///   (nota "dynamax_level_reset");
+/// - Pokémon fundido (Kyurem, Necrozma, Calyrex) não vai: "fused_form", como no HOME;
 /// - um Pokémon válido nunca sai inválido: se, depois dos ajustes, o PKHeX reprova o resultado (dados do jogo de
 ///   origem que o formato anterior não guarda, origem que o destino não reconhece), a recusa é
 ///   "illegal_after_move" (ou "origin_not_accepted", se nasceu num jogo mais novo que o destino). Quem já era
@@ -46,6 +49,9 @@ public static class HomeTransfer
 
     /// <summary>Recusa quando o formato do Sword/Shield já não guarda os dados de origem do Pokémon.</summary>
     public const string OriginLostInSwshRefusal = "origin_lost_in_swsh";
+
+    /// <summary>Recusa de Pokémon fundido (Kyurem, Necrozma, Calyrex): o HOME só leva depois de separar.</summary>
+    public const string FusedForm = "fused_form";
 
     /// <summary>
     /// Recusa quando o Pokémon era válido e sairia inválido no destino: a conversão não leva algum dado que o jogo
@@ -151,6 +157,24 @@ public static class HomeTransfer
             pk.RefreshChecksum();
             la = new LegalityAnalysis(pk);
         }
+        // Nível Dynamax: só o Sword/Shield guarda. Quem saiu e volta chega com 0, e o encontro de raid ou de Max Lair
+        // exige um mínimo. Com 0 o PKHeX nem reconhece o encontro, então o mínimo é o menor nível que ele aceita
+        // (é o do próprio encontro, não é inventado); o que passava dele se perdeu.
+        if (!Accepted(la, pk) && pk is PK8 { DynamaxLevel: 0, SWSH: true } && source is not PK8)
+        {
+            for (byte level = 1; level <= 10; level++)
+            {
+                var raised = (PK8)pk.Clone();
+                raised.DynamaxLevel = level;
+                raised.RefreshChecksum();
+                var check = new LegalityAnalysis(raised);
+                if (!Accepted(check, raised))
+                    continue;
+                (pk, la) = (raised, check);
+                notes.Add("dynamax_level_reset");
+                break;
+            }
+        }
         // Golpe que o jogo novo não tem: os jogos do HOME trocam os golpes; fica a sugestão do PKHeX.
         if (!Accepted(la, pk) && la.Info.Moves.Any(m => !m.Valid))
         {
@@ -212,6 +236,9 @@ public static class HomeTransfer
             return "home_no_destination";
         if (source.IsEgg)
             return "egg";
+        // Kyurem, Necrozma e Calyrex fundidos: o HOME não leva; é preciso separar no jogo antes (decisão do autor).
+        if (FormInfo.IsFusedForm(source.Species, source.Form, source.Format))
+            return FusedForm;
         if (source is PK3 && source.HeldItem != 0)
             return "frlg_held_item";
         if (source is PK3 && source.Moves.Any(HiddenMoves3.Contains))
