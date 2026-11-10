@@ -719,7 +719,16 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
     Sword/Shield e o BDSP o PKHeX converte, mas não consegue analisar; para o Scarlet/Violet e o Arceus devolve
     `IncompatibleSpecies`). O que conta é o jogo em que nasceu, não o formato de agora: um nascido no Sword que
     foi ao Z-A volta para o Sword/Shield e o BDSP. Do formato do Z-A para o Scarlet/Violet e o Arceus o PKHeX não
-    converte nenhuma origem: aí a recusa é `no_route`.
+    converte nenhuma origem: aí a recusa é `no_route`;
+  - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá (nota de
+    10/11/2026): recusa `origin_lost_in_swsh`. O Sword/Shield não conhece esses jogos, então a conversão do PKHeX
+    para o PK8 grava a versão como Sword ou Shield, o local de encontro como um código do HOME (59996 a 60000,
+    `LocationsHOME`), o local do ovo como 65534 e, no Arceus, a Poké Ball no lugar da bola original. O PK8 não
+    guarda os dados de verdade (o HOME guarda do lado dele), e a conversão seguinte levava esses códigos para o
+    outro formato, onde o PKHeX não acha encontro (`EncInvalid`, `BallEncMismatch`): o segundo mover saía ilegal.
+    Refazer a origem seria inventar local, ovo e bola, então o mover e o "Adaptar para…" recusam. Nascidos no
+    Sword/Shield, no FRLG e no Let's Go seguem viagem. A tela não oferece o "Copiar para ser válido" nessa recusa
+    (fica para o autor decidir).
 
   O registro do cofre é o mesmo: id, caixa, etiquetas e histórico.
 - **Rastreador do HOME.**
