@@ -395,7 +395,9 @@ public sealed class MultiGameApiTests : IAsyncLifetime
         var swsh = destinations.EnumerateArray().Single(d => d.GetProperty("game").GetString() == "swsh");
         Assert.Equal(JsonValueKind.Null, swsh.GetProperty("refusal").ValueKind);
 
-        await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 4321 });
+        // SID até 4294: o ID de 32 bits é SID × 1.000.000 + TID (4321 não cabe, e a rota recusaria).
+        var trainer = await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 1234 });
+        trainer.EnsureSuccessStatusCode();
         var moved = await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/transfer", new { game = "swsh" });
         moved.EnsureSuccessStatusCode();
         var pokemon = (await moved.Content.ReadFromJsonAsync<JsonElement>()).GetProperty("pokemon");

@@ -181,7 +181,7 @@ public sealed class GameCopyApiTests : IAsyncLifetime
     {
         var born = await GameCopyTests.BornAsync(TradeGame.LegendsZA, 25, 30);
         var id = await UploadAsync(born.Data!, "pikachu.pa9");
-        await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 1234 });
+        (await _client.PutAsJsonAsync("/api/settings/my-trainer?game=swsh", new { name = "Treinadora", tid = 654321, sid = 1234 })).EnsureSuccessStatusCode();
         var before = (await Json(await _client.GetAsync("/api/vault/pokemon"))).GetArrayLength();
 
         var copied = await Json(await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/copy-for-game", new { game = "swsh", language = "en" }));
@@ -207,6 +207,31 @@ public sealed class GameCopyApiTests : IAsyncLifetime
         var original = await Json(await _client.GetAsync($"/api/pokemon/{id}"));
         Assert.Equal("za", original.GetProperty("family").GetString());
         Assert.Equal(before + 1, (await Json(await _client.GetAsync("/api/vault/pokemon"))).GetArrayLength());
+    }
+
+    [Fact]
+    public async Task Nascido_no_za_pela_api_destino_recusado_mover_recusado_e_copia_feita()
+    {
+        // O caminho da tela: a lista de destinos recusa pela origem (é o que mostra o botão), mover é recusado sem
+        // erro interno, e a cópia nasce no Sword/Shield.
+        var born = await GameCopyTests.BornAsync(TradeGame.LegendsZA, 25, 30);
+        var id = await UploadAsync(born.Data!, "pikachu.pa9");
+
+        var destinations = await Json(await _client.GetAsync($"/api/vault/pokemon/{id}/destinations"));
+        string? Refusal(string game) => destinations.EnumerateArray().Single(d => d.GetProperty("game").GetString() == game).GetProperty("refusal").GetString();
+        Assert.Equal("origin_not_accepted", Refusal("swsh"));
+        Assert.Equal("origin_not_accepted", Refusal("bdsp"));
+        Assert.Equal("origin_not_accepted", Refusal("sv"));
+        Assert.Equal("same_game", Refusal("za"));
+
+        var moved = await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/transfer", new { game = "swsh" });
+        Assert.Equal(HttpStatusCode.BadRequest, moved.StatusCode);
+        Assert.Contains("origin_not_accepted", await moved.Content.ReadAsStringAsync());
+
+        var copied = await Json(await _client.PostAsJsonAsync($"/api/vault/pokemon/{id}/copy-for-game", new { game = "swsh", language = "pt-BR" }));
+        Assert.Equal("swsh", copied.GetProperty("pokemon").GetProperty("family").GetString());
+        Assert.NotEqual("illegal", copied.GetProperty("pokemon").GetProperty("legality").GetString());
+        Assert.Equal("za", (await Json(await _client.GetAsync($"/api/pokemon/{id}"))).GetProperty("family").GetString());
     }
 
     [Fact]
