@@ -1315,3 +1315,35 @@ desenvolvedor da Apple nem notarização); só **Apple Silicon** (M1 ou mais nov
 - **Não verificado:** nada disso rodou num Mac ainda (nem a janela do Photino com o WebKit do macOS, o ESP32, o
   Gatekeeper com o app ad-hoc, a atualização, o modo servidor nem o `ioreg`). O primeiro teste de verdade é o CI
   `macos` e depois o roteiro de [docs/macos-teste.md](macos-teste.md).
+
+## D36. "Copiar para ser válido no jogo": cópia nascida no jogo de destino
+
+Um Pokémon **nascido** num jogo mais novo (ex.: Legends: Z-A) não pode ser convertido para um jogo mais antigo (ex.:
+Sword/Shield), mesmo quando a espécie existe lá: o PKHeX não tem regra para essa origem, e o "Mover para outro jogo"
+(D22) recusa o destino com `origin_not_accepted`. Decisão do autor (10/11/2026): nesse caso a tela oferece o botão
+**"Copiar para ser válido no {jogo}"**.
+
+- **É cópia, não conversão.** Nasce um Pokémon novo no jogo de destino, pelo construtor (`GameCopy` sobre o
+  `PokemonBuilder`, AutoMod). O encontro (local, nível e data) é um encontro real do jogo de destino, escolhido pelo
+  AutoMod; o nível de encontro nunca passa do nível atual. A pessoa tem que clicar no botão e confirmar numa tela que
+  explica isso em linguagem simples.
+- **O original fica** onde está, sem mudar. A cópia entra na Caixa de entrada (como no "Adaptar", D34), com origem
+  "criado".
+- **Treinador:** o "Meu treinador" do jogo de destino (por conta no modo servidor); sem ele, o treinador padrão.
+- **O que é copiado** (o que o `PokemonSpec` permite): espécie, forma, shiny, natureza, habilidade, gênero, IVs, EVs,
+  nível, apelido, bola, item (se existir no destino; o Let's Go e o Arceus não têm item) e os golpes que valem no
+  destino; os lugares vagos ficam com a sugestão do construtor. O que não deu para copiar igual volta em `notes`
+  (`moves_replaced`, `item_removed`, `ball_changed`, `ability_changed`, `nature_changed`, `ivs_changed`, `evs_changed`,
+  `nickname_removed`, `language_changed`).
+- **Fica de fora** (o `PokemonSpec` não tem): menta (natureza dos atributos), Hyper Training, Tera Type, nível
+  Dynamax/Gigantamax, alfa, fitas e marcas, memórias, amizade, PP Ups, tamanho, experiência além do nível.
+- **Recusa** com código estável: `same_game`, `egg`, `species_not_in_game`, `home_no_destination` (Gen 1, 2 e 4 a 7:
+  o caminho é o "Adaptar"), `copy_exists` e `copy_not_possible` (com `reason`: `shiny`, `gender`, `level`,
+  `level_below_minimum`, `species_unobtainable`, `origin`, `trainer`, `combination`, `generation_failed`...). A cópia só
+  é aceita se o `LegalityReporter` der legal ou não verificável, se a versão de origem for do jogo de destino e se
+  espécie, forma, nível, shiny, gênero e treinador saírem como pedidos.
+- **API:** `POST /api/vault/pokemon/{id}/copy-for-game` com `{ game, language }`; devolve `pokemon`, `notes`, `met`
+  (`location`, `level`, `type`, `version`, `ball`) e `legality`. A rota não depende do `origin_not_accepted`: confere
+  por conta própria. Vale no modo servidor como o resto do cofre (cofre e "Meu treinador" da conta).
+- **Boxes (saves por pasta):** a tela não lista destinos (arrasta e solta entre saves), então não ganhou o botão; a
+  recusa aparece com o mesmo texto. Copiar a partir de um save: guarde no cofre e copie de lá.

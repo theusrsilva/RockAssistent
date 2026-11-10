@@ -236,6 +236,34 @@ public sealed class PokemonStore(IDbContextFactory<TradeRockDb> dbFactory, AppPa
         return (result.Pokemon, adapted.Notes, adapted.Pokemon);
     }
 
+    /// <summary>
+    /// "Copiar para ser válido no jogo" (D36, <see cref="GameCopy"/>): cria um Pokémon novo, nascido no jogo de destino,
+    /// com o que dá para copiar do original. O original continua no cofre e a cópia entra na Caixa de entrada. Recusa
+    /// com <see cref="GameCopyException"/>; "copy_exists" quando a mesma cópia já está no cofre.
+    /// </summary>
+    /// <param name="trainer">O "Meu treinador" do jogo de destino, com os números como o jogo mostra.</param>
+    public async Task<(StoredPokemon Pokemon, GameCopyResult Copy)> CopyForGameAsync(
+        Guid id, GameFamily to, TrainerSpec trainer, string language, CancellationToken ct)
+    {
+        if (await GetAsync(id, ct) is not { } stored)
+            throw new GameCopyException("pokemon_not_found");
+        if (stored.DeletedAt is not null)
+            throw new GameCopyException("pokemon_in_trash");
+        // Gen 1, 2 e 4 a 7 vão para a frente pelo "Adaptar" (AdaptAsync).
+        if (stored.Family is null)
+            throw new GameCopyException("home_no_destination");
+
+        var source = PokemonReader.ToEntity(await ReadDataAsync(stored, ct), stored.Format);
+        var copy = await GameCopy.CreateAsync(source, stored.Family, GameCatalog.Get(to), trainer, language, ct);
+        if (!copy.Ok)
+            throw new GameCopyException(copy.Refusal ?? "copy_not_possible", copy.Reason);
+
+        var result = await ImportAsync(copy.Build!.Data!, PokemonOrigin.Created, null, ct, to);
+        if (!result.Created && !result.Restored)
+            throw new GameCopyException("copy_exists");
+        return (result.Pokemon, copy);
+    }
+
     /// <summary>Destinos de "Adaptar" (formatos mais novos), com o caminho e o motivo de cada recusa.</summary>
     public async Task<IReadOnlyList<AdaptOption>> AdaptOptionsAsync(StoredPokemon pokemon, CancellationToken ct) =>
         TransferChain.Options(PokemonReader.ToEntity(await ReadDataAsync(pokemon, ct), pokemon.Format), pokemon.Format);
