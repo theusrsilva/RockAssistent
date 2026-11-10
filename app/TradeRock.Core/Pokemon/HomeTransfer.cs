@@ -21,7 +21,9 @@ public sealed record HomeTransferResult(PKM? Pokemon, string? Refusal, IReadOnly
 /// - golpes que o jogo novo não tem são trocados pela sugestão do PKHeX, como os jogos fazem;
 /// - o jogo de destino tem que aceitar a origem: quando a espécie existe lá, mas o PKHeX não converte ou não consegue
 ///   analisar o resultado, a recusa é "origin_not_accepted" se o Pokémon nasceu num jogo mais novo que o destino
-///   (hoje, os nascidos no Legends: Z-A) e "no_route" nos outros casos.
+///   (hoje, os nascidos no Legends: Z-A) e "no_route" nos outros casos;
+/// - quem chegou ao Sword/Shield vindo do BDSP, do Arceus ou do Scarlet/Violet não sai mais de lá
+///   ("origin_lost_in_swsh", ver <see cref="OriginLostInSwsh"/>).
 /// <see cref="Destinations"/> ensaia a mesma conversão de <see cref="Move"/>: um destino só aparece como "pode" se
 /// mover der certo. Nenhuma exceção do PKHeX sai daqui: vira recusa.
 /// O rastreador do HOME fica vazio: o HOME recusa um inventado, e os jogos não o conferem.
@@ -33,6 +35,19 @@ public static class HomeTransfer
 
     /// <summary>Recusa quando a espécie existe no destino, mas o jogo de destino não aceita a origem do Pokémon.</summary>
     public const string OriginNotAccepted = "origin_not_accepted";
+
+    /// <summary>Recusa quando o formato do Sword/Shield já não guarda os dados de origem do Pokémon.</summary>
+    public const string OriginLostInSwshRefusal = "origin_lost_in_swsh";
+
+    /// <summary>
+    /// Pokémon no formato do Sword/Shield que nasceu no BDSP, no Arceus ou no Scarlet/Violet. O Sword/Shield não
+    /// conhece esses jogos: na ida, o conversor do PKHeX (que segue o HOME) grava a versão de origem como Sword ou
+    /// Shield, troca o local de encontro por um código do HOME (59996 a 60000, <see cref="LocationsHOME"/>), o local
+    /// do ovo por 65534 e a bola do Arceus pela Poké Ball. O PK8 não guarda os dados originais, e a conversão seguinte
+    /// leva os códigos do HOME para o outro formato, onde nenhum encontro bate (EncInvalid, BallEncMismatch). Sem o
+    /// local, o ovo e a bola de verdade não há como refazer a origem sem inventar: o Pokémon fica no Sword/Shield.
+    /// </summary>
+    public static bool OriginLostInSwsh(PKM pk) => pk is PK8 && LocationsHOME.IsLocationSWSH(pk.MetLocation);
 
     /// <summary>
     /// Jogos para onde o Pokémon pode ir (código de recusa por jogo; null = pode). Cada destino é ensaiado com a mesma
@@ -134,6 +149,8 @@ public static class HomeTransfer
             return "frlg_hm_move";
         if (!to.HasSpecies(source.Species, source.Form))
             return "species_not_in_game";
+        if (OriginLostInSwsh(source))
+            return OriginLostInSwshRefusal;
         return null;
     }
 

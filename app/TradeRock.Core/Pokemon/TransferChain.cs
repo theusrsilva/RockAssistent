@@ -204,6 +204,9 @@ public static class TransferChain
                 return (code, step.ToString());
             if (!VaultFormats.Get(format).HasSpecies(source.Species, source.Form))
                 return ("species_not_in_game", step.ToString());
+            // Chegou ao Sword/Shield vindo de um jogo que ele não conhece: os dados de origem ficaram no HOME.
+            if (step == TransferStep.Home && HomeTransfer.OriginLostInSwsh(source))
+                return (HomeTransfer.OriginLostInSwshRefusal, step.ToString());
         }
         return (null, null);
     }
