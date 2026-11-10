@@ -660,6 +660,7 @@
       "title": "Create a copy for {{game}}",
       "warnTitle": "This is a copy, not the same Pokémon",
       "warn": "{{game}} does not accept Pokémon born in a newer game, so {{name}} cannot be moved there. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
+      "warnNoRoute": "There is no way to convert {{name}} to {{game}}, so it cannot be moved there. What can be done is to create a new Pokémon that looks like it and is born in {{game}}.",
       "keepsOriginal": "{{name}} stays where it is, unchanged.",
       "bornThere": "The copy is a new Pokémon: its met location, met level and met date come from {{game}}, not from the original.",
       "trainer": "The copy's trainer is your \"My trainer\" for {{game}}.",

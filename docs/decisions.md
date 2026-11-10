@@ -1345,5 +1345,8 @@ Sword/Shield), mesmo quando a espécie existe lá: o PKHeX não tem regra para e
 - **API:** `POST /api/vault/pokemon/{id}/copy-for-game` com `{ game, language }`; devolve `pokemon`, `notes`, `met`
   (`location`, `level`, `type`, `version`, `ball`) e `legality`. A rota não depende do `origin_not_accepted`: confere
   por conta própria. Vale no modo servidor como o resto do cofre (cofre e "Meu treinador" da conta).
+- **Também no "sem caminho"** (decisão do autor, 10/11/2026): o botão aparece ainda quando a recusa é `no_route`
+  (a espécie existe no destino, mas o PKHeX não converte; por exemplo do formato do Z-A para o Scarlet/Violet ou o
+  Arceus). A confirmação usa um texto próprio, sem falar em origem.
 - **Boxes (saves por pasta):** a tela não lista destinos (arrasta e solta entre saves), então não ganhou o botão; a
   recusa aparece com o mesmo texto. Copiar a partir de um save: guarde no cofre e copie de lá.

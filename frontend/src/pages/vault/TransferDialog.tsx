@@ -23,7 +23,8 @@ export interface GameCopyResult {
  * Mover um Pokémon para outro jogo, como o Pokémon HOME faz (Entrega 14d). O registro do cofre continua o mesmo; o
  * "Meu treinador" do jogo de destino passa a ser o treinador atual.
  *
- * Quando o jogo de destino não aceita a origem ("origin_not_accepted": nasceu num jogo mais novo), a linha oferece
+ * Quando o jogo de destino não aceita a origem ("origin_not_accepted": nasceu num jogo mais novo) ou não há conversão
+ * ("no_route": por exemplo do formato do Z-A para o Scarlet/Violet), a linha oferece
  * "Copiar para ser válido no jogo" (D36): depois de uma confirmação, nasce um Pokémon NOVO no jogo de destino, com o
  * "Meu treinador" de lá. O original fica; a cópia entra na Caixa de entrada.
  */
@@ -87,6 +88,7 @@ export function TransferDialog({
   if (copyTo) {
     const game = gameByFamily(copyTo).name
     const name = pokemon.nickname || pokemon.speciesName
+    const noRoute = destinations?.find((d) => d.game === copyTo)?.refusal === 'no_route'
     return (
       <Modal
         title={t('vault.copy.title', { game })}
@@ -140,7 +142,7 @@ export function TransferDialog({
             <>
               <Callout tone="amber" icon="warning" className="text-[13px]">
                 <b>{t('vault.copy.warnTitle')}</b>
-                <span className="mt-1 block">{t('vault.copy.warn', { name, game })}</span>
+                <span className="mt-1 block">{t(noRoute ? 'vault.copy.warnNoRoute' : 'vault.copy.warn', { name, game })}</span>
               </Callout>
               <ul className="list-disc pl-5 text-[13.5px]">
                 <li>{t('vault.copy.keepsOriginal', { name })}</li>
@@ -183,15 +185,16 @@ export function TransferDialog({
         {destinations === null && <p className="text-muted">{t('common.loading')}</p>}
         <div className="flex flex-col gap-1.5" role="radiogroup">
           {others.map((d) =>
-            d.refusal === 'origin_not_accepted' ? (
-              // O jogo não aceita a origem: não dá para mover, mas dá para criar uma cópia nascida lá (com confirmação).
+            d.refusal === 'origin_not_accepted' || d.refusal === 'no_route' ? (
+              // O jogo não aceita a origem, ou o PKHeX não converte: não dá para mover, mas dá para criar uma cópia
+              // nascida lá (com confirmação). Nos dois casos a espécie existe no jogo de destino.
               <div key={d.game} className="flex flex-col gap-2 rounded-lg border border-line px-3 py-2">
                 <div className="flex items-center gap-2.5">
                   <Icon name="block" className="text-[20px] text-muted" />
                   <span className="flex-1">
                     <b>{gameByFamily(d.game).name}</b>
                     <span className="block text-[12.5px] text-muted">
-                      {t('vault.transfer.refusal.origin_not_accepted')}
+                      {t(`vault.transfer.refusal.${d.refusal}`)}
                     </span>
                   </span>
                 </div>
