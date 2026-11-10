@@ -18,7 +18,12 @@ public sealed record HomeTransferResult(PKM? Pokemon, string? Refusal, IReadOnly
 /// - do FireRed/LeafGreen, só sem item segurado e sem golpe de HM (Pal Park e Poké Transfer recusam);
 /// - a espécie (e a forma) tem que existir no jogo de destino;
 /// - o treinador de destino vira o treinador atual (o HOME entrega no save para onde move);
-/// - golpes que o jogo novo não tem são trocados pela sugestão do PKHeX, como os jogos fazem.
+/// - golpes que o jogo novo não tem são trocados pela sugestão do PKHeX, como os jogos fazem;
+/// - o jogo de destino tem que aceitar a origem: quando a espécie existe lá, mas o PKHeX não converte ou não consegue
+///   analisar o resultado, a recusa é "origin_not_accepted" se o Pokémon nasceu num jogo mais novo que o destino
+///   (hoje, os nascidos no Legends: Z-A) e "no_route" nos outros casos.
+/// <see cref="Destinations"/> ensaia a mesma conversão de <see cref="Move"/>: um destino só aparece como "pode" se
+/// mover der certo. Nenhuma exceção do PKHeX sai daqui: vira recusa.
 /// O rastreador do HOME fica vazio: o HOME recusa um inventado, e os jogos não o conferem.
 /// </summary>
 public static class HomeTransfer
@@ -26,12 +31,22 @@ public static class HomeTransfer
     /// <summary>HMs da Gen 3: Cut, Fly, Surf, Strength, Waterfall, Flash, Rock Smash e Dive.</summary>
     private static readonly HashSet<ushort> HiddenMoves3 = [15, 19, 57, 70, 127, 148, 249, 291];
 
-    /// <summary>Jogos para onde o Pokémon pode ir (código de recusa por jogo; null = pode).</summary>
+    /// <summary>Recusa quando a espécie existe no destino, mas o jogo de destino não aceita a origem do Pokémon.</summary>
+    public const string OriginNotAccepted = "origin_not_accepted";
+
+    /// <summary>
+    /// Jogos para onde o Pokémon pode ir (código de recusa por jogo; null = pode). Cada destino é ensaiado com a mesma
+    /// conversão de <see cref="Move"/> (o treinador não muda o resultado: usa-se um neutro do jogo de destino).
+    /// </summary>
     public static IReadOnlyDictionary<GameFamily, string?> Destinations(PKM source, GameFamily from)
     {
         var result = new Dictionary<GameFamily, string?>();
         foreach (var game in GameCatalog.All)
-            result[game.Family] = game.Family == from ? "same_game" : Refusal(source, game);
+        {
+            result[game.Family] = game.Family == from
+                ? "same_game"
+                : Move(source, game, new SimpleTrainerInfo(GameCatalog.ToVersion(game.Versions[0]))).Refusal;
+        }
         return result;
     }
 
@@ -39,10 +54,22 @@ public static class HomeTransfer
     {
         if (Refusal(source, to) is { } refusal)
             return new HomeTransferResult(null, refusal, []);
+        try
+        {
+            return Convert(source, to, owner);
+        }
+        catch (Exception e) when (e is not OutOfMemoryException)
+        {
+            // O PKHeX lança exceção com origens que não conhece (ex.: nascido no Z-A num formato mais antigo).
+            return new HomeTransferResult(null, ConversionRefusal(source, to), [e.GetType().Name]);
+        }
+    }
 
+    private static HomeTransferResult Convert(PKM source, SwitchGame to, ITrainerInfo owner)
+    {
         var pk = EntityConverter.ConvertToType(source.Clone(), to.EntityType, out var result);
         if (pk is null)
-            return new HomeTransferResult(null, "no_route", [result.ToString()]);
+            return new HomeTransferResult(null, ConversionRefusal(source, to), [result.ToString()]);
 
         var notes = new List<string>();
         if (pk is IHandlerUpdate handler)
@@ -53,6 +80,10 @@ public static class HomeTransfer
         pk.RefreshChecksum();
 
         var la = new LegalityAnalysis(pk);
+        // Parsed falso: o PKHeX converteu, mas a análise quebrou por dentro (origem que o formato não conhece).
+        // Seguir daqui lança exceção nos golpes e deixa no cofre um Pokémon que nenhuma tela consegue analisar.
+        if (!la.Parsed)
+            return new HomeTransferResult(null, ConversionRefusal(source, to), ["analysis_failed"]);
         bool Accepted(LegalityAnalysis check, PKM entity) => check.Valid || LegalityReporter.OnlyHomeTrackerMissing(entity, check);
         // O Sword/Shield quer um Pokémon de outro jogo com treinador atual, mesmo que seja o próprio dono.
         if (!Accepted(la, pk) && pk.CurrentHandler == 0)
@@ -75,10 +106,20 @@ public static class HomeTransfer
             pk.SetRelearnMoves(new LegalityAnalysis(pk));
             Permit(pk);
             pk.RefreshChecksum();
-            la = new LegalityAnalysis(pk);
             notes.Add("moves_replaced");
         }
         return new HomeTransferResult(pk, null, notes);
+    }
+
+    /// <summary>
+    /// Código da recusa quando a conversão falha com a espécie presente no destino: a origem (o jogo em que o Pokémon
+    /// nasceu, não o formato de agora) é de um jogo do catálogo mais novo que o destino, ou não há caminho.
+    /// O catálogo está na ordem de lançamento.
+    /// </summary>
+    private static string ConversionRefusal(PKM source, SwitchGame to)
+    {
+        var origin = GameCatalog.All.FirstOrDefault(g => g.Versions.Any(v => GameCatalog.ToVersion(v) == source.Version));
+        return origin is not null && origin.Family > to.Family ? OriginNotAccepted : "no_route";
     }
 
     private static string? Refusal(PKM source, SwitchGame to)

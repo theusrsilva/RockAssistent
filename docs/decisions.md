@@ -712,7 +712,14 @@ sprites até a Gen 9, cofre único com filtro, legalidade que avisa sem bloquear
   - do FRLG, só sem item e sem HM;
   - a espécie e a forma precisam existir no destino;
   - o "Meu treinador" do destino vira o treinador atual;
-  - golpe que o destino não tem é trocado pela sugestão do PKHeX, com as marcas de TM/TR.
+  - golpe que o destino não tem é trocado pela sugestão do PKHeX, com as marcas de TM/TR;
+  - o destino precisa aceitar a origem (nota de 10/11/2026). A lista de destinos ensaia a mesma conversão do mover,
+    então só mostra "pode" quando mover dá certo, e nenhuma exceção do PKHeX escapa. Com o PKHeX.Core 26.8.26, um
+    Pokémon nascido no Legends: Z-A não vai para nenhum jogo mais antigo: recusa `origin_not_accepted` (para o
+    Sword/Shield e o BDSP o PKHeX converte, mas não consegue analisar; para o Scarlet/Violet e o Arceus devolve
+    `IncompatibleSpecies`). O que conta é o jogo em que nasceu, não o formato de agora: um nascido no Sword que
+    foi ao Z-A volta para o Sword/Shield e o BDSP. Do formato do Z-A para o Scarlet/Violet e o Arceus o PKHeX não
+    converte nenhuma origem: aí a recusa é `no_route`.
 
   O registro do cofre é o mesmo: id, caixa, etiquetas e histórico.
 - **Rastreador do HOME.**

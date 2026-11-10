@@ -736,6 +736,7 @@
         "no_route": "There is no official route to that game",
         "lgpe_no_receive": "Let's Go doesn't receive Pokémon from other games",
         "species_not_in_game": "That species (or form) doesn't exist in that game",
+        "origin_not_accepted": "This Pokémon was born in a newer game that this game doesn't know. It can't go there.",
         "vc_celebi": "Only the Crystal Virtual Console event Celebi (level 30 or higher) goes through Poké Transporter",
         "vc_dizzy_punch": "Forget Dizzy Punch first (Poké Transporter refuses Odd Egg Pokémon with that move)",
         "vc_mew_event": "Only the Virtual Console event Mew goes through Poké Transporter",

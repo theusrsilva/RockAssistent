@@ -736,6 +736,7 @@
         "no_route": "Não há caminho oficial até esse jogo",
         "lgpe_no_receive": "O Let's Go não recebe Pokémon de outros jogos",
         "species_not_in_game": "Essa espécie (ou forma) não existe nesse jogo",
+        "origin_not_accepted": "Este Pokémon nasceu num jogo mais novo, que esse jogo não conhece. Ele não pode ir para lá.",
         "vc_celebi": "Só o Celebi do evento do Crystal do Virtual Console (nível 30 ou mais) passa pelo Poké Transporter",
         "vc_dizzy_punch": "Esqueça o Dizzy Punch antes (o Poké Transporter recusa os Pokémon do Ovo Estranho com esse golpe)",
         "vc_mew_event": "Só o Mew do evento do Virtual Console passa pelo Poké Transporter",
