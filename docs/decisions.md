@@ -1427,3 +1427,62 @@ original na saída.
   original (`PokemonStore.DeleteUnusedFilesAsync`, em todos os cofres: mover, editar, esvaziar a lixeira e apagar
   conta). O original sai junto quando o registro é apagado de vez. A exportação entrega o arquivo atual; o cofre não
   tem backup próprio. Vale no modo servidor como o resto do cofre (por conta).
+
+## D38. Pokédex: formas na lista e coleção ("tenho")
+
+Decisões do autor (12/11/2026):
+
+- **Lista que continua sozinha.** Sem o botão "Mostrar mais": a lista filtrada vem inteira numa busca
+  (`GET /api/dex/species?limit=2000`, cerca de mil linhas) e a tela mostra 60 cartões por vez, conforme o fim chega
+  perto (`IntersectionObserver`; sem ele, sobra o botão). Com a lista inteira na mão, o progresso e o filtro da coleção
+  ficam exatos.
+- **Formas regionais sempre, outras formas quando ligadas.** `?forms=true` põe as formas de Alola, Galar, Hisui e
+  Paldea cada uma numa linha logo depois da espécie, com o mesmo número (57, pelo nome da forma no PokeAPI). Só elas
+  por padrão, porque mudam o tipo. `?otherForms=true` (caixa "Outras formas", desligada por padrão) acrescenta as que se
+  guardam como estão (Rotom, Deoxys, Lycanroc, Oricorio, Minior...). Ficam sempre de fora Mega, Gigantamax, Totem, as só
+  de batalha, as fusões e as que dependem de item; essas continuam na página da espécie.
+  - Nome: "Raichu de Alola" (regra por região; em inglês "Alolan Raichu"); as outras formas levam o nome inglês da forma
+    entre parênteses.
+  - Filtro de tipo por forma. Filtro de geração: a regional conta na geração da região (Alola 7, Galar e Hisui 8,
+    Paldea 9); as outras, na da espécie.
+  - Filtro de jogo: a regional existe no jogo pela tabela do PKHeX (`IsPresentInGame`), com o índice de forma tirado da
+    lista de nomes de formas dele (`FormConverter.GetFormList`), porque o PokeAPI não tem os golpes do Legends: Z-A e a
+    ordem das formas nele não é a do PKHeX (Mega e Gigantamax entram no meio). Nos cinco jogos em que dá para comparar
+    com os golpes do PokeAPI (Sun/Moon, Let's Go, Sword/Shield, Arceus, Scarlet/Violet) as contagens batem. As outras
+    formas valem a partir do grupo de versões em que surgiram.
+- **Coleção.** Cada linha (espécie ou forma) tem duas marcações: "tenho" e "tenho shiny". Tudo pode ser marcado,
+  inclusive shiny de espécie travada (há os de evento). Fica no banco, por conta (`DexMark`, migration `DexMarks`), não
+  no navegador.
+  - **Visões:** uma coleção geral e uma por jogo (`Scope`: "" ou a chave do jogo), cada uma com as suas marcações. Na
+    tela, a coleção de um jogo anda junto com o filtro de jogo.
+  - **Cofre dinâmico:** com "Contar o que está no cofre" ligado (padrão; a escolha fica no navegador), o que está no
+    cofre conta como "tenho" sem virar marcação: é lido na hora (`GET /api/dex/collection`). Na visão de um jogo, só os
+    Pokémon do formato daquele jogo (os sete jogos do Switch; os formatos antigos só contam na geral). A forma regional
+    e as "outras formas" de um Pokémon guardado são reconhecidas pelo nome da forma no PKHeX (`DexService.ListFormId`:
+    "Alola", "Wash" e `rotom-wash`, "♀" e `meowstic-female`, "C-Red" e `minior-red`); forma que a lista não tem (Unown,
+    Vivillon, Mega) conta como a espécie. Ovos e a lixeira não contam. O que vem só do cofre aparece com o contorno tracejado.
+  - **Tela:** progresso "Você tem X de Y · Z shiny" sobre a lista filtrada e o filtro "Mostrar" (todos, os que tenho,
+    os que faltam, shiny que faltam). A página da espécie tem os mesmos botões para a forma escolhida.
+  - API: `GET /api/dex/collection?scope=` e `PUT /api/dex/collection` (`{ scope, speciesId, formId, shiny, owned }`).
+- **Formas cosméticas e fêmeas diferentes** (pedido do autor, 12/11/2026). O PokeAPI já trazia as formas cosméticas
+  (as formas de um `pokemon` além da padrão dele: letras do Unown, padrões do Vivillon, sabores do Alcremie, flores,
+  estações, cortes do Furfrou) e a marca `has_gender_differences` das espécies; o `dex.sqlite` passou a guardar as duas
+  coisas, e os sprites vieram do PokeAPI/sprites (`scripts/fetch-sprites.sh --cosmetic`: `assets/sprites/cosmetic/<id do
+  pokemon_form>.png` e `assets/sprites/female/<espécie>.png`, com os shiny).
+  - **Página da espécie:** a fileira de formas mostra também as cosméticas e a fêmea (♀), além de Mega, Gigantamax e as
+    outras, que continuam só ali. As de item (placas do Arceus, discos do Silvally e do Genesect) aparecem para
+    consulta, com o tipo, mas não entram na coleção.
+  - **Lista:** três caixas, todas desligadas por padrão: "Outras formas" (agora também flores, estações, cortes do
+    Furfrou...), "Fêmeas diferentes" (`?genderForms=true`: as 102 espécies com diferença de gênero; desde a Gen 4) e
+    "Unown, Vivillon e Alcremie" (`?manyForms=true`: 108 formas). Ficam de fora as cosméticas sem nome (Scatterbug,
+    Mothim), as só de batalha e as de item.
+  - **Ids:** as linhas que não são um `pokemon` do PokeAPI usam 100000 + id do `pokemon_form` (cosméticas) e 200000 +
+    espécie (fêmea); a rota de sprites entende os mesmos ids.
+  - **Cofre:** reconhece a letra do Unown, o padrão do Vivillon, a flor, a estação e as demais pelo nome da forma no
+    PKHeX, e a fêmea pelo gênero do Pokémon guardado. Exceção: o Alcremie guarda o creme na forma e o confeito noutro
+    campo, que o resumo do cofre não tem; conta como o do confeito de morango.
+- **Ordem das formas.** O índice de forma dos nossos encontros e treinadores (`"form"` nos JSON) e do Nuzlocke conta na
+  ordem de `DexService.PokemonForms`. As formas sem `order` no PokeAPI (as Mega do Legends: Z-A, as Gigantamax, o
+  Basculin de listra branca; 19 espécies) entravam na frente e deslocavam as outras: o Raichu de Alola dos encontros do
+  Z-A virava Mega Raichu X, o Meowth de Alola e de Galar do Scarlet/Violet e o Basculin do Arceus e do B2W2 trocavam de
+  forma. Agora elas vão para o fim (`ORDER BY is_default DESC, form_order IS NULL, form_order, id`).

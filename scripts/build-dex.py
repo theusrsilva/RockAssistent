@@ -57,12 +57,14 @@ CREATE TABLE meta(key TEXT PRIMARY KEY, value TEXT);
 CREATE TABLE languages(id INTEGER PRIMARY KEY, identifier TEXT);
 CREATE TABLE species(id INTEGER PRIMARY KEY, identifier TEXT, generation_id INTEGER, color TEXT,
   capture_rate INTEGER, base_happiness INTEGER, hatch_counter INTEGER, gender_rate INTEGER, growth_rate TEXT,
-  evolution_chain_id INTEGER, evolves_from_species_id INTEGER, genus_en TEXT, genus_ptbr TEXT);
+  evolution_chain_id INTEGER, evolves_from_species_id INTEGER, genus_en TEXT, genus_ptbr TEXT,
+  has_gender_differences INTEGER);
 CREATE TABLE species_names(species_id INTEGER, language TEXT, name TEXT);
 CREATE TABLE pokemon(id INTEGER PRIMARY KEY, species_id INTEGER, identifier TEXT, height INTEGER,
   weight INTEGER, base_experience INTEGER, is_default INTEGER, form_order INTEGER);
 CREATE TABLE pokemon_forms(id INTEGER PRIMARY KEY, pokemon_id INTEGER, identifier TEXT, form_name_en TEXT,
-  is_mega INTEGER, is_battle_only INTEGER, introduced_in_version_group INTEGER);
+  is_mega INTEGER, is_battle_only INTEGER, introduced_in_version_group INTEGER, is_default INTEGER,
+  form_identifier TEXT);
 CREATE TABLE pokemon_types(pokemon_id INTEGER, slot INTEGER, type_id INTEGER);
 CREATE TABLE types(id INTEGER PRIMARY KEY, identifier TEXT, generation_id INTEGER);
 CREATE TABLE type_efficacy(damage_type_id INTEGER, target_type_id INTEGER, damage_factor INTEGER);
@@ -229,7 +231,8 @@ def build(csv_dir, out, commit):
     insert("species", ((n(r["id"]), r["identifier"], n(r["generation_id"]), colors.get(n(r["color_id"])),
                         n(r["capture_rate"]), n(r["base_happiness"]), n(r["hatch_counter"]), n(r["gender_rate"]),
                         growth.get(n(r["growth_rate_id"])), n(r["evolution_chain_id"]),
-                        n(r["evolves_from_species_id"]), genus_en.get(n(r["id"])), genus_pt.get(n(r["id"])))
+                        n(r["evolves_from_species_id"]), genus_en.get(n(r["id"])), genus_pt.get(n(r["id"])),
+                        n(r["has_gender_differences"]))
                        for r in rows("pokemon_species")))
     insert("species_names", names)
     insert("flavor_text", ((n(r["species_id"]), n(r["version_id"]), languages[n(r["language_id"])],
@@ -243,7 +246,8 @@ def build(csv_dir, out, commit):
                         n(r["base_experience"]), n(r["is_default"]), n(r["order"])) for r in rows("pokemon")))
     form_names = english("pokemon_form_names", "pokemon_form_id", "form_name")
     insert("pokemon_forms", ((n(r["id"]), n(r["pokemon_id"]), r["identifier"], form_names.get(n(r["id"])) or None,
-                              n(r["is_mega"]), n(r["is_battle_only"]), n(r["introduced_in_version_group_id"]))
+                              n(r["is_mega"]), n(r["is_battle_only"]), n(r["introduced_in_version_group_id"]),
+                              n(r["is_default"]), r["form_identifier"] or None)
                              for r in rows("pokemon_forms")))
     insert("pokemon_types", ((n(r["pokemon_id"]), n(r["slot"]), n(r["type_id"])) for r in rows("pokemon_types")))
     insert("types", ((n(r["id"]), r["identifier"], n(r["generation_id"])) for r in rows("types")))

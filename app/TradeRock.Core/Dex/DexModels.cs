@@ -1,10 +1,28 @@
 namespace TradeRock.Core.Dex;
 
 /// <summary>Filtro da lista da Pokédex. <see cref="Type"/> é o identificador do PokeAPI ("ghost").</summary>
-public sealed record DexQuery(string? Text, string? Type, int? Generation, string? GameKey, int Offset = 0, int Limit = 100);
+/// <param name="RegionalForms">
+/// Lista também as formas regionais (Alola, Galar, Hisui, Paldea), cada uma numa linha logo depois da espécie. Só elas:
+/// mudam o tipo do Pokémon. As outras formas (Mega, Gigantamax...) ficam na página da espécie.
+/// </param>
+/// <param name="OtherForms">
+/// Lista também as outras formas que se guardam como estão (Rotom, Deoxys, Lycanroc, Oricorio...). Ficam de fora Mega,
+/// Gigantamax, Totem, as que só existem em batalha, as fusões e as que dependem de item.
+/// </param>
+/// <param name="ManyForms">Lista também as formas das espécies que têm muitas: letras do Unown, padrões do Vivillon e sabores do Alcremie.</param>
+/// <param name="GenderForms">Lista também a fêmea das espécies em que ela é diferente (♀).</param>
+public sealed record DexQuery(string? Text, string? Type, int? Generation, string? GameKey, int Offset = 0, int Limit = 100,
+    bool RegionalForms = false, bool OtherForms = false, bool ManyForms = false, bool GenderForms = false);
 
 /// <summary>Uma linha da lista. Nome em inglês; os tipos são os da forma padrão hoje.</summary>
-public sealed record SpeciesSummary(int Id, string Name, int Generation, string[] Types, int? NationalNumber);
+/// <param name="FormId">Id do <c>pokemon</c> do PokeAPI quando a linha é uma forma regional (sprite e página); null na espécie.</param>
+/// <param name="Region">Região da forma: <c>alola</c>, <c>galar</c>, <c>hisui</c> ou <c>paldea</c>.</param>
+/// <param name="FormDetail">
+/// Complemento do nome, em inglês: nas regionais, o que vem depois da região (as três raças do Tauros de Paldea); nas
+/// outras formas, o nome da forma ("Wash Rotom", "Midnight Form").
+/// </param>
+public sealed record SpeciesSummary(int Id, string Name, int Generation, string[] Types, int? NationalNumber,
+    int? FormId = null, string? Region = null, string? FormDetail = null);
 
 /// <summary>Ficha de uma espécie vista num jogo (grupo de versões).</summary>
 public sealed record SpeciesDetail(
@@ -81,7 +99,9 @@ public sealed record BaseStats(int Hp, int Attack, int Defense, int SpecialAttac
 }
 
 /// <summary>Uma forma (linha de <c>pokemon</c>): a padrão, regionais, Mega, Gigantamax...</summary>
-public sealed record SpeciesForm(int Id, string Identifier, string Name, string[] Types, BaseStats Stats, bool IsMega, bool IsDefault);
+/// <param name="Listed">A forma tem cartão próprio na lista da Pokédex (regional ou "outra forma"): dá para marcar na coleção.</param>
+public sealed record SpeciesForm(int Id, string Identifier, string Name, string[] Types, BaseStats Stats, bool IsMega, bool IsDefault,
+    bool Listed = false);
 
 public sealed record MoveDetail(int Id, string Identifier, string Name, string Type, string? Class, int? Power, int? Accuracy,
     int? Pp, int Priority, int? EffectChance, string? Effect, int Generation, bool ExistsInGame, int? MachineNumber,
@@ -132,3 +152,11 @@ public static class Requires
 
 /// <summary>O essencial de um golpe para análise de time: tipo, categoria (physical/special/status) e poder.</summary>
 public sealed record MoveBattleInfo(int Id, string Identifier, string Name, string Type, string? Class, int? Power);
+
+/// <summary>Uma marcação da coleção: a espécie (<paramref name="FormId"/> 0) ou uma forma da lista, normal ou shiny.</summary>
+public sealed record DexOwned(int SpeciesId, int FormId, bool Shiny);
+
+/// <summary>
+/// A coleção de uma visão ("" = geral; ou a chave de um jogo): o que a pessoa marcou e o que está no cofre agora.
+/// </summary>
+public sealed record DexCollection(string Scope, IReadOnlyList<DexOwned> Marks, IReadOnlyList<DexOwned> Vault);

@@ -1879,6 +1879,34 @@
     "gameFilter": "Game",
     "allGames": "All games",
     "loadMore": "Show more",
+    "otherForms": "Other forms",
+    "genderForms": "Different females",
+    "manyForms": "Unown, Vivillon and Alcremie",
+    "collection": {
+      "scope": "Collection",
+      "general": "General collection",
+      "ofGame": "{{game}} collection",
+      "show": "Show",
+      "filter": {
+        "all": "All",
+        "tenho": "The ones I have",
+        "faltam": "The ones I am missing",
+        "shiny": "Missing shiny"
+      },
+      "have": "I have it",
+      "haveShiny": "I have it shiny",
+      "fromVault": "it is in the vault",
+      "countVault": "Count what is in the vault",
+      "countVaultHelp": "With this on, Pokémon in the vault count as owned without being marked. In a game's collection, only the ones from that game's vault.",
+      "progress": "You have {{owned}} of {{total}} · {{shiny}} shiny",
+      "error": "The collection could not be loaded or saved. Try again in a moment."
+    },
+    "regional": {
+      "alola": "Alolan {{name}}",
+      "galar": "Galarian {{name}}",
+      "hisui": "Hisuian {{name}}",
+      "paldea": "Paldean {{name}}"
+    },
     "empty": "No Pokémon match these filters.",
     "error": "Couldn't load the Pokédex. Try again in a moment.",
     "notFound": "This Pokémon is not in the Pokédex.",

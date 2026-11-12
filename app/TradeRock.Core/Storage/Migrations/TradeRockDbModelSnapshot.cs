@@ -77,6 +77,39 @@ namespace TradeRock.Core.Storage.Migrations
                     b.ToTable("ActivityRecords");
                 });
 
+            modelBuilder.Entity("TradeRock.Core.Storage.DexMark", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FormId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("MarkedAt")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("OwnerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Scope")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Shiny")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SpeciesId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "Scope", "SpeciesId", "FormId", "Shiny")
+                        .IsUnique();
+
+                    b.ToTable("DexMarks");
+                });
+
             modelBuilder.Entity("TradeRock.Core.Storage.NuzlockeEvent", b =>
                 {
                     b.Property<Guid>("Id")

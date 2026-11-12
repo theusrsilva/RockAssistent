@@ -13,6 +13,10 @@ export interface SpeciesSummary {
   generation: number
   types: string[]
   nationalNumber: number | null
+  /** Só nas formas regionais da lista: id do sprite e da forma na página, a região e o complemento do nome. */
+  formId?: number | null
+  region?: 'alola' | 'galar' | 'hisui' | 'paldea' | null
+  formDetail?: string | null
 }
 
 export interface SpeciesAbility {
@@ -88,6 +92,8 @@ export interface SpeciesForm {
   stats: BaseStats
   isMega: boolean
   isDefault: boolean
+  /** A forma tem cartão na lista da Pokédex: dá para marcar na coleção. */
+  listed?: boolean
 }
 
 export interface SpeciesDetail {

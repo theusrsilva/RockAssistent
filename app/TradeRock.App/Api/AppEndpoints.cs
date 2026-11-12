@@ -29,7 +29,9 @@ public static class AppEndpoints
         });
 
         // Sprites do PokeAPI embutidos de assets/sprites (scripts/fetch-sprites.sh). "form" é o id do pokemon no PokeAPI
-        // (> 10000: Mega, regionais...). Sem o arquivo pedido, tenta: shiny da forma → forma → shiny da espécie → espécie.
+        // (> 10000: Mega, regionais...), ou os ids da lista da Pokédex (DexService): 100000 + id do pokemon_form para as
+        // formas cosméticas (Unown, Vivillon...) e 200000 + espécie para a fêmea. Sem o arquivo pedido, tenta: shiny da
+        // forma → forma → shiny da espécie → espécie.
         var assembly = typeof(AppEndpoints).Assembly;
         api.MapGet("/sprites/{species:int}", (int species, string? shiny, int? form, HttpContext context) =>
         {
@@ -39,9 +41,15 @@ public static class AppEndpoints
             var names = new List<string>(4);
             if (form is > 0)
             {
+                var (folder, id) = form switch
+                {
+                    >= TradeRock.Core.Dex.DexService.FemaleFormBase => ("female", form.Value - TradeRock.Core.Dex.DexService.FemaleFormBase),
+                    >= TradeRock.Core.Dex.DexService.CosmeticFormBase => ("cosmetic", form.Value - TradeRock.Core.Dex.DexService.CosmeticFormBase),
+                    _ => ("forms", form.Value),
+                };
                 if (wantShiny)
-                    names.Add($"sprites/forms/shiny/{form}.png");
-                names.Add($"sprites/forms/{form}.png");
+                    names.Add($"sprites/{folder}/shiny/{id}.png");
+                names.Add($"sprites/{folder}/{id}.png");
             }
             if (wantShiny)
                 names.Add($"sprites/shiny/{species}.png");
