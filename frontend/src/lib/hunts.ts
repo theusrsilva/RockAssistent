@@ -254,6 +254,36 @@ export function useGlobalHotkeyEvents(enabled: boolean, increment: (delta: numbe
   }, [enabled])
 }
 
+// ---- Somar por vez ----
+
+/** Valores do seletor "Somar por vez" do contador. */
+export const HUNT_STEPS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const stepKey = (huntId: string | undefined) => `traderock.hunt.step.${huntId ?? ''}`
+
+/** Só de 1 a 10; qualquer outra coisa vira 1. */
+export function validHuntStep(value: unknown): number {
+  const n = Number(value)
+  return Number.isInteger(n) && n >= 1 && n <= 10 ? n : 1
+}
+
+/** Quanto a hunt soma por vez, guardado neste navegador (1 sem nada guardado ou sem localStorage). */
+export function loadHuntStep(huntId: string | undefined): number {
+  try {
+    return validHuntStep(localStorage.getItem(stepKey(huntId)) ?? 1)
+  } catch {
+    return 1
+  }
+}
+
+export function saveHuntStep(huntId: string | undefined, step: number) {
+  try {
+    localStorage.setItem(stepKey(huntId), String(validHuntStep(step)))
+  } catch {
+    // Sem localStorage (janela privada): vale só enquanto a tela estiver aberta.
+  }
+}
+
 // ---- Contas e textos ----
 
 /** 1 - (1 - 1/N)^count, como ShinyOdds.Cumulative do backend. */

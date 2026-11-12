@@ -140,3 +140,13 @@ describe('shinyName', () => {
     expect(huntMethodName({ methodName: 'Método Masuda', methodNameEn: 'Masuda Method' }, 'pt-BR')).toBe('Método Masuda')
   })
 })
+
+describe('somar por vez', () => {
+  it('aceita só de 1 a 10 e cai em 1 no resto', async () => {
+    const { validHuntStep, HUNT_STEPS } = await import('./hunts')
+    expect(HUNT_STEPS).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    expect(validHuntStep('5')).toBe(5)
+    expect(validHuntStep(10)).toBe(10)
+    for (const bad of [0, 11, -3, 2.5, 'x', null, undefined]) expect(validHuntStep(bad)).toBe(1)
+  })
+})
