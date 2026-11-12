@@ -293,8 +293,49 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(0, Dex.ListFormId(80, 1, EntityContext.Gen8));
         Assert.Equal([10250, 10251, 10252], new[] { 1, 2, 3 }.Select(f => Dex.ListFormId(128, f, EntityContext.Gen9)));
         Assert.Equal(10177, Dex.ListFormId(555, 2, EntityContext.Gen8)); // Darmanitan de Galar
-        Assert.Equal(0, Dex.ListFormId(479, 2, EntityContext.Gen8)); // Rotom Wash conta como Rotom
-        Assert.Equal(0, Dex.ListFormId(201, 5, EntityContext.Gen3)); // Unown F conta como Unown
+        Assert.Equal(0, Dex.ListFormId(201, 5, EntityContext.Gen3)); // Unown F não tem linha: conta como Unown
+        Assert.Equal(0, Dex.ListFormId(6, 1, EntityContext.Gen6)); // Mega Charizard X também
+    }
+
+    [Fact]
+    public async Task Outras_formas_guardadas_caem_na_linha_delas()
+    {
+        // Cada "outra forma" da lista é achada pelo nome da forma no PKHeX, em algum formato do cofre; e o índice de
+        // forma do PKHeX de uma delas não cai em outra.
+        var others = (await Dex.ListAsync(new(null, null, null, null, 0, 2000, OtherForms: true), Ct)).Where(s => s.FormId is not null).ToList();
+        EntityContext[] contexts = [EntityContext.Gen9, EntityContext.Gen9a, EntityContext.Gen8, EntityContext.Gen8a, EntityContext.Gen7, EntityContext.Gen6];
+        var notFound = new List<string>();
+        foreach (var form in others)
+        {
+            var found = contexts.Any(c => Enumerable.Range(0, 40).Any(i => Dex.ListFormId(form.Id, i, c) == form.FormId));
+            if (!found)
+                notFound.Add($"{form.Name} ({form.FormDetail})");
+        }
+        Assert.Empty(notFound);
+        // A forma 0 do PKHeX é a espécie; só no Maushold ela é uma "outra forma" (a família de três; a de quatro é a espécie).
+        var zero = others.Select(o => o.Id).Distinct().Where(id => contexts.Any(c => Dex.ListFormId(id, 0, c) != 0)).ToList();
+        Assert.Equal([925], zero);
+        Assert.Equal(0, Dex.ListFormId(925, 1, EntityContext.Gen9));
+        Assert.Equal(others.Single(s => s.Id == 774 && s.FormDetail == "Red Core").FormId, Dex.ListFormId(774, 7, EntityContext.Gen7));
+        Assert.Equal(0, Dex.ListFormId(774, 0, EntityContext.Gen7)); // com a casca: conta como Minior
+        Assert.Equal(others.Single(s => s.Id == 678).FormId, Dex.ListFormId(678, 1, EntityContext.Gen9)); // Meowstic fêmea
+
+        Assert.Equal(others.Single(s => s.Id == 479 && s.FormDetail == "Wash Rotom").FormId, Dex.ListFormId(479, 2, EntityContext.Gen8));
+        Assert.Equal(others.Single(s => s.Id == 386 && s.FormDetail == "Attack Forme").FormId, Dex.ListFormId(386, 1, EntityContext.Gen9));
+        Assert.Equal(others.Single(s => s.Id == 745 && s.FormDetail == "Dusk Form").FormId, Dex.ListFormId(745, 2, EntityContext.Gen9));
+    }
+
+    [Fact]
+    public void Formas_sem_ordem_no_pokeapi_vao_para_o_fim()
+    {
+        // O índice de forma dos nossos encontros e treinadores conta nesta ordem: as Mega do Z-A, as Gigantamax e o
+        // Basculin de listra branca não têm ordem no PokeAPI e entravam na frente, deslocando as outras.
+        Assert.Equal(["raichu", "raichu-alola"], Dex.PokemonForms(26).Take(2));
+        Assert.Equal(["meowth", "meowth-alola", "meowth-galar"], Dex.PokemonForms(52).Take(3));
+        Assert.Equal(["basculin-red-striped", "basculin-blue-striped", "basculin-white-striped"], Dex.PokemonForms(550));
+        Assert.Equal(["charizard", "charizard-mega-x", "charizard-mega-y"], Dex.PokemonForms(6).Take(3));
+        Assert.Equal(10100, Dex.FormPokemonId(26, 1));
+        Assert.Equal(10161, Dex.FormPokemonId(52, 2));
         Assert.True(Dex.IsListed(26, 10100));
         Assert.False(Dex.IsListed(26, 10107));
         Assert.False(Dex.IsListed(99999, 0));

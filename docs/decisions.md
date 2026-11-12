@@ -1458,8 +1458,14 @@ Decisões do autor (12/11/2026):
   - **Cofre dinâmico:** com "Contar o que está no cofre" ligado (padrão; a escolha fica no navegador), o que está no
     cofre conta como "tenho" sem virar marcação: é lido na hora (`GET /api/dex/collection`). Na visão de um jogo, só os
     Pokémon do formato daquele jogo (os sete jogos do Switch; os formatos antigos só contam na geral). A forma regional
-    de um Pokémon guardado é reconhecida pelo nome da forma no PKHeX; as outras formas contam como a espécie. Ovos e a
-    lixeira não contam. O que vem só do cofre aparece com o contorno tracejado.
+    e as "outras formas" de um Pokémon guardado são reconhecidas pelo nome da forma no PKHeX (`DexService.ListFormId`:
+    "Alola", "Wash" e `rotom-wash`, "♀" e `meowstic-female`, "C-Red" e `minior-red`); forma que a lista não tem (Unown,
+    Vivillon, Mega) conta como a espécie. Ovos e a lixeira não contam. O que vem só do cofre aparece com o contorno tracejado.
   - **Tela:** progresso "Você tem X de Y · Z shiny" sobre a lista filtrada e o filtro "Mostrar" (todos, os que tenho,
     os que faltam, shiny que faltam). A página da espécie tem os mesmos botões para a forma escolhida.
   - API: `GET /api/dex/collection?scope=` e `PUT /api/dex/collection` (`{ scope, speciesId, formId, shiny, owned }`).
+- **Ordem das formas.** O índice de forma dos nossos encontros e treinadores (`"form"` nos JSON) e do Nuzlocke conta na
+  ordem de `DexService.PokemonForms`. As formas sem `order` no PokeAPI (as Mega do Legends: Z-A, as Gigantamax, o
+  Basculin de listra branca; 19 espécies) entravam na frente e deslocavam as outras: o Raichu de Alola dos encontros do
+  Z-A virava Mega Raichu X, o Meowth de Alola e de Galar do Scarlet/Violet e o Basculin do Arceus e do B2W2 trocavam de
+  forma. Agora elas vão para o fim (`ORDER BY is_default DESC, form_order IS NULL, form_order, id`).

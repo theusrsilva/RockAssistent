@@ -90,7 +90,7 @@ public sealed class DexService(DexDatabase db)
         using var c = db.Open();
         using var cmd = Command(c, $"""
             WITH forms AS (
-                SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
+                SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order IS NULL, form_order, id) - 1 AS form
                 FROM pokemon),
             -- A raridade do PokeAPI é por sub-área e por condição. Dentro de uma condição, os slots somam.
             per_condition AS (
@@ -123,14 +123,15 @@ public sealed class DexService(DexDatabase db)
     }
 
     /// <summary>
-    /// A linha da lista da Pokédex a que um Pokémon guardado corresponde: 0 = a espécie; senão o id da forma regional.
+    /// A linha da lista da Pokédex a que um Pokémon guardado corresponde: 0 = a espécie; senão o id da forma.
     /// <paramref name="form"/> é o índice de forma do PKHeX no contexto do arquivo; o nome dele na lista de formas do
-    /// PKHeX ("Alola", "Galar", "Paldea Blaze"...) diz a região. Formas que não são regionais (Unown, Rotom, Vivillon...)
-    /// contam como a espécie.
+    /// PKHeX diz qual é: a região ("Alola", "Galar", "Paldea Blaze"...) ou, nas outras formas, o mesmo nome do
+    /// identificador do PokeAPI ("Wash" e <c>rotom-wash</c>, "Attack" e <c>deoxys-attack</c>). Forma que a lista não tem
+    /// (Unown, Vivillon, Mega...) conta como a espécie.
     /// </summary>
     public int ListFormId(int speciesId, int form, PKHeX.Core.EntityContext context)
     {
-        if (form <= 0 || !Data.RegionalForms.TryGetValue(speciesId, out var forms))
+        if (form < 0 || !Data.RegionalForms.TryGetValue(speciesId, out var forms))
             return 0;
         var names = PKHeX.Core.FormConverter.GetFormList((ushort)speciesId, Builder.BuilderData.Strings.types,
             Builder.BuilderData.Strings.forms, context);
@@ -138,12 +139,30 @@ public sealed class DexService(DexDatabase db)
             return 0;
         foreach (var region in forms.Where(f => f.Region is not null).Select(f => f.Region!).Distinct())
         {
-            if (!names[form].StartsWith(region, StringComparison.OrdinalIgnoreCase))
+            if (form == 0 || !names[form].StartsWith(region, StringComparison.OrdinalIgnoreCase))
                 continue;
             var ordinal = Enumerable.Range(0, form).Count(i => names[i].StartsWith(region, StringComparison.OrdinalIgnoreCase));
             return forms.FirstOrDefault(f => f.Region == region && f.Ordinal == ordinal)?.PokemonId ?? 0;
         }
-        return 0;
+        // Outras formas. O PKHeX escreve "♀" (meowstic-female), "C-Red" (o Minior sem a casca: minior-red; "M-Red" é com
+        // ela) e nomes curtos ("Blue" e basculin-blue-striped, "Hoenn" e pikachu-hoenn-cap): igual, ou um começa com o outro.
+        var name = names[form] switch
+        {
+            "♀" => "female",
+            "♂" => "male",
+            ['C', '-', .. var core] => Letters(core),
+            var other => Letters(other),
+        };
+        if (name.Length == 0)
+            return 0;
+        var others = forms.Where(f => f.Region is null).Select(f => (Form: f, Suffix: Letters(f.Suffix))).ToList();
+        // A forma 0 do PKHeX só é uma "outra forma" quando o nome bate inteiro (Maushold: a família de três é a 0 nele).
+        var match = others.FirstOrDefault(o => o.Suffix == name).Form
+            ?? (form == 0 ? null : others.FirstOrDefault(o => o.Suffix.StartsWith(name, StringComparison.Ordinal)
+                || name.StartsWith(o.Suffix, StringComparison.Ordinal)).Form);
+        return match?.PokemonId ?? 0;
+
+        static string Letters(string text) => new([.. text.Where(char.IsLetterOrDigit).Select(char.ToLowerInvariant)]);
     }
 
     /// <summary>A linha existe na lista: a espécie (forma 0) ou uma forma dela que a lista mostra.</summary>
@@ -153,12 +172,14 @@ public sealed class DexService(DexDatabase db)
 
     /// <summary>
     /// Identificadores do PokeAPI das formas da espécie (<c>meowth</c>, <c>meowth-alola</c>, <c>meowth-galar</c>), na ordem
-    /// em que o índice de forma dos encontros e do Nuzlocke conta (0 = a padrão).
+    /// em que o índice de forma dos encontros e do Nuzlocke conta (0 = a padrão). As formas sem ordem no PokeAPI (as Mega
+    /// do Legends: Z-A, as Gigantamax, o Basculin de listra branca) vão para o fim: na frente, deslocavam o índice das
+    /// outras (o Raichu de Alola deixava de ser a forma 1).
     /// </summary>
     public IReadOnlyList<string> PokemonForms(int speciesId)
     {
         using var c = db.Open();
-        return Strings(c, "SELECT identifier FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order, id", ("$s", speciesId));
+        return Strings(c, "SELECT identifier FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order IS NULL, form_order, id", ("$s", speciesId));
     }
 
     /// <summary>Id do <c>pokemon</c> do PokeAPI da forma (posição em <see cref="PokemonForms"/>), para o sprite; null na forma padrão ou fora da lista.</summary>
@@ -167,7 +188,7 @@ public sealed class DexService(DexDatabase db)
         if (form <= 0)
             return null;
         using var c = db.Open();
-        using var cmd = Command(c, "SELECT id FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order, id LIMIT 1 OFFSET $f",
+        using var cmd = Command(c, "SELECT id FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order IS NULL, form_order, id LIMIT 1 OFFSET $f",
             ("$s", speciesId), ("$f", form));
         return cmd.ExecuteScalar() is long id ? (int)id : null;
     }
@@ -632,7 +653,7 @@ public sealed class DexService(DexDatabase db)
     private static List<SpeciesForm> Forms(SqliteConnection c, Catalog data, SpeciesRow row, GameInfo game)
     {
         var pokemon = new List<(int Id, string Identifier, bool IsDefault)>();
-        using (var cmd = Command(c, "SELECT id, identifier, is_default FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order, id",
+        using (var cmd = Command(c, "SELECT id, identifier, is_default FROM pokemon WHERE species_id = $s ORDER BY is_default DESC, form_order IS NULL, form_order, id",
                    ("$s", row.Id)))
         using (var r = cmd.ExecuteReader())
             while (r.Read())
@@ -996,8 +1017,9 @@ public sealed class DexService(DexDatabase db)
     /// uma: 0, 1 e 2) e <paramref name="Generation"/> é a da região (Alola 7, Galar e Hisui 8, Paldea 9). Outra forma:
     /// região nula, a geração é a da espécie e ela existe a partir do grupo de versões <paramref name="IntroducedOrder"/>.
     /// </summary>
+    /// <param name="Suffix">O identificador do PokeAPI sem a espécie (<c>rotom-wash</c> → <c>wash</c>).</param>
     private sealed record RegionalForm(int PokemonId, int SpeciesId, int Ordinal, string? Region, string? Detail, int? Generation,
-        string[] Types, int IntroducedOrder = 0);
+        string[] Types, int IntroducedOrder = 0, string Suffix = "");
 
     /// <param name="Forms">Ids (<c>pokemon</c> do PokeAPI) das formas regionais que existem no jogo.</param>
     private sealed record GameInfo(string Key, int Generation, int MainGroupId, int Order,
@@ -1205,12 +1227,13 @@ public sealed class DexService(DexDatabase db)
             var regional = new Dictionary<int, List<RegionalForm>>();
             using (var cmd = Command(c, """
                 WITH forms AS (
-                    SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
+                    SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order IS NULL, form_order, id) - 1 AS form
                     FROM pokemon)
                 SELECT f.id, f.species_id, f.form, pf.form_name_en,
                        (SELECT group_concat(type_id) FROM (SELECT type_id FROM pokemon_types WHERE pokemon_id = f.id ORDER BY slot)),
-                       p.identifier, pf.is_mega, pf.is_battle_only, pf.introduced_in_version_group
+                       p.identifier, pf.is_mega, pf.is_battle_only, pf.introduced_in_version_group, s.identifier
                 FROM forms f JOIN pokemon p ON p.id = f.id JOIN pokemon_forms pf ON pf.pokemon_id = f.id
+                JOIN species s ON s.id = f.species_id
                 WHERE f.form > 0 AND pf.form_name_en IS NOT NULL
                 ORDER BY f.species_id, f.form, pf.id
                 """))
@@ -1231,7 +1254,8 @@ public sealed class DexService(DexDatabase db)
                     var list = regional.GetOrAdd(r.GetInt32(1));
                     if (list.All(x => x.PokemonId != r.GetInt32(0)))
                         list.Add(new RegionalForm(r.GetInt32(0), r.GetInt32(1), list.Count(x => x.Region == region), region, detail,
-                            region is null ? null : found.Generation, formTypes, Int(r, 8) is { } vg ? groupOrders.GetValueOrDefault(vg) : 0));
+                            region is null ? null : found.Generation, formTypes, Int(r, 8) is { } vg ? groupOrders.GetValueOrDefault(vg) : 0,
+                            identifier.StartsWith(r.GetString(9) + "-", StringComparison.Ordinal) ? identifier[(r.GetString(9).Length + 1)..] : identifier));
                 }
 
             // Quem existe em cada grupo de versões (golpes e encontros) e em cada Pokédex regional.
