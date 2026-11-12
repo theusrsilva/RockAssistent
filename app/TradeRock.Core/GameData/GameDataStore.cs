@@ -93,21 +93,35 @@ public sealed class GameDataStore
     public IReadOnlyList<OwnEncounter> Encounters(string gameKey) => _encounters.GetValueOrDefault(gameKey) ?? [];
 
     /// <summary>
-    /// Encontros da espécie no formato da ficha da Pokédex (aba "Onde achar"), uma linha por versão; nulo quando o jogo
-    /// não tem encontros próprios (vale o PokeAPI). A área vira o lugar; a chance em texto fica de fora (0); as
-    /// condições são as nossas, separadas por vírgula, mais <c>alpha</c> nos alfas.
+    /// Encontros nossos da espécie no formato da ficha da Pokédex (aba "Onde achar"), uma linha por versão. A área vira o
+    /// lugar; a chance só entra quando é porcentagem ("10%"); as condições são as nossas, separadas por vírgula, mais
+    /// <c>alpha</c> nos alfas.
     /// </summary>
-    public IReadOnlyList<EncounterInfo>? SpeciesEncounters(string gameKey, int species)
+    public IReadOnlyList<EncounterInfo> SpeciesEncounters(string gameKey, int species)
     {
-        var own = Encounters(gameKey);
-        if (own.Count == 0)
-            return null;
         var names = Areas(gameKey).ToDictionary(a => a.Id, a => a.Name);
-        return own.Where(e => e.Species == species)
+        return Encounters(gameKey).Where(e => e.Species == species)
             .SelectMany(e => e.Versions.Select(v => new EncounterInfo(v, names.GetValueOrDefault(e.Area) ?? e.Area, null, e.Method,
-                e.MinLevel, e.MaxLevel, 0,
+                e.MinLevel, e.MaxLevel, EncounterSources.Percent(e.Chance),
                 [.. (e.Conditions?.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries) ?? []),
                     .. (e.Alpha ? new[] { "alpha" } : [])])))
+            .ToList();
+    }
+
+    /// <summary>
+    /// "Onde achar" da espécie com as duas fontes juntas (<see cref="EncounterSources"/>): os do PokeAPI que continuam
+    /// valendo e os nossos, na ordem das versões do jogo.
+    /// </summary>
+    public IReadOnlyList<EncounterInfo> MergedSpeciesEncounters(string gameKey, int species, IReadOnlyList<EncounterInfo> pokeApi)
+    {
+        var own = SpeciesEncounters(gameKey, species);
+        if (own.Count == 0 && Encounters(gameKey).Count == 0)
+            return pokeApi;
+        var keep = EncounterSources.PokeApiFilter(gameKey, this);
+        var order = GameVersions.ByKey(gameKey).PokeApiVersions.ToList();
+        return pokeApi.Where(e => e.LocationId is not { } l || keep(l, e.Version, e.Method, species))
+            .Concat(own)
+            .OrderBy(e => order.IndexOf(e.Version) is var i and >= 0 ? i : int.MaxValue)
             .ToList();
     }
 

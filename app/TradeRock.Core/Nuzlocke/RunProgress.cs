@@ -184,23 +184,23 @@ public static class RunProgress
     }
 
     /// <summary>
-    /// Encontros da área, uma linha por espécie e forma. BDSP, Arceus, SV e Z-A: os nossos (<c>assets/data/encounters</c>);
-    /// os outros: os do PokeAPI pelo <c>PokeApiLocationId</c> da área, nas versões do jogo (ou só na escolhida).
+    /// Encontros da área, uma linha por espécie e forma: os nossos (<c>assets/data/encounters</c>) e os do PokeAPI pelo
+    /// <c>PokeApiLocationId</c> da área, juntados pela regra de <see cref="EncounterSources"/>, nas versões do jogo (ou só
+    /// na escolhida).
     /// </summary>
     private static async Task<IReadOnlyList<SpeciesEncounterOption>> AreaEncountersAsync(string gameKey, string? version, GameArea area,
         GameDataStore data, DexService dex, CancellationToken ct)
     {
         var rows = new List<(int Species, int Form, string Method, int Min, int Max, IReadOnlyList<string> Versions)>();
-        var own = data.Encounters(gameKey);
-        if (own.Count > 0)
+        foreach (var e in data.Encounters(gameKey).Where(e => e.Area == area.Id))
+            rows.Add((e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, e.Versions));
+        var ownOnly = EncounterSources.OwnOnly(gameKey) && data.Encounters(gameKey).Count > 0;
+        if (!ownOnly && area.PokeApiLocationId is { } location && DexDatabase.ResourceExists)
         {
-            foreach (var e in own.Where(e => e.Area == area.Id))
-                rows.Add((e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, e.Versions));
-        }
-        else if (area.PokeApiLocationId is { } location && DexDatabase.ResourceExists)
-        {
+            var keep = EncounterSources.PokeApiFilter(gameKey, data);
             foreach (var e in await dex.LocationEncountersAsync(location, gameKey, ct))
-                rows.Add((e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, [e.Version]));
+                if (keep(location, e.Version, e.Method, e.Species))
+                    rows.Add((e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, [e.Version]));
         }
 
         var order = GameVersions.ByKey(gameKey).PokeApiVersions.ToList();

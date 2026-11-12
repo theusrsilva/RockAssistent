@@ -157,6 +157,7 @@
     {"id": "ultra-space", "reason": "Ultra Space (outra dimensão, pelo Ultra Wormhole), fora do mapa de Alola"},
     {"id": "ultra-megalopolis", "reason": "Ultra Megalopolis (outra dimensão, pelo Ultra Wormhole), fora do mapa de Alola"},
     {"id": "reverse-world", "reason": "Reverse World (dimensão do Giratina, pelo Ultra Wormhole), fora do mapa de Alola"},
-    {"id": "festival-plaza", "reason": "Festival Plaza (praça online do jogo, sem lugar no mapa)"}
+    {"id": "festival-plaza", "reason": "Festival Plaza (praça online do jogo, sem lugar no mapa)"},
+    {"id": "poke-pelago", "reason": "Poké Pelago (ilhas do menu do jogo, sem lugar no mapa)"}
   ]
 }
