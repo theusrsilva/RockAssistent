@@ -28,7 +28,7 @@ Smogon, os links do pokepast.es e as atualizações do app no GitHub. Nada sai d
 ## Como instalar
 
 Baixe o arquivo da versão mais recente na página de
-[Releases](https://github.com/theusrsilva/TradeRock/releases):
+[Releases](https://github.com/theusrsilva/RockAssistent/releases):
 
 | Seu computador | Arquivo | Como instalar |
 | --- | --- | --- |

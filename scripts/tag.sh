@@ -119,7 +119,7 @@ if ! git push --quiet origin "refs/tags/$tag"; then
     git tag -d "$tag" >/dev/null
     die "O push da tag falhou; a tag local foi apagada. Nada foi publicado."
 fi
-repo="$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo theusrsilva/TradeRock)"
+repo="$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo theusrsilva/RockAssistent)"
 echo
 echo "✓ $tag enviada. O CI testa, gera os pacotes e publica o Release:"
 echo "  https://github.com/$repo/actions"

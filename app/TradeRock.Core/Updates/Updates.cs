@@ -196,7 +196,7 @@ public sealed class UpdateService(
             using var response = await http.GetAsync($"https://api.github.com/repos/{options.Repository}/releases/latest", ct);
             if (!response.IsSuccessStatusCode)
                 throw new UpdateException("update_check_failed", $"GitHub respondeu {(int)response.StatusCode}.");
-            var release = Parse(await response.Content.ReadAsStringAsync(ct), options.Repository);
+            var release = Parse(await response.Content.ReadAsStringAsync(ct), options.Repository, options.FormerRepositories);
             var now = time.GetUtcNow();
             await settings.SetAsync(CheckedKey, now, ct);
             await settings.SetAsync(LatestKey, release, ct);
@@ -312,9 +312,14 @@ public sealed class UpdateService(
         }
     }
 
-    /// <summary>A resposta de /releases/latest. Só os arquivos do próprio Release, por https no github.com.</summary>
-    public static ReleaseInfo? Parse(string json, string repository)
+    /// <summary>
+    /// A resposta de /releases/latest. Só os arquivos do próprio Release, por https no github.com, no repositório
+    /// <paramref name="repository"/> ou num dos nomes que ele já teve (<paramref name="formerRepositories"/>): quando um
+    /// repositório é renomeado, o GitHub redireciona a consulta pelo nome antigo, mas devolve os endereços com o novo.
+    /// </summary>
+    public static ReleaseInfo? Parse(string json, string repository, IReadOnlyList<string>? formerRepositories = null)
     {
+        string[] repositories = [repository, .. formerRepositories ?? []];
         using var doc = JsonDocument.Parse(json);
         var root = doc.RootElement;
         if (root.TryGetProperty("draft", out var draft) && draft.GetBoolean()
@@ -324,16 +329,15 @@ public sealed class UpdateService(
         var version = tag.TrimStart('v', 'V');
         if (AppVersions.Parse(version) is null)
             return null;
-        var prefix = $"https://github.com/{repository}/releases/download/{tag}/";
         var assets = root.TryGetProperty("assets", out var list)
             ? list.EnumerateArray()
                 .Select(a => new ReleaseAsset(a.GetProperty("name").GetString() ?? "", a.GetProperty("browser_download_url").GetString() ?? "",
                     a.TryGetProperty("size", out var size) ? size.GetInt64() : 0))
-                .Where(a => a.Url == prefix + Uri.EscapeDataString(a.Name))
+                .Where(a => repositories.Any(r => a.Url == $"https://github.com/{r}/releases/download/{tag}/" + Uri.EscapeDataString(a.Name)))
                 .ToList()
             : [];
         var url = root.TryGetProperty("html_url", out var html) ? html.GetString() ?? "" : "";
-        if (!url.StartsWith($"https://github.com/{repository}/releases/", StringComparison.Ordinal))
+        if (!repositories.Any(r => url.StartsWith($"https://github.com/{r}/releases/", StringComparison.Ordinal)))
             url = $"https://github.com/{repository}/releases";
         var notes = root.TryGetProperty("body", out var body) ? body.GetString() ?? "" : "";
         DateTimeOffset? published = root.TryGetProperty("published_at", out var p) && p.ValueKind == JsonValueKind.String ? p.GetDateTimeOffset() : null;
@@ -351,7 +355,14 @@ public sealed class UpdateService(
 
 public sealed class UpdateOptions
 {
-    public string Repository { get; init; } = "theusrsilva/TradeRock";
+    /// <summary>O repositório no GitHub. Chamava-se theusrsilva/TradeRock até 12/11/2026.</summary>
+    public string Repository { get; init; } = "theusrsilva/RockAssistent";
+
+    /// <summary>
+    /// Nomes antigos do repositório, ainda aceitos nos endereços dos arquivos: as instalações até a 02.04.00 só aceitavam
+    /// o nome antigo e, com a renomeação, descartavam todos os arquivos do Release ("update_asset_missing").
+    /// </summary>
+    public IReadOnlyList<string> FormerRepositories { get; init; } = ["theusrsilva/TradeRock"];
     public required string CurrentVersion { get; init; }
     public required string DownloadDir { get; init; }
 }
