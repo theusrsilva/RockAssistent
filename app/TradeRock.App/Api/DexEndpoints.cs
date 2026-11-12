@@ -59,6 +59,9 @@ public static class DexEndpoints
             // BDSP, Arceus, SV e Z-A: "Onde achar" mostra os nossos encontros (o PokeAPI não cobre esses jogos direito).
             if (data.SpeciesEncounters(game, id) is { } own)
                 detail = detail with { Encounters = own, ExistsInGame = detail.ExistsInGame || own.Count > 0 };
+            // Sem encontro próprio (vem de evolução ou de ovo): de qual parente dá para conseguir neste jogo.
+            if (detail.Encounters.Count == 0)
+                detail = detail with { RelatedSources = dex.RelatedSources(id, game, data.Encounters, ct) };
             return Results.Ok(detail);
         });
 

@@ -49,7 +49,16 @@ public sealed record SpeciesDetail(
     BaseStats Stats,
     IReadOnlyList<SpeciesForm> Forms,
     IReadOnlyDictionary<string, int> DexNumbers,
-    bool ExistsInGame);
+    bool ExistsInGame,
+    IReadOnlyList<RelatedSource>? RelatedSources = null);
+
+/// <summary>
+/// Um parente da espécie que dá para pegar direto no jogo, quando ela mesma não tem encontro: a pré-evolução para
+/// evoluir (<see cref="Relation"/> <c>evolve</c>; o Naganadel vem do Poipole) ou uma evolução para chocar o ovo
+/// (<c>breed</c>; o Pichu vem do ovo de um Pikachu).
+/// </summary>
+/// <param name="Kind">Como o parente é conseguido no jogo: Encounter, Gift ou Trade.</param>
+public sealed record RelatedSource(int SpeciesId, string Name, AvailabilityKind Kind, string Relation);
 
 public sealed record SpeciesAbility(int Id, string Name, bool IsHidden, string? Effect);
 

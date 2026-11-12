@@ -183,7 +183,7 @@ export default function SpeciesPage() {
       )}
 
       {detail && tab === 'general' && <GeneralTab detail={detail} game={game} />}
-      {detail && tab === 'locations' && <LocationsTab detail={detail} />}
+      {detail && tab === 'locations' && <LocationsTab detail={detail} game={game} />}
       {detail && tab === 'moves' && <MovesTab detail={detail} game={game} />}
       {detail && tab === 'stats' && <StatsTab detail={detail} form={form} onFormChange={setFormId} />}
       {detail && tab === 'egg' && <EggTab detail={detail} />}

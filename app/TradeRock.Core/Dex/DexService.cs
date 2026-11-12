@@ -539,6 +539,47 @@ public sealed class DexService(DexDatabase db)
         Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters, CancellationToken ct) =>
         Task.FromResult(Availability(speciesId, ownEncounters, pkhex: true, ct));
 
+    /// <summary>
+    /// Os parentes que dão a espécie no jogo quando ela não é pega direto (a disponibilidade dela é Evolution ou Egg):
+    /// as pré-evoluções que têm encontro, presente ou troca lá (é só evoluir) e, se ela vem de ovo, as evoluções que
+    /// têm (é só chocar). Da mais próxima para a mais distante. Vazio quando a própria espécie se pega direto.
+    /// </summary>
+    public IReadOnlyList<RelatedSource> RelatedSources(int speciesId, string gameKey,
+        Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters, CancellationToken ct)
+    {
+        var data = Data;
+        if (!data.Species.ContainsKey(speciesId))
+            return [];
+        AvailabilityKind KindOf(int id) =>
+            Availability(id, ownEncounters, pkhex: true, ct).FirstOrDefault(a => a.GameKey == gameKey)?.Kind ?? AvailabilityKind.None;
+        static bool Direct(AvailabilityKind k) => k is AvailabilityKind.Encounter or AvailabilityKind.Gift or AvailabilityKind.Trade;
+
+        var own = KindOf(speciesId);
+        if (own is not (AvailabilityKind.Evolution or AvailabilityKind.Egg))
+            return [];
+        var result = new List<RelatedSource>();
+        // Pré-evoluções, subindo a cadeia.
+        for (var parent = data.Species[speciesId].EvolvesFrom; parent is { } id && data.Species.TryGetValue(id, out var row); parent = row.EvolvesFrom)
+            if (KindOf(id) is var kind && Direct(kind))
+                result.Add(new RelatedSource(id, row.Name, kind, "evolve"));
+        // Evoluções, descendo (em largura): quem bota o ovo.
+        if (own == AvailabilityKind.Egg)
+        {
+            var queue = new Queue<int>([speciesId]);
+            while (queue.Count > 0)
+            {
+                var current = queue.Dequeue();
+                foreach (var child in data.Species.Values.Where(s => s.EvolvesFrom == current))
+                {
+                    queue.Enqueue(child.Id);
+                    if (KindOf(child.Id) is var kind && Direct(kind))
+                        result.Add(new RelatedSource(child.Id, child.Name, kind, "breed"));
+                }
+            }
+        }
+        return result;
+    }
+
     /// <param name="pkhex">Usa as tabelas do PKHeX (desligado só na auditoria, para comparar as fontes).</param>
     internal IReadOnlyList<GameAvailability> Availability(int speciesId, Func<string, IReadOnlyList<OwnEncounter>>? ownEncounters,
         bool pkhex, CancellationToken ct)

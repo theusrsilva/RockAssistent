@@ -2095,6 +2095,17 @@
     },
     "encounters": {
       "empty": "Não aparece na natureza neste jogo. Veja a aba Geral: talvez dê para conseguir por evolução, ovo ou troca.",
+      "viaRelatives": "{{name}} não aparece na natureza neste jogo, mas dá para conseguir a partir de outro Pokémon da mesma família que aparece:",
+      "relation": {
+        "evolve": "Evolua um {{name}}",
+        "breed": "Choque um ovo de {{name}}"
+      },
+      "relativeKind": {
+        "encounter": "{{name}} é achado neste jogo.",
+        "gift": "{{name}} é um presente neste jogo.",
+        "trade": "{{name}} vem de uma troca dentro deste jogo."
+      },
+      "seeWhere": "Ver onde achar",
       "level": "Nv. {{level}}",
       "levels": "Nv. {{min}}–{{max}}",
       "chance": "{{chance}}%"
