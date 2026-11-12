@@ -1899,7 +1899,18 @@
       "countVault": "Count what is in the vault",
       "countVaultHelp": "With this on, Pokémon in the vault count as owned without being marked. In a game's collection, only the ones from that game's vault.",
       "progress": "You have {{owned}} of {{total}} · {{shiny}} shiny",
-      "error": "The collection could not be loaded or saved. Try again in a moment."
+      "error": "The collection could not be loaded or saved. Try again in a moment.",
+      "import": {
+        "button": "Import marks",
+        "title": "Import marks",
+        "help": "Choose the file exported from your living dex list, or paste its text. The marks go into \"{{collection}}\" and are added to the ones already there: nothing gets unmarked.",
+        "file": "Marks file",
+        "paste": "Or paste the exported text here",
+        "confirm": "Import",
+        "invalid": "This text wasn't recognized. Use the file or the text exported from the living dex list.",
+        "done": "Done: {{added}} new marks, {{already}} already marked and {{skipped}} skipped (forms this Pokédex does not list).",
+        "failed": "The import failed. Try again in a moment."
+      }
     },
     "regional": {
       "alola": "Alolan {{name}}",

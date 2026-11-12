@@ -52,4 +52,37 @@ public sealed class DexCollectionStore(IDbContextFactory<TradeRockDb> dbFactory,
         await db.SaveChangesAsync(ct);
         return true;
     }
+
+    /// <summary>
+    /// Importa marcações de uma vez (o arquivo exportado de uma lista de living dex): soma às da visão, sem desmarcar
+    /// nada. Linha que a lista da Pokédex não tem é ignorada; a que já estava marcada, ou veio repetida, só é contada.
+    /// </summary>
+    public async Task<DexImportResult> ImportAsync(string scope, IReadOnlyCollection<DexOwned> entries, CancellationToken ct)
+    {
+        await using var db = await dbFactory.CreateDbContextAsync(ct);
+        var marked = (await db.DexMarks.AsNoTracking().Where(m => m.Scope == scope)
+            .Select(m => new DexOwned(m.SpeciesId, m.FormId, m.Shiny)).ToListAsync(ct)).ToHashSet();
+        var now = time.GetUtcNow();
+        int added = 0, already = 0, skipped = 0;
+        foreach (var entry in entries)
+        {
+            if (!dex.IsListed(entry.SpeciesId, entry.FormId))
+            {
+                skipped++;
+                continue;
+            }
+            if (!marked.Add(entry))
+            {
+                already++;
+                continue;
+            }
+            db.DexMarks.Add(new DexMark
+            {
+                Scope = scope, SpeciesId = entry.SpeciesId, FormId = entry.FormId, Shiny = entry.Shiny, MarkedAt = now,
+            });
+            added++;
+        }
+        await db.SaveChangesAsync(ct);
+        return new DexImportResult(added, already, skipped);
+    }
 }

@@ -38,6 +38,17 @@ public static class DexEndpoints
                 : Results.NotFound(new { error = "not_listed" });
         });
 
+        // Importa marcações de uma vez (arquivo exportado de uma lista de living dex): soma às da visão.
+        group.MapPost("/collection/import", async (CollectionImportDto body, DexCollectionStore store, CancellationToken ct) =>
+        {
+            var scope = body.Scope ?? "";
+            if (!DexCollectionStore.ValidScope(scope))
+                return UnknownGame();
+            if (body.Marks is not { Count: > 0 and <= MaxImportMarks })
+                return Results.BadRequest(new { error = "invalid_import" });
+            return Results.Ok(await store.ImportAsync(scope, [.. body.Marks.Select(m => new DexOwned(m.SpeciesId, m.FormId, m.Shiny))], ct));
+        });
+
         group.MapGet("/species/{id:int}", async (int id, string? game, string? lang, DexService dex, GameDataStore data,
             CancellationToken ct) =>
         {
@@ -85,6 +96,13 @@ public static class DexEndpoints
     }
 
     private sealed record CollectionMarkDto(string? Scope, int SpeciesId, int FormId, bool Shiny, bool Owned);
+
+    /// <summary>Limite de linhas de uma importação: bem acima da lista inteira (normal e shiny, com todas as formas).</summary>
+    private const int MaxImportMarks = 20_000;
+
+    private sealed record CollectionImportDto(string? Scope, List<CollectionImportMark>? Marks);
+
+    private sealed record CollectionImportMark(int SpeciesId, int FormId, bool Shiny);
 
     private static bool KnownGame(string key) => GameVersions.All.Any(g => g.Key == key);
 

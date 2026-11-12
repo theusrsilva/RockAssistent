@@ -681,6 +681,61 @@ public sealed class DexApiTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task Colecao_importa_marcacoes_somando_e_ignora_o_que_a_lista_nao_tem()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
+        async Task<(int Added, int Already, int Skipped)> ImportAsync(object body)
+        {
+            var response = await _client.PostAsJsonAsync("/api/dex/collection/import", body);
+            response.EnsureSuccessStatusCode();
+            var r = await response.Content.ReadFromJsonAsync<JsonElement>();
+            return (r.GetProperty("added").GetInt32(), r.GetProperty("already").GetInt32(), r.GetProperty("skipped").GetInt32());
+        }
+        async Task<List<(int, int, bool)>> MarksAsync(string scope)
+        {
+            var c = await _client.GetFromJsonAsync<JsonElement>($"/api/dex/collection?scope={scope}");
+            return [.. c.GetProperty("marks").EnumerateArray()
+                .Select(e => (e.GetProperty("speciesId").GetInt32(), e.GetProperty("formId").GetInt32(), e.GetProperty("shiny").GetBoolean()))];
+        }
+
+        (await _client.PutAsJsonAsync("/api/dex/collection", new { scope = "", speciesId = 26, formId = 0, shiny = false, owned = true }))
+            .EnsureSuccessStatusCode();
+
+        // O arquivo exportado traz campos a mais (format, slug...), que são ignorados. Raichu já estava marcado; o Raichu
+        // de Alola shiny vem repetido; o Unown B é forma cosmética; o Pikachu de boné (10094) a lista não tem.
+        var result = await ImportAsync(new
+        {
+            format = "living-dex-box",
+            version = 1,
+            marks = new object[]
+            {
+                new { speciesId = 26, formId = 0, shiny = false, slug = "raichu" },
+                new { speciesId = 26, formId = 10100, shiny = true, slug = "raichu-alola" },
+                new { speciesId = 26, formId = 10100, shiny = true, slug = "raichu-alola" },
+                new { speciesId = 201, formId = DexService.CosmeticFormBase + 10001, shiny = false, slug = "unown-b" },
+                new { speciesId = 3, formId = DexService.FemaleFormBase + 3, shiny = false, slug = "venusaur-female" },
+                new { speciesId = 25, formId = 10094, shiny = false, slug = "pikachu-original-cap" },
+                new { speciesId = 99999, formId = 0, shiny = false },
+                new { speciesId = 150, shiny = true },
+            },
+        });
+        Assert.Equal((4, 2, 2), result);
+        Assert.Equal(
+            [(3, DexService.FemaleFormBase + 3, false), (26, 0, false), (26, 10100, true), (150, 0, true), (201, DexService.CosmeticFormBase + 10001, false)],
+            await MarksAsync(""));
+
+        // Importar de novo não duplica; cada visão recebe as suas.
+        Assert.Equal((0, 1, 0), await ImportAsync(new { marks = new[] { new { speciesId = 150, formId = 0, shiny = true } } }));
+        Assert.Equal((1, 0, 0), await ImportAsync(new { scope = "sv", marks = new[] { new { speciesId = 150, formId = 0, shiny = true } } }));
+        Assert.Equal([(150, 0, true)], await MarksAsync("sv"));
+
+        Task<HttpResponseMessage> RawAsync(object body) => _client.PostAsJsonAsync("/api/dex/collection/import", body);
+        Assert.Equal(HttpStatusCode.BadRequest, (await RawAsync(new { marks = Array.Empty<object>() })).StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, (await RawAsync(new { format = "living-dex-box" })).StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, (await RawAsync(new { scope = "nada", marks = new[] { new { speciesId = 1, formId = 0, shiny = false } } })).StatusCode);
+    }
+
+    [Fact]
     public async Task Rotas_da_Pokedex()
     {
         Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");

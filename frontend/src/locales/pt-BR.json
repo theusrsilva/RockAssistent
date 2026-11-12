@@ -1899,7 +1899,18 @@
       "countVault": "Contar o que está no cofre",
       "countVaultHelp": "Com isto ligado, os Pokémon que estão no cofre contam como \"tenho\" sem precisar marcar. Na coleção de um jogo, só os do cofre daquele jogo.",
       "progress": "Você tem {{owned}} de {{total}} · {{shiny}} shiny",
-      "error": "Não deu para carregar ou gravar a coleção. Tente de novo daqui a pouco."
+      "error": "Não deu para carregar ou gravar a coleção. Tente de novo daqui a pouco.",
+      "import": {
+        "button": "Importar marcações",
+        "title": "Importar marcações",
+        "help": "Escolha o arquivo exportado da sua lista de living dex, ou cole o texto dele. As marcações entram em \"{{collection}}\" e são somadas às que já existem: nada é desmarcado.",
+        "file": "Arquivo de marcações",
+        "paste": "Ou cole aqui o texto exportado",
+        "confirm": "Importar",
+        "invalid": "Não reconheci esse texto. Use o arquivo ou o texto exportado da lista de living dex.",
+        "done": "Pronto: {{added}} marcações novas, {{already}} que já estavam marcadas e {{skipped}} ignoradas (formas que a Pokédex daqui não lista).",
+        "failed": "Não deu para importar. Tente de novo daqui a pouco."
+      }
     },
     "regional": {
       "alola": "{{name}} de Alola",

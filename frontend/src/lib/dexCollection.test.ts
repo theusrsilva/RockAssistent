@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { collectionProgress, matchesCollectionFilter, ownedKey, ownedSource, type CollectionSets } from './dexCollection'
+import { collectionProgress, matchesCollectionFilter, ownedKey, ownedSource, parseCollectionImport, type CollectionSets } from './dexCollection'
 
 const sets: CollectionSets = {
   marks: new Set([ownedKey(26, 0, false), ownedKey(26, 10100, true)]),
@@ -41,5 +41,28 @@ describe('coleção da Pokédex', () => {
     expect(ids('tenho', false)).toEqual(['26', '26a'])
     expect(ids('faltam', true)).toEqual(['151'])
     expect(ids('shiny', true)).toEqual(['25', '26', '151'])
+  })
+
+  it('importação: lê as linhas do arquivo exportado e descarta as malformadas', () => {
+    const file = JSON.stringify({
+      format: 'living-dex-box',
+      version: 1,
+      marks: [
+        { speciesId: 26, formId: 10100, shiny: true, slug: 'raichu-alola' },
+        { speciesId: 150, shiny: false },
+        { speciesId: '25', formId: 0, shiny: true },
+        { speciesId: 1, formId: -1 },
+        { speciesId: 2.5 },
+        null,
+      ],
+    })
+    expect(parseCollectionImport(file)).toEqual([
+      { speciesId: 26, formId: 10100, shiny: true },
+      { speciesId: 150, formId: 0, shiny: false },
+    ])
+    expect(parseCollectionImport('não é json')).toBeNull()
+    expect(parseCollectionImport('{"marks":"x"}')).toBeNull()
+    expect(parseCollectionImport('{"marks":[]}')).toBeNull()
+    expect(parseCollectionImport('null')).toBeNull()
   })
 })
