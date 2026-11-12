@@ -160,3 +160,9 @@ public sealed record DexOwned(int SpeciesId, int FormId, bool Shiny);
 /// A coleção de uma visão ("" = geral; ou a chave de um jogo): o que a pessoa marcou e o que está no cofre agora.
 /// </summary>
 public sealed record DexCollection(string Scope, IReadOnlyList<DexOwned> Marks, IReadOnlyList<DexOwned> Vault);
+
+/// <summary>
+/// O que uma importação de marcações fez: quantas entraram, quantas já estavam marcadas (ou vieram repetidas) e quantas
+/// foram ignoradas por não existirem na lista da Pokédex.
+/// </summary>
+public sealed record DexImportResult(int Added, int Already, int Skipped);

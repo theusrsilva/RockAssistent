@@ -9,13 +9,14 @@ import {
   matchesCollectionFilter,
   ownedKey,
   ownedSource,
+  parseCollectionImport,
   saveCountVault,
   useDexCollection,
   type CollectionFilter,
 } from '../../lib/dexCollection'
 import { GAME_VERSIONS } from '../../lib/gameVersions'
 import { useDebouncedEffect } from '../../lib/useDebouncedEffect'
-import { Button, Callout, Field, Icon, PageTitle, inputClass, selectClass } from '../../components/ui'
+import { Button, Callout, Field, Icon, Modal, PageTitle, inputClass, selectClass } from '../../components/ui'
 import { speciesEntryName } from './entryName'
 import { OwnedButtons } from './OwnedButtons'
 import { TypeList, useTypeName } from './TypeBadge'
@@ -53,6 +54,29 @@ export default function DexPage() {
   const [countVault, setCountVault] = useState(loadCountVault)
   const sentinel = useRef<HTMLDivElement>(null)
   const collection = useDexCollection(scope)
+  const [importOpen, setImportOpen] = useState(false)
+  const [importText, setImportText] = useState('')
+  const [importBusy, setImportBusy] = useState(false)
+  const [importNote, setImportNote] = useState<{ ok: boolean; text: string } | null>(null)
+
+  const closeImport = () => {
+    setImportOpen(false)
+    setImportText('')
+    setImportNote(null)
+  }
+  const runImport = () => {
+    const marks = parseCollectionImport(importText)
+    if (!marks) {
+      setImportNote({ ok: false, text: t('dex.collection.import.invalid') })
+      return
+    }
+    setImportBusy(true)
+    collection
+      .importMarks(marks)
+      .then((r) => setImportNote({ ok: true, text: t('dex.collection.import.done', { added: r.added, already: r.already, skipped: r.skipped }) }))
+      .catch(() => setImportNote({ ok: false, text: t('dex.collection.import.failed') }))
+      .finally(() => setImportBusy(false))
+  }
 
   const update = (changes: Record<string, string>) =>
     setParams(
@@ -217,6 +241,9 @@ export default function DexPage() {
             />
             {t('dex.collection.countVault')}
           </label>
+          <Button variant="secondary" size="sm" icon="upload_file" onClick={() => setImportOpen(true)}>
+            {t('dex.collection.import.button')}
+          </Button>
         </div>
       </div>
 
@@ -229,6 +256,61 @@ export default function DexPage() {
         <Callout tone="amber" icon="warning">
           {t('dex.collection.error')}
         </Callout>
+      )}
+      {importOpen && (
+        <Modal
+          wide
+          title={t('dex.collection.import.title')}
+          actions={
+            <>
+              <Button variant="secondary" onClick={closeImport}>
+                {t('common.close')}
+              </Button>
+              <Button icon="upload_file" disabled={importBusy || importText.trim() === ''} onClick={runImport}>
+                {t('dex.collection.import.confirm')}
+              </Button>
+            </>
+          }
+        >
+          <div className="flex flex-col gap-3">
+            <p>
+              {t('dex.collection.import.help', {
+                collection: scope
+                  ? t('dex.collection.ofGame', { game: GAME_VERSIONS.find((g) => g.key === scope)?.name ?? scope })
+                  : t('dex.collection.general'),
+              })}
+            </p>
+            <input
+              type="file"
+              accept=".json,application/json,text/plain"
+              aria-label={t('dex.collection.import.file')}
+              className="text-sm"
+              onChange={(e) => {
+                const file = e.target.files?.[0]
+                if (!file) return
+                void file.text().then((text) => {
+                  setImportText(text)
+                  setImportNote(null)
+                })
+              }}
+            />
+            <textarea
+              className={`${inputClass} h-32 py-2 font-mono text-xs`}
+              aria-label={t('dex.collection.import.paste')}
+              placeholder={t('dex.collection.import.paste')}
+              value={importText}
+              onChange={(e) => {
+                setImportText(e.target.value)
+                setImportNote(null)
+              }}
+            />
+            {importNote && (
+              <Callout tone={importNote.ok ? 'emerald' : 'red'} icon={importNote.ok ? 'check_circle' : 'error'}>
+                {importNote.text}
+              </Callout>
+            )}
+          </div>
+        </Modal>
       )}
       {all === null && !error && <p className="text-sm text-muted">{t('common.loading')}</p>}
 

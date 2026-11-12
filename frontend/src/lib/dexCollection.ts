@@ -27,6 +27,37 @@ export interface CollectionSets {
 
 export const emptyCollection: CollectionSets = { marks: new Set(), vault: new Set() }
 
+/** O que uma importação fez: quantas entraram, quantas já estavam marcadas e quantas a lista não tem. */
+export interface DexImportResult {
+  added: number
+  already: number
+  skipped: number
+}
+
+/**
+ * Lê o texto de um arquivo de marcações exportado (JSON com a lista "marks": speciesId, formId e shiny por linha) e
+ * devolve as linhas bem formadas. Null quando o texto não é esse arquivo ou não sobra nenhuma linha.
+ */
+export function parseCollectionImport(text: string): DexOwned[] | null {
+  let data: unknown
+  try {
+    data = JSON.parse(text)
+  } catch {
+    return null
+  }
+  const marks = (data as { marks?: unknown } | null)?.marks
+  if (!Array.isArray(marks)) return null
+  const out: DexOwned[] = []
+  for (const mark of marks as ({ speciesId?: unknown; formId?: unknown; shiny?: unknown } | null)[]) {
+    const speciesId = mark?.speciesId
+    const formId = mark?.formId ?? 0
+    if (typeof speciesId !== 'number' || !Number.isInteger(speciesId) || speciesId <= 0) continue
+    if (typeof formId !== 'number' || !Number.isInteger(formId) || formId < 0) continue
+    out.push({ speciesId, formId, shiny: mark?.shiny === true })
+  }
+  return out.length > 0 ? out : null
+}
+
 /** De onde vem o "tenho" de uma linha: marcação da pessoa, só o cofre, ou nada. */
 export function ownedSource(sets: CollectionSets, countVault: boolean, key: string): 'mark' | 'vault' | null {
   if (sets.marks.has(key)) return 'mark'
@@ -85,6 +116,7 @@ export function saveCountVault(on: boolean) {
 export function useDexCollection(scope: string) {
   const [sets, setSets] = useState<CollectionSets>(emptyCollection)
   const [error, setError] = useState(false)
+  const [version, setVersion] = useState(0)
   const current = useRef(scope)
   current.current = scope
 
@@ -103,7 +135,17 @@ export function useDexCollection(scope: string) {
     return () => {
       alive = false
     }
-  }, [scope])
+  }, [scope, version])
+
+  /** Importa as marcações na visão atual (soma, não desmarca) e recarrega a coleção. */
+  const importMarks = useCallback(
+    async (marks: DexOwned[]) => {
+      const result = await api.post<DexImportResult>('/api/dex/collection/import', { scope, marks })
+      setVersion((v) => v + 1)
+      return result
+    },
+    [scope],
+  )
 
   const setMark = useCallback(
     (speciesId: number, formId: number | null | undefined, shiny: boolean, owned: boolean) => {
@@ -127,5 +169,5 @@ export function useDexCollection(scope: string) {
     [scope],
   )
 
-  return { sets, setMark, error }
+  return { sets, setMark, importMarks, error }
 }
