@@ -6,12 +6,15 @@ import { ApiError, api, spriteUrl } from '../../lib/api'
 import { useApiGet } from '../../lib/dex'
 import { formatCombo, globalActive, modalOpen, useHotkey, useHotkeySettings } from '../../lib/hotkeys'
 import {
+  HUNT_STEPS,
   cumulative,
   formatElapsed,
   formatOdds,
   formatPercent,
   huntErrorMessage,
   huntMethodName,
+  loadHuntStep,
+  saveHuntStep,
   saveElapsedOnExit,
   shinyName,
   stepFor,
@@ -42,6 +45,12 @@ export default function HuntCounter() {
   const [notes, setNotes] = useState('')
   const [confirm, setConfirm] = useState<'giveUp' | 'delete' | null>(null)
   const [busy, setBusy] = useState(false)
+  // Quanto cada clique (ou tecla) soma ou tira: de 1 a 10, guardado por hunt neste navegador (horda = 5 por vez).
+  const [step, setStepState] = useState(() => loadHuntStep(id))
+  const setStep = (value: number) => {
+    setStepState(value)
+    saveHuntStep(id, value)
+  }
   const species = useSpeciesOptions()
   const hotkeys = useHotkeySettings()
   const games = useApiGet<HuntGame[]>(hunt ? `/api/hunts/species/${hunt.species}/games` : null)
@@ -143,9 +152,9 @@ export default function HuntCounter() {
   // para não contar duas vezes.
   const globalKeys = globalActive(hotkeys)
   const windowKeys = active && !mobile && !confirm && !globalKeys
-  useHotkey(windowKeys ? hotkeys.increment : null, () => increment(1))
-  useHotkey(windowKeys ? hotkeys.decrement : null, () => increment(-1))
-  useGlobalHotkeyEvents(globalKeys && active, increment, () => !confirm && !modalOpen())
+  useHotkey(windowKeys ? hotkeys.increment : null, () => increment(step))
+  useHotkey(windowKeys ? hotkeys.decrement : null, () => increment(-step))
+  useGlobalHotkeyEvents(globalKeys && active, (delta) => increment(delta * step), () => !confirm && !modalOpen())
 
   const method = useMemo(
     () => games.data?.find((g) => g.gameKey === hunt?.gameKey)?.methods.find((m) => m.id === hunt?.methodId) ?? null,
@@ -317,13 +326,13 @@ export default function HuntCounter() {
                 variant="secondary"
                 size="lg"
                 icon="remove"
-                aria-label={t('hunt.counter.minus')}
+                aria-label={t('hunt.counter.minus', { n: step })}
                 className="h-20 w-24 text-2xl"
                 disabled={count === 0}
                 onClick={(e) => {
                   // Sem foco no botão: o Espaço do atalho não "clica" nele de novo.
                   e.currentTarget.blur()
-                  increment(-1)
+                  increment(-step)
                 }}
               />
               <Button
@@ -332,12 +341,30 @@ export default function HuntCounter() {
                 className="h-20 flex-1 text-xl"
                 onClick={(e) => {
                   e.currentTarget.blur()
-                  increment(1)
+                  increment(step)
                 }}
               >
-                {t('hunt.counter.plus')}
+                {t('hunt.counter.plus', { n: step })}
               </Button>
             </div>
+            <label className="flex w-full items-center justify-end gap-2 text-sm text-muted">
+              {t('hunt.counter.stepLabel')}
+              <select
+                value={step}
+                onChange={(e) => {
+                  setStep(Number(e.target.value))
+                  // Sem foco no seletor: as teclas do atalho não mudam o valor.
+                  e.currentTarget.blur()
+                }}
+                className="rounded-lg border border-line bg-surface px-2 py-1 text-sm font-semibold"
+              >
+                {HUNT_STEPS.map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </select>
+            </label>
             <div className="flex w-full flex-wrap gap-2">
               <Button
                 variant="secondary"
