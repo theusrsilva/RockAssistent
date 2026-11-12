@@ -214,6 +214,76 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public async Task Lista_com_as_formas_regionais_logo_depois_da_especie()
+    {
+        // Sem pedir, a lista é só de espécies (os seletores do app contam com isso).
+        Assert.DoesNotContain(await Dex.ListAsync(new(null, null, null, null, 0, 2000), Ct), s => s.FormId is not null);
+
+        var all = await Dex.ListAsync(new(null, null, null, null, 0, 2000, RegionalForms: true), Ct);
+        var raichu = all.Select((s, i) => (s, i)).Where(x => x.s.Id == 26).ToList();
+        Assert.Equal(2, raichu.Count);
+        Assert.Null(raichu[0].s.FormId);
+        Assert.Equal(raichu[0].i + 1, raichu[1].i); // logo em seguida
+        Assert.Equal((10100, "alola", 26), (raichu[1].s.FormId, raichu[1].s.Region, raichu[1].s.NationalNumber));
+        Assert.Equal(["electric", "psychic"], raichu[1].s.Types);
+        Assert.Equal(7, raichu[1].s.Generation);
+
+        // Só as regionais: nem Mega, nem Gigantamax, nem Totem, nem boné do Pikachu, nem o Zen de Galar.
+        var forms = all.Where(s => s.FormId is not null).ToList();
+        Assert.Equal(57, forms.Count);
+        Assert.All(forms, f => Assert.Contains(f.Region, new[] { "alola", "galar", "hisui", "paldea" }));
+        Assert.DoesNotContain(forms, f => f.Id == 25);
+        Assert.Equal(2, all.Count(s => s.Id == 20)); // Raticate e Raticate de Alola, sem o Totem
+        Assert.Equal(["alola", "galar"], all.Where(s => s.Id == 52 && s.FormId is not null).Select(s => s.Region));
+        Assert.Equal(["Combat Breed", "Blaze Breed", "Aqua Breed"], all.Where(s => s.Id == 128 && s.FormId is not null).Select(s => s.FormDetail));
+        Assert.Single(all, s => s.Id == 555 && s.FormId is not null); // Darmanitan de Galar
+
+        // O tipo vale por forma, a geração é a da região, e a busca acha pelo nome da espécie e pela região.
+        var psychic = await Dex.ListAsync(new("raichu", "psychic", null, null, RegionalForms: true), Ct);
+        Assert.Equal([10100], psychic.Select(s => s.FormId));
+        var gen7 = await Dex.ListAsync(new(null, null, 7, null, 0, 2000, RegionalForms: true), Ct);
+        Assert.Contains(gen7, s => s.FormId == 10100);
+        Assert.DoesNotContain(gen7, s => s.Id == 26 && s.FormId is null);
+        var gen1 = await Dex.ListAsync(new(null, null, 1, null, 0, 2000, RegionalForms: true), Ct);
+        Assert.DoesNotContain(gen1, s => s.FormId is not null);
+        var hisui = await Dex.ListAsync(new("hisui", null, null, null, 0, 2000, RegionalForms: true), Ct);
+        Assert.Equal(16, hisui.Count);
+        Assert.All(hisui, s => Assert.Equal("hisui", s.Region));
+    }
+
+    [Fact]
+    public async Task Formas_regionais_so_nos_jogos_em_que_existem()
+    {
+        async Task<List<SpeciesSummary>> FormsAsync(string game) =>
+            [.. (await Dex.ListAsync(new(null, null, null, game, 0, 2000, RegionalForms: true), Ct)).Where(s => s.FormId is not null)];
+
+        foreach (var old in new[] { "rb", "frlg", "hgss", "bw", "oras", "bdsp" })
+            Assert.Empty(await FormsAsync(old));
+
+        var sm = await FormsAsync("sm");
+        Assert.Equal(18, sm.Count);
+        Assert.All(sm, s => Assert.Equal("alola", s.Region));
+        Assert.Equal(18, (await FormsAsync("lgpe")).Count);
+
+        // As contagens batem com os golpes por forma do PokeAPI nos jogos em que ele tem os dados.
+        var swsh = await FormsAsync("swsh");
+        Assert.Equal((11, 19), (swsh.Count(s => s.Region == "alola"), swsh.Count(s => s.Region == "galar")));
+        Assert.Equal(18, (await FormsAsync("pla")).Count);
+        Assert.Equal(43, (await FormsAsync("sv")).Count);
+        Assert.Contains(swsh, s => s.FormId == 10100); // Raichu de Alola
+        Assert.Contains(swsh, s => s.Id == 52 && s.Region == "galar");
+        Assert.DoesNotContain(swsh, s => s.Region is "hisui" or "paldea");
+
+        var pla = await FormsAsync("pla");
+        Assert.Contains(pla, s => s.Id == 157 && s.Region == "hisui");
+        Assert.DoesNotContain(pla, s => s.Region is "galar" or "paldea");
+
+        var sv = await FormsAsync("sv");
+        Assert.Equal(3, sv.Count(s => s.Id == 128));
+        Assert.Contains(sv, s => s.Id == 194 && s.Region == "paldea");
+    }
+
+    [Fact]
     public async Task Lista_e_rapida()
     {
         await Dex.ListAsync(new(null, null, null, "frlg"), Ct); // aquece os caches
@@ -395,6 +465,12 @@ public sealed class DexApiTests : IAsyncLifetime
 
         var list = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=geng");
         Assert.Equal(94, list[0].GetProperty("id").GetInt32());
+
+        // As formas regionais só entram com ?forms=true (a tela da Pokédex); os seletores recebem só espécies.
+        Assert.Equal(1, (await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=raichu")).GetArrayLength());
+        var withForms = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=raichu&forms=true");
+        Assert.Equal(2, withForms.GetArrayLength());
+        Assert.Equal((10100, "alola"), (withForms[1].GetProperty("formId").GetInt32(), withForms[1].GetProperty("region").GetString()));
 
         var gengar = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species/94?game=frlg&lang=pt-BR");
         Assert.True(gengar.GetProperty("existsInGame").GetBoolean());

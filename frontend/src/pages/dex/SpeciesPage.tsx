@@ -31,7 +31,8 @@ export default function SpeciesPage() {
   const availability = useAvailability(valid ? id : 0)
   // Forma escolhida (id do pokemon no PokeAPI), a mesma no cabeçalho e na aba Status. Um id de outra espécie
   // (depois de navegar) não está em detail.forms e cai na forma padrão.
-  const [formId, setFormId] = useState<number | null>(null)
+  // A lista da Pokédex abre uma forma regional com ?forma=<id>.
+  const [formId, setFormId] = useState<number | null>(() => Number(params.get('forma')) || null)
   const [shiny, setShiny] = useState(false)
 
   const chooseTab = (next: Tab) =>

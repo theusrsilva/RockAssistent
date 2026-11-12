@@ -1879,6 +1879,14 @@
     "gameFilter": "Game",
     "allGames": "All games",
     "loadMore": "Show more",
+    "moreError": "The rest of the list could not be loaded.",
+    "retry": "Try again",
+    "regional": {
+      "alola": "Alolan {{name}}",
+      "galar": "Galarian {{name}}",
+      "hisui": "Hisuian {{name}}",
+      "paldea": "Paldean {{name}}"
+    },
     "empty": "No Pokémon match these filters.",
     "error": "Couldn't load the Pokédex. Try again in a moment.",
     "notFound": "This Pokémon is not in the Pokédex.",

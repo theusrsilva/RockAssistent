@@ -1,10 +1,19 @@
 namespace TradeRock.Core.Dex;
 
 /// <summary>Filtro da lista da Pokédex. <see cref="Type"/> é o identificador do PokeAPI ("ghost").</summary>
-public sealed record DexQuery(string? Text, string? Type, int? Generation, string? GameKey, int Offset = 0, int Limit = 100);
+/// <param name="RegionalForms">
+/// Lista também as formas regionais (Alola, Galar, Hisui, Paldea), cada uma numa linha logo depois da espécie. Só elas:
+/// mudam o tipo do Pokémon. As outras formas (Mega, Gigantamax...) ficam na página da espécie.
+/// </param>
+public sealed record DexQuery(string? Text, string? Type, int? Generation, string? GameKey, int Offset = 0, int Limit = 100,
+    bool RegionalForms = false);
 
 /// <summary>Uma linha da lista. Nome em inglês; os tipos são os da forma padrão hoje.</summary>
-public sealed record SpeciesSummary(int Id, string Name, int Generation, string[] Types, int? NationalNumber);
+/// <param name="FormId">Id do <c>pokemon</c> do PokeAPI quando a linha é uma forma regional (sprite e página); null na espécie.</param>
+/// <param name="Region">Região da forma: <c>alola</c>, <c>galar</c>, <c>hisui</c> ou <c>paldea</c>.</param>
+/// <param name="FormDetail">Complemento do nome da forma, em inglês (as três raças do Tauros de Paldea).</param>
+public sealed record SpeciesSummary(int Id, string Name, int Generation, string[] Types, int? NationalNumber,
+    int? FormId = null, string? Region = null, string? FormDetail = null);
 
 /// <summary>Ficha de uma espécie vista num jogo (grupo de versões).</summary>
 public sealed record SpeciesDetail(

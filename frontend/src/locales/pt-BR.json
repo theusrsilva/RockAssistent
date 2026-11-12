@@ -1879,6 +1879,14 @@
     "gameFilter": "Jogo",
     "allGames": "Todos os jogos",
     "loadMore": "Mostrar mais",
+    "moreError": "Não deu para carregar o resto da lista.",
+    "retry": "Tentar de novo",
+    "regional": {
+      "alola": "{{name}} de Alola",
+      "galar": "{{name}} de Galar",
+      "hisui": "{{name}} de Hisui",
+      "paldea": "{{name}} de Paldea"
+    },
     "empty": "Nenhum Pokémon com esses filtros.",
     "error": "Não deu para carregar a Pokédex. Tente de novo daqui a pouco.",
     "notFound": "Esse Pokémon não está na Pokédex.",
