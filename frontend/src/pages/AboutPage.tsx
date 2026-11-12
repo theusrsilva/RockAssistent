@@ -7,7 +7,7 @@ import { useAppInfo } from '../lib/appInfo'
 import { UpdateCard } from './UpdateCard'
 import notices from '../../../THIRD-PARTY-NOTICES.md?raw'
 
-export const RELEASES_URL = 'https://github.com/theusrsilva/TradeRock/releases'
+export const RELEASES_URL = 'https://github.com/theusrsilva/RockAssistent/releases'
 
 /** Linhas da tabela do THIRD-PARTY-NOTICES.md (projeto, uso, licença), sem depender de remark-gfm. */
 export function noticeRows(text: string): string[][] {

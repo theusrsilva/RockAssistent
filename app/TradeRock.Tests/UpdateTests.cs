@@ -90,11 +90,35 @@ public class AppVersionTests
         Assert.Null(UpdateService.Parse(UpdateFixture.ReleaseJson("v01.00.01-rc.1"), UpdateFixture.Repo));
         Assert.Null(UpdateService.Parse(UpdateFixture.ReleaseJson("v01.00.01", prerelease: true), UpdateFixture.Repo));
     }
+
+    [Fact]
+    public void Release_do_repositorio_renomeado_continua_valendo()
+    {
+        // 12/11/2026: o repositório passou de theusrsilva/TradeRock para theusrsilva/RockAssistent. A consulta pelo nome
+        // antigo é redirecionada, mas os arquivos vêm com o nome novo; quem só aceitava o antigo ficava sem nenhum.
+        var options = new UpdateOptions { CurrentVersion = "02.04.00", DownloadDir = "." };
+        Assert.Equal("theusrsilva/RockAssistent", options.Repository);
+        Assert.Equal(["theusrsilva/TradeRock"], options.FormerRepositories);
+
+        string Url(string repo, string name) => $"https://github.com/{repo}/releases/download/v02.05.00/{name}";
+        var json = UpdateFixture.ReleaseJson("v02.05.00",
+            ("SHA256SUMS", Url("theusrsilva/RockAssistent", "SHA256SUMS")),
+            ("RockAssistent-Setup-02.05.00.exe", Url("theusrsilva/RockAssistent", "RockAssistent-Setup-02.05.00.exe")),
+            ("traderock_02.05.00_amd64.deb", Url("theusrsilva/TradeRock", "traderock_02.05.00_amd64.deb")),
+            ("RockAssistent-02.05.00-x86_64.AppImage", Url("outra-pessoa/RockAssistent", "RockAssistent-02.05.00-x86_64.AppImage")));
+
+        var release = UpdateService.Parse(json, options.Repository, options.FormerRepositories)!;
+        Assert.Equal(["SHA256SUMS", "RockAssistent-Setup-02.05.00.exe", "traderock_02.05.00_amd64.deb"], release.Assets.Select(a => a.Name));
+        Assert.NotNull(AppVersions.PickAsset(InstallKind.WindowsInstaller, "02.05.00", release.Assets));
+
+        // Sem os nomes antigos, só o próprio repositório (era o defeito, visto do outro lado).
+        Assert.Equal(["traderock_02.05.00_amd64.deb"], UpdateService.Parse(json, "theusrsilva/TradeRock")!.Assets.Select(a => a.Name));
+    }
 }
 
 internal static class UpdateFixture
 {
-    public const string Repo = "theusrsilva/TradeRock";
+    public const string Repo = "theusrsilva/RockAssistent";
 
     public static string ReleaseJson(string tag, params (string Name, string? Url)[] assets) => ReleaseJson(tag, false, assets);
 

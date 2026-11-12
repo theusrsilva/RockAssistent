@@ -1041,8 +1041,12 @@ O autor trocou a regra da D17: o app pode procurar versões novas no GitHub e se
   - Rodando do código (desenvolvimento e testes), a procura automática não roda.
   - Pré-lançamentos não são oferecidos. O app usa `/releases/latest`, que já os deixa de fora, e também recusa versões
     com sufixo.
-- **O que é consultado:** só `api.github.com/repos/theusrsilva/TradeRock/releases/latest` e os arquivos do próprio
-  Release (`github.com/theusrsilva/TradeRock/releases/download/<tag>/...`).
+- **O que é consultado:** só `api.github.com/repos/theusrsilva/RockAssistent/releases/latest` e os arquivos do próprio
+  Release (`github.com/theusrsilva/RockAssistent/releases/download/<tag>/...`). O repositório se chamava
+  `theusrsilva/TradeRock` até 12/11/2026; os endereços com o nome antigo continuam aceitos
+  (`UpdateOptions.FormerRepositories`). As instalações até a 02.04.00 só aceitavam o nome antigo: com a renomeação, o
+  GitHub redireciona a consulta, mas devolve os arquivos com o nome novo, e elas os descartavam todos ("O Release não
+  tem o arquivo para esta instalação"). Essas precisam baixar a versão seguinte à mão, uma vez.
   - O pedido leva só o User-Agent `TradeRock/<versão>`, que o GitHub exige.
   - Nenhum dado do PC é enviado, e o prod.keys não entra em nada disso. O pokeldn continua sem internet (netguard).
 - **Versões:** números separados por ponto, comparados um a um (`01.00.00` é igual a `1.0.0`).

@@ -34,7 +34,7 @@ DEB_VERSION=${VERSION/-/\~} # 1.0.0-rc.1 → 1.0.0~rc.1 (vem antes da 1.0.0 no d
 # é o mesmo que o GitHub mostra no Release. Para atualizar, troque a versão e o sha256 juntos.
 RUNTIME_URL=https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
 RUNTIME_SHA256=${TRADEROCK_APPIMAGE_RUNTIME_SHA256:-2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d}
-MAINTAINER=${TRADEROCK_MAINTAINER:-"RockAssistent <https://github.com/theusrsilva/TradeRock/issues>"}
+MAINTAINER=${TRADEROCK_MAINTAINER:-"RockAssistent <https://github.com/theusrsilva/RockAssistent/issues>"}
 CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/traderock"
 BUILD=build/package
 DIST=dist
@@ -88,7 +88,7 @@ cp THIRD-PARTY-NOTICES.md "$DEB/usr/share/doc/traderock/"
 cat > "$DEB/usr/share/doc/traderock/copyright" <<EOF
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: RockAssistent
-Source: https://github.com/theusrsilva/TradeRock
+Source: https://github.com/theusrsilva/RockAssistent
 
 Files: *
 Copyright: RockAssistent (TradeRock) contributors
@@ -112,7 +112,7 @@ Depends: libc6 (>= 2.31), libstdc++6, libgtk-3-0t64 | libgtk-3-0, libwebkit2gtk-
  libicu76 | libicu74 | libicu72 | libicu70, libssl3t64 | libssl3, pkexec | policykit-1, procps
 Section: games
 Priority: optional
-Homepage: https://github.com/theusrsilva/TradeRock
+Homepage: https://github.com/theusrsilva/RockAssistent
 Description: Trade Pokémon with every Nintendo Switch game that has local trading
  RockAssistent (formerly TradeRock) trades Pokémon with every Nintendo Switch
  game that has local trading, over the game's local wireless (LDN). The PC's
