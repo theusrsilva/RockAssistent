@@ -53,6 +53,7 @@ public static class ServiceSetup
         services.AddSingleton<TradeRock.Core.Dex.DexService>();
         services.AddSingleton<TradeRock.Core.GameData.GameDataStore>();
         services.AddSingleton<TradeRock.Core.Hunts.HuntStore>();
+        services.AddSingleton<TradeRock.Core.Dex.DexCollectionStore>();
         services.AddSingleton<TradeRock.Core.Nuzlocke.NuzlockeStore>();
         services.AddSingleton<HistoryFeed>();
         // Atalho global do Contador Hunt (Windows e X11; só a janela local liga).

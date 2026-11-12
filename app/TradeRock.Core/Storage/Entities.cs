@@ -357,3 +357,18 @@ public sealed class UserAccount
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset? LastLoginAt { get; set; }
 }
+
+/// <summary>
+/// Marcação "tenho" da Pokédex: a espécie (<see cref="FormId"/> 0) ou uma forma da lista (id do <c>pokemon</c> do
+/// PokeAPI), normal ou shiny. <see cref="Scope"/> é a coleção: "" = geral; ou a chave de um jogo (<c>GameVersions</c>).
+/// </summary>
+public sealed class DexMark : IOwned
+{
+    public Guid Id { get; set; }
+    public Guid OwnerId { get; set; }
+    public required string Scope { get; set; }
+    public int SpeciesId { get; set; }
+    public int FormId { get; set; }
+    public bool Shiny { get; set; }
+    public DateTimeOffset MarkedAt { get; set; }
+}

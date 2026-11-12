@@ -28,6 +28,7 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
     public DbSet<NuzlockeMon> NuzlockeMons => Set<NuzlockeMon>();
     public DbSet<NuzlockeEvent> NuzlockeEvents => Set<NuzlockeEvent>();
     public DbSet<ActivityRecord> ActivityRecords => Set<ActivityRecord>();
+    public DbSet<DexMark> DexMarks => Set<DexMark>();
 
     public override int SaveChanges(bool acceptAllChangesOnSuccess)
     {
@@ -127,6 +128,12 @@ public sealed class TradeRockDb(DbContextOptions<TradeRockDb> options) : DbConte
             e.HasIndex(a => new { a.OwnerId, a.SavePath });
             // Apagar o Pokémon do cofre de vez desfaz o anexo.
             e.HasOne<StoredPokemon>().WithMany().HasForeignKey(a => a.PokemonId).OnDelete(DeleteBehavior.Cascade);
+        });
+
+        model.Entity<DexMark>(e =>
+        {
+            e.HasQueryFilter(m => m.OwnerId == Owner);
+            e.HasIndex(m => new { m.OwnerId, m.Scope, m.SpeciesId, m.FormId, m.Shiny }).IsUnique();
         });
 
         model.Entity<ShinyHunt>(e =>

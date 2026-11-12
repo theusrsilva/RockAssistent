@@ -123,6 +123,35 @@ public sealed class DexService(DexDatabase db)
     }
 
     /// <summary>
+    /// A linha da lista da Pokédex a que um Pokémon guardado corresponde: 0 = a espécie; senão o id da forma regional.
+    /// <paramref name="form"/> é o índice de forma do PKHeX no contexto do arquivo; o nome dele na lista de formas do
+    /// PKHeX ("Alola", "Galar", "Paldea Blaze"...) diz a região. Formas que não são regionais (Unown, Rotom, Vivillon...)
+    /// contam como a espécie.
+    /// </summary>
+    public int ListFormId(int speciesId, int form, PKHeX.Core.EntityContext context)
+    {
+        if (form <= 0 || !Data.RegionalForms.TryGetValue(speciesId, out var forms))
+            return 0;
+        var names = PKHeX.Core.FormConverter.GetFormList((ushort)speciesId, Builder.BuilderData.Strings.types,
+            Builder.BuilderData.Strings.forms, context);
+        if (form >= names.Length)
+            return 0;
+        foreach (var region in forms.Where(f => f.Region is not null).Select(f => f.Region!).Distinct())
+        {
+            if (!names[form].StartsWith(region, StringComparison.OrdinalIgnoreCase))
+                continue;
+            var ordinal = Enumerable.Range(0, form).Count(i => names[i].StartsWith(region, StringComparison.OrdinalIgnoreCase));
+            return forms.FirstOrDefault(f => f.Region == region && f.Ordinal == ordinal)?.PokemonId ?? 0;
+        }
+        return 0;
+    }
+
+    /// <summary>A linha existe na lista: a espécie (forma 0) ou uma forma dela que a lista mostra.</summary>
+    public bool IsListed(int speciesId, int formId) =>
+        Data.Species.ContainsKey(speciesId)
+        && (formId == 0 || (Data.RegionalForms.TryGetValue(speciesId, out var forms) && forms.Any(f => f.PokemonId == formId)));
+
+    /// <summary>
     /// Identificadores do PokeAPI das formas da espécie (<c>meowth</c>, <c>meowth-alola</c>, <c>meowth-galar</c>), na ordem
     /// em que o índice de forma dos encontros e do Nuzlocke conta (0 = a padrão).
     /// </summary>
@@ -219,29 +248,31 @@ public sealed class DexService(DexDatabase db)
 
         // Cada espécie e, se pedido, as formas regionais dela logo em seguida (mesmo número).
         IEnumerable<(SpeciesRow Species, RegionalForm? Form)> rows = data.Species.Values.SelectMany(s =>
-            q.RegionalForms && data.RegionalForms.TryGetValue(s.Id, out var forms)
-                ? forms.Select(f => (s, (RegionalForm?)f)).Prepend((s, null))
+            (q.RegionalForms || q.OtherForms) && data.RegionalForms.TryGetValue(s.Id, out var forms)
+                ? forms.Where(f => f.Region is null ? q.OtherForms : q.RegionalForms).Select(f => (s, (RegionalForm?)f)).Prepend((s, null))
                 : [(s, null)]);
         string[] EntryTypes((SpeciesRow Species, RegionalForm? Form) e) => e.Form is not { } f
             ? Types(e.Species)
             : game is null ? f.Types : data.PokemonTypes(f.PokemonId, f.Types, game.Generation);
 
         if (game is not null)
-            rows = rows.Where(e => game.Exists.Contains(e.Species.Id) && (e.Form is null || game.Forms.Contains(e.Form.PokemonId)));
-        // A forma conta na geração em que ela apareceu (Raichu de Alola: 7), não na da espécie.
+            rows = rows.Where(e => game.Exists.Contains(e.Species.Id) && (e.Form is null
+                || (e.Form.Region is null ? e.Form.IntroducedOrder <= game.Order : game.Forms.Contains(e.Form.PokemonId))));
+        // A forma regional conta na geração em que ela apareceu (Raichu de Alola: 7), não na da espécie.
+        int Generation((SpeciesRow Species, RegionalForm? Form) e) => e.Form?.Generation ?? e.Species.Generation;
         if (q.Generation is { } gen)
-            rows = rows.Where(e => (e.Form?.Generation ?? e.Species.Generation) == gen);
+            rows = rows.Where(e => Generation(e) == gen);
         if (!string.IsNullOrWhiteSpace(q.Type))
             rows = rows.Where(e => EntryTypes(e).Contains(q.Type, StringComparer.OrdinalIgnoreCase));
         if (text is not null)
             rows = rows.Where(e => e.Species.Id == number
                 || e.Species.Search.Any(k => k.Contains(text, StringComparison.Ordinal))
-                || (e.Form is { } f && f.Region.Contains(text, StringComparison.Ordinal)));
+                || (e.Form is { Region: { } region } && region.Contains(text, StringComparison.Ordinal)));
 
         IReadOnlyList<SpeciesSummary> result = rows
             .Skip(Math.Max(0, q.Offset))
             .Take(Math.Clamp(q.Limit, 1, 2000))
-            .Select(e => new SpeciesSummary(e.Species.Id, e.Species.Name, e.Form?.Generation ?? e.Species.Generation, EntryTypes(e),
+            .Select(e => new SpeciesSummary(e.Species.Id, e.Species.Name, Generation(e), EntryTypes(e),
                 e.Species.National, e.Form?.PokemonId, e.Form?.Region, e.Form?.Detail))
             .ToList();
         return Task.FromResult(result);
@@ -639,7 +670,8 @@ public sealed class DexService(DexDatabase db)
                 continue;
             forms.Add(new SpeciesForm(p.Id, p.Identifier, info.Name ?? row.Name,
                 data.PokemonTypes(p.Id, [.. types.GetValueOrDefault(p.Id) ?? []], game.Generation),
-                Stats(stats.GetValueOrDefault(p.Id)), info.Mega, p.IsDefault));
+                Stats(stats.GetValueOrDefault(p.Id)), info.Mega, p.IsDefault,
+                data.RegionalForms.TryGetValue(row.Id, out var listed) && listed.Any(f => f.PokemonId == p.Id)));
         }
         return forms;
     }
@@ -959,12 +991,13 @@ public sealed class DexService(DexDatabase db)
         int? National, string[] Search);
 
     /// <summary>
-    /// Forma regional de uma espécie. <paramref name="Ordinal"/> é a posição entre as formas da mesma região da espécie
-    /// (só o Tauros de Paldea tem mais de uma: 0, 1 e 2); <paramref name="Generation"/> é a da região (Alola 7, Galar e
-    /// Hisui 8, Paldea 9).
+    /// Forma que a lista da Pokédex mostra num cartão próprio. Regional: <paramref name="Region"/> preenchida,
+    /// <paramref name="Ordinal"/> é a posição entre as formas da mesma região da espécie (só o Tauros de Paldea tem mais de
+    /// uma: 0, 1 e 2) e <paramref name="Generation"/> é a da região (Alola 7, Galar e Hisui 8, Paldea 9). Outra forma:
+    /// região nula, a geração é a da espécie e ela existe a partir do grupo de versões <paramref name="IntroducedOrder"/>.
     /// </summary>
-    private sealed record RegionalForm(int PokemonId, int SpeciesId, int Ordinal, string Region, string? Detail, int Generation,
-        string[] Types);
+    private sealed record RegionalForm(int PokemonId, int SpeciesId, int Ordinal, string? Region, string? Detail, int? Generation,
+        string[] Types, int IntroducedOrder = 0);
 
     /// <param name="Forms">Ids (<c>pokemon</c> do PokeAPI) das formas regionais que existem no jogo.</param>
     private sealed record GameInfo(string Key, int Generation, int MainGroupId, int Order,
@@ -987,7 +1020,7 @@ public sealed class DexService(DexDatabase db)
         private Dictionary<int, List<(int Generation, string[] Types)>> PokemonTypesPast { get; init; } = [];
         private Dictionary<int, List<(int Generation, string[] Types)>> SpeciesTypesPast { get; init; } = [];
         public required Dictionary<string, GameInfo> Games { get; init; }
-        /// <summary>Formas regionais por espécie, na ordem das formas.</summary>
+        /// <summary>Formas da lista (regionais e outras) por espécie, na ordem das formas.</summary>
         public required Dictionary<int, List<RegionalForm>> RegionalForms { get; init; }
         public required HashSet<int> Breedable { get; init; }
         public required HashSet<string> Languages { get; init; }
@@ -1175,8 +1208,9 @@ public sealed class DexService(DexDatabase db)
                     SELECT id, species_id, ROW_NUMBER() OVER (PARTITION BY species_id ORDER BY is_default DESC, form_order, id) - 1 AS form
                     FROM pokemon)
                 SELECT f.id, f.species_id, f.form, pf.form_name_en,
-                       (SELECT group_concat(type_id) FROM (SELECT type_id FROM pokemon_types WHERE pokemon_id = f.id ORDER BY slot))
-                FROM forms f JOIN pokemon_forms pf ON pf.pokemon_id = f.id
+                       (SELECT group_concat(type_id) FROM (SELECT type_id FROM pokemon_types WHERE pokemon_id = f.id ORDER BY slot)),
+                       p.identifier, pf.is_mega, pf.is_battle_only, pf.introduced_in_version_group
+                FROM forms f JOIN pokemon p ON p.id = f.id JOIN pokemon_forms pf ON pf.pokemon_id = f.id
                 WHERE f.form > 0 AND pf.form_name_en IS NOT NULL
                 ORDER BY f.species_id, f.form, pf.id
                 """))
@@ -1184,16 +1218,20 @@ public sealed class DexService(DexDatabase db)
                 while (r.Read())
                 {
                     var formName = r.GetString(3);
-                    if (Regions.FirstOrDefault(x => formName.StartsWith(x.Prefix, StringComparison.Ordinal)) is not { Region: { } region } found)
+                    var found = Regions.FirstOrDefault(x => formName.StartsWith(x.Prefix, StringComparison.Ordinal));
+                    var region = found.Region;
+                    var identifier = r.GetString(5);
+                    // Outras formas: só as que se guardam como estão.
+                    if (region is null && (r.GetInt32(6) != 0 || r.GetInt32(7) != 0 || NotKept.Any(x => identifier.Contains(x, StringComparison.Ordinal))))
                         continue;
                     var open = formName.IndexOf('(');
-                    var detail = open >= 0 ? formName[(open + 1)..].TrimEnd(')').Trim() : null;
+                    var detail = region is null ? formName : open >= 0 ? formName[(open + 1)..].TrimEnd(')').Trim() : null;
                     string[] formTypes = [.. (Str(r, 4) ?? "").Split(',', StringSplitOptions.RemoveEmptyEntries)
                         .Select(id => types.TryGetValue(int.Parse(id, CultureInfo.InvariantCulture), out var t) ? t.Item1 : "unknown")];
                     var list = regional.GetOrAdd(r.GetInt32(1));
                     if (list.All(x => x.PokemonId != r.GetInt32(0)))
                         list.Add(new RegionalForm(r.GetInt32(0), r.GetInt32(1), list.Count(x => x.Region == region), region, detail,
-                            found.Generation, formTypes));
+                            region is null ? null : found.Generation, formTypes, Int(r, 8) is { } vg ? groupOrders.GetValueOrDefault(vg) : 0));
                 }
 
             // Quem existe em cada grupo de versões (golpes e encontros) e em cada Pokédex regional.
@@ -1298,6 +1336,18 @@ public sealed class DexService(DexDatabase db)
             };
         }
 
+        /// <summary>
+        /// Formas que não entram em "outras formas" (pelo identificador do PokeAPI): Totem, Gigantamax e Eternamax, o
+        /// Zygarde com Power Construct (é habilidade), o Minior com a casca (só em batalha), os modos de montaria do
+        /// Koraidon e do Miraidon, as fusões (Kyurem, Necrozma, Calyrex) e as que dependem de item (Dialga, Palkia e
+        /// Giratina Origem, as máscaras do Ogerpon).
+        /// </summary>
+        private static readonly string[] NotKept =
+        [
+            "-totem", "-gmax", "-eternamax", "-power-construct", "-meteor", "koraidon-", "miraidon-", "kyurem-", "necrozma-",
+            "calyrex-", "-origin", "ogerpon-",
+        ];
+
         private static readonly (string Prefix, string Region, int Generation)[] Regions =
         [
             ("Alolan Form", "alola", 7), ("Galarian Form", "galar", 8), ("Hisuian Form", "hisui", 8), ("Paldean Form", "paldea", 9),
@@ -1321,10 +1371,10 @@ public sealed class DexService(DexDatabase db)
                 if (!exists.Contains(speciesId) || speciesId > personal.MaxSpeciesID)
                     continue;
                 var names = PKHeX.Core.FormConverter.GetFormList((ushort)speciesId, strings.types, strings.forms, pkhex.Context);
-                foreach (var form in forms)
+                foreach (var form in forms.Where(f => f.Region is not null))
                 {
                     var index = Enumerable.Range(0, names.Length)
-                        .Where(i => names[i].StartsWith(form.Region, StringComparison.OrdinalIgnoreCase))
+                        .Where(i => names[i].StartsWith(form.Region!, StringComparison.OrdinalIgnoreCase))
                         .Skip(form.Ordinal).Select(i => (int?)i).FirstOrDefault();
                     if (index is { } i && i < personal[(ushort)speciesId].FormCount && personal.IsPresentInGame((ushort)speciesId, (byte)i))
                         result.Add(form.PokemonId);

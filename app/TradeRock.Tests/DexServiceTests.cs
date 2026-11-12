@@ -1,3 +1,4 @@
+using PKHeX.Core;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http.Json;
@@ -252,6 +253,54 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public async Task Outras_formas_so_quando_pedidas_e_so_as_que_se_guardam()
+    {
+        var regionalOnly = await Dex.ListAsync(new(null, null, null, null, 0, 2000, RegionalForms: true), Ct);
+        Assert.Equal(57, regionalOnly.Count(s => s.FormId is not null));
+
+        var all = await Dex.ListAsync(new(null, null, null, null, 0, 2000, RegionalForms: true, OtherForms: true), Ct);
+        var others = all.Where(s => s.FormId is not null && s.Region is null).ToList();
+        Assert.Equal(["Heat Rotom", "Wash Rotom", "Frost Rotom", "Fan Rotom", "Mow Rotom"], others.Where(s => s.Id == 479).Select(s => s.FormDetail));
+        Assert.Equal(3, others.Count(s => s.Id == 386)); // Deoxys
+        Assert.Equal(["Midnight Form", "Dusk Form"], others.Where(s => s.Id == 745).Select(s => s.FormDetail));
+        Assert.All(others, s => Assert.False(string.IsNullOrWhiteSpace(s.FormDetail)));
+        // Fora: Mega e Gigantamax (Charizard), Totem (Raticate só tem a de Alola), só de batalha (Darmanitan Zen,
+        // Aegislash Blade), fusões (Kyurem, Necrozma, Calyrex) e as que dependem de item (Giratina, Ogerpon).
+        foreach (var species in new[] { 6, 20, 555, 681, 646, 800, 898, 487, 1017, 1007, 1008, 890 })
+            Assert.DoesNotContain(others, s => s.Id == species);
+        Assert.Equal(7, others.Count(s => s.Id == 774)); // Minior: as sete cores, sem as formas com a casca
+        // Só as outras, sem as regionais.
+        var othersOnly = await Dex.ListAsync(new(null, null, null, null, 0, 2000, OtherForms: true), Ct);
+        Assert.Equal(others.Count, othersOnly.Count(s => s.FormId is not null));
+        Assert.DoesNotContain(othersOnly, s => s.Region is not null);
+        // No jogo, a forma só aparece a partir de quando existe; a geração é a da espécie.
+        var frlg = await Dex.ListAsync(new(null, null, null, "frlg", 0, 2000, OtherForms: true), Ct);
+        Assert.Equal(3, frlg.Count(s => s.Id == 386 && s.FormId is not null));
+        Assert.DoesNotContain(frlg, s => s.Id == 25 && s.FormId is not null);
+        var gen4 = await Dex.ListAsync(new(null, null, 4, null, 0, 2000, OtherForms: true), Ct);
+        Assert.Equal(5, gen4.Count(s => s.Id == 479 && s.FormId is not null));
+    }
+
+    [Fact]
+    public void Pokemon_guardado_cai_na_linha_certa_da_lista()
+    {
+        Assert.Equal(0, Dex.ListFormId(26, 0, EntityContext.Gen8));
+        Assert.Equal(10100, Dex.ListFormId(26, 1, EntityContext.Gen8)); // Raichu de Alola
+        Assert.Equal(10100, Dex.ListFormId(26, 1, EntityContext.Gen9a)); // no Z-A, os Mega vêm depois da forma de Alola
+        Assert.Equal(10107, Dex.ListFormId(52, 1, EntityContext.Gen8)); // Meowth de Alola
+        Assert.Equal(10161, Dex.ListFormId(52, 2, EntityContext.Gen8)); // Meowth de Galar
+        Assert.Equal(10165, Dex.ListFormId(80, 2, EntityContext.Gen8)); // Slowbro de Galar (1 é o Mega)
+        Assert.Equal(0, Dex.ListFormId(80, 1, EntityContext.Gen8));
+        Assert.Equal([10250, 10251, 10252], new[] { 1, 2, 3 }.Select(f => Dex.ListFormId(128, f, EntityContext.Gen9)));
+        Assert.Equal(10177, Dex.ListFormId(555, 2, EntityContext.Gen8)); // Darmanitan de Galar
+        Assert.Equal(0, Dex.ListFormId(479, 2, EntityContext.Gen8)); // Rotom Wash conta como Rotom
+        Assert.Equal(0, Dex.ListFormId(201, 5, EntityContext.Gen3)); // Unown F conta como Unown
+        Assert.True(Dex.IsListed(26, 10100));
+        Assert.False(Dex.IsListed(26, 10107));
+        Assert.False(Dex.IsListed(99999, 0));
+    }
+
+    [Fact]
     public async Task Formas_regionais_so_nos_jogos_em_que_existem()
     {
         async Task<List<SpeciesSummary>> FormsAsync(string game) =>
@@ -453,6 +502,53 @@ public sealed class DexApiTests : IAsyncLifetime
             await _app.DisposeAsync();
         SqliteConnection.ClearAllPools();
         try { Directory.Delete(_dir, true); } catch (IOException) { }
+    }
+
+    [Fact]
+    public async Task Colecao_marca_por_visao_e_le_o_cofre_na_hora()
+    {
+        Assert.SkipUnless(DexDatabase.ResourceExists, "Falta o dex.sqlite embutido.");
+        async Task<(List<(int, int, bool)> Marks, List<(int, int, bool)> Vault)> GetAsync(string scope)
+        {
+            var c = await _client.GetFromJsonAsync<JsonElement>($"/api/dex/collection?scope={scope}");
+            List<(int, int, bool)> Read(string name) => [.. c.GetProperty(name).EnumerateArray()
+                .Select(e => (e.GetProperty("speciesId").GetInt32(), e.GetProperty("formId").GetInt32(), e.GetProperty("shiny").GetBoolean()))];
+            return (Read("marks"), Read("vault"));
+        }
+        Task<HttpResponseMessage> PutAsync(string? scope, int species, int form, bool shiny, bool owned) =>
+            _client.PutAsJsonAsync("/api/dex/collection", new { scope, speciesId = species, formId = form, shiny, owned });
+
+        Assert.Empty((await GetAsync("")).Marks);
+        Assert.Equal(HttpStatusCode.NoContent, (await PutAsync(null, 26, 0, false, true)).StatusCode);
+        Assert.Equal(HttpStatusCode.NoContent, (await PutAsync("", 26, 10100, true, true)).StatusCode);
+        Assert.Equal(HttpStatusCode.NoContent, (await PutAsync("", 26, 10100, true, true)).StatusCode); // repetir não duplica
+        Assert.Equal(HttpStatusCode.NoContent, (await PutAsync("swsh", 25, 0, true, true)).StatusCode);
+        Assert.Equal([(26, 0, false), (26, 10100, true)], (await GetAsync("")).Marks);
+        Assert.Equal([(25, 0, true)], (await GetAsync("swsh")).Marks); // cada visão tem as suas
+        Assert.Empty((await GetAsync("sv")).Marks);
+
+        Assert.Equal(HttpStatusCode.NoContent, (await PutAsync("", 26, 0, false, false)).StatusCode);
+        Assert.Equal([(26, 10100, true)], (await GetAsync("")).Marks);
+
+        Assert.Equal(HttpStatusCode.NotFound, (await PutAsync("", 26, 10107, false, true)).StatusCode); // forma de outra espécie
+        Assert.Equal(HttpStatusCode.NotFound, (await PutAsync("", 99999, 0, false, true)).StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, (await PutAsync("nada", 26, 0, false, true)).StatusCode);
+        Assert.Equal(HttpStatusCode.BadRequest, (await _client.GetAsync("/api/dex/collection?scope=nada")).StatusCode);
+
+        // O cofre é lido na hora: um Raichu de Alola shiny do Sword aparece na geral e na do Sword/Shield, não na do Scarlet.
+        var before = await GetAsync("");
+        Assert.DoesNotContain((26, 10100, true), before.Vault);
+        var generated = await _client.PostAsJsonAsync("/api/builder/generate", new
+        {
+            spec = new { species = 26, form = 1, level = 40, shiny = true, game = "sword", trainer = new { name = "ROCHA", tid = 123456, sid = 1234 } },
+        });
+        var body = await generated.Content.ReadFromJsonAsync<JsonElement>();
+        Assert.True(body.TryGetProperty("data", out var data) && data.ValueKind == JsonValueKind.String, body.ToString());
+        (await _client.PostAsJsonAsync("/api/builder/save", new { data = data.GetString(), game = "sword" })).EnsureSuccessStatusCode();
+        Assert.Contains((26, 10100, true), (await GetAsync("")).Vault);
+        Assert.Contains((26, 10100, true), (await GetAsync("swsh")).Vault);
+        Assert.DoesNotContain((26, 10100, true), (await GetAsync("sv")).Vault);
+        Assert.Equal([(26, 10100, true)], (await GetAsync("")).Marks); // o cofre não vira marcação
     }
 
     [Fact]

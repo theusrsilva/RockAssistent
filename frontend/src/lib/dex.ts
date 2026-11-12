@@ -92,6 +92,8 @@ export interface SpeciesForm {
   stats: BaseStats
   isMega: boolean
   isDefault: boolean
+  /** A forma tem cartão na lista da Pokédex: dá para marcar na coleção. */
+  listed?: boolean
 }
 
 export interface SpeciesDetail {

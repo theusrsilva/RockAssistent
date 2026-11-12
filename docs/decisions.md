@@ -1427,3 +1427,39 @@ original na saída.
   original (`PokemonStore.DeleteUnusedFilesAsync`, em todos os cofres: mover, editar, esvaziar a lixeira e apagar
   conta). O original sai junto quando o registro é apagado de vez. A exportação entrega o arquivo atual; o cofre não
   tem backup próprio. Vale no modo servidor como o resto do cofre (por conta).
+
+## D38. Pokédex: formas na lista e coleção ("tenho")
+
+Decisões do autor (12/11/2026):
+
+- **Lista que continua sozinha.** Sem o botão "Mostrar mais": a lista filtrada vem inteira numa busca
+  (`GET /api/dex/species?limit=2000`, cerca de mil linhas) e a tela mostra 60 cartões por vez, conforme o fim chega
+  perto (`IntersectionObserver`; sem ele, sobra o botão). Com a lista inteira na mão, o progresso e o filtro da coleção
+  ficam exatos.
+- **Formas regionais sempre, outras formas quando ligadas.** `?forms=true` põe as formas de Alola, Galar, Hisui e
+  Paldea cada uma numa linha logo depois da espécie, com o mesmo número (57, pelo nome da forma no PokeAPI). Só elas
+  por padrão, porque mudam o tipo. `?otherForms=true` (caixa "Outras formas", desligada por padrão) acrescenta as que se
+  guardam como estão (Rotom, Deoxys, Lycanroc, Oricorio, Minior...). Ficam sempre de fora Mega, Gigantamax, Totem, as só
+  de batalha, as fusões e as que dependem de item; essas continuam na página da espécie.
+  - Nome: "Raichu de Alola" (regra por região; em inglês "Alolan Raichu"); as outras formas levam o nome inglês da forma
+    entre parênteses.
+  - Filtro de tipo por forma. Filtro de geração: a regional conta na geração da região (Alola 7, Galar e Hisui 8,
+    Paldea 9); as outras, na da espécie.
+  - Filtro de jogo: a regional existe no jogo pela tabela do PKHeX (`IsPresentInGame`), com o índice de forma tirado da
+    lista de nomes de formas dele (`FormConverter.GetFormList`), porque o PokeAPI não tem os golpes do Legends: Z-A e a
+    ordem das formas nele não é a do PKHeX (Mega e Gigantamax entram no meio). Nos cinco jogos em que dá para comparar
+    com os golpes do PokeAPI (Sun/Moon, Let's Go, Sword/Shield, Arceus, Scarlet/Violet) as contagens batem. As outras
+    formas valem a partir do grupo de versões em que surgiram.
+- **Coleção.** Cada linha (espécie ou forma) tem duas marcações: "tenho" e "tenho shiny". Tudo pode ser marcado,
+  inclusive shiny de espécie travada (há os de evento). Fica no banco, por conta (`DexMark`, migration `DexMarks`), não
+  no navegador.
+  - **Visões:** uma coleção geral e uma por jogo (`Scope`: "" ou a chave do jogo), cada uma com as suas marcações. Na
+    tela, a coleção de um jogo anda junto com o filtro de jogo.
+  - **Cofre dinâmico:** com "Contar o que está no cofre" ligado (padrão; a escolha fica no navegador), o que está no
+    cofre conta como "tenho" sem virar marcação: é lido na hora (`GET /api/dex/collection`). Na visão de um jogo, só os
+    Pokémon do formato daquele jogo (os sete jogos do Switch; os formatos antigos só contam na geral). A forma regional
+    de um Pokémon guardado é reconhecida pelo nome da forma no PKHeX; as outras formas contam como a espécie. Ovos e a
+    lixeira não contam. O que vem só do cofre aparece com o contorno tracejado.
+  - **Tela:** progresso "Você tem X de Y · Z shiny" sobre a lista filtrada e o filtro "Mostrar" (todos, os que tenho,
+    os que faltam, shiny que faltam). A página da espécie tem os mesmos botões para a forma escolhida.
+  - API: `GET /api/dex/collection?scope=` e `PUT /api/dex/collection` (`{ scope, speciesId, formId, shiny, owned }`).

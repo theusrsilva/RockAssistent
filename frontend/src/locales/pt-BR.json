@@ -1879,8 +1879,26 @@
     "gameFilter": "Jogo",
     "allGames": "Todos os jogos",
     "loadMore": "Mostrar mais",
-    "moreError": "Não deu para carregar o resto da lista.",
-    "retry": "Tentar de novo",
+    "otherForms": "Outras formas",
+    "collection": {
+      "scope": "Coleção",
+      "general": "Coleção geral",
+      "ofGame": "Coleção do {{game}}",
+      "show": "Mostrar",
+      "filter": {
+        "all": "Todos",
+        "tenho": "Os que eu tenho",
+        "faltam": "Os que faltam",
+        "shiny": "Shiny que faltam"
+      },
+      "have": "Tenho",
+      "haveShiny": "Tenho shiny",
+      "fromVault": "está no cofre",
+      "countVault": "Contar o que está no cofre",
+      "countVaultHelp": "Com isto ligado, os Pokémon que estão no cofre contam como \"tenho\" sem precisar marcar. Na coleção de um jogo, só os do cofre daquele jogo.",
+      "progress": "Você tem {{owned}} de {{total}} · {{shiny}} shiny",
+      "error": "Não deu para carregar ou gravar a coleção. Tente de novo daqui a pouco."
+    },
     "regional": {
       "alola": "{{name}} de Alola",
       "galar": "{{name}} de Galar",

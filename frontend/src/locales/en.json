@@ -1879,8 +1879,26 @@
     "gameFilter": "Game",
     "allGames": "All games",
     "loadMore": "Show more",
-    "moreError": "The rest of the list could not be loaded.",
-    "retry": "Try again",
+    "otherForms": "Other forms",
+    "collection": {
+      "scope": "Collection",
+      "general": "General collection",
+      "ofGame": "{{game}} collection",
+      "show": "Show",
+      "filter": {
+        "all": "All",
+        "tenho": "The ones I have",
+        "faltam": "The ones I am missing",
+        "shiny": "Missing shiny"
+      },
+      "have": "I have it",
+      "haveShiny": "I have it shiny",
+      "fromVault": "it is in the vault",
+      "countVault": "Count what is in the vault",
+      "countVaultHelp": "With this on, Pokémon in the vault count as owned without being marked. In a game's collection, only the ones from that game's vault.",
+      "progress": "You have {{owned}} of {{total}} · {{shiny}} shiny",
+      "error": "The collection could not be loaded or saved. Try again in a moment."
+    },
     "regional": {
       "alola": "Alolan {{name}}",
       "galar": "Galarian {{name}}",

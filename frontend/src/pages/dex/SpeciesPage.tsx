@@ -2,10 +2,12 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams, useSearchParams } from 'react-router'
 import { ApiError, spriteUrl } from '../../lib/api'
-import { dexLang, useDexGame, useAvailability, useSpecies } from '../../lib/dex'
+import { dexLang, isDexGame, useDexGame, useAvailability, useSpecies } from '../../lib/dex'
+import { loadCountVault, useDexCollection } from '../../lib/dexCollection'
 import { gameVersionByKey } from '../../lib/gameVersions'
 import { Badge, Callout, Icon } from '../../components/ui'
 import { GameSelector } from './GameSelector'
+import { OwnedButtons } from './OwnedButtons'
 import { TypeList } from './TypeBadge'
 import { GeneralTab } from './tabs/GeneralTab'
 import { LocationsTab } from './tabs/LocationsTab'
@@ -34,6 +36,10 @@ export default function SpeciesPage() {
   // A lista da Pokédex abre uma forma regional com ?forma=<id>.
   const [formId, setFormId] = useState<number | null>(() => Number(params.get('forma')) || null)
   const [shiny, setShiny] = useState(false)
+  // Coleção: a visão em que a lista estava (?colecao=<jogo>; sem ela, a geral).
+  const scope = isDexGame(params.get('colecao')) ? (params.get('colecao') as string) : ''
+  const collection = useDexCollection(scope)
+  const [countVault] = useState(loadCountVault)
 
   const chooseTab = (next: Tab) =>
     setParams(
@@ -88,6 +94,22 @@ export default function SpeciesPage() {
             <Icon name="auto_awesome" className="text-[14px]" filled={shiny} />
             {t('dex.sprite.shiny')}
           </button>
+          {/* Só a espécie e as formas que a lista mostra entram na coleção (Mega, Gigantamax etc. não). */}
+          {detail && form && (form.isDefault || form.listed) && (
+            <div className="flex flex-col items-center gap-1">
+              <OwnedButtons
+                large
+                speciesId={id}
+                formId={form && !form.isDefault ? form.id : 0}
+                sets={collection.sets}
+                countVault={countVault}
+                onToggle={(isShiny, owned) => collection.setMark(id, form && !form.isDefault ? form.id : 0, isShiny, owned)}
+              />
+              <span className="text-[11px] text-muted">
+                {scope ? t('dex.collection.ofGame', { game: gameVersionByKey(scope)?.name ?? scope }) : t('dex.collection.general')}
+              </span>
+            </div>
+          )}
         </div>
         <div className="min-w-0 flex-1 space-y-1 text-center sm:text-left">
           <div className="flex flex-wrap items-baseline justify-center gap-x-2 sm:justify-start">
