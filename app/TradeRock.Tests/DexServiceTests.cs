@@ -414,6 +414,33 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
     }
 
     [Fact]
+    public void Sem_encontro_proprio_diz_de_qual_parente_conseguir()
+    {
+        IReadOnlyList<RelatedSource> Sources(int species, string game) => Dex.RelatedSources(species, game, null, Ct);
+
+        // Naganadel: só evoluindo o Poipole, que se consegue no Ultra Sun/Ultra Moon e no Sword/Shield.
+        foreach (var game in new[] { "usum", "swsh" })
+        {
+            var source = Assert.Single(Sources(804, game));
+            Assert.Equal((803, "Poipole", "evolve"), (source.SpeciesId, source.Name, source.Relation));
+            Assert.Contains(source.Kind, new[] { AvailabilityKind.Encounter, AvailabilityKind.Gift, AvailabilityKind.Trade });
+        }
+        Assert.Empty(Sources(804, "frlg")); // não existe lá
+        Assert.Empty(Sources(803, "usum")); // o Poipole se consegue direto: nada a indicar
+
+        // Duas etapas: da mais próxima para a mais distante, só as que têm encontro.
+        var charizard = Sources(6, "frlg");
+        Assert.All(charizard, s => Assert.Equal("evolve", s.Relation));
+        Assert.Equal(4, charizard[^1].SpeciesId); // o Charmander é o presente do professor
+        // Bebê que só vem de ovo: quem bota o ovo.
+        var pichu = Sources(172, "frlg");
+        Assert.NotEmpty(pichu);
+        Assert.All(pichu, s => Assert.Equal("breed", s.Relation));
+        Assert.Contains(pichu, s => s.SpeciesId == 25);
+        Assert.Empty(Sources(99999, "frlg"));
+    }
+
+    [Fact]
     public void Formas_sem_ordem_no_pokeapi_vao_para_o_fim()
     {
         // O índice de forma dos nossos encontros e treinadores conta nesta ordem: as Mega do Z-A, as Gigantamax e o
@@ -700,6 +727,15 @@ public sealed class DexApiTests : IAsyncLifetime
         Assert.Equal(28, manyForms.GetArrayLength());
         Assert.Equal(2, (await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=venusaur&genderForms=true")).GetArrayLength());
 
+        // "Onde achar" de quem só vem por evolução: a rota diz o parente; quem tem encontro não recebe nada.
+        var naganadel = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species/804?game=usum&lang=pt-BR");
+        Assert.Equal(0, naganadel.GetProperty("encounters").GetArrayLength());
+        Assert.Equal(803, naganadel.GetProperty("relatedSources")[0].GetProperty("speciesId").GetInt32());
+        Assert.Equal("evolve", naganadel.GetProperty("relatedSources")[0].GetProperty("relation").GetString());
+        var pidgey = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species/16?game=frlg&lang=pt-BR");
+        Assert.True(pidgey.GetProperty("encounters").GetArrayLength() > 0);
+        Assert.Equal(JsonValueKind.Null, pidgey.GetProperty("relatedSources").ValueKind);
+
         // As formas regionais só entram com ?forms=true (a tela da Pokédex); os seletores recebem só espécies.
         Assert.Equal(1, (await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=raichu")).GetArrayLength());
         var withForms = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=raichu&forms=true");
@@ -708,6 +744,8 @@ public sealed class DexApiTests : IAsyncLifetime
 
         var gengar = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species/94?game=frlg&lang=pt-BR");
         Assert.True(gengar.GetProperty("existsInGame").GetBoolean());
+        // Gengar no FRLG: sem encontro, vem do Haunter (e do Gastly).
+        Assert.Equal(93, gengar.GetProperty("relatedSources")[0].GetProperty("speciesId").GetInt32());
 
         var availability = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species/94/availability");
         Assert.Equal("evolution", availability.EnumerateArray().First(a => a.GetProperty("gameKey").GetString() == "frlg")

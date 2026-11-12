@@ -1485,6 +1485,12 @@ Decisões do autor (12/11/2026):
   - **Cofre:** reconhece a letra do Unown, o padrão do Vivillon, a flor, a estação e as demais pelo nome da forma no
     PKHeX, e a fêmea pelo gênero do Pokémon guardado. Exceção: o Alcremie guarda o creme na forma e o confeito noutro
     campo, que o resumo do cofre não tem; conta como o do confeito de morango.
+- **"Onde achar" de quem não tem encontro** (pedido do autor, 13/11/2026). O seletor de jogo mostra o jogo como
+  disponível quando a espécie vem de evolução ou de ovo, mas a aba ficava vazia (Naganadel no Ultra Sun/Ultra Moon e no
+  Sword/Shield). Agora a rota da espécie devolve `relatedSources` quando não há encontro: as pré-evoluções que se
+  conseguem direto no jogo (encontro, presente ou troca; `evolve`, da mais próxima para a mais distante) e, quando a
+  espécie vem de ovo, as evoluções que se conseguem (`breed`). A aba mostra cada parente num cartão que leva ao "Onde
+  achar" dele no mesmo jogo.
 - **Ordem das formas.** O índice de forma dos nossos encontros e treinadores (`"form"` nos JSON) e do Nuzlocke conta na
   ordem de `DexService.PokemonForms`. As formas sem `order` no PokeAPI (as Mega do Legends: Z-A, as Gigantamax, o
   Basculin de listra branca; 19 espécies) entravam na frente e deslocavam as outras: o Raichu de Alola dos encontros do

@@ -84,6 +84,13 @@ export interface BaseStats {
   evs: Record<string, number>
 }
 
+export interface RelatedSource {
+  speciesId: number
+  name: string
+  kind: 'encounter' | 'gift' | 'trade'
+  relation: 'evolve' | 'breed'
+}
+
 export interface SpeciesForm {
   id: number
   identifier: string
@@ -119,6 +126,8 @@ export interface SpeciesDetail {
   damageTaken: Record<string, number>
   flavorTexts: FlavorText[]
   encounters: EncounterInfo[]
+  /** Sem encontro próprio: os parentes que dão a espécie neste jogo (a pré-evolução para evoluir, ou quem bota o ovo). */
+  relatedSources?: RelatedSource[] | null
   moves: SpeciesMoves
   stats: BaseStats
   forms: SpeciesForm[]

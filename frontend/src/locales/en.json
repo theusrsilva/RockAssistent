@@ -2084,6 +2084,17 @@
     },
     "encounters": {
       "empty": "Not found in the wild in this game. Check the General tab: maybe you can get it by evolution, egg or trade.",
+      "viaRelatives": "{{name}} is not found in the wild in this game, but you can get it from another Pokémon of the same family that is:",
+      "relation": {
+        "evolve": "Evolve a {{name}}",
+        "breed": "Hatch an egg from {{name}}"
+      },
+      "relativeKind": {
+        "encounter": "{{name}} is found in this game.",
+        "gift": "{{name}} is a gift in this game.",
+        "trade": "{{name}} comes from an in-game trade."
+      },
+      "seeWhere": "See where to find it",
       "level": "Lv. {{level}}",
       "levels": "Lv. {{min}}–{{max}}",
       "chance": "{{chance}}%"
