@@ -6,7 +6,9 @@ import type { SpeciesSummary } from '../../lib/dex'
  * "Alolan Raichu") e, se houver, o complemento em inglês, como nos dados ("Tauros de Paldea (Blaze Breed)").
  */
 export function speciesEntryName(s: Pick<SpeciesSummary, 'name' | 'region' | 'formDetail'>, t: TFunction): string {
-  if (!s.region) return s.name
+  // Fêmea diferente: "Venusaur ♀". Outras formas: o nome da forma, em inglês como nos dados ("Rotom (Wash Rotom)").
+  if (s.formDetail === '♀') return `${s.name} ♀`
+  if (!s.region) return s.formDetail ? `${s.name} (${s.formDetail})` : s.name
   const name = t(`dex.regional.${s.region}`, { name: s.name })
   return s.formDetail ? `${name} (${s.formDetail})` : name
 }

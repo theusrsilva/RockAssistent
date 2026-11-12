@@ -9,8 +9,10 @@ namespace TradeRock.Core.Dex;
 /// Lista também as outras formas que se guardam como estão (Rotom, Deoxys, Lycanroc, Oricorio...). Ficam de fora Mega,
 /// Gigantamax, Totem, as que só existem em batalha, as fusões e as que dependem de item.
 /// </param>
+/// <param name="ManyForms">Lista também as formas das espécies que têm muitas: letras do Unown, padrões do Vivillon e sabores do Alcremie.</param>
+/// <param name="GenderForms">Lista também a fêmea das espécies em que ela é diferente (♀).</param>
 public sealed record DexQuery(string? Text, string? Type, int? Generation, string? GameKey, int Offset = 0, int Limit = 100,
-    bool RegionalForms = false, bool OtherForms = false);
+    bool RegionalForms = false, bool OtherForms = false, bool ManyForms = false, bool GenderForms = false);
 
 /// <summary>Uma linha da lista. Nome em inglês; os tipos são os da forma padrão hoje.</summary>
 /// <param name="FormId">Id do <c>pokemon</c> do PokeAPI quando a linha é uma forma regional (sprite e página); null na espécie.</param>

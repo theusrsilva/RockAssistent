@@ -16,11 +16,12 @@ public static class DexEndpoints
         group.MapGet("/games", () => Results.Ok(GameVersions.All));
 
         group.MapGet("/species", async (DexService dex, string? text, string? type, int? generation, string? game,
-            int? offset, int? limit, bool? forms, bool? otherForms, CancellationToken ct) =>
+            int? offset, int? limit, bool? forms, bool? otherForms, bool? manyForms, bool? genderForms, CancellationToken ct) =>
         {
             if (game is not null && !KnownGame(game))
                 return UnknownGame();
-            return Results.Ok(await dex.ListAsync(new DexQuery(text, type, generation, game, offset ?? 0, limit ?? 100, forms ?? false, otherForms ?? false), ct));
+            return Results.Ok(await dex.ListAsync(new DexQuery(text, type, generation, game, offset ?? 0, limit ?? 100, forms ?? false, otherForms ?? false,
+                manyForms ?? false, genderForms ?? false), ct));
         });
 
         // Coleção ("tenho"): as marcações da visão (geral ou de um jogo) e o que está no cofre agora.

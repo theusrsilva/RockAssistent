@@ -293,7 +293,7 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(0, Dex.ListFormId(80, 1, EntityContext.Gen8));
         Assert.Equal([10250, 10251, 10252], new[] { 1, 2, 3 }.Select(f => Dex.ListFormId(128, f, EntityContext.Gen9)));
         Assert.Equal(10177, Dex.ListFormId(555, 2, EntityContext.Gen8)); // Darmanitan de Galar
-        Assert.Equal(0, Dex.ListFormId(201, 5, EntityContext.Gen3)); // Unown F não tem linha: conta como Unown
+        Assert.Equal(DexService.CosmeticFormBase + 10005, Dex.ListFormId(201, 5, EntityContext.Gen3)); // Unown F
         Assert.Equal(0, Dex.ListFormId(6, 1, EntityContext.Gen6)); // Mega Charizard X também
     }
 
@@ -303,7 +303,11 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         // Cada "outra forma" da lista é achada pelo nome da forma no PKHeX, em algum formato do cofre; e o índice de
         // forma do PKHeX de uma delas não cai em outra.
         var others = (await Dex.ListAsync(new(null, null, null, null, 0, 2000, OtherForms: true), Ct)).Where(s => s.FormId is not null).ToList();
-        EntityContext[] contexts = [EntityContext.Gen9, EntityContext.Gen9a, EntityContext.Gen8, EntityContext.Gen8a, EntityContext.Gen7, EntityContext.Gen6];
+        EntityContext[] contexts =
+        [
+            EntityContext.Gen9, EntityContext.Gen9a, EntityContext.Gen8, EntityContext.Gen8a, EntityContext.Gen7, EntityContext.Gen6,
+            EntityContext.Gen5, EntityContext.Gen4,
+        ];
         var notFound = new List<string>();
         foreach (var form in others)
         {
@@ -318,11 +322,95 @@ public sealed class DexServiceTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Equal(0, Dex.ListFormId(925, 1, EntityContext.Gen9));
         Assert.Equal(others.Single(s => s.Id == 774 && s.FormDetail == "Red Core").FormId, Dex.ListFormId(774, 7, EntityContext.Gen7));
         Assert.Equal(0, Dex.ListFormId(774, 0, EntityContext.Gen7)); // com a casca: conta como Minior
-        Assert.Equal(others.Single(s => s.Id == 678).FormId, Dex.ListFormId(678, 1, EntityContext.Gen9)); // Meowstic fêmea
+        Assert.Equal(10025, Dex.ListFormId(678, 1, EntityContext.Gen9)); // Meowstic fêmea (na caixa das fêmeas)
 
         Assert.Equal(others.Single(s => s.Id == 479 && s.FormDetail == "Wash Rotom").FormId, Dex.ListFormId(479, 2, EntityContext.Gen8));
         Assert.Equal(others.Single(s => s.Id == 386 && s.FormDetail == "Attack Forme").FormId, Dex.ListFormId(386, 1, EntityContext.Gen9));
         Assert.Equal(others.Single(s => s.Id == 745 && s.FormDetail == "Dusk Form").FormId, Dex.ListFormId(745, 2, EntityContext.Gen9));
+    }
+
+    [Fact]
+    public async Task Formas_cosmeticas_e_femeas_so_quando_pedidas()
+    {
+        async Task<List<SpeciesSummary>> FormsAsync(DexQuery q) => [.. (await Dex.ListAsync(q, Ct)).Where(s => s.FormId is not null)];
+
+        // Unown, Vivillon e Alcremie numa caixa só deles.
+        var many = await FormsAsync(new(null, null, null, null, 0, 5000, ManyForms: true));
+        Assert.Equal((27, 19, 62), (many.Count(s => s.Id == 201), many.Count(s => s.Id == 666), many.Count(s => s.Id == 869)));
+        Assert.Equal(108, many.Count);
+        Assert.Equal("B", many.First(s => s.Id == 201).FormDetail);
+        Assert.All(many, s => Assert.InRange(s.FormId!.Value, DexService.CosmeticFormBase, DexService.FemaleFormBase - 1));
+
+        // A fêmea diferente: as espécies com diferença de gênero e as que já têm a fêmea como forma.
+        var gender = await FormsAsync(new(null, null, null, null, 0, 5000, GenderForms: true));
+        Assert.All(gender, s => Assert.Equal("♀", s.FormDetail));
+        Assert.Contains(gender, s => s.Id == 3 && s.FormId == DexService.FemaleFormBase + 3); // Venusaur
+        Assert.Contains(gender, s => s.Id == 25);
+        Assert.Single(gender, s => s.Id == 678); // Meowstic: a forma fêmea que o PokeAPI já tem
+        Assert.Single(gender, s => s.Id == 668); // Pyroar
+        Assert.Equal(gender.Count, gender.Select(s => s.Id).Distinct().Count());
+        Assert.DoesNotContain(gender, s => s.Id == 1);
+        // Só desde a Gen 4.
+        Assert.Empty(await FormsAsync(new(null, null, null, "frlg", 0, 5000, GenderForms: true)));
+        Assert.Contains(await FormsAsync(new(null, null, null, "dp", 0, 5000, GenderForms: true)), s => s.Id == 3);
+
+        // As outras cosméticas entram em "outras formas"; as de item, só de batalha e sem nome ficam de fora.
+        var others = await FormsAsync(new(null, null, null, null, 0, 5000, OtherForms: true));
+        Assert.Equal(["Summer Form", "Autumn Form", "Winter Form"], others.Where(s => s.Id == 585).Select(s => s.FormDetail));
+        Assert.Equal(9, others.Count(s => s.Id == 676)); // Furfrou
+        Assert.DoesNotContain(others, s => s.FormDetail == "♀");
+        foreach (var species in new[] { 201, 666, 869, 493, 773, 649, 421, 664, 665, 414 })
+            Assert.DoesNotContain(others, s => s.Id == species);
+
+        // Nenhum id repetido entre as caixas.
+        var all = await FormsAsync(new(null, null, null, null, 0, 5000, true, true, true, true));
+        Assert.Equal(all.Count, all.Select(s => s.FormId).Distinct().Count());
+        Assert.Equal(57 + others.Count + many.Count + gender.Count, all.Count);
+    }
+
+    [Fact]
+    public async Task Pagina_da_especie_mostra_as_formas_cosmeticas_e_a_femea()
+    {
+        var unown = (await Dex.GetAsync(201, "sv", "pt-BR", Ct))!;
+        Assert.Equal(28, unown.Forms.Count);
+        Assert.All(unown.Forms.Skip(1), f => Assert.True(f.Listed && f.Id > DexService.CosmeticFormBase));
+        Assert.Equal(["B", "C"], unown.Forms.Skip(1).Take(2).Select(f => f.Name));
+
+        var venusaur = (await Dex.GetAsync(3, "sv", "pt-BR", Ct))!;
+        Assert.Contains(venusaur.Forms, f => f.Id == DexService.FemaleFormBase + 3 && f.Name == "♀" && f.Listed);
+        Assert.Contains(venusaur.Forms, f => f.IsMega && !f.Listed); // Mega só aqui dentro, sem marcar
+        Assert.DoesNotContain((await Dex.GetAsync(3, "frlg", "pt-BR", Ct))!.Forms, f => f.Name == "♀"); // antes da Gen 4 não havia
+
+        // As de item aparecem para consulta, com o tipo, mas não entram na coleção.
+        var arceus = (await Dex.GetAsync(493, "sv", "pt-BR", Ct))!;
+        var fire = arceus.Forms.Single(f => f.Identifier == "arceus-fire");
+        Assert.Equal(["fire"], fire.Types);
+        Assert.False(fire.Listed);
+    }
+
+    [Fact]
+    public void Formas_cosmeticas_e_femeas_guardadas_caem_na_linha_delas()
+    {
+        Assert.Equal(DexService.CosmeticFormBase + 10001, Dex.ListFormId(201, 1, EntityContext.Gen3)); // Unown B
+        Assert.NotEqual(0, Dex.ListFormId(201, 26, EntityContext.Gen4)); // !
+        Assert.NotEqual(Dex.ListFormId(201, 26, EntityContext.Gen4), Dex.ListFormId(201, 27, EntityContext.Gen4)); // ?
+        Assert.Equal(0, Dex.ListFormId(201, 0, EntityContext.Gen3)); // Unown A é a espécie
+        Assert.NotEqual(0, Dex.ListFormId(666, 0, EntityContext.Gen9)); // Vivillon Icy Snow: a forma 0 do PKHeX
+        Assert.Equal(0, Dex.ListFormId(666, 6, EntityContext.Gen9)); // Meadow é a espécie na lista
+        Assert.NotEqual(0, Dex.ListFormId(666, 19, EntityContext.Gen9)); // Poké Ball
+        Assert.NotEqual(0, Dex.ListFormId(585, 1, EntityContext.Gen8)); // Deerling Summer
+        // Alcremie: o creme vem da forma; o confeito não está no resumo do cofre (conta como o de morango).
+        Assert.Equal(0, Dex.ListFormId(869, 0, EntityContext.Gen8));
+        Assert.NotEqual(0, Dex.ListFormId(869, 1, EntityContext.Gen8));
+
+        // Fêmea: só quando a forma é a da espécie e a espécie tem a fêmea diferente.
+        Assert.Equal(DexService.FemaleFormBase + 3, Dex.ListFormId(3, 0, EntityContext.Gen8, gender: 1));
+        Assert.Equal(0, Dex.ListFormId(3, 0, EntityContext.Gen8, gender: 0));
+        Assert.Equal(0, Dex.ListFormId(1, 0, EntityContext.Gen8, gender: 1)); // Bulbasaur não tem diferença
+        Assert.Equal(10100, Dex.ListFormId(26, 1, EntityContext.Gen8, gender: 1)); // Raichu de Alola fêmea é Raichu de Alola
+        Assert.NotEqual(0, Dex.ListFormId(668, 0, EntityContext.Gen9, gender: 1)); // Pyroar fêmea
+        Assert.True(Dex.IsListed(3, DexService.FemaleFormBase + 3));
+        Assert.True(Dex.IsListed(201, DexService.CosmeticFormBase + 10001));
     }
 
     [Fact]
@@ -602,6 +690,15 @@ public sealed class DexApiTests : IAsyncLifetime
 
         var list = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=geng");
         Assert.Equal(94, list[0].GetProperty("id").GetInt32());
+
+        // Sprites das formas cosméticas e das fêmeas: arquivos próprios, diferentes do da espécie.
+        async Task<byte[]> SpriteAsync(string query) => await _client.GetByteArrayAsync($"/api/sprites/{query}");
+        Assert.NotEqual(await SpriteAsync("201"), await SpriteAsync($"201?form={DexService.CosmeticFormBase + 10001}"));
+        Assert.NotEqual(await SpriteAsync("3"), await SpriteAsync($"3?form={DexService.FemaleFormBase + 3}"));
+        Assert.NotEqual(await SpriteAsync($"3?form={DexService.FemaleFormBase + 3}"), await SpriteAsync($"3?form={DexService.FemaleFormBase + 3}&shiny=1"));
+        var manyForms = await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=unown&manyForms=true");
+        Assert.Equal(28, manyForms.GetArrayLength());
+        Assert.Equal(2, (await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=venusaur&genderForms=true")).GetArrayLength());
 
         // As formas regionais só entram com ?forms=true (a tela da Pokédex); os seletores recebem só espécies.
         Assert.Equal(1, (await _client.GetFromJsonAsync<JsonElement>("/api/dex/species?text=raichu")).GetArrayLength());

@@ -1464,6 +1464,23 @@ Decisões do autor (12/11/2026):
   - **Tela:** progresso "Você tem X de Y · Z shiny" sobre a lista filtrada e o filtro "Mostrar" (todos, os que tenho,
     os que faltam, shiny que faltam). A página da espécie tem os mesmos botões para a forma escolhida.
   - API: `GET /api/dex/collection?scope=` e `PUT /api/dex/collection` (`{ scope, speciesId, formId, shiny, owned }`).
+- **Formas cosméticas e fêmeas diferentes** (pedido do autor, 12/11/2026). O PokeAPI já trazia as formas cosméticas
+  (as formas de um `pokemon` além da padrão dele: letras do Unown, padrões do Vivillon, sabores do Alcremie, flores,
+  estações, cortes do Furfrou) e a marca `has_gender_differences` das espécies; o `dex.sqlite` passou a guardar as duas
+  coisas, e os sprites vieram do PokeAPI/sprites (`scripts/fetch-sprites.sh --cosmetic`: `assets/sprites/cosmetic/<id do
+  pokemon_form>.png` e `assets/sprites/female/<espécie>.png`, com os shiny).
+  - **Página da espécie:** a fileira de formas mostra também as cosméticas e a fêmea (♀), além de Mega, Gigantamax e as
+    outras, que continuam só ali. As de item (placas do Arceus, discos do Silvally e do Genesect) aparecem para
+    consulta, com o tipo, mas não entram na coleção.
+  - **Lista:** três caixas, todas desligadas por padrão: "Outras formas" (agora também flores, estações, cortes do
+    Furfrou...), "Fêmeas diferentes" (`?genderForms=true`: as 102 espécies com diferença de gênero; desde a Gen 4) e
+    "Unown, Vivillon e Alcremie" (`?manyForms=true`: 108 formas). Ficam de fora as cosméticas sem nome (Scatterbug,
+    Mothim), as só de batalha e as de item.
+  - **Ids:** as linhas que não são um `pokemon` do PokeAPI usam 100000 + id do `pokemon_form` (cosméticas) e 200000 +
+    espécie (fêmea); a rota de sprites entende os mesmos ids.
+  - **Cofre:** reconhece a letra do Unown, o padrão do Vivillon, a flor, a estação e as demais pelo nome da forma no
+    PKHeX, e a fêmea pelo gênero do Pokémon guardado. Exceção: o Alcremie guarda o creme na forma e o confeito noutro
+    campo, que o resumo do cofre não tem; conta como o do confeito de morango.
 - **Ordem das formas.** O índice de forma dos nossos encontros e treinadores (`"form"` nos JSON) e do Nuzlocke conta na
   ordem de `DexService.PokemonForms`. As formas sem `order` no PokeAPI (as Mega do Legends: Z-A, as Gigantamax, o
   Basculin de listra branca; 19 espécies) entravam na frente e deslocavam as outras: o Raichu de Alola dos encontros do

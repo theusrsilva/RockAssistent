@@ -49,6 +49,10 @@
     <EmbeddedResource Include="..\..\assets\sprites\shiny\*.png" LogicalName="sprites/shiny/%(Filename)%(Extension)" />
     <EmbeddedResource Include="..\..\assets\sprites\forms\*.png" LogicalName="sprites/forms/%(Filename)%(Extension)" />
     <EmbeddedResource Include="..\..\assets\sprites\forms\shiny\*.png" LogicalName="sprites/forms/shiny/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\cosmetic\*.png" LogicalName="sprites/cosmetic/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\cosmetic\shiny\*.png" LogicalName="sprites/cosmetic/shiny/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\female\*.png" LogicalName="sprites/female/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="..\..\assets\sprites\female\shiny\*.png" LogicalName="sprites/female/shiny/%(Filename)%(Extension)" />
   </ItemGroup>
 
   <!--

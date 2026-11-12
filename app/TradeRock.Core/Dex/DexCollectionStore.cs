@@ -23,11 +23,11 @@ public sealed class DexCollectionStore(IDbContextFactory<TradeRockDb> dbFactory,
             .Select(m => new DexOwned(m.SpeciesId, m.FormId, m.Shiny)).ToListAsync(ct);
 
         var stored = await db.Pokemon.AsNoTracking().Where(p => p.DeletedAt == null && !p.IsEgg)
-            .Select(p => new { p.Species, p.Form, p.IsShiny, p.Format }).Distinct().ToListAsync(ct);
+            .Select(p => new { p.Species, p.Form, p.IsShiny, p.Format, p.Gender }).Distinct().ToListAsync(ct);
         var vault = stored
             .Select(p => (Pokemon: p, Format: VaultFormats.Get(p.Format)))
             .Where(x => scope == General || x.Format.Game?.Key == scope)
-            .Select(x => new DexOwned(x.Pokemon.Species, dex.ListFormId(x.Pokemon.Species, x.Pokemon.Form, x.Format.Context), x.Pokemon.IsShiny))
+            .Select(x => new DexOwned(x.Pokemon.Species, dex.ListFormId(x.Pokemon.Species, x.Pokemon.Form, x.Format.Context, x.Pokemon.Gender), x.Pokemon.IsShiny))
             .Distinct()
             .OrderBy(o => o.SpeciesId).ThenBy(o => o.FormId).ThenBy(o => o.Shiny)
             .ToList();

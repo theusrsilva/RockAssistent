@@ -27,8 +27,9 @@ const filters: CollectionFilter[] = ['', 'tenho', 'faltam', 'shiny']
 
 /**
  * Lista da Pokédex: busca por nome ou número e filtros de tipo, geração e jogo (guardados no endereço). As formas
- * regionais aparecem cada uma no seu cartão, logo depois da espécie; as outras formas, só quando ligadas. A lista
- * continua sozinha ao chegar perto do fim.
+ * regionais aparecem cada uma no seu cartão, logo depois da espécie; as outras formas, as fêmeas diferentes e as do
+ * Unown, do Vivillon e do Alcremie, só quando ligadas (três caixas, desligadas por padrão). A lista continua sozinha ao
+ * chegar perto do fim.
  *
  * Coleção: cada cartão tem os botões "tenho" e "tenho shiny". Há uma coleção geral e uma por jogo (a do jogo anda
  * junto com o filtro de jogo); o que está no cofre conta sozinho quando a opção está ligada.
@@ -42,6 +43,8 @@ export default function DexPage() {
   const generation = params.get('geracao') ?? ''
   const game = params.get('jogo') ?? ''
   const otherForms = params.get('formas') === '1'
+  const manyForms = params.get('muitas') === '1'
+  const genderForms = params.get('genero') === '1'
   const scope = isDexGame(params.get('colecao')) ? (params.get('colecao') as string) : ''
   const show = (filters as string[]).includes(params.get('mostrar') ?? '') ? ((params.get('mostrar') ?? '') as CollectionFilter) : ''
   const [all, setAll] = useState<SpeciesSummary[] | null>(null)
@@ -72,6 +75,8 @@ export default function DexPage() {
     (isCurrent) => {
       const q = new URLSearchParams({ limit: '2000', forms: 'true' })
       if (otherForms) q.set('otherForms', 'true')
+      if (manyForms) q.set('manyForms', 'true')
+      if (genderForms) q.set('genderForms', 'true')
       if (text.trim()) q.set('text', text.trim())
       if (type) q.set('type', type)
       if (generation) q.set('generation', generation)
@@ -86,7 +91,7 @@ export default function DexPage() {
         })
         .catch(() => isCurrent() && setError(true))
     },
-    [text, type, generation, game, otherForms],
+    [text, type, generation, game, otherForms, manyForms, genderForms],
     250,
   )
 
@@ -191,6 +196,14 @@ export default function DexPage() {
           <label className={chip}>
             <input type="checkbox" className="accent-accent" checked={otherForms} onChange={(e) => setParam('formas', e.target.checked ? '1' : '')} />
             {t('dex.otherForms')}
+          </label>
+          <label className={chip}>
+            <input type="checkbox" className="accent-accent" checked={genderForms} onChange={(e) => setParam('genero', e.target.checked ? '1' : '')} />
+            {t('dex.genderForms')}
+          </label>
+          <label className={chip}>
+            <input type="checkbox" className="accent-accent" checked={manyForms} onChange={(e) => setParam('muitas', e.target.checked ? '1' : '')} />
+            {t('dex.manyForms')}
           </label>
           <label className={chip} title={t('dex.collection.countVaultHelp')}>
             <input

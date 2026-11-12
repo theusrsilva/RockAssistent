@@ -20,6 +20,12 @@ describe('nome da linha da Pokédex', () => {
     expect(speciesEntryName({ name: 'Zorua', region: 'hisui' }, translator(en))).toBe('Hisuian Zorua')
   })
 
+  it('outras formas levam o nome da forma; a fêmea, o símbolo', () => {
+    expect(speciesEntryName({ name: 'Rotom', formDetail: 'Wash Rotom' }, translator(ptBR))).toBe('Rotom (Wash Rotom)')
+    expect(speciesEntryName({ name: 'Unown', formDetail: 'B' }, translator(ptBR))).toBe('Unown (B)')
+    expect(speciesEntryName({ name: 'Venusaur', formDetail: '♀' }, translator(ptBR))).toBe('Venusaur ♀')
+  })
+
   it('o complemento da forma vai entre parênteses', () => {
     expect(speciesEntryName({ name: 'Tauros', region: 'paldea', formDetail: 'Blaze Breed' }, translator(ptBR))).toBe(
       'Tauros de Paldea (Blaze Breed)',
