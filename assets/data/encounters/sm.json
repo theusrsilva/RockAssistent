@@ -1,10 +1,11 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/alola/ (páginas por área; só a parte de Sun/Moon de cada página, tabela resumida de cada método)",
-    "Métodos: walk (grama), cave (chão de caverna ou prédio), surf, fish (uma vara só, sem condição), rippling_water (pesca em ponto borbulhando; conditions fish), ambush (emboscadas; conditions: grass = grama farfalhando, bush = planta balançando, sand = nuvem de areia, ground = poeira no chão da caverna, shadow = sombra voando, water_splash = respingo na água, berry_tree = debaixo da árvore de berries, fleeing = Wimpod que foge), sos (aliado que só aparece quando o selvagem chama ajuda; com rain, hail ou sandstorm é o SOS que só vem com esse clima) e island_scan (conditions = dia da semana em inglês). day/night em conditions quando a tabela do Serebii muda com o horário. Sub-áreas e trechos da mesma área foram juntados: faixa de nível do menor ao maior e a MAIOR chance entre os trechos; a mesma espécie em vários slots de um trecho tem a chance somada. Aliados de SOS comuns não trazem chance (o Serebii dá a chance da tabela de SOS, não da espécie).",
-    "Trechos que o Serebii mostra dentro de outra página entram na área do jogo: Hau'oli Outskirts (na página da Route 1) fica em route-1 no Sun/Moon e em route-1-hauoli-outskirts no Ultra Sun/Ultra Moon; Trainers' School em trainers-school; Outer Cape (página de Malie City) em malie-outer-cape. O Poké Pelago (Isle Abeens) não é área do mapa e não entra.",
+    "Métodos: walk (grama), cave (chão de caverna ou prédio), surf, fish (uma vara só, sem condição), rippling_water (pesca em ponto borbulhando; conditions fish), ambush (emboscadas; conditions: grass = grama farfalhando, bush = planta balançando, sand = nuvem de areia, ground = poeira no chão da caverna, shadow = sombra voando, water_splash = respingo na água, berry_tree = debaixo da árvore de berries, fleeing = Wimpod que foge), sos (aliado que só aparece quando o selvagem chama ajuda; com rain, hail ou sandstorm é o SOS que só vem com esse clima), island_scan (conditions = dia da semana em inglês) e poke_pelago. day/night em conditions quando a tabela do Serebii muda com o horário. Sub-áreas e trechos da mesma área foram juntados: faixa de nível do menor ao maior e a MAIOR chance entre os trechos; a mesma espécie em vários slots de um trecho tem a chance somada. Aliados de SOS comuns não trazem chance (o Serebii dá a chance da tabela de SOS, não da espécie).",
+    "Trechos que o Serebii mostra dentro de outra página entram na área do jogo: Hau'oli Outskirts (na página da Route 1) fica em route-1 no Sun/Moon e em route-1-hauoli-outskirts no Ultra Sun/Ultra Moon; Trainers' School em trainers-school; Outer Cape (página de Malie City) em malie-outer-cape.",
     "Não entram: encontros fixos e 'Interactable' (lendários, Ultra Beasts, Ultra Space Wilds, Pokémon parados no mapa), presentes, trocas, fósseis e ovos.",
-    "verified = o PKHeX (EncounterArea7 de Encounters7SM, tabela Standard ou SOS) tem a mesma espécie e forma no local e na versão, com faixa de nível que se cruza. O Island Scan não está nas tabelas de slots do PKHeX (é encontro fixo lá), por isso fica verified=false.",
+    "Onde o Serebii discorda do PKHeX vale o PKHeX (EncounterArea7 de Encounters7SM, PKHeX.Core 26.8.26; a chance continua a do Serebii): (1) nível: se a faixa do Serebii não bate com as do PKHeX para a espécie naquele local e versão (tabela SOS para sos, Standard para o resto), cada ponta vai para a ponta mais próxima do PKHeX; (2) espécie que o PKHeX tem no local e a página não mostra entra com os níveis do PKHeX (Crabrawler de Berry Fields, que é a única espécie da tabela, por isso 100%; Vanillite de SOS com granizo no Mount Lanakila do Ultra Sun/Ultra Moon, sem chance); (3) espécie que o Serebii lista e o PKHeX não tem naquele local sai (surf da Route 16 do Ultra Sun/Ultra Moon: no jogo essa água é da Route 15). Não entra a tabela de enchimento do jogo (Pikipek nível 2-3 sozinho, que o PKHeX traz até em Ruins of Abundance e Exeggutor Island).",
+    "verified = o PKHeX tem a mesma espécie e forma no local e na versão. Island Scan: conferido com os EncounterStatic7 do PKHeX (espécie, local e nível; o nível é o do PKHeX).",
     "Poké Pelago (Isle Abeens): espécies das páginas https://www.serebii.net/sunmoon/pokepelago.shtml e https://www.serebii.net/ultrasunultramoon/pokepelago.shtml; níveis das tabelas do PKHeX (local 30016). Method poke_pelago."
   ],
   "items": [
@@ -550,7 +551,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-2",
@@ -774,7 +775,23 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
+    },
+    {
+      "area": "berry-fields",
+      "species": 739,
+      "form": 0,
+      "method": "ambush",
+      "min_level": 7,
+      "max_level": 10,
+      "chance": "100%",
+      "conditions": "berry_tree",
+      "versions": [
+        "sun",
+        "moon"
+      ],
+      "alpha": false,
+      "verified": true
     },
     {
       "area": "hauoli-cemetery",
@@ -854,7 +871,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "verdant-cavern",
@@ -1122,7 +1139,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "kalae-bay",
@@ -1410,7 +1427,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "melemele-meadow",
@@ -1696,7 +1713,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ten-carat-hill",
@@ -1904,7 +1921,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "melemele-sea",
@@ -2352,7 +2369,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "paniola-town",
@@ -2736,7 +2753,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "brooklet-hill",
@@ -3184,7 +3201,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
@@ -3424,7 +3441,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -3648,7 +3665,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wela-volcano-park",
@@ -4064,7 +4081,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lush-jungle",
@@ -4814,7 +4831,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hano-beach",
@@ -5500,7 +5517,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "mount-hokulani",
@@ -5660,7 +5677,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-11",
@@ -5836,7 +5853,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-12",
@@ -6203,7 +6220,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "secluded-shore",
@@ -6681,7 +6698,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-14",
@@ -7385,7 +7402,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-17",
@@ -7719,7 +7736,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "seafolk-village",
@@ -8231,7 +8248,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ancient-poni-path",
@@ -8343,7 +8360,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-breaker-coast",
@@ -8631,7 +8648,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vast-poni-canyon",
@@ -9556,7 +9573,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-plains",
@@ -9934,7 +9951,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-meadow",
@@ -10156,7 +10173,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "resolution-cave",
@@ -10492,7 +10509,7 @@
         "moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poke-pelago",

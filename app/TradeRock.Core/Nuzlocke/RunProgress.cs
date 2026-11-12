@@ -192,7 +192,8 @@ public static class RunProgress
         GameDataStore data, DexService dex, CancellationToken ct)
     {
         var rows = new List<(int Species, int Form, string Method, int Min, int Max, IReadOnlyList<string> Versions)>();
-        foreach (var e in data.Encounters(gameKey).Where(e => e.Area == area.Id))
+        // Fora da run: o que só sai com evento entre jogadores (Funfest Mission das Hidden Grottos do B2W2).
+        foreach (var e in data.Encounters(gameKey).Where(e => e.Area == area.Id && !EncounterSources.NeedsEvent(e)))
             rows.Add((e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, e.Versions));
         var ownOnly = EncounterSources.OwnOnly(gameKey) && data.Encounters(gameKey).Count > 0;
         if (!ownOnly && area.PokeApiLocationId is { } location && DexDatabase.ResourceExists)

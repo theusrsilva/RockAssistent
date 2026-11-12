@@ -1,10 +1,11 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/kalos/ (uma página por área, tabelas de Pokémon X e Pokémon Y; baixadas em 12/11/2026)",
-    "Métodos: walk (grama, grama alta, neve; conditions shallow_water = água rasa do pântano das Rotas 14 e 19), cave (chão de caverna ou prédio), flowers (conditions yellow_flowers/red_flowers/purple_flowers), surf, fish (old_rod/good_rod/super_rod), rock_smash, horde (o Serebii não dá a chance das hordas), shaking_grass (moita que balança, Rotas 6 e 18), ambush (conditions: tree = árvores de berry da Berry Fields, que o Serebii lista na página da Rota 7; trash_can = lixeiras do Lost Hotel e da Pokémon Village; ceiling = cai do teto; sky = sombra no céu; ground = poeira que persegue na Rota 13). O trecho 3D da Glittering Cave (que o Serebii chama de Shaking Areas) entra como cave.",
-    "Slots repetidos da mesma espécie foram somados (as cores de Flabébé e Floette viram uma linha só, form 0, porque o app não tem ficha por cor). Cavernas com vários andares: faixa de nível de todos os andares e a maior chance entre eles. Formas: Basculin de listra azul = 1; Pumpkaboo pequeno/grande/super = 1/2/3.",
-    "O Serebii não dá nível (nem chance) nas emboscadas e moitas que balançam nem na horda de Floatzel da Victory Road: esses níveis vêm das tabelas do PKHeX (Encounters6XY); os das lixeiras, que o PKHeX guarda como encontros fixos, vêm do PokeAPI (trash-can-ambush).",
-    "verified = o PKHeX (Encounters6XY) tem a espécie no mesmo local e versão com faixa de nível que cruza a nossa (hordas conferidas contra as hordas)."
+    "Tabelas de encontros do próprio jogo pelo PKHeX.Core 26.8.26 (Encounters6XY: slots de cada local na ordem do jogo, hordas, emboscadas e encontros fixos).",
+    "Regra (decisão do autor): onde o Serebii discorda do PKHeX, vale o PKHeX. Espécies, versões e níveis de cada método são os do PKHeX; a chance é a do Serebii. Espécie que o Serebii lista num método e o PKHeX não tem ali saiu; espécie que só o PKHeX tem entrou com chance null. Onde a soma das chances do Serebii num método não dá 100% (e a área tem uma tabela só), as chances do grupo foram calculadas pelos slots do PKHeX (grama e flores: 9 slots de 10% e depois 5%, 4% e 1%; surf e Rock Smash: 50/30/15/4/1; varas: 60/35/5).",
+    "Métodos: walk (grama; grama alta nas Rotas 6 e 16 e neve na Rota 17; conditions shallow_water = água rasa do pântano das Rotas 14 e 19), cave (chão de caverna ou prédio; inclui o trecho 3D da Glittering Cave), flowers (conditions yellow_flowers/red_flowers/purple_flowers), surf, fish (old_rod/good_rod/super_rod), rock_smash, horde (sem chance: o Serebii não dá), shaking_grass (moita que balança, Rotas 6 e 18), ambush (conditions: tree = árvores de berry da Berry Fields, que o Serebii lista na página da Rota 7; trash_can = lixeiras do Lost Hotel e da Pokémon Village, com tuesday = só na terça e thursday = só na quinta; ceiling = cai do teto; sky = sombra no céu; ground = poeira que persegue na Rota 13).",
+    "As cores de Flabébé e Floette e os padrões de Spewpa viram uma linha só (form 0), porque o app não tem ficha por cor. Basculin de listra azul = 1; Pumpkaboo pequeno/grande/super = 1/2/3. Cavernas com vários andares: faixa de nível de todos os andares e a maior chance entre eles.",
+    "verified = a linha está nas tabelas do PKHeX (slots do método naquele local e versão; as lixeiras, nos encontros fixos EncounterStatic6, de onde vêm os níveis delas; os dias de Rotom e Banette são os do PokeAPI)."
   ],
   "items": [
     {
@@ -580,7 +581,7 @@
       "species": 83,
       "form": 0,
       "method": "walk",
-      "min_level": 6,
+      "min_level": 7,
       "max_level": 7,
       "chance": "10%",
       "conditions": null,
@@ -612,7 +613,7 @@
       "species": 298,
       "form": 0,
       "method": "walk",
-      "min_level": 7,
+      "min_level": 6,
       "max_level": 7,
       "chance": "20%",
       "conditions": null,
@@ -693,7 +694,7 @@
       "form": 0,
       "method": "flowers",
       "min_level": 25,
-      "max_level": 27,
+      "max_level": 26,
       "chance": "20%",
       "conditions": "yellow_flowers",
       "versions": [
@@ -708,7 +709,7 @@
       "species": 83,
       "form": 0,
       "method": "flowers",
-      "min_level": 25,
+      "min_level": 26,
       "max_level": 26,
       "chance": "10%",
       "conditions": "yellow_flowers",
@@ -836,7 +837,7 @@
       "species": 184,
       "form": 0,
       "method": "surf",
-      "min_level": 26,
+      "min_level": 25,
       "max_level": 27,
       "chance": "5%",
       "conditions": null,
@@ -1173,7 +1174,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 9,
-      "max_level": 9,
+      "max_level": 10,
       "chance": "5%",
       "conditions": null,
       "versions": [
@@ -1187,7 +1188,7 @@
       "species": 312,
       "form": 0,
       "method": "walk",
-      "min_level": 10,
+      "min_level": 9,
       "max_level": 10,
       "chance": "5%",
       "conditions": null,
@@ -1360,7 +1361,7 @@
       "species": 659,
       "form": 0,
       "method": "flowers",
-      "min_level": 8,
+      "min_level": 10,
       "max_level": 10,
       "chance": "10%",
       "conditions": "purple_flowers",
@@ -1377,7 +1378,7 @@
       "form": 0,
       "method": "flowers",
       "min_level": 8,
-      "max_level": 9,
+      "max_level": 10,
       "chance": "30%",
       "conditions": "purple_flowers",
       "versions": [
@@ -1781,21 +1782,7 @@
       "chance": "35%",
       "conditions": null,
       "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-7",
-      "species": 453,
-      "form": 0,
-      "method": "walk",
-      "min_level": 12,
-      "max_level": 14,
-      "chance": "40%",
-      "conditions": null,
-      "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -1822,8 +1809,8 @@
       "species": 669,
       "form": 0,
       "method": "walk",
-      "min_level": 7,
-      "max_level": 8,
+      "min_level": 13,
+      "max_level": 14,
       "chance": "5%",
       "conditions": null,
       "versions": [
@@ -1831,7 +1818,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -1840,7 +1827,7 @@
       "method": "walk",
       "min_level": 14,
       "max_level": 14,
-      "chance": "5%",
+      "chance": "10%",
       "conditions": null,
       "versions": [
         "y"
@@ -1855,7 +1842,7 @@
       "method": "walk",
       "min_level": 14,
       "max_level": 14,
-      "chance": "5%",
+      "chance": "10%",
       "conditions": null,
       "versions": [
         "x"
@@ -2152,15 +2139,15 @@
       "species": 54,
       "form": 0,
       "method": "horde",
-      "min_level": 8,
-      "max_level": 8,
+      "min_level": 7,
+      "max_level": 7,
       "chance": null,
       "conditions": null,
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -2213,15 +2200,15 @@
       "species": 315,
       "form": 0,
       "method": "horde",
-      "min_level": 8,
-      "max_level": 8,
+      "min_level": 7,
+      "max_level": 7,
       "chance": null,
       "conditions": null,
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "berry-fields",
@@ -2244,7 +2231,7 @@
       "species": 313,
       "form": 0,
       "method": "ambush",
-      "min_level": 13,
+      "min_level": 14,
       "max_level": 15,
       "chance": null,
       "conditions": "tree",
@@ -2260,7 +2247,7 @@
       "species": 314,
       "form": 0,
       "method": "ambush",
-      "min_level": 13,
+      "min_level": 14,
       "max_level": 15,
       "chance": null,
       "conditions": "tree",
@@ -2372,8 +2359,8 @@
       "species": 610,
       "form": 0,
       "method": "cave",
-      "min_level": 14,
-      "max_level": 14,
+      "min_level": 13,
+      "max_level": 15,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -2752,15 +2739,15 @@
       "species": 557,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 18,
+      "max_level": 20,
       "chance": "66%",
       "conditions": null,
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-8",
@@ -2782,15 +2769,15 @@
       "species": 688,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 18,
+      "max_level": 20,
       "chance": "34%",
       "conditions": null,
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-8",
@@ -2996,15 +2983,15 @@
       "species": 557,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 18,
+      "max_level": 20,
       "chance": "66%",
       "conditions": null,
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ambrette-town",
@@ -3026,15 +3013,15 @@
       "species": 688,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 18,
+      "max_level": 20,
       "chance": "34%",
       "conditions": null,
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ambrette-town",
@@ -3276,7 +3263,7 @@
       "species": 95,
       "form": 0,
       "method": "cave",
-      "min_level": 16,
+      "min_level": 17,
       "max_level": 17,
       "chance": "10%",
       "conditions": null,
@@ -3308,7 +3295,7 @@
       "species": 111,
       "form": 0,
       "method": "cave",
-      "min_level": 16,
+      "min_level": 17,
       "max_level": 17,
       "chance": "10%",
       "conditions": null,
@@ -3356,7 +3343,7 @@
       "species": 337,
       "form": 0,
       "method": "cave",
-      "min_level": 15,
+      "min_level": 17,
       "max_level": 17,
       "chance": "10%",
       "conditions": null,
@@ -3372,7 +3359,7 @@
       "species": 338,
       "form": 0,
       "method": "cave",
-      "min_level": 15,
+      "min_level": 17,
       "max_level": 17,
       "chance": "10%",
       "conditions": null,
@@ -3390,7 +3377,7 @@
       "method": "ambush",
       "min_level": 15,
       "max_level": 17,
-      "chance": "85%",
+      "chance": null,
       "conditions": "ceiling",
       "versions": [
         "x",
@@ -3406,7 +3393,7 @@
       "method": "ambush",
       "min_level": 15,
       "max_level": 17,
-      "chance": "15%",
+      "chance": null,
       "conditions": "ceiling",
       "versions": [
         "x",
@@ -3452,8 +3439,8 @@
       "species": 95,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 15,
+      "max_level": 17,
       "chance": "35%",
       "conditions": null,
       "versions": [
@@ -3467,8 +3454,8 @@
       "species": 557,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 13,
-      "max_level": 15,
+      "min_level": 15,
+      "max_level": 17,
       "chance": "65%",
       "conditions": null,
       "versions": [
@@ -3936,21 +3923,6 @@
       "species": 228,
       "form": 0,
       "method": "horde",
-      "min_level": 10,
-      "max_level": 10,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-10",
-      "species": 299,
-      "form": 0,
-      "method": "horde",
       "min_level": 11,
       "max_level": 11,
       "chance": null,
@@ -3959,7 +3931,7 @@
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-10",
@@ -3971,6 +3943,7 @@
       "chance": null,
       "conditions": null,
       "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -4438,7 +4411,7 @@
       "species": 458,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
+      "min_level": 27,
       "max_level": 27,
       "chance": "16%",
       "conditions": null,
@@ -4681,21 +4654,7 @@
       "chance": "10%",
       "conditions": "yellow_flowers",
       "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-12",
-      "species": 79,
-      "form": 0,
-      "method": "flowers",
-      "min_level": 24,
-      "max_level": 24,
-      "chance": "10%",
-      "conditions": "yellow_flowers",
-      "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -4706,8 +4665,8 @@
       "species": 102,
       "form": 0,
       "method": "flowers",
-      "min_level": 24,
-      "max_level": 24,
+      "min_level": 26,
+      "max_level": 26,
       "chance": "10%",
       "conditions": "yellow_flowers",
       "versions": [
@@ -4722,8 +4681,8 @@
       "species": 127,
       "form": 0,
       "method": "flowers",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 27,
+      "max_level": 27,
       "chance": "5%",
       "conditions": "yellow_flowers",
       "versions": [
@@ -4753,8 +4712,8 @@
       "species": 214,
       "form": 0,
       "method": "flowers",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 27,
+      "max_level": 27,
       "chance": "5%",
       "conditions": "yellow_flowers",
       "versions": [
@@ -4784,8 +4743,8 @@
       "species": 417,
       "form": 0,
       "method": "flowers",
-      "min_level": 23,
-      "max_level": 24,
+      "min_level": 25,
+      "max_level": 26,
       "chance": "5%",
       "conditions": "yellow_flowers",
       "versions": [
@@ -5551,7 +5510,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 30,
-      "max_level": 32,
+      "max_level": 30,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -5806,7 +5765,7 @@
       "species": 339,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
+      "min_level": 25,
       "max_level": 35,
       "chance": "70%",
       "conditions": "good_rod",
@@ -5840,7 +5799,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "x",
@@ -5934,7 +5893,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "x"
@@ -5949,7 +5908,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "y"
@@ -6342,7 +6301,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "x"
@@ -6357,7 +6316,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "y"
@@ -6738,7 +6697,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "x"
@@ -6753,7 +6712,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "y"
@@ -6830,7 +6789,7 @@
       "species": 707,
       "form": 0,
       "method": "cave",
-      "min_level": 37,
+      "min_level": 36,
       "max_level": 38,
       "chance": "20%",
       "conditions": null,
@@ -6840,22 +6799,6 @@
       ],
       "alpha": false,
       "verified": true
-    },
-    {
-      "area": "lost-hotel",
-      "species": 479,
-      "form": 0,
-      "method": "ambush",
-      "min_level": 38,
-      "max_level": 38,
-      "chance": null,
-      "conditions": "trash_can",
-      "versions": [
-        "x",
-        "y"
-      ],
-      "alpha": false,
-      "verified": false
     },
     {
       "area": "lost-hotel",
@@ -6871,7 +6814,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lost-hotel",
@@ -6887,7 +6830,23 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
+    },
+    {
+      "area": "lost-hotel",
+      "species": 479,
+      "form": 0,
+      "method": "ambush",
+      "min_level": 38,
+      "max_level": 38,
+      "chance": null,
+      "conditions": "trash_can,tuesday",
+      "versions": [
+        "x",
+        "y"
+      ],
+      "alpha": false,
+      "verified": true
     },
     {
       "area": "frost-cavern",
@@ -7070,8 +7029,8 @@
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -7079,15 +7038,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 30,
+      "max_level": 30,
       "chance": "30%",
       "conditions": "good_rod",
       "versions": [
@@ -7095,45 +7054,45 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 30,
+      "max_level": 30,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 30,
+      "max_level": 30,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "70%",
       "conditions": "super_rod",
       "versions": [
@@ -7141,37 +7100,37 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "frost-cavern",
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-17",
@@ -7179,7 +7138,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 38,
-      "max_level": 39,
+      "max_level": 40,
       "chance": "29%",
       "conditions": null,
       "versions": [
@@ -7446,7 +7405,7 @@
       "species": 533,
       "form": 0,
       "method": "flowers",
-      "min_level": 45,
+      "min_level": 46,
       "max_level": 46,
       "chance": "10%",
       "conditions": "red_flowers",
@@ -7495,7 +7454,7 @@
       "form": 0,
       "method": "shaking_grass",
       "min_level": 45,
-      "max_level": 46,
+      "max_level": 45,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -7557,15 +7516,15 @@
       "species": 631,
       "form": 0,
       "method": "horde",
-      "min_level": 23,
-      "max_level": 23,
+      "min_level": 24,
+      "max_level": 24,
       "chance": null,
       "conditions": null,
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-18",
@@ -7577,7 +7536,21 @@
       "chance": null,
       "conditions": null,
       "versions": [
-        "x",
+        "x"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 632,
+      "form": 0,
+      "method": "horde",
+      "min_level": 23,
+      "max_level": 24,
+      "chance": null,
+      "conditions": null,
+      "versions": [
         "y"
       ],
       "alpha": false,
@@ -7810,7 +7783,7 @@
       "method": "rock_smash",
       "min_level": 44,
       "max_level": 46,
-      "chance": "10%",
+      "chance": "5%",
       "conditions": null,
       "versions": [
         "x",
@@ -7824,8 +7797,8 @@
       "species": 271,
       "form": 0,
       "method": "surf",
-      "min_level": 57,
-      "max_level": 59,
+      "min_level": 44,
+      "max_level": 46,
       "chance": "66%",
       "conditions": null,
       "versions": [
@@ -7833,15 +7806,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "couriway-town",
       "species": 419,
       "form": 0,
       "method": "surf",
-      "min_level": 57,
-      "max_level": 59,
+      "min_level": 44,
+      "max_level": 46,
       "chance": "34%",
       "conditions": null,
       "versions": [
@@ -7849,15 +7822,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "couriway-town",
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 25,
+      "max_level": 25,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -7865,53 +7838,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "couriway-town",
-      "species": 61,
-      "form": 0,
-      "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
-      "chance": "30%",
-      "conditions": "good_rod",
-      "versions": [
-        "x",
-        "y"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "couriway-town",
-      "species": 550,
-      "form": 0,
-      "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
-      "chance": "70%",
-      "conditions": "good_rod",
-      "versions": [
-        "y"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "couriway-town",
-      "species": 550,
-      "form": 1,
-      "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
-      "chance": "70%",
-      "conditions": "good_rod",
-      "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "couriway-town",
@@ -7920,6 +7847,52 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 35,
+      "chance": "30%",
+      "conditions": "good_rod",
+      "versions": [
+        "x",
+        "y"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "couriway-town",
+      "species": 550,
+      "form": 0,
+      "method": "fish",
+      "min_level": 35,
+      "max_level": 35,
+      "chance": "70%",
+      "conditions": "good_rod",
+      "versions": [
+        "y"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "couriway-town",
+      "species": 550,
+      "form": 1,
+      "method": "fish",
+      "min_level": 35,
+      "max_level": 35,
+      "chance": "70%",
+      "conditions": "good_rod",
+      "versions": [
+        "x"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "couriway-town",
+      "species": 61,
+      "form": 0,
+      "method": "fish",
+      "min_level": 45,
+      "max_level": 45,
       "chance": "65%",
       "conditions": "super_rod",
       "versions": [
@@ -7934,9 +7907,9 @@
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
-      "chance": "30%",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "x"
@@ -7949,9 +7922,9 @@
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
-      "chance": "30%",
+      "min_level": 45,
+      "max_level": 45,
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "y"
@@ -8377,22 +8350,6 @@
     },
     {
       "area": "route-19",
-      "species": 451,
-      "form": 0,
-      "method": "horde",
-      "min_level": 24,
-      "max_level": 24,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "x",
-        "y"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-19",
       "species": 195,
       "form": 0,
       "method": "surf",
@@ -8444,8 +8401,8 @@
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 25,
+      "max_level": 25,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -8453,15 +8410,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-19",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 35,
+      "max_level": 35,
       "chance": "30%",
       "conditions": "good_rod",
       "versions": [
@@ -8469,15 +8426,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-19",
       "species": 339,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 35,
+      "max_level": 35,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
@@ -8485,15 +8442,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-19",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 45,
+      "max_level": 45,
       "chance": "65%",
       "conditions": "super_rod",
       "versions": [
@@ -8501,7 +8458,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-19",
@@ -8524,8 +8481,8 @@
       "species": 340,
       "form": 0,
       "method": "fish",
-      "min_level": 50,
-      "max_level": 50,
+      "min_level": 45,
+      "max_level": 45,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
@@ -8533,7 +8490,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
@@ -8604,7 +8561,7 @@
       "species": 591,
       "form": 0,
       "method": "walk",
-      "min_level": 49,
+      "min_level": 48,
       "max_level": 50,
       "chance": "25%",
       "conditions": null,
@@ -8700,7 +8657,7 @@
       "species": 591,
       "form": 0,
       "method": "flowers",
-      "min_level": 49,
+      "min_level": 48,
       "max_level": 50,
       "chance": "25%",
       "conditions": "red_flowers",
@@ -8969,22 +8926,6 @@
     },
     {
       "area": "pokemon-village",
-      "species": 354,
-      "form": 0,
-      "method": "ambush",
-      "min_level": 46,
-      "max_level": 50,
-      "chance": null,
-      "conditions": "trash_can",
-      "versions": [
-        "x",
-        "y"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "pokemon-village",
       "species": 569,
       "form": 0,
       "method": "ambush",
@@ -8997,7 +8938,23 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
+    },
+    {
+      "area": "pokemon-village",
+      "species": 354,
+      "form": 0,
+      "method": "ambush",
+      "min_level": 46,
+      "max_level": 50,
+      "chance": null,
+      "conditions": "trash_can,thursday",
+      "versions": [
+        "x",
+        "y"
+      ],
+      "alpha": false,
+      "verified": true
     },
     {
       "area": "pokemon-village",
@@ -9084,8 +9041,8 @@
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 30,
+      "max_level": 30,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -9093,15 +9050,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "30%",
       "conditions": "good_rod",
       "versions": [
@@ -9109,45 +9066,45 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 40,
+      "max_level": 40,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 50,
+      "max_level": 50,
       "chance": "70%",
       "conditions": "super_rod",
       "versions": [
@@ -9155,37 +9112,37 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 50,
+      "max_level": 50,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pokemon-village",
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 50,
+      "max_level": 50,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-21",
@@ -9432,8 +9389,8 @@
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 30,
+      "max_level": 30,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -9441,7 +9398,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-21",
@@ -9450,7 +9407,7 @@
       "method": "fish",
       "min_level": 40,
       "max_level": 40,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "good_rod",
       "versions": [
         "x",
@@ -9501,21 +9458,7 @@
       "chance": "65%",
       "conditions": "super_rod",
       "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-21",
-      "species": 61,
-      "form": 0,
-      "method": "fish",
-      "min_level": 50,
-      "max_level": 55,
-      "chance": "65%",
-      "conditions": "super_rod",
-      "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -9531,21 +9474,7 @@
       "chance": "5%",
       "conditions": "super_rod",
       "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-21",
-      "species": 148,
-      "form": 0,
-      "method": "fish",
-      "min_level": 50,
-      "max_level": 55,
-      "chance": "5%",
-      "conditions": "super_rod",
-      "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -9561,21 +9490,7 @@
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
-        "x"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-21",
-      "species": 550,
-      "form": 0,
-      "method": "fish",
-      "min_level": 50,
-      "max_level": 55,
-      "chance": "30%",
-      "conditions": "super_rod",
-      "versions": [
+        "x",
         "y"
       ],
       "alpha": false,
@@ -9683,7 +9598,7 @@
       "form": 0,
       "method": "ambush",
       "min_level": 57,
-      "max_level": 59,
+      "max_level": 57,
       "chance": null,
       "conditions": "ceiling",
       "versions": [
@@ -9778,8 +9693,8 @@
       "species": 74,
       "form": 0,
       "method": "horde",
-      "min_level": 29,
-      "max_level": 29,
+      "min_level": 28,
+      "max_level": 28,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -9787,7 +9702,7 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
@@ -9860,7 +9775,7 @@
       "method": "rock_smash",
       "min_level": 57,
       "max_level": 59,
-      "chance": "10%",
+      "chance": "5%",
       "conditions": null,
       "versions": [
         "x",
@@ -9922,8 +9837,8 @@
       "species": 60,
       "form": 0,
       "method": "fish",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 35,
+      "max_level": 35,
       "chance": "100%",
       "conditions": "old_rod",
       "versions": [
@@ -9931,15 +9846,15 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 45,
+      "max_level": 45,
       "chance": "30%",
       "conditions": "good_rod",
       "versions": [
@@ -9947,47 +9862,46 @@
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 45,
+      "max_level": 45,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
         "y"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 45,
+      "max_level": 45,
       "chance": "70%",
       "conditions": "good_rod",
       "versions": [
-        "x",
-        "y"
+        "x"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
       "species": 61,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
+      "min_level": 55,
       "max_level": 55,
-      "chance": "70%",
+      "chance": "65%",
       "conditions": "super_rod",
       "versions": [
         "x",
@@ -10001,7 +9915,7 @@
       "species": 62,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
+      "min_level": 60,
       "max_level": 60,
       "chance": "5%",
       "conditions": "super_rod",
@@ -10017,13 +9931,12 @@
       "species": 550,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
+      "min_level": 55,
       "max_level": 55,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
-        "x",
-        "y"
+        "x"
       ],
       "alpha": false,
       "verified": true
@@ -10033,9 +9946,9 @@
       "species": 550,
       "form": 1,
       "method": "fish",
-      "min_level": 35,
+      "min_level": 55,
       "max_level": 55,
-      "chance": "30%",
+      "chance": "35%",
       "conditions": "super_rod",
       "versions": [
         "y"

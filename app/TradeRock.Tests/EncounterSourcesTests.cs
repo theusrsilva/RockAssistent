@@ -116,16 +116,35 @@ public sealed class OwnEncounterFilesTests(DexFixture fx) : IClassFixture<DexFix
     }
 
     [Fact]
-    public async Task Correcoes_do_Serebii_valem_sobre_o_PokeAPI()
+    public async Task Correcoes_dos_nossos_arquivos_valem_sobre_o_PokeAPI()
     {
         // Black, Rota 4: Super Vara Krabby 65% (PokeAPI: 55%) e o Swarm do Hippopotas (não existe no PokeAPI).
         var krabby = await Where("bw", 98);
         Assert.Contains(krabby, e => e is { Location: "Route 4", Version: "black", Method: "fish", Chance: 65 });
         Assert.Contains(await Where("bw", 449), e => e is { Location: "Route 4", Version: "black", Method: "outbreak" });
-        // X, Rota 7: Swirlix 5% (PokeAPI: 10%).
-        Assert.Contains(await Where("xy", 684), e => e is { Location: "Route 7", Version: "x", Method: "walk", Chance: 5 });
+        // X/Y, Lost Hotel: o Rotom das lixeiras só na terça-feira (as lixeiras não estavam no PokeAPI com o dia).
+        Assert.Contains(await Where("xy", 479), e => e is { Location: "Lost Hotel", Method: "ambush" } && e.Conditions.Contains("tuesday"));
         // Sun/Moon: o Kadabra só vem do Poké Pelago.
         Assert.Contains(await Where("sm", 64), e => e is { Location: "Poké Pelago", Method: "poke_pelago" });
+    }
+
+    /// <summary>O jogo vale sobre o Serebii: Flabébé da Rota 7 (Serebii nível 7–8, tabela do jogo 12–14) e Swirlix 10%.</summary>
+    [Fact]
+    public async Task Nivel_vem_da_tabela_do_jogo_quando_o_Serebii_diverge()
+    {
+        var flabebe = (await Where("xy", 669)).Where(e => e is { Location: "Route 7", Method: "walk", Version: "x" }).ToList();
+        Assert.NotEmpty(flabebe);
+        Assert.All(flabebe, e => Assert.InRange(e.MinLevel, 12, 14));
+        Assert.Contains(await Where("xy", 684), e => e is { Location: "Route 7", Version: "x", Method: "walk", Chance: 10 });
+    }
+
+    /// <summary>Tudo conferido com as tabelas do PKHeX, e o que só sai com Funfest Mission fica fora do Nuzlocke.</summary>
+    [Fact]
+    public void Arquivos_do_Serebii_estao_todos_conferidos()
+    {
+        foreach (var game in new[] { "oras", "bw", "b2w2", "xy", "sm", "usum" })
+            Assert.DoesNotContain(_store.Encounters(game), e => !e.Verified);
+        Assert.Contains(_store.Encounters("b2w2"), e => e.Species == 113 && EncounterSources.NeedsEvent(e));
     }
 
     /// <summary>Encontro fixo e presente do PokeAPI continuam nas áreas que o nosso arquivo cobre.</summary>
@@ -157,12 +176,6 @@ public sealed class OwnEncounterFilesTests(DexFixture fx) : IClassFixture<DexFix
         Assert.True((KnownHoles.GetValueOrDefault(game) ?? []).SequenceEqual(missing), string.Join(", ", missing));
     }
 
-    /// <summary>
-    /// B2W2: Pokémon das Hidden Grottos que só saem com a Funfest Mission certa (Chansey, as evoluções do Eevee, Togetic,
-    /// Shelgon, Glameow, Stunky). Não estão nas páginas de área do Serebii nem no PokeAPI.
-    /// </summary>
-    private static readonly Dictionary<string, int[]> KnownHoles = new()
-    {
-        ["b2w2"] = [113, 134, 135, 136, 176, 196, 197, 372, 431, 434, 470, 471],
-    };
+    /// <summary>Buracos conhecidos por jogo (hoje nenhum).</summary>
+    private static readonly Dictionary<string, int[]> KnownHoles = new();
 }

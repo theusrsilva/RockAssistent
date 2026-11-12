@@ -1513,10 +1513,16 @@ errados nas Gen 5 e 6.
   Nos outros jogos com arquivo, uma área (e versão) que tem linhas nossas perde as linhas selvagens do PokeAPI e fica
   com as nossas; encontro fixo, presente, troca, andarilho e Island Scan do PokeAPI continuam. Área fora do arquivo
   fica como o PokeAPI. Vale para a aba "Onde achar", o bloco `:::encounters` dos guias, o Nuzlocke e a disponibilidade.
-- **`verified`** é automático: verdadeiro quando as tabelas do PKHeX têm a espécie naquele local e versão com nível
-  compatível. O PKHeX não serve de fonte única (no ORAS junta grama, surf, pesca e DexNav num tipo só e não tem chance).
-- **Teste de cobertura:** toda espécie que o PKHeX tem como selvagem nesses seis jogos precisa aparecer no "Onde achar"
-  (`OwnEncounterFilesTests`); as exceções são as 12 espécies das Hidden Grottos do B2W2 que só saem com Funfest Mission.
+- **O jogo vale sobre o Serebii.** As tabelas do PKHeX são as do próprio jogo, com os slots na ordem do jogo (o que
+  dá o método de cada slot também no ORAS e no XY). Por isso: o nível é o do PKHeX quando o Serebii diverge; o que o
+  PKHeX tem e o Serebii não lista entra (sem chance); a espécie que o Serebii lista num método que o PKHeX cobre e não
+  tem sai; a chance é a do Serebii, menos onde a página não soma 100 e os slots do PKHeX permitem calcular. Island
+  Scan, bandos no céu e lixeiras conferem com os encontros fixos do PKHeX. Resultado: todas as linhas dos seis
+  arquivos estão com `verified: true`.
+- **Testes:** toda espécie que o PKHeX tem como selvagem nesses seis jogos precisa aparecer no "Onde achar", e nenhuma
+  linha desses arquivos pode estar sem conferência (`OwnEncounterFilesTests`).
+- **Funfest Mission (B2W2):** as 15 espécies que só saem nas Hidden Grottos com a missão certa entram em todas as áreas
+  com gruta, com a condição `funfest_mission`, e ficam fora das opções de encontro do Nuzlocke.
 - **Métodos novos:** `dark_grass`, `shaking_grass`, `dust_cloud`, `rippling_water`, `flying_shadow`, `hidden_grotto`,
   `flowers`, `ambush`, `island_scan`, `tall_grass`, `dive`, `sky_flock`, `poke_pelago`. O DexNav entra como método
   `dexnav`, sem chance.
@@ -1526,7 +1532,6 @@ errados nas Gen 5 e 6.
   aparecer, e as linhas do PokeAPI que só diferiam nelas somam a chance: o Caterpie da manhã na Rota 30 do HeartGold
   mostra 50%, não "30% com rádio desligado" e "20%".
 
-**Limites.** O que o Serebii diverge do PKHeX ficou com o valor do Serebii e `verified: false`, listado em
-[data-doubts.md](superpowers/data-doubts.md). Os Mirage Spots do ORAS continuam do PokeAPI (por ilha). Flabébé, Floette,
+**Limites.** As interpretações nossas estão em [data-doubts.md](superpowers/data-doubts.md). Os Mirage Spots do ORAS continuam do PokeAPI (por ilha). Flabébé, Floette,
 Shellos, Deerling e Sawsbuck saem sem cor ou estação (forma 0). Gen 1 a 4, Let's Go e SwSh continuam só com o PokeAPI.
 Nenhuma tela foi vista num navegador.

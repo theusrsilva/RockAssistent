@@ -1,8 +1,8 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/unova/ (páginas por área; só as tabelas de Black 2/White 2)",
-    "Métodos: walk (grama), cave (chão de caverna ou prédio), dark_grass (grama escura), shaking_grass (grama que balança), dust_cloud (nuvem de poeira), flying_shadow (sombra na ponte), surf, rippling_water (água borbulhando; conditions surf ou fish), fish (conditions super_rod), outbreak (Swarm), hidden_grotto (sem chance na página; os Pokémon das Funfest Missions não entram). Estações (spring, summer, autumn, winter) em conditions só quando a tabela muda por estação. Andares e sub-áreas da mesma área foram juntados: faixa de nível do menor ao maior e a maior chance entre eles.",
-    "chance: o que a página mostra (slots repetidos da mesma espécie somados). verified = o PKHeX (Encounters5B2W2) tem a espécie naquele local, versão e tipo de encontro, com a nossa faixa de nível dentro da faixa dele.",
+    "Métodos: walk (grama), cave (chão de caverna ou prédio), dark_grass (grama escura), shaking_grass (grama que balança), dust_cloud (nuvem de poeira), flying_shadow (sombra na ponte), surf, rippling_water (água borbulhando; conditions surf ou fish), fish (conditions super_rod), outbreak (Swarm), hidden_grotto (sem chance na página; conditions funfest_mission = só aparece durante a Funfest Mission, em qualquer gruta). Estações (spring, summer, autumn, winter) em conditions só quando a tabela muda por estação. Andares e sub-áreas da mesma área foram juntados: faixa de nível do menor ao maior e a maior chance entre eles.",
+    "Onde o Serebii discorda do PKHeX (Encounters5B2W2, a tabela do próprio jogo), vale o PKHeX: o nível é o da tabela do PKHeX que corresponde ao método; espécie que o PKHeX tem no local e versão e a página não lista entra com o nível do PKHeX e chance null; espécie que a página lista e o PKHeX não tem naquele local, versão e tipo de encontro sai. A chance é a da página (slots repetidos somados); quando a tabela da página não soma 100%, vale a chance calculada pelos slots do PKHeX. verified = conferido com o PKHeX.",
     "Correção: Rota 19, Black 2, água borbulhando (surf): a página mostra o Basculin de listra vermelha; os dados do jogo têm o de listra azul (form 1)."
   ],
   "items": [
@@ -395,8 +395,8 @@
       "species": 519,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 10,
-      "max_level": 11,
+      "min_level": 9,
+      "max_level": 10,
       "chance": "25%",
       "conditions": "autumn",
       "versions": [
@@ -404,7 +404,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
@@ -491,8 +491,8 @@
       "species": 519,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 10,
-      "max_level": 11,
+      "min_level": 9,
+      "max_level": 10,
       "chance": "25%",
       "conditions": "spring",
       "versions": [
@@ -500,7 +500,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
@@ -587,7 +587,7 @@
       "species": 191,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 10,
+      "min_level": 9,
       "max_level": 11,
       "chance": "26%",
       "conditions": "summer",
@@ -683,8 +683,8 @@
       "species": 519,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 10,
-      "max_level": 11,
+      "min_level": 9,
+      "max_level": 10,
       "chance": "25%",
       "conditions": "winter",
       "versions": [
@@ -692,7 +692,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
@@ -825,7 +825,7 @@
       "species": 122,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -833,14 +833,14 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
       "species": 185,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -848,7 +848,7 @@
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-20",
@@ -1459,6 +1459,246 @@
       "max_level": 15,
       "chance": null,
       "conditions": null,
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "floccesy-ranch",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
       "versions": [
         "black-2",
         "white-2"
@@ -2997,8 +3237,8 @@
       "species": 183,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "60%",
       "conditions": "surf",
       "versions": [
@@ -3006,45 +3246,45 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "relic-passage",
       "species": 550,
       "form": 1,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "35%",
       "conditions": "surf",
       "versions": [
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "relic-passage",
       "species": 550,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "35%",
       "conditions": "surf",
       "versions": [
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "relic-passage",
       "species": 184,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "5%",
       "conditions": "surf",
       "versions": [
@@ -3052,7 +3292,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "relic-passage",
@@ -3232,7 +3472,7 @@
       "form": 0,
       "method": "rippling_water",
       "min_level": 5,
-      "max_level": 15,
+      "max_level": 20,
       "chance": "95%",
       "conditions": "surf",
       "versions": [
@@ -3248,7 +3488,7 @@
       "form": 0,
       "method": "rippling_water",
       "min_level": 5,
-      "max_level": 15,
+      "max_level": 20,
       "chance": "5%",
       "conditions": "surf",
       "versions": [
@@ -3357,7 +3597,7 @@
       "species": 450,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -3366,7 +3606,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "desert-resort",
@@ -3703,7 +3943,7 @@
       "species": 204,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -3712,7 +3952,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-16",
@@ -4095,6 +4335,246 @@
       "max_level": 25,
       "chance": null,
       "conditions": null,
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "lostlorn-forest",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
       "versions": [
         "black-2",
         "white-2"
@@ -4710,10 +5190,250 @@
     },
     {
       "area": "route-5",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-5",
       "species": 177,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -4722,7 +5442,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-5",
@@ -5146,10 +5866,250 @@
     },
     {
       "area": "route-6",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
       "species": 311,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -5157,14 +6117,14 @@
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
       "species": 312,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -5172,7 +6132,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
@@ -5241,62 +6201,90 @@
       "species": 183,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "60%",
       "conditions": "surf",
       "versions": [
-        "black-2",
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 183,
+      "form": 0,
+      "method": "rippling_water",
+      "min_level": 10,
+      "max_level": 35,
+      "chance": "60%",
+      "conditions": "surf",
+      "versions": [
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
       "species": 550,
       "form": 1,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "35%",
       "conditions": "surf",
       "versions": [
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
       "species": 550,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 35,
       "chance": "35%",
       "conditions": "surf",
       "versions": [
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
       "species": 184,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 5,
-      "max_level": 15,
+      "min_level": 10,
+      "max_level": 30,
       "chance": "5%",
       "conditions": "surf",
       "versions": [
-        "black-2",
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 184,
+      "form": 0,
+      "method": "rippling_water",
+      "min_level": 10,
+      "max_level": 35,
+      "chance": "5%",
+      "conditions": "surf",
+      "versions": [
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
@@ -5416,14 +6404,14 @@
       "form": 0,
       "method": "surf",
       "min_level": 10,
-      "max_level": 30,
+      "max_level": 25,
       "chance": "70%",
       "conditions": null,
       "versions": [
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
@@ -5446,11 +6434,25 @@
       "form": 0,
       "method": "surf",
       "min_level": 10,
+      "max_level": 25,
+      "chance": "30%",
+      "conditions": null,
+      "versions": [
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-6",
+      "species": 183,
+      "form": 0,
+      "method": "surf",
+      "min_level": 10,
       "max_level": 30,
       "chance": "30%",
       "conditions": null,
       "versions": [
-        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -6398,10 +7400,250 @@
     },
     {
       "area": "route-7",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-7",
       "species": 162,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -6410,7 +7652,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -7879,7 +9121,7 @@
       "species": 332,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -7888,7 +9130,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "reversal-mountain",
@@ -9001,12 +10243,26 @@
       "species": 418,
       "form": 0,
       "method": "rippling_water",
+      "min_level": 15,
+      "max_level": 40,
+      "chance": "60%",
+      "conditions": "surf",
+      "versions": [
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-14",
+      "species": 418,
+      "form": 0,
+      "method": "rippling_water",
       "min_level": 25,
       "max_level": 40,
       "chance": "60%",
       "conditions": "surf",
       "versions": [
-        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -9017,7 +10273,7 @@
       "species": 550,
       "form": 1,
       "method": "rippling_water",
-      "min_level": 25,
+      "min_level": 15,
       "max_level": 40,
       "chance": "30%",
       "conditions": "surf",
@@ -9062,7 +10318,7 @@
       "species": 419,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 25,
+      "min_level": 30,
       "max_level": 40,
       "chance": "10%",
       "conditions": "surf",
@@ -9070,7 +10326,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-14",
@@ -9109,15 +10365,15 @@
       "species": 550,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 40,
+      "min_level": 15,
+      "max_level": 35,
       "chance": "70%",
       "conditions": null,
       "versions": [
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-14",
@@ -9139,12 +10395,26 @@
       "species": 418,
       "form": 0,
       "method": "surf",
+      "min_level": 15,
+      "max_level": 35,
+      "chance": "30%",
+      "conditions": null,
+      "versions": [
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-14",
+      "species": 418,
+      "form": 0,
+      "method": "surf",
       "min_level": 25,
       "max_level": 40,
       "chance": "30%",
       "conditions": null,
       "versions": [
-        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -9456,10 +10726,250 @@
     },
     {
       "area": "route-13",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-13",
       "species": 277,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -9468,7 +10978,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-13",
@@ -9528,21 +11038,7 @@
       "chance": "60%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-13",
-      "species": 120,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 30,
-      "max_level": 40,
-      "chance": "60%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -9558,21 +11054,7 @@
       "chance": "30%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-13",
-      "species": 593,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 30,
-      "max_level": 40,
-      "chance": "30%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -9588,25 +11070,11 @@
       "chance": "5%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-13",
-      "species": 121,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 15,
-      "max_level": 40,
-      "chance": "5%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-13",
@@ -9628,7 +11096,7 @@
       "species": 550,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 15,
+      "min_level": 30,
       "max_level": 40,
       "chance": "5%",
       "conditions": "surf",
@@ -9636,7 +11104,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-13",
@@ -9943,7 +11411,7 @@
       "species": 84,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -9952,7 +11420,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-12",
@@ -10746,14 +12214,14 @@
       "form": 0,
       "method": "fish",
       "min_level": 40,
-      "max_level": 70,
+      "max_level": 60,
       "chance": "70%",
       "conditions": "super_rod",
       "versions": [
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-11",
@@ -10791,7 +12259,7 @@
       "form": 1,
       "method": "fish",
       "min_level": 40,
-      "max_level": 50,
+      "max_level": 60,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
@@ -10805,7 +12273,7 @@
       "species": 284,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -10814,7 +12282,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-11",
@@ -10888,21 +12356,7 @@
       "chance": "60%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-11",
-      "species": 418,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 30,
-      "max_level": 40,
-      "chance": "60%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -10948,25 +12402,11 @@
       "chance": "10%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-11",
-      "species": 419,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 25,
-      "max_level": 40,
-      "chance": "10%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-11",
@@ -11410,10 +12850,250 @@
     },
     {
       "area": "route-9",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
       "species": 317,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -11422,7 +13102,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-9",
@@ -12056,10 +13736,250 @@
     },
     {
       "area": "route-22",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-22",
       "species": 166,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -12067,14 +13987,14 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-22",
       "species": 168,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -12082,7 +14002,7 @@
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-22",
@@ -12565,24 +14485,10 @@
       "method": "surf",
       "min_level": 30,
       "max_level": 45,
-      "chance": "70%",
-      "conditions": null,
-      "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "route-21",
-      "species": 592,
-      "form": 0,
-      "method": "surf",
-      "min_level": 30,
-      "max_level": 45,
       "chance": "65%",
       "conditions": null,
       "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -13308,6 +15214,246 @@
     },
     {
       "area": "giant-chasm",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "giant-chasm",
       "species": 61,
       "form": 0,
       "method": "rippling_water",
@@ -13991,6 +16137,246 @@
       "max_level": 55,
       "chance": null,
       "conditions": null,
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-23",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
       "versions": [
         "black-2",
         "white-2"
@@ -14758,25 +17144,11 @@
       "chance": "60%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "victory-road",
-      "species": 183,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 35,
-      "max_level": 60,
-      "chance": "60%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
@@ -14822,7 +17194,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
@@ -14850,25 +17222,11 @@
       "chance": "5%",
       "conditions": "surf",
       "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "victory-road",
-      "species": 184,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 40,
-      "max_level": 70,
-      "chance": "5%",
-      "conditions": "surf",
-      "versions": [
+        "black-2",
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "victory-road",
@@ -15390,10 +17748,250 @@
     },
     {
       "area": "abundant-shrine",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
       "species": 79,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -15402,7 +18000,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "abundant-shrine",
@@ -15535,10 +18133,24 @@
       "method": "shaking_grass",
       "min_level": 33,
       "max_level": 36,
+      "chance": "80%",
+      "conditions": null,
+      "versions": [
+        "black-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "abundant-shrine",
+      "species": 531,
+      "form": 0,
+      "method": "shaking_grass",
+      "min_level": 33,
+      "max_level": 36,
       "chance": "75%",
       "conditions": null,
       "versions": [
-        "black-2",
         "white-2"
       ],
       "alpha": false,
@@ -15575,21 +18187,6 @@
       ],
       "alpha": false,
       "verified": true
-    },
-    {
-      "area": "abundant-shrine",
-      "species": 184,
-      "form": 0,
-      "method": "shaking_grass",
-      "min_level": 36,
-      "max_level": 36,
-      "chance": "5%",
-      "conditions": null,
-      "versions": [
-        "black-2"
-      ],
-      "alpha": false,
-      "verified": false
     },
     {
       "area": "abundant-shrine",
@@ -15845,7 +18442,7 @@
       "species": 195,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -15854,7 +18451,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-8",
@@ -15973,7 +18570,7 @@
       "species": 536,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 60,
+      "min_level": 45,
       "max_level": 60,
       "chance": "30%",
       "conditions": "surf,spring",
@@ -18551,7 +21148,7 @@
       "species": 22,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -18560,7 +21157,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-15",
@@ -19103,6 +21700,246 @@
       "max_level": 60,
       "chance": null,
       "conditions": null,
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "pinwheel-forest",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
       "versions": [
         "black-2",
         "white-2"
@@ -19894,10 +22731,250 @@
     },
     {
       "area": "route-3",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-3",
       "species": 313,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -19905,14 +22982,14 @@
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-3",
       "species": 314,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -19920,7 +22997,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-3",
@@ -20769,7 +23846,7 @@
       "species": 97,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -20778,7 +23855,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dreamyard",
@@ -21013,6 +24090,246 @@
       "max_level": 60,
       "chance": null,
       "conditions": null,
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-2",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
       "versions": [
         "black-2",
         "white-2"
@@ -21295,7 +24612,7 @@
       "species": 83,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -21304,7 +24621,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-1",
@@ -21875,7 +25192,7 @@
       "species": 550,
       "form": 0,
       "method": "surf",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 60,
       "chance": "70%",
       "conditions": null,
@@ -21883,14 +25200,14 @@
         "black-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "nature-preserve",
       "species": 550,
       "form": 1,
       "method": "surf",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 60,
       "chance": "70%",
       "conditions": null,
@@ -21898,14 +25215,14 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "nature-preserve",
       "species": 418,
       "form": 0,
       "method": "surf",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 60,
       "chance": "30%",
       "conditions": null,
@@ -21914,7 +25231,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "nature-preserve",
@@ -23284,10 +26601,250 @@
     },
     {
       "area": "route-18",
+      "species": 82,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 113,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 133,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 134,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 135,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 136,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 148,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 176,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 196,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 197,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 372,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 431,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 434,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 470,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
+      "species": 471,
+      "form": 0,
+      "method": "hidden_grotto",
+      "min_level": 15,
+      "max_level": 60,
+      "chance": null,
+      "conditions": "funfest_mission",
+      "versions": [
+        "black-2",
+        "white-2"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-18",
       "species": 187,
       "form": 0,
       "method": "outbreak",
-      "min_level": 15,
+      "min_level": 40,
       "max_level": 55,
       "chance": "40%",
       "conditions": null,
@@ -23296,7 +26853,7 @@
         "white-2"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-18",

@@ -1,10 +1,11 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/alola/ (páginas por área; só a parte de Ultra Sun/Ultra Moon de cada página, tabela resumida de cada método)",
-    "Métodos: walk (grama), cave (chão de caverna ou prédio), surf, fish (uma vara só, sem condição), rippling_water (pesca em ponto borbulhando; conditions fish), ambush (emboscadas; conditions: grass = grama farfalhando, bush = planta balançando, sand = nuvem de areia, ground = poeira no chão da caverna, shadow = sombra voando, water_splash = respingo na água, berry_tree = debaixo da árvore de berries, fleeing = Wimpod que foge), sos (aliado que só aparece quando o selvagem chama ajuda; com rain, hail ou sandstorm é o SOS que só vem com esse clima) e island_scan (conditions = dia da semana em inglês). day/night em conditions quando a tabela do Serebii muda com o horário. Sub-áreas e trechos da mesma área foram juntados: faixa de nível do menor ao maior e a MAIOR chance entre os trechos; a mesma espécie em vários slots de um trecho tem a chance somada. Aliados de SOS comuns não trazem chance (o Serebii dá a chance da tabela de SOS, não da espécie).",
-    "Trechos que o Serebii mostra dentro de outra página entram na área do jogo: Hau'oli Outskirts (na página da Route 1) fica em route-1 no Sun/Moon e em route-1-hauoli-outskirts no Ultra Sun/Ultra Moon; Trainers' School em trainers-school; Outer Cape (página de Malie City) em malie-outer-cape. O Poké Pelago (Isle Abeens) não é área do mapa e não entra.",
+    "Métodos: walk (grama), cave (chão de caverna ou prédio), surf, fish (uma vara só, sem condição), rippling_water (pesca em ponto borbulhando; conditions fish), ambush (emboscadas; conditions: grass = grama farfalhando, bush = planta balançando, sand = nuvem de areia, ground = poeira no chão da caverna, shadow = sombra voando, water_splash = respingo na água, berry_tree = debaixo da árvore de berries, fleeing = Wimpod que foge), sos (aliado que só aparece quando o selvagem chama ajuda; com rain, hail ou sandstorm é o SOS que só vem com esse clima), island_scan (conditions = dia da semana em inglês) e poke_pelago. day/night em conditions quando a tabela do Serebii muda com o horário. Sub-áreas e trechos da mesma área foram juntados: faixa de nível do menor ao maior e a MAIOR chance entre os trechos; a mesma espécie em vários slots de um trecho tem a chance somada. Aliados de SOS comuns não trazem chance (o Serebii dá a chance da tabela de SOS, não da espécie).",
+    "Trechos que o Serebii mostra dentro de outra página entram na área do jogo: Hau'oli Outskirts (na página da Route 1) fica em route-1 no Sun/Moon e em route-1-hauoli-outskirts no Ultra Sun/Ultra Moon; Trainers' School em trainers-school; Outer Cape (página de Malie City) em malie-outer-cape.",
     "Não entram: encontros fixos e 'Interactable' (lendários, Ultra Beasts, Ultra Space Wilds, Pokémon parados no mapa), presentes, trocas, fósseis e ovos.",
-    "verified = o PKHeX (EncounterArea7 de Encounters7USUM, tabela Standard ou SOS) tem a mesma espécie e forma no local e na versão, com faixa de nível que se cruza. O Island Scan não está nas tabelas de slots do PKHeX (é encontro fixo lá), por isso fica verified=false.",
+    "Onde o Serebii discorda do PKHeX vale o PKHeX (EncounterArea7 de Encounters7USUM, PKHeX.Core 26.8.26; a chance continua a do Serebii): (1) nível: se a faixa do Serebii não bate com as do PKHeX para a espécie naquele local e versão (tabela SOS para sos, Standard para o resto), cada ponta vai para a ponta mais próxima do PKHeX; (2) espécie que o PKHeX tem no local e a página não mostra entra com os níveis do PKHeX (Crabrawler de Berry Fields, que é a única espécie da tabela, por isso 100%; Vanillite de SOS com granizo no Mount Lanakila do Ultra Sun/Ultra Moon, sem chance); (3) espécie que o Serebii lista e o PKHeX não tem naquele local sai (surf da Route 16 do Ultra Sun/Ultra Moon: no jogo essa água é da Route 15). Não entra a tabela de enchimento do jogo (Pikipek nível 2-3 sozinho, que o PKHeX traz até em Ruins of Abundance e Exeggutor Island).",
+    "verified = o PKHeX tem a mesma espécie e forma no local e na versão. Island Scan: conferido com os EncounterStatic7 do PKHeX (espécie, local e nível; o nível é o do PKHeX).",
     "Poké Pelago (Isle Abeens): espécies das páginas https://www.serebii.net/sunmoon/pokepelago.shtml e https://www.serebii.net/ultrasunultramoon/pokepelago.shtml; níveis das tabelas do PKHeX (local 30016). Method poke_pelago."
   ],
   "items": [
@@ -614,7 +615,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-2",
@@ -998,7 +999,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hauoli-cemetery",
@@ -1078,7 +1079,23 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
+    },
+    {
+      "area": "berry-fields",
+      "species": 739,
+      "form": 0,
+      "method": "ambush",
+      "min_level": 7,
+      "max_level": 10,
+      "chance": "100%",
+      "conditions": "berry_tree",
+      "versions": [
+        "ultra-sun",
+        "ultra-moon"
+      ],
+      "alpha": false,
+      "verified": true
     },
     {
       "area": "verdant-cavern",
@@ -1330,7 +1347,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "kalae-bay",
@@ -1714,7 +1731,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "melemele-meadow",
@@ -2196,7 +2213,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ten-carat-hill",
@@ -2420,7 +2437,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-4",
@@ -2676,7 +2693,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "paniola-town",
@@ -3076,7 +3093,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "brooklet-hill",
@@ -3568,7 +3585,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-6",
@@ -3824,7 +3841,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -4048,7 +4065,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "wela-volcano-park",
@@ -4672,7 +4689,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lush-jungle",
@@ -5123,8 +5140,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 18,
-      "max_level": 21,
+      "min_level": 19,
+      "max_level": 22,
       "chance": "11%",
       "conditions": "hail",
       "versions": [
@@ -5155,8 +5172,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 18,
-      "max_level": 21,
+      "min_level": 19,
+      "max_level": 22,
       "chance": "1%",
       "conditions": "rain",
       "versions": [
@@ -5171,8 +5188,8 @@
       "species": 704,
       "form": 0,
       "method": "sos",
-      "min_level": 18,
-      "max_level": 21,
+      "min_level": 19,
+      "max_level": 22,
       "chance": "10%",
       "conditions": "rain",
       "versions": [
@@ -5187,8 +5204,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 18,
-      "max_level": 21,
+      "min_level": 19,
+      "max_level": 22,
       "chance": "11%",
       "conditions": "sandstorm",
       "versions": [
@@ -5772,7 +5789,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "hano-beach",
@@ -6237,8 +6254,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 24,
-      "max_level": 27,
+      "min_level": 25,
+      "max_level": 28,
       "chance": "11%",
       "conditions": "hail",
       "versions": [
@@ -6253,8 +6270,8 @@
       "species": 61,
       "form": 0,
       "method": "sos",
-      "min_level": 24,
-      "max_level": 27,
+      "min_level": 25,
+      "max_level": 28,
       "chance": "10%",
       "conditions": "rain",
       "versions": [
@@ -6269,8 +6286,8 @@
       "species": 62,
       "form": 0,
       "method": "sos",
-      "min_level": 24,
-      "max_level": 27,
+      "min_level": 25,
+      "max_level": 28,
       "chance": "1%",
       "conditions": "rain",
       "versions": [
@@ -6285,8 +6302,8 @@
       "species": 186,
       "form": 0,
       "method": "sos",
-      "min_level": 24,
-      "max_level": 27,
+      "min_level": 25,
+      "max_level": 28,
       "chance": "1%",
       "conditions": "rain",
       "versions": [
@@ -6301,8 +6318,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 24,
-      "max_level": 27,
+      "min_level": 25,
+      "max_level": 28,
       "chance": "11%",
       "conditions": "sandstorm",
       "versions": [
@@ -6582,7 +6599,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "mount-hokulani",
@@ -6813,8 +6830,8 @@
       "species": 610,
       "form": 0,
       "method": "island_scan",
-      "min_level": 29,
-      "max_level": 29,
+      "min_level": 30,
+      "max_level": 30,
       "chance": null,
       "conditions": "saturday",
       "versions": [
@@ -6822,7 +6839,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-11",
@@ -6982,7 +6999,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-12",
@@ -7313,7 +7330,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ulaula-beach",
@@ -7558,8 +7575,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 30,
+      "max_level": 33,
       "chance": "1%",
       "conditions": "hail",
       "versions": [
@@ -7574,8 +7591,8 @@
       "species": 582,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 30,
+      "max_level": 33,
       "chance": "10%",
       "conditions": "hail",
       "versions": [
@@ -7590,8 +7607,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 30,
+      "max_level": 33,
       "chance": "11%",
       "conditions": "rain",
       "versions": [
@@ -7606,8 +7623,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 30,
+      "max_level": 33,
       "chance": "11%",
       "conditions": "sandstorm",
       "versions": [
@@ -7631,7 +7648,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-14",
@@ -8324,8 +8341,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 32,
+      "max_level": 35,
       "chance": "11%",
       "conditions": "hail",
       "versions": [
@@ -8333,15 +8350,15 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "haina-desert",
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 32,
+      "max_level": 35,
       "chance": "11%",
       "conditions": "rain",
       "versions": [
@@ -8349,15 +8366,15 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "haina-desert",
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 32,
+      "max_level": 35,
       "chance": "1%",
       "conditions": "sandstorm",
       "versions": [
@@ -8365,15 +8382,15 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "haina-desert",
       "species": 444,
       "form": 0,
       "method": "sos",
-      "min_level": 28,
-      "max_level": 31,
+      "min_level": 32,
+      "max_level": 35,
       "chance": "10%",
       "conditions": "sandstorm",
       "versions": [
@@ -8381,7 +8398,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "melemele-sea",
@@ -8881,22 +8898,6 @@
     },
     {
       "area": "route-16",
-      "species": 73,
-      "form": 0,
-      "method": "surf",
-      "min_level": 32,
-      "max_level": 35,
-      "chance": "40%",
-      "conditions": null,
-      "versions": [
-        "ultra-sun",
-        "ultra-moon"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-16",
       "species": 279,
       "form": 0,
       "method": "surf",
@@ -8910,22 +8911,6 @@
       ],
       "alpha": false,
       "verified": true
-    },
-    {
-      "area": "route-16",
-      "species": 456,
-      "form": 0,
-      "method": "surf",
-      "min_level": 32,
-      "max_level": 35,
-      "chance": "40%",
-      "conditions": null,
-      "versions": [
-        "ultra-sun",
-        "ultra-moon"
-      ],
-      "alpha": false,
-      "verified": false
     },
     {
       "area": "route-16",
@@ -8945,22 +8930,6 @@
     },
     {
       "area": "route-16",
-      "species": 457,
-      "form": 0,
-      "method": "sos",
-      "min_level": 32,
-      "max_level": 35,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "ultra-sun",
-        "ultra-moon"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "route-16",
       "species": 394,
       "form": 0,
       "method": "island_scan",
@@ -8973,7 +8942,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ulaula-meadow",
@@ -9099,7 +9068,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-17",
@@ -9282,8 +9251,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 31,
-      "max_level": 34,
+      "min_level": 33,
+      "max_level": 36,
       "chance": "11%",
       "conditions": "hail",
       "versions": [
@@ -9298,8 +9267,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 31,
-      "max_level": 34,
+      "min_level": 33,
+      "max_level": 36,
       "chance": "1%",
       "conditions": "rain",
       "versions": [
@@ -9314,8 +9283,8 @@
       "species": 704,
       "form": 0,
       "method": "sos",
-      "min_level": 31,
-      "max_level": 34,
+      "min_level": 33,
+      "max_level": 36,
       "chance": "10%",
       "conditions": "rain",
       "versions": [
@@ -9330,8 +9299,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 31,
-      "max_level": 34,
+      "min_level": 33,
+      "max_level": 36,
       "chance": "11%",
       "conditions": "sandstorm",
       "versions": [
@@ -9579,7 +9548,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "ancient-poni-path",
@@ -9675,7 +9644,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-breaker-coast",
@@ -10112,8 +10081,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 40,
-      "max_level": 43,
+      "min_level": 42,
+      "max_level": 45,
       "chance": "11%",
       "conditions": "hail",
       "versions": [
@@ -10128,8 +10097,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 40,
-      "max_level": 43,
+      "min_level": 42,
+      "max_level": 45,
       "chance": "1%",
       "conditions": "rain",
       "versions": [
@@ -10144,8 +10113,8 @@
       "species": 705,
       "form": 0,
       "method": "sos",
-      "min_level": 40,
-      "max_level": 43,
+      "min_level": 42,
+      "max_level": 45,
       "chance": "10%",
       "conditions": "rain",
       "versions": [
@@ -10160,8 +10129,8 @@
       "species": 351,
       "form": 0,
       "method": "sos",
-      "min_level": 40,
-      "max_level": 43,
+      "min_level": 42,
+      "max_level": 45,
       "chance": "11%",
       "conditions": "sandstorm",
       "versions": [
@@ -10185,7 +10154,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "vast-poni-canyon",
@@ -10900,6 +10869,22 @@
     },
     {
       "area": "mount-lanakila",
+      "species": 582,
+      "form": 0,
+      "method": "sos",
+      "min_level": 30,
+      "max_level": 33,
+      "chance": null,
+      "conditions": "hail",
+      "versions": [
+        "ultra-sun",
+        "ultra-moon"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "mount-lanakila",
       "species": 583,
       "form": 0,
       "method": "sos",
@@ -11152,7 +11137,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-plains",
@@ -11658,7 +11643,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poni-meadow",
@@ -11928,7 +11913,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "resolution-cave",
@@ -12296,7 +12281,7 @@
         "ultra-moon"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "poke-pelago",

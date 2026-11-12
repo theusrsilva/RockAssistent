@@ -2,7 +2,7 @@
   "source": [
     "https://www.serebii.net/pokearth/unova/ (páginas por área; só as tabelas de Black/White)",
     "Métodos: walk (grama), cave (chão de caverna ou prédio), dark_grass (grama escura), shaking_grass (grama que balança), dust_cloud (nuvem de poeira), flying_shadow (sombra na ponte), surf, rippling_water (água borbulhando; conditions surf ou fish), fish (conditions super_rod), outbreak (Swarm), White Forest (só White, sem chance na página). Estações (spring, summer, autumn, winter) em conditions só quando a tabela muda por estação. Andares e sub-áreas da mesma área foram juntados: faixa de nível do menor ao maior e a maior chance entre eles.",
-    "chance: o que a página mostra (slots repetidos da mesma espécie somados). verified = o PKHeX (Encounters5BW) tem a espécie naquele local, versão e tipo de encontro, com a nossa faixa de nível dentro da faixa dele."
+    "Onde o Serebii discorda do PKHeX (Encounters5BW, a tabela do próprio jogo), vale o PKHeX: o nível é o da tabela do PKHeX que corresponde ao método; espécie que o PKHeX tem no local e versão e a página não lista entra com o nível do PKHeX e chance null; espécie que a página lista e o PKHeX não tem naquele local, versão e tipo de encontro sai. A chance é a da página (slots repetidos somados); quando a tabela da página não soma 100%, vale a chance calculada pelos slots do PKHeX. verified = conferido com o PKHeX."
   ],
   "items": [
     {
@@ -42,7 +42,7 @@
       "species": 559,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 33,
+      "min_level": 32,
       "max_level": 35,
       "chance": "25%",
       "conditions": null,
@@ -462,7 +462,7 @@
       "species": 119,
       "form": 0,
       "method": "rippling_water",
-      "min_level": 45,
+      "min_level": 35,
       "max_level": 70,
       "chance": "10%",
       "conditions": "fish",
@@ -1353,7 +1353,7 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 14,
-      "max_level": 19,
+      "max_level": 17,
       "chance": "40%",
       "conditions": null,
       "versions": [
@@ -1361,7 +1361,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pinwheel-forest",
@@ -1415,7 +1415,7 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 14,
-      "max_level": 17,
+      "max_level": 15,
       "chance": "30%",
       "conditions": null,
       "versions": [
@@ -1423,7 +1423,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pinwheel-forest",
@@ -1431,7 +1431,7 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 15,
-      "max_level": 18,
+      "max_level": 16,
       "chance": "20%",
       "conditions": null,
       "versions": [
@@ -1439,7 +1439,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pinwheel-forest",
@@ -1479,14 +1479,14 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 14,
-      "max_level": 19,
+      "max_level": 17,
       "chance": "10%",
       "conditions": null,
       "versions": [
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pinwheel-forest",
@@ -1494,14 +1494,14 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 14,
-      "max_level": 19,
+      "max_level": 17,
       "chance": "10%",
       "conditions": null,
       "versions": [
         "black"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pinwheel-forest",
@@ -1801,7 +1801,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 12,
-      "max_level": 17,
+      "max_level": 15,
       "chance": "40%",
       "conditions": null,
       "versions": [
@@ -1879,7 +1879,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 13,
-      "max_level": 16,
+      "max_level": 14,
       "chance": "20%",
       "conditions": null,
       "versions": [
@@ -1911,7 +1911,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 12,
-      "max_level": 17,
+      "max_level": 15,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -1926,7 +1926,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 12,
-      "max_level": 17,
+      "max_level": 15,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -2606,7 +2606,7 @@
       "species": 541,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 19,
+      "min_level": 20,
       "max_level": 22,
       "chance": "35%",
       "conditions": null,
@@ -2615,7 +2615,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lostlorn-forest",
@@ -2731,8 +2731,8 @@
       "form": 0,
       "method": "rippling_water",
       "min_level": 35,
-      "max_level": 60,
-      "chance": "60%",
+      "max_level": 70,
+      "chance": "70%",
       "conditions": "fish",
       "versions": [
         "black",
@@ -2770,22 +2770,6 @@
       ],
       "alpha": false,
       "verified": true
-    },
-    {
-      "area": "lostlorn-forest",
-      "species": 119,
-      "form": 0,
-      "method": "rippling_water",
-      "min_level": 35,
-      "max_level": 70,
-      "chance": "10%",
-      "conditions": "fish",
-      "versions": [
-        "black",
-        "white"
-      ],
-      "alpha": false,
-      "verified": false
     },
     {
       "area": "lostlorn-forest",
@@ -2994,7 +2978,7 @@
       "species": 541,
       "form": 0,
       "method": "walk",
-      "min_level": 19,
+      "min_level": 20,
       "max_level": 22,
       "chance": "35%",
       "conditions": null,
@@ -3003,7 +2987,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "lostlorn-forest",
@@ -5331,7 +5315,7 @@
       "form": 0,
       "method": "shaking_grass",
       "min_level": 27,
-      "max_level": 29,
+      "max_level": 27,
       "chance": "15%",
       "conditions": "winter",
       "versions": [
@@ -5339,7 +5323,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-7",
@@ -7393,25 +7377,11 @@
       "chance": "30%",
       "conditions": "winter",
       "versions": [
-        "black"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "dragonspiral-tower",
-      "species": 583,
-      "form": 0,
-      "method": "dark_grass",
-      "min_level": 34,
-      "max_level": 37,
-      "chance": "30%",
-      "conditions": "winter",
-      "versions": [
+        "black",
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "dragonspiral-tower",
@@ -7874,7 +7844,7 @@
       "species": 619,
       "form": 0,
       "method": "walk",
-      "min_level": 31,
+      "min_level": 30,
       "max_level": 33,
       "chance": "30%",
       "conditions": "autumn",
@@ -7938,7 +7908,7 @@
       "species": 619,
       "form": 0,
       "method": "walk",
-      "min_level": 31,
+      "min_level": 30,
       "max_level": 33,
       "chance": "30%",
       "conditions": "spring",
@@ -8002,7 +7972,7 @@
       "species": 619,
       "form": 0,
       "method": "walk",
-      "min_level": 31,
+      "min_level": 30,
       "max_level": 33,
       "chance": "30%",
       "conditions": "summer",
@@ -8720,12 +8690,26 @@
       "species": 624,
       "form": 0,
       "method": "dark_grass",
+      "min_level": 31,
+      "max_level": 39,
+      "chance": "20%",
+      "conditions": null,
+      "versions": [
+        "black"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-9",
+      "species": 624,
+      "form": 0,
+      "method": "dark_grass",
       "min_level": 36,
       "max_level": 39,
       "chance": "20%",
       "conditions": null,
       "versions": [
-        "black",
         "white"
       ],
       "alpha": false,
@@ -9296,7 +9280,7 @@
       "species": 627,
       "form": 0,
       "method": "cave",
-      "min_level": 38,
+      "min_level": 37,
       "max_level": 40,
       "chance": "35%",
       "conditions": null,
@@ -9311,7 +9295,7 @@
       "species": 629,
       "form": 0,
       "method": "cave",
-      "min_level": 38,
+      "min_level": 37,
       "max_level": 40,
       "chance": "35%",
       "conditions": null,
@@ -10158,7 +10142,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 55,
-      "chance": "40%",
+      "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "black"
@@ -10173,7 +10157,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 55,
-      "chance": "40%",
+      "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "white"
@@ -10702,14 +10686,14 @@
       "form": 1,
       "method": "fish",
       "min_level": 35,
-      "max_level": 60,
+      "max_level": 55,
       "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "village-bridge",
@@ -11028,8 +11012,8 @@
       "species": 11,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 58,
-      "max_level": 58,
+      "min_level": 59,
+      "max_level": 59,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -11043,8 +11027,8 @@
       "species": 14,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 58,
-      "max_level": 58,
+      "min_level": 59,
+      "max_level": 59,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -11106,8 +11090,8 @@
       "species": 206,
       "form": 0,
       "method": "dark_grass",
-      "min_level": 58,
-      "max_level": 58,
+      "min_level": 59,
+      "max_level": 59,
       "chance": "5%",
       "conditions": null,
       "versions": [
@@ -12364,7 +12348,7 @@
       "method": "rippling_water",
       "min_level": 45,
       "max_level": 70,
-      "chance": "10%",
+      "chance": "5%",
       "conditions": "fish",
       "versions": [
         "black",
@@ -14188,7 +14172,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 55,
-      "chance": "40%",
+      "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "black"
@@ -14203,7 +14187,7 @@
       "method": "fish",
       "min_level": 35,
       "max_level": 55,
-      "chance": "40%",
+      "chance": "30%",
       "conditions": "super_rod",
       "versions": [
         "white"
@@ -14962,6 +14946,21 @@
     },
     {
       "area": "black-city",
+      "species": 270,
+      "form": 0,
+      "method": "walk",
+      "min_level": 5,
+      "max_level": 5,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "white"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "black-city",
       "species": 273,
       "form": 0,
       "method": "walk",
@@ -15240,7 +15239,7 @@
       "form": 0,
       "method": "dark_grass",
       "min_level": 58,
-      "max_level": 60,
+      "max_level": 59,
       "chance": "10%",
       "conditions": null,
       "versions": [
@@ -15248,7 +15247,7 @@
         "white"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-15",
@@ -15491,7 +15490,7 @@
       "species": 581,
       "form": 0,
       "method": "flying_shadow",
-      "min_level": 48,
+      "min_level": 47,
       "max_level": 50,
       "chance": "100%",
       "conditions": null,

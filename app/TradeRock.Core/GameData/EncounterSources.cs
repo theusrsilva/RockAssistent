@@ -62,6 +62,10 @@ public static class EncounterSources
             IsWild(method) ? !wild.Contains((location, version)) : !kept.Contains((location, version, species));
     }
 
+    /// <summary>Encontro que depende de um evento com outro jogador (não conta como encontro da área no Nuzlocke).</summary>
+    public static bool NeedsEvent(OwnEncounter e) =>
+        e.Conditions?.Split(',', StringSplitOptions.TrimEntries).Contains("funfest_mission") == true;
+
     /// <summary>"10%" → 10; texto ("common", "fixed") ou nulo → 0.</summary>
     public static int Percent(string? chance) =>
         chance is not null && chance.EndsWith('%') && int.TryParse(chance.AsSpan(0, chance.Length - 1), out var n) ? n : 0;

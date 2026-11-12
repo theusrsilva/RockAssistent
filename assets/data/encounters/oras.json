@@ -1,9 +1,9 @@
 {
   "source": [
     "https://www.serebii.net/pokearth/hoenn/ (páginas por área, parte Gen VI = Omega Ruby/Alpha Sapphire; baixadas em 12/11/2026)",
-    "Métodos: walk (grama), tall_grass (grama alta), cave (chão de caverna), dive (alga no fundo do mar, com Dive), surf, fish (conditions old_rod/good_rod/super_rod), rock_smash, horde (a Serebii não dá chance), dexnav (exclusivos do DexNav depois da National Dex, sem chance), sky_flock (bandos no céu ao planar com Latios/Latias). Chance: o número da Serebii; no surf a Serebii só diz Common/Uncommon/Rare (viram common/uncommon/rare; Very Rare = rare). Andares e salas da mesma área foram juntados: menor e maior nível e a maior chance entre eles. Mirage Spots ficam com o PokeAPI (que os tem por ilha).",
-    "Rock Smash da route-111, rusturf-tunnel, lilycove-city e seafloor-cavern: a Serebii não lista; vieram das tabelas do PKHeX (tipo Rock_Smash, sem chance).",
-    "verified = o PKHeX (Encounters6AO) tem a espécie no mesmo local e versão com faixa de nível que cruza a nossa. No ORAS o PKHeX mistura grama, surf, pesca e DexNav num tipo só, então confirma espécie, local e nível, não o método."
+    "Métodos: walk (grama), tall_grass (grama alta), cave (chão de caverna), dive (alga no fundo do mar, com Dive), surf, fish (conditions old_rod/good_rod/super_rod), rock_smash, horde (a Serebii não dá chance), dexnav (exclusivos do DexNav depois da National Dex, sem chance), sky_flock (bandos no céu ao planar com Latios/Latias). Chance: a da Serebii; no surf a Serebii só diz Common/Uncommon/Rare (viram common/uncommon/rare; Very Rare = rare). Andares e salas da mesma área foram juntados: menor e maior nível e a maior chance entre eles. Mirage Spots ficam com o PokeAPI (que os tem por ilha).",
+    "Onde a Serebii discorda do PKHeX (Encounters6AO, a tabela do próprio jogo), vale o PKHeX: (1) o nível é sempre o do PKHeX; (2) espécie que o PKHeX tem no local e a Serebii não lista entra com chance null; (3) espécie que a Serebii lista e o PKHeX não tem naquele local, método e versão sai. No ORAS o PKHeX guarda cada tabela com 41 slots numa ordem fixa (12 grama, 12 grama alta, 3 DexNav, 5 surf, 3 vara velha, 3 vara boa, 3 super vara), mais Rock Smash e hordas à parte; o método de cada slot vem dessa posição. Os bandos do céu (sky_flock) são encontros fixos no PKHeX (local 348), de onde vem o nível.",
+    "verified = a espécie está no PKHeX no mesmo local, versão e método (posição do slot), com o nível do PKHeX."
   ],
   "items": [
     {
@@ -569,8 +569,8 @@
       "species": 283,
       "form": 0,
       "method": "surf",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -578,7 +578,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-102",
@@ -1160,7 +1160,7 @@
       "form": 0,
       "method": "dexnav",
       "min_level": 5,
-      "max_level": 5,
+      "max_level": 7,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1176,7 +1176,7 @@
       "form": 0,
       "method": "dexnav",
       "min_level": 5,
-      "max_level": 5,
+      "max_level": 7,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1192,7 +1192,7 @@
       "form": 0,
       "method": "dexnav",
       "min_level": 5,
-      "max_level": 5,
+      "max_level": 7,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1416,7 +1416,7 @@
       "form": 0,
       "method": "walk",
       "min_level": 6,
-      "max_level": 7,
+      "max_level": 8,
       "chance": "30%",
       "conditions": null,
       "versions": [
@@ -1635,6 +1635,150 @@
       "verified": true
     },
     {
+      "area": "dewford-town",
+      "species": 72,
+      "form": 0,
+      "method": "surf",
+      "min_level": 20,
+      "max_level": 25,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 278,
+      "form": 0,
+      "method": "surf",
+      "min_level": 20,
+      "max_level": 20,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 279,
+      "form": 0,
+      "method": "surf",
+      "min_level": 25,
+      "max_level": 30,
+      "chance": null,
+      "conditions": null,
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 72,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 129,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 320,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 72,
+      "form": 0,
+      "method": "fish",
+      "min_level": 5,
+      "max_level": 5,
+      "chance": null,
+      "conditions": "old_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 129,
+      "form": 0,
+      "method": "fish",
+      "min_level": 10,
+      "max_level": 15,
+      "chance": null,
+      "conditions": "old_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "dewford-town",
+      "species": 320,
+      "form": 0,
+      "method": "fish",
+      "min_level": 30,
+      "max_level": 40,
+      "chance": null,
+      "conditions": "super_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
       "area": "granite-cave",
       "species": 41,
       "form": 0,
@@ -1750,7 +1894,7 @@
       "form": 0,
       "method": "rock_smash",
       "min_level": 10,
-      "max_level": 20,
+      "max_level": 12,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1766,7 +1910,7 @@
       "form": 0,
       "method": "rock_smash",
       "min_level": 10,
-      "max_level": 15,
+      "max_level": 12,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -1939,8 +2083,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -1948,7 +2092,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-109",
@@ -2415,8 +2559,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -2424,7 +2568,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-110",
@@ -2811,8 +2955,8 @@
       "species": 283,
       "form": 0,
       "method": "surf",
-      "min_level": 15,
-      "max_level": 15,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -2820,7 +2964,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-117",
@@ -3387,21 +3531,6 @@
       "method": "cave",
       "min_level": 14,
       "max_level": 16,
-      "chance": "5%",
-      "conditions": null,
-      "versions": [
-        "omega-ruby"
-      ],
-      "alpha": false,
-      "verified": true
-    },
-    {
-      "area": "fiery-path",
-      "species": 88,
-      "form": 0,
-      "method": "cave",
-      "min_level": 14,
-      "max_level": 16,
       "chance": "30%",
       "conditions": null,
       "versions": [
@@ -3412,11 +3541,26 @@
     },
     {
       "area": "fiery-path",
-      "species": 109,
+      "species": 88,
       "form": 0,
       "method": "cave",
       "min_level": 15,
       "max_level": 15,
+      "chance": "5%",
+      "conditions": null,
+      "versions": [
+        "omega-ruby"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "fiery-path",
+      "species": 109,
+      "form": 0,
+      "method": "cave",
+      "min_level": 14,
+      "max_level": 16,
       "chance": "30%",
       "conditions": null,
       "versions": [
@@ -3793,7 +3937,7 @@
       "species": 335,
       "form": 0,
       "method": "walk",
-      "min_level": 19,
+      "min_level": 17,
       "max_level": 19,
       "chance": "19%",
       "conditions": null,
@@ -3808,7 +3952,7 @@
       "species": 336,
       "form": 0,
       "method": "walk",
-      "min_level": 19,
+      "min_level": 17,
       "max_level": 19,
       "chance": "19%",
       "conditions": null,
@@ -4173,8 +4317,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -4182,7 +4326,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-115",
@@ -4506,7 +4650,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "35%",
       "conditions": "good_rod",
       "versions": [
@@ -4522,7 +4666,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "60%",
       "conditions": "good_rod",
       "versions": [
@@ -4538,7 +4682,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "5%",
       "conditions": "good_rod",
       "versions": [
@@ -4554,7 +4698,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 5,
-      "max_level": 5,
+      "max_level": 10,
       "chance": "35%",
       "conditions": "old_rod",
       "versions": [
@@ -4569,7 +4713,7 @@
       "species": 129,
       "form": 0,
       "method": "fish",
-      "min_level": 10,
+      "min_level": 5,
       "max_level": 15,
       "chance": "65%",
       "conditions": "old_rod",
@@ -4873,7 +5017,7 @@
       "species": 343,
       "form": 0,
       "method": "walk",
-      "min_level": 23,
+      "min_level": 21,
       "max_level": 23,
       "chance": "20%",
       "conditions": null,
@@ -4969,8 +5113,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -4978,7 +5122,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-105",
@@ -5175,8 +5319,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -5184,7 +5328,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-106",
@@ -5445,8 +5589,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -5454,7 +5598,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-107",
@@ -5651,8 +5795,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -5660,7 +5804,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-108",
@@ -5841,7 +5985,7 @@
       "species": 72,
       "form": 0,
       "method": "surf",
-      "min_level": 20,
+      "min_level": 15,
       "max_level": 25,
       "chance": "common",
       "conditions": null,
@@ -5857,7 +6001,7 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 20,
+      "min_level": 15,
       "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
@@ -5874,7 +6018,7 @@
       "form": 0,
       "method": "surf",
       "min_level": 25,
-      "max_level": 30,
+      "max_level": 25,
       "chance": "rare",
       "conditions": null,
       "versions": [
@@ -6129,8 +6273,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -6138,7 +6282,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-118",
@@ -6753,8 +6897,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -6762,7 +6906,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-119",
@@ -7086,6 +7230,22 @@
     },
     {
       "area": "route-120",
+      "species": 118,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-120",
       "species": 129,
       "form": 0,
       "method": "fish",
@@ -7124,6 +7284,22 @@
       "min_level": 5,
       "max_level": 5,
       "chance": "35%",
+      "conditions": "old_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "route-120",
+      "species": 118,
+      "form": 0,
+      "method": "fish",
+      "min_level": 5,
+      "max_level": 5,
+      "chance": null,
       "conditions": "old_rod",
       "versions": [
         "omega-ruby",
@@ -8194,7 +8370,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 30,
-      "max_level": 40,
+      "max_level": 35,
       "chance": "95%",
       "conditions": "super_rod",
       "versions": [
@@ -8241,8 +8417,8 @@
       "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
-      "max_level": 25,
+      "min_level": 20,
+      "max_level": 20,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -8250,7 +8426,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-122",
@@ -8626,7 +8802,7 @@
       "form": 0,
       "method": "surf",
       "min_level": 20,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "common",
       "conditions": null,
       "versions": [
@@ -8770,7 +8946,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 30,
-      "max_level": 40,
+      "max_level": 35,
       "chance": "95%",
       "conditions": "super_rod",
       "versions": [
@@ -9169,7 +9345,7 @@
       "species": 320,
       "form": 0,
       "method": "fish",
-      "min_level": 30,
+      "min_level": 25,
       "max_level": 40,
       "chance": "100%",
       "conditions": "super_rod",
@@ -9410,7 +9586,7 @@
       "form": 0,
       "method": "cave",
       "min_level": 31,
-      "max_level": 32,
+      "max_level": 31,
       "chance": "20%",
       "conditions": null,
       "versions": [
@@ -9537,8 +9713,8 @@
       "species": 72,
       "form": 0,
       "method": "fish",
-      "min_level": 10,
-      "max_level": 15,
+      "min_level": 5,
+      "max_level": 5,
       "chance": "35%",
       "conditions": "old_rod",
       "versions": [
@@ -9546,15 +9722,15 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shoal-cave",
       "species": 129,
       "form": 0,
       "method": "fish",
-      "min_level": 5,
-      "max_level": 5,
+      "min_level": 10,
+      "max_level": 15,
       "chance": "65%",
       "conditions": "old_rod",
       "versions": [
@@ -9562,7 +9738,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "shoal-cave",
@@ -9570,7 +9746,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 30,
-      "max_level": 35,
+      "max_level": 40,
       "chance": "100%",
       "conditions": "super_rod",
       "versions": [
@@ -9582,27 +9758,11 @@
     },
     {
       "area": "shoal-cave",
-      "species": 74,
-      "form": 0,
-      "method": "rock_smash",
-      "min_level": 30,
-      "max_level": 30,
-      "chance": null,
-      "conditions": null,
-      "versions": [
-        "omega-ruby",
-        "alpha-sapphire"
-      ],
-      "alpha": false,
-      "verified": false
-    },
-    {
-      "area": "shoal-cave",
       "species": 75,
       "form": 0,
       "method": "rock_smash",
-      "min_level": 30,
-      "max_level": 40,
+      "min_level": 31,
+      "max_level": 34,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -10498,7 +10658,7 @@
       "form": 0,
       "method": "surf",
       "min_level": 25,
-      "max_level": 30,
+      "max_level": 35,
       "chance": "common",
       "conditions": null,
       "versions": [
@@ -10514,7 +10674,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "35%",
       "conditions": "good_rod",
       "versions": [
@@ -10530,7 +10690,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "60%",
       "conditions": "good_rod",
       "versions": [
@@ -10546,7 +10706,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 25,
-      "max_level": 25,
+      "max_level": 30,
       "chance": "5%",
       "conditions": "good_rod",
       "versions": [
@@ -10562,7 +10722,7 @@
       "form": 0,
       "method": "fish",
       "min_level": 5,
-      "max_level": 5,
+      "max_level": 10,
       "chance": "35%",
       "conditions": "old_rod",
       "versions": [
@@ -10577,8 +10737,8 @@
       "species": 129,
       "form": 0,
       "method": "fish",
-      "min_level": 10,
-      "max_level": 15,
+      "min_level": 5,
+      "max_level": 10,
       "chance": "65%",
       "conditions": "old_rod",
       "versions": [
@@ -11551,7 +11711,7 @@
       "species": 72,
       "form": 0,
       "method": "surf",
-      "min_level": 20,
+      "min_level": 25,
       "max_level": 25,
       "chance": "common",
       "conditions": null,
@@ -11567,7 +11727,7 @@
       "species": 73,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
+      "min_level": 30,
       "max_level": 30,
       "chance": "rare",
       "conditions": null,
@@ -11583,8 +11743,8 @@
       "species": 279,
       "form": 0,
       "method": "surf",
-      "min_level": 20,
-      "max_level": 20,
+      "min_level": 25,
+      "max_level": 35,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -11592,7 +11752,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "pacifidlog-town",
@@ -12143,7 +12303,7 @@
       "species": 72,
       "form": 0,
       "method": "surf",
-      "min_level": 25,
+      "min_level": 20,
       "max_level": 25,
       "chance": "common",
       "conditions": null,
@@ -12156,19 +12316,19 @@
     },
     {
       "area": "route-134",
-      "species": 73,
+      "species": 278,
       "form": 0,
       "method": "surf",
-      "min_level": 30,
-      "max_level": 30,
-      "chance": "uncommon",
+      "min_level": 20,
+      "max_level": 20,
+      "chance": null,
       "conditions": null,
       "versions": [
         "omega-ruby",
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "route-134",
@@ -12176,7 +12336,7 @@
       "form": 0,
       "method": "surf",
       "min_level": 25,
-      "max_level": 35,
+      "max_level": 30,
       "chance": "uncommon",
       "conditions": null,
       "versions": [
@@ -12475,6 +12635,118 @@
       "verified": true
     },
     {
+      "area": "sealed-chamber",
+      "species": 72,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 129,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 320,
+      "form": 0,
+      "method": "fish",
+      "min_level": 25,
+      "max_level": 25,
+      "chance": null,
+      "conditions": "good_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 72,
+      "form": 0,
+      "method": "fish",
+      "min_level": 5,
+      "max_level": 5,
+      "chance": null,
+      "conditions": "old_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 129,
+      "form": 0,
+      "method": "fish",
+      "min_level": 10,
+      "max_level": 15,
+      "chance": null,
+      "conditions": "old_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 116,
+      "form": 0,
+      "method": "fish",
+      "min_level": 30,
+      "max_level": 40,
+      "chance": null,
+      "conditions": "super_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
+      "area": "sealed-chamber",
+      "species": 320,
+      "form": 0,
+      "method": "fish",
+      "min_level": 35,
+      "max_level": 35,
+      "chance": null,
+      "conditions": "super_rod",
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ],
+      "alpha": false,
+      "verified": true
+    },
+    {
       "area": "ever-grande-city",
       "species": 72,
       "form": 0,
@@ -12591,7 +12863,7 @@
       "species": 129,
       "form": 0,
       "method": "fish",
-      "min_level": 5,
+      "min_level": 10,
       "max_level": 15,
       "chance": "65%",
       "conditions": "old_rod",
@@ -12957,8 +13229,8 @@
       "species": 339,
       "form": 0,
       "method": "fish",
-      "min_level": 35,
-      "max_level": 35,
+      "min_level": 30,
+      "max_level": 40,
       "chance": "100%",
       "conditions": "super_rod",
       "versions": [
@@ -13037,7 +13309,7 @@
       "species": 198,
       "form": 0,
       "method": "sky_flock",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 45,
       "chance": null,
       "conditions": null,
@@ -13046,7 +13318,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
@@ -13054,7 +13326,7 @@
       "form": 0,
       "method": "sky_flock",
       "min_level": 40,
-      "max_level": 45,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13062,7 +13334,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
@@ -13070,7 +13342,7 @@
       "form": 0,
       "method": "sky_flock",
       "min_level": 40,
-      "max_level": 45,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13078,7 +13350,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
@@ -13086,7 +13358,7 @@
       "form": 0,
       "method": "sky_flock",
       "min_level": 40,
-      "max_level": 45,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13094,7 +13366,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
@@ -13102,7 +13374,7 @@
       "form": 0,
       "method": "sky_flock",
       "min_level": 40,
-      "max_level": 45,
+      "max_level": 40,
       "chance": null,
       "conditions": null,
       "versions": [
@@ -13110,14 +13382,14 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
       "species": 425,
       "form": 0,
       "method": "sky_flock",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 45,
       "chance": null,
       "conditions": null,
@@ -13126,14 +13398,14 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "soaring",
       "species": 628,
       "form": 0,
       "method": "sky_flock",
-      "min_level": 40,
+      "min_level": 45,
       "max_level": 45,
       "chance": null,
       "conditions": null,
@@ -13142,7 +13414,7 @@
         "alpha-sapphire"
       ],
       "alpha": false,
-      "verified": false
+      "verified": true
     },
     {
       "area": "sky-pillar",
