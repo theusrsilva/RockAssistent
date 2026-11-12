@@ -19,7 +19,8 @@ public static class GameDataValidator
     public static readonly IReadOnlySet<string> EncounterMethods = new HashSet<string>
     {
         "walk", "surf", "fish", "tree", "city", "horde", "dexnav", "sos", "max_raid", "tera_raid", "honey", "radar",
-        "roaming", "rock_smash", "cave", "outbreak", "raid", "fixed", "gift", "trade",
+        "roaming", "rock_smash", "cave", "outbreak", "raid", "fixed", "gift", "trade", "dark_grass", "shaking_grass",
+        "dust_cloud", "rippling_water", "flying_shadow", "hidden_grotto", "flowers", "ambush", "island_scan", "tall_grass", "dive", "sky_flock", "poke_pelago",
     };
 
     public static IReadOnlyList<string> Validate(GameDataStore store, Func<string, bool>? moveExists)
@@ -313,7 +314,7 @@ public static class GameDataValidator
                 errors.Add($"{at}: método {e.Method} fora da lista");
             if (e.MinLevel is < 1 or > 100 || e.MaxLevel < e.MinLevel || e.MaxLevel > 100)
                 errors.Add($"{at}: níveis {e.MinLevel}-{e.MaxLevel}");
-            if (e.Chance is { } c && !Chances.Contains(c))
+            if (e.Chance is { } c && !Chances.Contains(c) && EncounterSources.Percent(c) is < 1 or > 100)
                 errors.Add($"{at}: chance {c}");
             foreach (var v in e.Versions.Where(v => !game.PokeApiVersions.Contains(v)))
                 errors.Add($"{at}: versão {v} não é do {key}");

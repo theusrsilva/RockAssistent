@@ -15,6 +15,34 @@ só o que nenhuma fonte cobre e as convenções nossas.
 | sv | encounters/sv.json (Gimmighoul forma de baú) | Nível do baú em South Province Area Two (10) e Three (10), East Province Area Three (25), South Province Area Six (40), Glaseado Mountain (35) e North Province Area One (50): a Serebii dá 25 baús com nível (5 a 50), mas os marcadores cobrem Paldea inteira e não dizem a área. Também não entraram, sem nível por área, os fixos e Tera que a Serebii lista e o JSON não tem: Dragonite (Casseroya Lake, North Province Area Two), Spiritomb (Casseroya, Dalizapa Passage, North Province Area One, Socarrat Trail), Tsareena (Casseroya) e Eelektross (North Province Area One). | serebii pokearth/paldea e spawntable 6124–6430; pokemondb |
 | vgc | vgc/regulation.json (roster) | Não é dúvida de fato: o roster completo do M-C está em texto na Serebii (280 entradas com as formas, sem Megas), mas o `VgcRegulation` não tem campo para ele. Guardar o roster precisa de mudança de código; o JSON guarda só as adições do M-C. | serebii.net/pokemonchampions/recruit/regularrosterm-c.shtml; victoryroad (só imagens) |
 
+## Encontros do Serebii que divergem do PKHeX (D39, 12/11/2026)
+
+Os arquivos de encontros do ORAS, BW, B2W2, XY, SM e USUM vêm das páginas de área do Serebii e foram conferidos por
+script com as tabelas do PKHeX. As linhas abaixo ficaram com o valor do Serebii e `"verified": false`.
+
+| jogo | item | dúvida |
+| --- | --- | --- |
+| oras | surf (13 linhas) | Wingull nível 25 em 11 rotas (PKHeX: 20) e Surskit nível 15 nas rotas 102 e 117 (PKHeX: 20). |
+| oras | pacifidlog-town, shoal-cave, route-134 | Pelipper nível 20 (PKHeX: 25–35); Vara Velha da Shoal Cave com os níveis de Tentacool e Magikarp aparentemente trocados; Tentacruel nível 30 na Rota 134 (PKHeX: Wingull 20). |
+| oras | soaring (7 linhas) | Bandos no céu: o PKHeX não tem tabela para conferir. |
+| oras | dewford-town, sealed-chamber, route-120 | O Serebii não lista os selvagens de Dewford (Tentacool, Magikarp, Wingull, Pelipper, Wailmer), a pesca da Sealed Chamber nem o Goldeen da Rota 120, que o PKHeX tem. Ficaram de fora. |
+| oras | rock_smash (4 linhas) | Geodude (route-111, rusturf-tunnel) e Graveler (lilycove-city, seafloor-cavern) vêm do PKHeX; o Serebii não lista. Sem chance. |
+| xy | route-7 (Flabébé) | Serebii: grama nível 7–8; PKHeX e PokeAPI: 12–14. Ficou o Serebii. |
+| xy | pesca, surf e Rock Smash (cerca de 30 linhas) | Níveis diferentes do PKHeX em Frost Cavern, Couriway Town, Rota 19, Pokémon Village, Rota 21, Victory Road, Rota 8 e Ambrette. |
+| xy | hordas | Um nível de diferença ou versão trocada nas Rotas 7, 10, 18, 19 e na Victory Road; o Drapion da horda da Rota 19 não existe no PKHeX. |
+| xy | lixeiras (lost-hotel, pokemon-village) | O Serebii não dá nível; ficaram os do PokeAPI. Rotom (terça) e Banette (quinta) entraram sem a condição do dia. |
+| xy | níveis sem fonte no Serebii | Moitas das Rotas 6 e 18, árvores de frutas, emboscadas de teto e céu e a horda de Floatzel da Victory Road: níveis do PKHeX. |
+| bw | chances que somam mais de 100 | Super Vara do Abundant Shrine e da Rota 11 (Goldeen 70 + Basculin 40; pelo PKHeX o Basculin é 30) e pesca borbulhando do Giant Chasm (soma 105). Ficou o que a página mostra. |
+| bw | lostlorn-forest, black-city | Seaking na pesca borbulhando não existe no PKHeX; o Lotad da White Forest está no surf no Serebii e na grama no PKHeX. |
+| b2w2 | Swarms (23 linhas) | Serebii: nível 15–55; PKHeX: 40–55. |
+| b2w2 | chances | Celestial Tower 4F soma 90; Frillish no surf da Rota 21 do Black 2 mostra 70% (White 2 e PKHeX: 65%). |
+| b2w2 | abundant-shrine, route-19 | Azumarill na grama que balança não existe no PKHeX; na água borbulhando da Rota 19 do Black 2 gravamos o Basculin de listra azul (dado do jogo), a página mostra o vermelho. |
+| b2w2 | Hidden Grottos de Funfest Mission | Chansey, Vaporeon, Jolteon, Flareon, Espeon, Umbreon, Leafeon, Glaceon, Togetic, Shelgon, Glameow e Stunky não estão nas páginas de área: ficaram sem "Onde achar". |
+| sm, usum | island_scan (28 linhas por jogo) | O PKHeX não tem o Island Scan nas tabelas de área. |
+| sm, usum | berry-fields, mount-lanakila | O Serebii não tem a tabela de Berry Fields (Crabrawler; continua o PokeAPI) nem o Vanillite de SOS do Mount Lanakila no USUM. |
+| usum | haina-desert, route-16 | SOS de clima nível 28–31 e surf/SOS da Rota 16 (Tentacruel, Finneon, Lumineon) não cruzam com o PKHeX. |
+| sm, usum | emboscadas | `grass`, `bush`, `sand` e `ground` são leitura nossa de "Rustling Spots" e "Shaking Plants Spots". |
+
 ## Convenções (não são dúvidas de fato)
 
 Escolhas nossas de estrutura e método. Não se pesquisam; o autor pode querer mudar.

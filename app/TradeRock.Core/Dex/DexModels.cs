@@ -71,8 +71,10 @@ public sealed record EvolutionStep(int SpeciesId, string Name, int? FromSpeciesI
 public sealed record FlavorText(string Version, string Language, string Text);
 
 /// <summary>Encontros juntados por versão, área, método e condições (níveis de/até, chance somada).</summary>
+/// <param name="LocationId">Local do PokeAPI (para juntar com os nossos encontros); nulo nos nossos.</param>
 public sealed record EncounterInfo(string Version, string Location, string? Area, string Method, int MinLevel,
-    int MaxLevel, int Chance, string[] Conditions);
+    int MaxLevel, int Chance, string[] Conditions,
+    [property: System.Text.Json.Serialization.JsonIgnore] int? LocationId = null);
 
 /// <summary>
 /// Encontro de um local do PokeAPI (todas as sub-áreas juntas) numa versão, por espécie, forma e método. <see cref="Form"/>

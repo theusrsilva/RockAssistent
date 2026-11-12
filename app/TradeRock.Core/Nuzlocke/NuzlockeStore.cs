@@ -266,12 +266,9 @@ public sealed class NuzlockeStore(IDbContextFactory<TradeRockDb> dbFactory, Game
         var areas = data.Areas(run.GameKey);
         var gifts = new List<(string AreaId, int Level)>();
         var own = data.Encounters(run.GameKey);
-        if (own.Count > 0)
-        {
-            gifts.AddRange(own.Where(e => e.Species == starter.Species && e.Method == "gift" && RunProgress.InVersion(e.Versions, run.Version))
-                .Select(e => (e.Area, e.MinLevel)));
-        }
-        else if (DexDatabase.ResourceExists)
+        gifts.AddRange(own.Where(e => e.Species == starter.Species && e.Method == "gift" && RunProgress.InVersion(e.Versions, run.Version))
+            .Select(e => (e.Area, e.MinLevel)));
+        if (DexDatabase.ResourceExists && !(own.Count > 0 && EncounterSources.OwnOnly(run.GameKey)))
         {
             foreach (var (location, lvl) in dex.GiftLocations(starter.Species, run.GameKey, run.Version))
                 gifts.AddRange(areas.Where(a => a.PokeApiLocationId == location).Select(a => (a.Id, lvl)));

@@ -108,7 +108,7 @@ public sealed class DexService(DexDatabase db)
                 JOIN forms f ON f.id = e.pokemon_id
                 JOIN location_areas a ON a.id = e.location_area_id
                 WHERE a.location_id = $l AND e.version_id IN ({game.VersionIdList})
-                GROUP BY f.species_id, f.form, e.version_id, e.method, e.location_area_id, e.condition_values),
+                GROUP BY f.species_id, f.form, e.version_id, e.method, e.location_area_id, {ConditionsSql}),
             -- Condições diferentes (manhã/dia/noite, com/sem horda, Moltres estático 2 × 100) são alternativas: fica a maior,
             -- limitada a 100. Entre sub-áreas também fica a maior (somar entre sub-áreas passa de 100%).
             per_area AS (
@@ -591,6 +591,8 @@ public sealed class DexService(DexDatabase db)
         {
             var game = data.Game(g.Key);
             var all = ownEncounters?.Invoke(g.Key) ?? [];
+            // O PokeAPI conta sempre, menos nos jogos em que só os nossos encontros valem (BDSP, Arceus, SV e Z-A).
+            var pokeApi = all.Count == 0 || !EncounterSources.OwnOnly(g.Key);
             // Nos nossos dados, o que só sai com item de evento fica para a segunda passada (com requisito).
             var own = all.Where(e => OwnRequirement(g.Key, e) is null).ToList();
             var fromPkhex = pkhex ? PkhexAvailability.ForGame(g.Key) : new Dictionary<int, AvailabilityKind>();
@@ -603,7 +605,7 @@ public sealed class DexService(DexDatabase db)
             if (In(speciesId))
             {
                 kind = fromPkhex.GetValueOrDefault(speciesId);
-                if (all.Count == 0 && game.Exists.Contains(speciesId))
+                if (pokeApi && game.Exists.Contains(speciesId))
                 {
                     if (game.Encounters.Contains(speciesId))
                         kind = AvailabilityKind.Encounter;
@@ -643,7 +645,7 @@ public sealed class DexService(DexDatabase db)
 
             // Tem jeito normal de conseguir (sem requisito) em alguma fonte?
             bool NormallyIn(int species) =>
-                (all.Count == 0 && (game.Encounters.Contains(species) || game.Gifts.Contains(species) || game.Trades.Contains(species)))
+                (pokeApi && (game.Encounters.Contains(species) || game.Gifts.Contains(species) || game.Trades.Contains(species)))
                 || own.Any(e => e.Species == species) || fromPkhex.ContainsKey(species) || statics.Contains(species);
 
             // Jeito com requisito de uma espécie (PKHeX, PokeAPI e nossos dados); nulo = nenhum.
@@ -657,7 +659,7 @@ public sealed class DexService(DexDatabase db)
                 }
                 if (pkhex && PkhexAvailability.Required(g.Key).TryGetValue(species, out var p))
                     Offer(p.Kind, p.Requires);
-                if (all.Count == 0 && game.Events.Contains(species))
+                if (pokeApi && game.Events.Contains(species))
                     Offer(AvailabilityKind.Encounter, Requires.EventItem);
                 foreach (var e in all.Where(e => e.Species == species))
                     if (OwnRequirement(g.Key, e) is { } tag)
@@ -986,25 +988,33 @@ public sealed class DexService(DexDatabase db)
         return r.Read() ? [new FlavorText(r.GetString(0), r.GetString(1), r.GetString(2))] : [];
     }
 
+    /// <summary>
+    /// <c>condition_values</c> sem as condições que são o estado normal do jogo
+    /// (<see cref="EncounterSources.DefaultConditions"/>): as linhas que só diferiam nelas viram uma, com a chance somada.
+    /// </summary>
+    private static readonly string ConditionsSql =
+        "trim(replace(" + EncounterSources.DefaultConditions.Aggregate("coalesce(e.condition_values, '')",
+            (sql, c) => $"replace({sql}, '{c}', '')") + ", ',,', ','), ',')";
+
     private static List<EncounterInfo> Encounters(SqliteConnection c, int speciesId, GameInfo game)
     {
         var result = new List<EncounterInfo>();
         using var cmd = Command(c, $"""
             SELECT v.identifier, coalesce(l.name_en, l.identifier), a.name_en, e.method, min(e.min_level), max(e.max_level),
-                   sum(coalesce(e.rarity, 0)), e.condition_values
+                   min(sum(coalesce(e.rarity, 0)), 100), {ConditionsSql} AS conditions, l.id
             FROM encounters e
             JOIN pokemon p ON p.id = e.pokemon_id
             JOIN versions v ON v.id = e.version_id
             JOIN location_areas a ON a.id = e.location_area_id
             JOIN locations l ON l.id = a.location_id
             WHERE p.species_id = $s AND e.version_id IN ({game.VersionIdList})
-            GROUP BY e.version_id, e.location_area_id, e.method, e.condition_values
+            GROUP BY e.version_id, e.location_area_id, e.method, conditions
             ORDER BY e.version_id, l.id, a.id, e.method
             """, ("$s", speciesId));
         using var r = cmd.ExecuteReader();
         while (r.Read())
             result.Add(new EncounterInfo(r.GetString(0), r.GetString(1), Str(r, 2), Str(r, 3) ?? "unknown", Int(r, 4) ?? 0,
-                Int(r, 5) ?? 0, Int(r, 6) ?? 0, Str(r, 7)?.Split(',') ?? []));
+                Int(r, 5) ?? 0, Int(r, 6) ?? 0, Str(r, 7)?.Split(',', StringSplitOptions.RemoveEmptyEntries) ?? [], Int(r, 8)));
         return result;
     }
 

@@ -1496,3 +1496,37 @@ Decisões do autor (12/11/2026):
   Basculin de listra branca; 19 espécies) entravam na frente e deslocavam as outras: o Raichu de Alola dos encontros do
   Z-A virava Mega Raichu X, o Meowth de Alola e de Galar do Scarlet/Violet e o Basculin do Arceus e do B2W2 trocavam de
   forma. Agora elas vão para o fim (`ORDER BY is_default DESC, form_order IS NULL, form_order, id`).
+
+## D39. Encontros: os nossos arquivos completam e corrigem o PokeAPI
+
+**Problema.** O autor notou que o Oddish, no Omega Ruby, só aparecia em hordas a partir da Rota 117; faltava a grama da
+Rota 110. A causa estava na origem: o PokeAPI não tem grama, surf nem pesca do ORAS (só hordas, Rock Smash, fixos,
+presentes e os Mirage Spots; 20% dos pares espécie/local das tabelas do PKHeX). Também faltam no PokeAPI os Swarms e a
+White Forest do BW/B2W2 e os visitantes do Poké Pelago do SM/USUM, e a amostra contra o Serebii achou chances e níveis
+errados nas Gen 5 e 6.
+
+**Decisão.**
+
+- **Arquivo próprio por jogo** em `assets/data/encounters/` para ORAS, BW, B2W2, XY, SM e USUM, com a tabela selvagem
+  de cada área tirada das páginas do Pokéarth do Serebii (extração por script, nunca à mão). `chance` aceita "N%".
+- **As duas fontes se juntam** (`EncounterSources`). No BDSP, no Arceus, no SV e no Z-A continuam valendo só os nossos.
+  Nos outros jogos com arquivo, uma área (e versão) que tem linhas nossas perde as linhas selvagens do PokeAPI e fica
+  com as nossas; encontro fixo, presente, troca, andarilho e Island Scan do PokeAPI continuam. Área fora do arquivo
+  fica como o PokeAPI. Vale para a aba "Onde achar", o bloco `:::encounters` dos guias, o Nuzlocke e a disponibilidade.
+- **`verified`** é automático: verdadeiro quando as tabelas do PKHeX têm a espécie naquele local e versão com nível
+  compatível. O PKHeX não serve de fonte única (no ORAS junta grama, surf, pesca e DexNav num tipo só e não tem chance).
+- **Teste de cobertura:** toda espécie que o PKHeX tem como selvagem nesses seis jogos precisa aparecer no "Onde achar"
+  (`OwnEncounterFilesTests`); as exceções são as 12 espécies das Hidden Grottos do B2W2 que só saem com Funfest Mission.
+- **Métodos novos:** `dark_grass`, `shaking_grass`, `dust_cloud`, `rippling_water`, `flying_shadow`, `hidden_grotto`,
+  `flowers`, `ambush`, `island_scan`, `tall_grass`, `dive`, `sky_flock`, `poke_pelago`. O DexNav entra como método
+  `dexnav`, sem chance.
+- **Poké Pelago:** área nova no SM e no USUM (fora do mapa), com as 26 espécies visitantes de cada jogo (espécies do
+  Serebii, níveis do PKHeX).
+- **Condições que são o estado normal** (rádio desligado, sem Poké Radar, sem enxame, sem cartucho no slot 2) deixam de
+  aparecer, e as linhas do PokeAPI que só diferiam nelas somam a chance: o Caterpie da manhã na Rota 30 do HeartGold
+  mostra 50%, não "30% com rádio desligado" e "20%".
+
+**Limites.** O que o Serebii diverge do PKHeX ficou com o valor do Serebii e `verified: false`, listado em
+[data-doubts.md](superpowers/data-doubts.md). Os Mirage Spots do ORAS continuam do PokeAPI (por ilha). Flabébé, Floette,
+Shellos, Deerling e Sawsbuck saem sem cor ou estação (forma 0). Gen 1 a 4, Let's Go e SwSh continuam só com o PokeAPI.
+Nenhuma tela foi vista num navegador.

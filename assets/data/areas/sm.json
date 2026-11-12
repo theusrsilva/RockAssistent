@@ -817,6 +817,15 @@
         "defense-tristan",
         "defense-kukui"
       ]
+    },
+    {
+      "id": "poke-pelago",
+      "name": "Poké Pelago",
+      "kind": "building",
+      "order": 81,
+      "map_node": null,
+      "poke_api_location_id": null,
+      "bosses_before": []
     }
   ]
 }

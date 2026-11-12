@@ -663,10 +663,9 @@ public sealed class GameDataTests(DexFixture fx) : IClassFixture<DexFixture>
         Assert.Null(zigzagoon.Requires);
 
         var detail = store.SpeciesEncounters("za", 1);
-        Assert.NotNull(detail);
         Assert.Contains(detail, e => e.Method == "gift" && e.Version == "legends-za");
         Assert.Contains(detail, e => e.Method == "walk" && e.MinLevel > 1);
-        Assert.Null(store.SpeciesEncounters("frlg", 1));
+        Assert.Empty(store.SpeciesEncounters("frlg", 1));
     }
 
     [Fact]

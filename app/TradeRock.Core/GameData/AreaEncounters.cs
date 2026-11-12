@@ -14,8 +14,9 @@ public sealed record AreaEncounterRow(int Species, int Form, string SpeciesName,
 public static class AreaEncounters
 {
     /// <summary>
-    /// BDSP, Arceus, SV e Z-A: os nossos (<c>assets/data/encounters</c>); os outros: os do PokeAPI pelo
-    /// <c>PokeApiLocationId</c> da área, com as linhas iguais em duas versões juntadas numa. Área desconhecida = null.
+    /// Os nossos encontros da área (<c>assets/data/encounters</c>) e os do PokeAPI pelo <c>PokeApiLocationId</c> dela,
+    /// juntados pela regra de <see cref="EncounterSources"/>; as linhas do PokeAPI iguais em duas versões viram uma.
+    /// Área desconhecida = null.
     /// </summary>
     public static async Task<IReadOnlyList<AreaEncounterRow>?> ListAsync(string gameKey, string areaId, GameDataStore data,
         DexService dex, CancellationToken ct)
@@ -25,24 +26,25 @@ public static class AreaEncounters
             return null;
         string Name(int species) => (DexDatabase.ResourceExists ? dex.SpeciesName(species) : null) ?? $"#{species}";
 
-        var own = data.Encounters(gameKey);
-        if (own.Count > 0)
-            return own.Where(e => e.Area == area.Id)
-                .Select(e => new AreaEncounterRow(e.Species, e.Form, Name(e.Species), e.Method, e.MinLevel, e.MaxLevel, e.Chance,
-                    e.Conditions, e.Versions, e.Alpha, e.Verified))
-                .ToList();
-
+        var own = data.Encounters(gameKey).Where(e => e.Area == area.Id)
+            .Select(e => new AreaEncounterRow(e.Species, e.Form, Name(e.Species), e.Method, e.MinLevel, e.MaxLevel, e.Chance,
+                e.Conditions, e.Versions, e.Alpha, e.Verified))
+            .ToList();
+        if (EncounterSources.OwnOnly(gameKey) && data.Encounters(gameKey).Count > 0)
+            return own;
         if (area.PokeApiLocationId is not { } location || !DexDatabase.ResourceExists)
-            return [];
+            return own;
+
+        var keep = EncounterSources.PokeApiFilter(gameKey, data);
         var order = GameVersions.ByKey(gameKey).PokeApiVersions.ToList();
-        return (await dex.LocationEncountersAsync(location, gameKey, ct))
+        var pokeApi = (await dex.LocationEncountersAsync(location, gameKey, ct))
+            .Where(e => keep(location, e.Version, e.Method, e.Species))
             .GroupBy(e => (e.Species, e.Form, e.Method, e.MinLevel, e.MaxLevel, e.Chance))
             .Select(g => new AreaEncounterRow(g.Key.Species, g.Key.Form, Name(g.Key.Species), g.Key.Method, g.Key.MinLevel,
                 g.Key.MaxLevel, g.Key.Chance > 0 ? $"{g.Key.Chance}%" : null, null,
                 g.Select(e => e.Version).Distinct().OrderBy(v => order.IndexOf(v) is var i and >= 0 ? i : int.MaxValue).ToList(),
-                false, true))
-            .OrderBy(r => r.Method).ThenByDescending(r => r.Chance is null ? 0 : int.Parse(r.Chance.TrimEnd('%')))
-            .ThenBy(r => r.Species)
-            .ToList();
+                false, true));
+        // Os nossos ficam na ordem do arquivo (a da página de origem); os do PokeAPI, por método, chance e espécie.
+        return [.. own, .. pokeApi.OrderBy(r => r.Method).ThenByDescending(r => EncounterSources.Percent(r.Chance)).ThenBy(r => r.Species)];
     }
 }
