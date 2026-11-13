@@ -253,10 +253,12 @@ jobs:
           path: dist/*.dmg
           if-no-files-found: error
 
-  # Tag v*: publica o Release (direto, sem rascunho) com os pacotes, o código-fonte e os checksums.
+  # Tag v*: publica o Release (direto, sem rascunho) com os pacotes do Linux e do Windows, o código-fonte e os
+  # checksums. Não espera o Mac: os Macs do GitHub às vezes não aparecem ("job was not acquired by Runner") e isso
+  # segurava o Release inteiro. O .dmg entra depois, pelo job release-macos.
   release:
     if: github.ref_type == 'tag'
-    needs: [package, smoke-deb, smoke-appimage, windows, macos]
+    needs: [package, smoke-deb, smoke-appimage, windows]
     runs-on: ubuntu-24.04
     permissions:
       contents: write
@@ -270,14 +272,10 @@ jobs:
         with:
           name: traderock-windows
           path: dist
-      - uses: actions/download-artifact@v4
-        with:
-          name: traderock-macos
-          path: dist
-      - name: Checksums com o instalador do Windows e o .dmg do macOS
+      - name: Checksums com o instalador do Windows
         run: |
           cd dist && sha256sum -c SHA256SUMS
-          sha256sum -- RockAssistent-Setup-*.exe RockAssistent-*-macOS-arm64.dmg >> SHA256SUMS
+          sha256sum -- RockAssistent-Setup-*.exe >> SHA256SUMS
       # Texto do Release: as novidades (mensagem da tag anotada), o "qual arquivo baixar"
       # (packaging/release-notes.md) e, no fim, a lista automática de mudanças do GitHub.
       - name: Notas
@@ -313,3 +311,32 @@ jobs:
           (cd dist && sha256sum -c SHA256SUMS)
           gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" \
             --title "RockAssistent $version" --notes-file release-notes.md --generate-notes $prerelease
+
+  # Tag v*: quando o Mac termina, o .dmg entra no Release já publicado e ganha a linha dele no SHA256SUMS (o app
+  # confere o arquivo por ela antes de instalar a atualização). Se o job macos falhar ou for cancelado, este é pulado
+  # e o Release continua valendo sem o .dmg: "Re-run failed jobs" na aba Actions refaz só o Mac e este job.
+  release-macos:
+    if: github.ref_type == 'tag'
+    needs: [release, macos]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: traderock-macos
+          path: dist
+      - name: .dmg e checksum no Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd dist
+          gh release download "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS
+          # Rodando de novo, a linha antiga do .dmg sai antes de entrar a nova.
+          grep -v -- '-macOS-arm64\.dmg$' SHA256SUMS > SHA256SUMS.new || true
+          sha256sum -- RockAssistent-*-macOS-arm64.dmg >> SHA256SUMS.new
+          mv SHA256SUMS.new SHA256SUMS
+          sha256sum -c --ignore-missing SHA256SUMS
+          # O .dmg sobe antes: o SHA256SUMS só cita o arquivo quando ele já está no Release.
+          gh release upload "$GITHUB_REF_NAME" RockAssistent-*-macOS-arm64.dmg --repo "$GITHUB_REPOSITORY" --clobber
+          gh release upload "$GITHUB_REF_NAME" SHA256SUMS --repo "$GITHUB_REPOSITORY" --clobber
