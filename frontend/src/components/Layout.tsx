@@ -130,9 +130,11 @@ export function Layout({ children }: { children: ReactNode }) {
   const bare = mini.on && onHunt
 
   return (
-    <div className={`flex h-full bg-bg text-ink ${bare ? 'overflow-hidden' : 'min-h-[560px]'}`}>
+    // A janela é a única altura: quem rola é o conteúdo (main) e, em janela baixa, o menu. Uma altura mínima aqui
+    // fazia a página inteira rolar também (duas barras) e o menu vazar para fora do fundo.
+    <div className="flex h-full overflow-hidden bg-bg text-ink">
       {!mobile && !bare && (
-        <aside className="flex w-[232px] shrink-0 flex-col border-r border-side-line bg-side px-3 py-[18px] text-side-ink">
+        <aside className="flex w-[232px] shrink-0 flex-col overflow-y-auto border-r border-side-line bg-side px-3 py-[18px] text-side-ink [scrollbar-width:thin]">
           <div className="flex items-center gap-2.5 px-2 pt-1 pb-[22px]">
             <Logo />
             <div className="font-logo text-xl font-bold tracking-[.2px]">{t('app.name')}</div>
@@ -145,7 +147,7 @@ export function Layout({ children }: { children: ReactNode }) {
               </NavLink>
             ))}
           </nav>
-          <div className="flex-1" />
+          <div className="min-h-3 flex-1" />
           <nav className="mb-3.5 flex flex-col gap-0.5">
             <NavLink to="/configuracoes" className={sideLink}>
               <Icon name="settings" className="text-[21px]" />
