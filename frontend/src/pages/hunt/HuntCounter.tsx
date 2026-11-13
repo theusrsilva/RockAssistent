@@ -259,6 +259,7 @@ export default function HuntCounter() {
         step={step}
         seconds={elapsed()}
         onIncrement={increment}
+        onStep={setStep}
         onExpand={() => void changeMiniWindow({ on: false })}
       />
     )
