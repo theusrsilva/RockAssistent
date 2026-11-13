@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Icon } from '../../components/ui'
 import { spriteUrl } from '../../lib/api'
-import { formatElapsed, formatOdds, formatPercent, cumulative, type Hunt } from '../../lib/hunts'
+import { HUNT_STEPS, formatElapsed, formatOdds, formatPercent, cumulative, type Hunt } from '../../lib/hunts'
 
 /**
- * A hunt na mini janela (a janela do PC encolhida e sempre na frente): sprite, nome, contador, somar e tirar, chance e
- * tempo. O botão do canto devolve a janela ao tamanho normal.
+ * A hunt na mini janela (a janela do PC encolhida e sempre na frente): sprite, nome, contador, somar e tirar, quanto somar
+ * por vez, chance e tempo. O botão do canto devolve a janela ao tamanho normal.
  */
 export function MiniHunt({
   hunt,
@@ -14,6 +14,7 @@ export function MiniHunt({
   step,
   seconds,
   onIncrement,
+  onStep,
   onExpand,
 }: {
   hunt: Hunt
@@ -22,6 +23,7 @@ export function MiniHunt({
   step: number
   seconds: number
   onIncrement: (delta: number) => void
+  onStep: (value: number) => void
   onExpand: () => void
 }) {
   const { t, i18n } = useTranslation()
@@ -69,6 +71,23 @@ export function MiniHunt({
         >
           +{step}
         </button>
+        <select
+          value={step}
+          title={t('hunt.counter.stepLabel')}
+          aria-label={t('hunt.counter.stepLabel')}
+          className="h-11 w-14 shrink-0 cursor-pointer rounded-lg border border-line bg-surface px-1.5 text-base font-bold"
+          onChange={(e) => {
+            onStep(Number(e.target.value))
+            // Sem foco no seletor: as teclas do atalho não mudam o valor.
+            e.currentTarget.blur()
+          }}
+        >
+          {HUNT_STEPS.map((n) => (
+            <option key={n} value={n}>
+              {n}
+            </option>
+          ))}
+        </select>
       </div>
       <div className="flex justify-between text-[12px] text-muted tabular-nums">
         <span>
