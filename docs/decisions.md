@@ -1552,6 +1552,11 @@ hunt, como a mini janela de vídeo.
 - **Só na janela do PC.** No navegador, no celular e pela rede o botão e a opção não aparecem
   (`GET/PUT /api/app/mini-window`, `WindowBridge.SetMiniAsync`, `MiniWindow`).
 
+**Correção (13/11/2026).** Na primeira versão a mini janela ligava e desligava em 15 ms (visto no log do app do
+autor): ao ligar, o `Layout` trocava de árvore, a tela da hunt era remontada e a saída da tela antiga mandava desligar.
+Agora o `Layout` só esconde o menu e as barras, sem tirar a tela do lugar, e sair da tela da hunt só avisa que a hunt
+fechou.
+
 **Limites.** Nada disto foi visto numa janela de verdade: só as contas de tamanho e posição e a API sem janela têm
 teste. O tamanho usa o DPI da tela só no Windows (suposição de que o Photino conta em pixels físicos lá). O "sempre na
 frente" no Linux (WebKitGTK) e no Mac nunca foi testado.
