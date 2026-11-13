@@ -24,7 +24,9 @@ import {
   type Hunt,
   type HuntGame,
 } from '../../lib/hunts'
+import { changeMiniWindow, useMiniWindow } from '../../lib/miniWindow'
 import { BackLink } from '../dex/tabs/parts'
+import { MiniHunt } from './MiniHunt'
 import { gameName } from '../../components/HuntCard'
 
 /** O cronômetro é gravado a cada 30 s enquanto corre, ao pausar e ao sair da página. */
@@ -39,6 +41,7 @@ export default function HuntCounter() {
   const toast = useToast()
   const navigate = useNavigate()
   const mobile = useIsMobile()
+  const mini = useMiniWindow()
   const id = useParams().id ?? ''
   const [hunt, setHunt] = useState<Hunt | null>(null)
   const [loadError, setLoadError] = useState<ApiError | Error | null>(null)
@@ -151,10 +154,19 @@ export default function HuntCounter() {
   // Com o atalho global ligado, a tecla chega pelo servidor (também com a janela na frente): o atalho da janela sai
   // para não contar duas vezes.
   const globalKeys = globalActive(hotkeys)
-  const windowKeys = active && !mobile && !confirm && !globalKeys
+  // A mini janela é estreita como um celular, mas tem teclado: os atalhos continuam valendo nela.
+  const windowKeys = active && (!mobile || mini.on) && !confirm && !globalKeys
   useHotkey(windowKeys ? hotkeys.increment : null, () => increment(step))
   useHotkey(windowKeys ? hotkeys.decrement : null, () => increment(-step))
   useGlobalHotkeyEvents(globalKeys && active, (delta) => increment(delta * step), () => !confirm && !modalOpen())
+
+  // Mini janela (só na janela do PC): o servidor precisa saber que há uma hunt em andamento na tela para encolher a
+  // janela ao minimizar; ao sair da tela ou terminar a hunt, a janela volta ao normal.
+  useEffect(() => {
+    if (!mini.supported || !active) return
+    void changeMiniWindow({ huntOpen: true })
+    return () => void changeMiniWindow({ huntOpen: false, on: false })
+  }, [mini.supported, active])
 
   const method = useMemo(
     () => games.data?.find((g) => g.gameKey === hunt?.gameKey)?.methods.find((m) => m.id === hunt?.methodId) ?? null,
@@ -233,6 +245,19 @@ export default function HuntCounter() {
   const keyNames = t('hunt.hotkeys.keyNames', { returnObjects: true }) as Record<string, string>
   const endedAt = hunt.endedAt ? new Date(hunt.endedAt).toLocaleDateString(lang) : ''
 
+  if (mini.on && active)
+    return (
+      <MiniHunt
+        hunt={hunt}
+        name={name}
+        count={count}
+        step={step}
+        seconds={elapsed()}
+        onIncrement={increment}
+        onExpand={() => void changeMiniWindow({ on: false })}
+      />
+    )
+
   // Modificadores ligados (badges) e os guiados pelo contador (degrau atual).
   const modifierBadges = (method?.modifiers ?? [])
     .filter((m) => !m.counter)
@@ -265,6 +290,17 @@ export default function HuntCounter() {
             </div>
           )}
         </div>
+        {mini.supported && active && (
+          <Button
+            variant="secondary"
+            size="sm"
+            icon="picture_in_picture_alt"
+            title={t('hunt.mini.help')}
+            onClick={() => void changeMiniWindow({ on: true })}
+          >
+            {t('hunt.mini.open')}
+          </Button>
+        )}
       </div>
 
       {hunt.endedAt && (

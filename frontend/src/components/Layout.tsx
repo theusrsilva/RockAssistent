@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router'
 import { api } from '../lib/api'
+import { changeMiniWindow, miniWindowChanged, useMiniWindow } from '../lib/miniWindow'
 import { useAuth } from '../lib/auth'
 import { requiredKeys, useConnection } from '../lib/connection'
 import { useScrollRestoration } from '../lib/scrollRestoration'
@@ -76,7 +77,9 @@ export function Layout({ children }: { children: ReactNode }) {
   useEffect(() => {
     window.external?.receiveMessage?.((message: string) => {
       try {
-        if ((JSON.parse(message) as { type?: string }).type === 'close_requested') setCloseRequested(true)
+        const parsed = JSON.parse(message) as { type?: string; on?: boolean }
+        if (parsed.type === 'close_requested') setCloseRequested(true)
+        if (parsed.type === 'mini_window') miniWindowChanged(parsed.on === true)
       } catch {
         // mensagem desconhecida
       }
@@ -108,12 +111,21 @@ export function Layout({ children }: { children: ReactNode }) {
     }
   }
 
+  // Mini janela do Contador Hunt: só a tela da hunt, sem menu. Fora de uma hunt ela não faz sentido: volta ao normal.
+  const mini = useMiniWindow()
+  const onHunt = /^\/hunt\/[^/]+$/.test(location.pathname)
+  useEffect(() => {
+    if (mini.on && !onHunt) void changeMiniWindow({ on: false })
+  }, [mini.on, onHunt])
+
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
   const dot = status.ready ? 'bg-ok' : 'bg-warn'
   const themeIcon = theme === 'dark' ? 'dark_mode' : 'light_mode'
 
   const sideLink = ({ isActive }: { isActive: boolean }) =>
     `flex h-[42px] items-center gap-3 rounded-lg px-3 text-[15px] ${isActive ? 'bg-side-active font-bold text-side-ink' : 'font-medium text-side-muted hover:text-side-ink'}`
+
+  if (mini.on && onHunt) return <div className="h-full overflow-hidden bg-bg text-ink">{children}</div>
 
   return (
     <div className="flex h-full min-h-[560px] bg-bg text-ink">
