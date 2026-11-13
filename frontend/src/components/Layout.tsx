@@ -125,11 +125,13 @@ export function Layout({ children }: { children: ReactNode }) {
   const sideLink = ({ isActive }: { isActive: boolean }) =>
     `flex h-[42px] items-center gap-3 rounded-lg px-3 text-[15px] ${isActive ? 'bg-side-active font-bold text-side-ink' : 'font-medium text-side-muted hover:text-side-ink'}`
 
-  if (mini.on && onHunt) return <div className="h-full overflow-hidden bg-bg text-ink">{children}</div>
+  // Na mini janela somem o menu e as barras, mas {children} fica no mesmo lugar da árvore: se a tela da hunt fosse
+  // remontada ao ligar, a saída dela desligaria a mini janela na hora.
+  const bare = mini.on && onHunt
 
   return (
-    <div className="flex h-full min-h-[560px] bg-bg text-ink">
-      {!mobile && (
+    <div className={`flex h-full bg-bg text-ink ${bare ? 'overflow-hidden' : 'min-h-[560px]'}`}>
+      {!mobile && !bare && (
         <aside className="flex w-[232px] shrink-0 flex-col border-r border-side-line bg-side px-3 py-[18px] text-side-ink">
           <div className="flex items-center gap-2.5 px-2 pt-1 pb-[22px]">
             <Logo />
@@ -199,8 +201,8 @@ export function Layout({ children }: { children: ReactNode }) {
         </aside>
       )}
 
-      <main ref={mainRef} className="relative flex min-w-0 flex-1 flex-col overflow-auto">
-        {mobile && (
+      <main ref={mainRef} className={`relative flex min-w-0 flex-1 flex-col ${bare ? 'overflow-hidden' : 'overflow-auto'}`}>
+        {mobile && !bare && (
           <header className="sticky top-0 z-30 flex h-14 shrink-0 items-center gap-2.5 bg-side px-3.5 text-side-ink">
             <Logo size={26} />
             <div className="flex-1 font-logo text-lg font-bold">{t('app.name')}</div>
@@ -223,9 +225,11 @@ export function Layout({ children }: { children: ReactNode }) {
           </header>
         )}
 
-        <div className="mx-auto w-full max-w-[1180px] px-3.5 pt-4 pb-6 md:px-8 md:pt-7 md:pb-12">{children}</div>
+        <div className={bare ? 'min-h-0 w-full flex-1' : 'mx-auto w-full max-w-[1180px] px-3.5 pt-4 pb-6 md:px-8 md:pt-7 md:pb-12'}>
+          {children}
+        </div>
 
-        {mobile && (
+        {mobile && !bare && (
           <nav className="sticky bottom-0 z-30 mt-auto flex h-16 shrink-0 border-t border-line bg-surface pb-[env(safe-area-inset-bottom)]">
             {tabLinks.map((l) => (
               <NavLink key={l.to} to={l.to} end={l.end} className="flex-1">
@@ -244,7 +248,7 @@ export function Layout({ children }: { children: ReactNode }) {
         )}
       </main>
 
-      {mobile && moreOpen && (
+      {mobile && moreOpen && !bare && (
         <div className="fixed inset-0 z-45 flex items-end bg-black/40" onClick={() => setMoreOpen(false)}>
           <div
             className="flex w-full flex-col gap-0.5 rounded-t-[18px] bg-surface px-3 pt-2.5 pb-[calc(18px+env(safe-area-inset-bottom))]"

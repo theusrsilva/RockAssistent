@@ -161,12 +161,17 @@ export default function HuntCounter() {
   useGlobalHotkeyEvents(globalKeys && active, (delta) => increment(delta * step), () => !confirm && !modalOpen())
 
   // Mini janela (só na janela do PC): o servidor precisa saber que há uma hunt em andamento na tela para encolher a
-  // janela ao minimizar; ao sair da tela ou terminar a hunt, a janela volta ao normal.
+  // janela ao minimizar. Sair da tela só avisa que a hunt fechou: quem desliga a mini janela fora de uma hunt é o
+  // Layout, e aqui só quando a hunt termina (uma remontagem desta tela não pode desligá-la).
   useEffect(() => {
     if (!mini.supported || !active) return
     void changeMiniWindow({ huntOpen: true })
-    return () => void changeMiniWindow({ huntOpen: false, on: false })
+    return () => void changeMiniWindow({ huntOpen: false })
   }, [mini.supported, active])
+  const ended = !!hunt?.endedAt
+  useEffect(() => {
+    if (mini.on && ended) void changeMiniWindow({ on: false })
+  }, [mini.on, ended])
 
   const method = useMemo(
     () => games.data?.find((g) => g.gameKey === hunt?.gameKey)?.methods.find((m) => m.id === hunt?.methodId) ?? null,
