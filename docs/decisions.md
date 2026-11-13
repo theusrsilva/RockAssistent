@@ -1358,6 +1358,10 @@ desenvolvedor da Apple nem notarização); só **Apple Silicon** (M1 ou mais nov
 - **CI:** job `macos` no `macos-15` do GitHub: pacote, testes .NET, fumaça (`scripts/smoke-macos.sh`: monta o `.dmg`,
   confere a assinatura, roda sem janela com uma pasta pessoal temporária e confere a API, o pokeldn embutido e a pasta
   de dados) e o `.dmg` entra no Release e no SHA256SUMS.
+  Desde 13/11/2026 o Release não espera o Mac: o job `release` publica com o Linux e o Windows, e o `release-macos`
+  (depois do `release` e do `macos`) sobe o `.dmg` e regrava o `SHA256SUMS` com a linha dele. Os Macs do GitHub às
+  vezes não atendem ("job was not acquired by Runner", v02.04.00 e v02.07.00) e isso segurava o Release inteiro; agora
+  basta refazer os jobs que falharam. Até o `.dmg` chegar, quem está no Mac vê que o Release não tem o arquivo dele.
 - **Não verificado:** nada disso rodou num Mac ainda (nem a janela do Photino com o WebKit do macOS, o ESP32, o
   Gatekeeper com o app ad-hoc, a atualização, o modo servidor nem o `ioreg`). O primeiro teste de verdade é o CI
   `macos` e depois o roteiro de [docs/macos-teste.md](macos-teste.md).

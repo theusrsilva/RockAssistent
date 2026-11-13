@@ -32,6 +32,7 @@ local.
   RockAssistent e clique em **Abrir Mesmo Assim** (o Mac pede a sua senha). Isso só é preciso uma vez. Abra o app
   pela pasta **Aplicativos**, não de dentro do disco, para ele conseguir se atualizar sozinho. No Mac, o rádio é
   sempre um **ESP32** ligado no USB, e o atalho global do Contador Hunt ainda não funciona (use o atalho da janela).
+  O arquivo do Mac entra na lista alguns minutos depois dos outros: se ele ainda não apareceu, volte daqui a pouco.
 - **Tem o TradeRock instalado?** As versões antigas, de antes da troca de nome, não acham mais a atualização sozinhas.
   Baixe o RockAssistent uma vez por esta página e instale por cima: seus Pokémon, contas e chaves continuam. Depois
   disso, ele volta a se atualizar sozinho.
