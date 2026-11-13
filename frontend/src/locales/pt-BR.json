@@ -2878,6 +2878,13 @@
       "hunt_not_found": "Esta hunt não existe mais.",
       "hunt_finished": "Esta hunt já terminou."
     },
+    "mini": {
+      "open": "Mini janela",
+      "expand": "Voltar ao tamanho normal",
+      "help": "Encolhe a janela e a deixa sempre na frente, só com o contador.",
+      "onMinimize": "Ao minimizar com uma hunt aberta, virar mini janela",
+      "onMinimizeHelp": "A janela volta pequena, sempre na frente das outras, só com o contador. Ela lembra onde você a deixou. Também dá para abrir pelo botão Mini janela na tela da hunt."
+    },
     "hotkeys": {
       "title": "Atalhos do Contador Hunt",
       "sub": "Valem com a página do contador aberta e a janela na frente. Fora de campos de texto.",

@@ -1530,3 +1530,28 @@ errados nas Gen 5 e 6.
 [data-doubts.md](superpowers/data-doubts.md). Os Mirage Spots do ORAS continuam do PokeAPI (por ilha). Flabébé, Floette,
 Shellos, Deerling e Sawsbuck saem sem cor ou estação (forma 0). Gen 1 a 4, Let's Go e SwSh continuam só com o PokeAPI.
 Nenhuma tela foi vista num navegador.
+
+
+## D40. Contador Hunt: mini janela
+
+**Pedido do autor.** Com uma hunt aberta, ao minimizar o app, ficar uma tela pequena por cima das outras com os dados da
+hunt, como a mini janela de vídeo.
+
+**Decisão.**
+
+- **É a própria janela encolhida**, não uma segunda: o Photino 4.0.16 deixa mudar tamanho, posição, tamanho mínimo e
+  "sempre na frente" (`Size`, `Location`, `MinSize`, `Topmost`) e avisa ao minimizar (`RegisterMinimizedHandler`); uma
+  segunda janela é mais arriscada nele. A barra de título fica: o Photino não deixa tirá-la depois de a janela existir.
+- **Como entra:** o botão "Mini janela" na tela da hunt, ou minimizar com uma hunt em andamento na tela (opção nas
+  Configurações, ligada por padrão). A tela avisa o servidor quando uma hunt em andamento abre ou fecha.
+- **O que mostra:** sprite, nome, contador, somar e tirar (com o "Somar por vez"), chance, chance acumulada e tempo. Os
+  atalhos de teclado continuam valendo.
+- **Como sai:** o botão do canto, sair da tela da hunt ou terminar a hunt. Voltam o tamanho, a posição e o maximizado de
+  antes; a posição da mini janela fica guardada e vale na próxima vez (se ainda couber na tela; senão, canto inferior
+  direito).
+- **Só na janela do PC.** No navegador, no celular e pela rede o botão e a opção não aparecem
+  (`GET/PUT /api/app/mini-window`, `WindowBridge.SetMiniAsync`, `MiniWindow`).
+
+**Limites.** Nada disto foi visto numa janela de verdade: só as contas de tamanho e posição e a API sem janela têm
+teste. O tamanho usa o DPI da tela só no Windows (suposição de que o Photino conta em pixels físicos lá). O "sempre na
+frente" no Linux (WebKitGTK) e no Mac nunca foi testado.

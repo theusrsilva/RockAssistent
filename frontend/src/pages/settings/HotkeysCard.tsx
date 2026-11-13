@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, Callout, Toggle, useToast } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
+import { changeMiniWindow, useMiniWindow } from '../../lib/miniWindow'
 import { DEFAULT_HOTKEYS, comboFromEvent, formatCombo, globalTextKeyProblem, type HotkeySettings } from '../../lib/hotkeys'
 
 type Which = 'increment' | 'decrement'
@@ -26,6 +27,7 @@ const KNOWN_REASONS = ['wayland', 'no_x11', 'in_use', 'unsupported_os', 'macos',
  * segundo plano) só aparece na janela do PC; sem suporte do sistema, o motivo fica no lugar do botão.
  */
 export function HotkeysCard() {
+  const mini = useMiniWindow()
   const { t } = useTranslation()
   const toast = useToast()
   const [keys, setKeys] = useState<HotkeySettings | null>(null)
@@ -160,6 +162,13 @@ export function HotkeysCard() {
               {KNOWN_REASONS.includes(keys.reason) ? t(`hunt.hotkeys.global.reasons.${keys.reason}`) : keys.reason}
             </p>
           )}
+        </div>
+      )}
+
+      {mini.supported && (
+        <div className="flex flex-col gap-1 border-t border-line pt-3">
+          <Toggle on={mini.onMinimize} onChange={(on) => void changeMiniWindow({ onMinimize: on })} label={t('hunt.mini.onMinimize')} />
+          <p className="text-[12.5px] text-muted">{t('hunt.mini.onMinimizeHelp')}</p>
         </div>
       )}
 

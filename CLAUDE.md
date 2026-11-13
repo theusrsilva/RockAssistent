@@ -6,7 +6,7 @@ do Switch via wireless local (LDN). O nome visível é **RockAssistent**; namesp
 `traderock`, worker e pasta de dados continuam **TradeRock** (D33). Especificação original da troca:
 [docs/spec.md](docs/spec.md) (o projeto se chamava "FRLG Trade Studio"); do RockAssistent:
 [docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md).
-Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D39).
+Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D40).
 
 ## Regras de trabalho (pedidas pelo autor, valem sempre)
 
@@ -110,6 +110,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D39).
 | 25 | Pokédex: a lista continua sozinha ao descer; formas regionais em cartões próprios e "Outras formas" opcionais; coleção "tenho" e "tenho shiny" por linha, com visão geral e por jogo, o cofre contando sozinho (opção, reconhecendo forma e gênero) e progresso e filtro na lista; formas cosméticas e fêmeas diferentes na página da espécie e na lista; ordem das formas corrigida (`DexCollectionStore`, `DexMark`, migration `DexMarks`, `GET/PUT /api/dex/collection`) (D38) | feita, **telas sem navegador** |
 | 26 | Pokédex: importar marcações da coleção de um arquivo ou texto exportado (lista de living dex do autor): soma à visão aberta, ignora o que a lista não tem (`DexCollectionStore.ImportAsync`, `POST /api/dex/collection/import`, botão "Importar marcações") | feita, **build e testes do .NET não rodados** (sem SDK na sessão); **telas sem navegador** |
 | 27 | Encontros completos: arquivos próprios do ORAS, BW, B2W2, XY, SM e USUM pelo Serebii (conferidos com o PKHeX), juntados com o PokeAPI por área; DexNav, Swarms, White Forest e Poké Pelago; chances do HGSS somadas sem "rádio desligado" (D39) | feita |
+| 28 | Contador Hunt: seletor "Somar por vez" (1 a 10, PR #32) e mini janela (a janela encolhe e fica sempre na frente com o contador; botão na hunt e ao minimizar; `MiniWindow`, `WindowBridge.SetMiniAsync`, `GET/PUT /api/app/mini-window`) (D40) | feita, **mini janela nunca vista numa janela de verdade** |
 
 As entregas até a 24 estão na `main` (até o PR #26); a 25 espera o PR. Dois `scripts/ci.sh` ao mesmo tempo (em worktrees) brigam pelo cache do pokeldn em `~/.cache/traderock/pokeldn-test`: rode um por vez. O primeiro pré-lançamento foi a tag `v0.00.01`; a última tag é a
 `v02.00.02` (09/11/2026). As branches das entregas foram apagadas depois do merge.

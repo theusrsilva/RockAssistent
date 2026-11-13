@@ -2878,6 +2878,13 @@
       "hunt_not_found": "This hunt no longer exists.",
       "hunt_finished": "This hunt has already ended."
     },
+    "mini": {
+      "open": "Mini window",
+      "expand": "Back to normal size",
+      "help": "Shrinks the window and keeps it always on top, with just the counter.",
+      "onMinimize": "When minimizing with a hunt open, switch to the mini window",
+      "onMinimizeHelp": "The window comes back small, always on top of the others, with just the counter. It remembers where you left it. You can also open it with the Mini window button on the hunt screen."
+    },
     "hotkeys": {
       "title": "Hunt Counter shortcuts",
       "sub": "They work with the counter page open and the window in front. Not inside text fields.",
