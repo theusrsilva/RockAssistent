@@ -394,7 +394,7 @@
         "help": "Lets you paste a pokepast.es link in My team: RockAssistent downloads the team text (up to 20 KB). Without it, you can only paste the text."
       },
       "privacy": "Neither sends any data from your computer: RockAssistent only asks for the file and reads the answer. Downloads show in the Logs without the paste address.",
-      "remote": "Can only be turned on or off in the PC window."
+      "remote": "It can only be turned on or off in the PC window or with an administrator account."
     }
   },
   "close": {
@@ -1163,7 +1163,8 @@
     },
     "removeButton": "Remove the network component",
     "confirmRemove": "Remove now",
-    "removeHelp": "Deletes /usr/local/lib/traderock and the polkit policy. The system asks for the administrator password. Your Pokémon and settings are not deleted."
+    "removeHelp": "Deletes /usr/local/lib/traderock and the polkit policy. The system asks for the administrator password. Your Pokémon and settings are not deleted.",
+    "onPc": "This asks for the PC administrator password, so it is done in the RockAssistent window on the computer."
   },
   "about": {
     "title": "About RockAssistent",
@@ -1228,11 +1229,12 @@
     "localOnly": "This screen only opens in the RockAssistent window on the PC itself.",
     "virtual": "virtual (not the home network)",
     "windowsFirewall": "On Windows, the installer already allowed RockAssistent through the Firewall, on \"Private\" networks only. If the phone can't open it, check in Windows Settings → Network & internet that the home network is set to \"Private network\".",
-    "macFirewall": "On a Mac, if the firewall is on, macOS asks the first time whether RockAssistent may accept connections: click Allow. You can check it later in System Settings → Network → Firewall."
+    "macFirewall": "On a Mac, if the firewall is on, macOS asks the first time whether RockAssistent may accept connections: click Allow. You can check it later in System Settings → Network → Firewall.",
+    "turnOffRemote": "Turning it off disconnects everyone, this phone included. To turn it back on, use the PC window."
   },
   "accounts": {
     "title": "Accounts",
-    "intro": "Each account has its own vault, history and \"My trainer\", and starts with the demo Pokémon. The connection setup, prod.keys and the radio stay in this PC window only.",
+    "intro": "Each account has its own vault, history and \"My trainer\", and starts with the demo Pokémon. From the phone, administrator accounts can also use what belongs to the PC (connection, Boxes, Mystery Gift, raids, logs); prod.keys and anything that asks for the PC password stay in this window only.",
     "owner": "PC owner",
     "ownerNoName": "You (this PC)",
     "ownerHint": "No network access",
@@ -1247,7 +1249,7 @@
       "admin": "Administrator"
     },
     "role": "Type",
-    "rolesHelp": "Administrators can also create and manage accounts and remove people from the queue. Users only use their own vault and trade.",
+    "rolesHelp": "Administrators create and manage accounts, can remove people from the queue and, from the phone, use what belongs to the PC: connection, Boxes with the saves, Mystery Gift, raids, logs and updates. Users only use their own vault and trade.",
     "makeAdmin": "Make administrator",
     "makeUser": "Make user",
     "disable": "Disable",
@@ -1410,7 +1412,7 @@
       "activateHelp": "Everything tested. Just turn the radio on for trades.",
       "activated": "Real trades turned on",
       "keysNote": "Only use the keys from your own console. Do not download them or share them. RockAssistent keeps the file just for you and never sends it over the network.",
-      "remote": "The connection is set up on the owner's PC. Here you only follow the status.",
+      "remote": "The connection is set up on the owner's PC, or from the phone with an administrator account. Here you can only follow the status.",
       "fullText": "Full explanation",
       "keysSteps": [
         "On your unlocked Switch, run Lockpick_RCM.",
@@ -1426,7 +1428,8 @@
         "use": "Use the home network",
         "backRadio": "Back to the radio",
         "backDemo": "Back to demo mode"
-      }
+      },
+      "keysOnPc": "prod.keys never goes over the network: to send, replace or remove it, use the RockAssistent window on the PC."
     },
     "settings": {
       "tabs": {
@@ -1864,7 +1867,8 @@
       "update_none": "There is no new version.",
       "busy": "Finish the trade or activity in progress before updating.",
       "update_failed": "The update failed. See the Logs tab in Settings."
-    }
+    },
+    "installOnPc": "Installing asks for the PC administrator password, so it is done in the RockAssistent window on the computer."
   },
   "dex": {
     "title": "Pokédex",
@@ -2351,7 +2355,7 @@
       "saves": "Saves",
       "vault": "App vault"
     },
-    "localOnly": "Saves live in folders on the PC, so they only show up in the RockAssistent window on the computer. On the phone, use the app vault.",
+    "localOnly": "Saves live in folders on the PC, so they only show up in the RockAssistent window on the computer or for administrator accounts. On the phone, use the app vault.",
     "new": "New",
     "newHere": "Create a Pokémon in this slot",
     "newInInbox": "Saved to the vault, but the chosen slot was already taken: it went to the Inbox.",
@@ -2448,7 +2452,8 @@
       "evolve_not_available": "This Pokémon does not evolve by trade.",
       "clone_exists": "An identical copy is already in the vault. Try again.",
       "clone_not_available": "This Pokémon cannot be cloned.",
-      "evolve_wrong_target": "That evolution does not apply to this Pokémon. Open the list again."
+      "evolve_wrong_target": "That evolution does not apply to this Pokémon. Open the list again.",
+      "admin_only": "Only for administrator accounts."
     },
     "foldersCard": {
       "title": "Save folders",
@@ -2506,7 +2511,8 @@
   },
   "gifts": {
     "title": "Mystery Gift",
-    "sub": "Send event gifts to FireRed/LeafGreen and Sword/Shield through the same radio as trading."
+    "sub": "Send event gifts to FireRed/LeafGreen and Sword/Shield through the same radio as trading.",
+    "adminOnly": "Mystery Gift uses the PC radio, so it only opens in the PC window or with an administrator account."
   },
   "nuzlocke": {
     "title": "Nuzlocke",
@@ -3023,7 +3029,7 @@
       "source": "Source: smogon.com/stats (Pokémon Showdown battles, players rated 1760+). Tap a Pokémon to see moves, items, abilities and teammates.",
       "empty": "No statistics yet. To see the most used, turn on \"Smogon usage statistics\" in Settings → Preferences → Optional internet and click Refresh.",
       "emptyEnabled": "No statistics yet. Click Refresh to download this month's file.",
-      "emptyRemote": "No statistics yet. They are downloaded in the PC window.",
+      "emptyRemote": "No statistics yet. The PC owner or an administrator account downloads them.",
       "howToEnable": "The option is off. Turn on \"Smogon usage statistics\" in Optional internet to download.",
       "disabledHint": "The option is off: this is the data from the last download.",
       "openSettings": "Open Settings",
@@ -3041,7 +3047,8 @@
         "local_only": "Downloads only work in the PC window.",
         "network": "Couldn't download. Check the internet and try again.",
         "networkCode": "Couldn't download ({{code}}). Check the internet and try again.",
-        "write_failed": "Downloaded, but couldn't save it in the data folder. Check free space and the folder's permissions."
+        "write_failed": "Downloaded, but couldn't save it in the data folder. Check free space and the folder's permissions.",
+        "admin_only": "Only an administrator account can download."
       }
     },
     "paste": {
@@ -3049,7 +3056,31 @@
       "open": "Open link",
       "opening": "Opening…",
       "disabled": "To paste a link, turn on \"Open pokepast.es links\" in Optional internet.",
-      "remote": "pokepast.es links only open in the PC window. Here, paste the text."
+      "remote": "pokepast.es links only open with optional internet on, from an administrator account. Here, paste the text."
+    }
+  },
+  "closeRemote": {
+    "title": "Close RockAssistent on the PC",
+    "sub": "Closes the app on the computer. A trade in progress is cancelled, and the phone loses the connection.",
+    "button": "Close on the PC",
+    "confirmText": "Close now? It can only be opened again on the PC itself.",
+    "confirm": "Close the app",
+    "done": "Done, RockAssistent is closing on the PC."
+  },
+  "folderBrowser": {
+    "title": "Choose the folder on the PC",
+    "use": "Use this folder",
+    "home": "Home folder",
+    "up": "Up one folder",
+    "empty": "No folders in here.",
+    "truncated": "There are too many folders here; only the first 500 are shown.",
+    "showHidden": "Show hidden folders ({{count}})",
+    "hideHidden": "Hide hidden folders",
+    "typeInstead": "Rather type the path?",
+    "errors": {
+      "folder_missing": "That folder no longer exists.",
+      "folder_denied": "No permission to open that folder.",
+      "folder_invalid": "Invalid path."
     }
   }
 }

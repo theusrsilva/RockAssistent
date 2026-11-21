@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Badge, Button, Callout, Card, Field, HelpTip, inputClass, Modal } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
-import { useAuth } from '../../lib/auth'
+import { useAuth, useIsRemote } from '../../lib/auth'
 import { useAppInfo } from '../../lib/appInfo'
 import type { Account, ServerModeStatus, UserRole } from '../../lib/types'
 
@@ -10,10 +10,15 @@ function errorCode(e: unknown) {
   return e instanceof ApiError && e.code ? e.code : 'unknown'
 }
 
-/** Liga/desliga o modo servidor (só na janela do PC). */
+/**
+ * Liga/desliga o modo servidor. Pelo celular (administradores) só dá para desligar, com confirmação: desligar derruba
+ * todos os logins, inclusive o do próprio celular. Ligar, a interface e a porta ficam na janela do PC.
+ */
 export function ServerModeCard() {
   const { t } = useTranslation()
   const { reload } = useAuth()
+  const remote = useIsRemote()
+  const [confirmOff, setConfirmOff] = useState(false)
   const info = useAppInfo()
   const [status, setStatus] = useState<ServerModeStatus | null>(null)
   const [choice, setChoice] = useState('')
@@ -75,9 +80,23 @@ export function ServerModeCard() {
             <p className="text-muted">
               {t('server.interfaceUsed', { name: status.interface })} · {t('server.sessions', { count: status.sessions })}
             </p>
-            <Button variant="secondary" disabled={busy} onClick={() => void toggle(false)}>
-              {t('server.turnOff')}
-            </Button>
+            {remote && confirmOff ? (
+              <div className="flex flex-col gap-2">
+                <p className="font-semibold text-bad">{t('server.turnOffRemote')}</p>
+                <div className="flex flex-wrap gap-2">
+                  <Button variant="danger" disabled={busy} onClick={() => void toggle(false)}>
+                    {t('server.turnOff')}
+                  </Button>
+                  <Button variant="ghost" onClick={() => setConfirmOff(false)}>
+                    {t('common.cancel')}
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <Button variant="secondary" disabled={busy} onClick={() => (remote ? setConfirmOff(true) : void toggle(false))}>
+                {t('server.turnOff')}
+              </Button>
+            )}
           </div>
         </div>
       ) : (
@@ -275,6 +294,55 @@ export function AccountsCard() {
           {t('accounts.deleteBody')}
         </Modal>
       )}
+    </Card>
+  )
+}
+
+/**
+ * Pelo celular (administradores): fechar o RockAssistent no PC. Uma troca ou atividade em andamento é cancelada, e o
+ * app só volta a abrir no próprio PC.
+ */
+export function CloseAppCard() {
+  const { t } = useTranslation()
+  const [confirm, setConfirm] = useState(false)
+  const [state, setState] = useState<'idle' | 'busy' | 'closed' | 'error'>('idle')
+
+  async function close() {
+    setState('busy')
+    try {
+      await api.post('/api/app/close')
+      setState('closed')
+    } catch {
+      setState('error')
+    }
+  }
+
+  return (
+    <Card className="space-y-3 px-[22px]">
+      <h2 className="text-base font-extrabold">{t('closeRemote.title')}</h2>
+      <p className="text-[13.5px] text-muted">{t('closeRemote.sub')}</p>
+      {state === 'closed' ? (
+        <Callout tone="emerald" icon="check_circle">
+          {t('closeRemote.done')}
+        </Callout>
+      ) : confirm ? (
+        <div className="flex flex-col gap-2">
+          <p className="text-sm font-semibold text-bad">{t('closeRemote.confirmText')}</p>
+          <div className="flex flex-wrap gap-2">
+            <Button variant="danger" disabled={state === 'busy'} onClick={() => void close()}>
+              {t('closeRemote.confirm')}
+            </Button>
+            <Button variant="ghost" onClick={() => setConfirm(false)}>
+              {t('common.cancel')}
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <Button variant="secondary" icon="power_settings_new" className="self-start" onClick={() => setConfirm(true)}>
+          {t('closeRemote.button')}
+        </Button>
+      )}
+      {state === 'error' && <p role="alert" className="text-sm text-bad">{t('common.error')}</p>}
     </Card>
   )
 }

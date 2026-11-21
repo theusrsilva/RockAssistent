@@ -9,13 +9,13 @@ import { trainerNameErrors } from '../lib/trainer'
 import type { GameFamily, MyTrainer, Pokemon, SetupStatus, TradeSettings } from '../lib/types'
 import { useTheme, type ThemeChoice } from '../theme'
 import { AppImageWorkerSettings } from './setup/AppImageWorker'
-import { AccountsCard, ServerModeCard } from './settings/ServerSettings'
+import { AccountsCard, CloseAppCard, ServerModeCard } from './settings/ServerSettings'
 import { ConnectionChecklist } from './settings/ConnectionChecklist'
 import { LogsTab } from './settings/LogsTab'
 import { SaveFoldersCard } from './settings/SaveFoldersCard'
 import { HotkeysCard } from './settings/HotkeysCard'
 import { InternetCard } from './settings/InternetCard'
-import { useAuth } from '../lib/auth'
+import { canUsePc, useAuth, useIsRemote } from '../lib/auth'
 import { useConnection } from '../lib/connection'
 import { useConnectionSummary } from '../components/Layout'
 
@@ -29,14 +29,15 @@ const numberFields: { key: NumberSetting; min: number; max: number; unit: string
   { key: 'totalTimeoutMinutes', min: 1, max: 180, unit: 'ui.settings.unitMin' },
 ]
 
-type Tab = 'conexao' | 'treinador' | 'preferencias' | 'avancado' | 'logs' | 'contas'
+type Tab = 'conexao' | 'treinador' | 'preferencias' | 'avancado' | 'logs'
 
 export default function SettingsPage() {
   const { t } = useTranslation()
   const [params, setParams] = useSearchParams()
   const { me: caller } = useAuth()
-  // Pela rede: status da conexão, "Meu treinador", preferências e (administradores) as contas.
-  const local = caller?.local !== false
+  // Pela rede, contas comuns: status da conexão, "Meu treinador" e preferências. Administradores veem tudo, como na
+  // janela do PC (o que não pode passar pela rede, como enviar o prod.keys, avisa dentro do cartão).
+  const local = canUsePc(caller)
   const status = useConnectionSummary()
   const mobile = useIsMobile()
   const [settings, setSettings] = useState<TradeSettings | null>(null)
@@ -51,7 +52,6 @@ export default function SettingsPage() {
     { key: 'preferencias', label: t('ui.settings.tabs.preferencias'), icon: 'palette' },
     ...(local ? [{ key: 'avancado' as Tab, label: t('ui.settings.tabs.avancado'), icon: 'tune' }] : []),
     ...(local ? [{ key: 'logs' as Tab, label: t('logs.tab'), icon: 'receipt_long' }] : []),
-    ...(!local && caller?.role === 'admin' ? [{ key: 'contas' as Tab, label: t('accounts.title'), icon: 'group' }] : []),
   ]
   const asked = params.get('aba') as Tab | null
   const tab: Tab = tabs.some((x) => x.key === asked) ? asked! : 'conexao'
@@ -71,7 +71,8 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col gap-[18px]">
       <h1 className="font-display text-[23px] font-bold md:text-[28px]">{t('settings.title')}</h1>
-      <div className="flex gap-1 scroll-x border-b border-line" role="tablist">
+      {/* No celular as abas viram pílulas que quebram linha: rolando para o lado, as últimas ficavam escondidas. */}
+      <div className={mobile ? 'flex flex-wrap gap-2' : 'flex gap-1 scroll-x border-b border-line'} role="tablist">
         {tabs.map((x) => (
           <button
             key={x.key}
@@ -79,7 +80,11 @@ export default function SettingsPage() {
             role="tab"
             aria-selected={tab === x.key}
             onClick={() => setParams({ aba: x.key })}
-            className={`-mb-px flex h-[42px] shrink-0 cursor-pointer items-center gap-1.5 border-b-[2.5px] px-3.5 text-[14.5px] font-bold whitespace-nowrap ${tab === x.key ? 'border-accent text-ink' : 'border-transparent text-muted'}`}
+            className={
+              mobile
+                ? `flex h-10 cursor-pointer items-center gap-1.5 rounded-full border px-3.5 text-[14px] font-bold whitespace-nowrap ${tab === x.key ? 'border-accent bg-accent-soft text-ink' : 'border-line bg-surface text-muted'}`
+                : `-mb-px flex h-[42px] shrink-0 cursor-pointer items-center gap-1.5 border-b-[2.5px] px-3.5 text-[14.5px] font-bold whitespace-nowrap ${tab === x.key ? 'border-accent text-ink' : 'border-transparent text-muted'}`
+            }
           >
             <Icon name={x.icon} className="text-[19px]" />
             {x.label}
@@ -93,17 +98,16 @@ export default function SettingsPage() {
       {tab === 'preferencias' && (
         <div className="flex flex-col gap-4">
           <PreferencesTab settings={settings} onSave={saveSettings} />
-          {/* Pastas de saves da tela Boxes: caminhos do PC, só na janela local. */}
+          {/* Pastas de saves da tela Boxes: caminhos do PC (pela rede, só administradores, pelo navegador de pastas). */}
           {local && <SaveFoldersCard />}
           {/* Atalhos do Contador Hunt: no celular não há teclado, então o cartão some. */}
           {!mobile && <HotkeysCard />}
-          {/* Internet opcional (D32): mostra o estado para todos; ligar e desligar só na janela do PC. */}
+          {/* Internet opcional (D32): mostra o estado para todos; ligar e desligar, janela do PC ou administradores. */}
           <InternetCard />
         </div>
       )}
       {tab === 'avancado' && local && <AdvancedTab settings={settings} onSave={saveSettings} />}
       {tab === 'logs' && local && <LogsTab />}
-      {tab === 'contas' && <AccountsCard />}
     </div>
   )
 }
@@ -321,6 +325,7 @@ function AdvancedTab({ settings, onSave }: { settings: TradeSettings | null; onS
   const [scenarios, setScenarios] = useState<{ scenarios: string[]; current: string | null } | null>(null)
   const [confirmReset, setConfirmReset] = useState(false)
   const isAdmin = useAuth().me?.role === 'admin'
+  const remote = useIsRemote()
 
   useEffect(() => setDraft(settings), [settings])
   useEffect(() => {
@@ -420,6 +425,7 @@ function AdvancedTab({ settings, onSave }: { settings: TradeSettings | null; onS
 
       <ServerModeCard />
       {isAdmin && <AccountsCard />}
+      {remote && <CloseAppCard />}
 
       <Panel>
         <div className="flex flex-wrap items-center gap-3.5">

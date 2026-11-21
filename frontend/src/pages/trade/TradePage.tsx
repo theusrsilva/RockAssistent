@@ -10,7 +10,7 @@ import { useConnection } from '../../lib/connection'
 import { gameByFamily, gameOf, linkCodeErrors, tradeFamilyOf, versionName } from '../../lib/games'
 import { DEFAULT_TRAINER, trainerNameErrors } from '../../lib/trainer'
 import type { MyTrainer, Pokemon, QueuedTrade, StartTrade, TradeGame, TradeQueue, TradeSession, TradeSettings } from '../../lib/types'
-import { useAuth } from '../../lib/auth'
+import { canUsePc, useAuth } from '../../lib/auth'
 import { takeTradeRequest } from '../../lib/tradeRequest'
 import { QueueList, QueueStep } from './QueueStep'
 import { useTradeSession } from '../../lib/useTradeSession'
@@ -231,7 +231,7 @@ export default function TradePage() {
           <span className="mr-2">
             <b>{t('demo.badge')}.</b> {t('ui.trade.demoBanner')}
           </span>
-          {!remote && (
+          {canUsePc(me) && (
             <button type="button" onClick={() => navigate('/configuracoes?aba=conexao')} className="cursor-pointer font-bold underline">
               {t('ui.trade.setupConnection')}
             </button>

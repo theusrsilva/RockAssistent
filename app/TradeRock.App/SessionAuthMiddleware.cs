@@ -127,6 +127,11 @@ public sealed class SessionAuthMiddleware(RequestDelegate next, SessionToken tok
             await DenyAsync(context, StatusCodes.Status403Forbidden, "admin_only");
             return;
         }
+        if (AccessPolicy.IsOwnerOnly(request) && user.Id != OwnerScope.LocalOwner)
+        {
+            await DenyAsync(context, StatusCodes.Status403Forbidden, "owner_only");
+            return;
+        }
 
         using (OwnerScope.Use(user.Id))
             await next(context);

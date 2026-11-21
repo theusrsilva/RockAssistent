@@ -140,6 +140,10 @@ public static class ServiceSetup
             {
                 if (!context.RequestServices.GetRequiredService<ServerMode>().IsLanRequest(context))
                     return RateLimitPartition.GetNoLimiter("local");
+                // Os arquivos do app e os sprites são estáticos (os sprites com cache de um ano): a Pokédex no celular
+                // pede dezenas por tela e não deve esbarrar no limite. O limite vale para o resto da API.
+                if (IsStaticRequest(context.Request))
+                    return RateLimitPartition.GetNoLimiter("static");
                 var address = context.Connection.RemoteIpAddress?.ToString() ?? "?";
                 return RateLimitPartition.GetFixedWindowLimiter(address, _ => new FixedWindowRateLimiterOptions
                 {
@@ -151,6 +155,11 @@ public static class ServiceSetup
     }
 
     public const int LanRequestsPerMinute = 600;
+
+    /// <summary>Fora do limite de requisições pela rede: a página (arquivos do frontend) e os sprites (GET).</summary>
+    public static bool IsStaticRequest(HttpRequest request) =>
+        (HttpMethods.IsGet(request.Method) || HttpMethods.IsHead(request.Method))
+        && (!request.Path.StartsWithSegments("/api") || request.Path.StartsWithSegments("/api/sprites"));
 
     /// <summary>build/worker/stage do repositório (scripts/build-worker.sh), para rodar do código-fonte.</summary>
     private static string? FindDevStage()

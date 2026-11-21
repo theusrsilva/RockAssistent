@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router'
 import { useConnectionSummary } from '../components/Layout'
 import { Badge, Button, Callout, Icon, inputClass } from '../components/ui'
 import { api, spriteUrl } from '../lib/api'
-import { useAuth } from '../lib/auth'
+import { canUsePc, useAuth } from '../lib/auth'
 import { connectionKeys, requiredKeys, useConnection } from '../lib/connection'
 import { useApiGet } from '../lib/dex'
 import { guideIndex } from '../lib/guides'
@@ -22,6 +22,8 @@ export default function HomePage() {
   const navigate = useNavigate()
   const { me } = useAuth()
   const remote = me?.local === false
+  // Conexão, atualização e Mystery Gift: janela do PC ou administradores pelo celular.
+  const pc = canUsePc(me)
   const { items, readyCount } = useConnection()
   const status = useConnectionSummary()
   const [session, setSession] = useState<TradeSession | null>(null)
@@ -78,7 +80,7 @@ export default function HomePage() {
         <p className="mt-1 text-muted">{t('ui.home.intro')}</p>
       </div>
 
-      {!remote && <UpdateNotice />}
+      {pc && <UpdateNotice />}
 
       {session?.status === 'running' && (
         <Callout tone="sky" icon="sync">
@@ -101,16 +103,16 @@ export default function HomePage() {
               <div className="font-display text-[21px] leading-tight font-bold">
                 {status.ready
                   ? t('ui.home.allReady')
-                  : remote
+                  : !pc
                     ? t('ui.status.demo')
                     : status.missing === 0
                       ? t('ui.home.activateTitle')
                       : t('ui.home.missing', { count: status.missing })}
               </div>
-              <div className="text-sm text-muted">{status.ready ? t('ui.home.readySub') : status.missing === 0 && !remote ? t('ui.conn.activateHelp') : t('ui.home.demoSub')}</div>
+              <div className="text-sm text-muted">{status.ready ? t('ui.home.readySub') : status.missing === 0 && pc ? t('ui.conn.activateHelp') : t('ui.home.demoSub')}</div>
             </div>
           </div>
-          {!remote && (
+          {pc && (
             <>
               <div className="h-2 overflow-hidden rounded bg-surface2">
                 <div className={`h-full rounded ${status.ready ? 'bg-ok' : 'bg-warn'}`} style={{ width: `${(readyCount / requiredKeys.length) * 100}%` }} />
@@ -129,7 +131,7 @@ export default function HomePage() {
             </>
           )}
           <div className="flex flex-wrap gap-2.5">
-            {!status.ready && !remote && (
+            {!status.ready && pc && (
               <Button size="lg" iconAfter="arrow_forward" onClick={() => navigate('/configuracoes?aba=conexao')}>
                 {t('ui.home.fixNow')}
               </Button>
@@ -171,7 +173,7 @@ export default function HomePage() {
       <div className="grid gap-[18px] [grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))]">
         <DexSearch />
         <GuideOfTheDay />
-        {!remote && (
+        {pc && (
           <Link to="/mystery-gift" className="flex items-start gap-3.5 rounded-xl border border-line bg-surface p-5 hover:border-accent">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
               <Icon name="redeem" className="text-[26px]" />

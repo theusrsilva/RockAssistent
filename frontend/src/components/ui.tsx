@@ -253,7 +253,7 @@ export function HelpTip({ children, label = '?' }: { children: ReactNode; label?
         }}
         onFocus={() => !mobile && setOpen(true)}
         onBlur={() => !mobile && setOpen(false)}
-        className="flex h-[22px] w-[22px] cursor-pointer items-center justify-center rounded-full border border-line bg-surface p-0 text-xs font-extrabold text-muted"
+        className="touch-hit flex h-[22px] w-[22px] cursor-pointer items-center justify-center rounded-full border border-line bg-surface p-0 text-xs font-extrabold text-muted"
       >
         ?
       </button>

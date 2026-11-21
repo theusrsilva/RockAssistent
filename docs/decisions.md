@@ -468,7 +468,7 @@ Com o app aberto, a mesma interface é servida para a rede da casa (celular, out
     SameSite=Strict, só na memória, 12 h sem uso).
   - Toda alteração pela rede exige o cabeçalho anti-CSRF `X-TradeRock-CSRF` (token da sessão, recebido
     em `/api/auth/me` e no login) e, se o navegador mandar `Origin`, ele precisa ser o próprio endereço.
-- **Só na janela local**, mesmo para administradores pela rede: assistente (inclui o `prod.keys`, que
+- **Só na janela local** (mudou na D41: administradores pela rede usam quase tudo isto), mesmo para administradores pela rede: assistente (inclui o `prod.keys`, que
   nunca trafega pela rede), worker, liga/desliga do modo servidor, fechar o app, diálogos nativos
   (abririam no PC), escolha do motor e configurações de troca. Pela rede, `/api/health` responde
   `window: false`.
@@ -945,7 +945,7 @@ o ajudante do pokeldn; nada gravado na placa; sem backup nem restauração do sa
 - **Teste novo** (`ServerModeTests.Conta_pela_rede_troca_com_o_scarlet_com_o_proprio_treinador`): uma conta pela
   rede envia um .pk9, grava o próprio treinador do SV, troca com o Scarlet pela fila e recebe no próprio cofre; a
   outra conta não vê o recebido nem o treinador.
-- **Outras atividades só na janela do PC** (`/api/activities` em `Caller.IsLocalOnly`). Elas não passam pela fila:
+- **Outras atividades só na janela do PC** (`/api/activities` em `Caller.IsLocalOnly`; desde a D41, também administradores pelo celular). Elas não passam pela fila:
   quem está no PC escolhe o presente ou a raid e acompanha. Liberar pela rede pediria uma fila de atividades; fica
   para quando o autor quiser.
 - **Não verificado:** com um celular de verdade (como a Entrega 10).
@@ -1564,3 +1564,47 @@ fechou.
 **Limites.** Nada disto foi visto numa janela de verdade: só as contas de tamanho e posição e a API sem janela têm
 teste. O tamanho usa o DPI da tela só no Windows (suposição de que o Photino conta em pixels físicos lá). O "sempre na
 frente" no Linux (WebKitGTK) e no Mac nunca foi testado.
+
+## D41. Tudo pelo celular (modo servidor)
+
+**Pedido do autor (21/11/2026).** Usar tudo do RockAssistent pelo celular na rede de casa, não só as trocas, "da forma
+mais responsiva possível". O autor deixou as escolhas comigo.
+
+**Decisão.**
+
+- **Três níveis pela rede** (`AccessPolicy`, `SessionAuthMiddleware`). A janela do PC continua podendo tudo.
+  - **Qualquer conta:** o que já valia (cofre próprio, trocas pela fila, Pokédex, Guias, Hunt, Nuzlocke, Histórico).
+  - **Administradores** (`admin_only`): conexão (`/api/setup`, menos enviar e apagar o prod.keys), estado do worker,
+    motor e configurações de troca, Mystery Gift, raids e Union Circle (`/api/activities`: só começam com o rádio
+    livre, como antes), Boxes com os saves das pastas do PC e as pastas, logs, procurar atualização, internet opcional
+    (ligar, baixar o Smogon, abrir links do pokepast.es), contas, desligar o modo servidor e fechar o app.
+  - **Só a conta do dono do PC** (`owner_only`): o fluxo das teclas do atalho global do Contador Hunt
+    (`/api/hunts/events`), que somam na hunt dele. O celular não assina esse fluxo: o PC já soma, e dois assinantes
+    contariam duas vezes.
+- **Continua só na janela do PC** (`local_only`), mesmo para administradores:
+  - enviar ou apagar o **prod.keys** (regra de segurança: nunca passa pela rede, e o modo servidor é HTTP);
+  - **instalar ou remover o worker** e **instalar a atualização**: pedem a senha de administrador na tela do PC
+    (pkexec, UAC), onde não há ninguém;
+  - os **diálogos nativos** (`/api/saves/open`, `/api/saves/open-folder`, `/api/vault/export/native`): pela rede a tela
+    já usa upload e download;
+  - **ligar o modo servidor** ou trocar a interface e a porta. Desligar pelo celular pede confirmação (derruba todos
+    os logins, inclusive o do celular).
+- **Navegador de pastas do PC** (`GET /api/fs/folders?path=`, `FolderBrowser`): no lugar do diálogo nativo, para
+  escolher as pastas de saves pelo celular (e no app aberto no navegador). Lista só pastas, nunca arquivos; as ocultas
+  vão para o fim e aparecem num clique; até 500 por pasta. Atalhos: pasta pessoal e a raiz (no Windows, as unidades).
+- **Fechar o app pelo celular** (Configurações → Avançado): cancela a troca e fecha a janela; sem janela, para o
+  servidor depois de responder.
+- **Limite de requisições:** a página e os sprites (`GET`, fora de `/api` ou em `/api/sprites`) não contam mais nos
+  600 por minuto. Navegando pelo celular a 360 px, o roteiro de telas passou do limite e as telas começaram a receber
+  429; os sprites já têm cache de um ano. O resto da API continua no limite.
+- **Telas** (`usePcAccess`/`canUsePc` em `lib/auth.tsx`). As telas que olhavam "pela rede" para esconder
+  o que é do PC agora olham "tem acesso ao PC" (janela ou administrador). O que nunca passa pela rede mostra o aviso
+  "faça no PC" no lugar do botão (prod.keys, instalar o worker, instalar a atualização).
+- **Responsividade.** Todas as telas foram abertas num Chromium em 390 e 360 px, pelo endereço da rede e com login:
+  nenhuma rola para o lado. As abas das Configurações viram pílulas que quebram linha no celular (com 5 abas, as
+  últimas ficavam escondidas na rolagem). No toque, o "?" de ajuda e as marcações da Pokédex ganham 6 px de área de
+  toque para cada lado sem mudar o desenho (`touch-hit`).
+
+**Limites.** Visto só no Chromium emulando um celular (toque e largura), num container sem rádio: o Mystery Gift foi
+até "Esperando o console" com o motor de simulação. Celular de verdade, Safari e as ações com rádio real pelo celular
+nunca foram testados.

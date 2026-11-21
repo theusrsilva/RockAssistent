@@ -20,7 +20,7 @@ continuam com o nome antigo.
 | **VGC** | Times do formato atual e análise do time. As estatísticas do Smogon só aparecem com a internet opcional ligada |
 | **Troca e atividades** | Troca com FireRed/LeafGreen, Let's Go, Sword/Shield, BDSP, Legends: Arceus, Scarlet/Violet e Legends: Z-A. Também tem Mystery Gift, raids (Max Raid, Dynamax Adventure, Tera Raid) e Union Circle |
 | **Histórico** | Trocas, Mystery Gift, raids e Union Circle numa lista só |
-| **Modo servidor** | Celulares e outros PCs da casa usam o app pelo navegador, com contas e uma fila de trocas |
+| **Modo servidor** | Celulares e outros PCs da casa usam o app pelo navegador, com contas e uma fila de trocas; contas de administrador usam tudo pelo celular (conexão, Boxes, Mystery Gift, raids, logs) |
 
 Tudo funciona offline. A internet é opcional e vem desligada. Quando ligada, ela só busca as estatísticas do
 Smogon, os links do pokepast.es e as atualizações do app no GitHub. Nada sai do seu PC, e não há telemetria.

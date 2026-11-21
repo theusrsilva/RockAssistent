@@ -394,7 +394,7 @@
         "help": "Deixa colar um link do pokepast.es em Minha equipe: o RockAssistent baixa o texto do time (até 20 KB). Sem isso, só dá para colar o texto."
       },
       "privacy": "Nenhuma das duas envia dados do seu computador: o RockAssistent só pede o arquivo e lê a resposta. Os downloads aparecem nos Logs sem o endereço do paste.",
-      "remote": "Só dá para ligar ou desligar na janela do PC."
+      "remote": "Só dá para ligar ou desligar na janela do PC ou com uma conta de administrador."
     }
   },
   "close": {
@@ -1163,7 +1163,8 @@
     },
     "removeButton": "Remover o componente de rede",
     "confirmRemove": "Remover agora",
-    "removeHelp": "Apaga /usr/local/lib/traderock e a política do polkit. O sistema pede a senha de administrador. Seus Pokémon e configurações não são apagados."
+    "removeHelp": "Apaga /usr/local/lib/traderock e a política do polkit. O sistema pede a senha de administrador. Seus Pokémon e configurações não são apagados.",
+    "onPc": "Isso pede a senha de administrador do PC, então é feito na janela do RockAssistent no computador."
   },
   "about": {
     "title": "Sobre o RockAssistent",
@@ -1228,11 +1229,12 @@
     "localOnly": "Esta tela só abre na janela do RockAssistent no próprio PC.",
     "virtual": "virtual (não é a rede da casa)",
     "windowsFirewall": "No Windows, o instalador já liberou o RockAssistent no Firewall, só em redes \"Privadas\". Se o celular não conseguir abrir, confira em Configurações do Windows → Rede e Internet se a rede da casa está como \"Rede privada\".",
-    "macFirewall": "No Mac, se o firewall estiver ligado, o macOS pergunta na primeira vez se o RockAssistent pode aceitar conexões: clique em Permitir. Dá para conferir depois em Ajustes do Sistema → Rede → Firewall."
+    "macFirewall": "No Mac, se o firewall estiver ligado, o macOS pergunta na primeira vez se o RockAssistent pode aceitar conexões: clique em Permitir. Dá para conferir depois em Ajustes do Sistema → Rede → Firewall.",
+    "turnOffRemote": "Desligar desconecta todo mundo, inclusive este celular. Para ligar de novo, só pela janela do PC."
   },
   "accounts": {
     "title": "Contas",
-    "intro": "Cada conta tem o próprio cofre, histórico e \"Meu treinador\", e começa com os Pokémon de demonstração. A configuração da conexão, o prod.keys e o rádio ficam só nesta janela do PC.",
+    "intro": "Cada conta tem o próprio cofre, histórico e \"Meu treinador\", e começa com os Pokémon de demonstração. Pelo celular, contas de administrador também usam o que é do PC (conexão, Boxes, Mystery Gift, raids, logs); o prod.keys e o que pede a senha do PC ficam só nesta janela.",
     "owner": "Dono do PC",
     "ownerNoName": "Você (este PC)",
     "ownerHint": "Sem acesso pela rede",
@@ -1247,7 +1249,7 @@
       "admin": "Administrador"
     },
     "role": "Tipo",
-    "rolesHelp": "Administradores também criam e gerenciam contas e podem tirar pessoas da fila. Usuários só usam o próprio cofre e trocam.",
+    "rolesHelp": "Administradores criam e gerenciam contas, podem tirar pessoas da fila e, pelo celular, mexem no que é do PC: conexão, Boxes com os saves, Mystery Gift, raids, logs e atualização. Usuários só usam o próprio cofre e trocam.",
     "makeAdmin": "Tornar administrador",
     "makeUser": "Tornar usuário",
     "disable": "Desativar",
@@ -1410,7 +1412,7 @@
       "activateHelp": "Tudo testado. Falta só ligar o rádio nas trocas.",
       "activated": "Trocas de verdade ligadas",
       "keysNote": "Use só as chaves do seu próprio console. Não baixe da internet nem compartilhe. O RockAssistent guarda o arquivo só para você e nunca o envia pela rede.",
-      "remote": "A conexão é configurada no PC do dono. Aqui você só acompanha o status.",
+      "remote": "A conexão é configurada no PC do dono, ou pelo celular com uma conta de administrador. Aqui você só acompanha o status.",
       "fullText": "Explicação completa",
       "keysSteps": [
         "No seu Switch desbloqueado, rode o Lockpick_RCM.",
@@ -1426,7 +1428,8 @@
         "use": "Usar a rede de casa",
         "backRadio": "Voltar para o rádio",
         "backDemo": "Voltar para a demonstração"
-      }
+      },
+      "keysOnPc": "O prod.keys nunca passa pela rede: para enviar, trocar ou remover, use a janela do RockAssistent no PC."
     },
     "settings": {
       "tabs": {
@@ -1864,7 +1867,8 @@
       "update_none": "Não há versão nova.",
       "busy": "Termine a troca ou a atividade em andamento antes de atualizar.",
       "update_failed": "A atualização falhou. Veja a aba Logs nas Configurações."
-    }
+    },
+    "installOnPc": "Instalar pede a senha de administrador do PC, então é feito na janela do RockAssistent no computador."
   },
   "dex": {
     "title": "Pokédex",
@@ -2351,7 +2355,7 @@
       "saves": "Saves",
       "vault": "Cofre do app"
     },
-    "localOnly": "Os saves ficam nas pastas do PC, então só aparecem na janela do RockAssistent no computador. Pelo celular, use o cofre do app.",
+    "localOnly": "Os saves ficam nas pastas do PC, então só aparecem na janela do RockAssistent no computador ou para contas de administrador. Pelo celular, use o cofre do app.",
     "new": "Novo",
     "newHere": "Criar um Pokémon nesta posição",
     "newInInbox": "Salvo no cofre, mas a posição escolhida já estava ocupada: ele ficou na Caixa de entrada.",
@@ -2448,7 +2452,8 @@
       "evolve_not_available": "Este Pokémon não evolui por troca.",
       "clone_exists": "Já existe uma cópia igual no cofre. Tente de novo.",
       "clone_not_available": "Não deu para clonar este Pokémon.",
-      "evolve_wrong_target": "Essa evolução não vale para este Pokémon. Abra a lista de novo."
+      "evolve_wrong_target": "Essa evolução não vale para este Pokémon. Abra a lista de novo.",
+      "admin_only": "Só para contas de administrador."
     },
     "foldersCard": {
       "title": "Pastas de saves",
@@ -2506,7 +2511,8 @@
   },
   "gifts": {
     "title": "Mystery Gift",
-    "sub": "Mande presentes de evento para o FireRed/LeafGreen e o Sword/Shield pelo mesmo rádio da troca."
+    "sub": "Mande presentes de evento para o FireRed/LeafGreen e o Sword/Shield pelo mesmo rádio da troca.",
+    "adminOnly": "O Mystery Gift usa o rádio do PC, então só abre na janela do PC ou com uma conta de administrador."
   },
   "nuzlocke": {
     "title": "Nuzlocke",
@@ -3023,7 +3029,7 @@
       "source": "Fonte: smogon.com/stats (batalhas do Pokémon Showdown, jogadores com 1760+). Toque num Pokémon para ver golpes, itens, habilidades e parceiros.",
       "empty": "Ainda não há estatísticas. Para ver os mais usados, ligue \"Estatísticas de uso do Smogon\" em Configurações → Preferências → Internet opcional e clique em Atualizar.",
       "emptyEnabled": "Ainda não há estatísticas. Clique em Atualizar para baixar o arquivo do mês.",
-      "emptyRemote": "Ainda não há estatísticas. Elas são baixadas na janela do PC.",
+      "emptyRemote": "Ainda não há estatísticas. Quem baixa é o dono do PC ou uma conta de administrador.",
       "howToEnable": "A opção está desligada. Ligue \"Estatísticas de uso do Smogon\" em Internet opcional para baixar.",
       "disabledHint": "A opção está desligada: estes são os dados baixados da última vez.",
       "openSettings": "Abrir Configurações",
@@ -3041,7 +3047,8 @@
         "local_only": "Só dá para baixar pela janela do PC.",
         "network": "Não deu para baixar. Confira a internet e tente de novo.",
         "networkCode": "Não deu para baixar ({{code}}). Confira a internet e tente de novo.",
-        "write_failed": "Baixou, mas não deu para gravar na pasta de dados. Confira o espaço livre e as permissões da pasta."
+        "write_failed": "Baixou, mas não deu para gravar na pasta de dados. Confira o espaço livre e as permissões da pasta.",
+        "admin_only": "Só uma conta de administrador pode baixar."
       }
     },
     "paste": {
@@ -3049,7 +3056,31 @@
       "open": "Abrir link",
       "opening": "Abrindo…",
       "disabled": "Para colar um link, ligue \"Abrir link do pokepast.es\" em Internet opcional.",
-      "remote": "Links do pokepast.es só abrem na janela do PC. Aqui, cole o texto."
+      "remote": "Links do pokepast.es só abrem com a internet opcional ligada, por uma conta de administrador. Aqui, cole o texto."
+    }
+  },
+  "closeRemote": {
+    "title": "Fechar o RockAssistent no PC",
+    "sub": "Fecha o app no computador. Uma troca em andamento é cancelada, e o celular perde a conexão.",
+    "button": "Fechar no PC",
+    "confirmText": "Fechar agora? Para abrir de novo, só no próprio PC.",
+    "confirm": "Fechar o app",
+    "done": "Pronto, o RockAssistent está fechando no PC."
+  },
+  "folderBrowser": {
+    "title": "Escolha a pasta no PC",
+    "use": "Usar esta pasta",
+    "home": "Pasta pessoal",
+    "up": "Voltar uma pasta",
+    "empty": "Nenhuma pasta aqui dentro.",
+    "truncated": "Há pastas demais aqui; só as 500 primeiras aparecem.",
+    "showHidden": "Mostrar pastas ocultas ({{count}})",
+    "hideHidden": "Esconder pastas ocultas",
+    "typeInstead": "Prefere digitar o caminho?",
+    "errors": {
+      "folder_missing": "Essa pasta não existe mais.",
+      "folder_denied": "Sem permissão para abrir essa pasta.",
+      "folder_invalid": "Caminho inválido."
     }
   }
 }

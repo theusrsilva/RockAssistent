@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Icon, PageTitle } from '../../components/ui'
 import { api } from '../../lib/api'
-import { useAuth } from '../../lib/auth'
+import { usePcAccess } from '../../lib/auth'
 import type { ActivitySnapshot } from '../../lib/types'
 import { ActivityPanel } from '../activities/ActivityPanel'
 
@@ -11,11 +11,11 @@ type Open = 'raid' | 'circle'
 
 const tileClass = 'flex flex-col items-start gap-2.5 rounded-xl border bg-surface p-5 text-left hover:border-accent'
 
-/** Trocas: a troca com o Switch e, só na janela do PC (D26), as raids e o Union Circle. */
+/** Trocas: a troca com o Switch e, na janela do PC ou para administradores pelo celular (D26), as raids e o Union Circle. */
 export default function TradesHubPage() {
   const { t } = useTranslation()
-  const { me } = useAuth()
-  const remote = me?.local === false
+  // As raids e o Union Circle usam o rádio do PC: pela rede, só administradores.
+  const remote = !usePcAccess()
   const [open, setOpen] = useState<Open | null>(null)
 
   // Raid ou Union Circle em andamento: abre o cartão dela para acompanhar.

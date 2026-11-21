@@ -2,16 +2,21 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Badge, Button, Callout, Icon, IconButton, inputClass, useToast } from '../../components/ui'
 import { ApiError, api } from '../../lib/api'
+import { useAppInfo } from '../../lib/appInfo'
 import { errorMessage, type SaveFolder } from '../boxes/boxes'
+import { FolderBrowser } from './FolderBrowser'
 
 /**
- * Pastas de saves da tela Boxes (só na janela do PC). "Adicionar pasta" abre o diálogo de pasta da janela
- * nativa (POST /api/saves/open-folder); no navegador (--no-window) o caminho é digitado.
+ * Pastas de saves da tela Boxes (janela do PC e, pelo celular, administradores). "Adicionar pasta" abre o diálogo de
+ * pasta da janela nativa (POST /api/saves/open-folder); sem ele (celular, navegador) abre o navegador de pastas do PC,
+ * e dá para digitar o caminho.
  */
 export function SaveFoldersCard() {
   const { t } = useTranslation()
   const toast = useToast()
   const [folders, setFolders] = useState<SaveFolder[] | null>(null)
+  const info = useAppInfo()
+  const [browsing, setBrowsing] = useState(false)
   const [typing, setTyping] = useState(false)
   const [typed, setTyped] = useState('')
   const [busy, setBusy] = useState(false)
@@ -40,12 +45,16 @@ export function SaveFoldersCard() {
 
   async function add() {
     setError(null)
+    if (info && !info.window) {
+      setBrowsing(true)
+      return
+    }
     try {
       const r = await api.post<{ path: string } | undefined>('/api/saves/open-folder')
       if (r?.path) await save([...current(), { path: r.path, pattern: '' }])
     } catch (e) {
-      // Sem a janela nativa (aberto no navegador): digitar o caminho.
-      if (e instanceof ApiError && e.code === 'no_window') setTyping(true)
+      // Sem a janela nativa (aberto no navegador): o navegador de pastas.
+      if (e instanceof ApiError && e.code === 'no_window') setBrowsing(true)
       else setError(errorMessage(t, e))
     }
   }
@@ -105,6 +114,22 @@ export function SaveFoldersCard() {
             </li>
           ))}
         </ul>
+      )}
+
+      {browsing && (
+        <FolderBrowser
+          onClose={() => setBrowsing(false)}
+          onPick={(path) => {
+            setBrowsing(false)
+            void save([...current(), { path, pattern: '' }])
+          }}
+        />
+      )}
+
+      {!typing && info && !info.window && (
+        <button type="button" className="cursor-pointer self-start text-[13px] font-semibold text-accent underline" onClick={() => setTyping(true)}>
+          {t('folderBrowser.typeInstead')}
+        </button>
       )}
 
       {typing && (

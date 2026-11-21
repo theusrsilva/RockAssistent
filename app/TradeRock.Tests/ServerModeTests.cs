@@ -325,36 +325,61 @@ public sealed class ServerModeTests : IAsyncLifetime
     }
 
     [Fact]
-    public async Task Pela_rede_assistente_worker_e_modo_servidor_ficam_de_fora_e_contas_so_para_admin()
+    public async Task Pela_rede_o_PC_e_so_de_administradores_e_o_que_nao_pode_trafegar_fica_na_janela()
     {
         await EnableAsync();
         await CreateAccountAsync("fabi");
         await CreateAccountAsync("gil", role: "admin");
         var fabi = await LoginAsync("fabi");
+        var gil = await LoginAsync("gil");
 
-        foreach (var path in new[] { "/api/setup", "/api/setup/report", "/api/worker", "/api/server", "/api/boxes/saves", "/api/settings/save-folders", "/api/saves/open-folder" })
+        string[] adminPaths =
+        [
+            "/api/setup", "/api/setup/report", "/api/worker", "/api/server", "/api/boxes/saves", "/api/settings/save-folders",
+            "/api/logs", "/api/update", "/api/activities", "/api/accounts", "/api/fs/folders",
+        ];
+        foreach (var path in adminPaths)
         {
             var response = await fabi.GetAsync(path);
             Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
-            Assert.Contains("local_only", await response.Content.ReadAsStringAsync(Ct));
+            Assert.Contains("admin_only", await response.Content.ReadAsStringAsync(Ct));
+            Assert.Equal(HttpStatusCode.OK, (await gil.GetAsync(path)).StatusCode);
         }
-        Assert.Equal(HttpStatusCode.Forbidden, (await fabi.PostAsync("/api/setup/keys", new { })).StatusCode);
         Assert.Equal(HttpStatusCode.Forbidden, (await fabi.PutAsync("/api/engines/selected", new { id = "fake" })).StatusCode);
         Assert.Equal(HttpStatusCode.Forbidden, (await fabi.PutAsync("/api/settings/trade", new { })).StatusCode);
         Assert.Equal(HttpStatusCode.Forbidden, (await fabi.PostAsync("/api/app/close", new { })).StatusCode);
+        Assert.True((await gil.PutAsync("/api/engines/selected", new { id = "fake" })).IsSuccessStatusCode);
 
-        var accounts = await fabi.GetAsync("/api/accounts");
-        Assert.Equal(HttpStatusCode.Forbidden, accounts.StatusCode);
-        Assert.Contains("admin_only", await accounts.Content.ReadAsStringAsync(Ct));
+        // Nem administradores: o prod.keys nunca trafega pela rede, a senha do PC seria pedida na tela do PC e os
+        // diálogos nativos abririam lá.
+        foreach (var (method, path) in new[]
+        {
+            ("POST", "/api/setup/keys"), ("DELETE", "/api/setup/keys"), ("POST", "/api/worker/install"), ("POST", "/api/worker/uninstall"),
+            ("POST", "/api/update/install"), ("POST", "/api/saves/open"), ("POST", "/api/saves/open-folder"), ("POST", "/api/vault/export/native"),
+        })
+        {
+            var response = method == "DELETE" ? await gil.DeleteAsync(path) : await gil.PostAsync(path, new { });
+            Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
+            Assert.Contains("local_only", await response.Content.ReadAsStringAsync(Ct));
+        }
 
-        // Admin pela rede gerencia contas, mas também não mexe no assistente.
-        var gil = await LoginAsync("gil");
-        Assert.Equal(HttpStatusCode.OK, (await gil.GetAsync("/api/accounts")).StatusCode);
-        Assert.Equal(HttpStatusCode.Forbidden, (await gil.GetAsync("/api/setup")).StatusCode);
+        // Ligar ou mudar a porta pela rede, não; desligar, sim (e derruba o próprio login).
+        var enable = await gil.PutAsync("/api/server", new { enabled = true, @interface = "eth0", port = LanPort + 1 });
+        Assert.Equal(HttpStatusCode.Forbidden, enable.StatusCode);
+        Assert.Contains("local_only", await enable.Content.ReadAsStringAsync(Ct));
+
+        // As teclas do atalho global somam na hunt do dono do PC: só a conta dele.
+        var events = await gil.GetAsync("/api/hunts/events");
+        Assert.Equal(HttpStatusCode.Forbidden, events.StatusCode);
+        Assert.Contains("owner_only", await events.Content.ReadAsStringAsync(Ct));
 
         // Pela rede não há janela nativa (os diálogos abririam no PC).
         var health = await fabi.GetJsonAsync("/api/health");
         Assert.False(health.GetProperty("window").GetBoolean());
+
+        Assert.Equal(HttpStatusCode.OK, (await gil.PutAsync("/api/server", new { enabled = false })).StatusCode);
+        var status = await _local.GetFromJsonAsync<JsonElement>("/api/server", Ct);
+        Assert.False(status.GetProperty("enabled").GetBoolean());
     }
 
     [Fact]
@@ -747,5 +772,23 @@ public sealed class KestrelServerModeTests : IAsyncLifetime
     private sealed class LoopbackAlias : INetworkInterfaces
     {
         public IReadOnlyList<NetworkInterfaceInfo> List() => [new("lo-test", IPAddress.Parse("127.0.0.2"), false)];
+    }
+}
+
+public sealed class LanRateLimitTests
+{
+    [Theory]
+    [InlineData("GET", "/", true)]
+    [InlineData("GET", "/assets/index-abc.js", true)]
+    [InlineData("GET", "/api/sprites/25", true)]
+    [InlineData("GET", "/api/pokemon", false)]
+    [InlineData("POST", "/api/sprites/25", false)]
+    [InlineData("POST", "/api/auth/login", false)]
+    public void Pagina_e_sprites_ficam_fora_do_limite_da_rede(string method, string path, bool exempt)
+    {
+        var context = new Microsoft.AspNetCore.Http.DefaultHttpContext();
+        context.Request.Method = method;
+        context.Request.Path = path;
+        Assert.Equal(exempt, TradeRock.App.ServiceSetup.IsStaticRequest(context.Request));
     }
 }

@@ -6,7 +6,7 @@ do Switch via wireless local (LDN). O nome visível é **RockAssistent**; namesp
 `traderock`, worker e pasta de dados continuam **TradeRock** (D33). Especificação original da troca:
 [docs/spec.md](docs/spec.md) (o projeto se chamava "FRLG Trade Studio"); do RockAssistent:
 [docs/superpowers/specs/2026-11-05-rockassistent-design.md](docs/superpowers/specs/2026-11-05-rockassistent-design.md).
-Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D40).
+Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D41).
 
 ## Regras de trabalho (pedidas pelo autor, valem sempre)
 
@@ -68,7 +68,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D40).
 | Atualização | Procura no GitHub ao abrir (1×/dia, desligável), sem pré-lançamentos. Baixa, confere o SHA256SUMS e instala: Windows pelo instalador silencioso (UAC), AppImage troca o arquivo, .deb pelo pkexec (D29) |
 | Nomes no Release | Só `RockAssistent-*` (decisão do autor de 07/11/2026): sem cópias `TradeRock-*`. As instalações antigas baixam o RockAssistent uma vez pelo GitHub; o app continua aceitando os dois nomes (D33) |
 | Teste com o Switch | Até 30 s. Sessão de outro jogo decifrada não aprova. Vale até mudar a placa ou o prod.keys (não expira). Opcional desde a D28: a troca libera sem ele |
-| Modo servidor | HTTP (só rede de casa, com aviso). Argon2id (Konscious). Fila começa a troca sozinha. Conta nova com os Pokémon de demonstração. Porta 8337. Começa desligado a cada abertura |
+| Modo servidor | HTTP (só rede de casa, com aviso). Argon2id (Konscious). Fila começa a troca sozinha. Conta nova com os Pokémon de demonstração. Porta 8337. Começa desligado a cada abertura. Pelo celular, administradores usam tudo do PC (conexão, Boxes, atividades, logs, atualização, internet opcional, desligar o servidor, fechar o app; pastas pelo navegador de pastas `/api/fs/folders`); só na janela: enviar/apagar o prod.keys, instalar worker e atualização (senha do PC), diálogos nativos e ligar o servidor. Página e sprites fora do limite de 600/min (D41) |
 | Windows | Só ESP32. Instalador Inno Setup com administrador (regra do firewall só em redes privadas). Sem assinatura digital por enquanto. Dados em `%LOCALAPPDATA%` com ACL só do usuário. Sem WebView2: abre no navegador |
 | Jogos do Switch | Todos os jogos com troca local (FRLG, Let's Go, SwSh, BDSP, Arceus, SV, Z-A) pelo pokeldn (submódulo, D21). Escopo todo (troca, raids, Mystery Gift, Union Circle). ESP32 passa a usar o firmware do pokeldn. Python embutido no Windows. Modo LAN só no SwSh. Legalidade avisa e não bloqueia nos jogos novos. Cofre único com filtro por jogo. "Meu treinador" por jogo. Mover entre jogos como o HOME (D22) |
 | Internet opcional | Estatísticas do Smogon (formato do Champions, só ao clicar em Atualizar) e links do pokepast.es. Desligadas por padrão, só GET, mudar só na janela do PC (D32) |
@@ -111,6 +111,7 @@ Decisões técnicas: [docs/decisions.md](docs/decisions.md) (D1–D40).
 | 26 | Pokédex: importar marcações da coleção de um arquivo ou texto exportado (lista de living dex do autor): soma à visão aberta, ignora o que a lista não tem (`DexCollectionStore.ImportAsync`, `POST /api/dex/collection/import`, botão "Importar marcações") | feita, **build e testes do .NET não rodados** (sem SDK na sessão); **telas sem navegador** |
 | 27 | Encontros completos: arquivos próprios do ORAS, BW, B2W2, XY, SM e USUM pelo Serebii (conferidos com o PKHeX), juntados com o PokeAPI por área; DexNav, Swarms, White Forest e Poké Pelago; chances do HGSS somadas sem "rádio desligado" (D39) | feita |
 | 28 | Contador Hunt: seletor "Somar por vez" (1 a 10, PR #32) e mini janela (a janela encolhe e fica sempre na frente com o contador; botão na hunt e ao minimizar; `MiniWindow`, `WindowBridge.SetMiniAsync`, `GET/PUT /api/app/mini-window`) (D40) | feita, **mini janela nunca vista numa janela de verdade** |
+| 29 | Tudo pelo celular no modo servidor: níveis de acesso (qualquer conta, administradores, dono do PC, só na janela), navegador de pastas do PC, fechar o app e desligar o servidor pelo celular, página e sprites fora do limite de requisições, abas das Configurações em pílulas e área de toque maior no celular (`usePcAccess`, `FolderBrowser`, `touch-hit`) (D41) | feita, **vista só no Chromium emulando celular (360 e 390 px), sem celular real** |
 
 As entregas até a 24 estão na `main` (até o PR #26); a 25 espera o PR. Dois `scripts/ci.sh` ao mesmo tempo (em worktrees) brigam pelo cache do pokeldn em `~/.cache/traderock/pokeldn-test`: rode um por vez. O primeiro pré-lançamento foi a tag `v0.00.01`; a última tag é a
 `v02.00.02` (09/11/2026). As branches das entregas foram apagadas depois do merge.
@@ -134,7 +135,8 @@ As entregas até a 24 estão na `main` (até o PR #26); a 25 espera o PR. Dois `
   - Entrega 22 (macOS): tudo. O primeiro teste é o job `macos` do CI; depois o roteiro de
     [docs/macos-teste.md](docs/macos-teste.md) no Mac do amigo do autor (janela, Gatekeeper, ESP32, servidor, atualização).
   - Entrega 23: o botão de copiar e a confirmação num navegador (o fluxo só foi exercitado pela API).
-  - Entrega 20: as telas novas num navegador (nenhuma foi vista); o atalho global com tecla apertada de verdade no
+  - Entrega 29: celular de verdade (Android e Safari do iPhone) com conta de administrador; as ações com rádio real pelo celular.
+  - Entrega 20: as telas novas num navegador (vistas no Chromium em largura de celular na Entrega 29; na largura do PC, não); o atalho global com tecla apertada de verdade no
     Windows e no X11 (só o grab no WSLg); saves reais de emulador nas Boxes; Smogon e pokepast.es com rede real (só o
     arquivo do Smogon de 2026-10 foi baixado e lido).
 - Dados e guias: as dúvidas dos JSON e o que foi decidido estão em
