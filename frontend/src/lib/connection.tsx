@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from 'react'
 import { api } from './api'
-import { useIsRemote } from './auth'
+import { usePcAccess } from './auth'
 import type { CheckStatus, Engine, SetupCheck, SetupStatus } from './types'
 
 /** Os cinco itens da conexão mostrados no Início, no menu e na lista de Configurações → Conexão. */
@@ -76,12 +76,13 @@ export function connectionItems(setup: SetupStatus | null): Record<ConnectionKey
 const ConnectionContext = createContext<ConnectionState | null>(null)
 
 export function ConnectionProvider({ children }: { children: ReactNode }) {
-  const remote = useIsRemote()
+  // Pela rede, só administradores veem a configuração da conexão do PC.
+  const remote = !usePcAccess()
   const [setup, setSetup] = useState<SetupStatus | null>(null)
   const [engines, setEngines] = useState<Engine[]>([])
 
   const reload = useCallback(async () => {
-    // A configuração da conexão é só da janela do PC.
+    // A configuração da conexão é da janela do PC e dos administradores.
     if (remote) return null
     try {
       const s = await api.get<SetupStatus>('/api/setup')

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Callout, Toggle, useToast } from '../../components/ui'
-import { useIsRemote } from '../../lib/auth'
+import { usePcAccess } from '../../lib/auth'
 import { getInternetSettings, INTERNET_OFF, saveInternetSettings, type InternetSettings } from '../../lib/vgc'
 
 /**
@@ -11,7 +11,7 @@ import { getInternetSettings, INTERNET_OFF, saveInternetSettings, type InternetS
 export function InternetCard() {
   const { t } = useTranslation()
   const toast = useToast()
-  const remote = useIsRemote()
+  const remote = !usePcAccess()
   const [settings, setSettings] = useState<InternetSettings | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(false)

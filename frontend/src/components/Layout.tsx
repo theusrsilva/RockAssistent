@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router'
 import { api } from '../lib/api'
 import { changeMiniWindow, miniWindowChanged, useMiniWindow } from '../lib/miniWindow'
-import { useAuth } from '../lib/auth'
+import { canUsePc, useAuth } from '../lib/auth'
 import { requiredKeys, useConnection } from '../lib/connection'
 import { useScrollRestoration } from '../lib/scrollRestoration'
 import type { TradeSession } from '../lib/types'
@@ -26,7 +26,7 @@ export const mainLinks: { to: string; key: string; icon: string; end?: boolean; 
   { to: '/guias', key: 'nav.guides', icon: 'map' },
   { to: '/boxes', key: 'nav.boxes', icon: 'inventory_2' },
   { to: '/trocas', key: 'nav.trades', icon: 'swap_horiz' },
-  // Mystery Gift (D26): só na janela do PC, como a configuração do rádio.
+  // Mystery Gift (D26): usa o rádio do PC; pela rede, só administradores.
   { to: '/mystery-gift', key: 'nav.gifts', icon: 'redeem', localOnly: true },
   { to: '/nuzlocke', key: 'nav.nuzlocke', icon: 'skull' },
   { to: '/hunt', key: 'nav.hunt', icon: 'auto_awesome' },
@@ -43,7 +43,8 @@ export function useConnectionSummary() {
   const { t } = useTranslation()
   const { ready, readyCount } = useConnection()
   const { me } = useAuth()
-  const remote = me?.local === false
+  // Pela rede, só administradores veem e mexem na conexão do PC.
+  const remote = !canUsePc(me)
   const missing = requiredKeys.length - readyCount
   return {
     ready,
@@ -67,6 +68,7 @@ export function Layout({ children }: { children: ReactNode }) {
   const [moreOpen, setMoreOpen] = useState(false)
   const { me, logout } = useAuth()
   const remote = me?.local === false
+  const pc = canUsePc(me)
   const mobile = useIsMobile()
   const [, setTheme, theme] = useTheme()
   const status = useConnectionSummary()
@@ -140,7 +142,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <div className="font-logo text-xl font-bold tracking-[.2px]">{t('app.name')}</div>
           </div>
           <nav className="flex flex-col gap-0.5">
-            {mainLinks.filter((l) => !(remote && l.localOnly)).map((l) => (
+            {mainLinks.filter((l) => pc || !l.localOnly).map((l) => (
               <NavLink key={l.to} to={l.to} end={l.end} className={sideLink}>
                 <Icon name={l.icon} className="text-[21px]" />
                 <span className="flex-1">{t(l.key)}</span>
@@ -257,7 +259,7 @@ export function Layout({ children }: { children: ReactNode }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mx-auto mt-0.5 mb-2.5 h-1 w-10 rounded-sm bg-line" />
-            {moreLinks.filter((l) => !(remote && l.localOnly)).map((l) => (
+            {moreLinks.filter((l) => pc || !l.localOnly).map((l) => (
               <MoreItem key={l.to} to={l.to} icon={l.icon} label={t(l.key)} />
             ))}
             <MoreItem to="/configuracoes" icon="settings" label={t('nav.settings')} badge={status.missing || undefined} />

@@ -264,12 +264,13 @@ public sealed class SmogonStatsTests : IDisposable
     [InlineData("PUT", "/api/settings/internet", true)]
     [InlineData("GET", "/api/settings/internet", false)]
     [InlineData("GET", "/api/vgc/usage", false)]
-    public void Downloads_so_pela_janela_do_PC(string method, string path, bool localOnly)
+    public void Downloads_pela_rede_so_de_administradores(string method, string path, bool adminOnly)
     {
         var context = new DefaultHttpContext();
         context.Request.Method = method;
         context.Request.Path = path;
-        Assert.Equal(localOnly, AccessPolicy.IsLocalOnly(context.Request));
+        Assert.False(AccessPolicy.IsLocalOnly(context.Request));
+        Assert.Equal(adminOnly, AccessPolicy.IsAdminOnly(context.Request));
     }
 }
 

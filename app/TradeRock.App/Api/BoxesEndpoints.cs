@@ -9,7 +9,7 @@ using TradeRock.Core.Storage;
 namespace TradeRock.App.Api;
 
 /// <summary>
-/// Tela Boxes: saves das pastas do PC e o cofre lado a lado. Tudo aqui é só da janela local (os saves estão no PC).
+/// Tela Boxes: saves das pastas do PC e o cofre lado a lado. Pela rede, só administradores (os saves estão no PC).
 /// Pokémon de save não existem no cofre: são identificados por (saveId, caixa, posição); caixa -1 = time.
 /// Erros saem como { error: código } (404 para save/Pokémon que não existe, 409 para save que mudou no disco).
 /// </summary>

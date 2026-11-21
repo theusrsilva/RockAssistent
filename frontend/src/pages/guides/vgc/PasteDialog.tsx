@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Button, Callout, Modal, inputClass } from '../../../components/ui'
 import { ApiError, spriteUrl } from '../../../lib/api'
-import { useIsRemote } from '../../../lib/auth'
+import { usePcAccess } from '../../../lib/auth'
 import { useApiGet } from '../../../lib/dex'
 import {
   analyzePaste,
@@ -149,7 +149,7 @@ export function TeamReportView({ result }: { result: AnalyzeResult }) {
  */
 export function PasteLinkField({ onPaste }: { onPaste: (paste: string) => void }) {
   const { t } = useTranslation()
-  const remote = useIsRemote()
+  const remote = !usePcAccess()
   const settings = useApiGet<InternetSettings>('/api/settings/internet')
   const [url, setUrl] = useState('')
   const [busy, setBusy] = useState(false)

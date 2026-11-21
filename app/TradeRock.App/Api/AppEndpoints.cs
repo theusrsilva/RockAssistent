@@ -32,10 +32,18 @@ public static class AppEndpoints
             window = window.HasWindow && Caller.Find(context) is { IsLocal: true },
         }));
 
-        // Chamado pelo frontend depois que o usuário confirma fechar durante uma troca.
-        api.MapPost("/app/close", async (WindowBridge window) =>
+        // Chamado pelo frontend depois que o usuário confirma fechar durante uma troca e, pelo celular, pelo "Fechar o
+        // RockAssistent no PC" (administradores). Sem janela (abre no navegador), para o servidor depois de responder.
+        api.MapPost("/app/close", async (WindowBridge window, TradeRock.Core.Trading.TradeCoordinator coordinator,
+            IHostApplicationLifetime lifetime) =>
         {
-            await window.CloseAsync();
+            if (window.HasWindow)
+            {
+                await window.CloseAsync();
+                return Results.NoContent();
+            }
+            await coordinator.CancelAsync(TimeSpan.FromSeconds(30));
+            _ = Task.Delay(TimeSpan.FromMilliseconds(500)).ContinueWith(_ => lifetime.StopApplication(), TaskScheduler.Default);
             return Results.NoContent();
         });
 

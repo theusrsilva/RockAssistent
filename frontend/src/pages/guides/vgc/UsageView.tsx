@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Button, Callout, Card, Icon } from '../../../components/ui'
 import { ApiError, spriteUrl } from '../../../lib/api'
-import { useIsRemote } from '../../../lib/auth'
+import { usePcAccess } from '../../../lib/auth'
 import { useApiGet } from '../../../lib/dex'
 import { formatPercent, internetErrorKey, refreshUsage, type InternetSettings, type UsageEntry, type UsageReport, type UsageShare } from '../../../lib/vgc'
 
@@ -81,7 +81,7 @@ function UsageRow({ entry, lang }: { entry: UsageEntry; lang: string }) {
 /** Aba "Mais usados" da seção VGC: as estatísticas do Smogon já baixadas e o botão de atualizar (Internet opcional). */
 export default function UsageView() {
   const { t, i18n } = useTranslation()
-  const remote = useIsRemote()
+  const remote = !usePcAccess()
   const saved = useApiGet<UsageReport>('/api/vgc/usage')
   const settings = useApiGet<InternetSettings>('/api/settings/internet')
   const [fresh, setFresh] = useState<UsageReport | null>(null)

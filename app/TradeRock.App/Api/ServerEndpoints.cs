@@ -89,7 +89,8 @@ public static class ServerEndpoints
             return true;
         }));
 
-        // Liga/desliga (só janela local, ver AccessPolicy).
+        // Liga/desliga. Pela rede, um administrador só desliga (derruba todos os logins, inclusive o dele); ligar, trocar a
+        // interface ou a porta fica na janela do PC.
         var serverGroup = api.MapGroup("/server");
 
         serverGroup.MapGet("/", (ServerMode server, CancellationToken ct) => server.StatusAsync(ct));
@@ -100,6 +101,8 @@ public static class ServerEndpoints
             {
                 if (!body.Enabled)
                     return Results.Ok(await server.DisableAsync(ct));
+                if (Caller.Find(context) is { IsLocal: false })
+                    return Results.Json(new { error = "local_only" }, statusCode: StatusCodes.Status403Forbidden);
                 await accounts.EnsureOwnerAsync(ct);
                 var status = await server.EnableAsync(body.Interface ?? "", body.Port ?? ServerModeSettings.DefaultPort,
                     context.Connection.LocalPort, ct);

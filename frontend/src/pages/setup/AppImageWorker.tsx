@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button } from '../../components/ui'
+import { Button, Callout } from '../../components/ui'
 import { api, ApiError } from '../../lib/api'
+import { useIsRemote } from '../../lib/auth'
 import type { SetupStatus, WorkerInfo } from '../../lib/types'
 
 /**
@@ -13,6 +14,8 @@ export function AppImageWorkerInstall({ status, onStatus }: { status: SetupStatu
   const { t } = useTranslation()
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  // A senha é pedida na tela do PC: pelo celular, só o aviso.
+  const remote = useIsRemote()
   const code = status.checks.find((c) => c.id === 'worker')?.code
   if (code !== 'worker_appimage_missing' && code !== 'worker_appimage_outdated') return null
   const outdated = code === 'worker_appimage_outdated'
@@ -40,9 +43,15 @@ export function AppImageWorkerInstall({ status, onStatus }: { status: SetupStatu
         <li>{t('workerInstall.password')}</li>
         <li>{t('workerInstall.remove')}</li>
       </ul>
-      <Button onClick={() => void install()} disabled={busy}>
-        {busy ? t('workerInstall.installing') : outdated ? t('workerInstall.update') : t('workerInstall.install')}
-      </Button>
+      {remote ? (
+        <Callout tone="sky" icon="computer">
+          {t('workerInstall.onPc')}
+        </Callout>
+      ) : (
+        <Button onClick={() => void install()} disabled={busy}>
+          {busy ? t('workerInstall.installing') : outdated ? t('workerInstall.update') : t('workerInstall.install')}
+        </Button>
+      )}
       {error && (
         <p role="alert" className="text-bad">
           {t(`failures.${error}`, { defaultValue: t('failures.unknown') })}
@@ -59,6 +68,7 @@ export function AppImageWorkerSettings() {
   const [busy, setBusy] = useState(false)
   const [confirmRemove, setConfirmRemove] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const remote = useIsRemote()
 
   const load = () => void api.get<WorkerInfo>('/api/worker').then(setInfo).catch(() => undefined)
   useEffect(load, [])
@@ -85,7 +95,8 @@ export function AppImageWorkerSettings() {
     <div className="space-y-2">
       <h3 className="text-sm font-semibold">{t('workerInstall.settingsTitle')}</h3>
       <p className="text-sm">{t(`workerInstall.state.${state}`)}</p>
-      <div className="flex flex-wrap gap-2">
+      {remote && state !== 'ok' && <p className="text-[13px] text-muted">{t('workerInstall.onPc')}</p>}
+      <div className={`flex flex-wrap gap-2 ${remote ? 'hidden' : ''}`}>
         {b.available && state !== 'ok' && (
           <Button variant="secondary" disabled={busy} onClick={() => void run('/api/worker/install')}>
             {state === 'missing' ? t('workerInstall.install') : t('workerInstall.update')}

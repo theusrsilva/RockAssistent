@@ -111,6 +111,7 @@ public static class TradeRockServer
         api.MapVault();
         api.MapSaves();
         api.MapBoxes();
+        api.MapFolders();
         api.MapSetup();
         api.MapWorker();
         api.MapServer();

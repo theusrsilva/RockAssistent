@@ -41,7 +41,7 @@ export function OwnedButtons({
               e.stopPropagation()
               onToggle(shiny, source !== 'mark')
             }}
-            className={`inline-flex cursor-pointer items-center justify-center rounded-full border ${size} ${
+            className={`touch-hit inline-flex cursor-pointer items-center justify-center rounded-full border ${size} ${
               source === null
                 ? 'border-line bg-surface text-muted hover:text-ink'
                 : `${shiny ? 'border-warn bg-warn-soft text-warn' : 'border-ok bg-ok-soft text-ok'} ${

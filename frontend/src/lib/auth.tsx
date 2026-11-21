@@ -59,3 +59,15 @@ export function useAuth() {
 export function useIsRemote() {
   return useAuth().me?.local === false
 }
+
+/**
+ * Pode mexer no PC: a janela local ou, pelo celular, um administrador (conexão, atividades, Boxes, logs, atualização...).
+ * O que não pode passar pela rede (prod.keys) ou pede a senha do PC continua só na janela: veja `useIsRemote`.
+ */
+export function usePcAccess() {
+  return canUsePc(useAuth().me)
+}
+
+export function canUsePc(me: Me | null) {
+  return me?.local !== false || me?.role === 'admin'
+}

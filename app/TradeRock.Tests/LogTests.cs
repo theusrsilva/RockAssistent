@@ -126,6 +126,6 @@ public sealed class LogApiTests : IAsyncLifetime
         var file = await _client.GetAsync("/api/logs/file");
         Assert.Equal(HttpStatusCode.OK, file.StatusCode);
         Assert.Contains("tudo certo", await file.Content.ReadAsStringAsync());
-        Assert.True(TradeRock.App.Server.AccessPolicy.IsLocalOnly(new Microsoft.AspNetCore.Http.DefaultHttpContext { Request = { Path = "/api/logs" } }.Request));
+        Assert.True(TradeRock.App.Server.AccessPolicy.IsAdminOnly(new Microsoft.AspNetCore.Http.DefaultHttpContext { Request = { Path = "/api/logs" } }.Request));
     }
 }

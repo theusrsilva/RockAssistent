@@ -205,6 +205,21 @@ body {
   image-rendering: pixelated;
 }
 
+/*
+ * Botões pequenos (o "?" de ajuda, as marcações da Pokédex): no toque, a área que responde cresce 6 px para cada lado
+ * sem mudar o desenho. O alvo fica perto dos 40 px recomendados para o dedo.
+ */
+@utility touch-hit {
+  position: relative;
+  @media (pointer: coarse) {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+    }
+  }
+}
+
 @keyframes tr-pulse {
   0% {
     transform: scale(1);

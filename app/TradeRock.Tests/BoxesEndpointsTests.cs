@@ -402,13 +402,57 @@ public sealed class BoxesEndpointsTests : IAsyncLifetime
     [InlineData("POST", "/api/boxes/move")]
     [InlineData("GET", "/api/settings/save-folders")]
     [InlineData("PUT", "/api/settings/save-folders")]
+    [InlineData("GET", "/api/fs/folders")]
+    public void Rotas_de_saves_pela_rede_sao_so_de_administradores(string method, string path)
+    {
+        var context = new DefaultHttpContext();
+        context.Request.Method = method;
+        context.Request.Path = path;
+        Assert.False(AccessPolicy.IsLocalOnly(context.Request));
+        Assert.True(AccessPolicy.IsAdminOnly(context.Request));
+    }
+
+    [Theory]
+    [InlineData("POST", "/api/saves/open")]
     [InlineData("POST", "/api/saves/open-folder")]
-    public void Rotas_de_saves_sao_so_da_janela_local(string method, string path)
+    [InlineData("POST", "/api/vault/export/native")]
+    public void Dialogos_nativos_sao_so_da_janela_local(string method, string path)
     {
         var context = new DefaultHttpContext();
         context.Request.Method = method;
         context.Request.Path = path;
         Assert.True(AccessPolicy.IsLocalOnly(context.Request));
+    }
+
+    [Fact]
+    public async Task Navegador_de_pastas_lista_so_pastas_com_as_ocultas_no_fim()
+    {
+        var root = Directory.CreateDirectory(Path.Combine(_dataDir, "navegar")).FullName;
+        Directory.CreateDirectory(Path.Combine(root, "zeta"));
+        Directory.CreateDirectory(Path.Combine(root, "Alfa"));
+        Directory.CreateDirectory(Path.Combine(root, ".config"));
+        await File.WriteAllTextAsync(Path.Combine(root, "arquivo.sav"), "x", TestContext.Current.CancellationToken);
+
+        var list = await _client.GetFromJsonAsync<JsonElement>($"/api/fs/folders?path={Uri.EscapeDataString(root)}",
+            TestContext.Current.CancellationToken);
+        Assert.Equal(root, list.GetProperty("path").GetString());
+        Assert.Equal(_dataDir, list.GetProperty("parent").GetString()?.TrimEnd(Path.DirectorySeparatorChar));
+        var names = list.GetProperty("folders").EnumerateArray().Select(f => f.GetProperty("name").GetString()).ToList();
+        Assert.Equal(["Alfa", "zeta", ".config"], names);
+        Assert.True(list.GetProperty("folders")[2].GetProperty("hidden").GetBoolean());
+        Assert.False(list.GetProperty("truncated").GetBoolean());
+        Assert.NotEmpty(list.GetProperty("roots").EnumerateArray());
+
+        // Sem caminho: a pasta pessoal.
+        var home = await _client.GetFromJsonAsync<JsonElement>("/api/fs/folders", TestContext.Current.CancellationToken);
+        Assert.Equal(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), home.GetProperty("path").GetString());
+
+        var missing = await _client.GetAsync($"/api/fs/folders?path={Uri.EscapeDataString(Path.Combine(root, "nada"))}",
+            TestContext.Current.CancellationToken);
+        Assert.Equal(HttpStatusCode.NotFound, missing.StatusCode);
+        Assert.Contains("folder_missing", await missing.Content.ReadAsStringAsync(TestContext.Current.CancellationToken));
+        var relative = await _client.GetAsync("/api/fs/folders?path=relativo", TestContext.Current.CancellationToken);
+        Assert.Equal(HttpStatusCode.BadRequest, relative.StatusCode);
     }
 
     [Fact]

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
 import { Button, Callout, Toggle } from '../components/ui'
 import { api, ApiError } from '../lib/api'
-import { useAuth } from '../lib/auth'
+import { canUsePc, useAuth, useIsRemote } from '../lib/auth'
 
 export type InstallKind = 'none' | 'windows_installer' | 'app_image' | 'deb' | 'mac_app'
 
@@ -24,10 +24,10 @@ export interface UpdateStatus {
 
 const working = (s: UpdateStatus | null) => !!s && ['downloading', 'verifying', 'installing', 'restarting'].includes(s.stage)
 
-/** Status da atualização (D29), só na janela do PC; acompanha a instalação até o app fechar. */
+/** Status da atualização (D29), na janela do PC e para administradores pelo celular; acompanha a instalação até o app fechar. */
 export function useUpdate() {
   const { me } = useAuth()
-  const local = me?.local !== false
+  const local = canUsePc(me)
   const [status, setStatus] = useState<UpdateStatus | null>(null)
 
   const reload = useCallback(async () => {
@@ -75,6 +75,8 @@ export function UpdateCard() {
   const [checking, setChecking] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [confirm, setConfirm] = useState(false)
+  // Instalar pede a senha do PC (pkexec, UAC) na tela do PC: pelo celular, só procurar e avisar.
+  const remote = useIsRemote()
 
   if (!status) return null
   const busy = working(status)
@@ -155,6 +157,10 @@ export function UpdateCard() {
                 <div className="h-full bg-accent transition-all" style={{ width: `${status.stage === 'downloading' ? (percent ?? 5) : 100}%` }} />
               </div>
             </div>
+          ) : remote ? (
+            <Callout tone="sky" icon="computer">
+              {t('update.installOnPc')}
+            </Callout>
           ) : confirm ? (
             <div className="space-y-2 text-sm">
               <p>{t(`update.confirm.${status.kind}`)}</p>

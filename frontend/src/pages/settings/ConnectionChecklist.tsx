@@ -5,7 +5,7 @@ import { SwitchReady } from '../../components/illustrations/SwitchReady'
 import { Badge, Button, Callout, HelpTip, Icon, selectClass, useToast } from '../../components/ui'
 import { api } from '../../lib/api'
 import { downloadBlob } from '../../lib/appInfo'
-import { useIsRemote } from '../../lib/auth'
+import { useIsRemote, usePcAccess } from '../../lib/auth'
 import { connectionKeys, requiredKeys, systemCheckIds, useConnection, type ConnectionKey, type ItemState } from '../../lib/connection'
 import type { HardwareCatalog, SetupStatus } from '../../lib/types'
 import { Esp32Actions } from '../setup/Esp32Actions'
@@ -36,7 +36,9 @@ type RowKey = ConnectionKey | 'game'
  */
 export function ConnectionChecklist() {
   const { t } = useTranslation()
-  const remote = useIsRemote()
+  // Pela rede, contas comuns só veem o status; administradores configuram como na janela do PC.
+  const remote = !usePcAccess()
+  const onNetwork = useIsRemote()
   const { setup, items, readyCount, ready, demo, reload, setSetup, reloadEngines } = useConnection()
   const [catalog, setCatalog] = useState<HardwareCatalog | null>(null)
   const [open, setOpen] = useState<RowKey | null>(null)
@@ -179,7 +181,8 @@ export function ConnectionChecklist() {
       title: t('ui.conn.title.keys'),
       state: items.keys,
       action:
-        keysCheck?.code === 'keys_ok' ? undefined : (
+        // Pelo celular o prod.keys não é enviado (nunca passa pela rede): o painel explica.
+        keysCheck?.code === 'keys_ok' || onNetwork ? undefined : (
           <Button onClick={() => setOpen('keys')}>{t('wizard.keysUpload')}</Button>
         ),
       body: <KeysPanel status={setup} onChange={() => void reload()} onSkip={() => void patch({ keysSkipped: true })} />,
@@ -346,7 +349,7 @@ function Steps({ items }: { items: string[] }) {
   )
 }
 
-/** Pela rede: a conexão é do PC do dono; aqui só o status. */
+/** Pela rede, contas comuns: a conexão é do PC do dono; aqui só o status. */
 function RemoteStatus({ ready }: { ready: boolean }) {
   const { t } = useTranslation()
   return (
@@ -372,6 +375,8 @@ function KeysPanel({ status, onChange, onSkip }: { status: SetupStatus; onChange
   const input = useRef<HTMLInputElement>(null)
   const [problem, setProblem] = useState<SetupStatus['keys'] | null>(null)
   const [error, setError] = useState<string | null>(null)
+  // O prod.keys nunca passa pela rede (regra de segurança): pelo celular, só o estado e o "pular".
+  const remote = useIsRemote()
   const keys = status.keys
 
   async function upload(file: File) {
@@ -412,11 +417,18 @@ function KeysPanel({ status, onChange, onSkip }: { status: SetupStatus; onChange
       <Callout tone="amber" icon="shield">
         {t('ui.conn.keysNote')}
       </Callout>
+      {remote && (
+        <Callout tone="sky" icon="computer">
+          {t('ui.conn.keysOnPc')}
+        </Callout>
+      )}
       <div className="flex flex-wrap gap-2">
-        <Button icon="upload_file" onClick={() => input.current?.click()}>
-          {keys ? t('wizard.keysReplace') : t('wizard.keysUpload')}
-        </Button>
-        {keys && (
+        {!remote && (
+          <Button icon="upload_file" onClick={() => input.current?.click()}>
+            {keys ? t('wizard.keysReplace') : t('wizard.keysUpload')}
+          </Button>
+        )}
+        {keys && !remote && (
           <Button variant="ghost" onClick={() => void api.delete('/api/setup/keys').then(onChange)}>
             {t('wizard.keysRemove')}
           </Button>
